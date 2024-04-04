@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/*start header css*/
+
+.header{
+    width: 100%;
+    height: 158px;
+    background: linear-gradient(#99C0C2,#85B2B6);
+    box-shadow: 0px 0px 9px 0px #347D81;
+    position: relative;
+}
+.menuSection{
+    width: 66%;
+    margin: 0px auto;
+    height: 140px;
+    position: relative;
+    top: 15px;
+}
+.logo > img{
+    width:255px;
+    height: 48px;
+}
+.logoSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.icons{
+    width: 152px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchIcons{
+    width: 25px;
+    height: 25px;
+    margin: 9px;
+}
+.menu{
+    margin-top:20px;
+}
+.menu > ul{
+    /*font-size: 16px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0px !important;
+}
+.menu > ul > li > a{
+    color: white;
+}
+.menu > ul > li > a:hover{
+    text-decoration: none;
+    color: #F36528;
+}
+.menuAbout{
+    color: white;
+}
+.menuAbout:hover{
+    color: #F36528;
+    cursor: pointer;
+}
+.menuCourses{
+    color: white;
+}
+.menuCourses:hover{
+    color: #F36528;
+    cursor: pointer;
+}
+.imagesLi{
+    position: absolute;
+}
+.btnBack{
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.dropDownAbout{
+    background-image: url("../images/small.png");
+    width: 158px;
+    height: 118px;
+    position: absolute;
+    margin-top: -6px;
+    margin-left: -9px;
+    display: none;
+}
+.dropDownLi{
+    position: relative;
+}
+.whiteLi > a{
+    text-decoration: none;
+}
+.dropDownAbout > ul{
+    color: #1C5484;
+    font-size: 15px;
+    top: 42px;
+    list-style: none;
+    position: relative;
+    left: 25px;
+    z-index: 100;
+    padding-left: 0px !important;
+
+}
+.dropDownAbout > ul > li > a{
+    color: #1C5484;
+    text-decoration: none;
+}
+.dropDownAbout > ul > li > a:hover{
+    text-decoration: none;
+    color: #F36528;
+}
+.dropDownCources{
+    background-image: url("../images/big.png");
+    width: 296px;
+    height: 179px;
+    position: absolute;
+    margin-top: -6px;
+    margin-left: -9px;
+    display: none;
+}
+.dropDownCources > ul{
+    width: 251px;
+    line-height: 1.7;
+    font-size: 14px;
+    top: 45px;
+    list-style: none;
+    position: relative;
+    left: 25px;
+    z-index: 100;
+    padding-left: 0px !important;
+}
+.dropDownCources > ul > li > a{
+    color: #1C5484;
+    text-decoration: none;
+}
+
+.dropDownCources > ul > li > a:hover {
+    text-decoration: none;
+    color: #F36528;
+}
+
+/*end header css*/
+
+
+/*start footer css*/
+
+.footerBackground{
+    background-image: url("../images/footerbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 738px;
+}
+.bgRectangle{
+    margin-top: 97px;
+    margin-left: 17%;
+    background-image: url("../images/bgrec.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1221px;
+    height: 564px;
+    position: relative;
+}
+.quize{
+    top: 120px;
+    left: 710px;
+    background-image: url("../images/smallrec.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 622px;
+    height: 416px;
+    position: relative;
+}
+.formMail{
+    width: 500px;
+    height: 320px;
+    position: relative;
+    top: 53px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*align-items: start;*/
+
+}
+.formName{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.formContinue{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.inputsMail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputsMail > input{
+    padding-left: 25px;
+    font-size: 16px;
+    width: 100%;
+    height: 45px;
+    margin: 8px 0px;
+    background: #5D9A9D;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 23px;
+}
+.inputsMail > input::placeholder{
+    color: white;
+}
+.formName > span{
+    font-size: 21px;
+    font-weight: 500;
+    color: #5D9A9D;
+}
+.formContinue > a{
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #5D9A9D;
+}
+.linksFooter{
+    width: 515px;
+    height: 450px;
+    position: absolute;
+    top: 90px;
+    left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.footerMenu{
+    width: 71%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.leftMenuFooter > ul{
+    list-style: none;
+    padding-left: 0px;
+    font-size: 13px;
+}
+.leftMenuFooter > ul > li > a{
+    text-decoration: none;
+    color: #5D9A9D;
+}
+.rightMenuFooter > ul{
+    list-style: none;
+    font-size: 13px;
+}
+.rightMenuFooter > ul > li > a{
+    text-decoration: none;
+    color: #5D9A9D;
+}
+.footerConn > span{
+    color: #F36528;
+    font-size: 14px;
+    font-weight: 600;
+}
+.footerBtn{
+    width: 100%;
+}
+.footerBtn > input{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    border-radius: 23px;
+    outline: none;
+    border: none;
+    background: #5D9A9D;
+    padding: 0px 170px 0px 20px;
+
+}
+.footerBtn > input::placeholder{
+    color: white;
+}
+.footerBtn > button{
+    left: 351px;
+    top: 3px;
+    /* outline: none; */
+    border: 1px solid white;
+    width: 158px;
+    height: 39px;
+    border-radius: 20px;
+    background: white;
+    position: relative;
+}
+.linkInstagram{
+    margin: 0px 5px;
+}
+/*end footer css*/
+
+/*start main page css*/
+.headerBackground{
+    background-image: url("../images/headerimg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 1134px;
+    /*position: relative;*/
+}
+.apply{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    left: 17%;
+    top: 660px;
+    width: 602px;
+    height: 281px;
+    position: absolute;
+}
+.applyMarket{
+    letter-spacing: 1px;
+    width: 470px;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #F36528;
+    z-index: 10;
+}
+.boundaries{
+    letter-spacing: 3px;
+    width: 602px;
+    color: white;
+    font-size: 31px;
+    z-index: 10;
+}
+.apply > button{
+    width: 265px;
+    height: 114px;
+    background: transparent;
+    border: none;
+    z-index: 10;
+}
+.apply > button > img{
+    width: 100%;
+    height: 100%;
+}
+.sectionTwo{
+    background-image: url("../images/diagonal.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 439px;
+}
+.sectionThree{
+    background-image: url("../images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1080px;
+    /*position: absolute;*/
+}
+.learn{
+    top: 188px;
+    width: 100%;
+    height: 639px;
+    border: 1px solid;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.learnInfo{
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.learnImg{
+    width: 42%;
+}
+.learnImg > img{
+    width: 648px;
+    height: 639px;
+}
+.coursesBg{
+    background-image: url("../images/rec.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 162px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.coursesBg > span{
+    color: #F16D35;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+}
+.coursesBg > p{
+    color: white;
+    font-size: 32px;
+    font-family: "Roboto", sans-serif;
+    font-width: 300;
+}
+.logoManagement{
+    width: 515px;
+    height: 124px;
+    border: 1px solid;
+}
+/*end main page css*/
