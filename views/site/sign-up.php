@@ -20,30 +20,32 @@ $this->registerCssFile('@web/css/login.css');
     </div>
     <div class="container">
         <div class="globus">
-            <span class="globusPoints">
-                <img src="/images/unsplash_6ie6OjshvWg.png" class="point1"></img>
-                <p class="point2"></p>
-                <img src="/images/unsplash_6ie6OjshvWg.png" class="point3"></img>
-                <p class="point4"></p>
-            </span>
+                <span class="globusPoints">
+                    <img src="/images/unsplash_6ie6OjshvWg.png" class="point1"></img>
+                    <p class="point2"></p>
+                    <img src="/images/unsplash_6ie6OjshvWg.png" class="point3"></img>
+                    <p class="point4"></p>
+                </span>
             <div class="globusSmooll">
-                <p class="text1">Up Your<span> Skills </span>To <span>Advance</span> Your <span>Career</span> Path</p>
+                <p class="text1">Up Your<span> Skills </span>To <span>Advance</span> Your <span>Career</span> Path </p>
                 <p class="text2">Just a couple of clicks and we start</p>
             </div>
         </div>
         <form action="" class="signin">
-            <h1>WELCOME BACK</h1>
+            <h1>GET STARTED NOW</h1>
             <div class="signinMenu">
+                <input type="text" placeholder="Name">
                 <input type="email" placeholder="Email Address" name="email">
                 <input type="password" placeholder="Password" name="password">
                 <span class="checkbox">
-                    <p><input type="checkbox" name="checkbox">remember</p>
-                    <a href="">Lost your password?</a>
-                </span>
+                        <p><input type="checkbox" name="checkbox"> I agree to the <a href=""> terms & policy</a></p>
+                    </span>
             </div>
             <button><img src="/images/Group 1000002214.png" alt=""></button>
-            <p class="signUp">Not a member ? <a href="">Sign Up now</a></p>
+            <p class="signUp">have an account ? <a href=""> Sign In </a></p>
         </form>
     </div>
+
 </section>
+
 

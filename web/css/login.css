@@ -1,0 +1,316 @@
+section.mainPoints {
+    padding-top: 50px;
+    background-color: rgba(93, 154, 157, 1);
+    height: 1087.74px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+section.mainPoints .points {
+    width: 100%;
+    position: relative;
+}
+
+section.mainPoints .points .point1 {
+    width: 100px;
+    height: 100px;
+    top: 748.34px;
+    left: 119.53px;
+    box-shadow: 0px 1px 6px 1px rgba(28, 84, 132, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    position: absolute;
+    z-index: 0;
+}
+
+section.mainPoints .points .point2 {
+    width: 100px;
+    height: 100px;
+    top: 912.5px;
+    left: 866.5px;
+    box-shadow: 0px 1px 6px 1px rgba(28, 84, 132, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    position: absolute;
+    z-index: 0;
+}
+
+section.mainPoints .points .point3 {
+    width: 100px;
+    height: 100px;
+    top: 606.75px;
+    left: 939.7px;
+    box-shadow: 0px 1px 6px 1px rgba(28, 84, 132, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    position: absolute;
+    z-index: 0;
+
+}
+
+section.mainPoints .points .point4 {
+    width: 80px;
+    height: 80px;
+    top: 255.76px;
+    left: 978.78px;
+    box-shadow: 0px 1px 6px 1px rgba(28, 84, 132, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    position: absolute;
+    z-index: 0;
+}
+
+section.mainPoints .points .point5 {
+    width: 100px;
+    height: 100px;
+    top: 261.52px;
+    right: 200px;
+    box-shadow: 0px 1px 6px 1px rgba(28, 84, 132, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    position: absolute;
+    z-index: 0;
+}
+
+section.mainPoints .points .img1 {
+    position: absolute;
+    right: 0;
+    width: 414px;
+    height: 492px;
+    top: 493.75px;
+    gap: 0px;
+    border-radius: 118.36px 0px 0px 0px;
+    opacity: 0.5px;
+    z-index: 0;
+
+}
+
+section.mainPoints .points .img2 {
+    position: absolute;
+    width: 113.77px;
+    height: 135.21px;
+    top: 843.42px;
+    left: 353.13px;
+    border-radius: 118.36px 0px 0px 0px;
+    z-index: 0;
+
+}
+
+section.mainPoints .points .img3 {
+    position: absolute;
+    right: 0;
+    width: 113.77px;
+    height: 135.21px;
+    top: 213.71px;
+    gap: 0px;
+    border-radius: 118.36px 0px 0px 0px;
+    opacity: 0.3px;
+    z-index: 0;
+
+}
+
+section.mainPoints .container {
+    width: 70%;
+    height: 502.9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+@media only screen and (max-width: 1024px) and (min-width: 420px){
+    section.mainPoints{
+        overflow: hidden;
+    }
+    section.mainPoints>.container{
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+    }
+    .globus{
+        margin-bottom: 40px;
+        border: none !important;
+    }
+}
+.globus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 497px;
+    height: 497px;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.12);
+
+}
+
+.globus .globusPoints {
+    position: relative;
+    border-radius: 50%;
+}
+
+.globus .globusPoints .point1 {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: -255px;
+    left: 100px;
+    border-radius: 50%;
+
+}
+
+.globus .globusPoints .point2 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -150px;
+    left: 376px;
+    background-color: rgba(214, 214, 214, 1);
+    opacity: 0px;
+    border-radius: 50%;
+
+}
+
+.globus .globusPoints .point3 {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 175px;
+    left: 320px;
+    border-radius: 50%;
+}
+
+.globus .globusPoints .point4 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 185px;
+    left: 48px;
+    background-color: rgba(214, 214, 214, 1);
+    border-radius: 50%;
+}
+
+section.mainPoints .container .globus .globusSmooll {
+    position: relative;
+    width: 386.28px;
+    height: 386.28px;
+    border-radius: 50%;
+    background: rgba(214, 214, 214, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    opacity: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.mainPoints .container .globus .globusSmooll .text1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 47.48px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: rgba(28, 84, 132, 1);
+    width: 260px;
+}
+section.mainPoints .container .globus .globusSmooll .text1 span{
+    color: rgba(243, 101, 40, 1);
+}
+
+section.mainPoints .container .globus .globusSmooll .text2 {
+    width: 120px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: rgba(28, 84, 132, 1);
+    padding-top: 10px;
+
+}
+
+section.mainPoints .container .signin {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    text-align: center;
+    z-index: 1;
+}
+
+section.mainPoints .container .signin h1 {
+    font: 900;
+    font-size: 32px;
+    padding-bottom:20px ;
+    color: white;
+    font-family: 'Roboto slab';
+}
+
+section.mainPoints .container .signin .signinMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+section.mainPoints .container .signin .signinMenu input {
+    border-radius: 30px;
+    border: none;
+    padding: 20px 0 20px 15px;
+    margin: 5px 0;
+    font-size: 16px;
+    color: rgb(252, 252, 252);
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(93, 154, 157, 0.76)
+}
+
+section.mainPoints .container .signin .signinMenu .checkbox {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+
+}
+
+section.mainPoints .container .signin .signinMenu .checkbox p {
+    font-size: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.mainPoints .container .signin .signinMenu .checkbox p input {
+    font-size: 9px;
+    cursor: pointer;
+}
+
+section.mainPoints .container .signin .signinMenu .checkbox a {
+    color: white;
+    font-size: 9px;
+}
+
+section.mainPoints .container .signin button {
+    background-color: rgba(93, 154, 157, 1);
+    margin: 30px auto 25px auto;
+    border: none;
+    cursor: pointer;
+
+}
+section.mainPoints .container .signin .signUp{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+section.mainPoints .container .signin .signUp a{
+   color: rgba(243, 101, 40, 1);
+   font-size: 14px;
+   font-weight: 500;
+   font-family: sans-serif;
+   text-decoration: none;
+
+}
+.signinMenu > input::placeholder{
+    color: white;
+}

@@ -1,0 +1,173 @@
+.contactus {
+    width: 100%;
+    height: 930px;
+    background-image: url("/images/background-image-contactus.png");
+    background-repeat: no-repeat;
+
+}
+.disinline{
+    width: 66%;
+}
+.sectionContactusTopLeft{
+    width: 44%;
+}
+.sectionContactusTop{
+    /*height: 350.74px;*/
+    margin-top: 80px;
+}
+.contactusTitle{
+    font-family: Roboto Slab;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43.2px;
+    text-align: left;
+    color: #F36528;
+}
+.contactusTxt{
+    padding-top: 20px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.imgcontact{
+    width: 56px;
+    height: 56px;
+}
+.rigthtxtdiv{
+    /*width: 126px;*/
+    height: 58px;
+    margin-left: 24px;
+}
+.div1{
+    margin-bottom: 16px;
+}
+.rigthtxtdiv span{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.rigthtxtdiv span{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.sectionContactusTopRight {
+    width: 66%;
+}
+.sectionContactusTopRight img{
+    width: 100%;
+    height: 350.74px;
+    border-radius: 20px 0px 0px 0px;
+}
+.sectionContactusBottom{
+    margin-top: 24px;
+}
+.contactusBottomTitle{
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38.4px;
+    text-align: left;
+    color: #F36528;
+}
+.contactusBottomTxt{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.inputdiv{
+    columns: 2;
+}
+.inputname{
+    height: 67px;
+    padding: 20px 30px 20px 30px;
+    border-radius: 30px;
+    border: 1px;
+    background: #FFFFFF24;
+    text-align: center;
+}
+#validationDefault00_{
+    width: 95%;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+}
+.inputemail{
+    height: 67px;
+    padding: 20px 30px 20px 30px;
+    border-radius: 30px;
+    border: 1px;
+    background: #FFFFFF24;
+    text-align: center;
+}
+#validationDefault02_{
+    width: 95%;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+}
+.inputcomment{
+    width: 100%;
+    height: 111px;
+    padding: 20px 30px 20px 30px;
+    border-radius: 30px;
+    border: 1px;
+    background: #FFFFFF24;
+    text-align: center;
+    margin-top: 20px;
+
+
+}
+#validationDefault01_{
+    width: 95%;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    outline: none;
+}
+.sectionContactusBottomImg{
+    width: 157px;
+    height: 58.17px;
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+}
+.bottoming span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sectionContactusBottom .form-row{
+    margin-right: 0;
+    margin-left: 0px;
+}
