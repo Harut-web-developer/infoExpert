@@ -362,6 +362,32 @@
     width: 100%;
     height: 439px;
 }
+.sectionInfo{
+    width: 44%;
+    height: 156px;
+    position: absolute;
+    margin: 127px 28% 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.numbersInfo{
+    width: 104px;
+    height: 156px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.numberSectionTwo{
+    color: #1C5484;
+    font-size: 32px;
+    font-weight:600;
+}
+.textSectionTwo{
+    color: #1C5484;
+    font-size: 20px;
+}
 .sectionThree{
     background-image: url("../images/bg.png");
     background-position: center;
@@ -369,13 +395,11 @@
     background-size: cover;
     width: 100%;
     height: 1080px;
-    /*position: absolute;*/
 }
 .learn{
     top: 188px;
     width: 100%;
     height: 639px;
-    border: 1px solid;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -423,6 +447,417 @@
 .logoManagement{
     width: 515px;
     height: 124px;
+    display: flex;
+    flex-direction: row;
+}
+.courseLogo{
+    width: 112px;
+}
+.courseLogo > img{
+    margin-top:10px;
+}
+.courseTitle{
+    width:401px;
+    padding-left:22px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.courseTitle > span{
+    -webkit-text-stroke: 1px white;
+    font-size: 48px;
+    font-weight: 600;
+    color: transparent;
+}
+.sectionFour{
+    background-image: url("../images/sectionFour.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -57px;
+    width: 100%;
+    height: 1077px;
+}
+.answers{
+    margin: 200px 16.5% 0px;
+    width: 67%;
+    height: 677px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.frequency{
+    width: 53%;
+    height: 117px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.freqAsked{
+    font-size: 40px;
+    font-family: "Roboto Slab",sans-serif;
+    font-weight: 600;
+    color: #F16D35;
+}
+.freqLook{
+    font-size: 32px;
+    font-weight: 300;
+    color: white;
+}
+.questions{
+    width: 100%;
+    height: 474px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.leftQuestions{
+    width: 48%;
+}
+.rightQuestions{
+    width: 48%;
+}
+.answersField{
+    width: 100%;
+    min-height: 64px;
+    margin-bottom: 30px;
+    border-radius: 32px;
+    padding: 0px 30px;
+    background: rgba(147,188,191,0.7);
+
+}
+.answersField:hover{
+    cursor:pointer;
+}
+.questionField > span{
+    font-size: 16px;
+    color: white;
+}
+.questionField{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.answerQuestion{
+    padding: 30px 0px;
+    font-size: 18px;
+    color: white;
+}
+.sectionFive{
+    background-image: url("../images/partnerBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 544px;
+    margin-top: -56px;
+}
+.partnerSection{
+    width: 93%;
+    height: 303px;
+    position: absolute;
+    margin: 129px 3.5% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.partnersTitle{
+    font-family: "Roboto Slab",sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #F16D35;
+}
+.partners{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.sectionSix{
+    margin-top: -56px;
+    background-image: url("../images/testimonialBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 924px;
+}
+.testimonial{
+    margin: 137px 17% 0px;
+    width: 66%;
+    height: 677px;
     border: 1px solid;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonialsTitles{
+    width: 447px;
+    height: 112px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonialOrangeTitle{
+    font-size: 40px;
+    font-family: "Roboto Slab",sans-serif;
+    font-weight: 600;
+    color: #F16D35;
+}
+.testimonialWhiteTitle{
+    font-size: 32px;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+.testimonialsImg{
+    width: 100%;
+    height: 382px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+.inactiveTestimonial{
+
+}
+.imgText{
+    margin: 37px 34px;
+}
+.testimonialsCircle{
+    width: 143px;
+    height: 20px;
+    border: 1px solid;
+}
+.sectionSeven{
+    margin-top: -49px;
+    background-image: url("../images/blogBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 1077px;
+}
+.sectionBlog{
+    width: 66%;
+    height: 789px;
+    position: absolute;
+    margin: 144px 17% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.sectionBlog > span{
+    font-family: "Roboto Slab",sans-serif;
+    font-size: 40px;
+    color: #F16D35;
+    font-weight: 700;
+}
+.blogsCard{
+    width: 98%;
+    height: 482px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.blogsArticles{
+    width: 100%;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.blogText{
+    width: 291px;
+    font-size: 24px;
+    color: #1C5484;
+}
+.blogLine{
+    width: 59%;
+}
+.blogLine > div{
+    border-top: 2px solid white;
+}
+.blogBtn{
+    width: 186px;
+}
+.individualCards{
+    border-radius: 30px;
+    width: 377px;
+    height: 482px;
+}
+.cardsMiddle{
+    margin: 0px 10px;
+}
+.cardsimg{
+    height: 233px;
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.cardsimg > img{
+    width: 100%;
+    height: 100%;
+}
+.cardsText{
+    height: 247px;
+    width: 100%;
+    background: white;
+}
+.cardsTextField{
+    position: absolute;
+    height: 205px;
+    width: 26.7%;
+    margin: 21px 1.7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardsTextInfo{
+    width: 100%;
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.cardsLike{
+    height: 43px;
+    width: 74%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardsLike > a{
+    font-size: 19px;
+    color: #F36528;
+    font-weight: 500;
+}
+.cardsLike > img:hover{
+    cursor:pointer;
+}
+.cardsInfo{
+    display: -webkit-box;
+    font-size: 18px;
+    color: #1C5484;
+    width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height:48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+}
+.cardsDate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    color: #555555;
+}
+.articleDate{
+    margin-left: 10px;
+}
+.sectionEight{
+    background-image: url("../images/eightBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 502px;
+    margin-top: -56px;
+}
+.haveQuestions{
+    width: 44%;
+    height: 337px;
+    position: absolute;
+    margin: 83px 28% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.questionTitle{
+    font-family: "Roboto Slab",sans-serif;
+    font-size: 32px;
+    color: white;
+}
+.questionForm{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.questionFields{
+    width: 100%;
+    height: 135px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.questionbutton{
+    width: 201px;
+    height: 78px;
+}
+.questionbutton > button{
+    border: none;
+    background: none;
+}
+.leftQuestionField{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.leftQuestionField > input{
+    width: 100%;
+    height:62px;
+    border-radius:31px;
+    background: rgba(116,168,171,0.7);
+    box-shadow: 0px 0px 8px 0px #5D889D;
+    border: none;
+    outline: none;
+    padding: 0px 15px;
+    color: #D9E3E4;
+    font-size: 16px;
+}
+.leftQuestionField > input::placeholder{
+    color: #D9E3E4;
+    font-size: 16px;
+}
+.rightQuestionField{
+    width: 48%;
+}
+.rightQuestionField > textarea{
+    width: 100%;
+    height: 100%;
+    border-radius:30px;
+    background: rgba(116,168,171,0.7);
+    box-shadow: 0px 0px 8px 0px #5D889D;
+    border: none;
+    outline: none;
+    padding: 24px 28px;
+    color: #D9E3E4;
+    font-size: 16px;
+}
+.rightQuestionField > textarea::placeholder{
+    color: #D9E3E4;
+    font-size: 16px;
 }
 /*end main page css*/
