@@ -12,7 +12,8 @@
     height: 158px;
     background: linear-gradient(#99C0C2,#85B2B6);
     box-shadow: 0px 0px 9px 0px #347D81;
-    position: relative;
+    /*position: fixed;*/
+    /*z-index: 50;*/
 }
 .menuSection{
     width: 66%;
@@ -592,7 +593,6 @@
     margin: 137px 17% 0px;
     width: 66%;
     height: 677px;
-    border: 1px solid;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -602,7 +602,6 @@
 .testimonialsTitles{
     width: 447px;
     height: 112px;
-    border: 1px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -628,16 +627,46 @@
     justify-content: space-between;
     align-items: start;
 }
-.inactiveTestimonial{
-
+.blockTestimonial{
+    background-image: url("../images/inactivetestimonial.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    width: 30%;
+    height: 100%;
 }
-.imgText{
-    margin: 37px 34px;
+/*.blockTestimonial:hover{*/
+/*    background-image: url("../images/activetestimonial.png");*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: top;*/
+/*    background-size: 100%;*/
+/*    cursor: pointer;*/
+/*    width: 30%;*/
+/*    height: 100%;*/
+/*}*/
+.intoBlockTestimonial{
+    border: 1px solid;
+    width: 78%;
+    height: 62%;
+    margin: 11.5% 9%;
+}
+.testimonialsText{
+    border: 1px solid;
+    width: 100%;
+    height: 161px;
 }
 .testimonialsCircle{
     width: 143px;
     height: 20px;
-    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.caruselCircleTestimonial{
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 10px;
 }
 .sectionSeven{
     margin-top: -49px;
@@ -715,6 +744,8 @@
     height: 247px;
     width: 100%;
     background: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 .cardsTextField{
     position: absolute;
