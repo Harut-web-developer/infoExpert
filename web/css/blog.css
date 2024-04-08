@@ -1,0 +1,135 @@
+.blog{
+    width: 100%;
+    height: 1920px;
+    background-image: url("/images/background-image-blog.png");
+    background-repeat: no-repeat;
+}
+.title{
+    height: 53px;
+    padding-top: 37.92px;
+    padding-bottom: 37.92px;
+}
+.blogTitle{
+    font-family: Roboto Slab;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 52.75px;
+    letter-spacing: 0.05em;
+    color: #F16D35;
+    text-align: left;
+}
+.bodyBlog{
+    padding-top: 37.92px;
+    padding-bottom: 157px;
+}
+.mainBlog {
+    position: relative;
+    padding: 1rem 1rem 4rem;
+    min-height: calc(100vh - 4rem);
+}
+.grid-container{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 21.66% 21.66% 21.66%;
+}
+.card_{
+    /*height: 482px;*/
+    background: #fff;
+    margin: 0 10% 10% 0;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    border-radius: 30px;
+    overflow: hidden;
+}
+.card-image img{
+    max-width: 100%;
+    height: 50%;
+}
+.card-info{
+    position: relative;
+    padding: 21.61px;
+    height: 50%;
+}
+.textCard{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-align: left;
+    color: #1C5484;
+}
+.date{
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #555555;
+}
+.divImg{
+    text-align: end;
+}
+.divImg img{
+    width: 43px;
+    height: 43px;
+    margin-right: 20px;
+}
+.hidden {
+    display: none;
+}
+.pagination-container {
+    width: calc(100% - 2rem);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    justify-content: center;
+}
+.pagination-number{
+    font-family: Jost;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    background-color: transparent;
+    color: #FF782D;
+    margin: 0.25rem 0.25rem;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid #EAEAEA;
+}
+.pagination-button{
+    font-size: 1.1rem;
+    color: #EAEAEA;
+    background-color: transparent;
+    margin: 0.25rem 0.25rem;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid #EAEAEA;
+}
+.pagination-number:hover,
+.pagination-button:not(.disabled):hover {
+    background: #fff;
+    outline: none;
+}
+.pagination-number.active {
+    border: none;
+    color: #fff;
+    background: #FF782D;
+    outline: none;
+}
+
+.triangle-element {
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--bg-color, #ACCBE6);
+    border-right: 100px solid transparent;
+}
+.blog  a{
+    text-decoration: none;
+}

@@ -45,21 +45,21 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
             <div class="menu">
                 <ul>
-                    <li class="dropDownLi">
+                    <li class="dropDownLi menuAboutDropDown">
                         <span class="menuAbout">ABOUT</span>
                         <div class="dropDownAbout">
                             <ul>
                                 <li><a href="">Who we are</a></li>
-                                <li><a href="">Alumni</a></li>
+                                <li><a href="/alumni/index">Alumni</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="dropDownLi">
+                    <li class="dropDownLi menuCoursesDropDown">
                         <span class="menuCourses">COURSES</span>
                         <div class="dropDownCources">
                             <ul>
                                 <li><a href="">1C and Accounting fir begginers</a></li>
-                                <li><a href="">1C: Payroll and personel management</a></li>
+                                <li><a href="/personel-management/index">1C: Payroll and personel management</a></li>
                                 <li><a href="">1C: Accounting 8.3</a></li>
                                 <li><a href="">Trade management: markeing, sales, BITRIX / CRM</a></li>
                             </ul>
@@ -67,8 +67,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     </li>
                     <li class="whiteLi"><a href="">FAQ</a></li>
                     <li class="whiteLi"><a href="">TESTIMONIALS</a></li>
-                    <li class="whiteLi"><a href="">BLOG</a></li>
-                    <li class="whiteLi"><a href="">CONTACT US</a></li>
+                    <li class="whiteLi"><a href="/blog/index">BLOG</a></li>
+                    <li class="whiteLi"><a href="/contact-us/index">CONTACT US</a></li>
                     <li class="whiteLi"><a href="">APPLY NOW</a></li>
                     <li>
                         <button type="button" class="btnBack"><img src="/images/circle.png" alt=""></button>

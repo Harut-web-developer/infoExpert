@@ -1,0 +1,116 @@
+.personelManagement{
+    width: 100%;
+    height: 1318px;
+    background-image: url("/images/background-personel-management.png");
+    background-repeat: no-repeat;
+}
+.topDivFlex, .bottomDiv{
+    display: flex;
+}
+.topDiv{
+    width: 100%;
+}
+.personelManagementHeader{
+    width: 86%;
+    padding-left: 23%;
+    padding-top: 37.92px;
+}
+.personelManagement span{
+    font-family: Roboto Slab;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 58px;
+    text-align: left;
+    color: #F36528;
+}
+.personelManagementHeader img{
+    width: 43.58px;
+    height: 43.58px;
+    margin-left: 42.53px;
+}
+.infotxt{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.rightImg{
+    width: max-content;
+    height: 353.73px;
+    padding-top: 198px;
+}
+.leftDipl{
+    padding-left: 17%;
+}
+.rightImgBottom{
+    margin-left: 128px;
+}
+.card_ {
+    width: 296px;
+    /*position: relative;*/
+    height: 352px;
+    padding: 38px 34px 38px 34px;
+    border-radius: 30px;
+    /*margin: 25px;*/
+    border: 1px solid #0000000D;
+    /*box-shadow: 0 5px 25px rgb(1 1 1 / 20%);*/
+    text-align: center;
+    background: #FFFFFF24;
+
+}
+.card-image {
+    /*margin-top: 38px;*/
+    max-height: 80px;
+}
+.card-image img{
+    max-width: 100%;
+    height: auto;
+}
+.card-info{
+    /*text-align: center;*/
+    /*position: relative;*/
+    /*color: #222;*/
+    padding: 10px 20px 20px;
+}
+.nameCard{
+    color: #F16D35;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+}
+.textCard{
+    width: 208.26px;
+    /*height: 132px;*/
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.card_:hover{
+    background: #FFFFFF5C;
+}
+.bottomImages{
+    width: 66%;
+    margin: 0px auto;
+    height: 140px;
+    position: relative;
+    top: 15px;
+    text-align: end;
+
+}
+.leftDipl h1{
+    color: #F36528;
+    font-family: "Roboto Slab";
+    font-size: 24px;
+}
+.rightImgBottom h1{
+    color: #F36528;
+    font-family: "Roboto Slab";
+    font-size: 24px;
+}
