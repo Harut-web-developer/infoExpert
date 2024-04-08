@@ -28,7 +28,7 @@
     height: 43.58px;
     margin-left: 42.53px;
 }
-.personelManagement p{
+.infotxt{
     font-family: Roboto;
     font-size: 20px;
     font-weight: 400;
@@ -45,19 +45,18 @@
     padding-left: 17%;
 }
 .rightImgBottom{
-
+    margin-left: 128px;
 }
 .card_ {
     width: 296px;
-    position: relative;
+    /*position: relative;*/
     height: 352px;
     padding: 38px 34px 38px 34px;
     border-radius: 30px;
-    margin: 25px;
+    /*margin: 25px;*/
     border: 1px solid #0000000D;
     /*box-shadow: 0 5px 25px rgb(1 1 1 / 20%);*/
     text-align: center;
-    border: 1px;
     background: #FFFFFF24;
 
 }
@@ -70,10 +69,10 @@
     height: auto;
 }
 .card-info{
-    text-align: center;
-    position: relative;
-    color: #222;
-    /*padding: 10px 20px 20px;*/
+    /*text-align: center;*/
+    /*position: relative;*/
+    /*color: #222;*/
+    padding: 10px 20px 20px;
 }
 .nameCard{
     color: #F16D35;
@@ -84,14 +83,14 @@
     text-align: center;
 }
 .textCard{
-    /*width: 208.26px;*/
-    height: 132px;
-    font-family: Inter;
+    width: 208.26px;
+    /*height: 132px;*/
+    font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     text-align: center;
-    color: #1C5484;
+    color: #FFFFFF;
 }
 .card_:hover{
     background: #FFFFFF5C;
@@ -104,4 +103,14 @@
     top: 15px;
     text-align: end;
 
+}
+.leftDipl h1{
+    color: #F36528;
+    font-family: "Roboto Slab";
+    font-size: 24px;
+}
+.rightImgBottom h1{
+    color: #F36528;
+    font-family: "Roboto Slab";
+    font-size: 24px;
 }
