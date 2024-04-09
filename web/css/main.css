@@ -618,6 +618,7 @@
     animation: scroll 40s linear infinite;
     display: flex;
     width: calc(204px * 13);
+    overflow: hidden;
 }
 .slider .slide {
     height: 205px;
