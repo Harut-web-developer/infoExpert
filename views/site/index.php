@@ -72,11 +72,11 @@ $this->title = 'My Yii Application';
                         <span>What Does Royalty Free Mean?</span>
                         <img src="/images/arrowDown.png" alt="">
                     </div>
-<!--                    <div class="answerQuestion">-->
-<!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia-->
-<!--                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?-->
-<!--                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.-->
-<!--                    </div>-->
+                    <div class="answerQuestion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
+                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
+                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
+                    </div>
                 </div>
                 <div class="answersField">
                     <div class="questionField">
@@ -176,15 +176,42 @@ $this->title = 'My Yii Application';
                     <div class="testimonialSimbol">
                         <img src="/images/symbolTestimonial.png" alt="">
                     </div>
-                    <div class="testimonialsText"></div>
-                    <div class="fieldsLinkdin"></div>
+                    <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                        Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                        Enim egestas tellus risus quis ut </div>
+                    <div class="fieldsLinkdin">
+                        <span class="testimonialsAuthor">Lorem Ipsum</span>
+                        <a href=""><img src="/images/linkdin.png" alt=""></a>
+                    </div>
                 </div>
             </div>
             <div class="blockTestimonial">
-
+                <div class="intoBlockTestimonial">
+                    <div class="testimonialSimbol">
+                        <img src="/images/symbolTestimonial.png" alt="">
+                    </div>
+                    <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                        Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                        Enim egestas tellus risus quis ut </div>
+                    <div class="fieldsLinkdin">
+                        <span class="testimonialsAuthor">Lorem Ipsum</span>
+                        <a href=""><img src="/images/linkdin.png" alt=""></a>
+                    </div>
+                </div>
             </div>
             <div class="blockTestimonial">
-
+                <div class="intoBlockTestimonial">
+                    <div class="testimonialSimbol">
+                        <img src="/images/symbolTestimonial.png" alt="">
+                    </div>
+                    <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                        Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                        Enim egestas tellus risus quis ut </div>
+                    <div class="fieldsLinkdin">
+                        <span class="testimonialsAuthor">Lorem Ipsum</span>
+                        <a href=""><img src="/images/linkdin.png" alt=""></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="testimonialsCircle">
