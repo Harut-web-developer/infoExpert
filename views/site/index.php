@@ -51,7 +51,7 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
             <div class="managementBtn">
-                <img src="/images/logomanag.png" alt="">
+                <a href="/courses/index"><img src="/images/logomanag.png" alt=""></a>
             </div>
         </div>
         <div class="learnImg">
@@ -83,22 +83,22 @@ $this->title = 'My Yii Application';
                         <span>What Does Royalty Free Mean?</span>
                         <img src="/images/arrowDown.png" alt="">
                     </div>
-<!--                    <div class="answerQuestion">-->
-<!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia-->
-<!--                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?-->
-<!--                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.-->
-<!--                    </div>-->
+                    <div class="answerQuestion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
+                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
+                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
+                    </div>
                 </div>
                 <div class="answersField">
                     <div class="questionField">
                         <span>What Does Royalty Free Mean?</span>
                         <img src="/images/arrowDown.png" alt="">
                     </div>
-<!--                    <div class="answerQuestion">-->
-<!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia-->
-<!--                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?-->
-<!--                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.-->
-<!--                    </div>-->
+                    <div class="answerQuestion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
+                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
+                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
+                    </div>
                 </div>
             </div>
             <div class="rightQuestions">
@@ -107,60 +107,135 @@ $this->title = 'My Yii Application';
                         <span>What Does Royalty Free Mean?</span>
                         <img src="/images/arrowDown.png" alt="">
                     </div>
-<!--                    <div class="answerQuestion">-->
-<!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia-->
-<!--                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?-->
-<!--                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.-->
-<!--                    </div>-->
+                    <div class="answerQuestion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
+                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
+                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
+                    </div>
                 </div>
                 <div class="answersField">
                     <div class="questionField">
                         <span>What Does Royalty Free Mean?</span>
                         <img src="/images/arrowDown.png" alt="">
                     </div>
-<!--                    <div class="answerQuestion">-->
-<!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia-->
-<!--                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?-->
-<!--                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.-->
-<!--                    </div>-->
+                    <div class="answerQuestion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
+                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
+                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
+                    </div>
                 </div>
                 <div class="answersField">
                     <div class="questionField">
                         <span>What Does Royalty Free Mean?</span>
                         <img src="/images/arrowDown.png" alt="">
                     </div>
-<!--                    <div class="answerQuestion">-->
-<!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia-->
-<!--                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?-->
-<!--                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.-->
-<!--                    </div>-->
+                    <div class="answerQuestion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
+                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
+                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
+                    </div>
                 </div>
                 <div class="answersField">
                     <div class="questionField">
                         <span>What Does Royalty Free Mean?</span>
                         <img src="/images/arrowDown.png" alt="">
                     </div>
-<!--                    <div class="answerQuestion">-->
-<!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia-->
-<!--                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?-->
-<!--                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.-->
-<!--                    </div>-->
+                    <div class="answerQuestion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
+                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
+                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
 <div class="sectionFive">
-    <div class="partnerSection">
+    <div class="partnerSection slider">
         <span class="partnersTitle">PARTNERS</span>
-        <div class="partners">
-            <img src="/images/partner1.png" alt="">
-            <img src="/images/partner2.png" alt="">
-            <img src="/images/partner3.png" alt="">
-            <img src="/images/partner4.png" alt="">
-            <img src="/images/partner5.png" alt="">
-            <img src="/images/partner6.png" alt="">
-            <img src="/images/partner7.png" alt="">
+        <div class="partners slide-track">
+            <div class="slide">
+                <img src="/images/partner1.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner2.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner3.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner4.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner5.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner6.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner7.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner8.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner9.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner10.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner11.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner12.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner13.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner14.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner15.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner16.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner17.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner18.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner19.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner20.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner21.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner22.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner23.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner24.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner25.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="/images/partner26.png" alt="">
+            </div>
         </div>
     </div>
 </div>
@@ -222,7 +297,7 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 </div>
-<div class="sectionSeven">
+<div class="sectionSeven" id="section01">
     <div class="sectionBlog">
         <span>BLOG</span>
         <div class="blogsCard">
@@ -241,7 +316,7 @@ $this->title = 'My Yii Application';
                             <div class="cardsInfo">Grid of different categories of accounting lessons</div>
                         </div>
                         <div class="cardsLike">
-                            <a href="">READ MORE</a>
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
                             <img src="/images/activeLike.png" alt="">
                         </div>
                     </div>
@@ -262,7 +337,7 @@ $this->title = 'My Yii Application';
                             <div class="cardsInfo">Grid of different categories of accounting lessons</div>
                         </div>
                         <div class="cardsLike">
-                            <a href="">READ MORE</a>
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
                             <img src="/images/activeLike.png" alt="">
                         </div>
                     </div>
@@ -283,7 +358,7 @@ $this->title = 'My Yii Application';
                             <div class="cardsInfo">Grid of different categories of accounting lessons</div>
                         </div>
                         <div class="cardsLike">
-                            <a href="">READ MORE</a>
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
                             <img src="/images/inactiveLike.png" alt="">
                         </div>
                     </div>
@@ -296,7 +371,7 @@ $this->title = 'My Yii Application';
                 <div></div>
             </div>
             <div class="blogBtn">
-                <img src="/images/articlebtn.png" alt="">
+                <a href="blog/index"><img src="/images/articlebtn.png" alt=""></a>
             </div>
         </div>
     </div>
