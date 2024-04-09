@@ -28,7 +28,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <link rel="stylesheet" href="/css/main.css">
 
 </head>
-<body class="d-flex flex-column h-100">
+<body>
 <?php $this->beginBody() ?>
 <header>
     <div class="header">
@@ -89,66 +89,164 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 </main>
 
 <footer class="footerBackground">
-    <div class="bgRectangle">
-        <div class="linksFooter">
-            <div class="footerLogo">
-                <img src="/images/footerLogo.png" alt="">
-            </div>
-            <div class="footerMenu">
-                <div class="leftMenuFooter">
-                    <ul>
-                        <li><a href="">About IEA</a></li>
-                        <li><a href="">Our Methodology</a></li>
-                        <li><a href="">Contact Us</a></li>
-                        <li><a href="">Testimonials</a></li>
-                        <li><a href="">FAQ</a></li>
-                    </ul>
+    <div class="sectionFooter">
+        <div class="imagesFooterFields">
+            <div class="leftFooterBg">
+                <div class="footerFields">
+                    <div class="footerLogo">
+                        <img src="/images/footerLogo.png" alt="">
+                    </div>
+                    <div class="leftFooterBlock">
+                        <div class="footerMenu">
+                            <div class="leftMenuFooter">
+                                <ul>
+                                    <li><a href="">About IEA</a></li>
+                                    <li><a href="">Our Methodology</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                    <li><a href="">Testimonials</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </div>
+                            <div class="rightMenuFooter">
+                                <ul>
+                                    <li><a href="">Courses</a></li>
+                                    <li><a href="">Blog</a></li>
+                                    <li><a href="">Recommendative Quize</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footerConn">
+                            <span>LET`S STAY CONNECTED</span>
+                        </div>
+                        <div class="footerBtn">
+                            <input type="text" name="leftEmail" placeholder="Your Email">
+                            <button>Connect</button>
+                        </div>
+                    </div>
+
+                    <div class="footerSocial">
+                        <a href=""><img src="/images/in.png" alt=""></a>
+                        <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>
+                        <a href=""><img src="/images/facebook.png" alt=""></a>
+                    </div>
                 </div>
-                <div class="rightMenuFooter">
-                    <ul>
-                        <li><a href="">Courses</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Recommendative Quize</a></li>
-                    </ul>
-                </div>
             </div>
-            <div class="footerConn">
-                <span>LET`S STAY CONNECTED</span>
-            </div>
-            <div class="footerBtn">
-                <input type="text" name="leftEmail" placeholder="Your Email">
-                <button></button>
-            </div>
-            <div class="footerSocial">
-                <a href=""><img src="/images/in.png" alt=""></a>
-                <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>
-                <a href=""><img src="/images/facebook.png" alt=""></a>
+            <div class="rightFooterBg">
+                <form class="formMail" action="">
+                    <div class="formName">
+                        <span>QUIZE</span>
+                    </div>
+                    <div class="inputsMail" >
+                        <input type="text" name="name" placeholder="Name/Surname">
+                        <input type="text" name="phone" placeholder="Phone number">
+                        <input type="text"  name="email" placeholder="Email">
+                    </div>
+                    <div class="formContinue">
+                        <button>Continue</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="quize">
-            <div class="formMail">
-                <div class="formName">
-                    <span>QUIZE</span>
-                </div>
-                <form class="inputsMail" action="">
-                    <input type="text" name="name" placeholder="Name/Surname">
-                    <input type="text" name="phone" placeholder="Phone number">
-                    <input type="text"  name="email" placeholder="Email">
-                </form>
-                <div class="formContinue">
-                    <a href="#">Continue</a>
-                </div>
+        <div class="paypalFooter">
+            <span class="copyTextFooter">
+                &copy; Copyright 2023 - Infoexpert Academy
+            </span>
+            <div class="policyText">
+                <ul>
+                    <li><a href="">Privecy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="payLogoFooter">
+                <img src="/images/visaCardLogo.png" alt="">
+                <img src="/images/masterCardLogo.png" alt="">
             </div>
         </div>
     </div>
-<!--    <div class="container">-->
-<!--        <div class="row text-muted">-->
-<!--            <div class="col-md-6 text-center text-md-start">&copy; My Company --><?php //= date('Y') ?><!--</div>-->
-<!--            <div class="col-md-6 text-center text-md-end">--><?php //= Yii::powered() ?><!--</div>-->
+<!--    <div class="bgRectangle">-->
+<!--        <div class="linksFooter">-->
+<!--            <div class="footerLogo">-->
+<!--                <img src="/images/footerLogo.png" alt="">-->
+<!--            </div>-->
+<!--            <div class="footerMenu">-->
+<!--                <div class="leftMenuFooter">-->
+<!--                    <ul>-->
+<!--                        <li><a href="">About IEA</a></li>-->
+<!--                        <li><a href="">Our Methodology</a></li>-->
+<!--                        <li><a href="">Contact Us</a></li>-->
+<!--                        <li><a href="">Testimonials</a></li>-->
+<!--                        <li><a href="">FAQ</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="rightMenuFooter">-->
+<!--                    <ul>-->
+<!--                        <li><a href="">Courses</a></li>-->
+<!--                        <li><a href="">Blog</a></li>-->
+<!--                        <li><a href="">Recommendative Quize</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="footerConn">-->
+<!--                <span>LET`S STAY CONNECTED</span>-->
+<!--            </div>-->
+<!--            <div class="footerBtn">-->
+<!--                <input type="text" name="leftEmail" placeholder="Your Email">-->
+<!--                <button></button>-->
+<!--            </div>-->
+<!--            <div class="footerSocial">-->
+<!--                <a href=""><img src="/images/in.png" alt=""></a>-->
+<!--                <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>-->
+<!--                <a href=""><img src="/images/facebook.png" alt=""></a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="quize">-->
+<!--            <div class="formMail">-->
+<!--                <div class="formName">-->
+<!--                    <span>QUIZE</span>-->
+<!--                </div>-->
+<!--                <form class="inputsMail" action="">-->
+<!--                    <input type="text" name="name" placeholder="Name/Surname">-->
+<!--                    <input type="text" name="phone" placeholder="Phone number">-->
+<!--                    <input type="text"  name="email" placeholder="Email">-->
+<!--                </form>-->
+<!--                <div class="formContinue">-->
+<!--                    <a href="#">Continue</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+
+
+<!--    <div class="block_" >-->
+<!--        <div class="block_contact" style="-->
+<!--    background-image: url('../images/bgrec.png');-->
+<!--    background-repeat: no-repeat;-->
+<!--    background-size: contain;"></div>-->
+<!--        <div class="block_form" style="background: white;border-radius:12px;">-->
 <!--        </div>-->
 <!--    </div>-->
 </footer>
-
+<style>
+    .block_{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width:1300px;
+        margin:0px auto;
+        padding-top:100px;
+        align-items: flex-end;
+    }
+    .block_contact{
+        flex-basis: 66%;
+        min-height: 557px;
+    }
+    .block_form{
+        flex-basis: ;
+        min-height: 437px;
+    }
+</style>
 <?php $this->endBody() ?>
 </body>
 </html>

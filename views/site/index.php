@@ -246,21 +246,54 @@ $this->title = 'My Yii Application';
             <span class="testimonialWhiteTitle">Our customers love what we do</span>
         </div>
         <div class="testimonialsImg">
-            <div>
-                <img class="inactiveTestimonial" src="/images/inactivetestimonial.png" alt="">
-                <div class="imgText"></div>
+            <div class="blockTestimonial">
+                <div class="intoBlockTestimonial">
+                    <div class="testimonialSimbol">
+                        <img src="/images/symbolTestimonial.png" alt="">
+                    </div>
+                    <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                        Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                        Enim egestas tellus risus quis ut </div>
+                    <div class="fieldsLinkdin">
+                        <span class="testimonialsAuthor">Lorem Ipsum</span>
+                        <a href=""><img src="/images/linkdin.png" alt=""></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="activeTestimonial" src="/images/activetestimonial.png" alt="">
-
+            <div class="blockTestimonial">
+                <div class="intoBlockTestimonial">
+                    <div class="testimonialSimbol">
+                        <img src="/images/symbolTestimonial.png" alt="">
+                    </div>
+                    <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                        Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                        Enim egestas tellus risus quis ut </div>
+                    <div class="fieldsLinkdin">
+                        <span class="testimonialsAuthor">Lorem Ipsum</span>
+                        <a href=""><img src="/images/linkdin.png" alt=""></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="inactiveTestimonial" src="/images/inactivetestimonial.png" alt="">
-
+            <div class="blockTestimonial">
+                <div class="intoBlockTestimonial">
+                    <div class="testimonialSimbol">
+                        <img src="/images/symbolTestimonial.png" alt="">
+                    </div>
+                    <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                        Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                        Enim egestas tellus risus quis ut </div>
+                    <div class="fieldsLinkdin">
+                        <span class="testimonialsAuthor">Lorem Ipsum</span>
+                        <a href=""><img src="/images/linkdin.png" alt=""></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="testimonialsCircle">
-
+            <div class="caruselCircleTestimonial"></div>
+            <div class="caruselCircleTestimonial"></div>
+            <div class="caruselCircleTestimonial"></div>
+            <div class="caruselCircleTestimonial"></div>
         </div>
     </div>
 </div>

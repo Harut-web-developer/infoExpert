@@ -12,7 +12,8 @@
     height: 158px;
     background: linear-gradient(#99C0C2,#85B2B6);
     box-shadow: 0px 0px 9px 0px #347D81;
-    position: relative;
+    position: fixed;
+    z-index: 50;
 }
 .menuSection{
     width: 66%;
@@ -154,115 +155,94 @@
 /*start footer css*/
 
 .footerBackground{
+    margin-top: -50px;
     background-image: url("../images/footerbg.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 738px;
 }
-.bgRectangle{
-    margin-top: 97px;
-    margin-left: 17%;
-    background-image: url("../images/bgrec.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 1221px;
-    height: 564px;
-    position: relative;
-}
-.quize{
-    top: 120px;
-    left: 710px;
-    background-image: url("../images/smallrec.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 622px;
-    height: 416px;
-    position: relative;
-}
-.formMail{
-    width: 500px;
-    height: 320px;
-    position: relative;
-    top: 53px;
-    left: 60px;
-    display: flex;
+
+.sectionFooter{
+    width: 68%;
+    height: 615px;
+    margin: 97px 16% 0px;
+    position: absolute;
+    display:flex;
     flex-direction: column;
     justify-content: space-between;
-    /*align-items: start;*/
-
-}
-.formName{
-    margin-left: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-}
-.formContinue{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-.inputsMail{
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
-.inputsMail > input{
-    padding-left: 25px;
-    font-size: 16px;
-    width: 100%;
-    height: 45px;
-    margin: 8px 0px;
-    background: #5D9A9D;
-    border: none;
-    outline: none;
-    color: white;
-    border-radius: 23px;
+/*.imagesFooterFields{*/
+/*    background-image: url("../images/groupFooterImage.png");*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*    background-size: contain;*/
+/*    width: 100%;*/
+/*    height: 557px;*/
+/*}*/
+
+.imagesFooterFields{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
 }
-.inputsMail > input::placeholder{
-    color: white;
+.leftFooterBg{
+    background-image: url("../images/leftImageFooter.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    width:659px;
+    height: 557px;
+    margin-right: 5px;
+
 }
-.formName > span{
-    font-size: 21px;
-    font-weight: 500;
-    color: #5D9A9D;
-}
-.formContinue > a{
-    margin-right: 10px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #5D9A9D;
-}
-.linksFooter{
+.footerFields{
     width: 515px;
-    height: 450px;
-    position: absolute;
-    top: 90px;
-    left: 70px;
+    height: 411px;
+    margin: 112px auto 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
 }
 .footerMenu{
-    width: 71%;
+    width: 414px;
+    height: 149px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+.leftFooterBlock{
+    width: 100%;
+    height: 269px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.leftMenuFooter{
+    width: 138px;
+    height: 149px;
+}
 .leftMenuFooter > ul{
     list-style: none;
     padding-left: 0px;
-    font-size: 13px;
+    font-size: 18px;
 }
 .leftMenuFooter > ul > li > a{
     text-decoration: none;
     color: #5D9A9D;
 }
+.rightMenuFooter{
+    width: 190px;
+    height: 85px;
+}
 .rightMenuFooter > ul{
+    padding-left:0px;
     list-style: none;
-    font-size: 13px;
+    font-size: 18px;
 }
 .rightMenuFooter > ul > li > a{
     text-decoration: none;
@@ -270,7 +250,7 @@
 }
 .footerConn > span{
     color: #F36528;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
 }
 .footerBtn{
@@ -278,9 +258,10 @@
 }
 .footerBtn > input{
     position: absolute;
-    width: 100%;
+    width: 513px;
     height: 45px;
     border-radius: 23px;
+    color: white;
     outline: none;
     border: none;
     background: #5D9A9D;
@@ -293,6 +274,9 @@
 .footerBtn > button{
     left: 351px;
     top: 3px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #5D9A9D;
     /* outline: none; */
     border: 1px solid white;
     width: 158px;
@@ -303,6 +287,104 @@
 }
 .linkInstagram{
     margin: 0px 5px;
+}
+.rightFooterBg{
+    width:623px;
+    height: 435px;
+    background-image: url("../images/qw.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    margin-left: 5px;
+}
+.formMail{
+    width: 540px;
+    height: 338px;
+    margin: 48px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.formName{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.formName > span{
+    font-size: 24px;
+    font-weight: 500;
+    color: #5D9A9D;
+}
+.inputsMail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputsMail > input{
+    padding: 0px 37px;
+    font-size: 15px;
+    width: 100%;
+    height: 60px;
+    margin: 8px 0px;
+    background: none;
+    border: 3px solid #5D9A9D;
+    outline: none;
+    color: #ACACAC;
+    border-radius: 30px;
+}
+.inputsMail > input::placeholder{
+    color: #ACACAC;
+    font-size: 15px;
+}
+.formContinue > button{
+    height: 58px;
+    width: 204px;
+    border-radius: 29px;
+    background: #5D9A9D;
+    color:white;
+    font-size: 20px;
+    border:none;
+}
+.paypalFooter{
+    width: 1163px;
+    height: 33px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.copyTextFooter{
+    width: 267px;
+    height: 18px;
+    font-size: 15px;
+    color: white;
+
+}
+.policyText{
+    height: 18px;
+    width: 262px;
+}
+.policyText > ul{
+    width: 100%;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    list-style: none;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.policyText > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+.payLogoFooter{
+    max-width: 112px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 /*end footer css*/
 
@@ -637,7 +719,6 @@
     margin: 137px 17% 0px;
     width: 66%;
     height: 677px;
-    border: 1px solid;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -647,7 +728,6 @@
 .testimonialsTitles{
     width: 447px;
     height: 112px;
-    border: 1px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -666,23 +746,83 @@
 }
 .testimonialsImg{
     width: 100%;
-    height: 382px;
-    border: 1px solid;
+    margin-top: 32px;
+    /* height: 382px; */
+    height: 79%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
 }
-.inactiveTestimonial{
-
+.blockTestimonial{
+    background-image: url("../images/inactivetestimonial.png");
+    background-repeat: no-repeat;
+    /*background-position: top;*/
+    background-size: 100%;
+    width: 30%;
+    height: 100%;
 }
-.imgText{
-    margin: 37px 34px;
+.blockTestimonial:hover{
+    background-image: url("../images/activetestimonial.png");
+    background-repeat: no-repeat;
+    /*background-position: top;*/
+    background-size: 100%;
+    cursor: pointer;
+    width: 30%;
+    height: 100%;
+}
+.fieldsLinkdin{
+    width:100%;
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonialsAuthor{
+    font-size: 24px;
+    width: 141px;
+    color: white;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height:37px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+}
+.intoBlockTestimonial{
+    width: 78%;
+    height: 44%;
+    margin: 11.5% 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.testimonialsText{
+    width: 100%;
+    height: 155px;
+    font-size: 20px;
+    color: white;
+    /*display: -webkit-box;*/
+    /*-webkit-line-clamp: 2;*/
+    /*-webkit-box-orient: vertical;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*white-space: pre-wrap;*/
 }
 .testimonialsCircle{
     width: 143px;
     height: 20px;
-    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.caruselCircleTestimonial{
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 10px;
 }
 .sectionSeven{
     margin-top: -49px;
@@ -760,20 +900,21 @@
     height: 247px;
     width: 100%;
     background: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 .cardsTextField{
-    position: absolute;
-    height: 205px;
-    width: 26.7%;
-    margin: 21px 1.7%;
+    height: 227px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 .cardsTextInfo{
+    padding: 21px 5%;
     width: 100%;
-    height: 136px;
+    height: 190px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
