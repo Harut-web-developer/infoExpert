@@ -12,342 +12,279 @@ $this->registerCssFile('@web/css/blog.css');
             <div id="paginated-list" data-current-page="1" aria-live="polite">
                 <div class="grid-container">
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
+                        <div class="card-image"><img src="/images/1.png" alt=""></div>
+                        <div class="card-info">
+                            <p class="textCard">Grid of different categories of accounting lessons</p>
+                            <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+                            <p class="textCard"> Grid of different categories of accounting lessons</p>
+                            <div class='divImg'>
+                                <img src="/images/imglike.png">
                             </div>
-                        </a>
-                    </div>
-                    <div class="card_">
-                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">
-                            <div class="card-image"><img src="/images/1.png" alt=""></div>
-                            <div class="card-info">
-                                <p class="textCard">Grid of different categories of accounting lessons</p>
-                                <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
-                                <p class="textCard"> Grid of different categories of accounting lessons</p>
-                                <div class='divImg'>
-                                    <img src="/images/imglike.png">
-                                </div>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
