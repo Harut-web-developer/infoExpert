@@ -16,7 +16,8 @@ $this->registerCssFile('@web/css/user-profile.css');
         <div class="userCreateFieldForms">
             <form action="">
                 <div class="userPhotoFields">
-
+                    <span class="userAddPhotoText">Add photo</span>
+                    <input type="file">
                 </div>
                 <div class="userInputsFields">
                     <div class="userFormsInput">
@@ -36,8 +37,14 @@ $this->registerCssFile('@web/css/user-profile.css');
                         <input type="text">
                     </div>
                     <div class="userFormsInput">
-                        <label for="">CV</label>
-                        <input type="file">
+                        <label for="attachCv">CV</label>
+                        <div id="attachCv" class="cvFileField">
+                            <input class="cvFile" type="file">
+                            <div class="attachCv">
+                                <span>Attach file</span>
+                                <img src="/images/scriptIcon.png" alt="">
+                            </div>
+                        </div>
                     </div>
                     <div class="userFormsBtn">
                         <button>
@@ -50,3 +57,4 @@ $this->registerCssFile('@web/css/user-profile.css');
         </div>
     </div>
 </div>
+<?php $this->registerJsFile('@web/js/user-create.js', ['defer' => true]); ?>
