@@ -12,4 +12,8 @@ class UserProfileController extends \yii\web\Controller
     {
         return $this->render('user-create');
     }
+    public function actionAchievements()
+    {
+        return $this->render('achievements');
+    }
 }

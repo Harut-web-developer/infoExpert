@@ -159,5 +159,102 @@
     font-family: "Roboto",sans-serif;
     color: #F36528;
     margin: 11px 33px;
-
+}
+.usersAchievements{
+    width: 100%;
+    height: 1061px;
+    background-image: url("../images/background-achievements.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.userAchievementsSection{
+    width: 67%;
+    height: 541px;
+    position: absolute;
+    margin: 212px 16.5% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.profilBody{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 118.03px;
+}
+.usersCard{
+    width: 405px;
+    height: 532.72px;
+    top: 374.19px;
+    left: 320.04px;
+    padding: 37px 36px 37px 78px;
+    border-radius: 30px;
+    background: #FFFFFF24;
+}
+.usersCardHead{
+    display: flex;
+}
+.usersCardMain h1{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23.44px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 24px 0;
+}
+.info1{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.info2{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 22px;
+}
+.info3{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 22px;
+}
+.info1 > span,
+.info2 > span,
+.info3 > span {
+    padding-left: 42px;
+}
+.cartificateImg{
+    background: #FFFFFF24;
+    width: 624.07px;
+    height: 468.05px;
+    border-radius: 30px;
+}
+.cartificateImg img{
+    padding: 45.08px 44.84px;
+}
+.certificate span{
+    font-family: Roboto Slab;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.4px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.cartificateImgTxt{
+    padding: 29px 31px 0px 31px;
 }
