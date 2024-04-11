@@ -1,9 +1,9 @@
 .alumni{
     width: 100%;
-    height: 1165px;
-    background-image: url("/images/background-image-alumni.png");
+    height: 1330px;
+    background-image: url("/images/background-alumni.png");
     background-repeat: no-repeat;
-
+    padding-top: 158px;
 }
 .alumniTitle{
     width: 40%;

@@ -638,16 +638,21 @@
     width: 100%;
     height: 544px;
     margin-top: -56px;
+    position:relative;
 }
 .partnerSection{
-    width: 93%;
+    width: 66%;
     height: 303px;
     position: absolute;
-    margin: 129px 3.5% 0px;
+    margin: 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
 }
 .partnersTitle{
     font-family: "Roboto Slab",sans-serif;
@@ -656,32 +661,18 @@
     color: #F16D35;
 }
 .partners{
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 51px;
 }
 .answerQuestion{
     display: none;
 }
-
-@-webkit-keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-204px * 13));
-    }
-}
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-204px * 13));
-    }
+.slider{
+    overflow: hidden;
 }
 .slider::before, .slider::after {
     content: "";
-    height: 205px;
+    height: 100px;
     position: absolute;
     width: 200px;
     z-index: 2;
@@ -696,15 +687,42 @@
     top: 0;
 }
 .slider .slide-track {
-    -webkit-animation: scroll 40s linear infinite;
-    animation: scroll 40s linear infinite;
+    /*-webkit-animation: scroll 10s  infinite;*/
+    animation: scroll 10s infinite;
     display: flex;
-    width: calc(204px * 13);
-    overflow: hidden;
+    width: max-content;
 }
 .slider .slide {
     height: 205px;
-    width: 204px;
+    width: 200px;
+}
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(calc(-100% * 0.2));
+    }
+    40% {
+        transform: translateX(calc(-100% * 0.4));
+    }
+    60% {
+        transform: translateX(calc(-100% * 0.6));
+    }
+    80% {
+        transform: translateX(calc(-100% * 0.8));
+    }
+    100% {
+        transform: translateX(calc(-100% * 1));
+    }
 }
 .sectionSix{
     margin-top: -56px;

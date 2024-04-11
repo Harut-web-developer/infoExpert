@@ -8,16 +8,6 @@ $this->registerCssFile('@web/css/login.css');
 
 ?>
 <section class="mainPoints">
-    <div class="points">
-        <p class="point1"></p>
-        <p class="point2"></p>
-        <p class="point3"></p>
-        <p class="point4"></p>
-        <p class="point5"></p>
-        <img class="img1" src="/images/Group 1000002220.png" class="point6"></img>
-        <img class="img2" src="/images/Group 1000002221.png" class="point7"></img>
-        <img class="img3" src="/images/Group 1000002222.png" class="point8"></img>
-    </div>
     <div class="container">
         <div class="globus">
             <span class="globusPoints">

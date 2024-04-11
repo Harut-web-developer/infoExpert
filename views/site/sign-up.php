@@ -8,16 +8,6 @@ $this->registerCssFile('@web/css/login.css');
 
 ?>
 <section class="mainPoints">
-    <div class="points">
-        <p class="point1"></p>
-        <p class="point2"></p>
-        <p class="point3"></p>
-        <p class="point4"></p>
-        <p class="point5"></p>
-        <img class="img1" src="/images/Group 1000002220.png" class="point6"></img>
-        <img class="img2" src="/images/Group 1000002221.png" class="point7"></img>
-        <img class="img3" src="/images/Group 1000002222.png" class="point8"></img>
-    </div>
     <div class="container">
         <div class="globus">
                 <span class="globusPoints">
@@ -38,11 +28,11 @@ $this->registerCssFile('@web/css/login.css');
                 <input type="email" placeholder="Email Address" name="email">
                 <input type="password" placeholder="Password" name="password">
                 <span class="checkbox">
-                        <p><input type="checkbox" name="checkbox"> I agree to the <a href=""> terms & policy</a></p>
-                    </span>
+                    <p><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> I agree to the <a href=""> terms & policy</a></p>
+                </span>
             </div>
-            <button><img src="/images/Group 1000002214.png" alt=""></button>
-            <p class="signUp">have an account ? <a href=""> Sign In </a></p>
+            <button><img src="/images/sign-up.png" alt=""></button>
+            <p class="signUp">have an account ? <a href=""> SIGN UP </a></p>
         </form>
     </div>
 
