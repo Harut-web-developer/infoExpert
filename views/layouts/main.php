@@ -39,7 +39,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 </div>
                 <div class="icons">
                     <img class="searchIcons" src="/images/search.png" alt="">
-                    <img src="/images/user.png" alt="">
+                    <a href="/user-profile/index"><img src="/images/user.png" alt=""></a>
                     <img src="/images/flag.png" alt="">
                 </div>
             </div>
@@ -69,7 +69,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <li class="whiteLi"><a href="">TESTIMONIALS</a></li>
                     <li class="whiteLi"><a href="#section01">BLOG</a></li>
                     <li class="whiteLi"><a href="/contact-us/index">CONTACT US</a></li>
-                    <li class="whiteLi"><a href="">APPLY NOW</a></li>
+                    <li class="whiteLi"><a href="/apply-now/index">APPLY NOW</a></li>
                     <li>
                         <button type="button" class="btnBack"><img src="/images/circle.png" alt=""></button>
                     </li>

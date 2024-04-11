@@ -1,0 +1,361 @@
+
+.applyOne{
+    width: 100%;
+    height: 1452px;
+    background-image: url("../images/applyOneBg.png");
+}
+.appleFields{
+    position: absolute;
+    width: 66%;
+    height: 1101px;
+    margin: 212px 17% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.appleFields > span{
+    font-size: 36px;
+    color: #F36528;
+    font-family: 'Tahoma',sans-serif;
+}
+.appleFields > p{
+    font-size: 20px;
+    color: white;
+    font-family: 'Tahoma',sans-serif;
+    width: 100%;
+    height: 48px;
+}
+.apllyInputFields{
+    width: 622px;
+    height: 819px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.radioFieldsBlocks{
+    width: 622px;
+    height: 179px;
+    border-radius: 30px;
+    background: #74A8AB;
+}
+.applyNameInput, .applyEmailInput, .applyPhoneInput{
+    width: 100%;
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.applyNameInput  input{
+    width: 100%;
+    height: 62px;
+    background: #74A8AB;
+    border-radius: 31px;
+    border:none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    padding: 0px 26px;
+
+}
+.applyNameInput  label{
+    font-size: 16px;
+    color: white;
+    margin-left:19px;
+
+}
+.applyEmailInput  input{
+    width: 100%;
+    height: 62px;
+    background: #74A8AB;
+    border-radius: 31px;
+    border:none;
+    font-size: 16px;
+    color: white;
+    padding: 0px 26px;
+    outline: none;
+
+}
+.applyEmailInput  label{
+    font-size: 16px;
+    color: white;
+    margin-left:19px;
+
+}
+.applyPhoneInput  input{
+    width: 100%;
+    height: 62px;
+    background: #74A8AB;
+    border-radius: 31px;
+    border:none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    padding: 0px 26px;
+}
+.applyPhoneInput  label{
+    font-size: 16px;
+    color: white;
+    margin-left:19px;
+
+}
+.coursesFieldsRadio{
+    width: 100%;
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.typeCoursesFields{
+    width: 100%;
+    height: 181px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.radioFieldsBlocksType{
+    width: 622px;
+    height: 145px;
+    border-radius: 30px;
+    background: #74A8AB;
+}
+.coursesFieldsRadio  span{
+    font-size: 16px;
+    color: white;
+    margin-left:19px;
+
+}
+.typeCoursesFields  span{
+    font-size: 16px;
+    color: white;
+    margin-left:19px;
+
+}
+.coursesBlocksRadio{
+    width: 384px;
+    height: 139px;
+    margin: 20px 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.coursesBlocksRadio > div > label{
+    color: white;
+    font-size: 16px;
+    margin-left:28px;
+}
+.coursesBlocksRadio > div{
+    display: flex;
+    flex-direction: row;
+}
+.coursesBlocksRadio > div > input{
+    width: 18px;
+    height: 18px;
+    accent-color: #F36528;
+}
+.typeCoursesBlocksRadio{
+    width: 148px;
+    height: 99px;
+    margin: 23px 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.typeCoursesBlocksRadio > div > label{
+    color: white;
+    font-size: 16px;
+    margin-left:28px;
+}
+.typeCoursesBlocksRadio > div{
+    display: flex;
+    flex-direction: row;
+}
+.typeCoursesBlocksRadio > div > input{
+    width: 18px;
+    height: 18px;
+    accent-color: #F36528;
+}
+.individual{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+.mainIndividual{
+    display: flex;
+    flex-direction: row;
+}
+.mainIndividual > input{
+    width: 18px;
+    height: 18px;
+    accent-color: #F36528;
+}
+.mainIndividual > label{
+    color: white;
+    font-size: 16px;
+    margin-left:28px;
+}
+.individualChildFields{
+    width: 120px;
+    height: 59px;
+    margin: 21px 0px 0px 43px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display:none;
+}
+.individualChildFields > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.individualChildFields > div > label{
+    color: white;
+    font-size: 16px;
+    margin-left:22px;
+}
+.individualChildFields > div > input{
+    width: 18px;
+    height: 18px;
+    accent-color: #F36528;
+}
+.group{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+.mainGroup{
+    display: flex;
+    flex-direction: row;
+}
+.mainGroup > input{
+    width: 18px;
+    height: 18px;
+    accent-color: #F36528;
+}
+.mainGroup > label{
+    color: white;
+    font-size: 16px;
+    margin-left:28px;
+}
+.groupChildFields{
+    width: 120px;
+    height: 59px;
+    margin: 21px 0px 0px 43px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display:none;
+}
+.groupChildFields > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.groupChildFields > div > label{
+    color: white;
+    font-size: 16px;
+    margin-left:22px;
+}
+.groupChildFields > div > input{
+    width: 18px;
+    height: 18px;
+    accent-color: #F36528;
+}
+.corporate{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+.mainCorporate{
+    display: flex;
+    flex-direction: row;
+}
+.mainCorporate > input{
+    width: 18px;
+    height: 18px;
+    accent-color: #F36528;
+}
+.mainCorporate > label{
+    color: white;
+    font-size: 16px;
+    margin-left:28px;
+}
+.corporateChildFields{
+    width: 120px;
+    height: 59px;
+    margin: 21px 0px 0px 43px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display:none;
+}
+.corporateChildFields > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.corporateChildFields > div > label{
+    color: white;
+    font-size: 16px;
+    margin-left:22px;
+}
+.corporateChildFields > div > input{
+    width: 18px;
+    height: 18px;
+    accent-color: #F36528;
+}
+.applyNowBtnField > button{
+    background: transparent;
+    border: none;
+}
+.applyNowBtnField > button > img{
+    position: relative;
+}
+.applyNowBtnField > button > span{
+    color: #F36528;
+    font-size: 16px;
+    font-family: "Tahoma",sans-serif;
+    margin: 28px 0px;
+    position: absolute;
+    left: 0px;
+    padding: 0px 43px;
+}
+
+.application{
+    width: 100%;
+    height: 1080px;
+    background-image: url("../images/applicationBg.png");
+    background-repeat: no-repeat;
+}
+.applicationTextFields{
+    width: 40%;
+    height: 264px;
+    position: absolute;
+    margin:460px 30% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.applyApplicationTexts{
+    width: 100%;
+    height: 127px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.applicationTitle{
+    font-size: 36px;
+    color: white;
+}
+.applicationTextUnderline{
+    font-size: 36px;
+    color: white;
+    text-decoration: underline;
+}
+.applicationButton > button{
+    background: transparent;
+    border: none;
+}

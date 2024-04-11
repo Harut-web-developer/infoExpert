@@ -8,5 +8,8 @@ class ApplyNowController extends \yii\web\Controller
     {
         return $this->render('index');
     }
-
+    public function actionApplyApplication()
+    {
+        return $this->render('application');
+    }
 }
