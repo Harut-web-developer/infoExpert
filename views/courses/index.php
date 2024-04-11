@@ -5,21 +5,23 @@ $this->registerCssFile('@web/css/courses.css');
 ?>
 <div class="courses">
     <div class="headerCourses">
-        <span class="txt1">Our</span>
-        <span class="txt2">Best Courses</span>
-        <span class="txt1">Offered and Teach By</span>
-        <span class="txt2">Best of The Instructors</span>
+        <div>
+            <span class="txt1">Our</span>
+            <span class="txt2">Best Courses</span>
+            <span class="txt1">Offered and Teach By</span>
+            <span class="txt2">Best of The Instructors</span>
+        </div>
     </div>
     <div class="cardCourses">
-        <div class="wrapper">
+<!--        <div class="wrapper">-->
             <ul class="carousel">
                 <li class="card">
                     <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
                     <div class="cardBody">
                         <span class="span1">1C: and Accounting for Beginners</span>
-                        <div>
+                        <div class="starAndTxt">
                             <img src="/images/starCourses.png" alt="">
-                            <span class="span2">xxxxx AMD</span>
+                            <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;"><span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></span></h1>
                         </div>
                     </div>
                     <div class="cardCenter">
@@ -42,9 +44,9 @@ $this->registerCssFile('@web/css/courses.css');
                     <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
                     <div class="cardBody">
                         <span class="span1">1C: Accounting 8:3</span>
-                        <div>
+                        <div class="starAndTxt">
                             <img src="/images/starCourses.png" alt="">
-                            <span class="span2">xxxxx AMD</span>
+                            <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
                         </div>
                     </div>
                     <div class="cardCenter">
@@ -67,9 +69,9 @@ $this->registerCssFile('@web/css/courses.css');
                     <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
                     <div class="cardBody">
                         <span class="span1">1C: Payroll and personnel management</span>
-                        <div>
+                        <div class="starAndTxt">
                             <img src="/images/starCourses.png" alt="">
-                            <span class="span2">xxxxx AMD</span>
+                            <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
                         </div>
                     </div>
                     <div class="cardCenter">
@@ -92,9 +94,9 @@ $this->registerCssFile('@web/css/courses.css');
                     <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
                     <div class="cardBody">
                         <span class="span1">Trade management: marketing, sales BITRIX / CRM</span>
-                        <div>
+                        <div class="starAndTxt">
                             <img src="/images/starCourses.png" alt="">
-                            <span class="span2">xxxxx AMD</span>
+                            <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
                         </div>
                     </div>
                     <div class="cardCenter">
@@ -117,9 +119,9 @@ $this->registerCssFile('@web/css/courses.css');
                     <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
                     <div class="cardBody">
                         <span class="span1">1C: and Accounting for Beginners</span>
-                        <div>
+                        <div class="starAndTxt">
                             <img src="/images/starCourses.png" alt="">
-                            <span class="span2">xxxxx AMD</span>
+                            <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
                         </div>
                     </div>
                     <div class="cardCenter">
@@ -142,9 +144,9 @@ $this->registerCssFile('@web/css/courses.css');
                     <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
                     <div class="cardBody">
                         <span class="span1">1C: Accounting 8:3</span>
-                        <div>
+                        <div class="starAndTxt">
                             <img src="/images/starCourses.png" alt="">
-                            <span class="span2">xxxxx AMD</span>
+                            <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
                         </div>
                     </div>
                     <div class="cardCenter">
@@ -167,9 +169,9 @@ $this->registerCssFile('@web/css/courses.css');
                     <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
                     <div class="cardBody">
                         <span class="span1">1C: Payroll and personnel management</span>
-                        <div>
+                        <div class="starAndTxt">
                             <img src="/images/starCourses.png" alt="">
-                            <span class="span2">xxxxx AMD</span>
+                            <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
                         </div>
                     </div>
                     <div class="cardCenter">
@@ -192,9 +194,9 @@ $this->registerCssFile('@web/css/courses.css');
                     <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
                     <div class="cardBody">
                         <span class="span1">Trade management: marketing, sales BITRIX / CRM</span>
-                        <div>
+                        <div class="starAndTxt">
                             <img src="/images/starCourses.png" alt="">
-                            <span class="span2">xxxxx AMD</span>
+                            <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
                         </div>
                     </div>
                     <div class="cardCenter">
@@ -215,7 +217,7 @@ $this->registerCssFile('@web/css/courses.css');
                 </li>
 
             </ul>
-        </div>
+<!--        </div>-->
     </div>
     <h1 class="title0">Meet Our Tutors</h1>
     <div class="cardCourses2">

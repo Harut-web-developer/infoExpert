@@ -1,8 +1,9 @@
 .personelManagement{
     width: 100%;
-    height: 1318px;
-    background-image: url("/images/background-personel-management.png");
+    height: 1490px;
+    background-image: url("/images/background-personnel-managment.png");
     background-repeat: no-repeat;
+    padding-top: 158px;
 }
 .topDivFlex, .bottomDiv{
     display: flex;

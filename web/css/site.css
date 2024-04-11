@@ -86,3 +86,37 @@ a.desc:after {
 .form-group {
     margin-bottom: 1rem;
 }
+.siteError{
+    width: 100%;
+    height: 1100px;
+    background-image: url("/images/background-error.png");
+    background-repeat: no-repeat;
+    padding-top: 158px;
+    display: flex;
+    justify-content: center;
+}
+.alert404{
+    width: 309px;
+    height: 237px;
+    padding-top: 200px;
+    text-align: center;
+}
+.alert404 .span1{
+    font-family: Roboto Slab;
+    font-size: 180px;
+    font-weight: 500;
+    line-height: 237.39px;
+    text-align: left;
+    color: var(--50, #D6D6D6);
+}
+.alert404 .span2{
+    font-family: Roboto Slab;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 52.75px;
+    text-align: left;
+    color: var(--50, #D6D6D6);
+}
+.alert404 img{
+    padding-top: 154px;
+}

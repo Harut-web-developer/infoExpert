@@ -1,15 +1,20 @@
 .courses{
     width: 100%;
-    height: 1196px;
-    background-image: url("/images/background-image-courses.png");
+    height: 1370px;
+    background-image: url("/images/background-courses.png");
     background-repeat: no-repeat;
+    padding-top: 158px;
+
 }
 .headerCourses{
-    /*width: 1171px;*/
+    display: flex;
+    justify-content: center;
+}
+.headerCourses div{
+    width: 1171px;
     height: 58px;
     padding-top: 65.71px;
     text-align: center;
-    /*margin-left: 319.99px;*/
 }
 .txt1{
     font-family: Roboto Slab;
@@ -28,19 +33,15 @@
     color: #F36528;
 }
 .cardCourses{
-    margin: 0 100px;
-    padding-top: 154.07px;
+    width: 66%;
+    margin: 0px auto;
+    padding-top: 114px;
 }
-.wrapper {
-    /*max-width: 1100px;*/
-    width: 100%;
-    position: relative;
-}
-.wrapper .carousel {
+.carousel {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    /*gap: 16px;*/
+    grid-auto-columns: calc(100% / 3);
+    gap: 32px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -72,18 +73,18 @@
 }
 
 .carousel .card {
-    scroll-snap-align: start;
-    height: 100%;
+    width: 92%;
+    height: 531px;
     list-style: none;
     background: #FFFFFF24;
     border-radius: 30px;
     display: flex;
     cursor: pointer;
-    width: 72%;
     padding: 16px 17px 16px 17px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    scroll-snap-align: start;
 }
 .cardBody{
     display: flex;
@@ -111,7 +112,7 @@
     /*width: 145px;*/
     /*height: 145px;*/
     /*border-radius: 50%;*/
-
+    padding-bottom: 19px;
 }
 
 .card .img img {
@@ -164,8 +165,8 @@
     color: #FFFFFF;
 }
 .cardCourses2{
-    margin: 0 100px;
-    /*padding-top: 46.26px;*/
+    width: 66%;
+    margin: 0 auto;
 }
 .wrapper2 {
     width: 100%;
@@ -175,7 +176,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 4) - 134px);
-    gap: 16px;
+    gap: 134px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -207,13 +208,14 @@
 }
 
 .carousel2 .card2 {
+    width: 179px;
     scroll-snap-align: start;
     /*height: 229.4px;*/
     list-style: none;
     border-radius: 30px;
     display: flex;
     cursor: pointer;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
 }
@@ -262,6 +264,7 @@
 /*    !*padding: 5px;*!*/
 /*}*/
 .cardtxt1 span{
+    margin-left: 17px;
     font-family: Roboto Medium;
     font-size: 16px;
     font-weight: 500;
@@ -270,6 +273,7 @@
     color: #FFFFFF;
 }
 .cardtxt2 span{
+    margin-left: 17px;
     font-family: Roboto Medium;
     font-size: 16px;
     font-weight: 500;
@@ -277,6 +281,9 @@
     text-align: left;
     color: #FFFFFF;
 }
+.starAndTxt{
+    margin-left: 13px;
+}
 .footerCard{
-    padding-bottom: 20px;
+    /*padding-bottom: 20px;*/
 }
