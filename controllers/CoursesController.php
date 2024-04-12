@@ -9,4 +9,8 @@ class CoursesController extends \yii\web\Controller
         return $this->render('index');
     }
 
+    public function actionMyCourses()
+    {
+        return $this->render('my-courses');
+    }
 }
