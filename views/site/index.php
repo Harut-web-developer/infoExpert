@@ -150,92 +150,90 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 </div>
-
-
-
-
 <div class="sectionFive">
     <div class="partnerSection slider">
         <span class="partnersTitle">PARTNERS</span>
-        <div class="partners slide-track">
-            <div class="slide">
-                <img src="/images/partner1.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner2.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner3.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner4.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner5.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner6.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner7.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner8.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner9.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner10.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner11.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner12.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner13.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner14.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner15.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner16.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner17.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner18.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner19.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner20.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner21.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner22.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner23.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner24.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner25.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/partner26.png" alt="">
-            </div>
+        <div class="carousel">
+            <ul class="carousel-slides">
+                <li class="carousel-slide">
+                    <img src="/images/partner1.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner2.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner3.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner4.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner5.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner6.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner7.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner8.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner9.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner10.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner11.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner12.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner13.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner14.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner15.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner16.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner17.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner18.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner19.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner20.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner21.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner22.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner23.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner24.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner25.png" alt="">
+                </li>
+                <li class="carousel-slide">
+                    <img src="/images/partner26.png" alt="">
+                </li>
+            </ul>
         </div>
     </div>
 </div>

@@ -633,6 +633,7 @@
     padding: 30px 0px;
     font-size: 18px;
     color: white;
+    display: none;
 }
 .sectionFive{
     background-image: url("../images/partnerBg.png");
@@ -645,7 +646,7 @@
     position:relative;
 }
 .partnerSection{
-    width: 66%;
+    width: 100%;
     height: 303px;
     position: absolute;
     margin: 20px 0px;
@@ -653,10 +654,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     left:50%;
     top:50%;
     transform:translate(-50%, -50%);
+    overflow: hidden;
 }
 .partnersTitle{
     font-family: "Roboto Slab",sans-serif;
@@ -664,69 +665,26 @@
     font-weight: 700;
     color: #F16D35;
 }
-.partners{
-    justify-content: start;
-    gap: 51px;
+.carousel {
+    margin           : 0 auto;
+    width            : 100%;
+    position         : relative;
 }
-.answerQuestion{
-    display: none;
+.carousel-slides {
+    display          : flex;
+    list-style       : none;
+    gap              : 51px;
+    flex-shrink      : 1;
 }
-.slider{
-    overflow: hidden;
-}
-.slider::before, .slider::after {
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-}
-.slider::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-}
-.slider::before {
-    left: 0;
-    top: 0;
-}
-.slider .slide-track {
-    /*-webkit-animation: scroll 10s  infinite;*/
-    animation: scroll 10s infinite;
-    display: flex;
-    width: max-content;
-}
-.slider .slide {
-    height: 205px;
-    width: 200px;
-}
-@-webkit-keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    20% {
-        transform: translateX(calc(-100% * 0.2));
-    }
-    40% {
-        transform: translateX(calc(-100% * 0.4));
-    }
-    60% {
-        transform: translateX(calc(-100% * 0.6));
-    }
-    80% {
-        transform: translateX(calc(-100% * 0.8));
-    }
-    100% {
-        transform: translateX(calc(-100% * 1));
-    }
+.carousel-slide {
+    position         : relative;
+    min-width        : 0;
+    flex-shrink      : 0;
+    /*height           : 100px;*/
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    min-width        : 0;
 }
 .sectionSix{
     margin-top: -56px;
