@@ -1,0 +1,337 @@
+.myCard{
+    background-image: url("../images/mycardBg.png");
+    width: 100%;
+    height: 1193px;
+}
+.myCardMainField{
+    width: 83.5%;
+    height: 709px;
+    position: absolute;
+    margin: 212px 0px 0px 16.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.totalPriceField{
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    margin: 1006px 0px 0px 0px;
+}
+.myCardTotalPrice{
+    width: 376px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.totalPriceFieldSection{
+    width: 68%;
+    height: 90px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+.myCardTotalPrice > button{
+    background: transparent;
+    border: none;
+    position: relative;
+
+}
+.myCardTotalPrice > span{
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    text-decoration: underline;
+    color: white;
+}
+.myCardTotalPrice > button > span{
+    position: absolute;
+    left: 0;
+    margin: 13px 23px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #F36528;
+}
+.userProfileMenuField{
+    width: 80.5%;
+    height: 53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.userProfileMenuField > span{
+    font-family: "Roboto Slab",sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #F36528;
+}
+.userProfileMenu{
+    width: 506px;
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.userProfileMenu > li > a{
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto Slab",sans-serif;
+}
+.myCardFields{
+    width: 100%;
+    height: 547px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.myCoursesProfileField{
+    width: 405px;
+    height: 533px;
+    margin-right: 60px;
+    background: #74A8AB;
+    border-radius: 30px;
+}
+.myCoursesFieldSection{
+    width: 291px;
+    height: 459px;
+    margin: 37px 36px 37px 78px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+.myCoursesFieldSectionLeft{
+    width: 250px;
+    height: 459px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.myCoursesFieldSectionLeft > span{
+    color: white;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+.myCoursesFieldSectionLeft > img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+.usersProfileInfo{
+    width: 249px;
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.usersProfileInfoPhone > span{
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    margin-left: 37px;
+    color: white;
+
+}
+.usersProfileInfoEmail > span{
+    font-family: "Roboto",sans-serif;
+    margin-left: 37px;
+    font-size: 20px;
+    color: white;
+
+}
+.usersProfileInfoLinkdin > span{
+    font-size: 20px;
+    font-family: "Roboto",sans-serif;
+    margin-left: 37px;
+    color: white;
+}
+.myCardFieldAcceptCourses{
+    width: 70%;
+    height: 547px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+.myCardBlocksField{
+    width: 377px;
+    height: 100%;
+    margin-right: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*align-items: center;*/
+}
+.myCoursesBlocksField{
+    width: 377px;
+    height: 481px;
+    margin-right: 60px;
+    border-radius: 30px;
+    background: #74A8AB;
+}
+.myCardBlockButtons{
+    width: 270px;
+    height: 23px;
+    margin-left: 53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.myCardBlockButtons > span{
+    color: white;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    text-decoration: underline;
+}
+.myCoursesBlocksFieldMain{
+    width: 344px;
+    height: 444px;
+    margin: 16px 16px 21px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.myCardImageBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 344px;
+    height: 257px;
+}
+.myCardImageBlock > img{
+    width: 344px;
+    height: 214px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.myCardNameRating{
+    width: 305px;
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.myCardNameRating > span{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: white;
+}
+.myCardNameRating > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.myCardBlockInfo{
+    width: 312px;
+    height: 133px;
+    margin: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.myCardInfoTextIcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 312px;
+    height: 73px;
+}
+.myCardInfoTextIconFirst{
+    width: 223px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+.myCardInfoTextIconFirst > img{
+    margin-right: 11px;
+}
+.myCardInfoTextIconFirst > span{
+    color: white;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.myCardInfoTextIconSecond{
+    width: 312px;
+    height: 28px;
+}
+.myCardInfoTextIconSecond > span{
+    color: white;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.myCardInfoTextIconSecond > img{
+    margin-right: 11px;
+}
+.myCardInfoButtonField{
+    width: 312px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.myCardInfoButtonField > button{
+    background: transparent;
+    border: none;
+    margin-left: 71px;
+
+}
+.myCardInfoButtonField > button{
+    position: relative;
+}
+.myCardInfoButtonField > button > span{
+    position: absolute;
+    left: 0;
+    margin: 13px 26px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+.btnGroupLikeMarket{
+    width: 99px;
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

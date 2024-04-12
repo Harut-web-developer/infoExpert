@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .courses{
     width: 100%;
     height: 1370px;
-    background-image: url("/images/background-courses.png");
+    background-image: url("../images/background-courses.png");
     background-repeat: no-repeat;
     padding-top: 158px;
 
@@ -287,3 +289,190 @@
 .footerCard{
     /*padding-bottom: 20px;*/
 }
+
+/* start my courses page css*/
+.myCourses{
+    width: 100%;
+    height: 1061px;
+    background-image: url("../images/myCoursesBg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.myCoursesSection{
+    width: 83%;
+    height: 694px;
+    position: absolute;
+    margin: 212px 0px 0px 16.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.userProfileMenuField{
+    width: 80.7%;
+    height: 53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.userProfileMenuField > span{
+    font-family: "Roboto Slab",sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #F36528;
+}
+.userProfileMenu{
+    width: 506px;
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.userProfileMenu > li > a{
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto Slab",sans-serif;
+}
+.mainCoursesFields{
+    width: 100%;
+    height: 533px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.myCoursesProfileField{
+    width: 405px;
+    height: 533px;
+    margin-right: 60px;
+    background: #74A8AB;
+    border-radius: 30px;
+}
+.myCoursesFieldSection{
+    width: 291px;
+    height: 459px;
+    margin: 37px 36px 37px 78px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+.myCoursesFieldAcceptCourses{
+    width: 71%;
+    height: 533px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+.myCoursesBlocksField{
+    width: 377px;
+    height: 481px;
+    margin-right: 60px;
+    border-radius: 30px;
+    background: #74A8AB;
+}
+.myCoursesFieldSectionLeft{
+    width: 250px;
+    height: 459px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.myCoursesFieldSectionLeft > img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+.usersProfileInfo{
+    width: 249px;
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.usersProfileInfoPhone > span{
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    margin-left: 37px;
+    color: white;
+
+}
+.usersProfileInfoEmail > span{
+    font-family: "Roboto",sans-serif;
+    margin-left: 37px;
+    font-size: 20px;
+    color: white;
+
+}
+.usersProfileInfoLinkdin > span{
+    font-size: 20px;
+    font-family: "Roboto",sans-serif;
+    margin-left: 37px;
+    color: white;
+}
+.myCoursesBlocksFieldMain{
+    width:344px;
+    height: 415px;
+    margin: 16px 16px 49px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.myCoursesBlocksFieldMain > img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.myCoursesBlocksFieldMain > span{
+    font-family: 'Roboto Slab',sans-serif;
+    font-size: 24px;
+    color: white;
+    font-weight: 400;
+    margin-left:20px;
+}
+.myCoursesBlocksFieldMainInfo{
+    width: 305px;
+    height: 117px;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.myCoursesRating{
+    width: 121px;
+    height: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.myCoursesRating > span{
+    font-size: 16px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+.ratingStarMyourse{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.progress{
+    width: 100%;
+}
+.myCourseercentText{
+    color: white;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+.progress-bar{
+    background: #F36528 !important;
+}
+/* end my courses page css*/
