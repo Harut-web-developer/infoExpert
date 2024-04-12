@@ -297,3 +297,222 @@
 .cartificateImgTxt{
     padding: 29px 31px 0px 31px;
 }
+.profilBody_{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 67px;
+}
+.usersCard_{
+    width: 405px;
+    height: 532.72px;
+    top: 374.19px;
+    left: 320.04px;
+    padding: 37px 36px 37px 78px;
+    border-radius: 30px;
+    background: #FFFFFF24;
+}
+.usersCardHead_{
+    display: flex;
+    position: relative;
+}
+.usersCardMain_ h1{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23.44px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 24px 0;
+}
+.info1_{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.info2_{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 22px;
+}
+.info3_{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 22px;
+}
+.info1_ > span,
+.info2_ > span,
+.info3_ > span {
+    padding-left: 42px;
+}
+.cartificateImg_{
+    background: #FFFFFF24;
+    width: 624.07px;
+    height: 468.05px;
+    border-radius: 30px;
+}
+.cartificateImg_ img{
+    padding: 45.08px 44.84px;
+}
+.certificate_ span{
+    font-family: Roboto Slab;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.4px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.cartificateImgTxt_{
+    padding: 29px 31px 0px 31px;
+}
+.userCreateFieldForms_{
+    width: 83%;
+    height: 618px;
+    background: #74A8AB;
+    border-radius: 30px;
+}
+.userCreateFieldForms_ > form{
+    width: 80%;
+    height: 519px;
+    margin: 49px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.userPhotoFields_{
+    height: 250px;
+    background: #5D9A9D;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.userInputsFields_{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.userFormsInput_{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: 85px;
+}
+.userFormsInput_ > label{
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    color: white;
+    margin-left: 11px;
+}
+.userFormsInput_ > input{
+    width: 100%;
+    height: 64px;
+    background: #5D9A9D;
+    border-radius: 15px;
+    border:none;
+    outline: none;
+    padding: 0px 26px;
+    color: white;
+    font-size: 16px;
+}
+.userFormsBtn_{
+    margin-top: 24px;
+}
+.userFormsBtn_ > button{
+    background: transparent;
+    border: none;
+}
+.userFormsBtn_ > button{
+    position: relative;
+}
+.userFormsBtn_ > button > span{
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    font-family: "Roboto",sans-serif;
+    color: #F36528;
+    margin: 11px 33px;
+    font-weight: 500;
+}
+.userPhotoFields_ > span{
+    position: absolute;
+    font-family: "Roboto",sans-serif;
+    color: white;
+    font-size: 23px;
+    margin: 108px 5.7%;
+}
+.userPhotoFields_ > span:hover{
+    cursor: pointer;
+}
+.userPhotoFields_ > input{
+    display: none;
+}
+.attachCv_{
+    width: 100px;
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0px 24px 11px;
+}
+.attachCv_ > span{
+    color: white;
+}
+.cvFile_{
+    display: none;
+}
+.cvFileField_{
+    width: 100%;
+    height: 64px;
+    background: #5D9A9D;
+    border-radius: 15px;
+}
+.attachCv_:hover{
+    cursor: pointer;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.usersCardHead_:hover .cardImg_ {
+    opacity: 0.5;
+}
+.usersCardHead_:hover .middle {
+    opacity: 1;
+}
+.editPhoto{
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: left;
+    color: white;
+}
+
+

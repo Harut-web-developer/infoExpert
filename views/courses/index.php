@@ -229,18 +229,6 @@ $this->registerCssFile('@web/css/courses.css');
                         <h1 class="span1slider2">Manana Davtyan</h1>
                         <p class="span2slider2">Head of Service Department</p>
                     </div>
-                </li>                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
-                </li>                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
                 </li>
                 <li class="card2">
                     <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
@@ -284,8 +272,20 @@ $this->registerCssFile('@web/css/courses.css');
                         <p class="span2slider2">Head of Service Department</p>
                     </div>
                 </li>
-
-
+                <li class="card2">
+                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
+                    <div class="cardBody2">
+                        <h1 class="span1slider2">Manana Davtyan</h1>
+                        <p class="span2slider2">Head of Service Department</p>
+                    </div>
+                </li>
+                <li class="card2">
+                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
+                    <div class="cardBody2">
+                        <h1 class="span1slider2">Manana Davtyan</h1>
+                        <p class="span2slider2">Head of Service Department</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

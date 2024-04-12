@@ -7,9 +7,9 @@ $this->registerCssFile('@web/css/user-profile.css');
         <div class="userProfileMenuField">
             <span>My Profile</span>
             <ul class="userProfileMenu">
-                <li><a href="achievements">My achievements</a></li>
+                <li><a href="/user-profile/achievements">My achievements</a></li>
                 <li><a href="">My courses</a></li>
-                <li><a href="">Wishlist</a></li>
+                <li><a href="/wishlist/index">Wishlist</a></li>
                 <li><a href="">My card</a></li>
             </ul>
         </div>
@@ -17,7 +17,7 @@ $this->registerCssFile('@web/css/user-profile.css');
             <div class="usersCard">
                 <div class="usersCardHead">
                     <img src="/images/usersAchievements.png" alt="">
-                    <a href=""><img src="/images/editProfilAchievements.png" alt=""></a>
+                    <a href="/user-profile/achievements-edit"><img src="/images/editProfilAchievements.png" alt=""></a>
                 </div>
                 <div class="usersCardMain">
                     <h1>Ani Martirosian</h1>

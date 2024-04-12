@@ -16,4 +16,8 @@ class UserProfileController extends \yii\web\Controller
     {
         return $this->render('achievements');
     }
+    public function actionAchievementsEdit()
+    {
+        return $this->render('achievements-edit');
+    }
 }
