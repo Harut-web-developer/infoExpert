@@ -30,7 +30,7 @@ $this->registerCssFile('@web/css/contactus.css');
                 <img src="/images/contactus_map.png" alt="">
             </div>
         </div>
-        <div class="sectionContactusBottom">
+        <form action="" class="sectionContactusBottom">
             <h1 class="contactusBottomTitle">Contact Us</h1>
             <p class="contactusBottomTxt">Your email address will not be published. Required fields are marked *</p>
             <div class="form-row inputdiv">
@@ -41,14 +41,13 @@ $this->registerCssFile('@web/css/contactus.css');
                     <input type="email" id="validationDefault02_" placeholder="Email*" required>
                 </div>
             </div>
-
-            <div class="form-row inputcomment ">
-                <input type="text" class="form-control" id="validationDefault01_" placeholder="Comment">
+            <div class="form-row inputcomment">
+                <input type="text" id="validationDefault01_" placeholder="Comment">
             </div>
             <div class="d-flex justify-content-center bottoming">
                 <img class="sectionContactusBottomImg" src="/images/contactus.png">
             </div>
-        </div>
+        </form>
     </div>
 </div>
 

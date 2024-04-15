@@ -8,9 +8,9 @@ $this->registerCssFile('@web/css/wishlist.css');
             <span>My Profile</span>
             <ul class="userProfileMenu">
                 <li><a href="/user-profile/achievements">My achievements</a></li>
-                <li><a href="">My courses</a></li>
+                <li><a href="/courses/my-courses">My courses</a></li>
                 <li><a href="/wishlist/index">Wishlist</a></li>
-                <li><a href="">My card</a></li>
+                <li><a href="/my-card/index">My card</a></li>
             </ul>
         </div>
         <div class="mainContent">
@@ -37,155 +37,157 @@ $this->registerCssFile('@web/css/wishlist.css');
             </div>
             <div class="CoursesAndCategoriesCard">
                 <div class="topSlider">
-<!--                    <div class="changeBody1">-->
-<!--                        <span class="title">Go to the All Courses tab to create a wishlist  </span>-->
-<!--                        <div class="applyNowBtnField">-->
-<!--                            <button>-->
-<!--                                <img src="/images/buttonImg.png" alt="">-->
-<!--                                <span><a class="coursesHref" href="/courses/index">All courses</a></span>-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-                    <div class="changeBody2">
-                        <ul class="carousel_2">
-                            <li class="card_2">
-                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
-                                <div class="cardContent">
-                                    <div class="cardBody_2">
-                                        <span class="span1_2">1C: Accounting 8.3</span>
-                                        <div class="starAndTxt_2">
-                                            <img src="/images/starCourses.png" alt="">
-                                            <h1 class="span2_2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
-                                        </div>
-                                    </div>
-                                    <div class="cardCenter_2">
-                                        <div class="cardtxt1_2">
-                                            <img src="/images/courses1.png" alt="">
-                                            <span>Number of courses: 29+1 exam /3 days a week/</span>
-                                        </div>
-                                        <div class="cardtxt2_2">
-                                            <img src="/images/courses2.png" alt="">
-                                            <span>Certificate / in Armenian and English /</span>
-                                        </div>
-                                    </div>
-                                    <div class="footerCard_2">
-                                        <img style="padding: 0 42px" src="/images/courses3.png" alt="">
-                                        <img src="/images/courses4.png" alt="">
-                                        <img src="/images/courses5.png" alt="">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card_2">
-                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
-                                <div class="cardContent">
-                                    <div class="cardBody_2">
-                                        <span class="span1_2">1C: Accounting 8.3</span>
-                                        <div class="starAndTxt_2">
-                                            <img src="/images/starCourses.png" alt="">
-                                            <h1 class="span2_2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
-                                        </div>
-                                    </div>
-                                    <div class="cardCenter_2">
-                                        <div class="cardtxt1_2">
-                                            <img src="/images/courses1.png" alt="">
-                                            <span>Number of courses: 29+1 exam /3 days a week/</span>
-                                        </div>
-                                        <div class="cardtxt2_2">
-                                            <img src="/images/courses2.png" alt="">
-                                            <span>Certificate / in Armenian and English /</span>
-                                        </div>
-                                    </div>
-                                    <div class="footerCard_2">
-                                        <img style="padding: 0 42px" src="/images/courses3.png" alt="">
-                                        <img src="/images/courses4.png" alt="">
-                                        <img src="/images/courses5.png" alt="">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card_2">
-                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
-                                <div class="cardContent">
-                                    <div class="cardBody_2">
-                                        <span class="span1_2">1C: Accounting 8.3</span>
-                                        <div class="starAndTxt_2">
-                                            <img src="/images/starCourses.png" alt="">
-                                            <h1 class="span2_2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
-                                        </div>
-                                    </div>
-                                    <div class="cardCenter_2">
-                                        <div class="cardtxt1_2">
-                                            <img src="/images/courses1.png" alt="">
-                                            <span>Number of courses: 29+1 exam /3 days a week/</span>
-                                        </div>
-                                        <div class="cardtxt2_2">
-                                            <img src="/images/courses2.png" alt="">
-                                            <span>Certificate / in Armenian and English /</span>
-                                        </div>
-                                    </div>
-                                    <div class="footerCard_2">
-                                        <img style="padding: 0 42px" src="/images/courses3.png" alt="">
-                                        <img src="/images/courses4.png" alt="">
-                                        <img src="/images/courses5.png" alt="">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card_2">
-                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
-                                <div class="cardContent">
-                                    <div class="cardBody_2">
-                                        <span class="span1_2">1C: Accounting 8.3</span>
-                                        <div class="starAndTxt_2">
-                                            <img src="/images/starCourses.png" alt="">
-                                            <h1 class="span2_2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
-                                        </div>
-                                    </div>
-                                    <div class="cardCenter_2">
-                                        <div class="cardtxt1_2">
-                                            <img src="/images/courses1.png" alt="">
-                                            <span>Number of courses: 29+1 exam /3 days a week/</span>
-                                        </div>
-                                        <div class="cardtxt2_2">
-                                            <img src="/images/courses2.png" alt="">
-                                            <span>Certificate / in Armenian and English /</span>
-                                        </div>
-                                    </div>
-                                    <div class="footerCard_2">
-                                        <img style="padding: 0 42px" src="/images/courses3.png" alt="">
-                                        <img src="/images/courses4.png" alt="">
-                                        <img src="/images/courses5.png" alt="">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card_2">
-                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
-                                <div class="cardContent">
-                                    <div class="cardBody_2">
-                                        <span class="span1_2">1C: Accounting 8.3</span>
-                                        <div class="starAndTxt_2">
-                                            <img src="/images/starCourses.png" alt="">
-                                            <h1 class="span2_2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
-                                        </div>
-                                    </div>
-                                    <div class="cardCenter_2">
-                                        <div class="cardtxt1_2">
-                                            <img src="/images/courses1.png" alt="">
-                                            <span>Number of courses: 29+1 exam /3 days a week/</span>
-                                        </div>
-                                        <div class="cardtxt2_2">
-                                            <img src="/images/courses2.png" alt="">
-                                            <span>Certificate / in Armenian and English /</span>
-                                        </div>
-                                    </div>
-                                    <div class="footerCard_2">
-                                        <img style="padding: 0 42px" src="/images/courses3.png" alt="">
-                                        <img src="/images/courses4.png" alt="">
-                                        <img src="/images/courses5.png" alt="">
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-
+                    <div class="changeBody1">
+                        <span class="title">Go to the All Courses tab to create a wishlist  </span>
+                        <div class="applyNowBtnField">
+                            <button>
+                                <img src="/images/buttonImg.png" alt="">
+                                <span><a class="coursesHref" href="/courses/index">All courses</a></span>
+                            </button>
+                        </div>
                     </div>
+
+<!--                    <div class="changeBody2">-->
+<!--                        <ul class="carousel_2">-->
+<!--                            <li class="card_2">-->
+<!--                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>-->
+<!--                                <div class="cardContent">-->
+<!--                                    <div class="cardBody_2">-->
+<!--                                        <span class="span1_2">1C: Accounting 8.3</span>-->
+<!--                                        <div class="starAndTxt_2">-->
+<!--                                            <img src="/images/starCourses.png" alt="">-->
+<!--                                            <h1 class="span2_2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="cardCenter_2">-->
+<!--                                        <div class="cardtxt1_2">-->
+<!--                                            <img src="/images/courses1.png" alt="">-->
+<!--                                            <span>Number of courses: 29+1 exam /3 days a week/</span>-->
+<!--                                        </div>-->
+<!--                                        <div class="cardtxt2_2">-->
+<!--                                            <img src="/images/courses2.png" alt="">-->
+<!--                                            <span>Certificate / in Armenian and English /</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="footerCard_2">-->
+<!--                                        <img style="padding: 0 42px" src="/images/courses3.png" alt="">-->
+<!--                                        <img src="/images/courses4.png" alt="">-->
+<!--                                        <img src="/images/courses5.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li class="card_2">-->
+<!--                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>-->
+<!--                                <div class="cardContent">-->
+<!--                                    <div class="cardBody_2">-->
+<!--                                        <span class="span1_2">1C: Accounting 8.3</span>-->
+<!--                                        <div class="starAndTxt_2">-->
+<!--                                            <img src="/images/starCourses.png" alt="">-->
+<!--                                            <h1 class="span2_2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="cardCenter_2">-->
+<!--                                        <div class="cardtxt1_2">-->
+<!--                                            <img src="/images/courses1.png" alt="">-->
+<!--                                            <span>Number of courses: 29+1 exam /3 days a week/</span>-->
+<!--                                        </div>-->
+<!--                                        <div class="cardtxt2_2">-->
+<!--                                            <img src="/images/courses2.png" alt="">-->
+<!--                                            <span>Certificate / in Armenian and English /</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="footerCard_2">-->
+<!--                                        <img style="padding: 0 42px" src="/images/courses3.png" alt="">-->
+<!--                                        <img src="/images/courses4.png" alt="">-->
+<!--                                        <img src="/images/courses5.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li class="card_2">-->
+<!--                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>-->
+<!--                                <div class="cardContent">-->
+<!--                                    <div class="cardBody_2">-->
+<!--                                        <span class="span1_2">1C: Accounting 8.3</span>-->
+<!--                                        <div class="starAndTxt_2">-->
+<!--                                            <img src="/images/starCourses.png" alt="">-->
+<!--                                            <h1 class="span2_2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="cardCenter_2">-->
+<!--                                        <div class="cardtxt1_2">-->
+<!--                                            <img src="/images/courses1.png" alt="">-->
+<!--                                            <span>Number of courses: 29+1 exam /3 days a week/</span>-->
+<!--                                        </div>-->
+<!--                                        <div class="cardtxt2_2">-->
+<!--                                            <img src="/images/courses2.png" alt="">-->
+<!--                                            <span>Certificate / in Armenian and English /</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="footerCard_2">-->
+<!--                                        <img style="padding: 0 42px" src="/images/courses3.png" alt="">-->
+<!--                                        <img src="/images/courses4.png" alt="">-->
+<!--                                        <img src="/images/courses5.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li class="card_2">-->
+<!--                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>-->
+<!--                                <div class="cardContent">-->
+<!--                                    <div class="cardBody_2">-->
+<!--                                        <span class="span1_2">1C: Accounting 8.3</span>-->
+<!--                                        <div class="starAndTxt_2">-->
+<!--                                            <img src="/images/starCourses.png" alt="">-->
+<!--                                            <h1 class="span2_2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="cardCenter_2">-->
+<!--                                        <div class="cardtxt1_2">-->
+<!--                                            <img src="/images/courses1.png" alt="">-->
+<!--                                            <span>Number of courses: 29+1 exam /3 days a week/</span>-->
+<!--                                        </div>-->
+<!--                                        <div class="cardtxt2_2">-->
+<!--                                            <img src="/images/courses2.png" alt="">-->
+<!--                                            <span>Certificate / in Armenian and English /</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="footerCard_2">-->
+<!--                                        <img style="padding: 0 42px" src="/images/courses3.png" alt="">-->
+<!--                                        <img src="/images/courses4.png" alt="">-->
+<!--                                        <img src="/images/courses5.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                            <li class="card_2">-->
+<!--                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>-->
+<!--                                <div class="cardContent">-->
+<!--                                    <div class="cardBody_2">-->
+<!--                                        <span class="span1_2">1C: Accounting 8.3</span>-->
+<!--                                        <div class="starAndTxt_2">-->
+<!--                                            <img src="/images/starCourses.png" alt="">-->
+<!--                                            <h1 class="span2_2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="cardCenter_2">-->
+<!--                                        <div class="cardtxt1_2">-->
+<!--                                            <img src="/images/courses1.png" alt="">-->
+<!--                                            <span>Number of courses: 29+1 exam /3 days a week/</span>-->
+<!--                                        </div>-->
+<!--                                        <div class="cardtxt2_2">-->
+<!--                                            <img src="/images/courses2.png" alt="">-->
+<!--                                            <span>Certificate / in Armenian and English /</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="footerCard_2">-->
+<!--                                        <img style="padding: 0 42px" src="/images/courses3.png" alt="">-->
+<!--                                        <img src="/images/courses4.png" alt="">-->
+<!--                                        <img src="/images/courses5.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!---->
+<!--                    </div>-->
+
                 </div>
                 <hr class="new1">
                 <div class="bottomSlider">

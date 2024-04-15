@@ -9,7 +9,7 @@ $this->registerCssFile('@web/css/user-profile.css');
             <ul class="userProfileMenu">
                 <li><a href="/user-profile/achievements">My achievements</a></li>
                 <li><a href="/courses/my-courses">My courses</a></li>
-                <li><a href="">Wishlist</a></li>
+                <li><a href="/wishlist/index">Wishlist</a></li>
                 <li><a href="/my-card/index">My card</a></li>
             </ul>
         </div>

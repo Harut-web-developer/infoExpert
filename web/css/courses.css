@@ -6,7 +6,6 @@
     background-image: url("../images/background-courses.png");
     background-repeat: no-repeat;
     padding-top: 158px;
-
 }
 .headerCourses{
     display: flex;
@@ -39,10 +38,14 @@
     margin: 0px auto;
     padding-top: 114px;
 }
-.carousel {
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+.carouselCourses {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc(100% / 3);
+    grid-auto-columns: calc((100% / 3));
     gap: 32px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -50,33 +53,32 @@
     scrollbar-width: 0;
 }
 
-.carousel::-webkit-scrollbar {
+.carouselCourses::-webkit-scrollbar {
     display: none;
 }
 
-.carousel :where(.card, .img) {
+.carouselCourses :where(.cardCourses, .img) {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.carousel.dragging {
+.carouselCourses.dragging {
     scroll-snap-type: none;
     scroll-behavior: auto;
 }
 
-.carousel.no-transition {
+.carouselCourses.no-transition {
     scroll-behavior: auto;
 }
-
-.carousel.dragging .card {
+.carouselCourses.dragging .cardCourses {
     cursor: grab;
     user-select: none;
 }
 
-.carousel .card {
-    width: 92%;
-    height: 531px;
+.carouselCourses .cardCourses {
+    width: 378px;
+    /*height: 476.01px;*/
     list-style: none;
     background: #FFFFFF24;
     border-radius: 30px;
@@ -108,11 +110,9 @@
     text-align: left;
     color: #FFFFFF;
 }
-.card .img {
-    padding-bottom: 19px;
-}
-.card .img img {
+.cardCourses .img {
     width: 100%;
+    height: 50%;
 }
 .courses .title0{
     font-family: Roboto Slab;
@@ -235,11 +235,6 @@
 .starAndTxt{
     margin-left: 13px;
 }
-
-.footerCard{
-    /*padding-bottom: 20px;*/
-}
-
 /* start my courses page css*/
 .myCourses{
     width: 100%;
