@@ -1,5 +1,8 @@
 .myCard{
     background-image: url("../images/mycardBg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 1193px;
 }
@@ -17,6 +20,8 @@
     height: 90px;
     position: absolute;
     margin: 1006px 0px 0px 0px;
+    background: #74A8AB;
+
 }
 .myCardTotalPrice{
     width: 376px;
@@ -330,7 +335,6 @@
 .checkoutFieldSection{
     width: 67%;
     height: 561px;
-    border: 1px solid;
     margin: 212px 16.5% 0px;
     position: absolute;
     display: flex;
@@ -344,7 +348,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border:1px solid;
 }
 .checkoutTitleField > div{
     font-size: 40px;
@@ -361,7 +364,6 @@
 .checkoutInputsSectionField{
     width: 100%;
     height: 439px;
-    border:1px solid;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -370,7 +372,6 @@
 .checkoutInputsSectionLeftField{
     width: 515px;
     height: 439px;
-    border:1px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -378,7 +379,12 @@
 .checkoutInputsSectionRightField{
     width: 405px;
     height: 213px;
-    border:1px solid;
+    border-radius: 20px;
+    background: #74A8AB;
+}
+.checkoutInputsFirstField{
+    width: 100%;
+    height: 215px;
 }
 .checkoutInputsFirstField > span{
     font-family: 'Roboto',sans-serif;
@@ -386,11 +392,309 @@
     font-weight: 600;
     color: white;
 }
+.checkoutInputsSecondField{
+    width: 100%;
+    height: 177px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.checkoutInputsSecondField > span{
+    font-family: "Roboto",sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: white;
+}
+.courseManualPriceField{
+    width: 515px;
+    height: 51px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkoutDetalisCoursesField{
+    min-height: 108px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.courseManualPriceFieldInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.courseManualPriceFieldInfo > img{
+    width: 60px;
+    height: 51px;
+}
+.courseManualPriceFieldInfo > span{
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    color: white;
+    margin-left: 17px;
+}
+.courseManualPriceFieldPay{
+    font-size: 20px;
+    font-family: "Roboto",sans-serif;
+    color: white;
+}
 .checkoutInputsRadioField{
     width: 514px;
     height: 138px;
     border-radius: 20px;
     background: #74A8AB;
+}
+.creditField{
+     width: 100%;
+    /*height: 410px;*/
+}
+.mainCreditField{
+    width: 100%;
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.mainCreditField > label{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.mainCreditField > label >span{
+    color: white;
+    font-size: 24px;
+    font-family: "Roboto",sans-serif;
+    margin-left: 21px;
+
+}
+.mainCreditField > label >img{
+    width: 33px;
+    height: 23px;
+    margin-left: 34px;
+
+}
+.mainCreditField > input{
+    width: 20px;
+    height: 20px;
+    accent-color: #F36528;
+    margin-left: 31px;
+}
+.otherField{
+    width: 100%;
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.otherField > label{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.otherField > label >span{
+    color: white;
+    font-size: 24px;
+    font-family: "Roboto",sans-serif;
+    margin-left: 21px;
+}
+.otherField > label >img{
+    width: 33px;
+    height: 23px;
+    margin-left: 34px;
+
+}
+.otherField > label >img{
+    width: 33px;
+    height: 23px;
+}
+.otherField > input{
+    width: 20px;
+    height: 20px;
+    accent-color: #F36528;
+    margin-left: 31px;
+
+}
+.checkoutCreditOtherField{
+    width: 488px;
+    height: 98px;
+    /*height: 522px;*/
+    margin: 20px 13px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.checkoutTotalFieldInfo{
+    width: 301px;
+    height: 165px;
+    margin: 24px 54px 24px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.checkoutTotalFieldInfoTop{
+    width: 100%;
+    height: 87px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.checkoutTotalFieldInfoTop > p{
+    color: white;
+    font-size: 14px;
+    font-family: "Roboto",sans-serif;
+    width: 100%;
+    height: 32px;
+    margin-bottom: 7px;
+}
+.checkoutTotalFieldInfoTop > p > a{
+    color: white;
+    font-size: 14px;
+    font-family: "Roboto",sans-serif;
+    text-decoration: underline;
+}
+.sumTitle{
+    color:white;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: "Roboto",sans-serif;
+
+}
+.sumPriceAll{
+    color:white;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: "Roboto",sans-serif;
+
+}
+.checkoutTotalFieldInfoBottom{
+    width: 100%;
+    height: 45px;
+
+}
+.checkoutTotalFieldInfoBottom > button{
+    background: transparent;
+    border: none;
+    position: relative;
+}
+.checkoutTotalFieldInfoBottom > button > span{
+    font-family: "Roboto",sans-serif;
+    font-size: 10px;
+    color: #F36528;
+    position: absolute;
+    left: 0;
+    margin: 15px 8px;
+}
+.checkoutCourseSumPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: 35px;
+}
+.checkoutCreditField{
+    display: none;
+    width: 100%;
+    height: 320px;
+    border: 1px solid;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.checkoutInputsCreditField{
+    width: 100%;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.checkoutInputsCreditField > label{
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    color: white;
+}
+.checkoutInputsCreditField > input{
+    width: 100%;
+    height: 64px;
+    border-radius: 15px;
+    background: #5D9A9D;
+    border: none;
+    outline: none;
+
+}
+.checkoutInputsCreditFieldRow{
+    width: 100%;
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkoutInputLeftField{
+    width: 283px;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.checkoutInputLeftField > label{
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    color: white;
+}
+.checkoutInputLeftField > input{
+    width: 100%;
+    height: 64px;
+    border-radius: 15px;
+    background: #5D9A9D;
+    border: none;
+    outline: none;
+}
+.checkoutInputRightField{
+    width: 174px;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start
+}
+.checkoutInputRightField > label{
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    color: white;
+}
+.checkoutInputRightField > input{
+    width: 100%;
+    height: 64px;
+    border-radius: 15px;
+    background: #5D9A9D;
+    border: none;
+    outline: none;
+}
+.creditCheckbox{
+    width: 20px;
+    height: 20px;
+}
+.checkoutCheckboxCreditField > label{
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    color: white;
 }
 /*end checkout page*/
 
