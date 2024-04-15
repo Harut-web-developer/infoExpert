@@ -26,12 +26,22 @@ $this->registerCssFile('@web/css/login.css');
             <div class="signinMenu">
                 <input type="email" placeholder="Email Address" name="email">
                 <input type="password" placeholder="Password" name="password">
-                <span class="checkbox">
-                    <p><input type="checkbox" name="checkbox">remember</p>
+                <div class="checkRem">
+                    <label class="container_checked">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                        <p>remember</p>
+                    </label>
+                    <span class="checkbox">
                     <a href="">Lost your password?</a>
                 </span>
+                </div>
+
             </div>
-            <button><img src="/images/Group 1000002214.png" alt=""></button>
+            <div class="container_signin">
+                <img src="/images/Vector.png" alt="">
+                <div class="centered">SIGN IN</div>
+            </div>
             <p class="signUp">Not a member ? <a href="">Sign Up now</a></p>
         </form>
     </div>

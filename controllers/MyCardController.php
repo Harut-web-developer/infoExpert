@@ -13,4 +13,8 @@ class MyCardController extends \yii\web\Controller
         return $this->render('checkout');
     }
 
+    public function actionCongratulationOnAchievementMessages()
+    {
+        return $this->render('congratulation-on-achievement-messages');
+    }
 }

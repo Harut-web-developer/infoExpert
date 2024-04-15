@@ -49,7 +49,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <span class="menuAbout">ABOUT</span>
                         <div class="dropDownAbout">
                             <ul>
-                                <li><a href="">Who we are</a></li>
+                                <li><a href="/site/about">Who we are</a></li>
                                 <li><a href="/alumni/index">Alumni</a></li>
                             </ul>
                         </div>

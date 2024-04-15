@@ -159,6 +159,7 @@ section.mainPoints .container .signin .signinMenu {
 }
 
 section.mainPoints .container .signin .signinMenu input {
+    outline: none;
     border-radius: 30px;
     border: none;
     padding: 20px 0 20px 15px;
@@ -172,30 +173,8 @@ section.mainPoints .container .signin .signinMenu input {
 section.mainPoints .container .signin .signinMenu .checkbox {
     display: flex;
     justify-content: center;
-    padding: 24px 0px;
+    padding-left: 230px;
 }
-
-section.mainPoints .container .signin .signinMenu .checkbox p {
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 15.23px;
-    text-align: left;
-    margin-bottom: 0px;
-}
-
-section.mainPoints .container .signin .signinMenu .checkbox p input {
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 15.23px;
-    cursor: pointer;
-}
-
 section.mainPoints .container .signin .signinMenu .checkbox a {
     color: white;
     font-family: Roboto;
@@ -205,7 +184,6 @@ section.mainPoints .container .signin .signinMenu .checkbox a {
     text-align: left;
     padding-left: 5px;
 }
-
 section.mainPoints .container .signin button {
     background-color: rgba(93, 154, 157, 1);
     margin: 0px auto 25px auto;
@@ -218,6 +196,7 @@ section.mainPoints .container .signin .signUp{
     font-size: 14px;
     font-weight: 500;
     font-family: sans-serif;
+    margin-top: 18px;
 }
 section.mainPoints .container .signin .signUp a{
    color: rgba(243, 101, 40, 1);
@@ -225,8 +204,167 @@ section.mainPoints .container .signin .signUp a{
    font-weight: 500;
    font-family: sans-serif;
    text-decoration: none;
-
 }
 .signinMenu > input::placeholder{
     color: white;
+}
+.container_signin {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+.container_signin .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--1, #F36528);
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15.23px;
+    text-align: left;
+}
+.container_checked {
+    display: block;
+    position: relative;
+    padding-left: 34px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /*user-select: none;*/
+}
+.container_checked input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkRem{
+    padding-top: 9px;
+    display: flex;
+}
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    border: 1px #fff solid;
+    border-radius: 2px;
+    margin-left: 18px;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container_checked input:checked ~ .checkmark:after {
+    display: block;
+}
+.container_checked .checkmark:after {
+    left: 2px;
+    top: 1px;
+    width: 5px;
+    height: 4px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+}
+.container_checked p{
+    font-family: Roboto;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 10.55px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.checkSignup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0 12px;
+}
+section.mainPoints .container .signin .signinMenu .checkboxSignup {
+    display: flex;
+}
+section.mainPoints .container .signup .signinMenu .checkboxSignup a {
+    color: white;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15.23px;
+    text-align: left;
+    padding-left: 5px;
+}
+.container_checked_signup {
+    display: block;
+    position: relative;
+    padding-left: 42px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /*user-select: none;*/
+}
+.container_checked_signup input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmarkSignup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14.07px;
+    height: 13.46px;
+    background-color: transparent;
+    border: 1px #fff solid;
+    border-radius: 2px;
+    margin-left: 18px;
+}
+.checkmarkSignup:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container_checked_signup input:checked ~ .checkmarkSignup:after {
+    display: block;
+}
+.container_checked_signup .checkmarkSignup:after {
+    left: 2px;
+    top: 1px;
+    width: 7px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+}
+.checkboxSignup p{
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15.23px;
+    text-align: left;
+    color: #FFFFFF;
+}
+section.mainPoints .container .signup button {
+    background-color: rgba(93, 154, 157, 1);
+    margin: 0px auto 0px auto;
+    border: none;
+    cursor: pointer;
 }
