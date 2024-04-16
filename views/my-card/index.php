@@ -39,98 +39,284 @@ $this->registerCssFile('@web/css/my-card.css');
                     </div>
                 </div>
             </div>
-            <div class="myCardFieldAcceptCourses">
-                <div class="myCardBlocksField">
-                    <div class="myCoursesBlocksField">
-                        <div class="myCoursesBlocksFieldMain">
-                            <div class="myCardImageBlock">
-                                <img src="/images/courseimage.png" alt="">
-                                <div class="myCardNameRating">
-                                    <span>1C: Accounting 8.3</span>
-                                    <div>
-                                        <img src="/images/cardStar.png" alt="">
-                                        <img src="/images/cardStar.png" alt="">
-                                        <img src="/images/cardStar.png" alt="">
-                                        <img src="/images/cardStar.png" alt="">
-                                        <img src="/images/cardStar.png" alt="">
+            <div class="cardCourses">
+                <div class="wrapper">
+                    <ul class="myCardFieldAcceptCourses">
+                        <li class="myCardBlocksField">
+                            <div class="myCoursesBlocksField">
+                                <div class="myCoursesBlocksFieldMain">
+                                    <div class="myCardImageBlock">
+                                        <img src="/images/courseimage.png" alt="">
+                                        <div class="myCardNameRating">
+                                            <span>1C: Accounting 8.3</span>
+                                            <div>
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="myCardBlockInfo">
+                                        <div class="myCardInfoTextIcon">
+                                            <div class="myCardInfoTextIconFirst">
+                                                <img src="/images/mycardicon1.png" alt="">
+                                                <span>Number of courses: 14+1 exam / 2days a week</span>
+                                            </div>
+                                            <div class="myCardInfoTextIconSecond">
+                                                <img src="/images/mycardicon2.png" alt="">
+                                                <span>Certificate / in Armenian and English/</span>
+                                            </div>
+                                        </div>
+                                        <div class="myCardInfoButtonField">
+                                            <button>
+                                                <img src="/images/btnBuyIcon.png" alt="">
+                                                <span>Buy now</span>
+                                            </button>
+                                            <div class="btnGroupLikeMarket">
+                                                <img src="/images/likeIconmycard.png" alt="">
+                                                <img src="/images/iconmarketmycard.png" alt="">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="myCardBlockInfo">
-                                <div class="myCardInfoTextIcon">
-                                    <div class="myCardInfoTextIconFirst">
-                                        <img src="/images/mycardicon1.png" alt="">
-                                        <span>Number of courses: 14+1 exam / 2days a week</span>
+                            <div class="myCardBlockButtons">
+                                <span>Remove</span>
+                                <span>Move to wishlist</span>
+                            </div>
+                        </li>
+                        <li class="myCardBlocksField">
+                            <div class="myCoursesBlocksField">
+                                <div class="myCoursesBlocksFieldMain">
+                                    <div class="myCardImageBlock">
+                                        <img src="/images/courseimage.png" alt="">
+                                        <div class="myCardNameRating">
+                                            <span>1C: Accounting 8.3</span>
+                                            <div>
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="myCardInfoTextIconSecond">
-                                        <img src="/images/mycardicon2.png" alt="">
-                                        <span>Certificate / in Armenian and English/</span>
-                                    </div>
-                                </div>
-                                <div class="myCardInfoButtonField">
-                                    <button>
-                                        <img src="/images/btnBuyIcon.png" alt="">
-                                        <span>Buy now</span>
-                                    </button>
-                                    <div class="btnGroupLikeMarket">
-                                        <img src="/images/likeIconmycard.png" alt="">
-                                        <img src="/images/iconmarketmycard.png" alt="">
+                                    <div class="myCardBlockInfo">
+                                        <div class="myCardInfoTextIcon">
+                                            <div class="myCardInfoTextIconFirst">
+                                                <img src="/images/mycardicon1.png" alt="">
+                                                <span>Number of courses: 14+1 exam / 2days a week</span>
+                                            </div>
+                                            <div class="myCardInfoTextIconSecond">
+                                                <img src="/images/mycardicon2.png" alt="">
+                                                <span>Certificate / in Armenian and English/</span>
+                                            </div>
+                                        </div>
+                                        <div class="myCardInfoButtonField">
+                                            <button>
+                                                <img src="/images/btnBuyIcon.png" alt="">
+                                                <span>Buy now</span>
+                                            </button>
+                                            <div class="btnGroupLikeMarket">
+                                                <img src="/images/likeIconmycard.png" alt="">
+                                                <img src="/images/iconmarketmycard.png" alt="">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="myCardBlockButtons">
-                        <span>Remove</span>
-                        <span>Move to wishlist</span>
-                    </div>
-                </div>
-                <div class="myCardBlocksField">
-                    <div class="myCoursesBlocksField">
-                        <div class="myCoursesBlocksFieldMain">
-                            <div class="myCardImageBlock">
-                                <img src="/images/courseimage.png" alt="">
-                                <div class="myCardNameRating">
-                                    <span>1C: Accounting 8.3</span>
-                                    <div>
-                                        <img src="/images/cardStar.png" alt="">
-                                        <img src="/images/cardStar.png" alt="">
-                                        <img src="/images/cardStar.png" alt="">
-                                        <img src="/images/cardStar.png" alt="">
-                                        <img src="/images/cardStar.png" alt="">
+                            <div class="myCardBlockButtons">
+                                <span>Remove</span>
+                                <span>Move to wishlist</span>
+                            </div>
+                        </li>
+                        <li class="myCardBlocksField">
+                            <div class="myCoursesBlocksField">
+                                <div class="myCoursesBlocksFieldMain">
+                                    <div class="myCardImageBlock">
+                                        <img src="/images/courseimage.png" alt="">
+                                        <div class="myCardNameRating">
+                                            <span>1C: Accounting 8.3</span>
+                                            <div>
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="myCardBlockInfo">
+                                        <div class="myCardInfoTextIcon">
+                                            <div class="myCardInfoTextIconFirst">
+                                                <img src="/images/mycardicon1.png" alt="">
+                                                <span>Number of courses: 14+1 exam / 2days a week</span>
+                                            </div>
+                                            <div class="myCardInfoTextIconSecond">
+                                                <img src="/images/mycardicon2.png" alt="">
+                                                <span>Certificate / in Armenian and English/</span>
+                                            </div>
+                                        </div>
+                                        <div class="myCardInfoButtonField">
+                                            <button>
+                                                <img src="/images/btnBuyIcon.png" alt="">
+                                                <span>Buy now</span>
+                                            </button>
+                                            <div class="btnGroupLikeMarket">
+                                                <img src="/images/likeIconmycard.png" alt="">
+                                                <img src="/images/iconmarketmycard.png" alt="">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="myCardBlockInfo">
-                                <div class="myCardInfoTextIcon">
-                                    <div class="myCardInfoTextIconFirst">
-                                        <img src="/images/mycardicon1.png" alt="">
-                                        <span>Number of courses: 14+1 exam / 2days a week</span>
+                            <div class="myCardBlockButtons">
+                                <span>Remove</span>
+                                <span>Move to wishlist</span>
+                            </div>
+                        </li>
+                        <li class="myCardBlocksField">
+                            <div class="myCoursesBlocksField">
+                                <div class="myCoursesBlocksFieldMain">
+                                    <div class="myCardImageBlock">
+                                        <img src="/images/courseimage.png" alt="">
+                                        <div class="myCardNameRating">
+                                            <span>1C: Accounting 8.3</span>
+                                            <div>
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                                <img src="/images/cardStar.png" alt="">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="myCardInfoTextIconSecond">
-                                        <img src="/images/mycardicon2.png" alt="">
-                                        <span>Certificate / in Armenian and English/</span>
-                                    </div>
-                                </div>
-                                <div class="myCardInfoButtonField">
-                                    <button>
-                                        <img src="/images/btnBuyIcon.png" alt="">
-                                        <span>Buy now</span>
-                                    </button>
-                                    <div class="btnGroupLikeMarket">
-                                        <img src="/images/likeIconmycard.png" alt="">
-                                        <img src="/images/iconmarketmycard.png" alt="">
+                                    <div class="myCardBlockInfo">
+                                        <div class="myCardInfoTextIcon">
+                                            <div class="myCardInfoTextIconFirst">
+                                                <img src="/images/mycardicon1.png" alt="">
+                                                <span>Number of courses: 14+1 exam / 2days a week</span>
+                                            </div>
+                                            <div class="myCardInfoTextIconSecond">
+                                                <img src="/images/mycardicon2.png" alt="">
+                                                <span>Certificate / in Armenian and English/</span>
+                                            </div>
+                                        </div>
+                                        <div class="myCardInfoButtonField">
+                                            <button>
+                                                <img src="/images/btnBuyIcon.png" alt="">
+                                                <span>Buy now</span>
+                                            </button>
+                                            <div class="btnGroupLikeMarket">
+                                                <img src="/images/likeIconmycard.png" alt="">
+                                                <img src="/images/iconmarketmycard.png" alt="">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="myCardBlockButtons">
-                        <span>Remove</span>
-                        <span>Move to wishlist</span>
-                    </div>
+                            <div class="myCardBlockButtons">
+                                <span>Remove</span>
+                                <span>Move to wishlist</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
+<!--            <div class="myCardFieldAcceptCourses">-->
+<!--                <div class="myCardBlocksField">-->
+<!--                    <div class="myCoursesBlocksField">-->
+<!--                        <div class="myCoursesBlocksFieldMain">-->
+<!--                            <div class="myCardImageBlock">-->
+<!--                                <img src="/images/courseimage.png" alt="">-->
+<!--                                <div class="myCardNameRating">-->
+<!--                                    <span>1C: Accounting 8.3</span>-->
+<!--                                    <div>-->
+<!--                                        <img src="/images/cardStar.png" alt="">-->
+<!--                                        <img src="/images/cardStar.png" alt="">-->
+<!--                                        <img src="/images/cardStar.png" alt="">-->
+<!--                                        <img src="/images/cardStar.png" alt="">-->
+<!--                                        <img src="/images/cardStar.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="myCardBlockInfo">-->
+<!--                                <div class="myCardInfoTextIcon">-->
+<!--                                    <div class="myCardInfoTextIconFirst">-->
+<!--                                        <img src="/images/mycardicon1.png" alt="">-->
+<!--                                        <span>Number of courses: 14+1 exam / 2days a week</span>-->
+<!--                                    </div>-->
+<!--                                    <div class="myCardInfoTextIconSecond">-->
+<!--                                        <img src="/images/mycardicon2.png" alt="">-->
+<!--                                        <span>Certificate / in Armenian and English/</span>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="myCardInfoButtonField">-->
+<!--                                    <button>-->
+<!--                                        <img src="/images/btnBuyIcon.png" alt="">-->
+<!--                                        <span>Buy now</span>-->
+<!--                                    </button>-->
+<!--                                    <div class="btnGroupLikeMarket">-->
+<!--                                        <img src="/images/likeIconmycard.png" alt="">-->
+<!--                                        <img src="/images/iconmarketmycard.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="myCardBlockButtons">-->
+<!--                        <span>Remove</span>-->
+<!--                        <span>Move to wishlist</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="myCardBlocksField">-->
+<!--                    <div class="myCoursesBlocksField">-->
+<!--                        <div class="myCoursesBlocksFieldMain">-->
+<!--                            <div class="myCardImageBlock">-->
+<!--                                <img src="/images/courseimage.png" alt="">-->
+<!--                                <div class="myCardNameRating">-->
+<!--                                    <span>1C: Accounting 8.3</span>-->
+<!--                                    <div>-->
+<!--                                        <img src="/images/cardStar.png" alt="">-->
+<!--                                        <img src="/images/cardStar.png" alt="">-->
+<!--                                        <img src="/images/cardStar.png" alt="">-->
+<!--                                        <img src="/images/cardStar.png" alt="">-->
+<!--                                        <img src="/images/cardStar.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="myCardBlockInfo">-->
+<!--                                <div class="myCardInfoTextIcon">-->
+<!--                                    <div class="myCardInfoTextIconFirst">-->
+<!--                                        <img src="/images/mycardicon1.png" alt="">-->
+<!--                                        <span>Number of courses: 14+1 exam / 2days a week</span>-->
+<!--                                    </div>-->
+<!--                                    <div class="myCardInfoTextIconSecond">-->
+<!--                                        <img src="/images/mycardicon2.png" alt="">-->
+<!--                                        <span>Certificate / in Armenian and English/</span>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="myCardInfoButtonField">-->
+<!--                                    <button>-->
+<!--                                        <img src="/images/btnBuyIcon.png" alt="">-->
+<!--                                        <span>Buy now</span>-->
+<!--                                    </button>-->
+<!--                                    <div class="btnGroupLikeMarket">-->
+<!--                                        <img src="/images/likeIconmycard.png" alt="">-->
+<!--                                        <img src="/images/iconmarketmycard.png" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="myCardBlockButtons">-->
+<!--                        <span>Remove</span>-->
+<!--                        <span>Move to wishlist</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>
     <div class="totalPriceField">
@@ -145,3 +331,4 @@ $this->registerCssFile('@web/css/my-card.css');
         </div>
     </div>
 </div>
+<?php $this->registerJsFile('@web/js/my-card.js'); ?>

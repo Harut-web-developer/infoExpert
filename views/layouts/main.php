@@ -74,7 +74,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     </li>
                     <li class="whiteLi"><a href="">FAQ</a></li>
                     <li class="whiteLi"><a href="">TESTIMONIALS</a></li>
-                    <li class="whiteLi"><a href="#section01">BLOG</a></li>
+                    <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
+                        <li class="whiteLi"><a href="#section01"">BLOG</a></li>
+                    <?php } else { ?>
+                        <li class="whiteLi"><a href="/blog/index">BLOG</a></li>
+                    <?php } ?>
                     <li class="whiteLi"><a href="/contact-us/index">CONTACT US</a></li>
                     <li class="whiteLi"><a href="/apply-now/index">APPLY NOW</a></li>
                     <li>
