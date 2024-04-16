@@ -12,7 +12,10 @@ $this->title = 'My Yii Application';
     <div class="apply">
         <span class="applyMarket">27 YEARS IN MARKET</span>
         <span class="boundaries">EDUCATION WITHOUT BOUNDARIES</span>
-        <a href="/apply-now/index"><img src="./images/apply.png" alt=""></a>
+        <a href="/apply-now/index">
+            <img src="./images/apply.png" alt="">
+            <span>APPLY NOW</span>
+        </a>
     </div>
 </div>
 <div class="sectionTwo">
@@ -51,7 +54,10 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
             <div class="managementBtn">
-                <a href="/courses/index"><img src="/images/logomanag.png" alt=""></a>
+                <a href="/courses/index">
+                    <img src="/images/logomanag.png" alt="">
+                    <span>SEE ALL LESSONS</span>
+                </a>
             </div>
         </div>
         <div class="learnImg">
@@ -411,7 +417,10 @@ $this->title = 'My Yii Application';
                 <div></div>
             </div>
             <div class="blogBtn">
-                <a href="blog/index"><img src="/images/articlebtn.png" alt=""></a>
+                <a href="blog/index">
+                    <img src="/images/articlebtn.png" alt="">
+                    <span>All Articles</span>
+                </a>
             </div>
         </div>
     </div>
@@ -430,7 +439,10 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
             <div class="questionbutton">
-                <button type="submit"><img src="/images/questionbtn.png" alt=""></button>
+                <button type="submit">
+                    <img src="/images/questionbtn.png" alt="">
+                    <span>Leave us a message</span>
+                </button>
             </div>
         </form>
     </div>

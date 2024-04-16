@@ -23,7 +23,6 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
-        'js/apply-now.js',
         'js/script.js',
     ];
     public $depends = [

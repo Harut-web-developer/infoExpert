@@ -34,7 +34,7 @@ $this->registerCssFile('@web/css/courses.css');
                         </div>
                     </div>
                     <div class="myCoursesFieldSectionRight">
-                        <a href=""><img src="/images/editIconMyCourses.png" alt=""></a>
+                        <a href="/user-profile/achievements-edit"><img src="/images/editIconMyCourses.png" alt=""></a>
                     </div>
                 </div>
             </div>

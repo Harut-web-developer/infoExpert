@@ -16,28 +16,29 @@ $this->registerCssFile('@web/css/user-profile.css');
         <div class="profilBody_">
             <div class="userCreateFieldForms_">
                 <form action="">
-                    <div class="userPhotoFields_">
-                        <div class="usersCardHead_">
-                            <img class="cardImg_" src="/images/usersAchievements.png" alt="">
-                            <div class="middle">
-                                <div class="text"><a class="editPhoto" href="">Edit photo</a></div>
+                    <div class="userAchievementsEditLeft">
+                            <div class="usersCardHead_">
+                                <img class="cardImg_" src="/images/usersAchievements.png" alt="">
+                                <div class="middle">
+                                    <span class="editPhoto" href="">Edit photo</span>
+                                    <input type="file">
+                                </div>
                             </div>
-                        </div>
-                        <div class="usersCardMain_">
-                            <h1>Ani Martirosian</h1>
-                            <div class="info1_">
-                                <img src="/images/phonAchievements.png" alt="">
-                                <span>369 258 147</span>
+                            <span>Ani Martirosian</span>
+                            <div class="usersCardMain_">
+                                <div class="sameInfo">
+                                    <img src="/images/phonAchievements.png" alt="">
+                                    <span>369 258 147</span>
+                                </div>
+                                <div class="sameInfo">
+                                    <img src="/images/mailAchievements.png" alt="">
+                                    <span>a@martirosian.com</span>
+                                </div>
+                                <div class="sameInfo">
+                                    <img src="/images/linkdinAchievements.png" alt="">
+                                    <span>Ani Martirosian</span>
+                                </div>
                             </div>
-                            <div class="info2_">
-                                <img src="/images/mailAchievements.png" alt="">
-                                <span>a@martirosian.com</span>
-                            </div>
-                            <div class="info3_">
-                                <img src="/images/linkdinAchievements.png" alt="">
-                                <span>Ani Martirosian</span>
-                            </div>
-                        </div>
                     </div>
                     <div class="userInputsFields_">
                         <div class="userFormsInput_">
@@ -57,12 +58,12 @@ $this->registerCssFile('@web/css/user-profile.css');
                             <input type="text">
                         </div>
                         <div class="userFormsInput_">
-                            <label for="attachCv">CV</label>
-                            <div id="attachCv_" class="cvFileField_">
-                                <input class="cvFile_" type="file">
-                                <div class="attachCv_">
+                            <label for="attachCvEdit">CV</label>
+                            <div id="attachCvEdit" class="cvFileFieldEdit">
+                                <input class="cvFileEdit" type="file">
+                                <div class="attachCvEdit">
                                     <span>Attach file</span>
-                                    <img src="/images/scriptIcon.png" alt="">
+                                    <img class="attachCvImg" src="/images/scriptIcon.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -78,3 +79,4 @@ $this->registerCssFile('@web/css/user-profile.css');
         </div>
     </div>
 </div>
+<?php $this->registerJsFile('@web/js/user-create.js', ['defer' => true]); ?>

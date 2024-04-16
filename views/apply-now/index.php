@@ -106,4 +106,6 @@ $this->registerCssFile('@web/css/apply-now.css');
         </div>
     </form>
 </div>
+<?php $this->registerJsFile('@web/js/apply-now.js', ['defer' => true]); ?>
+
 

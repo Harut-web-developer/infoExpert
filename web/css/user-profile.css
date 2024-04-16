@@ -53,7 +53,9 @@
 .userProfileMenu > li > a{
     text-decoration: none;
     color: white;
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
 }
 .fieldMoreAbout{
     width: 265px;
@@ -93,6 +95,7 @@
     height: 618px;
     background: #74A8AB;
     border-radius: 30px;
+    box-shadow: 0px 0px 6px 2px #549099;
 }
 .userCreateFieldForms > form{
     width: 80%;
@@ -109,6 +112,10 @@
     background: #5D9A9D;
     border-radius: 50%;
     margin-right: 20px;
+    position: relative;
+}
+.userPhotoFields > img{
+    border-radius: 50%;
 }
 .userInputsFields{
     width: 60%;
@@ -130,6 +137,7 @@
     font-family: "Roboto",sans-serif;
     font-size: 14px;
     color: white;
+    font-weight: 400;
     margin-left: 11px;
 }
 .userFormsInput > input{
@@ -167,7 +175,8 @@
     font-family: "Roboto",sans-serif;
     color: white;
     font-size: 23px;
-    margin: 108px 5.7%;
+    margin: 108px 72px;
+    top: 0;
 }
 .userPhotoFields > span:hover{
     cursor: pointer;
@@ -185,7 +194,11 @@
     margin: 24px 0px 24px 11px;
 }
 .attachCv > span{
+    font-family: "Roboto",sans-serif;
     color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
 }
 .cvFile{
     display: none;
@@ -209,7 +222,7 @@
 }
 .userAchievementsSection{
     width: 67%;
-    height: 541px;
+    height: 738px;
     position: absolute;
     margin: 212px 16.5% 0px;
     display: flex;
@@ -225,69 +238,97 @@
     align-items: center;
     padding-top: 118.03px;
 }
-.usersCard{
+.myCoursesProfileField{
     width: 405px;
-    height: 532.72px;
-    top: 374.19px;
-    left: 320.04px;
-    padding: 37px 36px 37px 78px;
+    height: 533px;
+    margin-right: 20px;
+    background: #74A8AB;
     border-radius: 30px;
-    background: #FFFFFF24;
+    box-shadow: 0px 0px 6px 2px #549099;
 }
-.usersCardHead{
+.myCoursesFieldSection{
+    width: 291px;
+    height: 459px;
+    margin: 37px 36px 37px 78px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
 }
-.usersCardMain h1{
-    font-family: Roboto;
+.myCoursesFieldSectionLeft{
+    width: 250px;
+    height: 459px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.myCoursesFieldSectionLeft > span{
+    color: white;
     font-size: 20px;
     font-weight: 600;
-    line-height: 23.44px;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 24px 0;
+    font-family: "Roboto", sans-serif;
 }
-.info1{
-    font-family: Roboto;
+.myCoursesFieldSectionLeft > img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+.usersProfileInfo{
+    width: 249px;
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.usersProfileInfoPhone > span{
+    font-family: "Roboto",sans-serif;
     font-size: 20px;
     font-weight: 400;
-    line-height: 23.44px;
-    text-align: left;
-    color: #FFFFFF;
+    margin-left: 37px;
+    color: white;
+
 }
-.info2{
-    font-family: Roboto;
+.usersProfileInfoEmail > span{
+    font-family: "Roboto",sans-serif;
+    margin-left: 37px;
     font-size: 20px;
     font-weight: 400;
-    line-height: 23.44px;
-    text-align: left;
-    color: #FFFFFF;
-    padding-top: 22px;
+    color: white;
+
 }
-.info3{
-    font-family: Roboto;
+.usersProfileInfoLinkdin > span{
     font-size: 20px;
+    font-family: "Roboto",sans-serif;
+    margin-left: 37px;
+    color: white;
     font-weight: 400;
-    line-height: 23.44px;
-    text-align: left;
-    color: #FFFFFF;
-    padding-top: 22px;
 }
-.info1 > span,
-.info2 > span,
-.info3 > span {
-    padding-left: 42px;
+
+
+.certificate{
+    width: 624px;
+    height: 529px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 .cartificateImg{
     background: #FFFFFF24;
     width: 624.07px;
     height: 468.05px;
     border-radius: 30px;
+    box-shadow: 0px 0px 6px 2px #549099;
+
 }
 .cartificateImg img{
     padding: 45.08px 44.84px;
 }
+
 .certificate span{
-    font-family: Roboto Slab;
+    font-family: "Roboto Slab",sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 23.4px;
@@ -295,7 +336,11 @@
     color: #FFFFFF;
 }
 .cartificateImgTxt{
-    padding: 29px 31px 0px 31px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 31px;
 }
 .profilBody_{
     width: 100%;
@@ -318,45 +363,24 @@
     display: flex;
     position: relative;
 }
-.usersCardMain_ h1{
-    font-family: Roboto;
-    font-size: 20px;
+.userAchievementsEditLeft > span {
+    font-family: "Roboto",sans-serif;
     font-weight: 600;
-    line-height: 23.44px;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 24px 0;
+    font-size: 20px;
+    color: white;
 }
-.info1_{
-    font-family: Roboto;
+.sameInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.sameInfo > span{
+    font-family: "Roboto",sans-serif;
     font-size: 20px;
     font-weight: 400;
-    line-height: 23.44px;
-    text-align: left;
-    color: #FFFFFF;
-}
-.info2_{
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 23.44px;
-    text-align: left;
-    color: #FFFFFF;
-    padding-top: 22px;
-}
-.info3_{
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 23.44px;
-    text-align: left;
-    color: #FFFFFF;
-    padding-top: 22px;
-}
-.info1_ > span,
-.info2_ > span,
-.info3_ > span {
-    padding-left: 42px;
+    color: white;
+    margin-left: 42px;
 }
 .cartificateImg_{
     background: #FFFFFF24;
@@ -376,13 +400,21 @@
     color: #FFFFFF;
 }
 .cartificateImgTxt_{
-    padding: 29px 31px 0px 31px;
+   padding: 29px 31px 0px 31px;
+}
+.usersCardMain_{
+    width: 250px;
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .userCreateFieldForms_{
     width: 83%;
     height: 618px;
     background: #74A8AB;
     border-radius: 30px;
+    box-shadow: 0px 0px 6px 2px #549099;
 }
 .userCreateFieldForms_ > form{
     width: 80%;
@@ -391,12 +423,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
-.userPhotoFields_{
-    height: 250px;
-    background: #5D9A9D;
-    border-radius: 50%;
+.userAchievementsEditLeft{
     margin-right: 20px;
+    width: 250px;
+    height: 458px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .userInputsFields_{
     width: 60%;
@@ -418,6 +454,7 @@
     font-family: "Roboto",sans-serif;
     font-size: 14px;
     color: white;
+    font-weight: 400;
     margin-left: 11px;
 }
 .userFormsInput_ > input{
@@ -444,26 +481,14 @@
 .userFormsBtn_ > button > span{
     position: absolute;
     left: 0;
-    font-size: 12px;
+    font-size: 13px;
     font-family: "Roboto",sans-serif;
     color: #F36528;
-    margin: 11px 33px;
+    margin: 10px 33px;
     font-weight: 500;
 }
-.userPhotoFields_ > span{
-    position: absolute;
-    font-family: "Roboto",sans-serif;
-    color: white;
-    font-size: 23px;
-    margin: 108px 5.7%;
-}
-.userPhotoFields_ > span:hover{
-    cursor: pointer;
-}
-.userPhotoFields_ > input{
-    display: none;
-}
-.attachCv_{
+
+.attachCvEdit{
     width: 100px;
     height: 16px;
     display: flex;
@@ -472,19 +497,20 @@
     align-items: center;
     margin: 24px 0px 24px 11px;
 }
-.attachCv_ > span{
+.attachCvEdit > span{
     color: white;
+    text-decoration: underline;
 }
-.cvFile_{
+.cvFileEdit{
     display: none;
 }
-.cvFileField_{
+.cvFileFieldEdit{
     width: 100%;
     height: 64px;
     background: #5D9A9D;
     border-radius: 15px;
 }
-.attachCv_:hover{
+.attachCvEdit:hover{
     cursor: pointer;
 }
 
@@ -498,7 +524,9 @@
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
-
+.middle > input{
+    display: none;
+}
 .usersCardHead_:hover .cardImg_ {
     opacity: 0.5;
 }
@@ -507,12 +535,15 @@
 }
 .editPhoto{
     text-decoration: none;
-    font-family: 'Roboto';
+    font-family: 'Roboto',sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 18.75px;
     text-align: left;
     color: white;
+}
+.editPhoto:hover{
+    cursor:pointer;
 }
 
 

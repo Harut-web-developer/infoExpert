@@ -6,7 +6,7 @@ $this->registerCssFile('@web/css/my-card.css');
     <div class="checkoutFieldSection">
         <div class="checkoutTitleField">
             <div>Checkout</div>
-            <span>Cancel</span>
+            <span onclick="window.location = document.referrer">Cancel</span>
         </div>
         <div class="checkoutInputsSectionField">
             <div class="checkoutInputsSectionLeftField">

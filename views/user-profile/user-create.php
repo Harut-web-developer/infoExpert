@@ -16,6 +16,8 @@ $this->registerCssFile('@web/css/user-profile.css');
         <div class="userCreateFieldForms">
             <form action="">
                 <div class="userPhotoFields">
+<!--                    <img src="/images/usersAchievements.png" alt="">-->
+<!--                    nkar yntreluc petqa es img i mech baci-->
                     <span class="userAddPhotoText">Add photo</span>
                     <input type="file">
                 </div>

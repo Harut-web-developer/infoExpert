@@ -21,6 +21,7 @@
     position: absolute;
     margin: 1006px 0px 0px 0px;
     background: #74A8AB;
+    box-shadow: 0px 0px 6px 2px #549099;
 
 }
 .myCardTotalPrice{
@@ -49,6 +50,7 @@
 .myCardTotalPrice > span{
     font-family: "Roboto", sans-serif;
     font-size: 30px;
+    font-weight: 400;
     text-decoration: underline;
     color: white;
 }
@@ -89,7 +91,9 @@
 .userProfileMenu > li > a{
     text-decoration: none;
     color: white;
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
 }
 .myCardFields{
     width: 100%;
@@ -104,6 +108,7 @@
     margin-right: 60px;
     background: #74A8AB;
     border-radius: 30px;
+    box-shadow: 0px 0px 6px 2px #549099;
 }
 .myCoursesFieldSection{
     width: 291px;
@@ -183,6 +188,7 @@
     margin-right: 60px;
     border-radius: 30px;
     background: #74A8AB;
+    box-shadow: 0px 0px 6px 2px #549099;
 }
 .myCardBlockButtons{
     width: 270px;
@@ -196,8 +202,12 @@
 .myCardBlockButtons > span{
     color: white;
     font-size: 20px;
+    font-weight: 400;
     font-family: "Roboto", sans-serif;
     text-decoration: underline;
+}
+.myCardBlockButtons > span:hover{
+    cursor: pointer;
 }
 .myCoursesBlocksFieldMain{
     width: 344px;
@@ -231,9 +241,10 @@
     align-items: center;
 }
 .myCardNameRating > span{
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto slab", sans-serif;
     font-size: 20px;
     color: white;
+    font-weight: 500;
 }
 .myCardNameRating > div{
     display: flex;
@@ -271,8 +282,8 @@
 .myCardInfoTextIconFirst > span{
     color: white;
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-family: "Roboto Medium", sans-serif;
+    font-weight: 500;
 }
 .myCardInfoTextIconSecond{
     width: 312px;
@@ -281,8 +292,9 @@
 .myCardInfoTextIconSecond > span{
     color: white;
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-family: "Roboto Medium", sans-serif;
+    font-weight: 500;
+
 }
 .myCardInfoTextIconSecond > img{
     margin-right: 11px;
@@ -310,7 +322,7 @@
     margin: 13px 26px;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     color: white;
 }
 .btnGroupLikeMarket{
@@ -360,6 +372,9 @@
     font-size: 24px;
     font-family: 'Roboto',sans-serif;
     color: white;
+}
+.checkoutTitleField >span:hover{
+    cursor: pointer;
 }
 .checkoutInputsSectionField{
     width: 100%;
@@ -434,11 +449,13 @@
 .courseManualPriceFieldInfo > span{
     font-family: "Roboto",sans-serif;
     font-size: 18px;
+    font-weight: 400;
     color: white;
     margin-left: 17px;
 }
 .courseManualPriceFieldPay{
     font-size: 20px;
+    font-weight: 400;
     font-family: "Roboto",sans-serif;
     color: white;
 }
@@ -553,6 +570,7 @@
 .checkoutTotalFieldInfoTop > p{
     color: white;
     font-size: 14px;
+    font-weight: 400;
     font-family: "Roboto",sans-serif;
     width: 100%;
     height: 32px;
@@ -561,6 +579,7 @@
 .checkoutTotalFieldInfoTop > p > a{
     color: white;
     font-size: 14px;
+    font-weight: 400;
     font-family: "Roboto",sans-serif;
     text-decoration: underline;
 }
@@ -591,6 +610,7 @@
 .checkoutTotalFieldInfoBottom > button > span{
     font-family: "Roboto",sans-serif;
     font-size: 10px;
+    font-weight: 500;
     color: #F36528;
     position: absolute;
     left: 0;
@@ -608,9 +628,8 @@
     display: none;
     width: 100%;
     height: 320px;
-    border: 1px solid;
     margin-top: 30px;
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
     justify-content: space-between;
 
@@ -626,6 +645,7 @@
 .checkoutInputsCreditField > label{
     font-family: "Roboto",sans-serif;
     font-size: 14px;
+    font-weight: 400;
     color: white;
 }
 .checkoutInputsCreditField > input{
@@ -635,7 +655,11 @@
     background: #5D9A9D;
     border: none;
     outline: none;
-
+    padding-left: 26px;
+    color: white;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    color: white;
 }
 .checkoutInputsCreditFieldRow{
     width: 100%;
@@ -656,6 +680,7 @@
 .checkoutInputLeftField > label{
     font-family: "Roboto",sans-serif;
     font-size: 14px;
+    font-weight: 400;
     color: white;
 }
 .checkoutInputLeftField > input{
@@ -665,6 +690,11 @@
     background: #5D9A9D;
     border: none;
     outline: none;
+    padding-left: 26px;
+    color: white;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    color: white;
 }
 .checkoutInputRightField{
     width: 174px;
@@ -677,6 +707,7 @@
 .checkoutInputRightField > label{
     font-family: "Roboto",sans-serif;
     font-size: 14px;
+    font-weight: 400;
     color: white;
 }
 .checkoutInputRightField > input{
@@ -686,6 +717,11 @@
     background: #5D9A9D;
     border: none;
     outline: none;
+    padding-left: 26px;
+    color: white;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    color: white;
 }
 .creditCheckbox{
     width: 20px;
@@ -694,25 +730,10 @@
 .checkoutCheckboxCreditField > label{
     font-family: "Roboto",sans-serif;
     font-size: 14px;
+    font-weight: 400;
     color: white;
 }
 /*end checkout page*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -761,12 +782,12 @@
 }
 .CongratulationApplyNowBtnField > button > span > a{
     color: #F36528;
-    margin: 25px 22px;
+    margin: 25px 26px;
     position: absolute;
     left: 0px;
     font-family: 'Roboto';
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 600;
     line-height: 18.2px;
     text-align: left;
     text-decoration: none;

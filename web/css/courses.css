@@ -282,7 +282,9 @@
 .userProfileMenu > li > a{
     text-decoration: none;
     color: white;
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
 }
 .mainCoursesFields{
     width: 100%;
@@ -347,13 +349,14 @@
     font-size: 20px;
     margin-left: 37px;
     color: white;
-
+    font-weight: 400;
 }
 .usersProfileInfoEmail > span{
     font-family: "Roboto",sans-serif;
     margin-left: 37px;
     font-size: 20px;
     color: white;
+    font-weight: 400;
 
 }
 .usersProfileInfoLinkdin > span{
@@ -361,6 +364,8 @@
     font-family: "Roboto",sans-serif;
     margin-left: 37px;
     color: white;
+    font-weight: 400;
+
 }
 .myCoursesBlocksFieldMain{
     width:344px;
@@ -379,7 +384,7 @@
     font-family: 'Roboto Slab',sans-serif;
     font-size: 24px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-left:20px;
 }
 .myCoursesBlocksFieldMainInfo{
@@ -402,6 +407,7 @@
 .myCoursesRating > span{
     font-size: 16px;
     color: white;
+    font-weight: 400;
     font-family: "Roboto", sans-serif;
 }
 .ratingStarMyourse{
@@ -415,6 +421,7 @@
 .myCourseercentText{
     color: white;
     font-size: 16px;
+    font-weight: 400;
     font-family: "Roboto", sans-serif;
 }
 .progress-bar{

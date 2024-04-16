@@ -40,7 +40,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 <div class="icons">
                     <img class="searchIcons" src="/images/search.png" alt="">
                     <a href="/user-profile/index"><img src="/images/user.png" alt=""></a>
-                    <img src="/images/flag.png" alt="">
+                    <div class="flagFields">
+                        <img class="mainFlag" src="/images/armflag.png" alt="">
+                        <ul class="otherFlags">
+                            <li><img class="armFlag" src="/images/armflag.png" alt=""></li>
+                            <li><img class="usaFlag" src="/images/usaflag.png" alt=""></li>
+                            <li><img class="ruFlag" src="/images/ruflag.png" alt=""></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="menu">
@@ -71,7 +78,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <li class="whiteLi"><a href="/contact-us/index">CONTACT US</a></li>
                     <li class="whiteLi"><a href="/apply-now/index">APPLY NOW</a></li>
                     <li>
-                        <button type="button" class="btnBack"><img src="/images/circle.png" alt=""></button>
+                        <button type="button" class="btnBack">
+                            <img src="/images/circle.png" alt="">
+                            <span>GET A CALL BACK</span>
+                        </button>
                     </li>
                 </ul>
             </div>

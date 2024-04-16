@@ -38,7 +38,24 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.flagFields >img:hover{
+    cursor: pointer;
+}
+.otherFlags{
+    margin-top: 12px;
+    position: absolute;
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    display: none;
+    z-index: 10;
+}
+.otherFlags > li{
+    margin: 8px 0px;
+}
+.otherFlags > li:hover{
+    cursor: pointer;
+}
 .searchIcons{
     width: 25px;
     height: 25px;
@@ -85,6 +102,15 @@
     border: none;
     background: transparent;
     outline: none;
+    position: relative;
+}
+.btnBack > span{
+    color: #F36528;
+    font-size: 13px;
+    font-family: "Roboto",sans-serif;
+    position: absolute;
+    left: 0;
+    margin: 20px 25px;
 }
 .dropDownAbout{
     background-image: url("../images/small.png");
@@ -432,6 +458,16 @@
     background: transparent;
     border: none;
     z-index: 10;
+    position: relative;
+}
+.apply > a > span{
+    position: absolute;
+    left: 0;
+    font-family: "Roboto",sans-serif;
+    font-size: 24px;
+    color: #F36528;
+    font-weight: 600;
+    margin: 39px 66px;
 }
 .apply > a > img{
     width: 100%;
@@ -503,6 +539,21 @@
 .learnImg > img{
     width: 648px;
     height: 639px;
+}
+.managementBtn > a{
+    position: relative;
+
+}
+.managementBtn > a >span{
+    position: absolute;
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    left: 0;
+    color: #F36528;
+    margin: 40px 43px;
+}{
+
 }
 .coursesBg{
     background-image: url("../images/rec.png");
@@ -867,6 +918,17 @@
 .blogBtn{
     width: 186px;
 }
+.blogBtn > a{
+    position: relative;
+}
+.blogBtn > a > span{
+    position: absolute;
+    top: 0;
+    margin: 0px 55px;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    color: #F36528;
+}
 .individualCards{
     border-radius: 30px;
     width: 377px;
@@ -993,6 +1055,16 @@
 .questionbutton > button{
     border: none;
     background: none;
+    position: relative;
+}
+.questionbutton > button > span{
+    position: absolute;
+    left: 0;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    color: #F36528;
+    font-weight: 500;
+    margin: 28px 28px;
 }
 .leftQuestionField{
     width: 48%;
