@@ -12,7 +12,6 @@
     $this->registerCssFile('@web/css/main.css');
 
     ?>
-<body>
 <div class="slide-container swiper" style="overflow: hidden; padding:0 16.5625%;    height: 100vh;">
     <div class="slide-content" style=" padding-top: 250px; overflow: hidden;   height: 100vh;">
         <div class="card-wrapper swiper-wrapper testimonialsImg">
@@ -152,11 +151,11 @@
     <div class="swiper-pagination"></div>
 </div>
 
-</body>
 
 <!-- Swiper JS -->
-<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
-
+<!--    <script src="/web/js/swiper-bundle.min.js"></script>-->
+<!--    --><?php //$this->registerJsFile('@web/js/swiper-bundle.min.js'); ?>
+    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".slide-content", {
             slidesPerView: 3,
