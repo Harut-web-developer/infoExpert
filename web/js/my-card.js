@@ -54,29 +54,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    if (window.location.pathname == '/courses/my-courses'){
-        const carousel3 = document.querySelector(".myCoursesFieldAcceptCourses");
-        const wrapper3 = document.querySelector(".wrapperMyCourses");
-        const firstCard3 = carousel3.querySelector(".myCoursesBlocksField");
-        const arrowBtns3 = Array.from(document.querySelectorAll(".arrow-btn2"));
-        slider(carousel3, wrapper3, firstCard3, arrowBtns3);
-    }else {
-        const carousel = document.querySelector(".carouselCourses");
-        const wrapper = document.querySelector(".wrapper");
-        const firstCard = carousel.querySelector(".cardCourses");
-        const arrowBtns = Array.from(document.querySelectorAll(".arrow-btn"));
-        slider(carousel, wrapper, firstCard, arrowBtns);
-
-        const carousel2 = document.querySelector(".carousel2");
-        const wrapper2 = document.querySelector(".wrapper2");
-        const firstCard2 = carousel2.querySelector(".card2");
-        const arrowBtns2 = Array.from(document.querySelectorAll(".arrow-btn2"));
-        slider(carousel2, wrapper2, firstCard2, arrowBtns2);
-    }
-
-
-
-
+    const carousel = document.querySelector(".myCardFieldAcceptCourses");
+    const wrapper = document.querySelector(".wrapper");
+    const firstCard = carousel.querySelector(".myCardBlocksField");
+    const arrowBtns = Array.from(document.querySelectorAll(".arrow-btn"));
+    slider(carousel, wrapper, firstCard, arrowBtns);
 });
 
 

@@ -38,52 +38,145 @@ $this->registerCssFile('@web/css/courses.css');
                     </div>
                 </div>
             </div>
-            <div class="myCoursesFieldAcceptCourses">
-                <div class="myCoursesBlocksField">
-                    <div class="myCoursesBlocksFieldMain">
-                        <img src="/images/courseimage.png" alt="">
-                        <span>1C: Accounting 8.3</span>
-                        <div class="myCoursesBlocksFieldMainInfo">
-                            <div class="myCoursesRating">
-                                <div class="ratingStarMyourse">
-                                    <img src="/images/ratingStar.png" alt="">
-                                    <img src="/images/ratingStar.png" alt="">
-                                    <img src="/images/ratingStar.png" alt="">
-                                    <img src="/images/ratingStar.png" alt="">
-                                    <img src="/images/ratingStar.png" alt="">
+            <div class="cardMyCourses">
+                <div class="wrapperMyCourses">
+                    <ul class="carouselMyCourses myCoursesFieldAcceptCourses">
+                        <li class="myCoursesBlocksField">
+                            <div class="myCoursesBlocksFieldMain">
+                                <img src="/images/courseimage.png" alt="">
+                                <span>1C: Accounting 8.3</span>
+                                <div class="myCoursesBlocksFieldMainInfo">
+                                    <div class="myCoursesRating">
+                                        <div class="ratingStarMyourse">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                        </div>
+                                        <span>Leave a rating</span>
+                                    </div>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="myCourseercentText">46 % complete</span>
                                 </div>
-                                <span>Leave a rating</span>
                             </div>
-                            <div class="progress" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <span class="myCourseercentText">46 % complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="myCoursesBlocksField">
-                    <div class="myCoursesBlocksFieldMain">
-                        <img src="/images/courseimage.png" alt="">
-                        <span>1C: Accounting 8.3</span>
-                        <div class="myCoursesBlocksFieldMainInfo">
-                            <div class="myCoursesRating">
-                                <div class="ratingStarMyourse">
-                                    <img src="/images/ratingStar.png" alt="">
-                                    <img src="/images/ratingStar.png" alt="">
-                                    <img src="/images/ratingStar.png" alt="">
-                                    <img src="/images/ratingStar.png" alt="">
-                                    <img src="/images/ratingStar.png" alt="">
+                        </li>
+                        <li class="myCoursesBlocksField">
+                            <div class="myCoursesBlocksFieldMain">
+                                <img src="/images/courseimage.png" alt="">
+                                <span>1C: Accounting 8.3</span>
+                                <div class="myCoursesBlocksFieldMainInfo">
+                                    <div class="myCoursesRating">
+                                        <div class="ratingStarMyourse">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                        </div>
+                                        <span>Leave a rating</span>
+                                    </div>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="myCourseercentText">46 % complete</span>
                                 </div>
-                                <span>Leave a rating</span>
                             </div>
-                            <div class="progress" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </li>
+                        <li class="myCoursesBlocksField">
+                            <div class="myCoursesBlocksFieldMain">
+                                <img src="/images/courseimage.png" alt="">
+                                <span>1C: Accounting 8.3</span>
+                                <div class="myCoursesBlocksFieldMainInfo">
+                                    <div class="myCoursesRating">
+                                        <div class="ratingStarMyourse">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                        </div>
+                                        <span>Leave a rating</span>
+                                    </div>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="myCourseercentText">46 % complete</span>
+                                </div>
                             </div>
-                            <span class="myCourseercentText">46 % complete</span>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="myCoursesBlocksField">
+                            <div class="myCoursesBlocksFieldMain">
+                                <img src="/images/courseimage.png" alt="">
+                                <span>1C: Accounting 8.3</span>
+                                <div class="myCoursesBlocksFieldMainInfo">
+                                    <div class="myCoursesRating">
+                                        <div class="ratingStarMyourse">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                        </div>
+                                        <span>Leave a rating</span>
+                                    </div>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="myCourseercentText">46 % complete</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="myCoursesBlocksField">
+                            <div class="myCoursesBlocksFieldMain">
+                                <img src="/images/courseimage.png" alt="">
+                                <span>1C: Accounting 8.3</span>
+                                <div class="myCoursesBlocksFieldMainInfo">
+                                    <div class="myCoursesRating">
+                                        <div class="ratingStarMyourse">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                        </div>
+                                        <span>Leave a rating</span>
+                                    </div>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="myCourseercentText">46 % complete</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="myCoursesBlocksField">
+                            <div class="myCoursesBlocksFieldMain">
+                                <img src="/images/courseimage.png" alt="">
+                                <span>1C: Accounting 8.3</span>
+                                <div class="myCoursesBlocksFieldMainInfo">
+                                    <div class="myCoursesRating">
+                                        <div class="ratingStarMyourse">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                            <img src="/images/ratingStar.png" alt="">
+                                        </div>
+                                        <span>Leave a rating</span>
+                                    </div>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="myCourseercentText">46 % complete</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<?php $this->registerJsFile('@web/js/courses.js'); ?>

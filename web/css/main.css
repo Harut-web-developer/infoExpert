@@ -748,7 +748,7 @@
     background-repeat: no-repeat;
     /*background-position: top;*/
     background-size: 100%;
-    width: 30%;
+    /*width: 30%;*/
     height: 100%;
 }
 .blockTestimonial:hover{
@@ -757,7 +757,7 @@
     /*background-position: top;*/
     background-size: 100%;
     cursor: pointer;
-    width: 30%;
+    /*width: 30%;*/
     height: 100%;
 }
 .fieldsLinkdin{

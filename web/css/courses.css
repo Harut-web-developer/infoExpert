@@ -284,8 +284,11 @@
     color: white;
     font-family: "Roboto Slab",sans-serif;
 }
-.mainCoursesFields{
+.cardMyCourses{
     width: 100%;
+}
+.mainCoursesFields{
+    width: 80.7%;
     height: 533px;
     display: flex;
     flex-direction: row;
@@ -310,18 +313,22 @@
 .myCoursesFieldAcceptCourses{
     width: 71%;
     height: 533px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 2));
+    gap: 32px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
 }
-.myCoursesBlocksField{
-    width: 377px;
-    height: 481px;
-    margin-right: 60px;
-    border-radius: 30px;
-    background: #74A8AB;
-}
+/*.myCoursesBlocksField{*/
+/*    width: 377px;*/
+/*    height: 481px;*/
+/*    margin-right: 60px;*/
+/*    border-radius: 30px;*/
+/*    background: #74A8AB;*/
+/*}*/
 .myCoursesFieldSectionLeft{
     width: 250px;
     height: 459px;
@@ -419,5 +426,50 @@
 }
 .progress-bar{
     background: #F36528 !important;
+}
+
+.myCoursesFieldAcceptCourses::-webkit-scrollbar {
+    display: none;
+}
+
+.myCoursesFieldAcceptCourses :where(.cardCourses, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myCoursesFieldAcceptCourses.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.myCoursesFieldAcceptCourses.no-transition {
+    scroll-behavior: auto;
+}
+.myCoursesFieldAcceptCourses.dragging .myCoursesBlocksField {
+    cursor: grab;
+    user-select: none;
+}
+
+.myCoursesFieldAcceptCourses .myCoursesBlocksField {
+    width: 377px;
+    height: 481px;
+    margin-right: 60px;
+    border-radius: 30px;
+    background: #74A8AB;
+
+
+    /*width: 378px;*/
+    /*height: 476.01px;*/
+    list-style: none;
+    /*background: #FFFFFF24;*/
+    /*border-radius: 30px;*/
+    display: flex;
+    cursor: pointer;
+    padding: 16px 17px 16px 17px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    scroll-snap-align: start;
 }
 /* end my courses page css*/
