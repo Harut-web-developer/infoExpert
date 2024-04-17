@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 *{
-    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -16,7 +17,7 @@
     z-index: 50;
 }
 .menuSection{
-    width: 66%;
+    width: 67%;
     margin: 0px auto;
     height: 140px;
     position: relative;
@@ -32,7 +33,8 @@
     justify-content: space-between;
 }
 .icons{
-    width: 152px;
+    width: 153px;
+    height: 43px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -89,6 +91,10 @@
     cursor: pointer;
 }
 .menuCourses{
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
     color: white;
 }
 .menuCourses:hover{
@@ -107,6 +113,7 @@
 .btnBack > span{
     color: #F36528;
     font-size: 13px;
+    font-weight: 500;
     font-family: "Roboto",sans-serif;
     position: absolute;
     left: 0;
@@ -125,12 +132,17 @@
     position: relative;
 }
 .whiteLi > a{
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
     text-decoration: none;
 }
 .dropDownAbout > ul{
     color: #1C5484;
     font-size: 15px;
-    top: 42px;
+    top: 30px;
+    line-height: 2.7;
     list-style: none;
     position: relative;
     left: 25px;
@@ -141,6 +153,9 @@
 .dropDownAbout > ul > li > a{
     color: #1C5484;
     text-decoration: none;
+    font-family: "Roboto",sans-serif;
+    font-size: 15px;
+    font-weight: 400;
 }
 .dropDownAbout > ul > li > a:hover{
     text-decoration: none;
@@ -157,9 +172,9 @@
 }
 .dropDownCources > ul{
     width: 251px;
-    line-height: 1.7;
+    line-height: 1.5;
     font-size: 14px;
-    top: 45px;
+    top: 33px;
     list-style: none;
     position: relative;
     left: 25px;
@@ -169,6 +184,10 @@
 .dropDownCources > ul > li > a{
     color: #1C5484;
     text-decoration: none;
+    font-family: "Roboto",sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+
 }
 
 .dropDownCources > ul > li > a:hover {
@@ -257,6 +276,8 @@
     list-style: none;
     padding-left: 0px;
     font-size: 18px;
+    font-family: "Roboto",sans-serif;
+    font-weight: 400;
 }
 .leftMenuFooter > ul > li > a{
     text-decoration: none;
@@ -277,6 +298,7 @@
 }
 .footerConn > span{
     color: #F36528;
+    font-family: "Roboto",sans-serif;
     font-size: 15px;
     font-weight: 600;
 }
@@ -293,14 +315,21 @@
     border: none;
     background: #5D9A9D;
     padding: 0px 170px 0px 20px;
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 
 }
 .footerBtn > input::placeholder{
     color: white;
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 }
 .footerBtn > button{
     left: 351px;
     top: 3px;
+    font-family: "Roboto",sans-serif;
     font-size: 20px;
     font-weight: 500;
     color: #5D9A9D;
@@ -339,8 +368,9 @@
     justify-content: start;
 }
 .formName > span{
+    font-family: "Roboto",sans-serif;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     color: #5D9A9D;
 }
 .inputsMail{
@@ -350,7 +380,9 @@
 }
 .inputsMail > input{
     padding: 0px 37px;
+    font-family: "Roboto",sans-serif;
     font-size: 15px;
+    font-weight: 400;
     width: 100%;
     height: 60px;
     margin: 8px 0px;
@@ -362,7 +394,9 @@
 }
 .inputsMail > input::placeholder{
     color: #ACACAC;
+    font-family: "Roboto",sans-serif;
     font-size: 15px;
+    font-weight: 400;
 }
 .formContinue > button{
     height: 58px;
@@ -370,7 +404,9 @@
     border-radius: 29px;
     background: #5D9A9D;
     color:white;
+    font-family: "Roboto",sans-serif;
     font-size: 20px;
+    font-weight: 600;
     border:none;
 }
 .paypalFooter{
@@ -384,7 +420,9 @@
 .copyTextFooter{
     width: 267px;
     height: 18px;
+    font-family: "Roboto",sans-serif;
     font-size: 15px;
+    font-weight: 500;
     color: white;
 
 }
@@ -397,7 +435,9 @@
     margin-bottom: 0px;
     padding-left: 0px;
     list-style: none;
+    font-family: "Roboto",sans-serif;
     font-size: 15px;
+    font-weight: 500;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -432,24 +472,26 @@
     align-items: start;
     left: 17%;
     top: 660px;
-    width: 602px;
+    width: 608px;
     height: 281px;
     position: absolute;
 }
 .applyMarket{
-    letter-spacing: 1px;
-    width: 470px;
+    letter-spacing: 2px;
+    width: 472px;
     font-family: "Roboto Slab", sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 40px;
     color: #F36528;
     z-index: 10;
 }
 .boundaries{
+    font-family: "Roboto",sans-serif;
     letter-spacing: 3px;
-    width: 602px;
+    width: 100%;
     color: white;
-    font-size: 31px;
+    font-size: 32px;
+    font-weight: 500;
     z-index: 10;
 }
 .apply > a{
@@ -466,8 +508,9 @@
     font-family: "Roboto",sans-serif;
     font-size: 24px;
     color: #F36528;
-    font-weight: 600;
-    margin: 39px 66px;
+    font-weight: 900;
+    letter-spacing: 2.16px;
+    margin: 39px 56px;
 }
 .apply > a > img{
     width: 100%;
@@ -503,12 +546,15 @@
 }
 .numberSectionTwo{
     color: #1C5484;
+    font-family: "Roboto",sans-serif;
     font-size: 32px;
-    font-weight:600;
+    font-weight:700;
 }
 .textSectionTwo{
     color: #1C5484;
+    font-family: "Roboto",sans-serif;
     font-size: 20px;
+    font-weight:400;
 }
 .sectionThree{
     background-image: url("../images/bg.png");
@@ -573,13 +619,14 @@
     color: #F16D35;
     font-family: "Roboto Slab", sans-serif;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 .coursesBg > p{
     color: white;
     font-size: 32px;
     font-family: "Roboto", sans-serif;
-    font-width: 300;
+    font-width: 400;
 }
 .logoManagement{
     width: 515px;
@@ -601,9 +648,20 @@
     align-items: start;
 }
 .courseTitle > span{
-    -webkit-text-stroke: 1px white;
+    /*color: rgba(255, 255, 255, 0.00);*/
+    /*-webkit-text-stroke-width: 3px;*/
+    /*-webkit-text-stroke-color: #F2F9F9;*/
+    /*font-family: "Roboto",sans-serif;*/
+    /*font-size: 48px;*/
+    /*font-style: normal;*/
+    /*font-weight: 900;*/
+    /*line-height: normal;*/
+    /*letter-spacing: 5.28px;*/
+    /*text-transform: uppercase;*/
+    -webkit-text-stroke: 2px white;
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 900;
+    letter-spacing: 5.28px;
     color: transparent;
 }
 .sectionFour{
@@ -626,7 +684,7 @@
     align-items: center;
 }
 .frequency{
-    width: 53%;
+    width: 55%;
     height: 117px;
     display: flex;
     flex-direction: column;
@@ -636,12 +694,14 @@
 .freqAsked{
     font-size: 40px;
     font-family: "Roboto Slab",sans-serif;
-    font-weight: 600;
+    font-weight: 900;
     color: #F16D35;
+    letter-spacing: 2px;
 }
 .freqLook{
+    font-family: "Roboto",sans-serif;
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 400;
     color: white;
 }
 .questions{
@@ -672,6 +732,8 @@
 .questionField > span{
     font-size: 16px;
     color: white;
+    font-weight: 600;
+    font-family: "Exo",sans-serif;
 }
 .questionField{
     padding-top: 20px;
@@ -681,6 +743,8 @@
     align-items: center;
 }
 .answerQuestion{
+    font-family: "Jost",sans-serif;
+    font-weight: 400;
     padding: 30px 0px;
     font-size: 18px;
     color: white;
@@ -713,7 +777,8 @@
 .partnersTitle{
     font-family: "Roboto Slab",sans-serif;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 900;
+    letter-spacing: 2px;
     color: #F16D35;
 }
 .carousel {
@@ -776,12 +841,14 @@
 .testimonialOrangeTitle{
     font-size: 40px;
     font-family: "Roboto Slab",sans-serif;
-    font-weight: 600;
+    font-weight: 900;
+    letter-spacing: 2px;
     color: #F16D35;
 }
 .testimonialWhiteTitle{
+    font-family: "Roboto",sans-serif;
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 400;
     color: #FFFFFF;
 }
 .testimonialsImg{
@@ -799,7 +866,7 @@
     background-repeat: no-repeat;
     /*background-position: top;*/
     background-size: 100%;
-    /*width: 30%;*/
+    width: 29%;
     height: 100%;
 }
 .blockTestimonial:hover{
@@ -808,7 +875,7 @@
     /*background-position: top;*/
     background-size: 100%;
     cursor: pointer;
-    /*width: 30%;*/
+    width: 29%;
     height: 100%;
 }
 .fieldsLinkdin{
@@ -820,6 +887,8 @@
     align-items: center;
 }
 .testimonialsAuthor{
+    font-family: "Roboto",sans-serif;
+    font-weight: 400;
     font-size: 24px;
     width: 141px;
     color: white;
@@ -842,6 +911,8 @@
 .testimonialsText{
     width: 100%;
     height: 155px;
+    font-family: "Roboto",sans-serif;
+    font-weight: 400;
     font-size: 20px;
     color: white;
     /*display: -webkit-box;*/
@@ -887,7 +958,8 @@
     font-family: "Roboto Slab",sans-serif;
     font-size: 40px;
     color: #F16D35;
-    font-weight: 700;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 .blogsCard{
     width: 98%;
@@ -906,7 +978,10 @@
 }
 .blogText{
     width: 291px;
+    font-family: "Roboto",sans-serif;
     font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
     color: #1C5484;
 }
 .blogLine{
@@ -924,9 +999,10 @@
 .blogBtn > a > span{
     position: absolute;
     top: 0;
-    margin: 0px 55px;
+    margin: 0px 54px;
     font-family: "Roboto",sans-serif;
     font-size: 16px;
+    font-weight: 500;
     color: #F36528;
 }
 .individualCards{
@@ -980,6 +1056,7 @@
     align-items: center;
 }
 .cardsLike > a{
+    font-family: "Roboto",sans-serif;
     font-size: 19px;
     color: #F36528;
     font-weight: 500;
@@ -989,6 +1066,8 @@
 }
 .cardsInfo{
     display: -webkit-box;
+    font-family: "Roboto",sans-serif;
+    font-weight: 400;
     font-size: 18px;
     color: #1C5484;
     width: 100%;
@@ -1008,6 +1087,9 @@
 }
 .articleDate{
     margin-left: 10px;
+    font-family: "Jost",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 .sectionEight{
     background-image: url("../images/eightBg.png");
@@ -1031,6 +1113,10 @@
 .questionTitle{
     font-family: "Roboto Slab",sans-serif;
     font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 1.6px;
     color: white;
 }
 .questionForm{
@@ -1083,10 +1169,14 @@
     padding: 0px 15px;
     color: #D9E3E4;
     font-size: 16px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
 }
 .leftQuestionField > input::placeholder{
     color: #D9E3E4;
     font-size: 16px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
 }
 .rightQuestionField{
     width: 48%;
@@ -1102,6 +1192,8 @@
     padding: 24px 28px;
     color: #D9E3E4;
     font-size: 16px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
 }
 .rightQuestionField > textarea::placeholder{
     color: #D9E3E4;
