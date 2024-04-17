@@ -22,7 +22,7 @@ $(".questionField").click(function() {
     $(".answerQuestion").not(panel).css("display", "none");
     $(".questions").find('img').css({'transform': 'rotate(0deg)'});
     panel.toggle();
-    $(this).find('img').css({'transform': 'rotate(180deg)'});
+    $(this).find('img').css({'transform': panel.is(":visible") ? 'rotate(180deg)' : 'rotate(0deg)'});
 });
 (async ()=>   // async IIFE code for slider.
 {
@@ -58,31 +58,33 @@ $(".questionField").click(function() {
         }
     }
 })()
-// var swiper = new Swiper(".slide-content", {
-//     slidesPerView: 3,
-//     spaceBetween: 25,
-//     loop: true,
-//     centerSlide: 'true',
-//     fade: 'true',
-//     grabCursor: 'true',
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//         dynamicBullets: true,
-//     },
-//
-//     breakpoints:{
-//         0: {
-//             slidesPerView: 1,
-//         },
-//         520: {
-//             slidesPerView: 2,
-//         },
-//         950: {
-//             slidesPerView: 3,
-//         },
-//     },
-// });
+if (window.location.pathname == '/'){
+    var swiper = new Swiper(".slide-content", {
+        slidesPerView: 3,
+        spaceBetween: 25,
+        loop: true,
+        centerSlide: 'true',
+        fade: 'true',
+        grabCursor: 'true',
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+
+        breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            520: {
+                slidesPerView: 2,
+            },
+            950: {
+                slidesPerView: 3,
+            },
+        },
+    });
+}
 $(document).ready(function () {
     $('body').on('click', '.mainFlag', function () {
         $(this).closest('.flagFields').find('.otherFlags').toggle();
