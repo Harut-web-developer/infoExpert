@@ -34,6 +34,7 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 </div>
+<!--<button id="scroll-btn" class="show"><img src="/images/scroll-btn.png" alt=""></button>-->
 <div class="sectionThree">
     <div class="learn">
         <div class="learnInfo">
