@@ -72,7 +72,7 @@
     scroll-behavior: auto;
 }
 .carouselCourses.dragging .cardCourses {
-    cursor: grab;
+    cursor: pointer;
     user-select: none;
 }
 
@@ -158,7 +158,7 @@
     scroll-behavior: auto;
 }
 .carousel2.dragging .card2 {
-    cursor: grab;
+    cursor: pointer;
     user-select: none;
 }
 .carousel2 .card2 {
@@ -454,7 +454,7 @@
     scroll-behavior: auto;
 }
 .myCoursesFieldAcceptCourses.dragging .myCoursesBlocksField {
-    cursor: grab;
+    cursor: pointer;
     user-select: none;
 }
 

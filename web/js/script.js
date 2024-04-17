@@ -22,7 +22,7 @@ $(".questionField").click(function() {
     $(".answerQuestion").not(panel).css("display", "none");
     $(".questions").find('img').css({'transform': 'rotate(0deg)'});
     panel.toggle();
-    $(this).find('img').css({'transform': 'rotate(180deg)'});
+    $(this).find('img').css({'transform': panel.is(":visible") ? 'rotate(180deg)' : 'rotate(0deg)'});
 });
 (async ()=>   // async IIFE code for slider.
 {

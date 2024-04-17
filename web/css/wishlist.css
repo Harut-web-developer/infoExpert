@@ -180,41 +180,55 @@ hr{
     opacity: 1!important;
 }
 hr.new1 {
-    width: 814px;
+    width: auto;
     border: 3px solid #FFFFFF;
     margin-left: 60px;
 }
-.bottomSlider{
+.bottomSlider {
     display: flex;
     padding-top: 80px;
     padding-left: 60px;
 }
-.individualCards_{
+
+.individualCards_ {
     border-radius: 30px;
     width: 377px;
     height: 482px;
 }
+
 .bottomSlider .carousel_ {
-    padding-left: 0px !important;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 47%;
     gap: 44px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
-.bottomSlider ul{
+
+.bottomSlider ul {
     margin-top: 0;
-     margin-bottom: 0rem!important;
+    margin-bottom: 0rem!important;
+    padding-left: 0; /* Reset default padding */
+    list-style-type: none; /* Remove bullet points */
 }
+
 .carousel_::-webkit-scrollbar {
-    display: none;
+    display: none; /* Hide scrollbar */
 }
+
 .carousel_ :where(.card_) {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cardsimg_ {
+    height: 233px;
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
 }
 .cardsimg_{
     height: 233px;
@@ -291,6 +305,9 @@ hr.new1 {
 .changeBody2{
     display: flex;
 }
+.changeBody2 ul {
+    padding-left: 0rem!important;
+}
 .carousel_2{
     display: grid;
     grid-auto-flow: column;
@@ -311,7 +328,8 @@ hr.new1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    scroll-snap-align: start;
+    cursor: pointer;
+    user-select: none;
 }
 .carousel_2::-webkit-scrollbar {
     display: none;

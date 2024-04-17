@@ -40,7 +40,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <a href="/"><img src="/images/logo.png" alt=""></a>
                 </div>
                 <div class="icons">
-                    <img class="searchIcons" src="/images/search.png" alt="">
+                    <div class="search-box">
+                        <button class="btn-search"><img src="/images/search.png" alt=""></button>
+                        <input type="text" class="input-search" placeholder="Type to Search...">
+                    </div>
+<!--                    <img class="searchIcons" src="/images/search.png" alt="">-->
                     <a href="/user-profile/index"><img src="/images/user.png" alt=""></a>
                     <div class="flagFields">
                         <img class="mainFlag" src="/images/armflag.png" alt="">
