@@ -1,7 +1,7 @@
 .personelManagement{
     width: 100%;
     height: 1490px;
-    background-image: url("/images/background-personnel-managment.png");
+    background-image: url("../images/background-personnel-managment.png");
     background-repeat: no-repeat;
     padding-top: 158px;
 }
@@ -17,7 +17,7 @@
     padding-top: 37.92px;
 }
 .personelManagement span{
-    font-family: Roboto Slab;
+    font-family: "Roboto Slab",sans-serif;
     font-size: 36px;
     font-weight: 400;
     line-height: 58px;
@@ -30,7 +30,7 @@
     margin-left: 42.53px;
 }
 .infotxt{
-    font-family: Roboto;
+    font-family: "Roboto",sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -107,8 +107,9 @@
 }
 .leftDipl h1{
     color: #F36528;
-    font-family: "Roboto Slab";
+    font-family: "Roboto Slab",sans-serif;
     font-size: 24px;
+    font-weight: 400;
 }
 .rightImgBottom h1{
     color: #F36528;

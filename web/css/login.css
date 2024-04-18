@@ -1,370 +1,575 @@
-section.mainPoints {
+.login {
     width: 100%;
-    height: 1087.74px;
-    background-image: url("/images/background-sign-in.png");
+    height: 1088px;
+    background-image: url("../images/background-sign-in.png");
     background-repeat: no-repeat;
-    padding-top: 158px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    background-position: center;
+    background-size: cover;
 }
-
-section.mainPoints .points {
-    width: 100%;
-    position: relative;
-}
-
-section.mainPoints .points .point1 {
-    width: 100px;
-    height: 100px;
-    top: 748.34px;
-    left: 119.53px;
-    box-shadow: 0px 1px 6px 1px rgba(28, 84, 132, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.02);
+.loginField{
+    width: 58%;
+    height: 503px;
+    margin: 338px 21% 0px;
     position: absolute;
-    z-index: 0;
-}
-
-section.mainPoints .points .point3 {
-    width: 100px;
-    height: 100px;
-    top: 606.75px;
-    left: 939.7px;
-    box-shadow: 0px 1px 6px 1px rgba(28, 84, 132, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.02);
-    position: absolute;
-    z-index: 0;
-
-}
-
-section.mainPoints .container {
-    width: 70%;
-    height: 502.9px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
 }
-@media only screen and (max-width: 1024px) and (min-width: 420px){
-    section.mainPoints{
-        overflow: hidden;
-    }
-    section.mainPoints>.container{
-        width: 100%;
-        display: flex;
-        flex-direction: column !important;
-    }
-    .globus{
-        margin-bottom: 40px;
-        border: none !important;
-    }
+.textCircle{
+    width: 512px;
+    height: 503px;
+    background-image: url("../images/logincircle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
-.globus {
+.mainTextCircle{
+    width: 285px;
+    height: 202px;
+    margin: 157px 107px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 497px;
-    height: 497px;
-    border-radius: 50%;
-    border: 6px solid rgba(255, 255, 255, 0.12);
-
-}
-
-.globus .globusPoints {
-    position: relative;
-    border-radius: 50%;
-}
-
-.globus .globusPoints .point1 {
-    position: absolute;
-    width: 42px;
-    height: 42px;
-    top: -255px;
-    left: 100px;
-    border-radius: 50%;
-
-}
-
-.globus .globusPoints .point3 {
-    position: absolute;
-    width: 42px;
-    height: 42px;
-    top: 175px;
-    left: 320px;
-    border-radius: 50%;
-}
-
-section.mainPoints .container .globus .globusSmooll {
-    position: relative;
-    width: 386.28px;
-    height: 386.28px;
-    border-radius: 50%;
-    background: rgba(214, 214, 214, 1);
-    border: 1px solid rgba(255, 255, 255, 1);
-    opacity: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
-
-section.mainPoints .container .globus .globusSmooll .text1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 36px;
+.circleTextTop{
+    text-align: center;
+    width: 100%;
+    /*height: 141px;*/
+    height: 120px;
+    color: #1C5484;
+    font-family: "Roboto Slab",sans-serif;
+    font-size: 30px;
+    font-style: normal;
     font-weight: 700;
-    line-height: 47.48px;
+    line-height: normal;
     letter-spacing: -0.5px;
+}
+.circleTextTop > span{
+    color: #F36528;
+    font-family: "Roboto Slab",sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.5px;
+}
+.circleTextBottom{
+    color: #1C5484;
     text-align: center;
-    color: rgba(28, 84, 132, 1);
-    width: 260px;
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
-section.mainPoints .container .globus .globusSmooll .text1 span{
-    color: rgba(243, 101, 40, 1);
+.circleTextBottom{
+    width: 202px;
+    height: 46px;
 }
-
-section.mainPoints .container .globus .globusSmooll .text2 {
-    width: 120px;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 12px;
-    color: rgba(28, 84, 132, 1);
-    padding-top: 10px;
-
-}
-
-section.mainPoints .container .signin {
+.signin{
+    width: 406px;
+    height: 339px;
     display: flex;
     flex-direction: column;
-    width: 35%;
-    text-align: center;
-    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
 }
-
-section.mainPoints .container .signin h1 {
-    font: 900;
+.signin > span{
+    color: #FFF;
+    font-family: "Roboto Slab",sans-serif;
     font-size: 32px;
-    padding-bottom:20px ;
-    color: white;
-    font-family: 'Roboto slab';
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 1.6px;
 }
-
-section.mainPoints .container .signin .signinMenu {
+.signinMenu{
+    width: 100%;
+    height: 156px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
-
-section.mainPoints .container .signin .signinMenu input {
-    outline: none;
+.passEye{
+    width: 100%;
+    height: 62px;
+}
+.passEye > img{
+    position: absolute;
+    right: 28px;
+    margin-top: 24px;
+}
+.passEye > input{
+    position: relative;
+    width: 100%;
+    height: 62px;
+    background: #74A8AB;
+    border: none;
     border-radius: 30px;
-    border: none;
-    padding: 20px 0 20px 15px;
-    margin: 5px 0;
+    padding: 0px 16px;
+    color: white;
+    font-family: "Roboto",sans-serif;
     font-size: 16px;
-    color: rgb(252, 252, 252);
-    background: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(93, 154, 157, 0.76)
+    font-style: normal;
+    font-weight: 400;
+    outline: none;
 }
-
-section.mainPoints .container .signin .signinMenu .checkbox {
-    display: flex;
-    justify-content: center;
-    padding-left: 230px;
-}
-section.mainPoints .container .signin .signinMenu .checkbox a {
+.passEye > input::placeholder{
     color: white;
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 15.23px;
-    text-align: left;
-    padding-left: 5px;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
 }
-section.mainPoints .container .signin button {
-    background-color: rgba(93, 154, 157, 1);
-    margin: 0px auto 25px auto;
+.signinMenu > img{
+    /*position: absolute;*/
+    /*right: 0;*/
+}
+.signinMenu > input{
+    width: 100%;
+    height: 62px;
+    background: #74A8AB;
     border: none;
-    cursor: pointer;
-
-}
-section.mainPoints .container .signin .signUp{
+    border-radius: 30px;
+    padding: 0px 16px;
     color: white;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: sans-serif;
-    margin-top: 18px;
-}
-section.mainPoints .container .signin .signUp a{
-   color: rgba(243, 101, 40, 1);
-   font-size: 14px;
-   font-weight: 500;
-   font-family: sans-serif;
-   text-decoration: none;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    outline: none;
 }
 .signinMenu > input::placeholder{
     color: white;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
 }
-.container_signin {
-    position: relative;
-    text-align: center;
-    color: white;
-    margin-top: 30px;
-}
-.container_signin .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--1, #F36528);
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 15.23px;
-    text-align: left;
-}
-.container_checked {
-    display: block;
-    position: relative;
-    padding-left: 34px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    /*user-select: none;*/
-}
-.container_checked input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-.checkRem{
-    padding-top: 9px;
+.rememberField{
+    width: 89%;
+    height: 16px;
     display: flex;
-}
-/* Create a custom checkbox */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 10px;
-    width: 10px;
-    background-color: transparent;
-    border: 1px #fff solid;
-    border-radius: 2px;
-    margin-left: 18px;
-}
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-.container_checked input:checked ~ .checkmark:after {
-    display: block;
-}
-.container_checked .checkmark:after {
-    left: 2px;
-    top: 1px;
-    width: 5px;
-    height: 4px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(35deg);
-    -ms-transform: rotate(35deg);
-    transform: rotate(35deg);
-}
-.container_checked p{
-    font-family: Roboto;
-    font-size: 9px;
-    font-weight: 500;
-    line-height: 10.55px;
-    text-align: left;
-    color: #FFFFFF;
-}
-
-.checkSignup{
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 24px 0 12px;
 }
-section.mainPoints .container .signin .signinMenu .checkboxSignup {
-    display: flex;
-}
-section.mainPoints .container .signup .signinMenu .checkboxSignup a {
-    color: white;
-    font-family: Roboto;
-    font-size: 13px;
+.rememberField > a{
+    color: #FFF;
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    font-style: normal;
     font-weight: 500;
-    line-height: 15.23px;
-    text-align: left;
-    padding-left: 5px;
+    line-height: normal;
+    text-decoration-line: underline;
 }
-.container_checked_signup {
-    display: block;
+.container_signin{
     position: relative;
-    padding-left: 42px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    /*user-select: none;*/
-}
-.container_checked_signup input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-.checkmarkSignup {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 14.07px;
-    height: 13.46px;
-    background-color: transparent;
-    border: 1px #fff solid;
-    border-radius: 2px;
-    margin-left: 18px;
-}
-.checkmarkSignup:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-.container_checked_signup input:checked ~ .checkmarkSignup:after {
-    display: block;
-}
-.container_checked_signup .checkmarkSignup:after {
-    left: 2px;
-    top: 1px;
-    width: 7px;
-    height: 6px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(35deg);
-    -ms-transform: rotate(35deg);
-    transform: rotate(35deg);
-}
-.checkboxSignup p{
-    font-family: 'Roboto';
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 15.23px;
-    text-align: left;
-    color: #FFFFFF;
-}
-section.mainPoints .container .signup button {
-    background-color: rgba(93, 154, 157, 1);
-    margin: 0px auto 0px auto;
+    background: transparent;
     border: none;
-    cursor: pointer;
+    margin-top: 20px;
 }
+.container_signin > span{
+    margin: 22px 56px;
+    position: absolute;
+    left: 0;
+    color: #F36528;
+    font-family: "Roboto",sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.mainCheck{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.mainCheck > label{
+    margin-left: 10px;
+    color: #FFF;
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.signUp > span{
+    color: #FFF;
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.signUp > a{
+    color: #F36528;
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+/*section.mainPoints .points {*/
+/*    width: 100%;*/
+/*    position: relative;*/
+/*}*/
+
+/*section.mainPoints .points .point1 {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    top: 748.34px;*/
+/*    left: 119.53px;*/
+/*    box-shadow: 0px 1px 6px 1px rgba(28, 84, 132, 0.08);*/
+/*    border: 1px solid rgba(0, 0, 0, 0.05);*/
+/*    border-radius: 50%;*/
+/*    background: rgba(255, 255, 255, 0.02);*/
+/*    position: absolute;*/
+/*    z-index: 0;*/
+/*}*/
+
+/*section.mainPoints .points .point3 {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    top: 606.75px;*/
+/*    left: 939.7px;*/
+/*    box-shadow: 0px 1px 6px 1px rgba(28, 84, 132, 0.08);*/
+/*    border: 1px solid rgba(0, 0, 0, 0.05);*/
+/*    border-radius: 50%;*/
+/*    background: rgba(255, 255, 255, 0.02);*/
+/*    position: absolute;*/
+/*    z-index: 0;*/
+
+/*}*/
+
+/*section.mainPoints .container {*/
+/*    width: 70%;*/
+/*    height: 502.9px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+
+/*}*/
+/*@media only screen and (max-width: 1024px) and (min-width: 420px){*/
+/*    section.mainPoints{*/
+/*        overflow: hidden;*/
+/*    }*/
+/*    section.mainPoints>.container{*/
+/*        width: 100%;*/
+/*        display: flex;*/
+/*        flex-direction: column !important;*/
+/*    }*/
+/*    !*.globus{*!*/
+/*    !*    margin-bottom: 40px;*!*/
+/*    !*    border: none !important;*!*/
+/*    !*}*!*/
+/*}*/
+/*!*.globus {*!*/
+/*!*    display: flex;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    align-items: center;*!*/
+/*!*    width: 497px;*!*/
+/*!*    height: 497px;*!*/
+/*!*    border-radius: 50%;*!*/
+/*!*    border: 6px solid rgba(255, 255, 255, 0.12);*!*/
+
+/*!*}*!*/
+
+/*.globus .globusPoints {*/
+/*    position: relative;*/
+/*    border-radius: 50%;*/
+/*}*/
+
+/*.globus .globusPoints .point1 {*/
+/*    position: absolute;*/
+/*    width: 42px;*/
+/*    height: 42px;*/
+/*    top: -255px;*/
+/*    left: 100px;*/
+/*    border-radius: 50%;*/
+
+/*}*/
+
+/*.globus .globusPoints .point3 {*/
+/*    position: absolute;*/
+/*    width: 42px;*/
+/*    height: 42px;*/
+/*    top: 175px;*/
+/*    left: 320px;*/
+/*    border-radius: 50%;*/
+/*}*/
+
+/*section.mainPoints .container .globus .globusSmooll {*/
+/*    position: relative;*/
+/*    width: 386.28px;*/
+/*    height: 386.28px;*/
+/*    border-radius: 50%;*/
+/*    background: rgba(214, 214, 214, 1);*/
+/*    border: 1px solid rgba(255, 255, 255, 1);*/
+/*    opacity: 0px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*section.mainPoints .container .globus .globusSmooll .text1 {*/
+/*    font-family: 'Times New Roman', Times, serif;*/
+/*    font-size: 36px;*/
+/*    font-weight: 700;*/
+/*    line-height: 47.48px;*/
+/*    letter-spacing: -0.5px;*/
+/*    text-align: center;*/
+/*    color: rgba(28, 84, 132, 1);*/
+/*    width: 260px;*/
+/*}*/
+/*section.mainPoints .container .globus .globusSmooll .text1 span{*/
+/*    color: rgba(243, 101, 40, 1);*/
+/*}*/
+
+/*section.mainPoints .container .globus .globusSmooll .text2 {*/
+/*    width: 120px;*/
+/*    text-align: center;*/
+/*    font-family: sans-serif;*/
+/*    font-size: 12px;*/
+/*    color: rgba(28, 84, 132, 1);*/
+/*    padding-top: 10px;*/
+
+/*}*/
+
+/*section.mainPoints .container .signin {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    width: 35%;*/
+/*    text-align: center;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*section.mainPoints .container .signin h1 {*/
+/*    font: 900;*/
+/*    font-size: 32px;*/
+/*    padding-bottom:20px ;*/
+/*    color: white;*/
+/*    font-family: 'Roboto slab';*/
+/*}*/
+
+/*section.mainPoints .container .signin .signinMenu {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*section.mainPoints .container .signin .signinMenu input {*/
+/*    outline: none;*/
+/*    border-radius: 30px;*/
+/*    border: none;*/
+/*    padding: 20px 0 20px 15px;*/
+/*    margin: 5px 0;*/
+/*    font-size: 16px;*/
+/*    color: rgb(252, 252, 252);*/
+/*    background: rgba(255, 255, 255, 0.14);*/
+/*    border: 1px solid rgba(93, 154, 157, 0.76)*/
+/*}*/
+
+/*section.mainPoints .container .signin .signinMenu .checkbox {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    padding-left: 220px;*/
+/*}*/
+/*section.mainPoints .container .signin .signinMenu .checkbox a {*/
+/*    color: white;*/
+/*    font-family: "Roboto",sans-serif;*/
+/*    font-size: 14px;*/
+/*    font-weight: 500;*/
+/*    line-height: 15.23px;*/
+/*    text-align: left;*/
+/*    padding-left: 5px;*/
+/*}*/
+/*section.mainPoints .container .signin button {*/
+/*    background-color: rgba(93, 154, 157, 1);*/
+/*    margin: 0px auto 25px auto;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+
+/*}*/
+/*section.mainPoints .container .signin .signUp{*/
+/*    color: white;*/
+/*    font-size: 14px;*/
+/*    font-weight: 500;*/
+/*    font-family: sans-serif;*/
+/*    margin-top: 18px;*/
+/*}*/
+/*section.mainPoints .container .signin .signUp a{*/
+/*   color: rgba(243, 101, 40, 1);*/
+/*   font-size: 14px;*/
+/*   font-weight: 500;*/
+/*   font-family: sans-serif;*/
+/*   text-decoration: none;*/
+/*}*/
+/*.signinMenu > input::placeholder{*/
+/*    color: white;*/
+/*}*/
+/*.container_signin {*/
+/*    position: relative;*/
+/*    text-align: center;*/
+/*    color: white;*/
+/*    margin-top: 30px;*/
+/*}*/
+/*.container_signin .centered {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    color: #F36528;*/
+/*    font-family: "Roboto",sans-serif;*/
+/*    font-size: 13px;*/
+/*    font-weight: 500;*/
+/*    line-height: 15.23px;*/
+/*    text-align: left;*/
+/*}*/
+/*.container_checked {*/
+/*    display: block;*/
+/*    position: relative;*/
+/*    padding-left: 34px;*/
+/*    cursor: pointer;*/
+/*    font-size: 22px;*/
+/*    -webkit-user-select: none;*/
+/*    -moz-user-select: none;*/
+/*    -ms-user-select: none;*/
+/*    !*user-select: none;*!*/
+/*}*/
+/*.container_checked input {*/
+/*    position: absolute;*/
+/*    opacity: 0;*/
+/*    cursor: pointer;*/
+/*    height: 0;*/
+/*    width: 0;*/
+/*}*/
+/*.checkRem{*/
+/*    padding-top: 9px;*/
+/*    display: flex;*/
+/*}*/
+/*!* Create a custom checkbox *!*/
+/*.checkmark {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 10px;*/
+/*    width: 10px;*/
+/*    background-color: transparent;*/
+/*    border: 1px #fff solid;*/
+/*    border-radius: 2px;*/
+/*    margin-left: 18px;*/
+/*}*/
+/*.checkmark:after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    display: none;*/
+/*}*/
+/*.container_checked input:checked ~ .checkmark:after {*/
+/*    display: block;*/
+/*}*/
+/*.container_checked .checkmark:after {*/
+/*    left: 2px;*/
+/*    top: 1px;*/
+/*    width: 5px;*/
+/*    height: 4px;*/
+/*    border: solid white;*/
+/*    border-width: 0 2px 2px 0;*/
+/*    -webkit-transform: rotate(35deg);*/
+/*    -ms-transform: rotate(35deg);*/
+/*    transform: rotate(35deg);*/
+/*}*/
+/*.container_checked p{*/
+/*    font-family: "Roboto",sans-serif;*/
+/*    font-size: 14px;*/
+/*    font-weight: 500;*/
+/*    line-height: 10.55px;*/
+/*    text-align: left;*/
+/*    color: #FFFFFF;*/
+/*}*/
+
+/*.checkSignup{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    padding: 24px 0 12px;*/
+/*}*/
+/*section.mainPoints .container .signin .signinMenu .checkboxSignup {*/
+/*    display: flex;*/
+/*}*/
+/*section.mainPoints .container .signup .signinMenu .checkboxSignup a {*/
+/*    color: white;*/
+/*    font-family: "Roboto",sans-serif;*/
+/*    font-size: 13px;*/
+/*    font-weight: 500;*/
+/*    line-height: 15.23px;*/
+/*    text-align: left;*/
+/*    padding-left: 5px;*/
+/*}*/
+/*.container_checked_signup {*/
+/*    display: block;*/
+/*    position: relative;*/
+/*    padding-left: 42px;*/
+/*    cursor: pointer;*/
+/*    font-size: 22px;*/
+/*    -webkit-user-select: none;*/
+/*    -moz-user-select: none;*/
+/*    -ms-user-select: none;*/
+/*    !*user-select: none;*!*/
+/*}*/
+/*.container_checked_signup input {*/
+/*    position: absolute;*/
+/*    opacity: 0;*/
+/*    cursor: pointer;*/
+/*    height: 0;*/
+/*    width: 0;*/
+/*}*/
+/*.checkmarkSignup {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 14.07px;*/
+/*    height: 13.46px;*/
+/*    background-color: transparent;*/
+/*    border: 1px #fff solid;*/
+/*    border-radius: 2px;*/
+/*    margin-left: 18px;*/
+/*}*/
+/*.checkmarkSignup:after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    display: none;*/
+/*}*/
+/*.container_checked_signup input:checked ~ .checkmarkSignup:after {*/
+/*    display: block;*/
+/*}*/
+/*.container_checked_signup .checkmarkSignup:after {*/
+/*    left: 2px;*/
+/*    top: 1px;*/
+/*    width: 7px;*/
+/*    height: 6px;*/
+/*    border: solid white;*/
+/*    border-width: 0 2px 2px 0;*/
+/*    -webkit-transform: rotate(35deg);*/
+/*    -ms-transform: rotate(35deg);*/
+/*    transform: rotate(35deg);*/
+/*}*/
+/*.checkboxSignup p{*/
+/*    font-family: 'Roboto';*/
+/*    font-size: 13px;*/
+/*    font-weight: 500;*/
+/*    line-height: 15.23px;*/
+/*    text-align: left;*/
+/*    color: #FFFFFF;*/
+/*}*/
+/*section.mainPoints .container .signup button {*/
+/*    background-color: rgba(93, 154, 157, 1);*/
+/*    margin: 0px auto 0px auto;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*}*/
