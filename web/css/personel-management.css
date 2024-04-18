@@ -6,44 +6,35 @@
     padding-top: 158px;
     display: grid;
 }
+.backButton{
+    display: none;
+}
 .topDivFlex{
     width: 83.8%;
-    /*height: 37%;*/
     margin: 0 0 0 auto;
     display: flex;
 }
 .bottomDiv{
+    width: 100%;
     display: flex;
-}
-.bottomDiv{
-    width: 67%;
-    /*height: 50%;*/
+    justify-content: start;
     margin: 0 auto;
     padding-top: 41px;
+    gap: 11.4%;
 }
 .topDiv{
     width: 69%;
 }
-.personelManagementHeader{
-    width: 86%;
-    /*padding-left: 26%;*/
-    /*padding-top: 37.92px;*/
-}
-.personelManagement span{
+.titleMan{
     font-family: "Roboto Slab",sans-serif;
     font-size: 36px;
     font-weight: 400;
     line-height: 58px;
     text-align: left;
     color: #F36528;
-    width: 67%;
-    margin: 0 auto;
+    width: auto;
     padding-top: 28px;
-}
-.personelManagementHeader img{
-    width: 43.58px;
-    height: 43.58px;
-    margin-left: 42.53px;
+    padding-left: 16.666%;
 }
 .infotxt{
     font-family: "Roboto",sans-serif;
@@ -56,38 +47,32 @@
     margin-bottom: 0;
 }
 .rightImg{
-    width: 31%;
+    width: 469.52px;
     height: 353.73px;
-    padding-top: 80px;
-}
-.rightImg img{
     float: right;
-    width: 100%;
-    height: auto;
-    border-radius: 30px 0px 0px 0px;
+    margin-top: 4.5%;
+    margin-left: 16%;
+    border-radius: 30px;
 }
 .leftDipl{
-    width: 50%;
+    width: auto;
+    max-width: 491.36px;
 }
 .rightImgBottom{
-    width: 50%;
-    margin-left: 16%;
+    width: auto;
 }
 .card_ {
     width: 296px;
-    /*position: relative;*/
     height: 352px;
     padding: 38px 34px 38px 34px;
     border-radius: 30px;
-    margin-top: 42px;
+    margin-top: 31px;
     border: 1px solid #0000000D;
-    /*box-shadow: 0 5px 25px rgb(1 1 1 / 20%);*/
     text-align: center;
     background: #FFFFFF24;
 
 }
 .card-image {
-    /*margin-top: 38px;*/
     max-height: 80px;
 }
 .card-image img{
@@ -95,9 +80,6 @@
     height: auto;
 }
 .card-info{
-    /*text-align: center;*/
-    /*position: relative;*/
-    /*color: #222;*/
     padding: 10px 20px 20px;
 }
 .nameCard{
@@ -110,7 +92,6 @@
 }
 .textCard{
     width: 208.26px;
-    /*height: 132px;*/
     font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
@@ -120,6 +101,9 @@
 }
 .card_:hover{
     background: #FFFFFF5C;
+}
+.divBottom{
+    padding: 0 16.666%;
 }
 .bottomImages{
     width: 66%;
@@ -142,8 +126,12 @@
 }
 .rightImgBottom span{
     color: #F36528;
-    font-family: "Roboto Slab";
+    font-family: 'Roboto Slab';
     font-size: 24px;
+    font-weight: 400;
+    line-height: 44px;
+    text-align: center;
+
 }
 .managementBtnDiv{
     width: max-content;
@@ -165,4 +153,147 @@
     position: absolute;
     left: 15px;
     top: -6px;
+}
+@media screen and (max-width: 1400px) {
+    .divBottom {
+        padding: 0 0 0 16.666%;
+    }
+    .card_ {
+        margin-top: 24px;
+    }
+}
+@media screen and (max-width: 1180px) {
+    .divBottom {
+        padding: 0 0 0 16.666%;
+    }
+    .bottomDiv {
+        gap: 3.4%;
+    }
+    .card_ {
+        margin-top: 24px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .titleMan{
+        font-family: "Roboto Slab",sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 58px;
+        text-align: left;
+        color: #F36528;
+        width: auto;
+        padding-top: 28px;
+        padding-left: 6.8%;
+        padding-right: 6.9%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .backButton {
+        width: 40px;
+        height: 40px;
+        display: block;
+    }
+    .likeButton{
+        width: 32.6px;
+        height: 32.6px;
+    }
+    .topDivFlex{
+        width: 100%;
+        padding-left: 6.8%;
+        padding-right: 6.9%;
+    }
+    .infotxt{
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: left;
+        margin-top: 26px;
+    }
+    .divBottom{
+        padding-left: 6.8%;
+        padding-right: 6.9%;
+    }
+    .leftDipl {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .leftDipl span {
+        order: 2;
+        font-family: 'Roboto Slab';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 44px;
+        text-align: center;
+    }
+    .leftDipl img {
+        order: 1;
+        width: 392px;
+        height: 294px;
+        border-radius: 30px;
+        padding-top: 0;
+    }
+    .rightImgBottom {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightImgBottom span {
+        order: 2;
+        font-family: 'Roboto Slab';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 44px;
+        text-align: center;
+    }
+    .rightImgBottom .card_ {
+        order: 1;
+        width: 223px;
+        height: 295px;
+        border-radius: 30px;
+        padding: 0;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nameCard{
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
+    }
+    .textCard{
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        width: 100%;
+    }
+    .card-info{
+        padding: 0;
+    }
+    .bottomImages{
+        justify-content: center;
+    }
+    .managementBtnDiv > button > img {
+        position: relative;
+        width: 130px;
+        height: 56px;
+    }
+    .managementBtnDiv > button > span {
+        font-family: 'Roboto';
+        font-size: 13px;
+        font-weight: 900;
+        line-height: 15.23px;
+        left: 22px;
+    }
+    .bottomDiv{
+        padding-top: 0;
+    }
 }
