@@ -4,17 +4,30 @@
     background-image: url("../images/background-personnel-managment.png");
     background-repeat: no-repeat;
     padding-top: 158px;
+    display: grid;
 }
-.topDivFlex, .bottomDiv{
+.topDivFlex{
+    width: 83.8%;
+    /*height: 37%;*/
+    margin: 0 0 0 auto;
     display: flex;
 }
+.bottomDiv{
+    display: flex;
+}
+.bottomDiv{
+    width: 67%;
+    /*height: 50%;*/
+    margin: 0 auto;
+    padding-top: 41px;
+}
 .topDiv{
-    width: 100%;
+    width: 69%;
 }
 .personelManagementHeader{
     width: 86%;
-    padding-left: 23%;
-    padding-top: 37.92px;
+    /*padding-left: 26%;*/
+    /*padding-top: 37.92px;*/
 }
 .personelManagement span{
     font-family: "Roboto Slab",sans-serif;
@@ -23,6 +36,9 @@
     line-height: 58px;
     text-align: left;
     color: #F36528;
+    width: 67%;
+    margin: 0 auto;
+    padding-top: 28px;
 }
 .personelManagementHeader img{
     width: 43.58px;
@@ -36,17 +52,26 @@
     line-height: 30px;
     text-align: left;
     color: #FFFFFF;
+    margin-top: 29px;
+    margin-bottom: 0;
 }
 .rightImg{
-    width: max-content;
+    width: 31%;
     height: 353.73px;
-    padding-top: 198px;
+    padding-top: 80px;
+}
+.rightImg img{
+    float: right;
+    width: 100%;
+    height: auto;
+    border-radius: 30px 0px 0px 0px;
 }
 .leftDipl{
-    padding-left: 17%;
+    width: 50%;
 }
 .rightImgBottom{
-    margin-left: 128px;
+    width: 50%;
+    margin-left: 16%;
 }
 .card_ {
     width: 296px;
@@ -54,7 +79,7 @@
     height: 352px;
     padding: 38px 34px 38px 34px;
     border-radius: 30px;
-    /*margin: 25px;*/
+    margin-top: 42px;
     border: 1px solid #0000000D;
     /*box-shadow: 0 5px 25px rgb(1 1 1 / 20%);*/
     text-align: center;
@@ -100,19 +125,44 @@
     width: 66%;
     margin: 0px auto;
     height: 140px;
-    position: relative;
-    top: 15px;
-    text-align: end;
-
+    display: flex;
+    justify-content: end;
+    gap: 35px;
 }
-.leftDipl h1{
+.leftDipl span{
     color: #F36528;
     font-family: "Roboto Slab",sans-serif;
     font-size: 24px;
     font-weight: 400;
 }
-.rightImgBottom h1{
+.leftDipl img {
+    width: 100%;
+    height: auto;
+    padding-top: 24px;
+}
+.rightImgBottom span{
     color: #F36528;
     font-family: "Roboto Slab";
     font-size: 24px;
+}
+.managementBtnDiv{
+    width: max-content;
+    position: relative;
+}
+.managementBtnDiv > button{
+    background: transparent;
+    border: none;
+}
+.managementBtnDiv > button > img{
+    position: relative;
+}
+.managementBtnDiv > button > span{
+    color: #F36528;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Tahoma", sans-serif;
+    margin: 28px 0px;
+    position: absolute;
+    left: 15px;
+    top: -6px;
 }

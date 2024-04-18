@@ -27,7 +27,7 @@ $this->registerCssFile('@web/css/contactus.css');
                 </div>
             </div>
             <div class="sectionContactusTopRight">
-                <img src="/images/contactus_map.png" alt="">
+                <div id="map"></div>
             </div>
         </div>
         <form action="" class="sectionContactusBottom">
@@ -50,4 +50,17 @@ $this->registerCssFile('@web/css/contactus.css');
         </form>
     </div>
 </div>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e243c296-f6a7-46b7-950a-bd42eb4b2684" type="text/javascript"></script>
+<script>
+    var myMap;
+    ymaps.ready(init);
 
+    function init () {
+        myMap = new ymaps.Map('map', {
+            center: [40.1991, 44.5048], // iNFOEXPERT
+            zoom: 10
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+    }
+</script>

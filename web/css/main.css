@@ -617,6 +617,20 @@
     font-size: 20px;
     font-weight:400;
 }
+#scroll-btn {
+    opacity: 0;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    border-radius: 50%;
+    border: hidden;
+    transition: opacity 0.5s, transform 0.5s;
+}
+#scroll-btn.show {
+    border: hidden;
+    opacity: 1;
+    transition: opacity 1s, transform 0.3ms;
+}
 .sectionThree{
     background-image: url("../images/bg.png");
     background-position: center;
@@ -901,6 +915,7 @@
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     top: auto;
 }
+
 .testimonialsTitles{
     /*width: 447px;*/
     height: 112px;
@@ -937,7 +952,7 @@
     background-repeat: no-repeat;
     /*background-position: top;*/
     background-size: 100%;
-    width: 29%;
+    /*width: 29%;*/
     height: 100%;
 }
 .blockTestimonial:hover{
@@ -946,7 +961,7 @@
     /*background-position: top;*/
     background-size: 100%;
     cursor: pointer;
-    width: 29%;
+    /*width: 29%;*/
     height: 100%;
 }
 .fieldsLinkdin{
@@ -1279,3 +1294,16 @@
     font-size: 16px;
 }
 /*end main page css*/
+
+@media screen and (max-width: 1800px) {
+    .learnImg > img {
+        width: 548px;
+        height: 539px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .learnImg > img {
+        width: 509px;
+        height: 500px;
+    }
+}

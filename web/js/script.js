@@ -20,9 +20,19 @@ $(function() {
 $(".questionField").click(function() {
     var panel = $(this).next(".answerQuestion");
     $(".answerQuestion").not(panel).css("display", "none");
-    $(".questions").find('img').css({'transform': 'rotate(0deg)'});
+    $(".answerQuestion").not(panel).closest('.answersField').find('.questionField span').css({
+        'color': 'white',
+        'font-family': '"Exo", sans-serif',
+        'line-height': '19.2px'
+    });
+    $(".questions").find('img').css('transform', 'rotate(0deg)');
     panel.toggle();
-    $(this).find('img').css({'transform': panel.is(":visible") ? 'rotate(180deg)' : 'rotate(0deg)'});
+    $(this).find('img').css('transform', panel.is(":visible") ? 'rotate(180deg)' : 'rotate(0deg)');
+    $(this).find('span').css({
+        'color': panel.is(":visible") ? '#FF782D' : 'white',
+        'font-family': 'Exo, sans-serif',
+        'line-height': '19.2px'
+    });
 });
 (async ()=>   // async IIFE code for slider.
 {
@@ -102,3 +112,28 @@ $(document).ready(function () {
         $(this).closest('.flagFields').find('.otherFlags').css('display', 'none');
     })
 })
+if (window.location.pathname == '/') {
+    const scrollTop = function () {
+        const scrollBtn = $("<button>").attr("id", "scroll-btn").addClass("show").css("opacity", "0");
+        scrollBtn.html("<img src=\"/images/scroll-btn.png\" alt=\"\">");
+        $("body").append(scrollBtn);
+
+        const scrollBtnDisplay = function () {
+            $(window).scrollTop() > $(window).height()
+                ? scrollBtn.addClass("show").css("opacity", "1")
+                : scrollBtn.removeClass("show").css("opacity", "0");
+        };
+        $(window).on("scroll", scrollBtnDisplay);
+
+        const scrollWindow = function () {
+            if ($(window).scrollTop() !== 0) {
+                setTimeout(function () {
+                    $(window).scrollTop($(window).scrollTop() - 50);
+                    scrollWindow();
+                }, 1);
+            }
+        };
+        scrollBtn.on("click", scrollWindow);
+    };
+    scrollTop();
+}
