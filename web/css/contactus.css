@@ -4,17 +4,18 @@
     background-image: url("/images/background-contact-us.png");
     background-repeat: no-repeat;
     padding-top: 158px;
-
 }
 .disinline{
     width: 66%;
+}
+.backButton{
+    display: none;
 }
 .sectionContactusTopLeft{
     width: 44%;
 }
 .sectionContactusTop{
-    /*height: 350.74px;*/
-    margin-top: 80px;
+    margin-top: 77px;
 }
 .backButton{
     display: none;
@@ -29,7 +30,8 @@
     margin-bottom: 0rem;
 }
 .contactusTxt{
-    padding-top: 20px;
+    margin: 0;
+    padding-top: 24px;
     font-family: Roboto;
     font-size: 18px;
     font-weight: 400;
@@ -41,13 +43,31 @@
     width: 56px;
     height: 56px;
 }
+.contactusNom{
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 12px;
+}
 .rigthtxtdiv{
     /*width: 126px;*/
     height: 58px;
     margin-left: 24px;
 }
+.contactusMail{
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 12px;
+}
 .div1{
-    margin-bottom: 16px;
+    margin: 16px 0;
 }
 .rigthtxtdiv span{
     font-family: Roboto;
@@ -74,7 +94,7 @@
     border-radius: 20px;
 }
 .sectionContactusBottom{
-    margin-top: 24px;
+    margin-top: 28px;
 }
 .contactusBottomTitle{
     font-family: Roboto;
@@ -83,6 +103,7 @@
     line-height: 38.4px;
     text-align: left;
     color: #F36528;
+    margin-bottom: 20px;
 }
 .contactusBottomTxt{
     font-family: Roboto;
@@ -91,6 +112,7 @@
     line-height: 27px;
     text-align: left;
     color: #FFFFFF;
+    margin-bottom: 19px;
 }
 .inputdiv{
     columns: 2;
@@ -166,19 +188,35 @@
 .sectionContactusBottomImg{
     width: 157px;
     height: 58.17px;
-    margin-top: 50px;
     position: relative;
     text-align: center;
-}
-.bottoming span{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 .sectionContactusBottom .form-row{
     margin-right: 0;
     margin-left: 0px;
+}
+.bottoming{
+    margin-top: 50px;
+}
+.bottoming > button{
+    position: relative;
+    background: transparent;
+    border: none;
+}
+.bottoming > button > img{
+    position: relative;
+}
+.bottoming > button > span{
+    color: #F36528;
+    margin: 22px 0px;
+    position: absolute;
+    left: 0px;
+    padding: 0 28px;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15.23px;
+    text-align: left;
 }
 @media screen and (max-width: 1500px) {
     .sectionContactusTopLeft{
@@ -189,10 +227,113 @@
     }
 }
 @media screen and (max-width: 1024px) {
+    .contactus {
+        height: 1000px;
+    }
     .disinline {
-        width: 86%;
+        width: auto;
+        padding-left: 6.8%;
+        padding-right: 6.9%;
+        margin-top: 21px;
     }
     .backButton{
+        width: 40px;
+        height: 40px;
         display: block;
+    }
+    .sectionContactusTop {
+        margin-top: 22px;
+    }
+    .contactusTitle{
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+    .contactusTxt{
+        padding-top: 13px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .imgcontact {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+    .div1 {
+        margin: 13px 0;
+    }
+    .rigthtxtdiv span{
+        display: none;
+    }
+    .rigthtxtdiv {
+        margin-left: 30px;
+    }
+    #map{
+        height: 190px;
+        border-radius: 20px;
+    }
+    .sectionContactusBottom {
+        margin-top: 53px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contactusBottomTitle{
+        font-size: 18px;
+        line-height: 21.6px;
+        margin-bottom: 16px;
+    }
+    .contactusBottomTxt{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    .inputname {
+        width: 48%;
+        height: 54px;
+        display: inline-flex
+    }
+    .inputemail {
+        width: 48%;
+        height: 54px;
+        display: inline-flex
+    }
+    .inputcomment {
+        width: 63.8671875%;
+        height: 97px;
+        margin-top: 24px;
+    }
+    .inputdiv {
+        width: 63%;
+        display: flex;
+        gap: 4%;
+    }
+    .sectionContactusBottomImg{
+        width: 139px;
+        height: 52px;
+    }
+    .bottoming{
+        margin-top: 24px;
+    }
+    .bottoming > button{
+        position: relative;
+        background: transparent;
+        border: none;
+    }
+    .bottoming > button > img{
+        position: relative;
+    }
+    .bottoming > button > span{
+        color: #F36528;
+        margin: 19px 0px;
+        position: absolute;
+        left: 0px;
+        padding: 0px 18px;
+        font-family: 'Roboto';
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 15.23px;
+        text-align: left;
+
     }
 }
