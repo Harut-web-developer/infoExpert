@@ -8,14 +8,14 @@ $this->registerCssFile('@web/css/personel-management.css');
     <div class="topDivFlex">
         <p class="infotxt">
             <img class="rightImg" src="/images/personel-management-1.png" alt="">
-            The "1C։ Payroll and personnel management" course, offered by iNFOEXPERT Academy, will teach you the following in the
+            The "1C։ Payroll and personnel management" course, offered by iNFOEXPERT Academy, will teach you the following in the<br>
             . Personnel management and payroll,<br>
             . Control of personnel policy,<br>
             . Calculation of wages and other equivalent payments,<br>
-            . Planning, organization and control of personnel work,<br>
-            . Performance statistics
+            . Planning, organization, and control of personnel work,<br>
+            . Performance statistics<br><br class="brNone">
             Number of courses:&nbsp;9 + 1 exam /2 days a week/․<br>
-            A Certificate is given at the end in both Armenian and English.
+            A Certificate is given at the end in both Armenian and English.<br><br class="brNone">
             Participating in the course at the iNFOEXPERT Academy has the following benefits: <br>
             . Free access to 1C base for the duration of studies and for one more month after graduation (access from any point and computer),<br>
             . Job offers to the best by the iNFOEXPERT company,<br>
