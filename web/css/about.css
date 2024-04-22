@@ -8,19 +8,23 @@
     background-size: cover;
     background-position: center;
 }
+.backButton{
+    display: none;
+}
 .aboutContent{
     width: 67%;
-    height: 954px;
+    /*height: 954px;*/
     margin: 228px 16.5% 0px;
     position: absolute;
     display: flex;
+    gap: 48px;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
 }
 .aboutContnetmain{
     width: 100%;
-    height: 872px;
+    /*height: 872px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,8 +40,6 @@
 .aboutContnetTitle{
     width: 100%;
     height: 34px;
-}
-.aboutContnetTitle > span{
     color: #F16D35;
     font-family: "Roboto Slab",sans-serif;
     font-size: 40px;
@@ -50,7 +52,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 658px;
+    height: 82%;
 }
 .leftContentAboutTextTop > span{
     color: #FFF;
@@ -64,7 +66,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 182px;
+    height: 18% ;
 }
 .leftContentAboutTextBottom > span{
     color: #FFF;
@@ -81,10 +83,6 @@
     font-style: normal;
     font-weight: 400;
 }
-/*.mainTextLeftContent > p{*/
-/*    margin-bottom: 0px;*/
-/*}*/
-
 .leftContent p{
     font-family: 'Roboto';
     font-size: 18px;
@@ -236,6 +234,10 @@
 .shapeRightMainFieldText{
     width: 119px;
     height: 63px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .rightShapeTextBig{
     color: #1C5484;
@@ -283,102 +285,198 @@
     font-weight: 400;
     line-height: normal;
 }
-/*.rightContent .rightContentBottom .div1,*/
-/*.rightContent .rightContentBottom .div2,*/
-/*.rightContent .rightContentBottom .div3{*/
-/*    background: var(--40, #ACCBE6);*/
-/*    width: 363.91px;*/
-/*    height: 83.73px;*/
-/*    top: 39.41px;*/
-/*    border-radius: 18px;*/
-/*    display: flex;*/
-/*    !*justify-content: center;*!*/
-/*    padding-left: 29px;*/
-/*    align-items: center;*/
-/*}*/
-/*.rightContent .rightContentBottom .div1 img,*/
-/*.rightContent .rightContentBottom .div2 img,*/
-/*.rightContent .rightContentBottom .div3 img{*/
-/*    padding: 7px 6px 7px 6px;*/
-/*    gap: 10px;*/
-/*    border-radius: 12.24px 0px 0px 0px;*/
-/*}*/
-/*.rightContent .rightContentBottom .div1 h3 {*/
-/*    font-family: 'Roboto';*/
-/*    font-size: 20px;*/
-/*    font-weight: 400;*/
-/*    line-height: 34px;*/
-/*    text-align: left;*/
-/*    color: var(--30, #1C5484);*/
-/*}*/
-/*.rightContent .rightContentBottom .div1 h1 {*/
-/*    font-family: 'Roboto';*/
-/*    font-size: 24px;*/
-/*    font-weight: 700;*/
-/*    line-height: 28.13px;*/
-/*    text-align: left;*/
-/*    color: var(--30, #1C5484);*/
-/*}*/
-/*.rightContent .rightContentBottom .div2 h1 {*/
-/*    font-family: 'Roboto';*/
-/*    font-size: 25px;*/
-/*    font-weight: 700;*/
-/*    line-height: 29.3px;*/
-/*    text-align: left;*/
-/*    color: var(--30, #1C5484);*/
-/*}*/
-/*.rightContent .rightContentBottom .div3 h1 {*/
-/*    font-family: 'Roboto';*/
-/*    font-size: 22px;*/
-/*    font-weight: 700;*/
-/*    line-height: 25.78px;*/
-/*    text-align: left;*/
-/*    color: var(--30, #1C5484);*/
-/*}*/
-/*.rightContentBottomR{*/
-
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
-/*.rightContent .rightContentBottomR .div4,*/
-/*.rightContent .rightContentBottomR .div5{*/
-/*    background: var(--40, #ACCBE6);*/
-/*    width: 143px;*/
-/*    height: 171px;*/
-/*    left: 375.91px;*/
-/*    padding: 12px 0px 0px 0px;*/
-/*    border-radius: 18px;*/
-/*    text-align: center;*/
-/*}*/
-/*.rightContent .rightContentBottom .div4 h1 {*/
-/*    font-family: 'Roboto';*/
-/*    font-size: 25px;*/
-/*    font-weight: 700;*/
-/*    line-height: 29.3px;*/
-/*    text-align: center;*/
-/*    color: var(--30, #1C5484);*/
-/*}*/
-/*.rightContent .rightContentBottom .div4 h3 {*/
-/*    font-family: 'Roboto';*/
-/*    font-size: 20px;*/
-/*    font-weight: 400;*/
-/*    line-height: 34px;*/
-/*    text-align: center;*/
-/*    color: var(--40, #1C5484);*/
-/*}*/
-/*.rightContent .rightContentBottom .div5 h1 {*/
-/*    font-family: 'Roboto';*/
-/*    font-size: 25px;*/
-/*    font-weight: 700;*/
-/*    line-height: 29.3px;*/
-/*    text-align: center;*/
-/*    color: var(--30, #1C5484);*/
-/*}*/
-/*.rightContent .rightContentBottom .div5 h3 {*/
-/*    font-family: 'Roboto';*/
-/*    font-size: 20px;*/
-/*    font-weight: 400;*/
-/*    line-height: 34px;*/
-/*    text-align: center;*/
-/*    color: var(--40, #1C5484);*/
-/*}*/
+@media screen and (max-width: 1600px) {
+    .leftContent p {
+        font-size: 1.05vw;
+    }
+    .rightContentTop p {
+        font-size: 1.05vw;
+    }
+    .rightContentBottom {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1450px){
+    .leftContent p {
+        font-size: 1.17vw;
+    }
+    .rightContentTop p {
+        font-size: 1.17vw;
+    }
+    .mainLeftShapeField {
+        margin: 13px 13px;
+        gap: 16px;
+    }
+    .rightContentBottom {
+        margin-top: 0;
+        width: 72.37%;
+        height: 100%;
+        display: flex;
+        gap: 14px;
+        flex-direction: column;
+    }
+    .rightContentInfoShapeLeft{
+        width: auto;
+    }
+    .rightContentInfoShapeRight {
+        width: auto;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+    }
+    .rightContentTop, .rightContentMainText {
+        height: auto;
+    }
+    .rightContentBottom {
+        width: auto;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .aboutContent {
+        width: auto;
+        margin: 228px 6.9% 0px 6.8%;
+        gap: 20px;
+    }
+    .aboutContnetTitle{
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 22px;
+        text-align: left;
+    }
+    .backButton {
+        width: 20.02px;
+        height: 19.99px;
+        display: block;
+    }
+    .leftContentAboutTextTop > span{
+        font-size: 16px;
+        line-height: 34px;
+    }
+    .leftContent p{
+        font-family: 'Roboto';
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20.51px;
+        text-align: left;
+    }
+    .aboutContnetmain {
+        flex-direction: column;
+    }
+    .leftContent {
+        width: auto;
+    }
+    .historyContent{
+        display: flex;
+        flex-direction: row;
+        gap: 64px;
+    }
+    .shapeRight{
+        height: auto;
+    }
+    .shapeRightMainField{
+        width: 106px;
+        height: 111px;
+        padding: 12px;
+        border-radius: 18px;
+    }
+    .shapeRightMainField img{
+        width: 43px;
+        height: 44px;
+        padding: 4px 0px 0px 0px;
+    }
+    .rightShapeTextBig, .rightShapeBottomTextBig{
+        font-size: 15px;
+        line-height: 17.58px;
+    }
+    .rightShapeTextSmall, .rightShapeBottomTextSmall{
+        font-size: 14px;
+        line-height: 16.41px;
+    }
+    .shapeRightMainField img{
+        width: 40.91px;
+        height: 40.91px;
+    }
+    .bottom1{
+        height: 140px;
+    }
+    .rightContent {
+        width: auto;
+        flex-direction: row;
+        align-items: normal;
+        gap: 24px;
+        padding-top: 17px;
+    }
+    .rightContentTop {
+        width: 50%;
+    }
+    .rightContentBottom {
+        width: 50%;
+    }
+    .rightContentTop > span{
+        font-size: 16px;
+        line-height: 34px;
+    }
+    .rightContentInfoShapeRightValue > span{
+        color: #FFF;
+        font-family: "Roboto Slab",sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 34px;
+    }
+    .rightContentTop p{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20.51px;
+        text-align: left;
+    }
+    .mainTextLeftContent{
+        font-size: 15px;
+        line-height: 20.51px;
+        text-align: left;
+    }
+    .shapeLeft {
+        width: max-content;
+    }
+    .mainLeftShapeField > img{
+        width: 34px;
+        height: 34px;
+    }
+    .shapeFirstTitle{
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .shapeSecondTitle{
+        font-size: 15px;
+        line-height: 17.58px;
+        text-align: left;
+    }
+    .mainLeftShapeField {
+        width: 303.98px;
+        height: 60px;
+        border-radius: 10px;
+        padding: 11.5px 56px 11.5px 43px;
+        margin: 0;
+        gap: 30px;
+    }
+    .rightContentInfoShapeLeft {
+        gap: 8.5px;
+    }
+    .mainLeftShapeOther > span, .spanText{
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 17.58px;
+        text-align: left;
+    }
+    .mainLeftShapeFieldTexts {
+        height: -webkit-fill-available;
+    }
+}

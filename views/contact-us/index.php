@@ -5,6 +5,7 @@ $this->registerCssFile('@web/css/contactus.css');
 ?>
 <div class="contactus d-flex justify-content-center">
     <div class="disinline">
+        <img class="backButton" src="/images/backButton.png" alt="">
         <div class="sectionContactusTop d-flex flex-row">
             <div class="sectionContactusTopLeft">
                 <div class="contactusDiv">
@@ -15,14 +16,14 @@ $this->registerCssFile('@web/css/contactus.css');
                     <img class="imgcontact" src="/images/contactus_phon.png">
                     <div class="rigthtxtdiv">
                         <span>Phone</span>
-                        <p class="contactusTxt">+ 374 12 533 361 </p>
+                        <p class="contactusNom">+ 374 12 533 361 </p>
                     </div>
                 </div>
                 <div class="d-flex flex-row">
                     <img class="imgcontact" src="/images/contactus_email.png">
                     <div class="rigthtxtdiv">
                         <span>Email</span>
-                        <p class="contactusTxt"> info@infoexpert.am</p>
+                        <p class="contactusMail"> info@infoexpert.am</p>
                     </div>
                 </div>
             </div>
@@ -45,7 +46,10 @@ $this->registerCssFile('@web/css/contactus.css');
                 <input type="text" id="validationDefault01_" placeholder="Comment">
             </div>
             <div class="d-flex justify-content-center bottoming">
-                <img class="sectionContactusBottomImg" src="/images/contactus.png">
+                <button>
+                    <img class="sectionContactusBottomImg" src="/images/contactus.png">
+                    <span>POST COMMENT</span>
+                </button>
             </div>
         </form>
     </div>
