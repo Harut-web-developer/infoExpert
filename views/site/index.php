@@ -159,123 +159,123 @@ $this->title = 'My Yii Application';
         <div class="carousel">
             <ul class="carousel-slides">
                 <li class="carousel-slide">
-                    <img src="/images/partner1.png" alt="">
+                    <img class="img-prev" src="/images/partner1.png" alt="">
                     <img src="/images/partner1_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner2.png" alt="">
+                    <img class="img-prev" src="/images/partner2.png" alt="">
                     <img src="/images/partner2_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner3.png" alt="">
+                    <img class="img-prev" src="/images/partner3.png" alt="">
                     <img src="/images/partner3_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner4.png" alt="">
+                    <img class="img-prev" src="/images/partner4.png" alt="">
                     <img src="/images/partner4_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner5.png" alt="">
+                    <img class="img-prev" src="/images/partner5.png" alt="">
                     <img src="/images/partner5_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner6.png" alt="">
+                    <img class="img-prev" src="/images/partner6.png" alt="">
                     <img src="/images/partner6_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner7.png" alt="">
+                    <img class="img-prev" src="/images/partner7.png" alt="">
                     <img src="/images/partner7_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner8.png" alt="">
+                    <img class="img-prev" src="/images/partner8.png" alt="">
                     <img src="/images/partner8_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner9.png" alt="">
+                    <img class="img-prev" src="/images/partner9.png" alt="">
                     <img src="/images/partner9_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner10.png" alt="">
+                    <img class="img-prev" src="/images/partner10.png" alt="">
                     <img src="/images/partner10_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner11.png" alt="">
+                    <img class="img-prev" src="/images/partner11.png" alt="">
                     <img src="/images/partner11_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner12.png" alt="">
+                    <img class="img-prev" src="/images/partner12.png" alt="">
                     <img src="/images/partner12_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner13.png" alt="">
+                    <img class="img-prev" src="/images/partner13.png" alt="">
                     <img src="/images/partner13_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner14.png" alt="">
+                    <img class="img-prev" src="/images/partner14.png" alt="">
                     <img src="/images/partner14_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner15.png" alt="">
+                    <img class="img-prev" src="/images/partner15.png" alt="">
                     <img src="/images/partner15_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner16.png" alt="">
+                    <img class="img-prev" src="/images/partner16.png" alt="">
                     <img src="/images/partner16_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner17.png" alt="">
+                    <img class="img-prev" src="/images/partner17.png" alt="">
                     <img src="/images/partner17_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner18.png" alt="">
+                    <img class="img-prev" src="/images/partner18.png" alt="">
                     <img src="/images/partner18_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner19.png" alt="">
+                    <img class="img-prev" src="/images/partner19.png" alt="">
                     <img src="/images/partner19_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner20.png" alt="">
+                    <img class="img-prev" src="/images/partner20.png" alt="">
                     <img src="/images/partner20_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner21.png" alt="">
+                    <img class="img-prev" src="/images/partner21.png" alt="">
                     <img src="/images/partner21_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner22.png" alt="">
+                    <img class="img-prev" src="/images/partner22.png" alt="">
                     <img src="/images/partner22_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner23.png" alt="">
+                    <img class="img-prev" src="/images/partner23.png" alt="">
                     <img src="/images/partner23_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner24.png" alt="">
+                    <img class="img-prev" src="/images/partner24.png" alt="">
                     <img src="/images/partner24_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner25.png" alt="">
+                    <img class="img-prev" src="/images/partner25.png" alt="">
                     <img src="/images/partner25_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner26.png" alt="">
+                    <img class="img-prev" src="/images/partner26.png" alt="">
                     <img src="/images/partner26_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner27.png" alt="">
+                    <img class="img-prev" src="/images/partner27.png" alt="">
                     <img src="/images/partner27_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner28.png" alt="">
+                    <img class="img-prev" src="/images/partner28.png" alt="">
                     <img src="/images/partner28_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner29.png" alt="">
+                    <img class="img-prev" src="/images/partner29.png" alt="">
                     <img src="/images/partner29_hov.png" class="img-top" alt="Card Front">
                 </li>
                 <li class="carousel-slide">
-                    <img src="/images/partner30.png" alt="">
+                    <img class="img-prev" src="/images/partner30.png" alt="">
                     <img src="/images/partner30_hov.png" class="img-top" alt="Card Front">
                 </li>
             </ul>
@@ -421,9 +421,12 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
         </div>
-        <div class="swiper-navBtn"></div>
-        <div class="swiper-navBtn"></div>
-        <div class="swiper-pagination"></div>
+        <div class="circleTestimonial">
+            <div class="swiper-navBtn"></div>
+            <div class="swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
     </div>
     </div>
 </div>
