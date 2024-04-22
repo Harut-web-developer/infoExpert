@@ -234,6 +234,10 @@
 .shapeRightMainFieldText{
     width: 119px;
     height: 63px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .rightShapeTextBig{
     color: #1C5484;
@@ -333,16 +337,146 @@
     .aboutContent {
         width: auto;
         margin: 228px 6.9% 0px 6.8%;
+        gap: 20px;
     }
     .aboutContnetTitle{
         width: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-size: 22px;
+        text-align: left;
     }
     .backButton {
-        width: 40px;
-        height: 40px;
+        width: 20.02px;
+        height: 19.99px;
         display: block;
+    }
+    .leftContentAboutTextTop > span{
+        font-size: 16px;
+        line-height: 34px;
+    }
+    .leftContent p{
+        font-family: 'Roboto';
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20.51px;
+        text-align: left;
+    }
+    .aboutContnetmain {
+        flex-direction: column;
+    }
+    .leftContent {
+        width: auto;
+    }
+    .historyContent{
+        display: flex;
+        flex-direction: row;
+        gap: 64px;
+    }
+    .shapeRight{
+        height: auto;
+    }
+    .shapeRightMainField{
+        width: 106px;
+        height: 111px;
+        padding: 12px;
+        border-radius: 18px;
+    }
+    .shapeRightMainField img{
+        width: 43px;
+        height: 44px;
+        padding: 4px 0px 0px 0px;
+    }
+    .rightShapeTextBig, .rightShapeBottomTextBig{
+        font-size: 15px;
+        line-height: 17.58px;
+    }
+    .rightShapeTextSmall, .rightShapeBottomTextSmall{
+        font-size: 14px;
+        line-height: 16.41px;
+    }
+    .shapeRightMainField img{
+        width: 40.91px;
+        height: 40.91px;
+    }
+    .bottom1{
+        height: 140px;
+    }
+    .rightContent {
+        width: auto;
+        flex-direction: row;
+        align-items: normal;
+        gap: 24px;
+        padding-top: 17px;
+    }
+    .rightContentTop {
+        width: 50%;
+    }
+    .rightContentBottom {
+        width: 50%;
+    }
+    .rightContentTop > span{
+        font-size: 16px;
+        line-height: 34px;
+    }
+    .rightContentInfoShapeRightValue > span{
+        color: #FFF;
+        font-family: "Roboto Slab",sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 34px;
+    }
+    .rightContentTop p{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20.51px;
+        text-align: left;
+    }
+    .mainTextLeftContent{
+        font-size: 15px;
+        line-height: 20.51px;
+        text-align: left;
+    }
+    .shapeLeft {
+        width: max-content;
+    }
+    .mainLeftShapeField > img{
+        width: 34px;
+        height: 34px;
+    }
+    .shapeFirstTitle{
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .shapeSecondTitle{
+        font-size: 15px;
+        line-height: 17.58px;
+        text-align: left;
+    }
+    .mainLeftShapeField {
+        width: 303.98px;
+        height: 60px;
+        border-radius: 10px;
+        padding: 11.5px 56px 11.5px 43px;
+        margin: 0;
+        gap: 30px;
+    }
+    .rightContentInfoShapeLeft {
+        gap: 8.5px;
+    }
+    .mainLeftShapeOther > span, .spanText{
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 17.58px;
+        text-align: left;
+    }
+    .mainLeftShapeFieldTexts {
+        height: -webkit-fill-available;
     }
 }

@@ -19,18 +19,18 @@ $this->registerCssFile('@web/css/about.css');
             <div class="leftContent">
                 <div class="leftContentAboutTextTop">
                     <span>OUR HISTORY</span>
-                    <div class="mainTextLeftContent">
-                        <p>iNFOEXPERT was established in 1996 and has spent the last 27 years concentrating on the creation, promotion, and support of specialized business automation solutions based on 1C software. The 1C firm's official representative in Armenia with the right to franchise is the iNFOEXPERT company.</p>
-                        <p>The company provides systems for resource management, partner relations, personnel management, document circulation, and accounting, automating every aspect of accounting and management procedures.
-                            Every partner request is considered, compliance with the regulations in effect in the Republic of Armenia is supplied, and based on the unique characteristics of the industry, a package of customized business process automation solutions is developed.</p>
-                        <p>Technology advances with time, as do company models and methods of operation, but what distinguishes iNFOEXPERT as a pioneer are its solutions that aid partners in becoming more competitive and thriving in a rapidly changing environment. Long-lasting and devoted partnership relationships are ensured by the experience gained through time and the capacity to provide swift and flexible solutions.</p>
+                    <div class="historyContent">
+                        <div class="mainTextLeftContent">
+                            <p>iNFOEXPERT was established in 1996 and has spent the last 27 years concentrating on the creation, promotion, and support of specialized business automation solutions based on 1C software. The 1C firm's official representative in Armenia with the right to franchise is the iNFOEXPERT company.</p>
+                            <p>The company provides systems for resource management, partner relations, personnel management, document circulation, and accounting, automating every aspect of accounting and management procedures.
+                                Every partner request is considered, compliance with the regulations in effect in the Republic of Armenia is supplied, and based on the unique characteristics of the industry, a package of customized business process automation solutions is developed.</p>
+                            <p>Technology advances with time, as do company models and methods of operation, but what distinguishes iNFOEXPERT as a pioneer are its solutions that aid partners in becoming more competitive and thriving in a rapidly changing environment. Long-lasting and devoted partnership relationships are ensured by the experience gained through time and the capacity to provide swift and flexible solutions.</p>
+                        </div>
+                        <div class="blogContent"></div>
                     </div>
                 </div>
                 <div class="leftContentAboutTextBottom">
-                    <span>OUR VALUES</span>
-                    <div class="mainTextLeftContent">
-                        <p>By considering a problem, ideas emerge that develop into solutions and improve the efficiency of future business operations. The values we uphold, carry, and believe in serve as the cornerstones of the process from idea to solution. </p>
-                    </div>
+
                 </div>
             </div>
             <div class="rightContent">
@@ -44,6 +44,9 @@ $this->registerCssFile('@web/css/about.css');
                     </div>
                     <div class="rightContentBottom">
                         <div class="rightContentInfoShapeLeft">
+                            <div class="rightContentInfoShapeRightValue">
+
+                            </div>
                             <div class="shapeLeft">
                                 <div class="mainLeftShapeField">
                                     <img src="/images/aboutImg_1.png" alt="">
@@ -71,24 +74,7 @@ $this->registerCssFile('@web/css/about.css');
                             </div>
                         </div>
                         <div class="rightContentInfoShapeRight">
-                            <div class="shapeRight">
-                                <div class="shapeRightMainField">
-                                    <img src="/images/aboutImg_4.png" alt="">
-                                    <div class="shapeRightMainFieldText">
-                                        <span class="rightShapeTextBig">Long-term</span>
-                                        <span class="rightShapeTextSmall">collaboration</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="shapeRight">
-                                <div class="shapeRightMainField">
-                                    <img src="/images/aboutImg_5.png" alt="">
-                                    <div class="shapeRightBottomText">
-                                        <span class="rightShapeBottomTextBig">Individual approach</span>
-                                        <span class="rightShapeBottomTextSmall">to each partner</span>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -96,3 +82,43 @@ $this->registerCssFile('@web/css/about.css');
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function blog() {
+        return  '<div class="shapeRight">'+
+                    '<div class="shapeRightMainField top1">'+
+                        '<img src="/images/aboutImg_4.png" alt="">'+
+                            '<div class="shapeRightMainFieldText">'+
+                                '<span class="rightShapeTextBig">Long-term</span>'+
+                                '<span class="rightShapeTextSmall">collaboration</span>'+
+                            '</div>'+
+                    '</div>'+
+                '</div>'+
+                '<div class="shapeRight">'+
+                    '<div class="shapeRightMainField bottom1">'+
+                        '<img src="/images/aboutImg_5.png" alt="">'+
+                            '<div class="shapeRightBottomText">'+
+                                '<span class="rightShapeBottomTextBig">Individual approach</span>'+
+                                '<span class="rightShapeBottomTextSmall">to each partner</span>'+
+                           '</div>'+
+                    '</div>'+
+                '</div>';
+
+    }
+    function blog1() {
+        return  `<span>OUR VALUES</span>`+
+                `<div class="mainTextLeftContent">`+
+                    `<p>By considering a problem, ideas emerge that develop into solutions and improve the efficiency of future business operations. The values we uphold, carry, and believe in serve as the cornerstones of the process from idea to solution. </p>`+
+                `</div>`;
+    }
+    $(document).ready(function() {
+        if ($(window).width() > 1024) {
+            $('.rightContentInfoShapeRight').append(blog());
+            $('.leftContentAboutTextBottom').append(blog1());
+        }
+        if ($(window).width() <= 1024) {
+            $('.blogContent').append(blog());
+            $('.rightContentInfoShapeRightValue').append(blog1());
+        }
+    });
+</script>
