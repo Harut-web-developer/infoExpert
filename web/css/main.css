@@ -254,6 +254,341 @@
     color: #F36528;
 }
 
+.mainHeader{
+    width: 100%;
+    height: 61px;
+    background: linear-gradient(#99C0C2,#85B2B6);
+    box-shadow: 0px 0px 9px 0px #347D81;
+    position: fixed;
+    z-index: 50;
+}
+.mainField{
+    width: 86%;
+    margin: 9px 5.76% 9px 6.83%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoTabletField > a > img{
+    width: 169px;
+    height: 40px;
+}
+.tabletMenuField{
+    width: 152px;
+    height: 31px;
+}
+.menuTabletHeader{
+    width: 0px;
+    height: 544px;
+    position: fixed;
+    top:61px;
+    z-index: 50;
+    right: 0;
+    transition: 1.5s ease all;
+}
+.menuTabletActive{
+    width: 484px;
+}
+.menuPersonInfo{
+    width: 100%;
+    height: 107px;
+    background: #79ACAE;
+    box-shadow: 0px 0px 9px 0px #347D81;
+}
+.personInfoField{
+    position: absolute;
+    top: 24px;
+    width: 348px;
+    left: 47px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.personInfoCircle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #79A7A9;
+    background: #80B0B2;
+    color: #FFF;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.personName{
+    color: #F36528;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}.personGreetings{
+     color: #FFF;
+     font-family: "Roboto",sans-serif;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+ }
+.personSignOrInfo{
+    width: 269px;
+    height: 47px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.personSignField{
+    width: 163px;
+    height: 15px;
+    margin: 2px 46px 2px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.personSignField > a{
+    color: #F36528;
+    font-family: "Roboto",sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+.personSignField > span{
+    color: #FFF;
+    font-family: "Roboto",sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.personNameField{
+    width: 190px;
+    height: 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.tabletMenuNavbar{
+    width: 100%;
+    height: 437px;
+    backdrop-filter: blur(30px);
+}
+.tabletMenuNavField{
+    width: 366px;
+    height: 400px;
+    position: absolute;
+    top: 17px;
+    margin: 0px 71px 20px 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.tabletMenuNavField > ul{
+    width: 348px;
+    height: 346px;
+    list-style: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.tabletCoursesList{
+    width: 100%;
+    height: 31px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 10px;
+}
+.tabletCoursesUnderline{
+    width: 100%;
+    border: 1px solid white;
+}
+.tabletMenuNavField > ul > li > a{
+    text-decoration: none;
+    color: #FFF;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.tabletAllCoursesList{
+    width: 100%;
+    height: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabletAllCoursesList > span{
+    color: #FFF;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.searchFlagField{
+    width: 100%;
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabletSearchField{
+    width: 206px;
+    height: 41px;
+}
+.tabletFlagField{
+    width: 160px;
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabletFlagField > img{
+    margin: 13px;
+}
+.search-boxTablet{
+    position: relative;
+}
+.input-searchTablet{
+    margin-left: 30px;
+    height: 40px;
+    width: 20px;
+    border-style: none;
+    padding: 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    padding-right: 20px;
+    color:#fff;
+}
+.input-searchTablet::placeholder{
+    color:rgba(255,255,255,.5);
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+.btn-searchTablet{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -2px;
+    left: -10px;
+    color:#ffffff ;
+    background-color:transparent;
+    pointer-events: painted;
+}
+.btn-searchTablet:focus ~ .input-searchTablet{
+    width: 140px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-searchTablet:focus{
+    width: 140px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.personMainMenu{
+    width: 0px;
+    height: 544px;
+    position: fixed;
+    top:61px;
+    z-index: 50;
+    /*display: none;*/
+    transition: 1.5s ease all;
+    right: 0;
+}
+.tabletPersonMenuField{
+    position: absolute;
+    width: 87px;
+    height: 23px;
+    margin: 42px 47px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.backMainMenu:hover{
+    cursor: pointer;
+}
+.tabletPersonMenuField > span{
+    color: #FFF;
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.tabletProfileMenuField{
+    position: absolute;
+    width: 116px;
+    height: 211px;
+    margin: 40px 83px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.tabletProfileMenuField > li > a{
+    color: #FFF;
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+.tabletProfileMenuField > li > a:hover{
+    color: #F36528;
+    cursor: pointer;
+}
+.personCoursesMenuList{
+    width: 0px;
+    height: 544px;
+    position: fixed;
+    top:61px;
+    right: 0;
+    z-index: 50;
+    transition: 1.5s ease all;
+}
 /*end header css*/
 
 
@@ -301,11 +636,10 @@
     width:659px;
     height: 557px;
     margin-right: 5px;
-
 }
 .footerFields{
     width: 515px;
-    height: 411px;
+    height: 390px;
     margin: 112px auto 0px;
     display: flex;
     flex-direction: column;
@@ -321,7 +655,7 @@
 }
 .leftFooterBlock{
     width: 100%;
-    height: 269px;
+    height: 236px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -483,7 +817,6 @@
     font-size: 15px;
     font-weight: 500;
     color: white;
-
 }
 .policyText{
     height: 18px;
@@ -507,7 +840,7 @@
     color: white;
 }
 .payLogoFooter{
-    max-width: 112px;
+    width: 112px;
     display:flex;
     flex-direction: row;
     justify-content: space-between;

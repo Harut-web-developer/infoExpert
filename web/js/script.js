@@ -137,3 +137,20 @@ if (window.location.pathname == '/') {
     };
     scrollTop();
 }
+$(document).ready(function () {
+    $('body').on('click','.tabletMenuIcon', function () {
+        $('.menuTabletHeader').toggleClass('menuTabletActive');
+    })
+    $('body').on('click','.tabletUserProfileMenu', function () {
+        $('.personMainMenu').css('width', '484px');
+    })
+    $('body').on('click','.backMainMenu', function () {
+        $('.personMainMenu').css('width', '0px');
+    })
+    $('body').on('click','.tabletAllCoursesList', function () {
+        $('.personCoursesMenuList').css('width', '484px');
+    })
+    $('body').on('click','.backMainMenuCourses', function () {
+        $('.personCoursesMenuList').css('width', '0px');
+    })
+})

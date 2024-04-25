@@ -1,3 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*start tablet for header page */
+@media only screen and (min-width: 376px) and (max-width: 1100px) {
+    .header{
+        display: none;
+    }
+    .tabletHeader{
+        display: block;
+    }
+    .tabletMenuField{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .tabletMenuField > button{
+        position: relative;
+        background: transparent;
+        border: none;
+    }
+    .tabletMenuField > button > span{
+        margin: 11px 8px;
+        position: absolute;
+        left: 0;
+        color: #F36528;
+        font-family: "Roboto",sans-serif;
+        font-size: 7px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+@media only screen and (min-width: 1101px){
+    .header{
+        display: block;
+    }
+    .tabletHeader{
+        display: none;
+    }
+}
 /*start media tablet for main page*/
 @media only screen and (min-width: 376px) and (max-width: 1024px)  {
     .headerBackground {
@@ -1391,4 +1432,264 @@
         text-overflow: ellipsis;
     }
 }
+/*sectionEight*/
+@media only screen and (min-width: 376px) and (max-width: 1024px) {
+    .questionTitle{
+        font-size: 22px;
+        text-align: center;
+    }
+}
 
+/*footer section*/
+@media only screen and (min-width: 740px) and (max-width: 1340px) {
+    .footerBackground{
+        margin-top: -50px;
+        background-image: url("../images/footerbg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 436px;
+    }
+    .sectionFooter{
+        width: 65%;
+        height: 373px;
+        margin: 49px 17.5% 0px;
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .leftFooterBg{
+        background-image: url("../images/leftImageFooter.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        width:338px;
+        height: 338px;
+        margin-right: 5px;
+    }
+    .footerFields{
+        width: 276px;
+        height: 235px;
+        margin: 92px auto 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .footerLogo{
+        width: 100%;
+        height: 23px;
+    }
+    .footerLogo > img{
+        width: 125px;
+        height: 23px;
+    }
+    .leftFooterBlock{
+        width: 100%;
+        height: 162px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .footerMenu{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .leftMenuFooter{
+        width: 138px;
+        height: 99px;
+    }
+    .leftMenuFooter > ul{
+        list-style: none;
+        padding-left: 0px;
+        font-size: 13px;
+        font-family: "Roboto",sans-serif;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    .rightMenuFooter{
+        width: 140px;
+        height: 85px;
+    }
+    .rightMenuFooter > ul{
+        padding-left:0px;
+        list-style: none;
+        font-size: 13px;
+    }
+    .footerConn > span{
+        color: #F36528;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .footerBtn{
+        width: 100%;
+    }
+    .footerBtn > input{
+        position: absolute;
+        width: 248px;
+        height: 33px;
+        border-radius: 33px;
+        color: white;
+        outline: none;
+        border: none;
+        background: #5D9A9D;
+        padding: 0px 170px 0px 20px;
+        font-family: "Roboto",sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+
+    }
+    .footerBtn > input::placeholder{
+        color: white;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .footerBtn > button{
+        left: 171px;
+        top: 3px;
+        font-family: "Roboto",sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        color: #5D9A9D;
+        /* outline: none; */
+        border: 1px solid white;
+        width: 74px;
+        height: 27px;
+        border-radius: 20px;
+        background: white;
+        position: relative;
+    }
+    .footerSocial{
+        width: 100%;
+        height: 20px;
+        /*margin-bottom: 10px;*/
+    }
+    .footerSocial > a > img{
+        width: 20px;
+    }
+    .rightFooterBg{
+        width:324px;
+        height: 259px;
+        background-image: url("../images/qw.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        margin-left: 5px;
+    }
+    .formMail{
+        width: 240px;
+        height: 217px;
+        margin: 40px auto 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .formName{
+        margin-left: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .formName > span{
+        text-align: center;
+        font-family: "Roboto",sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #5D9A9D;
+    }
+    .inputsMail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .inputsMail > input{
+        padding: 0px 22px;
+        font-family: "Roboto",sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        width: 100%;
+        height: 38px;
+        margin: 4px 0px;
+        background: none;
+        border: 2px solid #5D9A9D;
+        outline: none;
+        color: #ACACAC;
+        border-radius: 28px;
+    }
+    .inputsMail > input::placeholder{
+        color: #ACACAC;
+        font-family: "Roboto",sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .formContinue{
+        margin-bottom: 5px;
+    }
+    .formContinue > button{
+        height: 34px;
+        width: 100%;
+        border-radius: 30px;
+        background: #5D9A9D;
+        color:white;
+        font-family: "Roboto",sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        border:none;
+    }
+    .paypalFooter{
+        width: 641px;
+        height: 19px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .copyTextFooter{
+        width: 178px;
+        height: 13px;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        color: white;
+    }
+    .policyText{
+        margin-left: 150px;
+        height: 13px;
+        width: 178px;
+    }
+    .policyText > ul{
+        width: 100%;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        list-style: none;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .payLogoFooter{
+        height: 19px;
+        width: 63px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .payLogoFooter > img{
+        width: 29px;
+        height: 19px;
+    }
+}
