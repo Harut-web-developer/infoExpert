@@ -7,7 +7,7 @@ $this->registerCssFile('@web/css/categorie.css');
     <div class="sectionCategorie d-flex flex-row">
         <div class="sectionCategorieLeft">
             <div class="categorieTitleDiv">
-                <h1 class="categorieTitle">Grid of different categories of accounting lessons</h1>
+                <h1 class="categorieTitle"><img class="backButton" src="/images/backButton.png" alt=""> Grid of different categories of accounting lessons</h1>
                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
             </div>
             <img class="categorieImage" src="/images/img_categorie.png">

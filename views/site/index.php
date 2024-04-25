@@ -289,145 +289,144 @@ $this->title = 'My Yii Application';
             <span class="testimonialWhiteTitle">Our customers love what we do</span>
         </div>
         <div class="slide-container swiper">
-        <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper testimonialsImg">
-                <div class="swiper-slide">
-                    <div class="blockTestimonial">
-                        <div class="intoBlockTestimonial">
-                            <div class="testimonialSimbol">
-                                <img src="/images/symbolTestimonial.png" alt="">
-                            </div>
-                            <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                Enim egestas tellus risus quis ut </div>
-                            <div class="fieldsLinkdin">
-                                <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                <a href=""><img src="/images/linkdin.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="blockTestimonial">
-                        <div class="intoBlockTestimonial">
-                            <div class="testimonialSimbol">
-                                <img src="/images/symbolTestimonial.png" alt="">
-                            </div>
-                            <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                Enim egestas tellus risus quis ut </div>
-                            <div class="fieldsLinkdin">
-                                <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                <a href=""><img src="/images/linkdin.png" alt=""></a>
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper testimonialsImg">
+                    <div class="swiper-slide">
+                        <div class="blockTestimonial">
+                            <div class="intoBlockTestimonial">
+                                <div class="testimonialSimbol">
+                                    <img src="/images/symbolTestimonial.png" alt="">
+                                </div>
+                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                                    Enim egestas tellus risus quis ut </div>
+                                <div class="fieldsLinkdin">
+                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
+                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="blockTestimonial">
-                        <div class="intoBlockTestimonial">
-                            <div class="testimonialSimbol">
-                                <img src="/images/symbolTestimonial.png" alt="">
-                            </div>
-                            <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                Enim egestas tellus risus quis ut </div>
-                            <div class="fieldsLinkdin">
-                                <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                <a href=""><img src="/images/linkdin.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="blockTestimonial">
-                        <div class="intoBlockTestimonial">
-                            <div class="testimonialSimbol">
-                                <img src="/images/symbolTestimonial.png" alt="">
-                            </div>
-                            <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                Enim egestas tellus risus quis ut </div>
-                            <div class="fieldsLinkdin">
-                                <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                <a href=""><img src="/images/linkdin.png" alt=""></a>
+                    <div class="swiper-slide">
+                        <div class="blockTestimonial">
+                            <div class="intoBlockTestimonial">
+                                <div class="testimonialSimbol">
+                                    <img src="/images/symbolTestimonial.png" alt="">
+                                </div>
+                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                                    Enim egestas tellus risus quis ut </div>
+                                <div class="fieldsLinkdin">
+                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
+                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="blockTestimonial">
-                        <div class="intoBlockTestimonial">
-                            <div class="testimonialSimbol">
-                                <img src="/images/symbolTestimonial.png" alt="">
-                            </div>
-                            <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                Enim egestas tellus risus quis ut </div>
-                            <div class="fieldsLinkdin">
-                                <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                <a href=""><img src="/images/linkdin.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="blockTestimonial">
-                        <div class="intoBlockTestimonial">
-                            <div class="testimonialSimbol">
-                                <img src="/images/symbolTestimonial.png" alt="">
-                            </div>
-                            <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                Enim egestas tellus risus quis ut </div>
-                            <div class="fieldsLinkdin">
-                                <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                <a href=""><img src="/images/linkdin.png" alt=""></a>
+                    <div class="swiper-slide">
+                        <div class="blockTestimonial">
+                            <div class="intoBlockTestimonial">
+                                <div class="testimonialSimbol">
+                                    <img src="/images/symbolTestimonial.png" alt="">
+                                </div>
+                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                                    Enim egestas tellus risus quis ut </div>
+                                <div class="fieldsLinkdin">
+                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
+                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="blockTestimonial">
-                        <div class="intoBlockTestimonial">
-                            <div class="testimonialSimbol">
-                                <img src="/images/symbolTestimonial.png" alt="">
-                            </div>
-                            <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                Enim egestas tellus risus quis ut </div>
-                            <div class="fieldsLinkdin">
-                                <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                <a href=""><img src="/images/linkdin.png" alt=""></a>
+                    <div class="swiper-slide">
+                        <div class="blockTestimonial">
+                            <div class="intoBlockTestimonial">
+                                <div class="testimonialSimbol">
+                                    <img src="/images/symbolTestimonial.png" alt="">
+                                </div>
+                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                                    Enim egestas tellus risus quis ut </div>
+                                <div class="fieldsLinkdin">
+                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
+                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="blockTestimonial">
-                        <div class="intoBlockTestimonial">
-                            <div class="testimonialSimbol">
-                                <img src="/images/symbolTestimonial.png" alt="">
+                    <div class="swiper-slide">
+                        <div class="blockTestimonial">
+                            <div class="intoBlockTestimonial">
+                                <div class="testimonialSimbol">
+                                    <img src="/images/symbolTestimonial.png" alt="">
+                                </div>
+                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                                    Enim egestas tellus risus quis ut </div>
+                                <div class="fieldsLinkdin">
+                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
+                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                </div>
                             </div>
-                            <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                Enim egestas tellus risus quis ut </div>
-                            <div class="fieldsLinkdin">
-                                <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                <a href=""><img src="/images/linkdin.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="blockTestimonial">
+                            <div class="intoBlockTestimonial">
+                                <div class="testimonialSimbol">
+                                    <img src="/images/symbolTestimonial.png" alt="">
+                                </div>
+                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                                    Enim egestas tellus risus quis ut </div>
+                                <div class="fieldsLinkdin">
+                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
+                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="blockTestimonial">
+                            <div class="intoBlockTestimonial">
+                                <div class="testimonialSimbol">
+                                    <img src="/images/symbolTestimonial.png" alt="">
+                                </div>
+                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                                    Enim egestas tellus risus quis ut </div>
+                                <div class="fieldsLinkdin">
+                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
+                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="blockTestimonial">
+                            <div class="intoBlockTestimonial">
+                                <div class="testimonialSimbol">
+                                    <img src="/images/symbolTestimonial.png" alt="">
+                                </div>
+                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
+                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
+                                    Enim egestas tellus risus quis ut </div>
+                                <div class="fieldsLinkdin">
+                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
+                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="circleTestimonial">
+                <div class="swiper-navBtn"></div>
+                <div class="swiper-navBtn"></div>
+                <div class="swiper-pagination swiper_pagination"></div>
+            </div>
         </div>
-        <div class="circleTestimonial">
-            <div class="swiper-navBtn"></div>
-            <div class="swiper-navBtn"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-
-    </div>
     </div>
 </div>
 <div class="sectionSeven" id="section01">

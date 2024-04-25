@@ -1255,16 +1255,7 @@
     font-weight: 400;
     color: #FFFFFF;
 }
-/*.testimonialsImg{*/
-/*    width: 100%;*/
-/*    margin-top: 32px;*/
-/*    !* height: 382px; *!*/
-/*    height: 79%!important;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-between;*/
-/*    align-items: start;*/
-/*}*/
+
 .blockTestimonial{
     background-image: url("../images/inactivetestimonial.png");
     background-repeat: no-repeat;
@@ -1327,19 +1318,6 @@
     color: white;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-.testimonialsCircle{
-    width: 143px;
-    height: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.caruselCircleTestimonial{
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 10px;
 }
 .sectionSeven{
     margin-top: -49px;

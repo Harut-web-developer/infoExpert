@@ -16,7 +16,7 @@ $this->registerCssFile('@web/css/user-profile.css');
         <div class="userProfileMoreAboutField">
             <div class="fieldMoreAbout">
                 <span>Let us know more about you</span>
-                <a href="/user-profile/user-create"><img src="/images/user-edit.png" alt=""></a>
+                <a href="/user-profile/user-create"><img src="/images/userAdd.png" alt=""></a>
             </div>
         </div>
     </div>

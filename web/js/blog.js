@@ -3,8 +3,12 @@ const paginatedList = document.getElementById("paginated-list");
 const listItems = paginatedList.querySelectorAll(".card_");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
-
-const paginationLimit = 9;
+var paginationLimit = '';
+if (window.innerWidth > 1024) {
+    paginationLimit = 9;
+}else if (window.innerWidth <= 1024) {
+    paginationLimit = 12;
+}
 let currentPage = 1;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
 

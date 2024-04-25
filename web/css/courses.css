@@ -288,6 +288,7 @@
 }
 .cardMyCourses{
     width: 100%;
+    position: relative;
 }
 .mainCoursesFields{
     width: 80.7%;
