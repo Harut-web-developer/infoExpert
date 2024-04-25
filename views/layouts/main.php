@@ -179,6 +179,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <!--        </div>-->
 <!--    </div>-->
 <!--</footer>-->
+
 <!-- Swiper JS -->
 <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
 <?php $this->endBody() ?>

@@ -5,10 +5,20 @@
     background-repeat: no-repeat;
     padding-top: 158px;
 }
+.sectionAlumni{
+    width: 67%;
+    height: auto;
+    margin: 37px auto 0 auto;
+}
+.alumniDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+}
 .alumniTitle{
-    width: 40%;
-    padding-top: 1%;
-    margin-left: 30%;
     color: #F16D35;
     height: 44px;
     font-family: Inter;
@@ -17,12 +27,10 @@
     line-height: 44px;
     letter-spacing: -0.02em;
     text-align: center;
+    margin-bottom: 19px;
 }
 .alumniTxt{
-    width: 40%;
-    height: 60px;
-    margin-top: 2%;
-    margin-left: 30%;
+    width: 56%;
     font-family: Inter;
     font-size: 20px;
     font-weight: 400;
@@ -30,11 +38,14 @@
     text-align: center;
     color: #FFFFFF;
 }
+.slide-content {
+    height: auto!important;
+}
 .card-content{
     width: 100%;
-    padding: 0 16.8% 101px 16.8%;
-    margin-top: 40px;
-    text-align: center;
+    /*height: auto;*/
+    /*margin: 0 auto;*/
+    overflow: hidden;
 }
 .grid-container{
     display: grid;
@@ -45,14 +56,11 @@
 .card_ {
     position: relative;
     background: #ACCBE6;
-    height: 396px;
-    /* padding: 38px 34px 38px 34px; */
     border-radius: 30px;
-    margin: 25px;
+    padding: 25px;
     box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
     text-align: center;
     border: 1px;
-    /* padding: 38px 34px 38px 34px; */
 }
 .card-image {
     margin-top: 38px;
@@ -91,7 +99,29 @@
     border-right: 100px solid transparent;
 }
 
-
-
-
-
+.swiper {
+    height: auto!important;
+    flex-direction: column!important;
+    display: flex!important;
+    gap: 50px!important;
+}
+.slide-content {
+    height: 500px;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    top: auto;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+    left: 46.5% !important;
+}
+:root {
+    --swiper-theme-color: #F36528!important;
+}
+.swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 15px))!important;
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 15px))!important;
+}
+.swiper-slide{
+    width: 269px!important;
+    hanging-punctuation: 300px!important;
+}

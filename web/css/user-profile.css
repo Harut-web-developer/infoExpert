@@ -3,7 +3,7 @@
 .usersProfile{
     width: 100%;
     height: 1061px;
-    background-image: url("../images/userProfileBg.png");
+    background-image: url("../images/userProfBg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -113,6 +113,10 @@
     border-radius: 50%;
     margin-right: 20px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 .userPhotoFields > img{
     border-radius: 50%;
@@ -171,11 +175,11 @@
     font-weight: 500;
 }
 .userPhotoFields > span{
-    position: absolute;
+    /*position: absolute;*/
     font-family: "Roboto",sans-serif;
     color: white;
     font-size: 23px;
-    margin: 108px 72px;
+    /*margin: 108px 72px;*/
     top: 0;
 }
 .userPhotoFields > span:hover{
@@ -545,5 +549,278 @@
 .editPhoto:hover{
     cursor:pointer;
 }
+@media screen and (max-width: 1600px) {
+    .certificate {
+        justify-content: center;
+    }
+    .cartificateImg {
+         width: auto;
+         height: auto;
+    }
+    .cartificateImg img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 1400px){
+    .userCreateFieldForms {
+        width: 100%;
+        height: auto;
+    }
+    .userCreateFieldForms > form {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .userAchievementsSection {
+        justify-content: flex-start;
+    }
+    .profilBody {
+         padding-top: 70px;
+    }
+    .myCoursesProfileField {
+        width: 330px;
+    }
+    .myCoursesFieldSection {
+        margin: 37px 33px 37px 22px;
+    }
+    .myCoursesFieldSectionLeft > img {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .userProfileMenuField > span {
+        font-size: 32px;
+    }
+}
 
-
+@media screen and (max-width: 1024px) {
+    .userProfileSection, .userCreateField, .userAchievementsSection{
+        width: -webkit-fill-available;
+        margin: 228px 6.9% 0px 6.8%;
+        gap: 56px;
+    }
+    .userProfileMenuField > span {
+        font-size: 32px;
+    }
+    .userProfileMenuField > span{
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29.01px;
+        text-align: left;
+    }
+    .userProfileMenu {
+        width: 400px;
+    }
+    .userProfileMenu > li > a{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .fieldMoreAbout > span{
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    .userAchievementsSection {
+        gap: 70px;
+        align-items: start;
+    }
+    .profilBody {
+        width: 85%;
+        padding-top: 0;
+        align-items: flex-start;
+    }
+    .userProfileMoreAboutField{
+        width: 314.96px;
+        height: 152.46px;
+    }
+    .fieldMoreAbout {
+        margin: 30px auto;
+    }
+    .userCreateFieldForms {
+        width: 79%;
+        height: 686px;
+    }
+    .userCreateFieldForms > form {
+        height: auto;
+        flex-direction: column;
+        margin: 28px auto;
+    }
+    .userPhotoFields {
+        width: 137px;
+        height: 137px;
+        margin-right: 0;
+    }
+    .userPhotoFields > span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .userInputsFields {
+        margin-top: inherit;
+        align-items: center;
+    }
+    .userFormsInput {
+        height: 75px;
+    }
+    .userFormsInput > input {
+        height: 52px;
+    }
+    .cvFileField {
+        height: 52px;
+    }
+    .myCoursesProfileField {
+        width: 203px;
+        height: 264px;
+    }
+    .myCoursesProfileField{
+        margin-right: 0;
+    }
+    .usersProfileInfo {
+        width: 166px;
+        height: auto;
+    }
+    .myCoursesFieldSectionRight img{
+        width: 15.18px;
+        height: 15.18px;
+    }
+    .myCoursesFieldSectionLeft > span{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.41px;
+        text-align: center;
+    }
+    .myCoursesFieldSectionLeft > img{
+        width: 93px;
+        height: 94px;
+    }
+    .myCoursesFieldSection {
+        width: 162px;
+        height: 224px;
+        margin: 22px 35px 34px 17px;
+    }
+    .myCoursesFieldSectionLeft {
+        width: auto;
+        height: 220px;
+    }
+    .usersProfileInfoPhone > span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        margin-left: 16px;
+    }
+    .usersProfileInfoPhone img,
+    .usersProfileInfoEmail img,
+    .usersProfileInfoLinkdin img{
+        width: 22px;
+        height: 22px;
+    }
+    .usersProfileInfoEmail > span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        margin-left: 16px;
+    }
+    .usersProfileInfoLinkdin > span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        margin-left: 16px;
+    }
+    .certificate {
+        width: 317px;
+        height: 300px;
+    }
+    .cartificateImg{
+        width: 317.02px;
+        height: 237.76px;
+    }
+    .certificate span{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.2px;
+        text-align: left;
+    }
+    .cartificateImgTxt img{
+        width: 17.52px;
+        height: 18.69px;
+    }
+    .cartificateImg img {
+        padding: 30.08px 30.84px;
+    }
+    .usersCardHead_ img{
+        width: 133px;
+        height: 134px;
+    }
+    .userAchievementsEditLeft > span{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.41px;
+        text-align: center;
+    }
+    .sameInfo > span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        margin-left: 16px;
+    }
+    .usersCardMain_ img{
+        width: 22px;
+        height: 22px;
+    }
+    .userFormsInput_ > input {
+        height: 52px;
+    }
+    .cvFileFieldEdit {
+        height: 52px;
+    }
+    .userFormsBtn_ > button > span{
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.72px;
+        text-align: left;
+        margin: 15px 38px
+    }
+    .userAchievementsEditLeft {
+        width: 162px;
+        height: 357px;
+    }
+    .usersCardMain_ {
+        width: auto;
+        height: 117px;
+    }
+    .userFormsInput_ {
+        height: 75px;
+    }
+    .userCreateFieldForms_ {
+        width: 75%;
+    }
+    .userCreateFieldForms_ > form {
+        width: 90%;
+    }
+    .attachCvEdit {
+        margin: 18px 0px 18px 17px;
+    }
+    .profilBody_{
+        padding-top: 0;
+    }
+}
+@media screen and (max-width: 730px) {
+    .profilBody {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 680px) {
+    .profilBody {
+        width: 100%;
+    }
+}
