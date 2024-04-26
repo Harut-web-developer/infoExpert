@@ -185,9 +185,10 @@
         margin-top: 24px;
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
     .personelManagement {
         height: 1366px;
+        padding-top: 61px;
     }
     .titleMan{
         font-family: "Roboto Slab",sans-serif;

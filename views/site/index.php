@@ -282,6 +282,8 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 </div>
+<!-- Swiper CSS -->
+<?php  $this->registerCssFile('@web/css/swiper-bundle.min.css'); ?>
 <div class="sectionSix">
     <div class="testimonial">
         <div class="testimonialsTitles">
@@ -429,6 +431,8 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 </div>
+<!-- Swiper JS -->
+<?php  $this->registerJsFile('@web/js/swiper-bundle.min.js'); ?>
 <div class="sectionSeven" id="section01">
     <div class="sectionBlog">
         <span>BLOG</span>

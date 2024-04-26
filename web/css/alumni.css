@@ -7,8 +7,11 @@
 }
 .sectionAlumni{
     width: 67%;
-    height: auto;
+    height: 1050px;
     margin: 37px auto 0 auto;
+}
+.backButton{
+    display: none;
 }
 .alumniDiv{
     display: flex;
@@ -63,7 +66,6 @@
     border: 1px;
 }
 .card-image {
-    margin-top: 38px;
     max-height: 80px;
 }
 .card-image img{
@@ -100,10 +102,16 @@
 }
 
 .swiper {
-    height: auto!important;
+    height: 800px!important;
     flex-direction: column!important;
     display: flex!important;
     gap: 50px!important;
+}
+.swiper-wrapper {
+    height: 90%!important;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    width: auto!important;
 }
 .slide-content {
     height: 500px;
@@ -124,4 +132,76 @@
 .swiper-slide{
     width: 269px!important;
     hanging-punctuation: 300px!important;
+}
+@media screen and (max-width: 1550px) {
+    .alumniTxt {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .alumni {
+        padding-top: 61px;
+    }
+    .sectionAlumni {
+        width: auto;
+        height: 748px;
+        margin: 25px 6.9% 0px 6.8%;
+    }
+    .backButton {
+        width: 40px;
+        height: 40px;
+        display: block;
+        position: absolute;
+    }
+    .alumniDiv {
+        margin-bottom: 28px;
+    }
+    .alumniTitle{
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 44px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin: 0;
+    }
+    .alumniTxt{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+        text-align: center;
+        margin: 0;
+    }
+    .card-image img{
+        width: 61px;
+        height: 60px;
+        border-radius: 40px;
+    }
+    .nameCard{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
+        margin: 0;
+    }
+    .textCard{
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15.23px;
+        text-align: center;
+        height: auto;
+        margin: 0;
+    }
+    .card-info img{
+        width: 20px;
+        height: 20px;
+    }
+    .swiper-slide {
+        width: 203px !important;
+        height: 255px !important;
+        padding: 16px;
+    }
+    .swiper {
+        height: 620px !important;
+    }
 }

@@ -27,9 +27,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?php $this->head() ?>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/mainTablet.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
-
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -289,8 +286,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </div>
     </div>
 </footer>
-<!-- Swiper JS -->
-<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
 <?php $this->endBody() ?>
 </body>
 </html>
