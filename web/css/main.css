@@ -271,7 +271,7 @@
     align-items: center;
 }
 .logoTabletField > a > img{
-    width: 169px;
+    width: 180px;
     height: 40px;
 }
 .tabletMenuField{
@@ -285,7 +285,7 @@
     top:61px;
     z-index: 50;
     right: 0;
-    transition: 1.5s ease all;
+    transition: 500ms ease-in-out;
 }
 .menuTabletActive{
     width: 484px;
@@ -294,7 +294,7 @@
     width: 100%;
     height: 107px;
     background: #79ACAE;
-    box-shadow: 0px 0px 9px 0px #347D81;
+    box-shadow: 0 4px 8px -4px #347D81;
 }
 .personInfoField{
     position: absolute;
@@ -430,6 +430,12 @@
     font-weight: 400;
     line-height: normal;
 }
+.tabletAllCoursesList > span:hover{
+    color: #F36528;
+}
+.tabletMenuNavField > ul > li >a:hover{
+    color: #F36528;
+}
 .tabletAllCoursesList{
     width: 100%;
     height: 19px;
@@ -437,6 +443,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.tabletAllCoursesList:hover{
+    cursor: pointer;
 }
 .tabletAllCoursesList > span{
     color: #FFF;
@@ -530,7 +539,7 @@
     top:61px;
     z-index: 50;
     /*display: none;*/
-    transition: 1.5s ease all;
+    transition: 500ms ease-in-out;
     right: 0;
 }
 .tabletPersonMenuField{
@@ -543,7 +552,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.backMainMenu:hover{
+.tabletPersonMenuField:hover{
     cursor: pointer;
 }
 .tabletPersonMenuField > span{
@@ -587,7 +596,42 @@
     top:61px;
     right: 0;
     z-index: 50;
-    transition: 1.5s ease all;
+    transition: 500ms ease-in-out;
+}
+.tabletProfileCoursesField{
+    width: 283px;
+    height: 143px;
+    position: absolute;
+    margin: 40px 83px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.tabletProfileCoursesField > li > a{
+    text-decoration: none;
+    color: #FFF;
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.tabletProfileCoursesField > li > a:hover{
+    cursor: pointer;
+    color: #F36528;
+}
+.backMainMenuCourses:hover{
+    cursor: pointer;
+}
+.tabletMenuIcon:hover{
+    cursor: pointer;
+}
+.tabletUserProfileMenu:hover{
+    cursor: pointer;
 }
 /*end header css*/
 
@@ -1390,13 +1434,14 @@
     color: #F36528;
 }
 .individualCards{
+    margin: 0px 15px;
     border-radius: 30px;
     width: 377px;
     height: 482px;
 }
-.cardsMiddle{
-    margin: 0px 10px;
-}
+/*.cardsMiddle{*/
+/*    margin: 0px 10px;*/
+/*}*/
 .cardsimg{
     height: 233px;
     width: 100%;

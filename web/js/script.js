@@ -144,13 +144,13 @@ $(document).ready(function () {
     $('body').on('click','.tabletUserProfileMenu', function () {
         $('.personMainMenu').css('width', '484px');
     })
-    $('body').on('click','.backMainMenu', function () {
+    $('body').on('click','.tabletPersonMenuField', function () {
         $('.personMainMenu').css('width', '0px');
     })
     $('body').on('click','.tabletAllCoursesList', function () {
         $('.personCoursesMenuList').css('width', '484px');
     })
-    $('body').on('click','.backMainMenuCourses', function () {
+    $('body').on('click','.tabletPersonMenuField', function () {
         $('.personCoursesMenuList').css('width', '0px');
     })
 })

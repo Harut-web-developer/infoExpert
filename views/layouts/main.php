@@ -137,10 +137,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
             <div class="tabletMenuNavbar">
                 <ul class="tabletProfileCoursesField">
-                    <li><a href="">Profile</a></li>
-                    <li><a href="">Wishlist</a></li>
-                    <li><a href="">My achievements</a></li>
-                    <li><a href="">My card</a></li>
+                    <li><a href="">1C: and Accounting for Beginners</a></li>
+                    <li><a href="">1C: Accounting 8.3</a></li>
+                    <li><a href="">1C: Payroll and personnel management </a></li>
+                    <li><a href="">Trade Management: Marketing,Sales BITRIX / CRM</a></li>
                 </ul>
             </div>
         </div>
@@ -214,81 +214,81 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?= $content ?>
 </main>
 
-<footer class="footerBackground">
-    <div class="sectionFooter">
-        <div class="imagesFooterFields">
-            <div class="leftFooterBg">
-                <div class="footerFields">
-                    <div class="footerLogo">
-                        <img src="/images/footerLogo.png" alt="">
-                    </div>
-                    <div class="leftFooterBlock">
-                        <div class="footerMenu">
-                            <div class="leftMenuFooter">
-                                <ul>
-                                    <li><a href="">About IEA</a></li>
-                                    <li><a href="">Our Methodology</a></li>
-                                    <li><a href="">Contact Us</a></li>
-                                    <li><a href="">Testimonials</a></li>
-                                    <li><a href="">FAQ</a></li>
-                                </ul>
-                            </div>
-                            <div class="rightMenuFooter">
-                                <ul>
-                                    <li><a href="">Courses</a></li>
-                                    <li><a href="">Blog</a></li>
-                                    <li><a href="">Recommendative Quize</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footerConn">
-                            <span>LET`S STAY CONNECTED</span>
-                        </div>
-                        <div class="footerBtn">
-                            <input type="text" name="leftEmail" placeholder="Your Email">
-                            <button>Connect</button>
-                        </div>
-                    </div>
-                    <div class="footerSocial">
-                        <a href=""><img src="/images/in.png" alt=""></a>
-                        <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>
-                        <a href=""><img src="/images/facebook.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="rightFooterBg">
-                <form class="formMail" action="">
-                    <div class="formName">
-                        <span>QUIZE</span>
-                    </div>
-                    <div class="inputsMail" >
-                        <input type="text" name="name" placeholder="Name/Surname">
-                        <input type="text" name="phone" placeholder="Phone number">
-                        <input type="text"  name="email" placeholder="Email">
-                    </div>
-                    <div class="formContinue">
-                        <button>Continue</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="paypalFooter">
-            <span class="copyTextFooter">
-                &copy; Copyright 2023 - Infoexpert Academy
-            </span>
-            <div class="policyText">
-                <ul>
-                    <li><a href="">Privecy Policy</a></li>
-                    <li><a href="">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="payLogoFooter">
-                <img src="/images/visaCardLogo.png" alt="">
-                <img src="/images/masterCardLogo.png" alt="">
-            </div>
-        </div>
-    </div>
-</footer>
+<!--<footer class="footerBackground">-->
+<!--    <div class="sectionFooter">-->
+<!--        <div class="imagesFooterFields">-->
+<!--            <div class="leftFooterBg">-->
+<!--                <div class="footerFields">-->
+<!--                    <div class="footerLogo">-->
+<!--                        <img src="/images/footerLogo.png" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="leftFooterBlock">-->
+<!--                        <div class="footerMenu">-->
+<!--                            <div class="leftMenuFooter">-->
+<!--                                <ul>-->
+<!--                                    <li><a href="">About IEA</a></li>-->
+<!--                                    <li><a href="">Our Methodology</a></li>-->
+<!--                                    <li><a href="">Contact Us</a></li>-->
+<!--                                    <li><a href="">Testimonials</a></li>-->
+<!--                                    <li><a href="">FAQ</a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            <div class="rightMenuFooter">-->
+<!--                                <ul>-->
+<!--                                    <li><a href="">Courses</a></li>-->
+<!--                                    <li><a href="">Blog</a></li>-->
+<!--                                    <li><a href="">Recommendative Quize</a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="footerConn">-->
+<!--                            <span>LET`S STAY CONNECTED</span>-->
+<!--                        </div>-->
+<!--                        <div class="footerBtn">-->
+<!--                            <input type="text" name="leftEmail" placeholder="Your Email">-->
+<!--                            <button>Connect</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="footerSocial">-->
+<!--                        <a href=""><img src="/images/in.png" alt=""></a>-->
+<!--                        <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>-->
+<!--                        <a href=""><img src="/images/facebook.png" alt=""></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="rightFooterBg">-->
+<!--                <form class="formMail" action="">-->
+<!--                    <div class="formName">-->
+<!--                        <span>QUIZE</span>-->
+<!--                    </div>-->
+<!--                    <div class="inputsMail" >-->
+<!--                        <input type="text" name="name" placeholder="Name/Surname">-->
+<!--                        <input type="text" name="phone" placeholder="Phone number">-->
+<!--                        <input type="text"  name="email" placeholder="Email">-->
+<!--                    </div>-->
+<!--                    <div class="formContinue">-->
+<!--                        <button>Continue</button>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="paypalFooter">-->
+<!--            <span class="copyTextFooter">-->
+<!--                &copy; Copyright 2023 - Infoexpert Academy-->
+<!--            </span>-->
+<!--            <div class="policyText">-->
+<!--                <ul>-->
+<!--                    <li><a href="">Privecy Policy</a></li>-->
+<!--                    <li><a href="">Terms & Conditions</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="payLogoFooter">-->
+<!--                <img src="/images/visaCardLogo.png" alt="">-->
+<!--                <img src="/images/masterCardLogo.png" alt="">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
 <!-- Swiper JS -->
 <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
 <?php $this->endBody() ?>

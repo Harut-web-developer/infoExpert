@@ -496,6 +496,27 @@ $this->title = 'My Yii Application';
                     </div>
                 </div>
             </div>
+            <div class="individualCards">
+                <div class="cardsimg">
+                    <img src="/images/blogimg.png" alt="">
+                </div>
+                <div class="cardsText">
+                    <div class="cardsTextField">
+                        <div class="cardsTextInfo">
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                            <div class="cardsDate">
+                                <img src="/images/calendarimg.png" alt="">
+                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                            </div>
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                        </div>
+                        <div class="cardsLike">
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                            <img src="/images/inactiveLike.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="blogsArticles">
             <div class="blogText">Let's discover something interesting</div>
