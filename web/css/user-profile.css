@@ -590,15 +590,9 @@
     }
 }
 @media screen and (max-width: 1100px) {
-    .userProfileMenuField > span {
-        font-size: 32px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
     .userProfileSection, .userCreateField, .userAchievementsSection{
         width: -webkit-fill-available;
-        margin: 228px 6.9% 0px 6.8%;
+        margin: 95px 6.9% 0px 6.8%;
         gap: 56px;
     }
     .userProfileMenuField > span {

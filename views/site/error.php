@@ -13,6 +13,11 @@ $this->title = $name;
     <div class="alert404">
         <span class="span1">404</span>
         <span class="span2">page not found</span>
-        <img src="/images/errorimage.png" alt="">
+        <div class="errorBtnField">
+            <button>
+                <img src="/images/buttonImg1.png" alt="">
+                <span><a class="errorHref" href="/personel-management/index">GO BACK HOME</a></span>
+            </button>
+        </div>
     </div>
 </div>

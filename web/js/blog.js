@@ -4,9 +4,9 @@ const listItems = paginatedList.querySelectorAll(".card_");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 var paginationLimit = '';
-if (window.innerWidth > 1024) {
+if (window.innerWidth > 1100) {
     paginationLimit = 9;
-}else if (window.innerWidth <= 1024) {
+}else if (window.innerWidth <= 1100) {
     paginationLimit = 12;
 }
 let currentPage = 1;

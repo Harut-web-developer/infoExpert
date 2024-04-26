@@ -91,15 +91,18 @@ a.desc:after {
     height: 1100px;
     background-image: url("/images/background-error.png");
     background-repeat: no-repeat;
-    padding-top: 158px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .alert404{
     width: 309px;
     height: 237px;
-    padding-top: 200px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .alert404 .span1{
     font-family: Roboto Slab;
@@ -117,6 +120,70 @@ a.desc:after {
     text-align: left;
     color: var(--50, #D6D6D6);
 }
-.alert404 img{
-    padding-top: 154px;
+.errorBtnField{
+    position: relative;
+    width: max-content;
+    padding-top: 44px;
+    text-align: center;
+}
+.errorBtnField > button{
+    background: transparent;
+    border: none;
+}
+.errorBtnField > button > img{
+    position: relative;
+}
+.errorBtnField > button > span > a{
+    color: #F36528;
+    margin: 25px 26px;
+    position: absolute;
+    left: 0px;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18.2px;
+    text-align: left;
+    text-decoration: none;
+}
+@media screen and (max-width: 1100px) {
+    .siteError {
+        padding-top: 61px;
+        height: 100vh;
+    }
+    .alert404 {
+        height: 140px;
+    }
+    .alert404 .span1 {
+        font-size: 35px;
+        font-weight: 500;
+        line-height: 46.16px;
+        text-align: left;
+    }
+    .alert404 .span2{
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 39.57px;
+        text-align: left;
+    }
+    .alert404 img {
+        width: 105px;
+        height: 43px;
+        padding: 0;
+    }
+    .errorBtnField{
+        width: 93.73px;
+        height: 40px;
+    }
+    .errorBtnField > button > span > a{
+        font-size: 8px;
+        font-weight: 600;
+        line-height: 9.38px;
+        text-align: left;
+        width: max-content;
+        margin: 15px 16px;
+    }
+    .errorBtnField img{
+        width: 93.73px;
+        height: 40px;
+    }
 }

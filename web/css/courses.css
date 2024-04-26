@@ -245,17 +245,18 @@
     background-repeat: no-repeat;
 }
 .myCoursesSection{
-    width: 83%;
+    width: 67%;
+    margin: 0 auto 0 auto;
     height: 694px;
-    position: absolute;
-    margin: 212px 0px 0px 16.5%;
+    padding-top: 212px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    gap: 108px;
 }
 .userProfileMenuField{
-    width: 80.7%;
+    width: 100%;
     height: 53px;
     display: flex;
     flex-direction: row;
@@ -287,11 +288,11 @@
     font-weight: 400;
 }
 .cardMyCourses{
-    width: 100%;
+    width: 881px;
     position: relative;
 }
 .mainCoursesFields{
-    width: 80.7%;
+    width: -webkit-fill-available;
     height: 533px;
     display: flex;
     flex-direction: row;
@@ -314,7 +315,7 @@
     align-items: start;
 }
 .myCoursesFieldAcceptCourses{
-    width: 71%;
+    /*width: 71%;*/
     height: 533px;
     display: grid;
     grid-auto-flow: column;

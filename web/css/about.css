@@ -333,10 +333,10 @@
         width: auto;
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
     .aboutContent {
         width: auto;
-        margin: 228px 6.9% 0px 6.8%;
+        margin: 102px 6.9% 0px 6.8%;
         gap: 20px;
     }
     .aboutContnetTitle{

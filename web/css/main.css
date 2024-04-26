@@ -1268,7 +1268,7 @@
     height: 677px;
     position: absolute;
 }
-.swiper {
+.sectionSix > .swiper {
     height: 560px;
 }
 .slide-content {

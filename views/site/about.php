@@ -112,11 +112,11 @@ $this->registerCssFile('@web/css/about.css');
                 `</div>`;
     }
     $(document).ready(function() {
-        if ($(window).width() > 1024) {
+        if ($(window).width() > 1100) {
             $('.rightContentInfoShapeRight').append(blog());
             $('.leftContentAboutTextBottom').append(blog1());
         }
-        if ($(window).width() <= 1024) {
+        if ($(window).width() <= 1100) {
             $('.blogContent').append(blog());
             $('.rightContentInfoShapeRightValue').append(blog1());
         }
