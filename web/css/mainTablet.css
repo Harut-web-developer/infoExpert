@@ -1487,8 +1487,8 @@
         height: 136px;
         width: 100%;
         background: white;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
     .cardsInfo{
         color: #1C5484;
@@ -1560,6 +1560,411 @@
     /*.blogLine {*/
     /*    width: 45%;*/
     /*}*/
+}
+@media only screen and (min-width: 600px) and (max-width: 659px) {
+    .blogBtn{
+        width: 124px;
+    }
+    .blogLine {
+        width: 22%;
+    }
+    .blogBtn > a > img{
+        width: 123px;
+        height: 48px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 3px 27px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 660px) and (max-width: 709px) {
+    .blogBtn{
+        width: 124px;
+    }
+    .blogLine {
+        width: 28%;
+    }
+    .blogBtn > a > img{
+        width: 123px;
+        height: 48px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 3px 27px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 710px) and (max-width: 749px) {
+    .blogBtn{
+        width: 124px;
+    }
+    .blogLine {
+        width: 33%;
+    }
+    .blogBtn > a > img{
+        width: 123px;
+        height: 48px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 3px 27px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 750px) and (max-width: 829px) {
+    .blogBtn{
+        width: 124px;
+    }
+    .blogLine {
+        width: 37%;
+    }
+    .blogBtn > a > img{
+        width: 123px;
+        height: 48px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 3px 27px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 830px) and (max-width: 949px) {
+    .blogBtn{
+        width: 124px;
+    }
+    .blogLine {
+        width: 42%;
+    }
+    .blogBtn > a > img{
+        width: 123px;
+        height: 48px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 3px 27px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 950px) and (max-width: 1023px) {
+    .blogBtn{
+        width: 124px;
+    }
+    .blogLine {
+        width: 47%;
+    }
+    .blogBtn > a > img{
+        width: 123px;
+        height: 48px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 3px 27px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1099px) {
+    .blogBtn {
+        width: 140px;
+    }
+    .blogLine {
+        width: 28%;
+    }
+    .blogBtn > a > img{
+        width: 140px;
+        height: 55px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 4px 34px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1099px) {
+    .blogBtn {
+        width: 140px;
+    }
+    .blogLine {
+        width: 28%;
+    }
+    .blogBtn > a > img{
+        width: 140px;
+        height: 55px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 4px 34px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1189px) {
+    .blogBtn {
+        width: 140px;
+    }
+    .blogLine {
+        width: 33%;
+    }
+    .blogBtn > a > img{
+        width: 140px;
+        height: 55px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 4px 34px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 1190px) and (max-width: 1279px) {
+    .blogBtn {
+        width: 140px;
+    }
+    .blogLine {
+        width: 38%;
+    }
+    .blogBtn > a > img{
+        width: 140px;
+        height: 55px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 4px 34px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 1280px) and (max-width: 1379px) {
+    .blogBtn {
+        width: 160px;
+    }
+    .blogLine {
+        width: 42%;
+    }
+    .blogBtn > a > img{
+        width: 160px;
+        height: 60px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 4px 45px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 1380px) and (max-width: 1479px) {
+    .blogBtn {
+        width: 160px;
+    }
+    .blogLine {
+        width: 46%;
+    }
+    .blogBtn > a > img{
+        width: 160px;
+        height: 60px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 4px 45px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 1480px) and (max-width: 1559px) {
+    .blogLine {
+        width: 49%;
+    }
+    .blogBtn > a > img{
+        width: 160px;
+        height: 60px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 4px 45px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 1560px) and (max-width: 1659px) {
+    .blogLine {
+        width: 52%;
+    }
+    .blogBtn > a > img{
+        width: 160px;
+        height: 60px;
+    }
+    .blogBtn > a > span {
+        left: 0;
+        position: absolute;
+        margin: 4px 45px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F36528;
+    }
+    .blogText{
+        width: 291px;
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1C5484;
+    }
+}
+@media only screen and (min-width: 1660px) and (max-width: 1790px) {
+    .blogLine {
+        width: 55%;
+    }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1400px) {
     .cardsimg{

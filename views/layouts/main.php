@@ -83,14 +83,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             <span>All courses</span>
                             <img src="/images/menuRightArrow.png" alt="">
                         </li>
-                        <li><a href="">About IEA</a></li>
+                        <li><a href="/site/about">About IEA</a></li>
                         <li><a href="">Our methodology</a></li>
                         <li><a href="">Testimonials</a></li>
-                        <li><a href="">Blog</a></li>
+                        <li><a href="/blog/index">Blog</a></li>
                         <li><a href="">FAQ</a></li>
-                        <li><a href="">Alumni</a></li>
+                        <li><a href="/alumni/index">Alumni</a></li>
                         <li><a href="">Recommendative quize</a></li>
-                        <li><a href="">Contact us</a></li>
+                        <li><a href="/contact-us/index">Contact us</a></li>
                     </ul>
                     <div class="searchFlagField">
                         <div class="tabletSearchField">
@@ -115,12 +115,12 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
             <div class="tabletMenuNavbar">
                 <ul class="tabletProfileMenuField">
-                    <li><a href="">Profile</a></li>
-                    <li><a href="">Wishlist</a></li>
-                    <li><a href="">My achievements</a></li>
-                    <li><a href="">My card</a></li>
-                    <li><a href="">Edit profile</a></li>
-                    <li><a href="">Payment methods</a></li>
+                    <li><a href="/user-profile/index">Profile</a></li>
+                    <li><a href="/wishlist/index">Wishlist</a></li>
+                    <li><a href="user-profile/achievements">My achievements</a></li>
+                    <li><a href="my-card/index">My card</a></li>
+                    <li><a href="/user-profile/achievements-edit">Edit profile</a></li>
+                    <li><a href="/my-card/checkout">Payment methods</a></li>
                     <li><a href="">Log out</a></li>
                 </ul>
             </div>
@@ -136,7 +136,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 <ul class="tabletProfileCoursesField">
                     <li><a href="">1C: and Accounting for Beginners</a></li>
                     <li><a href="">1C: Accounting 8.3</a></li>
-                    <li><a href="">1C: Payroll and personnel management </a></li>
+                    <li><a href="/personel-management/index">1C: Payroll and personnel management </a></li>
                     <li><a href="">Trade Management: Marketing,Sales BITRIX / CRM</a></li>
                 </ul>
             </div>

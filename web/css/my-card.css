@@ -835,3 +835,74 @@
         height: 40px;
     }
 }
+/*tablet of my card page */
+
+@media only screen and (min-width: 1500px) and (max-width: 1609px) {
+    .myCardMainField {
+        width: 94.5%;
+        height: 709px;
+        position: absolute;
+        margin: 212px 0px 0px 5.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .myCoursesProfileField {
+        width: 405px;
+        height: 533px;
+        margin-right: 90px;
+        background: #74A8AB;
+        border-radius: 30px;
+        box-shadow: 0px 0px 6px 2px #549099;
+    }
+    .myCoursesFieldSection {
+        width: 260px;
+        height: 450px;
+        margin: 37px 36px 37px 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .myCoursesBlocksField{
+        width: 330px;
+        height: 481px;
+        margin-right: 60px;
+        border-radius: 30px;
+        background: #74A8AB;
+        box-shadow: 0px 0px 6px 2px #549099;
+    }
+    .myCoursesBlocksFieldMain{
+
+    }
+}
+@media only screen and (min-width: 1610px) and (max-width: 1709px) {
+    .myCardMainField {
+        width: 94.5%;
+        height: 709px;
+        position: absolute;
+        margin: 212px 0px 0px 5.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .myCoursesProfileField {
+        width: 405px;
+        height: 533px;
+        margin-right: 90px;
+        background: #74A8AB;
+        border-radius: 30px;
+        box-shadow: 0px 0px 6px 2px #549099;
+    }
+}
+@media only screen and (min-width: 1710px) and (max-width: 1830px) {
+    .myCardMainField {
+        width: 89.5%;
+        height: 709px;
+        position: absolute;
+        margin: 212px 0px 0px 10.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

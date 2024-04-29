@@ -153,4 +153,13 @@ $(document).ready(function () {
     $('body').on('click','.tabletPersonMenuField', function () {
         $('.personCoursesMenuList').css('width', '0px');
     })
+    // $('body').on('click', function(event){
+    //     let target = $(event.target)
+    //     if (!target.hasClass('tabletMenuIcon')){
+    //         $('.menuTabletHeader').toggleClass('menuTabletActive');
+    //     }
+    //     if (!target.hasClass('menuTabletHeader ')){
+    //         $('.menuTabletHeader').toggleClass('menuTabletActive');
+    //     }
+    // })
 })
