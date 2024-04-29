@@ -5,6 +5,7 @@ $this->registerCssFile('@web/css/courses.css');
 ?>
 <div class="courses">
     <div class="headerCourses">
+        <img class="backButton" src="/images/backButton.png" alt="">
         <div>
             <span class="txt1">Our</span>
             <span class="txt2">Best Courses</span>
@@ -12,7 +13,7 @@ $this->registerCssFile('@web/css/courses.css');
             <span class="txt2">Best of The Instructors</span>
         </div>
     </div>
-    <div class="cardCourses">
+    <div class="cardCourses_">
         <div class="wrapper">
             <ul class="carouselCourses">
                 <li class="cardCourses">
@@ -22,7 +23,7 @@ $this->registerCssFile('@web/css/courses.css');
                             <span class="span1">1C: and Accounting for Beginners</span>
                             <div class="starAndTxt">
                                 <img src="/images/starCourses.png" alt="">
-                                <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;"><span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></span></h1>
+                                <h1 class="span2">xxxxx <span class="amd"><span class="amd">AMD</span></span></h1>
                             </div>
                         </div>
                         <div class="cardCenter">
@@ -36,9 +37,9 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img style="padding-left: 65px; padding-right: 42px" src="/images/courses3.png" alt="">
-                            <img src="/images/courses4.png" alt="">
-                            <img src="/images/courses5.png" alt="">
+                            <img class="footerImg1" src="/images/courses3.png" alt="">
+                            <img class="footerImg2" src="/images/courses4.png" alt="">
+                            <img class="footerImg3" src="/images/courses5.png" alt="">
                         </div>
                     </div>
                 </li>
@@ -49,7 +50,7 @@ $this->registerCssFile('@web/css/courses.css');
                             <span class="span1">1C: Accounting 8:3</span>
                             <div class="starAndTxt">
                                 <img src="/images/starCourses.png" alt="">
-                                <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
+                                <h1 class="span2">xxxxx <span class="amd">AMD</span></h1>
                             </div>
                         </div>
                         <div class="cardCenter">
@@ -63,9 +64,9 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img style="padding-left: 65px; padding-right: 42px" src="/images/courses3.png" alt="">
-                            <img src="/images/courses4.png" alt="">
-                            <img src="/images/courses5.png" alt="">
+                            <img class="footerImg1" src="/images/courses3.png" alt="">
+                            <img class="footerImg2" src="/images/courses4.png" alt="">
+                            <img class="footerImg3" src="/images/courses5.png" alt="">
                         </div>
                     </div>
                 </li>
@@ -76,7 +77,7 @@ $this->registerCssFile('@web/css/courses.css');
                             <span class="span1">1C: Payroll and personnel management</span>
                             <div class="starAndTxt">
                                 <img src="/images/starCourses.png" alt="">
-                                <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
+                                <h1 class="span2">xxxxx <span class="amd">AMD</span></h1>
                             </div>
                         </div>
                         <div class="cardCenter">
@@ -90,9 +91,9 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img style="padding-left: 65px; padding-right: 42px" src="/images/courses3.png" alt="">
-                            <img src="/images/courses4.png" alt="">
-                            <img src="/images/courses5.png" alt="">
+                            <img class="footerImg1" src="/images/courses3.png" alt="">
+                            <img class="footerImg2" src="/images/courses4.png" alt="">
+                            <img class="footerImg3" src="/images/courses5.png" alt="">
                         </div>
                     </div>
                 </li>
@@ -103,7 +104,7 @@ $this->registerCssFile('@web/css/courses.css');
                             <span class="span1">Trade management: marketing, sales BITRIX / CRM</span>
                             <div class="starAndTxt">
                                 <img src="/images/starCourses.png" alt="">
-                                <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
+                                <h1 class="span2">xxxxx <span class="amd">AMD</span></h1>
                             </div>
                         </div>
                         <div class="cardCenter">
@@ -117,9 +118,9 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img style="padding-left: 65px; padding-right: 42px" src="/images/courses3.png" alt="">
-                            <img src="/images/courses4.png" alt="">
-                            <img src="/images/courses5.png" alt="">
+                            <img class="footerImg1" src="/images/courses3.png" alt="">
+                            <img class="footerImg2" src="/images/courses4.png" alt="">
+                            <img class="footerImg3" src="/images/courses5.png" alt="">
                         </div>
                     </div>
                 </li>
@@ -130,7 +131,7 @@ $this->registerCssFile('@web/css/courses.css');
                             <span class="span1">1C: and Accounting for Beginners</span>
                             <div class="starAndTxt">
                                 <img src="/images/starCourses.png" alt="">
-                                <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;"><span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></span></h1>
+                                <h1 class="span2">xxxxx <span class="amd"><span class="amd">AMD</span></span></h1>
                             </div>
                         </div>
                         <div class="cardCenter">
@@ -144,9 +145,9 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img style="padding-left: 65px; padding-right: 42px" src="/images/courses3.png" alt="">
-                            <img src="/images/courses4.png" alt="">
-                            <img src="/images/courses5.png" alt="">
+                            <img class="footerImg1" src="/images/courses3.png" alt="">
+                            <img class="footerImg2" src="/images/courses4.png" alt="">
+                            <img class="footerImg3" src="/images/courses5.png" alt="">
                         </div>
                     </div>
                 </li>
@@ -157,7 +158,7 @@ $this->registerCssFile('@web/css/courses.css');
                             <span class="span1">1C: Accounting 8:3</span>
                             <div class="starAndTxt">
                                 <img src="/images/starCourses.png" alt="">
-                                <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
+                                <h1 class="span2">xxxxx <span class="amd">AMD</span></h1>
                             </div>
                         </div>
                         <div class="cardCenter">
@@ -171,9 +172,9 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img style="padding-left: 65px; padding-right: 42px" src="/images/courses3.png" alt="">
-                            <img src="/images/courses4.png" alt="">
-                            <img src="/images/courses5.png" alt="">
+                            <img class="footerImg1" src="/images/courses3.png" alt="">
+                            <img class="footerImg2" src="/images/courses4.png" alt="">
+                            <img class="footerImg3" src="/images/courses5.png" alt="">
                         </div>
                     </div>
                 </li>
@@ -184,7 +185,7 @@ $this->registerCssFile('@web/css/courses.css');
                             <span class="span1">1C: Payroll and personnel management</span>
                             <div class="starAndTxt">
                                 <img src="/images/starCourses.png" alt="">
-                                <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
+                                <h1 class="span2">xxxxx <span class="amd">AMD</span></h1>
                             </div>
                         </div>
                         <div class="cardCenter">
@@ -198,9 +199,9 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img style="padding-left: 65px; padding-right: 42px" src="/images/courses3.png" alt="">
-                            <img src="/images/courses4.png" alt="">
-                            <img src="/images/courses5.png" alt="">
+                            <img class="footerImg1" src="/images/courses3.png" alt="">
+                            <img class="footerImg2" src="/images/courses4.png" alt="">
+                            <img class="footerImg3" src="/images/courses5.png" alt="">
                         </div>
                     </div>
                 </li>
@@ -211,7 +212,7 @@ $this->registerCssFile('@web/css/courses.css');
                             <span class="span1">Trade management: marketing, sales BITRIX / CRM</span>
                             <div class="starAndTxt">
                                 <img src="/images/starCourses.png" alt="">
-                                <h1 class="span2">xxxxx <span style="font-family: Roboto;font-size: 16px;font-weight: 400;line-height: 18.75px;text-align: left;">AMD</span></h1>
+                                <h1 class="span2">xxxxx <span class="amd">AMD</span></h1>
                             </div>
                         </div>
                         <div class="cardCenter">
@@ -225,9 +226,9 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img style="padding-left: 65px; padding-right: 42px" src="/images/courses3.png" alt="">
-                            <img src="/images/courses4.png" alt="">
-                            <img src="/images/courses5.png" alt="">
+                            <img class="footerImg1" src="/images/courses3.png" alt="">
+                            <img class="footerImg2" src="/images/courses4.png" alt="">
+                            <img class="footerImg3" src="/images/courses5.png" alt="">
                         </div>
                     </div>
                 </li>

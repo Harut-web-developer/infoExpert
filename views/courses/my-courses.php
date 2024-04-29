@@ -19,6 +19,7 @@ $this->registerCssFile('@web/css/courses.css');
                     <div class="myCoursesFieldSectionLeft">
                         <img src="/images/profileimage.png" alt="">
                         <div class="usersProfileInfo">
+                            <span class="nameAndUsername">Ani Martirosian</span>
                             <div class="usersProfileInfoPhone">
                                 <img src="/images/phonAchievements.png" alt="">
                                 <span>369 258 147</span>
