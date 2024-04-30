@@ -139,12 +139,13 @@
 .wrapper2 .carousel2 {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 6));
-    gap: 134px;
+    grid-auto-columns: calc((100% / 4));
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 .carousel2::-webkit-scrollbar {
     display: none;
@@ -513,6 +514,7 @@
     .img img{
         width: 100%;
         height: auto;
+        border-radius: 30px 30px 0 0;
     }
 
     .cardCenter > .cardtxt1{
@@ -928,7 +930,6 @@
     .courses{
         padding-top: 0;
     }
-
     .headerCourses div {
         width: 90%;
     }
@@ -964,12 +965,105 @@
         text-align: left;
     }
     .wrapper2 .carousel2 {
-        grid-auto-columns: calc((100% / 6 - 21px));
+        grid-auto-columns: calc((100% / 4));
+    }
+    .wrapper2 .carousel2 {
+        gap: 0;
+        margin-bottom: 0;
+        padding-left: 0;
     }
     .cardBody2 {
         margin-top: 7px;
     }
     .cardCourses_ {
+        width: auto;
         margin: 40px 6.9% 0px 6.8%;
+        padding-top: 0;
+    }
+    .cardBody .span1{
+        font-family: Roboto Slab;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 14.3px;
+        text-align: left;
+    }
+    .starAndTxt img{
+        width: 44.92px;
+        height: 8.69px;
+    }
+    .cardBody .span2{
+        font-family: Roboto;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 11.72px;
+        text-align: left;
+    }
+    .amd{
+        font-family: Roboto;
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 9.38px;
+        text-align: left;
+    }
+    .cardCenter > .cardtxt1 img {
+        width: 14px;
+        height: 14px;
+    }
+    .cardtxt2 img {
+        width: 14px;
+        height: 14px;
+        margin-right: 6px;
+    }
+    .cardtxt1 span{
+        font-family: Roboto Medium;
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 9.92px;
+        text-align: left;
+        margin-left: 6px;
+    }
+    .cardtxt2 span{
+        font-family: Roboto Medium;
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 9.92px;
+        text-align: left;
+    }
+    .footerImg1{
+        width: 71.73px;
+        height: 30.9px
+    }
+    .footerImg2, .footerImg3 {
+        width: 22px;
+        height: 22px;
+    }
+    .cardCenter {
+        height: 40px;
+    }
+    .cardCoursesBody {
+        height: 150px;
+    }
+    .cardCourses .img{
+        padding: 0;
+    }
+    .carouselCourses {
+        grid-auto-columns: calc((100% / 4));
+    }
+    .carouselCourses .cardCourses {
+        width: 190px;
+    }
+}
+@media screen and (max-width: 950px) {
+    .cardCoursesBody{
+        padding: 10px 11px 10px 11px;
+    }
+    .carouselCourses .cardCourses {
+        width: 180px;
+    }
+    .headerCourses div {
+         width: 100%;
+    }
+    .carouselCourses {
+        grid-auto-columns: calc((100% / 3));
     }
 }
