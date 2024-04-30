@@ -48,7 +48,7 @@
 .profileFieldImg{
     /*display: none;*/
     position: absolute;
-    background-image: url("../images/profileBackground.png");
+    background-image: url("../images/small.png");
     background-size: cover;
     width: 198px;
     height: 138px;
