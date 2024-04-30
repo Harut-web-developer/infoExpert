@@ -162,4 +162,9 @@ $(document).ready(function () {
     //         $('.menuTabletHeader').toggleClass('menuTabletActive');
     //     }
     // })
+    $(".profileUserIcon").hover(function(){
+        $('.profileFieldImg').show();
+    },function(){
+        $('.profileFieldImg').hide();
+    });
 })

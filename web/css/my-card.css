@@ -865,16 +865,28 @@
         align-items: start;
     }
     .myCoursesBlocksField{
-        width: 330px;
+        width: 360px;
         height: 481px;
         margin-right: 60px;
         border-radius: 30px;
         background: #74A8AB;
         box-shadow: 0px 0px 6px 2px #549099;
     }
-    .myCoursesBlocksFieldMain{
-
+    .myCoursesBlocksFieldMain {
+        /*width: 300px;*/
+        height: 444px;
+        margin: 8px 8px 21px 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
+    /*.myCardImageBlock > img{*/
+    /*    width: 295px;*/
+    /*}*/
+    /*.myCardNameRating{*/
+    /*    width: 293px;*/
+    /*}*/
 }
 @media only screen and (min-width: 1610px) and (max-width: 1709px) {
     .myCardMainField {

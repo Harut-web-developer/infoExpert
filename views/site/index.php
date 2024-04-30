@@ -10,7 +10,7 @@ $this->title = 'My Yii Application';
         <span class="applyMarket">27 YEARS IN MARKET</span>
         <span class="boundaries">EDUCATION WITHOUT BOUNDARIES</span>
         <a href="/apply-now/index">
-            <img src="./images/apply.png" alt="">
+            <img src="/images/apply.png" alt="">
             <span>APPLY NOW</span>
         </a>
     </div>

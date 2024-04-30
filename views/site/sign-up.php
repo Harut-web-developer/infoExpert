@@ -35,7 +35,7 @@ $this->registerCssFile('@web/css/login.css');
             </button>
             <div class="signUp">
                 <span>Have an account?</span>
-                <a href="/site/login">Sign In</a>
+                <a href="/login">Sign In</a>
             </div>
         </form>
     </div>

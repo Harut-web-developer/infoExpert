@@ -38,8 +38,24 @@
     justify-content: space-between;
     align-items: center;
 }
-.icons > a{
+.profileField{
+    position: relative;
     margin-left: 24px;
+}
+.profileField:hover{
+    cursor: pointer;
+}
+.profileFieldImg{
+    /*display: none;*/
+    position: absolute;
+    background-image: url("../images/profileBackground.png");
+    background-size: cover;
+    width: 198px;
+    height: 138px;
+    z-index: 10;
+}
+.profileFieldImg > ul{
+    list-style: none;
 }
 .search-box{
     position: relative;
@@ -178,6 +194,7 @@
     left: 0;
     margin: 20px 25px;
 }
+
 .dropDownAbout{
     background-image: url("../images/small.png");
     width: 158px;

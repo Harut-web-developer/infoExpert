@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use Codeception\Lib\Generator\PageObject;
+use Codeception\Verify\Verifiers\VerifyAny;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -32,7 +34,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
-                    'logout' => ['post'],
+//                    'logout' => ['post'],
                 ],
             ],
         ];
@@ -54,6 +56,27 @@ class SiteController extends Controller
         ];
     }
 
+    public function beforeAction($action)
+    {
+//        var_dump(Yii::$app->user->identity);
+        /*if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
+            setcookie('language', 'en', time() + (365 * 24 * 60 * 60));
+            $this->refresh();
+            Yii::$app->end();
+            return false;
+        }
+        $lng = $_COOKIE['language'] ?? 'en';
+        if($lng !== 'am' && $lng !== 'ru' && $lng !== 'en'){
+            setcookie('language', 'en', time() + (365 * 24 * 60 * 60));
+            $this->refresh();
+            Yii::$app->end();
+            return false;
+        }
+        $txt = Texts::find()->select(['text_'.$lng.' as text'])->asArray()->indexBy('slug')->column();
+        $GLOBALS['text'] = $txt;
+        $this->enableCsrfValidation = false;*/
+        return parent::beforeAction($action);
+    }
     /**
      * Displays homepage.
      *
@@ -69,23 +92,32 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
+    public function actionLogin(){
+        $session = Yii::$app->session;
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
 
-        $model->password = '';
+        if($_POST){
+//            echo '<pre>';
+//            var_dump($_POST);
+//            die;
+            if($model->load(Yii::$app->request->post(), '') && $model->login()){
+                if (isset($_POST['rememberme'])){
+                    setcookie('email',Yii::$app->user->identity->email, time()+60 * 5, '/');
+                }
+                $identity = Yii::$app->user->identity;
+                $session->set('user_id',$identity->id);
+                $session->set('user_name',$identity->username);
+                $session->set('user_email',$identity->email);
+
+                return $this->redirect('/');
+            }else{
+                return $this->redirect('/login');
+            }
+        }
         return $this->render('login', [
             'model' => $model,
         ]);
     }
-
     /**
      * Logout action.
      *
@@ -93,8 +125,9 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
+        $this->enableCsrfValidation = false;
+        session_destroy();
         Yii::$app->user->logout();
-
         return $this->goHome();
     }
 

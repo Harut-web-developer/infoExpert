@@ -49,36 +49,38 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         <div class="menuTabletHeader">
             <div class="menuPersonInfo">
                 <div class="personInfoField">
-<!--                    --><?php
-//                    $session = Yii::$app->session;
-//                    if(isset($session)){?>
-                    <div class="personInfoCircle">HH</div>
+                    <?php if(!empty(Yii::$app->user->identity)){
+                        $first_letter = explode(' ' , Yii::$app->user->identity->username);
+                        ?>
+                    <div class="personInfoCircle"><?=$first_letter[0][0].' '.$first_letter[1][0]?></div>
                     <div class="personSignOrInfo">
                         <div class="personNameField">
-                            <span class="personName">Hi, Hovsepyan Harutyun</span>
+                            <span class="personName">Hi,  <?= Yii::$app->user->identity->username ?></span>
                             <span class="personGreetings">Welcome back</span>
                         </div>
                         <img class="tabletUserProfileMenu" src="/images/menuRightArrow.png" alt="">
                     </div>
-<!--                    --><?php //}else{ ?>
-<!--                    <div class="personInfoCircle"></div>-->
-<!--                    <div class="personSignOrInfo">-->
-<!--                        <div class="personSignField">-->
-<!--                            <a href="">sign in</a>-->
-<!--                            <span>or</span>-->
-<!--                            <a href="">sign up</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    --><?php //}?>
+                    <?php }else{ ?>
+                    <div class="personInfoCircle"></div>
+                    <div class="personSignOrInfo">
+                        <div class="personSignField">
+                            <a href="/login">sign in</a>
+                            <span>or</span>
+                            <a href="/signup">sign up</a>
+                        </div>
+                    </div>
+                    <?php }?>
                 </div>
             </div>
             <div class="tabletMenuNavbar">
                 <div class="tabletMenuNavField">
                     <ul>
-                        <li class="tabletCoursesList">
-                            <a href="">My courses</a>
-                            <div class="tabletCoursesUnderline"></div>
-                        </li>
+                        <?php if(!empty(Yii::$app->user->identity)){ ?>
+                            <li class="tabletCoursesList">
+                                <a href="">My courses</a>
+                                <div class="tabletCoursesUnderline"></div>
+                            </li>
+                        <?php }?>
                         <li class="tabletAllCoursesList">
                             <span>All courses</span>
                             <img src="/images/menuRightArrow.png" alt="">
@@ -121,7 +123,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <li><a href="my-card/index">My card</a></li>
                     <li><a href="/user-profile/achievements-edit">Edit profile</a></li>
                     <li><a href="/my-card/checkout">Payment methods</a></li>
-                    <li><a href="">Log out</a></li>
+                    <?php if(!empty(Yii::$app->user->identity)){ ?>
+                        <li><a href="/logout">Log out</a></li>
+                    <?php }?>
                 </ul>
             </div>
         </div>
@@ -153,8 +157,21 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <button class="btn-search"><img src="/images/search.png" alt=""></button>
                         <input type="text" class="input-search" placeholder="Type to Search...">
                     </div>
-<!--                    <img class="searchIcons" src="/images/search.png" alt="">-->
-                    <a href="/user-profile/index"><img src="/images/user.png" alt=""></a>
+<!--                    --><?php
+//                    if (!empty(Yii::$app->user->identity)){?>
+                    <div class="profileField">
+                        <img class="profileUserIcon" src="/images/user.png" alt="">
+                        <div class="profileFieldImg">
+                            <ul>
+                                <li><a href="">My profile</a></li>
+                                <li><a href="">Account security</a></li>
+                                <li><a href="/logout">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+<!--                    --><?php //}else{?>
+<!--                        <a href="/login"><img src="/images/user.png" alt=""></a>-->
+<!--                    --><?php //}?>
                     <div class="flagFields">
                         <img class="mainFlag" src="/images/armflag.png" alt="">
                         <ul class="otherFlags">
