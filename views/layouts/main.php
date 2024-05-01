@@ -157,25 +157,25 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <button class="btn-search"><img src="/images/search.png" alt=""></button>
                         <input type="text" class="input-search" placeholder="Type to Search...">
                     </div>
-<!--                    --><?php
-//                    if (!empty(Yii::$app->user->identity)){?>
                     <div class="profileField">
                         <img class="profileUserIcon" src="/images/user.png" alt="">
                         <div class="profileFieldImg">
                             <ul>
-                                <li><a href="">My profile</a></li>
+                                <?php if (!empty(Yii::$app->user->identity)){?>
+                                    <li><a href="/user-profile/index">My profile</a></li>
+                                <?php }else{?>
+                                    <li><a href="/login">Sign in</a></li>
+                                <?php }?>
                                 <li><a href="">Account security</a></li>
-                                <li><a href="/logout">Sign out</a></li>
+                                <?php if (!empty(Yii::$app->user->identity)){?>
+                                    <li><a href="/logout">Sign out</a></li>
+                                <?php }?>
                             </ul>
                         </div>
                     </div>
-<!--                    --><?php //}else{?>
-<!--                        <a href="/login"><img src="/images/user.png" alt=""></a>-->
-<!--                    --><?php //}?>
                     <div class="flagFields">
                         <img class="mainFlag" src="/images/armflag.png" alt="">
                         <ul class="otherFlags">
-                            <li><img class="armFlag" src="/images/armflag.png" alt=""></li>
                             <li><img class="usaFlag" src="/images/usaflag.png" alt=""></li>
                             <li><img class="ruFlag" src="/images/ruflag.png" alt=""></li>
                         </ul>

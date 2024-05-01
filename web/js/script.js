@@ -96,21 +96,43 @@ if (window.location.pathname == '/'){
     });
 }
 $(document).ready(function () {
+
     $('body').on('click', '.mainFlag', function () {
         $(this).closest('.flagFields').find('.otherFlags').toggle();
-    })
-    $('body').on('click', '.armFlag', function () {
-        $(this).closest('.flagFields').children('img').attr('src', '/images/armflag.png');
-        $(this).closest('.flagFields').find('.otherFlags').css('display', 'none');
-    })
-    $('body').on('click', '.ruFlag', function () {
-        $(this).closest('.flagFields').children('img').attr('src', '/images/ruflag.png');
-        $(this).closest('.flagFields').find('.otherFlags').css('display', 'none');
-    })
-    $('body').on('click', '.usaFlag', function () {
-        $(this).closest('.flagFields').children('img').attr('src', '/images/usaflag.png');
-        $(this).closest('.flagFields').find('.otherFlags').css('display', 'none');
-    })
+    });
+
+    $('body').on('click', '.usaFlag, .ruFlag', function () {
+        var $flagFields = $(this).closest('.flagFields');
+        var $mainFlag = $flagFields.children('.mainFlag');
+        var $clickedFlag = $(this).closest('li').find('img');
+
+        // Swap src attributes
+        var tempSrc = $mainFlag.attr('src');
+        $mainFlag.attr('src', $clickedFlag.attr('src'));
+        $clickedFlag.attr('src', tempSrc);
+
+        // Move clicked flag to first position
+        $flagFields.find('.otherFlags').prepend($(this).closest('li'));
+
+        // Hide otherFlags
+        $flagFields.find('.otherFlags').hide();
+    });
+
+    // $('body').on('click', '.mainFlag', function () {
+    //     $(this).closest('.flagFields').find('.otherFlags').toggle();
+    // })
+    // $('body').on('click', '.armFlag', function () {
+    //     $(this).closest('.flagFields').children('img').attr('src', '/images/armflag.png');
+    //     $(this).closest('.flagFields').find('.otherFlags').css('display', 'none');
+    // })
+    // $('body').on('click', '.ruFlag', function () {
+    //     $(this).closest('.flagFields').children('img').attr('src', '/images/ruflag.png');
+    //     $(this).closest('.flagFields').find('.otherFlags').css('display', 'none');
+    // })
+    // $('body').on('click', '.usaFlag', function () {
+    //     $(this).closest('.flagFields').children('img').attr('src', '/images/usaflag.png');
+    //     $(this).closest('.flagFields').find('.otherFlags').css('display', 'none');
+    // })
 })
 if (window.location.pathname == '/') {
     const scrollTop = function () {
@@ -140,6 +162,8 @@ if (window.location.pathname == '/') {
 $(document).ready(function () {
     $('body').on('click','.tabletMenuIcon', function () {
         $('.menuTabletHeader').toggleClass('menuTabletActive');
+        $('.personMainMenu').css('width', '0px');
+        $('.personCoursesMenuList').css('width', '0px');
     })
     $('body').on('click','.tabletUserProfileMenu', function () {
         $('.personMainMenu').css('width', '484px');
@@ -153,18 +177,24 @@ $(document).ready(function () {
     $('body').on('click','.tabletPersonMenuField', function () {
         $('.personCoursesMenuList').css('width', '0px');
     })
-    // $('body').on('click', function(event){
-    //     let target = $(event.target)
-    //     if (!target.hasClass('tabletMenuIcon')){
-    //         $('.menuTabletHeader').toggleClass('menuTabletActive');
-    //     }
-    //     if (!target.hasClass('menuTabletHeader ')){
-    //         $('.menuTabletHeader').toggleClass('menuTabletActive');
-    //     }
-    // })
-    $(".profileUserIcon").hover(function(){
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.menuTabletHeader').length && !$(event.target).closest('.personMainMenu').length &&
+            !$(event.target).closest('.personCoursesMenuList').length &&
+            !$(event.target).hasClass('tabletMenuIcon')) {
+            $('.menuTabletHeader').removeClass('menuTabletActive');
+            $('.personMainMenu').css('width', '0px');
+            $('.personCoursesMenuList').css('width', '0px');
+        }
+    });
+
+    $('.tabletMenuIcon').on('click', function(event) {
+        event.stopPropagation(); // Prevents the event from bubbling up to the document
+        $('.menuTabletHeader').toggleClass('menuTabletActive');
+    });
+    $(".profileField").hover(function(){
         $('.profileFieldImg').show();
     },function(){
         $('.profileFieldImg').hide();
     });
+
 })
