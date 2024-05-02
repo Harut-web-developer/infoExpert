@@ -51,8 +51,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 <div class="personInfoField">
                     <?php if(!empty(Yii::$app->user->identity)){
                         $first_letter = explode(' ' , Yii::$app->user->identity->username);
-                        ?>
-                    <div class="personInfoCircle"><?=$first_letter[0][0].' '.$first_letter[1][0]?></div>
+                        if (count($first_letter) > 1){?>
+                            <div class="personInfoCircle"><?=$first_letter[0][0].' '.$first_letter[1][0]?></div>
+                        <?php }else{?>
+                            <div class="personInfoCircle"><?=$first_letter[0][0]?></div>
+                        <?php }?>
                     <div class="personSignOrInfo">
                         <div class="personNameField">
                             <span class="personName">Hi,  <?= Yii::$app->user->identity->username ?></span>
@@ -158,20 +161,19 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <input type="text" class="input-search" placeholder="Type to Search...">
                     </div>
                     <div class="profileField">
-                        <img class="profileUserIcon" src="/images/user.png" alt="">
-                        <div class="profileFieldImg">
-                            <ul>
-                                <?php if (!empty(Yii::$app->user->identity)){?>
+                        <?php if (empty(Yii::$app->user->identity)){?>
+                            <a href="/login"><img class="profileUserIcon" src="/images/user.png" alt=""></a>
+                        <?php }else{?>
+                            <img class="profileUserIcon" src="/images/user.png" alt="">
+                            <div class="profileFieldImg">
+                                <ul>
                                     <li><a href="/user-profile/index">My profile</a></li>
-                                <?php }else{?>
-                                    <li><a href="/login">Sign in</a></li>
-                                <?php }?>
-                                <li><a href="">Account security</a></li>
-                                <?php if (!empty(Yii::$app->user->identity)){?>
+                                    <li><a href="">Account security</a></li>
                                     <li><a href="/logout">Sign out</a></li>
-                                <?php }?>
-                            </ul>
-                        </div>
+                                </ul>
+                            </div>
+                        <?php }?>
+
                     </div>
                     <div class="flagFields">
                         <img class="mainFlag" src="/images/armflag.png" alt="">

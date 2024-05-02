@@ -2,8 +2,10 @@
 
 namespace app\controllers;
 
+use app\models\User;
 use Codeception\Lib\Generator\PageObject;
 use Codeception\Verify\Verifiers\VerifyAny;
+use PharIo\Manifest\ElementCollection;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -95,11 +97,7 @@ class SiteController extends Controller
     public function actionLogin(){
         $session = Yii::$app->session;
         $model = new LoginForm();
-
         if($_POST){
-//            echo '<pre>';
-//            var_dump($_POST);
-//            die;
             if($model->load(Yii::$app->request->post(), '') && $model->login()){
                 if (isset($_POST['rememberme'])){
                     setcookie('email',Yii::$app->user->identity->email, time()+60 * 5, '/');
@@ -161,11 +159,47 @@ class SiteController extends Controller
 
     public function actionSignUp()
     {
-        return $this->render('sign-up');
+        $model = new User();
+        if($this->request->isPost) {
+            $post = Yii::$app->request->post();
+            $password = $post['User']['password'];
+            $hash = Yii::$app->getSecurity()->generatePasswordHash($password);
+            $existingUser = User::findOne(['email' => $post['User']['email']]);
+            if ($existingUser !== null) {
+                Yii::$app->session->setFlash('error', 'This email is already registered.');
+                return $this->refresh();
+            }
+            if ($model->load($post)) {
+                $model->password = $hash;
+                $model->auth_key = $this->generateRandomString();
+                if($model->save()){
+                    $log_model = new LoginForm();
+                    $log_model->email = $model->email;
+                    $log_model->password = $post['User']['password'];
+                    if($log_model->login()){
+                        return $this->redirect('/');
+                    }else{
+                        return $this->redirect('/signup');
+                    }
+                }
+            }
+        }
+        return $this->render('sign-up', [
+            'model' => $model,
+        ]);
     }
 
     public function actionTest()
     {
         return $this->render('test');
+    }
+    public function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[random_int(0, $charactersLength - 1)];
+        }
+        return $randomString;
     }
 }

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.errorText{
+    color: red;
+}
 .login {
     width: 100%;
     height: 1088px;
@@ -28,8 +31,8 @@
 }
 .mainTextCircle{
     width: 285px;
-    height: 202px;
-    margin: 157px 107px;
+    height: 185px;
+    margin: 168px 107px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -112,7 +115,7 @@
     border: none;
     border-radius: 30px;
     padding: 0px 16px;
-    color: white;
+    color: #D9E3E4;
     font-family: "Roboto",sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -120,15 +123,11 @@
     outline: none;
 }
 .passEye > input::placeholder{
-    color: white;
+    color: #D9E3E4;
     font-family: "Roboto",sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-}
-.signinMenu > img{
-    /*position: absolute;*/
-    /*right: 0;*/
 }
 .signinMenu > input{
     width: 100%;
@@ -137,7 +136,7 @@
     border: none;
     border-radius: 30px;
     padding: 0px 16px;
-    color: white;
+    color: #D9E3E4;
     font-family: "Roboto",sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -145,7 +144,7 @@
     outline: none;
 }
 .signinMenu > input::placeholder{
-    color: white;
+    color: #D9E3E4;
     font-family: "Roboto",sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -258,7 +257,7 @@
     border: none;
     border-radius: 30px;
     padding: 0px 16px;
-    color: white;
+    color: #D9E3E4;
     font-family: "Roboto",sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -266,7 +265,7 @@
     outline: none;
 }
 .signupMenu > input::placeholder{
-    color: white;
+    color: #D9E3E4;
     font-family: "Roboto",sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -310,7 +309,7 @@
     margin: 22px 54px;
     position: absolute;
     left: 0;
-    color: #F36528;
+    color: #D9E3E4;
     font-family: "Roboto",sans-serif;
     font-size: 13px;
     font-style: normal;
@@ -444,7 +443,7 @@
         border: none;
         border-radius: 30px;
         padding: 0px 20px;
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto", sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -453,7 +452,7 @@
     }
 
     .passEye > input::placeholder {
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto", sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -467,7 +466,7 @@
         border: none;
         border-radius: 30px;
         padding: 0px 20px;
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto", sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -476,7 +475,7 @@
     }
 
     .signinMenu > input::placeholder {
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto", sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -579,7 +578,7 @@
         border: none;
         border-radius: 30px;
         padding: 0px 20px;
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto", sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -589,7 +588,7 @@
     }
 
     .signupMenu > input::placeholder {
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto", sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -723,7 +722,7 @@
         border: none;
         border-radius: 30px;
         padding: 0px 20px;
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -731,7 +730,7 @@
         outline: none;
     }
     .passEye > input::placeholder{
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -747,7 +746,7 @@
         border: none;
         border-radius: 30px;
         padding: 0px 20px;
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -755,7 +754,7 @@
         outline: none;
     }
     .signinMenu > input::placeholder{
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -807,7 +806,7 @@
         margin: 13px 29px;
         position: absolute;
         left: 0;
-        color: #F36528;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -862,7 +861,7 @@
         border: none;
         border-radius: 30px;
         padding: 0px 16px;
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -870,7 +869,7 @@
         outline: none;
     }
     .signupMenu > input::placeholder{
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -955,7 +954,7 @@
         border: none;
         border-radius: 30px;
         padding: 0px 20px;
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -963,7 +962,7 @@
         outline: none;
     }
     .passEye > input::placeholder{
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -976,7 +975,7 @@
         border: none;
         border-radius: 30px;
         padding: 0px 20px;
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -984,7 +983,7 @@
         outline: none;
     }
     .signinMenu > input::placeholder{
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -997,7 +996,7 @@
         border: none;
         border-radius: 30px;
         padding: 0px 16px;
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;
@@ -1005,7 +1004,7 @@
         outline: none;
     }
     .signupMenu > input::placeholder{
-        color: white;
+        color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
         font-style: normal;

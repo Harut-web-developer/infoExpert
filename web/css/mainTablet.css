@@ -69,6 +69,7 @@
         z-index: 10;
     }
     .boundaries{
+        margin-bottom: 15px;
         font-family: "Roboto",sans-serif;
         width: 100%;
         color: white;
@@ -86,13 +87,12 @@
     }
     .apply > a > span{
         position: absolute;
-        left: 0;
+        left: 24px;
+        top: 17px;
         font-family: "Roboto",sans-serif;
         font-size: 12px;
         color: #F36528;
         font-weight: 900;
-        /*letter-spacing: 1.35px;*/
-        margin: 16px 13px;
     }
     .sectionTwo{
         background-image: url("../images/diagonalTablet.png");
@@ -182,9 +182,9 @@
         font-family: "Roboto",sans-serif;
         font-size: 12px;
         font-weight: 900;
-        left: 0;
+        left: 17px;
+        top: 4px;
         color: #F36528;
-        margin: 20px 17px;
     }
     .coursesBg{
         background-image: url("../images/recTablet.png");
@@ -408,9 +408,9 @@
         font-family: "Roboto",sans-serif;
         font-size: 10px;
         font-weight: 900;
-        left: 0;
+        left: 8px;
+        top: 6px;
         color: #F36528;
-        margin: 18px 8px;
     }
 }
 @media only screen and (min-width: 540px) and (max-width: 670px) {
@@ -513,9 +513,9 @@
         font-family: "Roboto",sans-serif;
         font-size: 15px;
         font-weight: 900;
-        left: 0;
+        left: 24px;
+        top: 4px;
         color: #F36528;
-        margin: 27px 24px;
     }
 }
 @media only screen and (min-width: 1301px) and (max-width: 1660px) {
@@ -596,9 +596,9 @@
         font-family: "Roboto",sans-serif;
         font-size: 15px;
         font-weight: 900;
-        left: 0;
+        left: 37px;
+        top: 4px;
         color: #F36528;
-        margin: 32px 37px;
     }
 }
 

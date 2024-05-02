@@ -15,7 +15,7 @@ if (isset($_COOKIE['email'])){
     <div class="loginField">
         <div class="textCircle">
             <div class="mainTextCircle">
-                <div class="circleTextTop">UP YOUR <span>SKILLS</span> TO <span>ADVANCE</span> YOUR <span>CAREER</span> PATH</div>
+                <div class="circleTextTop">Up Your <span>Skills</span> To <span>Advance</span> Your <span>Career</span> Path</div>
                 <div class="circleTextBottom">Just a couple of clicks and we start</div>
             </div>
         </div>

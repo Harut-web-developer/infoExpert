@@ -196,5 +196,16 @@ $(document).ready(function () {
     },function(){
         $('.profileFieldImg').hide();
     });
+    $('#checkboxSignIn').change(function(){
+        let submitButton = $('#submitButton');
+        let signupButtonText = $('#signupButtonText');
 
+        if ($(this).prop('checked')) {
+            submitButton.prop('disabled', false);
+            signupButtonText.css('color', '#F36528');
+        } else {
+            submitButton.prop('disabled', true);
+            signupButtonText.css('color', '#D9E3E4');
+        }
+    });
 })
