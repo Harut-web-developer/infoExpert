@@ -58,7 +58,7 @@ $this->registerCssFile('@web/css/my-card.css');
                     </div>
                 </div>
                 <div class="checkoutInputsSecondField">
-                    <span>Payment method</span>
+                    <span>Order Details</span>
                     <div class="checkoutDetalisCoursesField">
                         <div class="courseManualPriceField">
                             <div class="courseManualPriceFieldInfo">

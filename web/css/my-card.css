@@ -4,16 +4,21 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 1193px;
+    height: 1250px;
+
 }
-.myCardMainField{
-    width: 83.5%;
-    height: 709px;
-    position: absolute;
-    margin: 212px 0px 0px 16.5%;
+.myCardContent{
+    padding-top: 235px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 99px;
+}
+.myCardMainField{
+    width: 68%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 108px;
 }
 .myCardMainField ul{
     padding-left: 0rem!important;
@@ -21,11 +26,8 @@
 .totalPriceField{
     width: 100%;
     height: 90px;
-    position: absolute;
-    margin: 1006px 0px 0px 0px;
     background: #74A8AB;
     box-shadow: 0px 0px 6px 2px #549099;
-
 }
 .myCardTotalPrice{
     width: 376px;
@@ -57,7 +59,7 @@
     text-decoration: underline;
     color: white;
 }
-.myCardTotalPrice > button > span{
+.myCardTotalPrice > button > a{
     position: absolute;
     left: 0;
     margin: 13px 23px;
@@ -65,9 +67,10 @@
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     color: #F36528;
+    text-decoration: none;
 }
 .userProfileMenuField{
-    width: 80.2%;
+    width: auto;
     height: 53px;
     display: flex;
     flex-direction: row;
@@ -99,17 +102,17 @@
     font-weight: 400;
 }
 .myCardFields{
-    width: 80.5%;
+    width: 100%;
     height: 547px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .cardCourses{
-    width: 80%;
+    width: 61%;
 }
 .myCoursesProfileField{
-    width: 405px;
+    width: calc(34% - 20px);
     height: 533px;
     margin-right: 60px;
     background: #74A8AB;
@@ -117,16 +120,14 @@
     box-shadow: 0px 0px 6px 2px #549099;
 }
 .myCoursesFieldSection{
-    width: 291px;
     height: 459px;
     margin: 37px 36px 37px 78px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: start;
 }
 .myCoursesFieldSectionLeft{
-    width: 250px;
+    width: 100%;
     height: 459px;
     display: flex;
     flex-direction: column;
@@ -158,6 +159,9 @@
     color: white;
 
 }
+.usersProfileInfoEmail{
+    display: flex;
+}
 .usersProfileInfoEmail > span{
     font-family: "Roboto",sans-serif;
     margin-left: 37px;
@@ -172,7 +176,7 @@
     color: white;
 }
 .myCardFieldAcceptCourses{
-    width: 81%;
+    width: calc(100% - 5px);
     height: 547px;
     display: grid;
     grid-auto-flow: column;
@@ -184,7 +188,7 @@
     scrollbar-width: none;
 }
 .myCardBlocksField{
-    width: 377px;
+    width: calc(100% - 20px);
     height: 99%;
     margin-right: 45px;
     display: flex;
@@ -196,7 +200,7 @@
     user-select: none;
 }
 .myCoursesBlocksField{
-    width: 377px;
+    width: calc(100%);
     height: 481px;
     margin-right: 60px;
     border-radius: 30px;
@@ -204,12 +208,11 @@
     box-shadow: 0px 0px 6px 2px #549099;
 }
 .myCardBlockButtons{
-    width: 270px;
+    width: calc(100%);
     height: 23px;
-    margin-left: 53px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 .myCardBlockButtons > span{
@@ -223,7 +226,7 @@
     cursor: pointer;
 }
 .myCoursesBlocksFieldMain{
-    width: 344px;
+    /*width: 344px;*/
     height: 444px;
     margin: 16px 16px 21px 16px;
     display: flex;
@@ -236,22 +239,24 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 344px;
-    height: 257px;
+    width: calc(100%);
+    height: 60%;
+    gap: 10px;
 }
 .myCardImageBlock > img{
-    width: 344px;
-    height: 214px;
+    width: 100%;
+    height: auto;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
 }
 .myCardNameRating{
-    width: 305px;
-    height: 26px;
+    width: calc(100%);
+    height: max-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    padding: 0 16px;
 }
 .myCardNameRating > span{
     font-family: "Roboto slab", sans-serif;
@@ -259,31 +264,34 @@
     color: white;
     font-weight: 500;
 }
-.myCardNameRating > div{
+.starDiv{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 .myCardBlockInfo{
-    width: 312px;
-    height: 133px;
+    width: calc(100%);
+    height: max-content;
     margin: 0px 16px;
+    padding: 0 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 16px;
 }
 .myCardInfoTextIcon{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    width: 312px;
-    height: 73px;
+    width: calc(100%);
+    gap: 9px;
+    /*height: 73px;*/
 }
 .myCardInfoTextIconFirst{
-    width: 223px;
-    height: 40px;
+    /*width: 223px;*/
+    /*height: 40px;*/
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -291,6 +299,8 @@
 }
 .myCardInfoTextIconFirst > img{
     margin-right: 11px;
+    width: 28px;
+    height: 28px;
 }
 .myCardInfoTextIconFirst > span{
     color: white;
@@ -299,21 +309,22 @@
     font-weight: 500;
 }
 .myCardInfoTextIconSecond{
-    width: 312px;
-    height: 28px;
+    display: flex;
 }
 .myCardInfoTextIconSecond > span{
     color: white;
     font-size: 16px;
     font-family: "Roboto Medium", sans-serif;
     font-weight: 500;
-
+    display: block;
 }
 .myCardInfoTextIconSecond > img{
     margin-right: 11px;
+    width: 28.09px;
+    height: 28.09px;
 }
 .myCardInfoButtonField{
-    width: 312px;
+    width: calc(100%);
     height: 48px;
     display: flex;
     flex-direction: row;
@@ -359,7 +370,7 @@
 }
 .checkoutFieldSection{
     width: 67%;
-    height: 561px;
+    height: 580px;
     margin: 212px 16.5% 0px;
     position: absolute;
     display: flex;
@@ -407,18 +418,35 @@
 .checkoutInputsSectionRightField{
     width: 405px;
     height: 213px;
+    /*margin-top: 54px;*/
     border-radius: 20px;
     background: #74A8AB;
 }
 .checkoutInputsFirstField{
     width: 100%;
-    height: 215px;
+    height: 216px;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*gap: 26px;*/
 }
 .checkoutInputsFirstField > span{
     font-family: 'Roboto',sans-serif;
     font-size: 35px;
     font-weight: 600;
     color: white;
+    display: block;
+    margin-bottom: 26px;
+}
+.checkoutCheckboxCreditField{
+    display: flex;
+    gap: 10px;
+    padding-top: 11px;
+    text-align: center;
+    align-items: center;
+}
+.checkoutCheckboxCreditField > input{
+    width: 25px;
+    height: 25px;
 }
 .checkoutInputsSecondField{
     width: 100%;
@@ -475,6 +503,7 @@
 .checkoutInputsRadioField{
     width: 514px;
     height: 138px;
+    display: flex;
     border-radius: 20px;
     background: #74A8AB;
 }
@@ -557,7 +586,7 @@
     height: 98px;
     /*height: 522px;*/
     margin: 20px 13px;
-    position: absolute;
+    /*position: absolute;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -644,6 +673,7 @@
     margin-top: 30px;
     /*display: flex;*/
     flex-direction: column;
+    gap: 11px;
     justify-content: space-between;
 
 }
@@ -683,7 +713,8 @@
     align-items: center;
 }
 .checkoutInputLeftField{
-    width: 283px;
+    /*width: 283px;*/
+    width: 45%;
     height: 92px;
     display: flex;
     flex-direction: column;
@@ -710,7 +741,8 @@
     color: white;
 }
 .checkoutInputRightField{
-    width: 174px;
+    /*width: 174px;*/
+    width: 45%;
     height: 92px;
     display: flex;
     flex-direction: column;
@@ -805,7 +837,348 @@
     text-align: left;
     text-decoration: none;
 }
+.myCardImageBlock .span2_2{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.13px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.myCardImageBlock .spanAmd{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: left;
+}
+/*tablet of my card page */
+@media screen and (max-width: 1800px) {
+    .myCoursesFieldSection {
+        margin: 36px 36px 37px 55px;
+    }
+    .myCardBlockInfo {
+        gap: 16px;
+    }
+}
+@media screen and (max-width: 1700px) {
+    .myCardImageBlock {
+        height: 52%;
+    }
+    .myCardBlockInfo {
+        align-items: end;
+    }
+    .myCardInfoButtonField {
+        width: calc(80%);
+        gap: 19px;
+    }
+    .myCardInfoButtonField > button {
+         margin-left: 0;
+    }
+    .myCoursesFieldSection {
+        margin: 36px 36px 37px 45px;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .myCoursesFieldSection {
+        margin: 36px 36px 37px 45px;
+    }
+    .myCardBlockInfo {
+        gap: 16px;
+    }
+    .btnGroupLikeMarket {
+        gap: 10px;
+    }
+    .btnGroupLikeMarket img{
+        width: 34px;
+        height: 34px;
+    }
+    .myCardInfoButtonField > button > span {
+        margin: 10px 16px;
+        font-size: 13px;
+    }
+    .myCardInfoButtonField > button > img{
+        width: 87px;
+        height: 39px;
+    }
+    .myCardImageBlock .span2_2 {
+        font-size: 20px;
+    }
+    .myCardImageBlock .spanAmd {
+        font-size: 13px;
+    }
+    .starDiv img{
+        width: 15px;
+        height: 15px;
+    }
+    .myCardNameRating > span {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .myCardBlockButtons > span {
+        font-size: 17px;
+    }
+    .myCardBlocksField {
+        height: 92%;
+    }
+    .myCoursesBlocksFieldMain {
+        height: 420px;
+    }
+    .myCoursesBlocksField {
+        height: 460px;
+    }
+    .myCoursesFieldSectionLeft > img {
+        width: 200px;
+        height: 200px;
+    }
+    .myCoursesFieldSectionLeft {
+        height: 420px;
+    }
+    .myCoursesProfileField {
+        height: 503px;
+    }
+    .myCoursesFieldSection {
+        margin: 36px 36px 37px 35px;
+    }
+    .myCoursesFieldSectionRight img{
+        width: 22px;
+        height: 22px;
+        position: relative;
+        left: -17px;
+    }
+    .myCardImageBlock .span2_2{
+        font-size: 17px;
+        line-height: 18.13px;
+    }
+    .checkoutInputsRadioField {
+        width: 400px;
+    }
+    .checkoutInputsSectionLeftField {
+        width: 400px;
+    }
+    .checkoutCreditOtherField {
+        width: 94%;
+    }
+    /*.checkoutInputRightField {*/
+    /*    width: 45%;*/
+    /*}*/
+    /*.checkoutInputLeftField {*/
+    /*    width: 45%;*/
+    /*}*/
+}
+@media screen and (max-width: 1400px) {
+    .myCardFields {
+        height: 440px;
+    }
+    .myCoursesFieldSectionLeft > img {
+        width: 130px;
+        height: 130px;
+    }
+    .myCoursesProfileField {
+        height: 420px;
+    }
+    .myCoursesFieldSectionLeft {
+        height: 350px;
+    }
+    .myCoursesFieldSectionLeft > span {
+        font-size: 17px;
+    }
+    .usersProfileInfoLinkdin{
+        display: flex;
+    }
+    .usersProfileInfoPhone > span ,
+    .usersProfileInfoEmail > span ,
+    .usersProfileInfoLinkdin > span {
+        font-size: 17px;
+        margin-left: 30px;
+    }
+    .usersProfileInfoPhone img,
+    .usersProfileInfoEmail img,
+    .usersProfileInfoLinkdin img{
+        width: 25px;
+        height: 25px;
+    }
+    .usersProfileInfo {
+        width: 100%;
+    }
+    .myCardInfoTextIconFirst > img {
+        margin-right: 11px;
+        width: 18px;
+        height: 18px;
+    }
+    .myCardInfoTextIconSecond > img {
+        width: 18px;
+        height: 18px;
+    }
+    .myCardNameRating > span {
+        color: white;
+        font-family: Roboto Slab;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14.3px;
+        text-align: left;
+    }
+    .myCardNameRating img{
+        width: 14px;
+        height: 14px;
+    }
+    .myCardInfoTextIconFirst > span ,
+    .myCardInfoTextIconSecond > span{
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 12.92px;
+        text-align: left;
+    }
+    .myCoursesBlocksField {
+        height: 370px;
+    }
+    .myCoursesBlocksFieldMain {
+        height: 350px;
+    }
+    .myCardInfoTextIcon {
+        gap: 10px;
+    }
+    .btnGroupLikeMarket img {
+        width: 25px;
+        height: 25px;
+    }
+    .myCardInfoButtonField > button > img {
+        width: 75px;
+        height: 33px;
+    }
+    .myCardInfoButtonField > button > span {
+        margin: 7px 14px;
+        font-size: 12px;
+    }
+    .myCoursesBlocksFieldMain {
+        justify-content: space-around;
+    }
+    .btnGroupLikeMarket {
+        width: auto;
+    }
+    .myCardBlocksField {
+        height: 77%;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .myCardImageBlock {
+        height: 55%;
+    }
+    .checkoutInputsSectionLeftField {
+        width: 360px;
+    }
+    .checkoutInputsRadioField {
+        width: 360px;
+    }
+    .checkoutInputsSectionRightField {
+        width: 360px;
+    }
+    .checkoutTotalFieldInfo {
+        margin: 24px 54px 24px 30px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .myCardMainField {
+        gap: 70px;
+    }
+    .usersProfileInfoPhone > span, .usersProfileInfoEmail > span, .usersProfileInfoLinkdin > span {
+        font-size: 17px;
+        margin-left: 10px;
+    }
+    .myCoursesFieldSectionLeft {
+        height: 320px;
+    }
+    .myCoursesProfileField {
+        height: 390px;
+    }
+    .myCardBlocksField {
+        width: calc(100%);
+    }
+    .myCardFieldAcceptCourses {
+        grid-auto-columns: calc((100% / 2 - 13px));
+    }
+    .myCoursesBlocksFieldMain {
+        height: 330px;
+    }
+    .myCoursesBlocksField {
+        height: 350px;
+    }
+    .myCardBlocksField {
+        height: 71%;
+    }
+    .myCardContent {
+        gap: 60px;
+    }
+}
 @media screen and (max-width: 1100px) {
+    .myCardContent {
+        padding-top: 95px;
+    }
+    .myCardMainField {
+        width: auto;
+        margin: 0px 6.9% 0px 6.8%
+    }
+    .userProfileMenuField > span{
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29.01px;
+        text-align: left;
+    }
+    .userProfileMenu > li > a{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .myCoursesFieldSectionLeft > img{
+        width: 93px;
+        height: 94px;
+    }
+    .myCoursesFieldSectionRight img{
+        width: 15.18px;
+        height: 15.18px;
+    }
+    .myCoursesFieldSectionLeft > span{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.41px;
+        text-align: center;
+    }
+    .usersProfileInfoPhone img, .usersProfileInfoEmail img, .usersProfileInfoLinkdin img{
+        width: 22px;
+        height: 22px;
+    }
+    .usersProfileInfoPhone > span, .usersProfileInfoEmail > span, .usersProfileInfoLinkdin > span {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        margin-left: 16px;
+    }
+    .myCoursesProfileField {
+        width: calc(24% - 23px);
+        height: 264px;
+    }
+    .myCardFields {
+        height: 400px;
+    }
+    .myCoursesFieldSection {
+        margin: 15px;
+        height: 234px;
+    }
+    .myCoursesFieldSectionLeft {
+        height: 230px;
+    }
+    .usersProfileInfo {
+        height: 90px;
+    }
+    .myCardNameRating > span{
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 14.3px;
+        text-align: left;
+    }
     .spanHed{
         font-size: 22px;
         font-weight: 600;
@@ -834,87 +1207,142 @@
         width: 93.73px;
         height: 40px;
     }
+    .checkoutFieldSection {
+        width: auto;
+        margin: 0 6.9% 0 6.8%;
+        padding-top: 105px;
+        position: relative;
+    }
+    .checkoutTitleField > div{
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29.01px;
+        text-align: left;
+    }
+    .checkoutTitleField >span {
+        font-size: 13px;
+    }
+    .checkoutInputsFirstField > span{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    .mainCreditField > input{
+        width: 10px;
+        height: 10px;
+    }
+    .otherField > input{
+        width: 10px;
+        height: 10px;
+    }
+    .mainCreditField > label >span{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    .otherField > label >span{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    .checkoutFieldSection {
+        height: auto;
+        gap: 44px;
+    }
+    .checkoutTitleField {
+        height: auto;
+    }
+    .checkoutInputsFirstField {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 16px;
+    }
+    .checkoutInputsSecondField > span{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    .courseManualPriceFieldInfo > span{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20.8px;
+        text-align: left;
+    }
+    .courseManualPriceFieldPay{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20.8px;
+        text-align: left;
+    }
+    .courseManualPriceField {
+        width: 431px;
+    }
+    .checkoutInputsSecondField {
+        height: 150px;
+    }
+    .checkoutCreditOtherField {
+        height: max-content;
+    }
+    .checkoutInputsSectionRightField {
+        width: 313px;
+        height: 200px;
+        margin-top: 40px;
+    }
+    .sumTitle{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    .sumPriceAll{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    .checkoutTotalFieldInfoTop > p{
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 11.72px;
+        text-align: left;
+    }
+    .checkoutTotalFieldInfoBottom > button > span{
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.72px;
+        text-align: center;
+    }
+    .checkoutTotalFieldInfo {
+        width: auto;
+        height: 143px;
+    }
+    .checkoutTotalFieldInfoTop > p > a{
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 11.72px;
+        text-align: left;
+    }
+    .checkoutInputsCreditField ,
+    .checkoutInputLeftField,
+    .checkoutInputRightField{
+        height: 78px;
+    }
+    .checkoutInputsCreditField > input,
+    .checkoutInputLeftField > input,
+    .checkoutInputRightField > input{
+        height: 49px;
+    }
+    .checkoutCheckboxCreditField > label{
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 11.72px;
+        text-align: left;
+    }
 }
-/*tablet of my card page */
 
-@media only screen and (min-width: 1500px) and (max-width: 1609px) {
-    .myCardMainField {
-        width: 94.5%;
-        height: 709px;
-        position: absolute;
-        margin: 212px 0px 0px 5.5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .myCoursesProfileField {
-        width: 405px;
-        height: 533px;
-        margin-right: 90px;
-        background: #74A8AB;
-        border-radius: 30px;
-        box-shadow: 0px 0px 6px 2px #549099;
-    }
-    .myCoursesFieldSection {
-        width: 260px;
-        height: 450px;
-        margin: 37px 36px 37px 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: start;
-    }
-    .myCoursesBlocksField{
-        width: 360px;
-        height: 481px;
-        margin-right: 60px;
-        border-radius: 30px;
-        background: #74A8AB;
-        box-shadow: 0px 0px 6px 2px #549099;
-    }
-    .myCoursesBlocksFieldMain {
-        /*width: 300px;*/
-        height: 444px;
-        margin: 8px 8px 21px 8px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    /*.myCardImageBlock > img{*/
-    /*    width: 295px;*/
-    /*}*/
-    /*.myCardNameRating{*/
-    /*    width: 293px;*/
-    /*}*/
-}
-@media only screen and (min-width: 1610px) and (max-width: 1709px) {
-    .myCardMainField {
-        width: 94.5%;
-        height: 709px;
-        position: absolute;
-        margin: 212px 0px 0px 5.5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .myCoursesProfileField {
-        width: 405px;
-        height: 533px;
-        margin-right: 90px;
-        background: #74A8AB;
-        border-radius: 30px;
-        box-shadow: 0px 0px 6px 2px #549099;
-    }
-}
-@media only screen and (min-width: 1710px) and (max-width: 1830px) {
-    .myCardMainField {
-        width: 89.5%;
-        height: 709px;
-        position: absolute;
-        margin: 212px 0px 0px 10.5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-}

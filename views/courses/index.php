@@ -37,9 +37,16 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img class="footerImg1" src="/images/courses3.png" alt="">
-                            <img class="footerImg2" src="/images/courses4.png" alt="">
-                            <img class="footerImg3" src="/images/courses5.png" alt="">
+                            <div class="coursisBtnField">
+                                <button>
+                                    <img class="footerImg1" src="/images/wishlist1.png" alt="">
+                                    <span><a href="">Buy now</a></span>
+                                </button>
+                            </div>
+                            <div>
+                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <img class="footerImg3" src="/images/courses5.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -64,9 +71,16 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img class="footerImg1" src="/images/courses3.png" alt="">
-                            <img class="footerImg2" src="/images/courses4.png" alt="">
-                            <img class="footerImg3" src="/images/courses5.png" alt="">
+                            <div class="coursisBtnField">
+                                <button>
+                                    <img class="footerImg1" src="/images/wishlist1.png" alt="">
+                                    <span><a href="">Buy now</a></span>
+                                </button>
+                            </div>
+                            <div>
+                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <img class="footerImg3" src="/images/courses5.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -91,9 +105,16 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img class="footerImg1" src="/images/courses3.png" alt="">
-                            <img class="footerImg2" src="/images/courses4.png" alt="">
-                            <img class="footerImg3" src="/images/courses5.png" alt="">
+                            <div class="coursisBtnField">
+                                <button>
+                                    <img class="footerImg1" src="/images/wishlist1.png" alt="">
+                                    <span><a href="">Buy now</a></span>
+                                </button>
+                            </div>
+                            <div>
+                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <img class="footerImg3" src="/images/courses5.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -118,9 +139,16 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img class="footerImg1" src="/images/courses3.png" alt="">
-                            <img class="footerImg2" src="/images/courses4.png" alt="">
-                            <img class="footerImg3" src="/images/courses5.png" alt="">
+                            <div class="coursisBtnField">
+                                <button>
+                                    <img class="footerImg1" src="/images/wishlist1.png" alt="">
+                                    <span><a href="">Buy now</a></span>
+                                </button>
+                            </div>
+                            <div>
+                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <img class="footerImg3" src="/images/courses5.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -145,9 +173,16 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img class="footerImg1" src="/images/courses3.png" alt="">
-                            <img class="footerImg2" src="/images/courses4.png" alt="">
-                            <img class="footerImg3" src="/images/courses5.png" alt="">
+                            <div class="coursisBtnField">
+                                <button>
+                                    <img class="footerImg1" src="/images/wishlist1.png" alt="">
+                                    <span><a href="">Buy now</a></span>
+                                </button>
+                            </div>
+                            <div>
+                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <img class="footerImg3" src="/images/courses5.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -172,9 +207,16 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img class="footerImg1" src="/images/courses3.png" alt="">
-                            <img class="footerImg2" src="/images/courses4.png" alt="">
-                            <img class="footerImg3" src="/images/courses5.png" alt="">
+                            <div class="coursisBtnField">
+                                <button>
+                                    <img class="footerImg1" src="/images/wishlist1.png" alt="">
+                                    <span><a href="">Buy now</a></span>
+                                </button>
+                            </div>
+                            <div>
+                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <img class="footerImg3" src="/images/courses5.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -199,9 +241,16 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img class="footerImg1" src="/images/courses3.png" alt="">
-                            <img class="footerImg2" src="/images/courses4.png" alt="">
-                            <img class="footerImg3" src="/images/courses5.png" alt="">
+                            <div class="coursisBtnField">
+                                <button>
+                                    <img class="footerImg1" src="/images/wishlist1.png" alt="">
+                                    <span><a href="">Buy now</a></span>
+                                </button>
+                            </div>
+                            <div>
+                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <img class="footerImg3" src="/images/courses5.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -226,9 +275,16 @@ $this->registerCssFile('@web/css/courses.css');
                             </div>
                         </div>
                         <div class="footerCard">
-                            <img class="footerImg1" src="/images/courses3.png" alt="">
-                            <img class="footerImg2" src="/images/courses4.png" alt="">
-                            <img class="footerImg3" src="/images/courses5.png" alt="">
+                            <div class="coursisBtnField">
+                                <button>
+                                    <img class="footerImg1" src="/images/wishlist1.png" alt="">
+                                    <span><a href="">Buy now</a></span>
+                                </button>
+                            </div>
+                            <div>
+                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <img class="footerImg3" src="/images/courses5.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </li>

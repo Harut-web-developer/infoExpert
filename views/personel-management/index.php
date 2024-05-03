@@ -46,13 +46,13 @@ $this->registerCssFile('@web/css/personel-management.css');
         <div class="managementBtnDiv">
             <button>
                 <img src="/images/Vector (1).png" alt="">
-                <span>Buy this course</span>
+                <span class="button1">Buy this course</span>
             </button>
         </div>
         <div class="managementBtnDiv">
             <button>
                 <img src="/images/Vector (2).png" alt="">
-                <span>See all courses</span>
+                <span class="button2">See all courses</span>
             </button>
         </div>
     </div>

@@ -12,7 +12,7 @@
     width: 67%;
     height: -webkit-fill-available;
     position: absolute;
-    margin: 212px 16.5% 0px;
+    margin: 235px 16.5% 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -189,11 +189,11 @@ hr{
 hr.new1 {
     width: auto;
     border: 3px solid #FFFFFF;
-    margin-left: 60px;
+    margin: 0 0 0 60px;
 }
 .bottomSlider {
     display: flex;
-    padding-top: 80px;
+    padding-top: 70px;
     padding-left: 60px;
 }
 
@@ -333,7 +333,7 @@ hr.new1 {
     display: flex;
     padding: 16px 17px 16px 17px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     cursor: pointer;
     user-select: none;
@@ -347,6 +347,9 @@ hr.new1 {
 .cardContent{
     width: 100%;
     height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .img_2 img{
     width: 100%;
@@ -361,9 +364,14 @@ hr.new1 {
     padding-left: 18px;
 }
 .cardCenter_2{
+    /*width: 312.12px;*/
+    /*height: 73.09px;*/
     width: 312.12px;
-    height: 73.09px;
-    margin-bottom: 16px;
+    height: 81.09px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    /*margin-bottom: 16px;*/
 }
 .card_2 .cardBody_2 .span1_2{
     font-family: Roboto Slab;
@@ -384,7 +392,8 @@ hr.new1 {
 .cardtxt1_2{
     width: 223.11px;
     height: 40px;
-    margin-bottom: 5px;
+    display: flex;
+    /*margin-bottom: 5px;*/
 }
 .cardtxt1_2 span{
     font-family: Roboto Medium;
@@ -393,10 +402,13 @@ hr.new1 {
     line-height: 19.84px;
     text-align: left;
     color: #FFFFFF;
+    padding-left: 11px;
 }
 .cardtxt1_2 img{
+    width: 28px;
+    height: 28px;
     float: left;
-    padding-right: 11px;
+    /*padding-right: 11px;*/
 }
 .cardtxt2_2{
     width: 312.12px;
@@ -421,10 +433,41 @@ hr.new1 {
     width: 100%;
 }
 .footerCard_2{
-    width: max-content;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
-.footerCard_2_img1{
-    padding: 0 42px;
+.wishlistBtnField{
+    position: relative;
+    width: 130px;
+}
+.wishlistBtnField > button{
+    background: transparent;
+    border: none;
+}
+.wishlistBtnField > button > img{
+    position: relative;
+}
+.wishlistBtnField > button > span > a{
+    color: white;
+    margin: 15px 26px;
+    position: absolute;
+    left: 0px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    text-decoration: none;
+}
+.footerCard_2_img2{
+    width: 43px;
+    height: 43px;
+}
+.footerCard_2_img3{
+    width: 43px;
+    height: 43px;
 }
 @media screen and (max-width: 1900px) {
     .CoursesAndCategoriesCard {
@@ -480,7 +523,7 @@ hr.new1 {
         height: auto;
     }
     .cardContent {
-        height: 72%;
+        height: auto;
     }
     .footerCard_2_img1 {
         width: 120px;
@@ -488,6 +531,7 @@ hr.new1 {
     .footerCard_2_img2,
     .footerCard_2_img3 {
         width: 30px;
+        height: 30px;
     }
     .card_2 {
         height: 403.45px;
@@ -516,6 +560,17 @@ hr.new1 {
     }
     .bottomSlider {
         padding-top: 30px;
+    }
+    .wishlistBtnField {
+        width: 90px;
+    }
+    .wishlistBtnField > button > img{
+        width: 80px;
+        height: 30px;
+    }
+    .wishlistBtnField > button > span > a {
+        margin: 5px 15px;
+        font-size: 13px;
     }
 }
 @media screen and (max-width: 1500px) {
@@ -778,6 +833,7 @@ hr.new1 {
     }
     .footerCard_2_img2, .footerCard_2_img3 {
         width: 22px;
+        height: 22px;
     }
     .carousel_2 {
         height: 263px;

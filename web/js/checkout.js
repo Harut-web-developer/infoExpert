@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('body').on('click', '#credit', function () {
         $(this).closest('.checkoutCreditOtherField').find('#other').prop('checked', false)
-        $(this).closest('.checkoutCreditOtherField').find('.otherField').css('margin-top', '84px')
+        $(this).closest('.checkoutCreditOtherField').find('.otherField').css('margin-top', '62px')
 
         $(this).closest('.creditField').find('.checkoutCreditField').css('display', 'flex')
         $(this).closest('.checkoutInputsRadioField').css('height', '552px');
