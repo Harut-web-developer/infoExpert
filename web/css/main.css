@@ -5,7 +5,9 @@
     padding: 0;
 }
 /*start header css*/
-
+.activeli{
+    color: #F36528;
+}
 .header{
     width: 100%;
     height: 150px;
@@ -139,7 +141,10 @@
     cursor: pointer;
 }
 .otherFlags{
-    margin-top: 12px;
+    right: -12px;
+    border-radius: 9px;
+    background: #ABCBCD;
+    margin-top: 13px;
     position: absolute;
     list-style: none;
     padding-left: 0px;
@@ -149,6 +154,12 @@
 }
 .otherFlags > li{
     margin: 8px 0px;
+}
+.firstFlag > img{
+    margin: 4px 12px 0px 12px;
+}
+.secondFlag > img{
+    margin: 0px 12px 4px 12px;
 }
 .otherFlags > li:hover{
     cursor: pointer;
@@ -204,6 +215,12 @@
     background: transparent;
     outline: none;
     position: relative;
+}
+.btnBack:hover img {
+    content: url('../images/circlehover.png');
+}
+.btnBack:hover span {
+    color: white;
 }
 .btnBack > span{
     color: #F36528;
@@ -986,12 +1003,18 @@
     left: 37px;
     top: 26px;
 }
+.apply > a:hover span{
+    color: white;
+}
 .apply > a > img{
     width: 100%;
     height: 100%;
 }
 .apply > a > img:hover{
     cursor: pointer;
+}
+.apply > a:hover img{
+    content: url('../images/applyhover.png');
 }
 .sectionTwo{
     background-image: url("../images/diagonal.png");
@@ -1083,7 +1106,9 @@
 }
 .managementBtn > a{
     position: relative;
-
+}
+.managementBtn > a:hover img{
+    content: url("../images/logomanaghover.png");
 }
 .managementBtn > a >span{
     position: absolute;
@@ -1093,6 +1118,9 @@
     left: 31px;
     top: 0px;
     color: #F36528;
+}
+.managementBtn > a:hover span{
+    color: white;
 }
 .coursesBg{
     background-image: url("../images/rec.png");
@@ -1467,6 +1495,9 @@
 .blogBtn > a{
     position: relative;
 }
+.blogBtn > a:hover img{
+    content: url("../images/articlebtnhover.png");
+}
 .blogBtn > a > span{
     position: absolute;
     top: 0;
@@ -1475,6 +1506,9 @@
     font-size: 16px;
     font-weight: 500;
     color: #F36528;
+}
+.blogBtn > a:hover span{
+    color: white;
 }
 .individualCards{
     margin: 0px 15px;
@@ -1615,6 +1649,9 @@
     background: none;
     position: relative;
 }
+.questionbutton > button:hover img{
+    content: url("../images/questionbtn.png.png");
+}
 .questionbutton > button > span{
     position: absolute;
     left: 0;
@@ -1623,6 +1660,9 @@
     color: #F36528;
     font-weight: 500;
     margin: 28px 28px;
+}
+.questionbutton > button:hover span{
+    color: white;
 }
 .leftQuestionField{
     width: 48%;

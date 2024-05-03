@@ -178,8 +178,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <div class="flagFields">
                         <img class="mainFlag" src="/images/armflag.png" alt="">
                         <ul class="otherFlags">
-                            <li><img class="usaFlag" src="/images/usaflag.png" alt=""></li>
-                            <li><img class="ruFlag" src="/images/ruflag.png" alt=""></li>
+                            <li class="firstFlag"><img class="usaFlag" src="/images/usaflag.png" alt=""></li>
+                            <li class="secondFlag"><img class="ruFlag" src="/images/ruflag.png" alt=""></li>
                         </ul>
                     </div>
                 </div>

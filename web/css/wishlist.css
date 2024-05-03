@@ -164,24 +164,28 @@
     width: max-content;
     padding-top: 53px;
 }
-.applyNowBtnField > button{
+.applyNowBtnField > a{
     background: transparent;
     border: none;
-}
-.applyNowBtnField > button > img{
     position: relative;
 }
-.applyNowBtnField > button > span > a{
+.applyNowBtnField > a:hover img{
+    content: url("../images/buttonImghover.png");
+}
+.applyNowBtnField > a > span{
     color: #F36528;
     margin: 11px 16px;
     position: absolute;
     left: 0px;
-    font-family: Roboto;
+    font-family: "Roboto",sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 18.2px;
     text-align: left;
     text-decoration: none;
+}
+.applyNowBtnField > a:hover span{
+    color: white;
 }
 hr{
     opacity: 1!important;
@@ -439,15 +443,15 @@ hr.new1 {
     gap: 10px;
 }
 .wishlistBtnField{
-    position: relative;
     width: 130px;
 }
 .wishlistBtnField > button{
+    position: relative;
     background: transparent;
     border: none;
 }
-.wishlistBtnField > button > img{
-    position: relative;
+.wishlistBtnField > button:hover img{
+    content: url("../images/wishlist1hover.png");
 }
 .wishlistBtnField > button > span > a{
     color: white;

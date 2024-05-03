@@ -146,6 +146,9 @@
     background: transparent;
     border: none;
 }
+.managementBtnDiv > button:hover{
+
+}
 .managementBtnDiv > button > img{
     position: relative;
 }

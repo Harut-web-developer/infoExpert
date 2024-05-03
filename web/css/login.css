@@ -173,6 +173,9 @@
     border: none;
     margin-top: 20px;
 }
+.container_signin:hover img{
+    content: url("../images/Vectorhover.png");
+}
 .container_signin > span{
     margin: 22px 56px;
     position: absolute;
@@ -183,6 +186,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+.container_signin:hover span{
+    color: white;
+    margin: 22px 55px;
+
 }
 .mainCheck{
     display: flex;
@@ -305,6 +313,9 @@
     background: transparent;
     border: none;
 }
+.container_signup:hover img{
+    content: url("../images/Vectorhover.png");
+}
 .container_signup > span{
     margin: 22px 54px;
     position: absolute;
@@ -315,6 +326,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+.container_signup:hover span{
+    color: white;
+    margin: 22px 53px;
 }
 /*tablet sign in*/
 @media only screen and (min-width: 740px) and (max-width: 1024px) {

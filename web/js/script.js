@@ -208,4 +208,13 @@ $(document).ready(function () {
             signupButtonText.css('color', '#D9E3E4');
         }
     });
+    // $(".container_signup").hover(function(){
+    //     $('.container_signup img').css('color', 'white');
+    // },function(){
+    //     $('.container_signup img').css('color', '#F36528');
+    // });
+    // $('.menu ul li').on('click', function(){
+    //     $('.whiteLi a').removeClass('activeli');
+    //     $(this).children('a').addClass('activeli');
+    // })
 })

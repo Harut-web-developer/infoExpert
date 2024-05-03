@@ -24,9 +24,9 @@ if (isset($_COOKIE['email'])){
 
             <span>WELCOME BACK</span>
             <div class="signinMenu">
-                <input type="email" value="<?=$email?>" placeholder="Email Address" name="email">
+                <input type="email" value="<?=$email?>" placeholder="Email Address" name="email" required>
                 <div class="passEye">
-                    <input type="password" placeholder="Password" name="password">
+                    <input type="password" placeholder="Password" name="password" required>
                     <img src="/images/signEye.png" alt="">
                 </div>
                 <div class="rememberField">

@@ -11,6 +11,7 @@ $this->registerCssFile('@web/css/apply-now.css');
         <div class="applicationButton">
             <button>
                 <img src="/images/applicationBtn.png" alt="">
+                <span>Գլխավոր էջ</span>
             </button>
         </div>
     </div>

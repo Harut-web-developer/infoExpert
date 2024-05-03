@@ -7,10 +7,10 @@ $this->registerCssFile('@web/css/my-card.css');
         <h1 class="spanHed">Congratulation!</h1>
         <p class="spanAllCourses">The course is already yours</p>
         <div class="CongratulationApplyNowBtnField">
-            <button>
-                <img src="/images/buttonImg1.png" alt="">
-                <span><a class="CongratulationCoursesHref" href="/personel-management/index">START LEARNING</a></span>
-            </button>
+            <a class="CongratulationCoursesHref" href="/personel-management/index">
+                <img src="/images/conbtn.png" alt="">
+                <span>START LEARNING</span>
+            </a>
         </div>
     </div>
 </div>

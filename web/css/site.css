@@ -89,7 +89,7 @@ a.desc:after {
 .siteError{
     width: 100%;
     height: 1100px;
-    background-image: url("/images/background-error.png");
+    background-image: url("../images/background-error.png");
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -110,7 +110,7 @@ a.desc:after {
     font-weight: 500;
     line-height: 237.39px;
     text-align: left;
-    color: var(--50, #D6D6D6);
+    color: #D6D6D6;
 }
 .alert404 .span2{
     font-family: Roboto Slab;
@@ -118,7 +118,7 @@ a.desc:after {
     font-weight: 500;
     line-height: 52.75px;
     text-align: left;
-    color: var(--50, #D6D6D6);
+    color: #D6D6D6;
 }
 .errorBtnField{
     position: relative;
@@ -126,24 +126,29 @@ a.desc:after {
     padding-top: 44px;
     text-align: center;
 }
-.errorBtnField > button{
+.errorBtnField > a{
     background: transparent;
     border: none;
 }
-.errorBtnField > button > img{
+.errorBtnField > a > img{
     position: relative;
 }
-.errorBtnField > button > span > a{
+.errorBtnField > a:hover img{
+    content: url("../images/buttonImg1hover.png");
+}
+.errorBtnField > a > span{
     color: #F36528;
-    margin: 25px 26px;
+    margin: 32px 36px;
     position: absolute;
     left: 0px;
-    font-family: 'Roboto';
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 18.2px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+    font-weight: 900;
     text-align: left;
     text-decoration: none;
+}
+.errorBtnField > a:hover span{
+    color: white;
 }
 @media screen and (max-width: 1100px) {
     .siteError {
