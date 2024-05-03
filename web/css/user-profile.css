@@ -226,9 +226,9 @@
 }
 .userAchievementsSection{
     width: 67%;
-    height: 738px;
+    height: 702px;
     position: absolute;
-    margin: 212px 16.5% 0px;
+    margin: 235px 16.5% 77px 16.5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -445,6 +445,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    gap: 10px;
 }
 .userFormsInput_{
     display: flex;
@@ -488,7 +489,7 @@
     font-size: 13px;
     font-family: "Roboto",sans-serif;
     color: #F36528;
-    margin: 10px 33px;
+    margin: 12px 33px;
     font-weight: 500;
 }
 

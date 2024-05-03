@@ -246,7 +246,7 @@ $this->registerCssFile('@web/css/my-card.css');
                     <span>Total:  $38.97</span>
                     <button>
                         <img src="/images/btncheckoutcard.png" alt="">
-                        <span>Checkout</span>
+                        <a href="/my-card/checkout">Checkout</a>
                     </button>
                 </div>
             </div>

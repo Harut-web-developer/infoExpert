@@ -3,15 +3,14 @@
     height: 1490px;
     background-image: url("../images/background-personnel-managment.png");
     background-repeat: no-repeat;
-    padding-top: 158px;
-    /*display: grid;*/
+    padding-top: 198px;
 }
 .backButton{
     display: none;
 }
 .topDivFlex{
     width: 83.8%;
-    margin: 29px 0 0 auto;
+    margin: 40px 0 0 auto;
 }
 .bottomDiv{
     width: 100%;
@@ -36,7 +35,6 @@
     width: auto;
     height: 58px;
     display: flex;
-    padding-top: 38px;
     padding-left: 16.666%;
 }
 .likeButton{
@@ -73,7 +71,7 @@
     height: 352px;
     padding: 38px 34px 38px 34px;
     border-radius: 30px;
-    margin-top: 31px;
+    margin-top: 40px;
     border: 1px solid #0000000D;
     text-align: center;
     background: #FFFFFF24;
@@ -98,7 +96,7 @@
     text-align: center;
 }
 .textCard{
-    width: 208.26px;
+    /*width: 208.26px;*/
     font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
@@ -129,7 +127,7 @@
 .leftDipl img {
     width: 100%;
     height: auto;
-    padding-top: 24px;
+    padding-top: 40px;
 }
 .rightImgBottom span{
     color: #F36528;
@@ -152,14 +150,19 @@
     position: relative;
 }
 .managementBtnDiv > button > span{
-    color: #F36528;
     font-size: 16px;
     font-weight: 700;
     font-family: "Tahoma", sans-serif;
-    margin: 28px 0px;
+    margin: 26px 0px;
     position: absolute;
     left: 15px;
     top: -6px;
+}
+.managementBtnDiv .button1{
+    color: #F36528;
+}
+.managementBtnDiv .button2{
+    color: white;
 }
 @media screen and (max-width: 1400px) {
     .divBottom {

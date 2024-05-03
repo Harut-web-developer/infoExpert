@@ -9,8 +9,8 @@
     display: flex;
     justify-content: center;
     height: 53px;
-    padding-top: 37.92px;
-    padding-bottom: 37.92px;
+    margin-top: 48px;
+    /*padding-bottom: 37.92px;*/
 }
 .backButton{
     display: none;
@@ -25,12 +25,12 @@
     text-align: left;
 }
 .bodyBlog{
-    padding-top: 37.92px;
+    padding-top: 48px;
     padding-bottom: 157px;
 }
 .mainBlog {
     position: relative;
-    padding: 1rem 1rem 4rem;
+    /*padding: 1rem 1rem 4rem;*/
     min-height: calc(100vh - 4rem);
 }
 .grid-container{
@@ -73,6 +73,7 @@
     color: #555555;
 }
 .divImg {
+    height: 46px;
     text-align: -webkit-auto;
 }
 .divImg a{
@@ -97,8 +98,9 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 0;
-    padding: 0;
+    /*bottom: 0;*/
+    /*padding: 0;*/
+    padding-top: 38px;
     justify-content: center;
 }
 .pagination-number{
