@@ -233,7 +233,7 @@
 .myCoursesBlocksFieldMain{
     /*width: 344px;*/
     height: 444px;
-    margin: 16px 16px 21px 16px;
+    /*margin: 16px 16px 21px 16px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1074,9 +1074,9 @@
         margin: 7px 14px;
         font-size: 12px;
     }
-    .myCoursesBlocksFieldMain {
-        justify-content: space-around;
-    }
+    /*.myCoursesBlocksFieldMain {*/
+    /*    justify-content: space-around;*/
+    /*}*/
     .btnGroupLikeMarket {
         width: auto;
     }

@@ -87,12 +87,25 @@ if (window.location.pathname == '/'){
             0: {
                 slidesPerView: 1,
             },
-            520: {
-                slidesPerView: 2,
+            500: {
+                slidesPerView: 2.2,
+                spaceBetween: 43,
+            },
+            600: {
+                slidesPerView: 2.2,
+                spaceBetween: 50,
+            },
+            700: {
+                slidesPerView: 2.5,
+                spaceBetween: 43,
+            },
+            800: {
+                slidesPerView: 2.7,
+                spaceBetween: 43,
             },
             950: {
                 slidesPerView: 3.3,
-                spaceBetween: 35,
+                spaceBetween: 43,
             },
             1280: {
                 slidesPerView: 4.3,
