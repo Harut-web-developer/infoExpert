@@ -2,6 +2,10 @@
 
 namespace app\controllers;
 
+use app\models\User;
+use Codeception\Lib\Generator\PageObject;
+use Codeception\Verify\Verifiers\VerifyAny;
+use PharIo\Manifest\ElementCollection;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -32,7 +36,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
-                    'logout' => ['post'],
+//                    'logout' => ['post'],
                 ],
             ],
         ];
@@ -54,6 +58,27 @@ class SiteController extends Controller
         ];
     }
 
+    public function beforeAction($action)
+    {
+//        var_dump(Yii::$app->user->identity);
+        /*if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
+            setcookie('language', 'en', time() + (365 * 24 * 60 * 60));
+            $this->refresh();
+            Yii::$app->end();
+            return false;
+        }
+        $lng = $_COOKIE['language'] ?? 'en';
+        if($lng !== 'am' && $lng !== 'ru' && $lng !== 'en'){
+            setcookie('language', 'en', time() + (365 * 24 * 60 * 60));
+            $this->refresh();
+            Yii::$app->end();
+            return false;
+        }
+        $txt = Texts::find()->select(['text_'.$lng.' as text'])->asArray()->indexBy('slug')->column();
+        $GLOBALS['text'] = $txt;
+        $this->enableCsrfValidation = false;*/
+        return parent::beforeAction($action);
+    }
     /**
      * Displays homepage.
      *
@@ -69,23 +94,28 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
+    public function actionLogin(){
+        $session = Yii::$app->session;
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
+        if($_POST){
+            if($model->load(Yii::$app->request->post(), '') && $model->login()){
+                if (isset($_POST['rememberme'])){
+                    setcookie('email',Yii::$app->user->identity->email, time()+60 * 5, '/');
+                }
+                $identity = Yii::$app->user->identity;
+                $session->set('user_id',$identity->id);
+                $session->set('user_name',$identity->username);
+                $session->set('user_email',$identity->email);
 
-        $model->password = '';
+                return $this->redirect('/');
+            }else{
+                return $this->redirect('/login');
+            }
+        }
         return $this->render('login', [
             'model' => $model,
         ]);
     }
-
     /**
      * Logout action.
      *
@@ -93,8 +123,9 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
+        $this->enableCsrfValidation = false;
+        session_destroy();
         Yii::$app->user->logout();
-
         return $this->goHome();
     }
 
@@ -128,11 +159,47 @@ class SiteController extends Controller
 
     public function actionSignUp()
     {
-        return $this->render('sign-up');
+        $model = new User();
+        if($this->request->isPost) {
+            $post = Yii::$app->request->post();
+            $password = $post['User']['password'];
+            $hash = Yii::$app->getSecurity()->generatePasswordHash($password);
+            $existingUser = User::findOne(['email' => $post['User']['email']]);
+            if ($existingUser !== null) {
+                Yii::$app->session->setFlash('error', 'This email is already registered.');
+                return $this->refresh();
+            }
+            if ($model->load($post)) {
+                $model->password = $hash;
+                $model->auth_key = $this->generateRandomString();
+                if($model->save()){
+                    $log_model = new LoginForm();
+                    $log_model->email = $model->email;
+                    $log_model->password = $post['User']['password'];
+                    if($log_model->login()){
+                        return $this->redirect('/');
+                    }else{
+                        return $this->redirect('/signup');
+                    }
+                }
+            }
+        }
+        return $this->render('sign-up', [
+            'model' => $model,
+        ]);
     }
 
     public function actionTest()
     {
         return $this->render('test');
+    }
+    public function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[random_int(0, $charactersLength - 1)];
+        }
+        return $randomString;
     }
 }

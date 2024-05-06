@@ -145,21 +145,14 @@
             </div>
         </div>
     </div>
-
-    <div class="swiper-navBtn"></div>
-    <div class="swiper-navBtn"></div>
     <div class="swiper-pagination"></div>
 </div>
-
-
-<!-- Swiper JS -->
-<!--    <script src="/web/js/swiper-bundle.min.js"></script>-->
-<!--    --><?php //$this->registerJsFile('@web/js/swiper-bundle.min.js'); ?>
     <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".slide-content", {
             slidesPerView: 3,
             spaceBetween: 25,
+            slidesPerGroupSkip: 1,
             loop: true,
             centerSlide: 'true',
             fade: 'true',
@@ -182,6 +175,5 @@
                 },
             },
         });
-
     </script>
 
