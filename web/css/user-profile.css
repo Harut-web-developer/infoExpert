@@ -57,6 +57,12 @@
     font-size: 20px;
     font-weight: 400;
 }
+.userProfileMenu > li > a:hover{
+    color: #F36528;
+}
+.aaa{
+    color: #F36528 !important;
+}
 .fieldMoreAbout{
     width: 265px;
     height: 92px;

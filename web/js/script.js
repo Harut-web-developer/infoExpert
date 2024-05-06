@@ -208,13 +208,13 @@ $(document).ready(function () {
             signupButtonText.css('color', '#D9E3E4');
         }
     });
-    // $(".container_signup").hover(function(){
-    //     $('.container_signup img').css('color', 'white');
-    // },function(){
-    //     $('.container_signup img').css('color', '#F36528');
-    // });
-    // $('.menu ul li').on('click', function(){
-    //     $('.whiteLi a').removeClass('activeli');
-    //     $(this).children('a').addClass('activeli');
-    // })
+
+    let current = location.pathname;
+    $('.userProfileMenu li a').each(function(){
+        let sthis = $(this);
+        console.log(sthis.attr('href').indexOf(current) !== -1)
+        if(sthis.attr('href').indexOf(current) !== -1){
+            sthis.parent().addClass('aaa');
+        }
+    })
 })

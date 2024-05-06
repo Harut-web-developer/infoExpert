@@ -60,7 +60,6 @@ class SiteController extends Controller
 
     public function beforeAction($action)
     {
-//        var_dump(Yii::$app->user->identity);
         /*if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'en', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -106,6 +105,7 @@ class SiteController extends Controller
                 $session->set('user_id',$identity->id);
                 $session->set('user_name',$identity->username);
                 $session->set('user_email',$identity->email);
+                $session->set('logged',true);
 
                 return $this->redirect('/');
             }else{

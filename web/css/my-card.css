@@ -863,11 +863,17 @@
     color: #FFFFFF;
 }
 .myCardImageBlock .spanAmd{
-    font-family: 'Roboto';
+    font-family: 'Roboto',sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 18.75px;
     text-align: left;
+}
+.userProfileMenu > li > a:hover{
+    color: #F36528;
+}
+.aaa{
+    color: #F36528 !important;
 }
 /*tablet of my card page */
 @media screen and (max-width: 1800px) {
