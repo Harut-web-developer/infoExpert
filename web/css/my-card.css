@@ -872,9 +872,6 @@
 .userProfileMenu > li > a:hover{
     color: #F36528;
 }
-.aaa{
-    color: #F36528 !important;
-}
 /*tablet of my card page */
 @media screen and (max-width: 1800px) {
     .myCoursesFieldSection {

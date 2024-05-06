@@ -155,10 +155,10 @@
 .otherFlags > li{
     margin: 8px 0px;
 }
-.firstFlag > img{
+.firstFlag > a{
     margin: 4px 12px 0px 12px;
 }
-.secondFlag > img{
+.secondFlag > a{
     margin: 0px 12px 4px 12px;
 }
 .otherFlags > li:hover{
@@ -190,6 +190,10 @@
     color: #F36528;
 }
 .menuAbout{
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
     color: white;
 }
 .menuAbout:hover{
@@ -216,6 +220,10 @@
     outline: none;
     position: relative;
 }
+.btnBack > img{
+    width: 132px;
+    height: 48px;
+}
 .btnBack:hover img {
     content: url('../images/circlehover.png');
 }
@@ -228,8 +236,9 @@
     font-weight: 500;
     font-family: "Roboto",sans-serif;
     position: absolute;
-    left: 22px;
     top: 17px;
+    left: 0px;
+    width: 100%;
 }
 
 .dropDownAbout{
@@ -531,7 +540,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.tabletFlagField > img{
+.tabletFlagField > a{
     margin: 13px;
 }
 .search-boxTablet{
@@ -1000,8 +1009,10 @@
     font-size: 18px;
     color: #F36528;
     font-weight: 700;
-    left: 37px;
+    left: 0;
+    width: 100%;
     top: 26px;
+    text-align: center;
 }
 .apply > a:hover span{
     color: white;
@@ -1115,7 +1126,9 @@
     font-family: "Roboto",sans-serif;
     font-size: 20px;
     font-weight: 900;
-    left: 31px;
+    left: 0;
+    width: 100%;
+    text-align: center;
     top: 0px;
     color: #F36528;
 }
@@ -1508,8 +1521,10 @@
 }
 .blogBtn > a > span{
     position: absolute;
-    top: 0;
-    margin: 0px 54px;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    text-align: center;
     font-family: "Roboto",sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -1663,11 +1678,14 @@
 .questionbutton > button > span{
     position: absolute;
     left: 0;
+    width: 100%;
+    top: 28px;
+    text-align: center;
     font-family: "Roboto",sans-serif;
     font-size: 16px;
     color: #F36528;
     font-weight: 500;
-    margin: 28px 28px;
+    /*margin: 28px 28px;*/
 }
 .questionbutton > button:hover span{
     color: white;

@@ -102,43 +102,9 @@ if (window.location.pathname == '/'){
     });
 }
 $(document).ready(function () {
-
     $('body').on('click', '.mainFlag', function () {
         $(this).closest('.flagFields').find('.otherFlags').toggle();
     });
-
-    $('body').on('click', '.usaFlag, .ruFlag', function () {
-        var $flagFields = $(this).closest('.flagFields');
-        var $mainFlag = $flagFields.children('.mainFlag');
-        var $clickedFlag = $(this).closest('li').find('img');
-
-        // Swap src attributes
-        var tempSrc = $mainFlag.attr('src');
-        $mainFlag.attr('src', $clickedFlag.attr('src'));
-        $clickedFlag.attr('src', tempSrc);
-
-        // Move clicked flag to first position
-        $flagFields.find('.otherFlags').prepend($(this).closest('li'));
-
-        // Hide otherFlags
-        $flagFields.find('.otherFlags').hide();
-    });
-
-    // $('body').on('click', '.mainFlag', function () {
-    //     $(this).closest('.flagFields').find('.otherFlags').toggle();
-    // })
-    // $('body').on('click', '.armFlag', function () {
-    //     $(this).closest('.flagFields').children('img').attr('src', '/images/armflag.png');
-    //     $(this).closest('.flagFields').find('.otherFlags').css('display', 'none');
-    // })
-    // $('body').on('click', '.ruFlag', function () {
-    //     $(this).closest('.flagFields').children('img').attr('src', '/images/ruflag.png');
-    //     $(this).closest('.flagFields').find('.otherFlags').css('display', 'none');
-    // })
-    // $('body').on('click', '.usaFlag', function () {
-    //     $(this).closest('.flagFields').children('img').attr('src', '/images/usaflag.png');
-    //     $(this).closest('.flagFields').find('.otherFlags').css('display', 'none');
-    // })
 })
 if (window.location.pathname == '/') {
     const scrollTop = function () {
@@ -194,7 +160,7 @@ $(document).ready(function () {
     });
 
     $('.tabletMenuIcon').on('click', function(event) {
-        event.stopPropagation(); // Prevents the event from bubbling up to the document
+        event.stopPropagation();
         $('.menuTabletHeader').toggleClass('menuTabletActive');
     });
     $(".profileField").hover(function(){
@@ -218,9 +184,8 @@ $(document).ready(function () {
     let current = location.pathname;
     $('.userProfileMenu li a').each(function(){
         let sthis = $(this);
-        console.log(sthis.attr('href').indexOf(current) !== -1)
         if(sthis.attr('href').indexOf(current) !== -1){
-            sthis.parent().addClass('aaa');
+            sthis.css('color', '#F36528');
         }
     })
 })
