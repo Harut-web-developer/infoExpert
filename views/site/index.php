@@ -283,7 +283,7 @@ $this->title = 'Infoexpert';
     </div>
 </div>
 <!-- Swiper CSS -->
-<?php  $this->registerCssFile('@web/css/swiper-bundle.min.css'); ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
 <div class="sectionSix">
     <div class="testimonial">
         <div class="testimonialsTitles">
@@ -423,16 +423,12 @@ $this->title = 'Infoexpert';
                     </div>
                 </div>
             </div>
-            <div class="circleTestimonial">
-                <div class="swiper-navBtn"></div>
-                <div class="swiper-navBtn"></div>
-                <div class="swiper-pagination swiper_pagination"></div>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </div>
 <!-- Swiper JS -->
-<?php  $this->registerJsFile('@web/js/swiper-bundle.min.js'); ?>
+<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
 <div class="sectionSeven" id="section01">
     <div class="sectionBlog">
         <span>BLOG</span>

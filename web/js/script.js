@@ -71,7 +71,8 @@ $(".questionField").click(function() {
 if (window.location.pathname == '/'){
     var swiper = new Swiper(".slide-content", {
         slidesPerView: 3,
-        spaceBetween: 25,
+        spaceBetween: 1,
+        slidesPerGroupSkip: 1,
         loop: true,
         centerSlide: 'true',
         fade: 'true',
@@ -90,7 +91,12 @@ if (window.location.pathname == '/'){
                 slidesPerView: 2,
             },
             950: {
-                slidesPerView: 3,
+                slidesPerView: 3.3,
+                spaceBetween: 35,
+            },
+            1280: {
+                slidesPerView: 4.3,
+                spaceBetween: 50,
             },
         },
     });
