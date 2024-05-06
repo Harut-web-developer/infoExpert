@@ -9,6 +9,8 @@ use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
+use yii\helpers\Url;
+use yii\web\UrlManager;
 
 AppAsset::register($this);
 
@@ -103,9 +105,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             <input type="text" class="input-searchTablet" placeholder="Type to Search...">
                         </div>
                         <div class="tabletFlagField">
-                            <img src="/images/armflag.png" alt="">
-                            <img src="/images/usaflag.png" alt="">
-                            <img src="/images/ruflag.png" alt="">
+                            <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/armflag.png" alt=""></a>
+                            <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/usaflag.png" alt=""></a>
+                            <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/ruflag.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -176,10 +178,24 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
                     </div>
                     <div class="flagFields">
-                        <img class="mainFlag" src="/images/armflag.png" alt="">
+                        <?php
+                        $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+                        switch($language) {
+                            case 'am':
+                                $mainFlag = '/images/armflag.png';
+                                break;
+                            case 'ru':
+                                $mainFlag = '/images/ruflag.png';
+                                break;
+                            default:
+                                $mainFlag = '/images/usaflag.png';
+                        }
+                        ?>
+                        <img class="mainFlag" src="<?= $mainFlag ?>" alt="">
                         <ul class="otherFlags">
-                            <li class="firstFlag"><img class="usaFlag" src="/images/usaflag.png" alt=""></li>
-                            <li class="secondFlag"><img class="ruFlag" src="/images/ruflag.png" alt=""></li>
+                            <?php if($_COOKIE['language'] !== 'am'){ ?><li class="firstFlag"><a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img class="armFlag" src="/images/armflag.png" alt=""></a></li><?php } ?>
+                            <?php if($_COOKIE['language'] !== 'en'){ ?><li class="firstFlag"><a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img class="usaFlag" src="/images/usaflag.png" alt=""></a></li><?php } ?>
+                            <?php if($_COOKIE['language'] !== 'ru'){ ?><li class="secondFlag"><a href="<?= Url::to(['site/switch-language?lang=ru']) ?>"><img class="ruFlag" src="/images/ruflag.png" alt=""></a></li><?php } ?>
                         </ul>
                     </div>
                 </div>
@@ -187,6 +203,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <div class="menu">
                 <ul>
                     <li class="dropDownLi menuAboutDropDown">
+<!--                        <span class="menuAbout">--><?php //= $GLOBALS['text']['__about__'] ?><!--</span>-->
                         <span class="menuAbout">ABOUT</span>
                         <div class="dropDownAbout">
                             <ul>

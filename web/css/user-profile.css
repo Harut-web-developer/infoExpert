@@ -60,9 +60,6 @@
 .userProfileMenu > li > a:hover{
     color: #F36528;
 }
-.aaa{
-    color: #F36528 !important;
-}
 .fieldMoreAbout{
     width: 265px;
     height: 92px;
@@ -172,6 +169,9 @@
 .userFormsBtn > button:hover img{
     content: url("../images/userSaveBtnhover.png");
 }
+.userFormsBtn > button:hover span{
+    color: white;
+}
 .userFormsBtn > button > span{
     position: absolute;
     left: 0;
@@ -181,9 +181,7 @@
     margin: 11px 33px;
     font-weight: 500;
 }
-.userFormsBtn > button:hover span{
-    color: white;
-}
+
 .userPhotoFields > span{
     /*position: absolute;*/
     font-family: "Roboto",sans-serif;
@@ -502,7 +500,12 @@
     margin: 12px 33px;
     font-weight: 500;
 }
-
+.userFormsBtn_ > button:hover img{
+    content: url("../images/userSaveBtnhover.png");
+}
+.userFormsBtn_ > button:hover span{
+    color: white;
+}
 .attachCvEdit{
     width: 100px;
     height: 16px;

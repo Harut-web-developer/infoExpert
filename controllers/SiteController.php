@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Texts;
 use app\models\User;
 use Codeception\Lib\Generator\PageObject;
 use Codeception\Verify\Verifiers\VerifyAny;
@@ -58,24 +59,41 @@ class SiteController extends Controller
         ];
     }
 
+    public static function pages()
+    {
+        $page['index'] = 1;
+        $page['about'] = 2;
+        return $page;
+    }
+
     public function beforeAction($action)
     {
-        /*if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
-            setcookie('language', 'en', time() + (365 * 24 * 60 * 60));
+        if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
+            setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
             Yii::$app->end();
             return false;
         }
         $lng = $_COOKIE['language'] ?? 'en';
         if($lng !== 'am' && $lng !== 'ru' && $lng !== 'en'){
-            setcookie('language', 'en', time() + (365 * 24 * 60 * 60));
+            setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
             Yii::$app->end();
             return false;
         }
-        $txt = Texts::find()->select(['text_'.$lng.' as text'])->asArray()->indexBy('slug')->column();
+        $pId = self::pages();
+        $txt = Texts::find()
+                ->select(['text_'.$lng.' as text']);
+        if(@$pId[Yii::$app->controller->action->id]){
+            $txt->where(['page_id' => $pId[Yii::$app->controller->action->id]]);
+        }
+        $txt = $txt->orWhere(['is','page_id' ,null ])
+                ->asArray()
+                ->indexBy('slug')
+                ->column();
+
         $GLOBALS['text'] = $txt;
-        $this->enableCsrfValidation = false;*/
+        $this->enableCsrfValidation = false;
         return parent::beforeAction($action);
     }
     /**
@@ -187,6 +205,11 @@ class SiteController extends Controller
         return $this->render('sign-up', [
             'model' => $model,
         ]);
+    }
+    public function actionSwitchLanguage($lang)
+    {
+        setcookie('language', $lang, time() + (365 * 24 * 60 * 60),"/");
+        return $this->goBack(Yii::$app->request->referrer);
     }
 
     public function actionTest()

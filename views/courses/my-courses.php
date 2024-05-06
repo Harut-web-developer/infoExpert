@@ -7,10 +7,10 @@ $this->registerCssFile('@web/css/courses.css');
         <div class="userProfileMenuField">
             <span>My Profile</span>
             <ul class="userProfileMenu">
-                <li><a class="" href="/user-profile/achievements">My achievements</a></li>
-                <li><a class="" href="/courses/my-courses">My courses</a></li>
-                <li><a class="" href="/wishlist/index">Wishlist</a></li>
-                <li><a class="" href="/my-card/index">My card</a></li>
+                <li><a href="/user-profile/achievements">My achievements</a></li>
+                <li><a href="/courses/my-courses">My courses</a></li>
+                <li><a href="/wishlist/index">Wishlist</a></li>
+                <li><a href="/my-card/index">My card</a></li>
             </ul>
         </div>
         <div class="mainCoursesFields">

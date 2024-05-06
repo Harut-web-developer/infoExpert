@@ -529,9 +529,12 @@
     }
 
     .container_signin > span {
-        margin: 13px 31px;
+        /*margin: 13px 31px;*/
         position: absolute;
+        top: 13px;
         left: 0;
+        width: 100%;
+        text-align: center;
         color: #F36528;
         font-family: "Roboto", sans-serif;
         font-size: 13px;
