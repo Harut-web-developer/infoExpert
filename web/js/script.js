@@ -143,32 +143,38 @@ if (window.location.pathname == '/') {
         scrollBtn.on("click", scrollWindow);
     };
     scrollTop();
-}
-$(window).on("scroll", function () {
-    if ($(window).scrollTop() > $(window).height()){
-        const counters = document.querySelectorAll('.numberSectionTwo');
-        const speed = 400;
-        counters.forEach( counter => {
-            const animate = () => {
-                const value = +counter.getAttribute('akhi');
-                const data = +counter.innerText;
-                console.log(counter.innerText)
 
-                const time = value / speed;
-                if(data < value) {
-                    counter.innerText = Math.ceil(data + time);
-                    setTimeout(animate, 1);
-                }else{
-                    counter.innerText = value;
-                }
+    $(window).scroll(startCounter);
+    function startCounter() {
+        let scrollY = (window.pageYOffset || document.documentElement.scrollTop) + window.innerHeight;
+        let divPos = document.querySelector('.sectionInfo').offsetTop;
 
+        if (scrollY > divPos) {
+            $(window).off("scroll", startCounter);
+
+            $('.numberSectionTwo').each(function() {
+                var $this = $(this);
+                jQuery({
+                    Counter: 0
+                }).animate({
+                    Counter: $this.text().replace(/,/g, '')
+                }, {
+                    duration: 1000,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(commaSeparateNumber(Math.floor(this.Counter)));
+                    },
+                    complete: function() {
+                        $this.text(commaSeparateNumber(this.Counter));
+                    }
+                });
+            });
+            function commaSeparateNumber(num) {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             }
-
-            animate();
-        });
+        }
     }
-});
-
+}
 $(document).ready(function () {
     $('body').on('click','.tabletMenuIcon', function () {
         $('.menuTabletHeader').toggleClass('menuTabletActive');
