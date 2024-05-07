@@ -93,6 +93,7 @@
         font-size: 12px;
         color: #F36528;
         font-weight: 900;
+        width: auto;
     }
     .sectionTwo{
         background-image: url("../images/diagonalTablet.png");
@@ -185,6 +186,8 @@
         left: 17px;
         top: 4px;
         color: #F36528;
+        width: auto;
+
     }
     .coursesBg{
         background-image: url("../images/recTablet.png");
@@ -516,6 +519,8 @@
         left: 24px;
         top: 4px;
         color: #F36528;
+        width: auto;
+
     }
 }
 @media only screen and (min-width: 1301px) and (max-width: 1660px) {
@@ -599,6 +604,7 @@
         left: 37px;
         top: 4px;
         color: #F36528;
+        width: auto;
     }
 }
 

@@ -19,17 +19,17 @@ $this->title = 'Infoexpert';
     <div class="sectionInfo">
         <div class="numbersInfo">
             <img src="/images/partnerinfoimg.png" alt="">
-            <span class="numberSectionTwo">350+</span>
+            <span class="numberSectionTwo" akhi="350">0</span>
             <span class="textSectionTwo">partner</span>
         </div>
         <div class="numbersInfo">
             <img src="/images/productinfoimg.png" alt="">
-            <span class="numberSectionTwo">17</span>
+            <span class="numberSectionTwo" akhi="17">0</span>
             <span class="textSectionTwo">products</span>
         </div>
         <div class="numbersInfo">
             <img src="/images/programminfoimg.png" alt="">
-            <span class="numberSectionTwo">500+</span>
+            <span class="numberSectionTwo" akhi="500">0</span>
             <span class="textSectionTwo">programms</span>
         </div>
     </div>
