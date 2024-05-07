@@ -1052,6 +1052,12 @@
     justify-content: space-between;
     align-items: center;
 }
+.addSymbol{
+    color: #1C5484;
+    font-family: "Roboto",sans-serif;
+    font-size: 32px;
+    font-weight:700;
+}
 .numberSectionTwo{
     color: #1C5484;
     font-family: "Roboto",sans-serif;

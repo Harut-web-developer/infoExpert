@@ -126,7 +126,7 @@
         width: 50px;
         height: 50px;
     }
-    .numberSectionTwo{
+    .numberSectionTwo, .addSymbol{
         color: #1C5484;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
