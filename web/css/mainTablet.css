@@ -87,8 +87,10 @@
     }
     .apply > a > span{
         position: absolute;
-        left: 24px;
+        left: 0px;
         top: 17px;
+        width: 100%;
+        text-align: center;
         font-family: "Roboto",sans-serif;
         font-size: 12px;
         color: #F36528;
@@ -182,8 +184,10 @@
         font-family: "Roboto",sans-serif;
         font-size: 12px;
         font-weight: 900;
-        left: 17px;
+        left: 0px;
         top: 4px;
+        width: 100%;
+        text-align: center;
         color: #F36528;
     }
     .coursesBg{
@@ -408,8 +412,10 @@
         font-family: "Roboto",sans-serif;
         font-size: 10px;
         font-weight: 900;
-        left: 8px;
+        left: 0px;
         top: 6px;
+        width: 100%;
+        text-align: center;
         color: #F36528;
     }
 }
@@ -513,8 +519,10 @@
         font-family: "Roboto",sans-serif;
         font-size: 15px;
         font-weight: 900;
-        left: 24px;
+        left: 0px;
         top: 4px;
+        width: 100%;
+        text-align: center;
         color: #F36528;
     }
 }
@@ -596,8 +604,10 @@
         font-family: "Roboto",sans-serif;
         font-size: 15px;
         font-weight: 900;
-        left: 37px;
+        left: 0px;
         top: 4px;
+        width: 100%;
+        text-align: center;
         color: #F36528;
     }
 }
@@ -1634,9 +1644,11 @@
         height: 48px;
     }
     .blogBtn > a > span {
+        top: 3px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 3px 27px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1663,9 +1675,11 @@
         height: 48px;
     }
     .blogBtn > a > span {
+        top: 3px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 3px 27px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1692,9 +1706,11 @@
         height: 48px;
     }
     .blogBtn > a > span {
+        top: 3px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 3px 27px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1721,9 +1737,11 @@
         height: 48px;
     }
     .blogBtn > a > span {
+        top: 4px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 3px 27px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1750,9 +1768,11 @@
         height: 55px;
     }
     .blogBtn > a > span {
+        top: 4px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 4px 34px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1779,9 +1799,11 @@
         height: 55px;
     }
     .blogBtn > a > span {
+        top: 4px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 4px 34px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1808,9 +1830,11 @@
         height: 55px;
     }
     .blogBtn > a > span {
+        top: 4px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 4px 34px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1837,9 +1861,11 @@
         height: 55px;
     }
     .blogBtn > a > span {
+        top: 4px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 4px 34px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1866,9 +1892,11 @@
         height: 60px;
     }
     .blogBtn > a > span {
+        top: 4px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 4px 45px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1884,6 +1912,11 @@
     }
 }
 @media only screen and (min-width: 1380px) and (max-width: 1479px) {
+    .sectionBlog{
+        width: 80%;
+        height: 789px;
+        margin: 144px 10% 0px;
+    }
     .blogBtn {
         width: 160px;
     }
@@ -1895,9 +1928,11 @@
         height: 60px;
     }
     .blogBtn > a > span {
+        top: 4px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 4px 45px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1913,6 +1948,11 @@
     }
 }
 @media only screen and (min-width: 1480px) and (max-width: 1559px) {
+    .sectionBlog{
+        width: 80%;
+        height: 789px;
+        margin: 144px 10% 0px;
+    }
     .blogLine {
         width: 49%;
     }
@@ -1921,9 +1961,11 @@
         height: 60px;
     }
     .blogBtn > a > span {
+        top: 4px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 4px 45px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1939,6 +1981,11 @@
     }
 }
 @media only screen and (min-width: 1560px) and (max-width: 1659px) {
+    .sectionBlog{
+        width: 70%;
+        height: 789px;
+        margin: 144px 15% 0px;
+    }
     .blogLine {
         width: 52%;
     }
@@ -1947,9 +1994,11 @@
         height: 60px;
     }
     .blogBtn > a > span {
+        top: 4px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 4px 45px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1970,6 +2019,11 @@
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1400px) {
+    .sectionBlog{
+        width: 80%;
+        height: 789px;
+        margin: 144px 10% 0px;
+    }
     .cardsimg{
         height: 200px;
     }
@@ -2008,7 +2062,18 @@
         text-align: center;
     }
 }
-
+@media only screen and (min-width: 600px) and (max-width: 1300px) {
+    .haveQuestions{
+        width: 64%;
+        height: 337px;
+        position: absolute;
+        margin: 83px 18% 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 /*footer section*/
 @media only screen and (min-width: 740px) and (max-width: 1340px) {
     .footerBackground{
