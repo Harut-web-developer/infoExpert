@@ -127,24 +127,23 @@ a.desc:after {
     text-align: center;
 }
 .errorBtnField > a{
+    position: relative;
     background: transparent;
     border: none;
-}
-.errorBtnField > a > img{
-    position: relative;
 }
 .errorBtnField > a:hover img{
     content: url("../images/buttonImg1hover.png");
 }
 .errorBtnField > a > span{
     color: #F36528;
-    margin: 32px 36px;
     position: absolute;
+    top: 0px;
     left: 0px;
+    width: 100%;
+    text-align: center;
     font-family: 'Roboto',sans-serif;
     font-size: 20px;
     font-weight: 900;
-    text-align: left;
     text-decoration: none;
 }
 .errorBtnField > a:hover span{
@@ -179,13 +178,15 @@ a.desc:after {
         width: 93.73px;
         height: 40px;
     }
-    .errorBtnField > button > span > a{
+    .errorBtnField > a > span{
         font-size: 8px;
         font-weight: 600;
         line-height: 9.38px;
-        text-align: left;
-        width: max-content;
-        margin: 15px 16px;
+        text-align: center;
+        width: 100%;
+        top: 9px;
+        left: 0px;
+        text-align: center;
     }
     .errorBtnField img{
         width: 93.73px;

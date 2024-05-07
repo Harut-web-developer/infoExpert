@@ -454,6 +454,10 @@ hr.new1 {
     background: transparent;
     border: none;
 }
+.wishlistBtnField > button > img{
+    width: 113px;
+    height: 49px;
+}
 .wishlistBtnField > button:hover img{
     content: url("../images/wishlist1hover.png");
 }

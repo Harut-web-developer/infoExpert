@@ -177,9 +177,11 @@
     content: url("../images/Vectorhover.png");
 }
 .container_signin > span{
-    margin: 22px 56px;
     position: absolute;
+    top: 22px;
     left: 0;
+    width: 100%;
+    text-align: center;
     color: #F36528;
     font-family: "Roboto",sans-serif;
     font-size: 13px;
@@ -189,8 +191,6 @@
 }
 .container_signin:hover span{
     color: white;
-    margin: 22px 55px;
-
 }
 .mainCheck{
     display: flex;
@@ -313,13 +313,12 @@
     background: transparent;
     border: none;
 }
-.container_signup:hover img{
-    content: url("../images/Vectorhover.png");
-}
 .container_signup > span{
-    margin: 22px 54px;
     position: absolute;
+    top: 22px;
     left: 0;
+    width: 100%;
+    text-align: center;
     color: #D9E3E4;
     font-family: "Roboto",sans-serif;
     font-size: 13px;
@@ -327,10 +326,7 @@
     font-weight: 500;
     line-height: normal;
 }
-.container_signup:hover span{
-    color: white;
-    margin: 22px 53px;
-}
+
 /*tablet sign in*/
 @media only screen and (min-width: 740px) and (max-width: 1024px) {
     .login {
@@ -529,7 +525,6 @@
     }
 
     .container_signin > span {
-        /*margin: 13px 31px;*/
         position: absolute;
         top: 13px;
         left: 0;
@@ -620,7 +615,7 @@
         height: 40px;
     }
     .container_signup > span{
-        margin: 13px 29px;
+        /*margin: 13px 29px;*/
     }
     .rememberSignupField{
         margin-top: 17px;
@@ -806,9 +801,11 @@
         height: 40px;
     }
     .container_signin > span{
-        margin: 13px 31px;
         position: absolute;
+        top: 13px;
         left: 0;
+        width: 100%;
+        text-align: center;
         color: #F36528;
         font-family: "Roboto",sans-serif;
         font-size: 13px;
@@ -821,9 +818,11 @@
         height: 40px;
     }
     .container_signup > span{
-        margin: 13px 29px;
         position: absolute;
+        top: 13px;
         left: 0;
+        width: 100%;
+        text-align: center;
         color: #D9E3E4;
         font-family: "Roboto",sans-serif;
         font-size: 13px;

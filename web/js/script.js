@@ -213,11 +213,26 @@ $(document).ready(function () {
         if ($(this).prop('checked')) {
             submitButton.prop('disabled', false);
             signupButtonText.css('color', '#F36528');
+
         } else {
             submitButton.prop('disabled', true);
             signupButtonText.css('color', '#D9E3E4');
         }
     });
+    $("#submitButton").hover(
+        function () {
+            if (!$(this).prop("disabled")) {
+                $(this).find("img").attr("src", "/images/Vectorhover.png");
+                $(this).find("span").css("color", "white");
+            }
+        },
+        function () {
+            if (!$(this).prop("disabled")) {
+                $(this).find("img").attr("src", "/images/Vector.png");
+                $(this).find("span").css("color", "#F36528");
+            }
+        }
+    );
 
     let current = location.pathname;
     $('.userProfileMenu li a').each(function(){

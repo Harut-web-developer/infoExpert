@@ -1429,6 +1429,21 @@
     }
 }
 /*sectionSeven*/
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .cardsimg{
+        height: 100px;
+    }
+}
+@media only screen and (min-width: 901px) and (max-width: 1023px) {
+    .cardsimg{
+        height: 115px;
+    }
+}
+/*@media only screen and (min-width: 800px) and (max-width: 900px) {*/
+/*    .cardsimg{*/
+/*        height: 100px;*/
+/*    }*/
+/*}*/
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
     .sectionSeven{
         margin-top: -49px;
@@ -1740,6 +1755,9 @@
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1099px) {
+    .cardsimg{
+        height: 170px;
+    }
     .blogBtn {
         width: 140px;
     }
@@ -1802,6 +1820,9 @@
     }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1189px) {
+    .cardsimg{
+        height: 175px;
+    }
     .blogBtn {
         width: 140px;
     }
@@ -1833,6 +1854,9 @@
     }
 }
 @media only screen and (min-width: 1190px) and (max-width: 1279px) {
+    .cardsimg{
+        height: 190px;
+    }
     .blogBtn {
         width: 140px;
     }
@@ -1864,6 +1888,9 @@
     }
 }
 @media only screen and (min-width: 1280px) and (max-width: 1379px) {
+    .cardsimg{
+        height: 195px;
+    }
     .blogBtn {
         width: 160px;
     }
@@ -1895,6 +1922,9 @@
     }
 }
 @media only screen and (min-width: 1380px) and (max-width: 1479px) {
+    .cardsimg{
+        height: 210px;
+    }
     .sectionBlog{
         width: 80%;
         height: 789px;
@@ -1964,6 +1994,9 @@
     }
 }
 @media only screen and (min-width: 1560px) and (max-width: 1659px) {
+    .cardsimg{
+        height: 210px;
+    }
     .sectionBlog{
         width: 70%;
         height: 789px;
@@ -2007,9 +2040,7 @@
         height: 789px;
         margin: 144px 10% 0px;
     }
-    .cardsimg{
-        height: 200px;
-    }
+
     .cardsText{
         height: 230px;
     }
