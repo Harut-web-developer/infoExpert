@@ -154,6 +154,7 @@ $this->registerCssFile('@web/css/alumni.css');
 <script>
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
+        loop: true,
         grid: {
             rows: 2,
         },
@@ -162,5 +163,6 @@ $this->registerCssFile('@web/css/alumni.css');
             el: ".swiper-pagination",
             clickable: true,
         },
+
     });
 </script>

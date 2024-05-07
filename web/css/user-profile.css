@@ -500,6 +500,9 @@
     margin: 12px 33px;
     font-weight: 500;
 }
+.usersProfileInfoEmail {
+    display: flex;
+}
 .userFormsBtn_ > button:hover img{
     content: url("../images/userSaveBtnhover.png");
 }
@@ -565,7 +568,9 @@
 }
 @media screen and (max-width: 1600px) {
     .certificate {
-        justify-content: center;
+        height: auto;
+        gap: 7px;
+        justify-content: space-between;
     }
     .cartificateImg {
          width: auto;
@@ -593,17 +598,54 @@
          padding-top: 70px;
     }
     .myCoursesProfileField {
-        width: 330px;
+        width: 300px;
+        height: 449px;
+    }
+    .myCoursesFieldSectionLeft {
+        width: 220px;
+        height: 380px;
     }
     .myCoursesFieldSection {
         margin: 37px 33px 37px 22px;
     }
     .myCoursesFieldSectionLeft > img {
+        width: 150px;
+        height: 150px;
+        margin-right: -34px;
+    }
+    .usersProfileInfo {
         width: 200px;
-        height: 200px;
+    }
+    .usersProfileInfo img{
+        width: 25px;
+        height: 25px;
+    }
+    .myCoursesFieldSectionLeft > span{
+        font-family: 'Roboto';
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 16.41px;
+        text-align: center;
+        margin-right: -37px;
+    }
+    .usersProfileInfoPhone > span,
+    .usersProfileInfoEmail > span,
+    .usersProfileInfoLinkdin > span{
+        margin-left: 20px;
+        font-family: 'Roboto';
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .myCoursesFieldSection {
+        width: 245px;
     }
 }
 @media screen and (max-width: 1100px) {
+    /*.usersAchievements {*/
+    /*    height: 646px;*/
+    /*}*/
     .userProfileSection, .userCreateField, .userAchievementsSection{
         width: -webkit-fill-available;
         margin: 95px 6.9% 0px 6.8%;
@@ -619,7 +661,7 @@
         text-align: left;
     }
     .userProfileMenu {
-        width: 400px;
+        width: 423px;
     }
     .userProfileMenu > li > a{
         font-size: 14px;
@@ -638,7 +680,7 @@
         align-items: start;
     }
     .profilBody {
-        width: 85%;
+        width: 91%;
         padding-top: 0;
         align-items: flex-start;
     }
@@ -691,24 +733,27 @@
     }
     .usersProfileInfo {
         width: 166px;
-        height: auto;
+        height: 90px;
     }
     .myCoursesFieldSectionRight img{
         width: 15.18px;
         height: 15.18px;
+        margin-left: -32px;
     }
     .myCoursesFieldSectionLeft > span{
         font-size: 14px;
         font-weight: 600;
         line-height: 16.41px;
         text-align: center;
+        margin: 0;
     }
     .myCoursesFieldSectionLeft > img{
         width: 93px;
         height: 94px;
+        margin: 0;
     }
     .myCoursesFieldSection {
-        width: 162px;
+        width: 181px;
         height: 224px;
         margin: 22px 35px 34px 17px;
     }
@@ -745,7 +790,9 @@
     }
     .certificate {
         width: 317px;
-        height: 300px;
+        justify-content: space-between;
+        height: 264px;
+        gap: 7px;
     }
     .cartificateImg{
         width: 317.02px;
@@ -827,7 +874,7 @@
         width: 90%;
     }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 700px) {
     .profilBody {
         width: 100%;
     }

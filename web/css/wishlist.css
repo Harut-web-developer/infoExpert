@@ -366,7 +366,9 @@ hr.new1 {
 }
 .card_2 .cardBody_2{
     display: flex;
+    flex-direction: row;
     padding: 0 15px;
+    justify-content: space-between;
 }
 .starAndTxt_2{
     padding-left: 18px;
@@ -379,10 +381,10 @@ hr.new1 {
     display: flex;
     flex-direction: column;
     gap: 9px;
-    /*margin-bottom: 16px;*/
+    margin: 0 15px;
 }
 .card_2 .cardBody_2 .span1_2{
-    font-family: Roboto Slab;
+    font-family: 'Roboto',sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 26px;
@@ -390,7 +392,7 @@ hr.new1 {
     color: #FFFFFF;
 }
 .card_2 .cardBody_2 .span2_2{
-    font-family: Roboto;
+    font-family: 'Roboto',sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 28.13px;
@@ -404,7 +406,7 @@ hr.new1 {
     /*margin-bottom: 5px;*/
 }
 .cardtxt1_2 span{
-    font-family: Roboto Medium;
+    font-family: 'Roboto',sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 19.84px;
@@ -423,7 +425,7 @@ hr.new1 {
     height: 28.09px;
 }
 .cardtxt2_2 span{
-    font-family: Roboto Medium;
+    font-family: 'Roboto',sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 19.84px;
@@ -441,9 +443,9 @@ hr.new1 {
     width: 100%;
 }
 .footerCard_2{
-    width: auto;
+    margin-right: 15px;
+    margin-left: 40px;
     display: flex;
-    justify-content: flex-end;
     gap: 10px;
 }
 .wishlistBtnField{
@@ -466,7 +468,7 @@ hr.new1 {
     margin: 15px 26px;
     position: absolute;
     left: 0px;
-    font-family: 'Roboto';
+    font-family: 'Roboto',sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
@@ -476,6 +478,8 @@ hr.new1 {
 .footerCard_2_img2{
     width: 43px;
     height: 43px;
+    display: block;
+    margin-left: auto;
 }
 .footerCard_2_img3{
     width: 43px;
@@ -514,6 +518,7 @@ hr.new1 {
     .cardCenter_2 {
         width: min-content;
         height: 81.09px;
+        margin: 0;
     }
     .cardtxt2_2 {
         width: auto;
@@ -740,6 +745,7 @@ hr.new1 {
         font-weight: 500;
         line-height: 9.92px;
         text-align: left;
+        padding: 0;
     }
     .cardtxt1_2 {
         width: 174px;
@@ -751,7 +757,11 @@ hr.new1 {
         padding: 0;
     }
     .footerCard_2{
+        margin-right: 6px;
+        margin-left: 25px;
         padding-top: 0;
+        justify-content: center;
+        align-items: center;
     }
     .cardContent {
         height: 59%;
@@ -762,8 +772,14 @@ hr.new1 {
     }
 }
 @media screen and (max-width: 1100px) {
+    .usersProfile {
+        height: 955px;
+    }
     .CoursesAndCategoriesCard {
-        width: 51%;
+        width: 444px;
+    }
+    .userProfileMenu {
+        width: 423px;
     }
     .starAndTxt_2 {
         display: flex;
@@ -833,7 +849,7 @@ hr.new1 {
         text-align: left;
     }
     .card_2 .cardBody_2 .span2_2{
-        font-family: Roboto;
+        font-family: 'Roboto',sans-serif;
         font-size: 10px;
         font-weight: 400;
         line-height: 11.72px;
@@ -841,7 +857,7 @@ hr.new1 {
 
     }
     .spanAmd{
-        font-family: Roboto;
+        font-family: 'Roboto',sans-serif;
         font-size: 8px;
         font-weight: 400;
         line-height: 9.38px;
@@ -856,11 +872,13 @@ hr.new1 {
         height: 14px;
     }
     .cardtxt1_2 span, .cardtxt2_2 span{
-        font-family: 'Roboto Medium';
+        font-family: 'Roboto',sans-serif;
         font-size: 8px;
         font-weight: 500;
         line-height: 9.92px;
         text-align: left;
+        display: flex;
+        align-items: center;
     }
     .footerCard_2_img1 {
         width: 71px;
@@ -885,7 +903,7 @@ hr.new1 {
         height: auto;
     }
     .cardsInfo_{
-        font-family: Roboto;
+        font-family: 'Roboto',sans-serif;
         font-size: 11px;
         font-weight: 400;
         line-height: 13.2px;
@@ -896,14 +914,14 @@ hr.new1 {
         height: 16px;
     }
     .articleDate_{
-        font-family: Jost;
+        font-family: 'Roboto',sans-serif;
         font-size: 11px;
         font-weight: 400;
         line-height: 16.5px;
         text-align: left;
     }
     .cardsLike_{
-        font-family: Roboto;
+        font-family: 'Roboto',sans-serif;
         font-size: 12px;
         font-weight: 500;
         line-height: 14.06px;

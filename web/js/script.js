@@ -254,8 +254,36 @@ $(document).ready(function () {
             let x = $(this);
             if(x.attr('href').indexOf(pageName) !== -1){
                 x.css('color', '#F36528');
+                x.closest('div').closest('li').children('span').css('color', '#F36528');
             }
         })
+        $('.profileFieldImg li a').each(function(){
+            let x = $(this);
+            if(x.attr('href').indexOf(pageName) !== -1){
+                x.css('color', '#F36528');
+            }
+        })
+        $('.tabletMenuNavField li a').each(function(){
+            let x = $(this);
+            if(x.attr('href').indexOf(pageName) !== -1){
+                x.css('color', '#F36528');
+                x.closest('div').closest('li').children('span').css('color', '#F36528');
+            }
+        })
+        let urlName = window.location.pathname;
+        $('.tabletMenuNavbar li a').each(function() {
+            let link = $(this);
+            if (link.attr('href') === urlName) {
+                link.css('color', '#F36528');
+            }
+        });
+        $('.tabletMenuNavbarCourses li a').each(function() {
+            let link = $(this);
+            if (link.attr('href') === urlName) {
+                $('.tabletAllCoursesList span').css('color', '#F36528')
+                link.css('color', '#F36528');
+            }
+        });
     }
 
 })
