@@ -95,6 +95,7 @@
         font-size: 12px;
         color: #F36528;
         font-weight: 900;
+        width: auto;
     }
     .sectionTwo{
         background-image: url("../images/diagonalTablet.png");
@@ -189,6 +190,8 @@
         width: 100%;
         text-align: center;
         color: #F36528;
+        width: auto;
+
     }
     .coursesBg{
         background-image: url("../images/recTablet.png");
@@ -524,6 +527,8 @@
         width: 100%;
         text-align: center;
         color: #F36528;
+        width: auto;
+
     }
 }
 @media only screen and (min-width: 1301px) and (max-width: 1660px) {
@@ -609,6 +614,7 @@
         width: 100%;
         text-align: center;
         color: #F36528;
+        width: auto;
     }
 }
 
@@ -842,83 +848,83 @@
         white-space: pre-wrap;
     }
 }
-@media only screen and (min-width: 700px) and (max-width: 749px) {
-    .intoBlockTestimonial {
-        width: 79%;
-        height: 41%;
-        margin: 11.5% 9%;
-        padding: 11px 0 11px;
-    }
-    .testimonialSimbol > img{
-        width: 16px;
-    }
-    .fieldsLinkdin > a > img{
-        width: 28px;
-    }
-    .testimonialsText {
-        width: 100%;
-        height: 120px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        color: white;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .testimonialsAuthor {
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-size: 21px;
-        width: 141px;
-        color: white;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        height: 37px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: pre-wrap;
-    }
-}
-@media only screen and (min-width: 750px) and (max-width: 799px) {
-    .intoBlockTestimonial {
-        width: 79%;
-        height: 44%;
-        margin: 11.5% 9%;
-        padding: 11px 0 11px;
-    }
-    .testimonialSimbol > img{
-        width: 16px;
-    }
-    .fieldsLinkdin > a > img{
-        width: 28px;
-    }
-    .testimonialsText {
-        width: 100%;
-        height: 135px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-size: 18px;
-        color: white;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .testimonialsAuthor {
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-size: 21px;
-        width: 141px;
-        color: white;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        height: 37px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: pre-wrap;
-    }
-}
-@media only screen and (min-width: 520px) and (max-width: 799px) {
+/*@media only screen and (min-width: 700px) and (max-width: 749px) {*/
+/*    .intoBlockTestimonial {*/
+/*        width: 79%;*/
+/*        height: 41%;*/
+/*        margin: 11.5% 9%;*/
+/*        padding: 11px 0 11px;*/
+/*    }*/
+/*    .testimonialSimbol > img{*/
+/*        width: 16px;*/
+/*    }*/
+/*    .fieldsLinkdin > a > img{*/
+/*        width: 28px;*/
+/*    }*/
+/*    .testimonialsText {*/
+/*        width: 100%;*/
+/*        height: 120px;*/
+/*        font-family: "Roboto", sans-serif;*/
+/*        font-weight: 400;*/
+/*        font-size: 16px;*/
+/*        color: white;*/
+/*        overflow: hidden;*/
+/*        text-overflow: ellipsis;*/
+/*    }*/
+/*    .testimonialsAuthor {*/
+/*        font-family: "Roboto", sans-serif;*/
+/*        font-weight: 400;*/
+/*        font-size: 21px;*/
+/*        width: 141px;*/
+/*        color: white;*/
+/*        display: -webkit-box;*/
+/*        -webkit-line-clamp: 2;*/
+/*        -webkit-box-orient: vertical;*/
+/*        height: 37px;*/
+/*        overflow: hidden;*/
+/*        text-overflow: ellipsis;*/
+/*        white-space: pre-wrap;*/
+/*    }*/
+/*}*/
+/*@media only screen and (min-width: 750px) and (max-width: 799px) {*/
+/*    .intoBlockTestimonial {*/
+/*        width: 79%;*/
+/*        height: 44%;*/
+/*        margin: 11.5% 9%;*/
+/*        padding: 11px 0 11px;*/
+/*    }*/
+/*    .testimonialSimbol > img{*/
+/*        width: 16px;*/
+/*    }*/
+/*    .fieldsLinkdin > a > img{*/
+/*        width: 28px;*/
+/*    }*/
+/*    .testimonialsText {*/
+/*        width: 100%;*/
+/*        height: 135px;*/
+/*        font-family: "Roboto", sans-serif;*/
+/*        font-weight: 400;*/
+/*        font-size: 18px;*/
+/*        color: white;*/
+/*        overflow: hidden;*/
+/*        text-overflow: ellipsis;*/
+/*    }*/
+/*    .testimonialsAuthor {*/
+/*        font-family: "Roboto", sans-serif;*/
+/*        font-weight: 400;*/
+/*        font-size: 21px;*/
+/*        width: 141px;*/
+/*        color: white;*/
+/*        display: -webkit-box;*/
+/*        -webkit-line-clamp: 2;*/
+/*        -webkit-box-orient: vertical;*/
+/*        height: 37px;*/
+/*        overflow: hidden;*/
+/*        text-overflow: ellipsis;*/
+/*        white-space: pre-wrap;*/
+/*    }*/
+/*}*/
+@media only screen and (min-width: 520px) and (max-width: 800px) {
     .sectionSix{
         margin-top: -56px;
         background-image: url("../images/testimonialBgTablet.png");
@@ -929,10 +935,19 @@
         height: 664px;
     }
     .testimonial{
-        margin: 137px 5.5% 0px;
-        width: 89%;
+        /*margin: 137px 5.5% 0px;*/
+        /*width: 89%;*/
         height: 470px;
         position: absolute;
+    }
+    .sectionSix .swiper {
+        margin-top: 20px;
+    }
+    .blockTestimonial {
+        height: 100%!important;
+    }
+    .slide-content {
+        height: 320px;
     }
     .circleTestimonial > .swiper-pagination{
         left: 398px;
@@ -957,93 +972,61 @@
 }
 @media only screen and (min-width: 800px) and (max-width: 839px) {
     .intoBlockTestimonial {
-        width: 79%;
-        height: 46%;
-        margin: 11.5% 9%;
-        padding: 11px 0 11px;
-    }
-    .testimonialSimbol > img{
-        width: 20px;
-    }
-    .fieldsLinkdin > a > img{
-        width: 30px;
-    }
-    .testimonialsText {
-        width: 100%;
-        height: 140px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-size: 18px;
-        color: white;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        height: calc(100% / 2) !important;
     }
 }
-@media only screen and (min-width: 840px) and (max-width: 879px) {
+@media only screen and (max-width: 950px) {
     .intoBlockTestimonial {
-        width: 79%;
-        height: 48%;
-        margin: 11.5% 9%;
-        padding: 11px 0 11px;
-    }
-    .testimonialSimbol > img{
-        width: 20px;
-    }
-    .testimonialsText {
-        width: 100%;
-        height: 155px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-size: 17px;
-        color: white;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .fieldsLinkdin > a > img{
-        width: 30px;
-    }
-}
-@media only screen and (min-width: 880px) and (max-width: 919px) {
-    .intoBlockTestimonial {
-        width: 79%;
-        height: 48%;
-        margin: 11.5% 9%;
-        padding: 11px 0 11px;
-    }
-    .testimonialSimbol > img{
-        width: 20px;
+        width: 81%;
+        height: calc(100% / 2 + 8px);
+        display: flex;
+        margin: 7% 11px 0 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .testimonialsText {
         width: 100%;
-        height: 164px;
+        height: 90px;
         font-family: "Roboto", sans-serif;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 13px;
         color: white;
         overflow: hidden;
         text-overflow: ellipsis;
+        line-height: 15.23px;
+        text-align: justify;
     }
-}
-@media only screen and (min-width: 920px) and (max-width: 949px) {
-    .intoBlockTestimonial {
-        width: 79%;
-        height: 54%;
-        margin: 11.5% 9%;
-        padding: 11px 0 11px;
-    }
-    .testimonialsText {
-        width: 100%;
-        height: 175px;
+    .testimonialsAuthor{
         font-family: "Roboto", sans-serif;
+        font-size: 15px;
         font-weight: 400;
-        font-size: 19px;
-        color: white;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        height: 18px;
+        line-height: 17.58px;
     }
-
+    .fieldsLinkdin {
+        height: 18px;
+    }
+    .fieldsLinkdin img{
+        width: 15px;
+        height: 15px;
+    }
+    .testimonialSimbol{
+        height: 12px;
+        display: flex;
+    }
+    .testimonialSimbol img{
+        width: 15px;
+        height: 12px;
+    }
+    .blockTestimonial {
+        display: flex;
+        height: auto;
+        align-items: start;
+        justify-content: center;
+    }
 }
-@media only screen and (min-width: 950px) and (max-width: 979px) {
+@media only screen and (min-width: 950px) and (max-width: 980px) {
     .intoBlockTestimonial {
         width: 78%;
         height: 38%;
@@ -1082,11 +1065,11 @@
     }
 }
 @media screen and (max-width: 1080px){
-    .swiper-slide {
-        height: 845 !important;
+    .sectionSix .swiper-slide {
+        height: 80% !important;
     }
 }
-@media only screen and (min-width: 980px) and (max-width: 1079px) {
+@media only screen and (min-width: 980px) and (max-width: 1080px) {
     .intoBlockTestimonial {
         width: 78%;
         height: 38%;
@@ -1124,7 +1107,7 @@
         width: 28px;
     }
 }
-@media only screen and (min-width: 1080px) and (max-width: 1169px) {
+@media only screen and (min-width: 1080px) and (max-width: 1170px) {
     .intoBlockTestimonial {
         width: 78%;
         height: 40%;

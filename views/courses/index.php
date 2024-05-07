@@ -43,7 +43,7 @@ $this->registerCssFile('@web/css/courses.css');
                                     <span><a href="">Buy now</a></span>
                                 </button>
                             </div>
-                            <div>
+                            <div class="booterImgs">
                                 <img class="footerImg2" src="/images/courses4.png" alt="">
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
@@ -77,7 +77,7 @@ $this->registerCssFile('@web/css/courses.css');
                                     <span><a href="">Buy now</a></span>
                                 </button>
                             </div>
-                            <div>
+                            <div class="booterImgs">
                                 <img class="footerImg2" src="/images/courses4.png" alt="">
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
@@ -111,7 +111,7 @@ $this->registerCssFile('@web/css/courses.css');
                                     <span><a href="">Buy now</a></span>
                                 </button>
                             </div>
-                            <div>
+                            <div class="booterImgs">
                                 <img class="footerImg2" src="/images/courses4.png" alt="">
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
@@ -145,7 +145,7 @@ $this->registerCssFile('@web/css/courses.css');
                                     <span><a href="">Buy now</a></span>
                                 </button>
                             </div>
-                            <div>
+                            <div class="booterImgs">
                                 <img class="footerImg2" src="/images/courses4.png" alt="">
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
@@ -179,7 +179,7 @@ $this->registerCssFile('@web/css/courses.css');
                                     <span><a href="">Buy now</a></span>
                                 </button>
                             </div>
-                            <div>
+                            <div class="booterImgs">
                                 <img class="footerImg2" src="/images/courses4.png" alt="">
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
@@ -213,7 +213,7 @@ $this->registerCssFile('@web/css/courses.css');
                                     <span><a href="">Buy now</a></span>
                                 </button>
                             </div>
-                            <div>
+                            <div class="booterImgs">
                                 <img class="footerImg2" src="/images/courses4.png" alt="">
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
@@ -247,7 +247,7 @@ $this->registerCssFile('@web/css/courses.css');
                                     <span><a href="">Buy now</a></span>
                                 </button>
                             </div>
-                            <div>
+                            <div class="booterImgs">
                                 <img class="footerImg2" src="/images/courses4.png" alt="">
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
@@ -281,7 +281,7 @@ $this->registerCssFile('@web/css/courses.css');
                                     <span><a href="">Buy now</a></span>
                                 </button>
                             </div>
-                            <div>
+                            <div class="booterImgs">
                                 <img class="footerImg2" src="/images/courses4.png" alt="">
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>

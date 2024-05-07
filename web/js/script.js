@@ -87,12 +87,25 @@ if (window.location.pathname == '/'){
             0: {
                 slidesPerView: 1,
             },
-            520: {
-                slidesPerView: 2,
+            500: {
+                slidesPerView: 2.2,
+                spaceBetween: 43,
+            },
+            600: {
+                slidesPerView: 2.2,
+                spaceBetween: 50,
+            },
+            700: {
+                slidesPerView: 2.5,
+                spaceBetween: 43,
+            },
+            800: {
+                slidesPerView: 2.7,
+                spaceBetween: 43,
             },
             950: {
                 slidesPerView: 3.3,
-                spaceBetween: 35,
+                spaceBetween: 43,
             },
             1280: {
                 slidesPerView: 4.3,
@@ -131,6 +144,31 @@ if (window.location.pathname == '/') {
     };
     scrollTop();
 }
+$(window).on("scroll", function () {
+    if ($(window).scrollTop() > $(window).height()){
+        const counters = document.querySelectorAll('.numberSectionTwo');
+        const speed = 400;
+        counters.forEach( counter => {
+            const animate = () => {
+                const value = +counter.getAttribute('akhi');
+                const data = +counter.innerText;
+                console.log(counter.innerText)
+
+                const time = value / speed;
+                if(data < value) {
+                    counter.innerText = Math.ceil(data + time);
+                    setTimeout(animate, 1);
+                }else{
+                    counter.innerText = value;
+                }
+
+            }
+
+            animate();
+        });
+    }
+});
+
 $(document).ready(function () {
     $('body').on('click','.tabletMenuIcon', function () {
         $('.menuTabletHeader').toggleClass('menuTabletActive');
@@ -188,4 +226,15 @@ $(document).ready(function () {
             sthis.css('color', '#F36528');
         }
     })
+
+    if (window.location.pathname != '/') {
+        let pageName = location.pathname;
+        $('.menu li a').each(function(){
+            let x = $(this);
+            if(x.attr('href').indexOf(pageName) !== -1){
+                x.css('color', '#F36528');
+            }
+        })
+    }
+
 })
