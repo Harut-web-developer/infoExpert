@@ -58,7 +58,13 @@ $this->registerCssFile('@web/css/wishlist.css');
                                     <div class="cardBody_2">
                                         <span class="span1_2">1C: Accounting 8.3</span>
                                         <div class="starAndTxt_2">
-                                            <img src="/images/starCourses.png" alt="">
+                                            <div class="starDivWishlistCourses">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                            </div>
                                             <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
                                         </div>
                                     </div>
@@ -90,7 +96,13 @@ $this->registerCssFile('@web/css/wishlist.css');
                                     <div class="cardBody_2">
                                         <span class="span1_2">1C: Accounting 8.3</span>
                                         <div class="starAndTxt_2">
-                                            <img src="/images/starCourses.png" alt="">
+                                            <div class="starDivWishlistCourses">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                            </div>
                                             <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
                                         </div>
                                     </div>
@@ -122,7 +134,13 @@ $this->registerCssFile('@web/css/wishlist.css');
                                     <div class="cardBody_2">
                                         <span class="span1_2">1C: Accounting 8.3</span>
                                         <div class="starAndTxt_2">
-                                            <img src="/images/starCourses.png" alt="">
+                                            <div class="starDivWishlistCourses">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                            </div>
                                             <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
                                         </div>
                                     </div>
@@ -154,7 +172,13 @@ $this->registerCssFile('@web/css/wishlist.css');
                                     <div class="cardBody_2">
                                         <span class="span1_2">1C: Accounting 8.3</span>
                                         <div class="starAndTxt_2">
-                                            <img src="/images/starCourses.png" alt="">
+                                            <div class="starDivWishlistCourses">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                            </div>
                                             <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
                                         </div>
                                     </div>
@@ -186,7 +210,13 @@ $this->registerCssFile('@web/css/wishlist.css');
                                     <div class="cardBody_2">
                                         <span class="span1_2">1C: Accounting 8.3</span>
                                         <div class="starAndTxt_2">
-                                            <img src="/images/starCourses.png" alt="">
+                                            <div class="starDivWishlist">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                            </div>
                                             <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
                                         </div>
                                     </div>

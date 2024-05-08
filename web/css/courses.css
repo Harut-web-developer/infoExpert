@@ -537,7 +537,7 @@
 .footerImg2{
     margin-right: 10px;
 }
-.footerImg2, .footerImg3{
+.footerImg3{
     width: 43px;
     height: 43px;
     border: 1px;
@@ -551,6 +551,17 @@
 }
 .backButton{
     display: none;
+}
+.starDivCourses{
+    width: 118px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.starDivCourses img{
+    width: 21px;
+    height: 20px;
 }
 /*LIKE*/
 .heart{
@@ -566,10 +577,10 @@
     cursor: pointer;
     left: 50%;
     top: 100%;
-    transform: translate(-105%, -50%);
-    width: 43px;
-    height: 43px;
-    border: 2px solid #FFFFFF;
+    transform: translate(-105%, -55%)!important;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #FFFFFF;
     border-radius: 50%;
     text-align: center;
     line-height: 36px;
@@ -700,8 +711,12 @@
         line-height: 23px;
         text-align: left;
     }
-    .starAndTxt img{
-        width: 70px;
+    .starDivCourses {
+        width: 78px;
+    }
+    .starDivCourses img {
+        width: 15px;
+        height: 15px;
     }
     .cardBody .span2 {
         font-family: Roboto;
@@ -730,9 +745,19 @@
         width: 90px;
         height: 40px;
     }
-    .footerImg2, .footerImg3{
+    .like-cnt{
         width: 35px;
         height: 35px;
+        line-height: 32px;
+        transform: translate(-105%, -60%) !important;
+    }
+    .footerImg3{
+        width: 35px;
+        height: 35px;
+    }
+    .heart {
+        width: 20.19px;
+        height: 20px;
     }
     .carouselCourses .cardCourses {
         width: 300px;
@@ -768,6 +793,13 @@
         margin: 10px 25px;
         font-size: 13px;
     }
+    .starDivCourses {
+        width: 78px;
+    }
+    .starDivCourses img {
+        width: 15px;
+        height: 15px;
+    }
 }
 @media screen and (max-width: 1450px){
     .txt1, .txt2, . {
@@ -780,9 +812,17 @@
         width: 260px;
         /*height: 310px;*/
     }
-    .footerImg2, .footerImg3 {
+    .like-cnt, .footerImg3 {
         width: 25px;
         height: 25px;
+    }
+    .heart {
+        width: 15px;
+        height: 15px;
+    }
+    .like-cnt {
+        transform: translate(-105%, -62%) !important;
+        line-height: 21px;
     }
     .footerImg1 {
         width: 75px;
@@ -1130,9 +1170,12 @@
         line-height: 14.3px;
         text-align: left;
     }
-    .starAndTxt img{
-        width: 44.92px;
-        height: 8.69px;
+    .starDivCourses {
+        width: 45px;
+    }
+    .starDivCourses img {
+        width: 8px;
+        height: 8px;
     }
     .cardBody .span2{
         font-family: Roboto;

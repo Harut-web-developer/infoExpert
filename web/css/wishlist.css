@@ -189,6 +189,17 @@
 .applyNowBtnField > a:hover span{
     color: white;
 }
+.starDivCourses{
+    width: 118px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.starDivCourses img{
+    width: 21px;
+    height: 20px;
+}
 hr{
     opacity: 1!important;
 }
@@ -569,8 +580,12 @@ hr.new1 {
         font-weight: 500;
         line-height: 14.3px;
     }
-    .starAndTxt_2 img{
-        width: 90px;
+    .starDivCourses {
+        width: 78px;
+    }
+    .starDivCourses img {
+        width: 15px;
+        height: 15px;
     }
     .card_2 .cardBody_2 .span2_2 {
         font-size: 18px;
