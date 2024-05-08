@@ -1,7 +1,13 @@
 <?php
-/** @var yii\web\View $this */
-$this->registerCssFile('@web/css/courses.css');
+use yii\web\View;
+use yii\web\YiiAsset;
 
+/** @var yii\web\View $this */
+
+$this->registerCssFile('@web/css/courses.css');
+$this->registerJsFile('@web/js/courses.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
+$this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
+$this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
 ?>
 <div class="courses">
     <div class="headerCourses">
@@ -44,7 +50,13 @@ $this->registerCssFile('@web/css/courses.css');
                                 </button>
                             </div>
                             <div class="booterImgs">
-                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <div class="like-container">
+                                    <div class="like-cnt unchecked">
+                                        <i class="like-btn material-icons heart-icon">
+                                            <img class="heart" src="/images/innerHeart.png" alt="">
+                                        </i>
+                                    </div>
+                                </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
                         </div>
@@ -78,7 +90,13 @@ $this->registerCssFile('@web/css/courses.css');
                                 </button>
                             </div>
                             <div class="booterImgs">
-                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <div class="like-container">
+                                    <div class="like-cnt unchecked">
+                                        <i class="like-btn material-icons heart-icon">
+                                            <img class="heart" src="/images/innerHeart.png" alt="">
+                                        </i>
+                                    </div>
+                                </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
                         </div>
@@ -112,7 +130,13 @@ $this->registerCssFile('@web/css/courses.css');
                                 </button>
                             </div>
                             <div class="booterImgs">
-                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <div class="like-container">
+                                    <div class="like-cnt unchecked">
+                                        <i class="like-btn material-icons heart-icon">
+                                            <img class="heart" src="/images/innerHeart.png" alt="">
+                                        </i>
+                                    </div>
+                                </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
                         </div>
@@ -146,7 +170,13 @@ $this->registerCssFile('@web/css/courses.css');
                                 </button>
                             </div>
                             <div class="booterImgs">
-                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <div class="like-container">
+                                    <div class="like-cnt unchecked">
+                                        <i class="like-btn material-icons heart-icon">
+                                            <img class="heart" src="/images/innerHeart.png" alt="">
+                                        </i>
+                                    </div>
+                                </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
                         </div>
@@ -180,7 +210,13 @@ $this->registerCssFile('@web/css/courses.css');
                                 </button>
                             </div>
                             <div class="booterImgs">
-                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <div class="like-container">
+                                    <div class="like-cnt unchecked">
+                                        <i class="like-btn material-icons heart-icon">
+                                            <img class="heart" src="/images/innerHeart.png" alt="">
+                                        </i>
+                                    </div>
+                                </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
                         </div>
@@ -214,7 +250,13 @@ $this->registerCssFile('@web/css/courses.css');
                                 </button>
                             </div>
                             <div class="booterImgs">
-                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <div class="like-container">
+                                    <div class="like-cnt unchecked">
+                                        <i class="like-btn material-icons heart-icon">
+                                            <img class="heart" src="/images/innerHeart.png" alt="">
+                                        </i>
+                                    </div>
+                                </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
                         </div>
@@ -248,7 +290,13 @@ $this->registerCssFile('@web/css/courses.css');
                                 </button>
                             </div>
                             <div class="booterImgs">
-                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <div class="like-container">
+                                    <div class="like-cnt unchecked">
+                                        <i class="like-btn material-icons heart-icon">
+                                            <img class="heart" src="/images/innerHeart.png" alt="">
+                                        </i>
+                                    </div>
+                                </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
                         </div>
@@ -282,7 +330,13 @@ $this->registerCssFile('@web/css/courses.css');
                                 </button>
                             </div>
                             <div class="booterImgs">
-                                <img class="footerImg2" src="/images/courses4.png" alt="">
+                                <div class="like-container">
+                                    <div class="like-cnt unchecked">
+                                        <i class="like-btn material-icons heart-icon">
+                                            <img class="heart" src="/images/innerHeart.png" alt="">
+                                        </i>
+                                    </div>
+                                </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="">
                             </div>
                         </div>
@@ -362,4 +416,3 @@ $this->registerCssFile('@web/css/courses.css');
         </div>
     </div>
 </div>
-<?php $this->registerJsFile('@web/js/courses.js'); ?>

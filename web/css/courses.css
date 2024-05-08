@@ -552,6 +552,37 @@
 .backButton{
     display: none;
 }
+/*LIKE*/
+.heart{
+    width: 24.19px;
+    height: 24px;
+}
+.like-container{
+    filter: url('#filter');
+    display: inline-block;
+}
+.like-cnt{
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    top: 100%;
+    transform: translate(-105%, -50%);
+    width: 43px;
+    height: 43px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    z-index: 10;
+}
+.like-btn{
+    color: #fff;
+}
+::-moz-selection { background: transparent;}
+::selection {background: transparent;}
+
+
+
 /* end my courses page css*/
 @media screen and (max-width: 1910px) {
     .cardMyCourses {
