@@ -42,7 +42,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 <div class="tabletMenuField">
                     <button>
                         <img src="/images/tabletMenuBtn.png" alt="">
-                        <span>GET A CALL BACK</span>
+                        <span><?= $GLOBALS['text']['__callback__'] ?></span>
                     </button>
                     <img class="tabletMenuIcon" src="/images/menuLineBar.png" alt="">
                 </div>
@@ -82,22 +82,22 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <ul>
                         <?php if(!empty(Yii::$app->user->identity)){ ?>
                             <li class="tabletCoursesList">
-                                <a href="">My courses</a>
+                                <a href=""><?= $GLOBALS['text']['tabletMyCourse']?></a>
                                 <div class="tabletCoursesUnderline"></div>
                             </li>
                         <?php }?>
                         <li class="tabletAllCoursesList">
-                            <span>All courses</span>
+                            <span><?= $GLOBALS['text']['tabletAllCourses']?></span>
                             <img src="/images/menuRightArrow.png" alt="">
                         </li>
-                        <li><a href="/site/about">About IEA</a></li>
-                        <li><a href="">Our methodology</a></li>
-                        <li><a href="">Testimonials</a></li>
-                        <li><a href="/blog/index">Blog</a></li>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="/alumni/index">Alumni</a></li>
-                        <li><a href="">Recommendative quize</a></li>
-                        <li><a href="/contact-us/index">Contact us</a></li>
+                        <li><a href="/site/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
+                        <li><a href=""><?= $GLOBALS['text']['tabletMethodology']?></a></li>
+                        <li><a href=""><?= $GLOBALS['text']['footerTestimonials']?></a></li>
+                        <li><a href="/blog/index"><?= $GLOBALS['text']['footerBlog']?></a></li>
+                        <li><a href=""><?= $GLOBALS['text']['footerFaq']?></a></li>
+                        <li><a href="/alumni/index"><?= $GLOBALS['text']['headerAlumni']?></a></li>
+                        <li><a href=""><?= $GLOBALS['text']['tabletRecQuize']?></a></li>
+                        <li><a href="/contact-us/index"><?= $GLOBALS['text']['tabletContact']?></a></li>
                     </ul>
                     <div class="searchFlagField">
                         <div class="tabletSearchField">
@@ -106,8 +106,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         </div>
                         <div class="tabletFlagField">
                             <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/armflag.png" alt=""></a>
-                            <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/usaflag.png" alt=""></a>
-                            <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/ruflag.png" alt=""></a>
+                            <a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img src="/images/usaflag.png" alt=""></a>
+                            <a href="<?= Url::to(['site/switch-language?lang=ru']) ?>"><img src="/images/ruflag.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 <div class="icons">
                     <div class="search-box">
                         <button class="btn-search"><img src="/images/search.png" alt=""></button>
-                        <input type="text" class="input-search" placeholder="Type to Search...">
+                        <input type="text" class="input-search" placeholder="<?= $GLOBALS['text']['search']?>">
                     </div>
                     <div class="profileField">
                         <?php if (empty(Yii::$app->user->identity)){?>
@@ -169,9 +169,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             <img class="profileUserIcon" src="/images/user.png" alt="">
                             <div class="profileFieldImg">
                                 <ul>
-                                    <li><a href="/user-profile/index">My profile</a></li>
-                                    <li><a href="">Account security</a></li>
-                                    <li><a href="/logout">Sign out</a></li>
+                                    <li><a href="/user-profile/index"><?= $GLOBALS['text']['headerProfile']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['headerSecurity']?></a></li>
+                                    <li><a href="/logout"><?= $GLOBALS['text']['headerLogout']?></a></li>
                                 </ul>
                             </div>
                         <?php }?>
@@ -203,23 +203,23 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <div class="menu">
                 <ul>
                     <li class="dropDownLi menuAboutDropDown">
-                        <span class="menuAbout"><?= $GLOBALS['text']['__about__'] ?></span>
+                        <span class="menuAbout"><?=$GLOBALS['text']['__about__']?></span>
 <!--                        <span class="menuAbout">ABOUT</span>-->
                         <div class="dropDownAbout">
                             <ul>
-                                <li><a href="/site/about">Who we are</a></li>
-                                <li><a href="/alumni/index">Alumni</a></li>
+                                <li><a href="/site/about"><?=$GLOBALS['text']['whoWe']?></a></li>
+                                <li><a href="/alumni/index"><?=$GLOBALS['text']['headerAlumni']?></a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="dropDownLi menuCoursesDropDown">
-                        <span class="menuCourses"><?= $GLOBALS['text']['__courses__'] ?></span>
+                        <span class="menuCourses"><?=$GLOBALS['text']['__courses__']?></span>
                         <div class="dropDownCources">
                             <ul>
-                                <li><a href="">1C and Accounting fir begginers</a></li>
-                                <li><a href="/personel-management/index">1C: Payroll and personel management</a></li>
-                                <li><a href="">1C: Accounting 8.3</a></li>
-                                <li><a href="">Trade management: markeing, sales, BITRIX / CRM</a></li>
+                                <li><a href=""><?= $GLOBALS['text']['headerCourseAccounting']?></a></li>
+                                <li><a href="/personel-management/index"><?=$GLOBALS['text']['headerCoursePayrol']?></a></li>
+                                <li><a href=""><?=$GLOBALS['text']['headerAccounting']?></a></li>
+                                <li><a href=""><?=$GLOBALS['text']['headerMarketing']?></a></li>
                             </ul>
                         </div>
                     </li>
@@ -268,18 +268,18 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             </div>
                             <div class="rightMenuFooter">
                                 <ul>
-                                    <li><a href="">Courses</a></li>
-                                    <li><a href="">Blog</a></li>
-                                    <li><a href="">Recommendative Quize</a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerCourses']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerBlog']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerRecQuize']?></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="footerConn">
-                            <span>LET`S STAY CONNECTED</span>
+                            <span><?= $GLOBALS['text']['footerTextConn']?></span>
                         </div>
                         <div class="footerBtn">
-                            <input type="text" name="leftEmail" placeholder="Your Email">
-                            <button>Connect</button>
+                            <input type="text" name="leftEmail" placeholder="<?= $GLOBALS['text']['footerEmailCon']?>">
+                            <button><?= $GLOBALS['text']['footerEmailBtn']?></button>
                         </div>
                     </div>
                     <div class="footerSocial">
@@ -292,27 +292,27 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <div class="rightFooterBg">
                 <form class="formMail" action="">
                     <div class="formName">
-                        <span>QUIZE</span>
+                        <span><?= $GLOBALS['text']['footerQuize']?></span>
                     </div>
                     <div class="inputsMail" >
-                        <input type="text" name="name" placeholder="Name/Surname">
-                        <input type="text" name="phone" placeholder="Phone number">
-                        <input type="text"  name="email" placeholder="Email">
+                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>">
+                        <input type="text" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>">
+                        <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>">
                     </div>
                     <div class="formContinue">
-                        <button>Continue</button>
+                        <button><?= $GLOBALS['text']['footerInputBtn']?></button>
                     </div>
                 </form>
             </div>
         </div>
         <div class="paypalFooter">
             <span class="copyTextFooter">
-                &copy; Copyright 2023 - Infoexpert Academy
+                &copy; <?= $GLOBALS['text']['footerCopy']?> <?=date('Y')?> - Infoexpert Academy
             </span>
             <div class="policyText">
                 <ul>
-                    <li><a href="">Privecy Policy</a></li>
-                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href=""><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
+                    <li><a href="">&nbspTerms & Conditions</a></li>
                 </ul>
             </div>
             <div class="payLogoFooter">
