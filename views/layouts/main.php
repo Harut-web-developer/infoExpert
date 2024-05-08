@@ -203,8 +203,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <div class="menu">
                 <ul>
                     <li class="dropDownLi menuAboutDropDown">
-<!--                        <span class="menuAbout">--><?php //= $GLOBALS['text']['__about__'] ?><!--</span>-->
-                        <span class="menuAbout">ABOUT</span>
+                        <span class="menuAbout"><?= $GLOBALS['text']['__about__'] ?></span>
+<!--                        <span class="menuAbout">ABOUT</span>-->
                         <div class="dropDownAbout">
                             <ul>
                                 <li><a href="/site/about">Who we are</a></li>
@@ -213,7 +213,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         </div>
                     </li>
                     <li class="dropDownLi menuCoursesDropDown">
-                        <span class="menuCourses">COURSES</span>
+                        <span class="menuCourses"><?= $GLOBALS['text']['__courses__'] ?></span>
                         <div class="dropDownCources">
                             <ul>
                                 <li><a href="">1C and Accounting fir begginers</a></li>
@@ -223,19 +223,19 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             </ul>
                         </div>
                     </li>
-                    <li class="whiteLi"><a href="">FAQ</a></li>
-                    <li class="whiteLi"><a href="">TESTIMONIALS</a></li>
+                    <li class="whiteLi"><a href=""><?= $GLOBALS['text']['__faq__'] ?></a></li>
+                    <li class="whiteLi"><a href=""><?= $GLOBALS['text']['__testimonials__'] ?></a></li>
                     <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
-                        <li class="whiteLi"><a href="#section01"">BLOG</a></li>
+                        <li class="whiteLi"><a href="#section01""><?= $GLOBALS['text']['__blog__'] ?></a></li>
                     <?php } else { ?>
-                        <li class="whiteLi"><a href="/blog/index">BLOG</a></li>
+                        <li class="whiteLi"><a href="/blog/index"><?= $GLOBALS['text']['__blog__'] ?></a></li>
                     <?php } ?>
-                    <li class="whiteLi"><a href="/contact-us/index">CONTACT US</a></li>
-                    <li class="whiteLi"><a href="/apply-now/index">APPLY NOW</a></li>
+                    <li class="whiteLi"><a href="/contact-us/index"><?= $GLOBALS['text']['__contact__'] ?></a></li>
+                    <li class="whiteLi"><a href="/apply-now/index"><?= $GLOBALS['text']['__applynow__'] ?></a></li>
                     <li>
                         <button type="button" class="btnBack">
                             <img src="/images/circle.png" alt="">
-                            <span>GET A CALL BACK</span>
+                            <span><?= $GLOBALS['text']['__callback__'] ?></span>
                         </button>
                     </li>
                 </ul>
@@ -259,11 +259,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <div class="footerMenu">
                             <div class="leftMenuFooter">
                                 <ul>
-                                    <li><a href="">About IEA</a></li>
-                                    <li><a href="">Our Methodology</a></li>
-                                    <li><a href="">Contact Us</a></li>
-                                    <li><a href="">Testimonials</a></li>
-                                    <li><a href="">FAQ</a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerAbout']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerMethodOur']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerContact']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerTestimonials']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerFaq']?></a></li>
                                 </ul>
                             </div>
                             <div class="rightMenuFooter">

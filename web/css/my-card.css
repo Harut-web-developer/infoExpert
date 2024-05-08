@@ -352,8 +352,10 @@
 }
 .myCardInfoButtonField > button > span{
     position: absolute;
+    top: 13px;
     left: 0;
-    margin: 13px 26px;
+    width: 100%;
+    text-align: center;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -920,7 +922,7 @@
         height: 34px;
     }
     .myCardInfoButtonField > button > span {
-        margin: 10px 16px;
+        top: 10px;
         font-size: 13px;
     }
     .myCardInfoButtonField > button > img{
@@ -1074,7 +1076,7 @@
         height: 33px;
     }
     .myCardInfoButtonField > button > span {
-        margin: 7px 14px;
+        top: 7px;
         font-size: 12px;
     }
     /*.myCoursesBlocksFieldMain {*/
