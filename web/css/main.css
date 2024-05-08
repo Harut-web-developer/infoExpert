@@ -245,8 +245,8 @@
     background-image: url("../images/small.png");
     background-repeat: no-repeat;
     background-size: 81%;
-    width: 158px;
-    height: 118px;
+    width: 200px;
+    height: 121px;
     position: absolute;
     margin-top: -6px;
     margin-left: -9px;
@@ -265,11 +265,11 @@
 .dropDownAbout > ul{
     color: #1C5484;
     font-size: 15px;
-    top: 31px;
+    top: 45px;
     line-height: 1.5;
     list-style: none;
     position: relative;
-    left: 25px;
+    left: 22px;
     z-index: 100;
     padding-left: 0px !important;
 
@@ -920,7 +920,7 @@
     align-items: center;
 }
 .copyTextFooter{
-    width: 267px;
+    width: max-content;
     height: 18px;
     font-family: "Roboto",sans-serif;
     font-size: 15px;
@@ -929,7 +929,7 @@
 }
 .policyText{
     height: 18px;
-    width: 262px;
+    width: max-content;
 }
 .policyText > ul{
     width: 100%;

@@ -2299,7 +2299,7 @@
         align-items: center;
     }
     .copyTextFooter{
-        width: 178px;
+        width: max-content;
         height: 13px;
         font-family: "Roboto",sans-serif;
         font-size: 10px;
@@ -2307,9 +2307,8 @@
         color: white;
     }
     .policyText{
-        margin-left: 150px;
         height: 13px;
-        width: 178px;
+        width: max-content;
     }
     .policyText > ul{
         width: 100%;
