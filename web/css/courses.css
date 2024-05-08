@@ -310,7 +310,7 @@
     font-weight: 400;
 }
 .cardMyCourses{
-    width: 881px;
+    width: 786px;
     position: relative;
 }
 .mainCoursesFields{
@@ -345,7 +345,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 2));
-    gap: 32px;
+    gap: 60px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -918,6 +918,9 @@
     width: auto;
     padding: 95px 6.9% 0px 6.8%;
 }
+    .userProfileMenu {
+        width: 423px;
+    }
     .ratingStarMyourse img{
         width: 16px;
         height: 15px;
@@ -1002,7 +1005,7 @@
     text-align: left;
 }
 .cardMyCourses {
-    width: 470px;
+    width: 423px;
 }
 .myCoursesFieldAcceptCourses {
     height: 550px;

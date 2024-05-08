@@ -1140,6 +1140,9 @@
     }
 }
 @media screen and (max-width: 1100px) {
+    .myCard {
+        height: 846px;
+    }
     .myCardContent {
         padding-top: 95px;
     }
@@ -1489,6 +1492,9 @@
     }
     .myCardContent {
         gap: 43px;
+    }
+    .userProfileMenu {
+        width: 400px;
     }
 }
 @media screen and (max-width: 1000px){

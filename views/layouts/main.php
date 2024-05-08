@@ -124,8 +124,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 <ul class="tabletProfileMenuField">
                     <li><a href="/user-profile/index">Profile</a></li>
                     <li><a href="/wishlist/index">Wishlist</a></li>
-                    <li><a href="user-profile/achievements">My achievements</a></li>
-                    <li><a href="my-card/index">My card</a></li>
+                    <li><a href="/user-profile/achievements">My achievements</a></li>
+                    <li><a href="/my-card/index">My card</a></li>
                     <li><a href="/user-profile/achievements-edit">Edit profile</a></li>
                     <li><a href="/my-card/checkout">Payment methods</a></li>
                     <?php if(!empty(Yii::$app->user->identity)){ ?>
@@ -141,7 +141,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <span>Menu</span>
                 </div>
             </div>
-            <div class="tabletMenuNavbar">
+            <div class="tabletMenuNavbar tabletMenuNavbarCourses">
                 <ul class="tabletProfileCoursesField">
                     <li><a href="">1C: and Accounting for Beginners</a></li>
                     <li><a href="">1C: Accounting 8.3</a></li>
