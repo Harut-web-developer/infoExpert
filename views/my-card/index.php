@@ -47,7 +47,7 @@ $this->registerCssFile('@web/css/my-card.css');
                                 <div class="myCoursesBlocksField">
                                     <div class="myCoursesBlocksFieldMain">
                                         <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="">
+                                            <img src="/images/courseimage.png" alt="" draggable="false">
                                             <div class="myCardNameRating">
                                                 <span>1C: Accounting 8.3</span>
                                                 <div class="rightContentMyCard">
@@ -95,7 +95,7 @@ $this->registerCssFile('@web/css/my-card.css');
                                 <div class="myCoursesBlocksField">
                                     <div class="myCoursesBlocksFieldMain">
                                         <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="">
+                                            <img src="/images/courseimage.png" alt="" draggable="false">
                                             <div class="myCardNameRating">
                                                 <span>1C: Accounting 8.3</span>
                                                 <div class="rightContentMyCard">
@@ -143,7 +143,7 @@ $this->registerCssFile('@web/css/my-card.css');
                                 <div class="myCoursesBlocksField">
                                     <div class="myCoursesBlocksFieldMain">
                                         <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="">
+                                            <img src="/images/courseimage.png" alt="" draggable="false">
                                             <div class="myCardNameRating">
                                                 <span>1C: Accounting 8.3</span>
                                                 <div class="rightContentMyCard">
@@ -191,7 +191,7 @@ $this->registerCssFile('@web/css/my-card.css');
                                 <div class="myCoursesBlocksField">
                                     <div class="myCoursesBlocksFieldMain">
                                         <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="">
+                                            <img src="/images/courseimage.png" alt="" draggable="false">
                                             <div class="myCardNameRating">
                                                 <span>1C: Accounting 8.3</span>
                                                 <div class="rightContentMyCard">
