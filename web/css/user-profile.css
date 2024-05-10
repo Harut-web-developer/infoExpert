@@ -40,8 +40,7 @@
     box-shadow: 0px 1px 6px 1px #57939B;
 }
 .userProfileMenu{
-    /*width: 506px;*/
-    width: max-content;
+    width: 683px;
     height: 43px;
     display: flex;
     flex-direction: row;
@@ -589,6 +588,11 @@
         height: auto;
     }
 }
+@media screen and (max-width: 1500px){
+    .userProfileMenuField > span {
+        font-size: 33px;
+    }
+}
 @media screen and (max-width: 1400px){
     .userCreateFieldForms {
         width: 100%;
@@ -598,9 +602,35 @@
         width: 90%;
     }
 }
+@media screen and (max-width: 1366px) {
+    .userProfileMenuField > span {
+        font-size: 30px;
+    }
+    .userProfileMenu > li {
+        margin-left: 25px;
+    }
+    .userProfileMenu{
+        width: 650px;
+    }
+}
 @media screen and (max-width: 1300px) {
+    .userProfileMenu > li > a {
+        font-size: 18px;
+    }
+    .userProfileMenu {
+        width: 600px;
+    }
+    .userProfileMenuField > span {
+        font-size: 25px;
+    }
     .userAchievementsSection {
         justify-content: flex-start;
+    }
+    .userProfileMenu > li {
+        margin-left: 25px;
+    }
+    .userProfileMenu {
+        width: 625px;
     }
     .profilBody {
          padding-top: 70px;
@@ -650,10 +680,12 @@
         width: 245px;
     }
 }
+@media screen and (max-width: 1200px){
+    .userProfileMenuField > span {
+        font-size: 24px;
+    }
+}
 @media screen and (max-width: 1100px) {
-    /*.usersAchievements {*/
-    /*    height: 646px;*/
-    /*}*/
     .userProfileSection, .userCreateField, .userAchievementsSection{
         width: -webkit-fill-available;
         margin: 95px 6.9% 0px 6.8%;
