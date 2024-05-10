@@ -40,7 +40,8 @@
     box-shadow: 0px 1px 6px 1px #57939B;
 }
 .userProfileMenu{
-    width: 506px;
+    /*width: 506px;*/
+    width: max-content;
     height: 43px;
     display: flex;
     flex-direction: row;
@@ -49,6 +50,9 @@
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
+}
+.userProfileMenu > li{
+    margin-left: 40px;
 }
 .userProfileMenu > li > a{
     text-decoration: none;
@@ -70,6 +74,7 @@
     align-items: center;
 }
 .fieldMoreAbout > span{
+    text-align: center;
     font-family: "Roboto",sans-serif;
     font-size: 21px;
     font-weight: 500;
@@ -175,10 +180,12 @@
 .userFormsBtn > button > span{
     position: absolute;
     left: 0;
+    top: 11px;
+    width: 100%;
+    text-align: center;
     font-size: 12px;
     font-family: "Roboto",sans-serif;
     color: #F36528;
-    margin: 11px 33px;
     font-weight: 500;
 }
 
@@ -197,7 +204,7 @@
     display: none;
 }
 .attachCv{
-    width: 100px;
+    width: max-content;
     height: 16px;
     display: flex;
     flex-direction: row;
@@ -206,6 +213,7 @@
     margin: 24px 0px 24px 11px;
 }
 .attachCv > span{
+    margin-right: 10px;
     font-family: "Roboto",sans-serif;
     color: white;
     font-size: 14px;

@@ -62,7 +62,7 @@ class SiteController extends Controller
     public static function pages()
     {
         $page['index'] = 1;
-//        $page['about'] = 2;
+        $page['about'] = 2;
         return $page;
     }
 

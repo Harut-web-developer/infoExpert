@@ -5,12 +5,12 @@ $this->registerCssFile('@web/css/user-profile.css');
 <div class="userCreateBg">
     <div class="userCreateField">
         <div class="userProfileMenuField">
-            <span>My Profile</span>
+            <span><?=$GLOBALS['text']['profileTitle']?></span>
             <ul class="userProfileMenu">
-                <li><a href="/user-profile/achievements">My achievements</a></li>
-                <li><a href="/courses/my-courses">My courses</a></li>
-                <li><a href="/wishlist/index">Wishlist</a></li>
-                <li><a href="/my-card/index">My card</a></li>
+                <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
+                <li><a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a></li>
+                <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
+                <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
             </ul>
         </div>
         <div class="userCreateFieldForms">
@@ -18,32 +18,32 @@ $this->registerCssFile('@web/css/user-profile.css');
                 <div class="userPhotoFields">
 <!--                    <img src="/images/usersAchievements.png" alt="">-->
 <!--                    nkar yntreluc petqa es img i mech baci-->
-                    <span class="userAddPhotoText">Add photo</span>
+                    <span class="userAddPhotoText"><?=$GLOBALS['text']['usercreatePhoto']?></span>
                     <input type="file">
                 </div>
                 <div class="userInputsFields">
                     <div class="userFormsInput">
-                        <label for="">Name/Surname</label>
+                        <label for=""><?=$GLOBALS['text']['usercreateName']?></label>
                         <input type="text">
                     </div>
                     <div class="userFormsInput">
-                        <label for="">Phone</label>
+                        <label for=""><?=$GLOBALS['text']['usercreatePhone']?></label>
                         <input type="number">
                     </div>
                     <div class="userFormsInput">
-                        <label for="">Mail</label>
+                        <label for=""><?=$GLOBALS['text']['usercreateMail']?></label>
                         <input type="email">
                     </div>
                     <div class="userFormsInput">
-                        <label for="">Linkedin profile link</label>
+                        <label for=""><?=$GLOBALS['text']['usercreateLinkdin']?></label>
                         <input type="text">
                     </div>
                     <div class="userFormsInput">
-                        <label for="attachCv">CV</label>
+                        <label for="attachCv"><?=$GLOBALS['text']['usercreateCv']?></label>
                         <div id="attachCv" class="cvFileField">
                             <input class="cvFile" type="file">
                             <div class="attachCv">
-                                <span>Attach file</span>
+                                <span><?=$GLOBALS['text']['usercreateAttach']?></span>
                                 <img src="/images/scriptIcon.png" alt="">
                             </div>
                         </div>
@@ -51,7 +51,7 @@ $this->registerCssFile('@web/css/user-profile.css');
                     <div class="userFormsBtn">
                         <button>
                             <img src="/images/userSaveBtn.png" alt="">
-                            <span>SAVE</span>
+                            <span><?=$GLOBALS['text']['usercreateSave']?></span>
                         </button>
                     </div>
                 </div>

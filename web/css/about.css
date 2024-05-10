@@ -38,7 +38,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.aboutContnetTitle{
+.aboutContnetTitle > span{
     width: 100%;
     height: 34px;
     color: #F16D35;
@@ -346,7 +346,7 @@
         margin: 102px 6.9% 0px 6.8%;
         gap: 20px;
     }
-    .aboutContnetTitle{
+    .aboutContnetTitle > span{
         width: auto;
         display: flex;
         justify-content: space-between;

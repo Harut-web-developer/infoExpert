@@ -8,8 +8,8 @@ $this->registerCssFile('@web/css/alumni.css');
 <div class="alumni">
     <div class="sectionAlumni">
         <div class="alumniDiv">
-            <h1 class="alumniTitle"><img class="backButton" src="/images/backButton.png" alt="">Alumni</h1>
-            <p class="alumniTxt">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet. Venenatis massa netus viverra turpis tortor arcu. </p>
+            <h1 class="alumniTitle"><img class="backButton" src="/images/backButton.png" alt=""><?=$GLOBALS['text']['alumniTitle']?></h1>
+            <p class="alumniTxt"><?=$GLOBALS['text']['alumniText']?></p>
         </div>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">

@@ -630,7 +630,7 @@
 }
 .tabletProfileMenuField{
     position: absolute;
-    width: 116px;
+    width: max-content;
     height: 211px;
     margin: 40px 83px;
     margin-bottom: 0px;
