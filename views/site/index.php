@@ -7,11 +7,11 @@ $this->title = 'Infoexpert';
 
 <div class="headerBackground">
     <div class="apply">
-        <span class="applyMarket">27 YEARS IN MARKET</span>
-        <span class="boundaries">EDUCATION WITHOUT BOUNDARIES</span>
+        <span class="applyMarket"><?=$GLOBALS['text']['sectionOneMarket']?></span>
+        <span class="boundaries"><?=$GLOBALS['text']['sectionOneBoundaries']?></span>
         <a href="/apply-now/index">
             <img src="/images/apply.png" alt="">
-            <span>APPLY NOW</span>
+            <span><?=$GLOBALS['text']['__applynow__']?></span>
         </a>
     </div>
 </div>
@@ -23,7 +23,7 @@ $this->title = 'Infoexpert';
                 <span class="numberSectionTwo">350</span>
                 <span class="addSymbol">+</span>
             </div>
-            <span class="textSectionTwo">partner</span>
+            <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoPartner']?></span>
         </div>
         <div class="numbersInfo">
             <img src="/images/productinfoimg.png" alt="">
@@ -31,7 +31,7 @@ $this->title = 'Infoexpert';
                 <span class="numberSectionTwo">17</span>
                 <span class="addSymbol">+</span>
             </div>
-            <span class="textSectionTwo">products</span>
+            <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProduct']?></span>
         </div>
         <div class="numbersInfo">
             <img src="/images/programminfoimg.png" alt="">
@@ -39,7 +39,7 @@ $this->title = 'Infoexpert';
                 <span class="numberSectionTwo">500</span>
                 <span class="addSymbol">+</span>
             </div>
-            <span class="textSectionTwo">programms</span>
+            <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProgram']?></span>
         </div>
     </div>
 </div>
@@ -47,22 +47,22 @@ $this->title = 'Infoexpert';
     <div class="learn">
         <div class="learnInfo">
             <div class="coursesBg">
-                <span>COURSES</span>
-                <p>Learn with us</p>
+                <span><?=$GLOBALS['text']['sectionThreeCourses']?></span>
+                <p><?=$GLOBALS['text']['sectionThreeLearn']?></p>
             </div>
             <div class="logoManagement">
                 <div class="courseLogo">
                     <img src="/images/logomanagcourse.png" alt="">
                 </div>
                 <div class="courseTitle">
-                    <span>PERCONNEL</span>
-                    <span>MANAGEMENT</span>
+                    <span><?=$GLOBALS['text']['sectionThreePerson']?></span>
+                    <span><?=$GLOBALS['text']['sectionThreeManag']?></span>
                 </div>
             </div>
             <div class="managementBtn">
                 <a href="/courses/index">
                     <img src="/images/logomanag.png" alt="">
-                    <span>SEE ALL LESSONS</span>
+                    <span><?=$GLOBALS['text']['sectionThreeBtn']?></span>
                 </a>
             </div>
         </div>
@@ -74,8 +74,8 @@ $this->title = 'Infoexpert';
 <div class="sectionFour">
     <div class="answers">
         <div class="frequency">
-            <span class="freqAsked">FREQUENTLY ASKED QUESTION</span>
-            <span class="freqLook">Looking for an answers?</span>
+            <span class="freqAsked"><?=$GLOBALS['text']['sectionFourTitle']?></span>
+            <span class="freqLook"><?=$GLOBALS['text']['sectionFourLooking']?></span>
         </div>
         <div class="questions">
             <div class="leftQuestions">
@@ -164,7 +164,7 @@ $this->title = 'Infoexpert';
 </div>
 <div class="sectionFive">
     <div class="partnerSection slider">
-        <span class="partnersTitle">PARTNERS</span>
+        <span class="partnersTitle"><?=$GLOBALS['text']['sectionFiveTitle']?></span>
         <div class="carousel">
             <ul class="carousel-slides">
                 <li class="carousel-slide">
@@ -296,8 +296,8 @@ $this->title = 'Infoexpert';
 <div class="sectionSix">
     <div class="testimonial">
         <div class="testimonialsTitles">
-            <span class="testimonialOrangeTitle">TESTIMONIALS</span>
-            <span class="testimonialWhiteTitle">Our customers love what we do</span>
+            <span class="testimonialOrangeTitle"><?=$GLOBALS['text']['sectionSixTitle']?></span>
+            <span class="testimonialWhiteTitle"><?=$GLOBALS['text']['sectionSixText']?></span>
         </div>
         <div class="slide-container swiper">
             <div class="slide-content">
@@ -440,7 +440,7 @@ $this->title = 'Infoexpert';
 <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
 <div class="sectionSeven" id="section01">
     <div class="sectionBlog">
-        <span>BLOG</span>
+        <span><?=$GLOBALS['text']['sectionSevenTitle']?></span>
         <div class="blogsCard">
             <div class="individualCards">
                 <div class="cardsimg">
@@ -528,14 +528,14 @@ $this->title = 'Infoexpert';
             </div>
         </div>
         <div class="blogsArticles">
-            <div class="blogText">Let's discover something interesting</div>
+            <div class="blogText"><?=$GLOBALS['text']['sectionSevenText']?></div>
             <div class="blogLine">
                 <div></div>
             </div>
             <div class="blogBtn">
                 <a href="blog/index">
                     <img src="/images/articlebtn.png" alt="">
-                    <span>All Articles</span>
+                    <span><?=$GLOBALS['text']['sectionSevenBtn']?></span>
                 </a>
             </div>
         </div>
@@ -543,21 +543,21 @@ $this->title = 'Infoexpert';
 </div>
 <div class="sectionEight">
     <div class="haveQuestions">
-        <div class="questionTitle">STILL HAVE QUESTIONS?</div>
+        <div class="questionTitle"><?=$GLOBALS['text']['sectionEightStill']?></div>
         <form action="" class="questionForm">
             <div class="questionFields">
                 <div class="leftQuestionField">
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="text"name="email" placeholder="Email Adress">
+                    <input type="text" name="name" placeholder="<?=$GLOBALS['text']['sectionEightName']?>">
+                    <input type="text"name="email" placeholder="<?=$GLOBALS['text']['sectionEightEmail']?>">
                 </div>
                 <div class="rightQuestionField">
-                    <textarea name="message" placeholder="Your Message"></textarea>
+                    <textarea name="message" placeholder="<?=$GLOBALS['text']['sectionEightMessage']?>"></textarea>
                 </div>
             </div>
             <div class="questionbutton">
                 <button type="submit">
                     <img src="/images/questionbtn.png" alt="">
-                    <span>Leave us a message</span>
+                    <span><?=$GLOBALS['text']['sectionEightBtn']?></span>
                 </button>
             </div>
         </form>

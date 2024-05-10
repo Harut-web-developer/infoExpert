@@ -60,8 +60,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <?php }?>
                     <div class="personSignOrInfo">
                         <div class="personNameField">
-                            <span class="personName">Hi,  <?= Yii::$app->user->identity->username ?></span>
-                            <span class="personGreetings">Welcome back</span>
+                            <span class="personName"><?= $GLOBALS['text']['tabletHello']?>,  <?= Yii::$app->user->identity->username ?></span>
+                            <span class="personGreetings"><?= $GLOBALS['text']['tabletWelcome']?></span>
                         </div>
                         <img class="tabletUserProfileMenu" src="/images/menuRightArrow.png" alt="">
                     </div>
@@ -82,7 +82,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <ul>
                         <?php if(!empty(Yii::$app->user->identity)){ ?>
                             <li class="tabletCoursesList">
-                                <a href=""><?= $GLOBALS['text']['tabletMyCourse']?></a>
+                                <a href=""><?=$GLOBALS['text']['tabletMyCourse']?></a>
                                 <div class="tabletCoursesUnderline"></div>
                             </li>
                         <?php }?>
@@ -117,7 +117,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <div class="menuPersonInfo">
                 <div class="tabletPersonMenuField">
                     <img class="backMainMenu" src="/images/menuLeftArrow.png" alt="">
-                    <span>Menu</span>
+                    <span><?=$GLOBALS['text']['tabletMenu']?></span>
                 </div>
             </div>
             <div class="tabletMenuNavbar">
@@ -138,15 +138,15 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <div class="menuPersonInfo">
                 <div class="tabletPersonMenuField">
                     <img class="backMainMenuCourses" src="/images/menuLeftArrow.png" alt="">
-                    <span>Menu</span>
+                    <span><?=$GLOBALS['text']['tabletMenu']?></span>
                 </div>
             </div>
             <div class="tabletMenuNavbar tabletMenuNavbarCourses">
                 <ul class="tabletProfileCoursesField">
-                    <li><a href="">1C: and Accounting for Beginners</a></li>
-                    <li><a href="">1C: Accounting 8.3</a></li>
-                    <li><a href="/personel-management/index">1C: Payroll and personnel management </a></li>
-                    <li><a href="">Trade Management: Marketing,Sales BITRIX / CRM</a></li>
+                    <li><a href=""><?=$GLOBALS['text']['headerCourseAccounting']?></a></li>
+                    <li><a href=""><?=$GLOBALS['text']['headerAccounting']?></a></li>
+                    <li><a href="/personel-management/index"><?=$GLOBALS['text']['headerCoursePayrol']?></a></li>
+                    <li><a href=""><?=$GLOBALS['text']['headerMarketing']?></a></li>
                 </ul>
             </div>
         </div>
