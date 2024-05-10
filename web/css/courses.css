@@ -10,7 +10,7 @@
 .headerCourses{
     width: 67%;
     margin: 0 auto;
-    padding-top: 65.71px;
+    padding-top: 3%;
 }
 .headerCourses div{
     /*text-align: center;*/
@@ -36,7 +36,7 @@
 .cardCourses_{
     width: 67%;
     margin: 0 auto;
-    padding-top: 59px;
+    padding-top: 3%;
 }
 .wrapper {
     width: 100%;
@@ -45,8 +45,8 @@
 .carouselCourses {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3 + 10px));
-    /*gap: 32px;*/
+    grid-auto-columns: calc((100% / 3 + 2px));
+    height: 500px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -79,34 +79,36 @@
 }
 
 .carouselCourses .cardCourses {
-    width: 345px;
-    /*height: 476.01px;*/
+    width: 380px;
+    height: 490px;
     list-style: none;
     background: #FFFFFF24;
     border-radius: 30px;
     display: flex;
     cursor: pointer;
-    /*padding: 16px 17px 16px 17px;*/
+    /* padding: 16px 17px 16px 17px; */
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: column;
     scroll-snap-align: start;
 }
 .cardBody{
     display: flex;
     justify-content: space-between;
-    padding: 0 19px;
-    /*height: 39%;*/
+    /* padding: 0 19px; */
+    /* height: 39%;*/
 }
 .cardCoursesBody{
+    width: 312.12px;
+    height: 223.5px;
     display: flex;
-    height: 50%;
+    /* height: 230px; */
     gap: 10px;
-    padding: 0 17px 0 17px;
+    /* padding: 0 17px 0 17px; */
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 16px;
-    margin-top: 16px;
+    /* margin-bottom: 16px; */
+     margin-top: 13px;
 }
 .cardBody .span1{
     font-family: Roboto Slab;
@@ -134,7 +136,7 @@
     font-size: 40px;
     font-weight: 400;
     line-height: 58px;
-    margin: 50px 0;
+    margin: 3% 0;
     text-align: center;
     /*margin-left: 319.99px;*/
     color: #FFFFFF;
@@ -210,9 +212,9 @@
 }
 .cardCenter {
     display: flex;
-    padding: 0px 19px;
+    /* padding: 0px 19px; */
     gap: 9px;
-    /*height: 38%;*/
+    /* height: 38%; */
     flex-direction: column;
 }
 .cardCenter > .cardtxt1{
@@ -315,7 +317,7 @@
 }
 .mainCoursesFields{
     width: -webkit-fill-available;
-    height: 533px;
+    height: 500px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -323,9 +325,12 @@
 .myCoursesProfileField{
     width: 405px;
     height: 533px;
+    display: flex;
     margin-right: 60px;
     background: #74A8AB;
     border-radius: 30px;
+    justify-content: center;
+    align-items: center;
 }
 .userProfileMenu > li > a:hover{
     color: #F36528;
@@ -333,7 +338,7 @@
 .myCoursesFieldSection{
     width: 291px;
     height: 459px;
-    margin: 37px 36px 37px 78px;
+    /*margin: 37px 36px 37px 78px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -365,39 +370,26 @@
 }
 .usersProfileInfo{
     width: 249px;
-    height: 170px;
+    height: 190px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
 }
+.usersProfileInfoEmail > span,
+.usersProfileInfoLinkdin > span,
 .usersProfileInfoPhone > span{
     font-family: "Roboto",sans-serif;
-    font-size: 20px;
-    margin-left: 37px;
-    color: white;
-    font-weight: 400;
-}
-.usersProfileInfoEmail > span{
-    font-family: "Roboto",sans-serif;
     margin-left: 37px;
     font-size: 20px;
     color: white;
     font-weight: 400;
-
-}
-.usersProfileInfoLinkdin > span{
-    font-size: 20px;
-    font-family: "Roboto",sans-serif;
-    margin-left: 37px;
-    color: white;
-    font-weight: 400;
-
+    white-space: normal;
+    width: -webkit-fill-available;
 }
 .myCoursesBlocksFieldMain{
     width:344px;
     height: 481px;
-    /*margin: 16px 16px 49px 16px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -416,7 +408,7 @@
 }
 .myCoursesBlocksFieldMainInfo{
     width: 305px;
-    height: 35%;
+    height: 45%;
     margin: 0px 20px;
     display: flex;
     flex-direction: column;
@@ -484,8 +476,6 @@
     line-height: 23.44px;
     text-align: center;
     color: white;
-    width: 146px;
-    margin-left: 46px;;
 }
 .myCoursesFieldAcceptCourses .myCoursesBlocksField {
     width: 344px;
@@ -502,36 +492,46 @@
     flex-direction: column;
     scroll-snap-align: start;
 }
+.usersProfileInfoEmail, .usersProfileInfoPhone, .usersProfileInfoLinkdin{
+    width: 249px;
+    display: flex;
+    word-wrap: break-word;
+    flex-direction: row;
+}
+.usersProfileInfoEmail img,
+.usersProfileInfoPhone img,
+.usersProfileInfoLinkdin img{
+    width: 31px;
+    height: 31px;
+}
 .footerCard{
     display: flex;
     justify-content: space-between;
-    padding: 0 19px;
-    /*height: 23%;*/
+    /* padding: 0 19px; */
+    /* height: 23%; */
 }
-.coursisBtnField{
-    position: relative;
-    width: 130px;
-    margin-left: 36px;
-}
-.coursisBtnField > button{
+.footerCard button{
     background: transparent;
     border: none;
-}
-.coursisBtnField > button > img{
     position: relative;
-    width: 112px;
-    height: 48px;
+    margin-left: 39px;
 }
-.coursisBtnField > button > span > a{
+.footerCard button > img{
+    position: relative;
+    /*width: 112px;*/
+    /*height: 48px;*/
+}
+.footerCard button > span > a{
     color: white;
-    margin: 15px 26px;
+    width: 100%;
+    margin-top: 13px;
     position: absolute;
     left: 0px;
     font-family: 'Roboto';
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
 }
 .footerImg2{
@@ -553,7 +553,7 @@
     display: none;
 }
 .starDivCourses{
-    width: 118px;
+    width: 107px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -599,9 +599,9 @@
     .cardMyCourses {
         width: 791px;
     }
-    .carouselCourses .cardCourses {
-        width: 340px;
-    }
+    /*.carouselCourses .cardCourses {*/
+    /*    width: 340px;*/
+    /*}*/
     .img img{
         width: 100%;
         height: auto;
@@ -613,30 +613,32 @@
     }
     .cardtxt2 img {
         float: inline-start;
-        margin-right: 17px;
+        /*margin-right: 17px;*/
     }
     .cardtxt2 span {
-        margin-left: 0;
-    }
-    /*.cardBody {*/
-    /*    padding: 0 13px;*/
-    /*}*/
-    .cardCenter {
-        padding: 13px 0;
+        margin-left: 11px;
     }
 }
 @media screen and (max-width: 1870px) {
-.myCoursesProfileField {
-    margin-right: 22px;
-}
 .myCoursesBlocksFieldMainInfo {
     width: -webkit-fill-available;
 }
+    .carouselCourses .cardCourses {
+        width: 350px;
+        height: 470px;
+    }
 }
 @media screen and (max-width: 1820px) {
+    .myCoursesFieldAcceptCourses {
+        gap: 30px;
+    }
 .cardMyCourses {
     width: 700px;
 }
+    .courses .title0 {
+        /*margin: 30px 0;*/
+        font-size: 36px;
+    }
 .myCoursesBlocksFieldMain {
     width: 335px;
 }
@@ -650,34 +652,61 @@
 .txt1, .txt2{
     font-size: 36px;
 }
-    .courses .title0{
-        font-size: 36px;
-    }
+    /*.carouselCourses {*/
+    /*    gap: 46px;*/
+    /*}*/
 }
 @media screen and (max-width: 1700px) {
-.myCoursesProfileField {
+    .myCoursesFieldSectionLeft > img {
+        width: 220px;
+        height: 220px;
+    }
+.myCoursesFieldSectionLeft {
+    width: 222px;
+    height: 425px;
+}
+    .myCoursesProfileField {
     width: 350px;
+        height: 500px;
 }
-.myCoursesFieldSection {
-    margin: 37px 36px 37px 35px;
-}
-.nameAndUsername {
-    margin-left: 54px;
-}
+    .usersProfileInfo {
+        width: 190px;
+    }
+    .cardCoursesBody {
+        width: 300px;
+    }
+    .carouselCourses .cardCourses {
+        width: 330px;
+        height: 460px;
+    }
+    .usersProfileInfoEmail > span, .usersProfileInfoLinkdin > span, .usersProfileInfoPhone > span {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+    .usersProfileInfoEmail, .usersProfileInfoPhone, .usersProfileInfoLinkdin {
+        width: 185px;
+    }
+    .myCoursesFieldSection {
+        width: 260px;
+        height: 430px;
+    }
 }
 @media screen and (max-width: 1600px) {
+    .courses {
+        height: 1270px;
+    }
+    .carouselCourses {
+        height: 450px;
+    }
+    /*.courses .title0 {*/
+    /*    margin: 0px 0 50px;*/
+    /*}*/
 .myCoursesProfileField {
     width: 300px;
-}
-.nameAndUsername {
-    margin-left: 19px;
 }
 .myCoursesFieldSectionLeft > img {
     width: 180px;
     height: 180px;
-}
-.myCoursesFieldSection {
-    justify-content: flex-start;
 }
 .myCoursesFieldSectionLeft {
     width: 210px;
@@ -687,8 +716,16 @@
     height: 455px;
 }
 .myCoursesFieldSection {
-    margin: 37px 36px 37px 50px;
+    width: 210px;
+    height: 390px;
 }
+    .usersProfileInfo{
+        height: 160px;
+    }
+    .myCoursesFieldSectionRight img{
+        width: 25px;
+        height: 25px;
+    }
 .usersProfileInfoPhone > span,
 .usersProfileInfoEmail > span,
 .usersProfileInfoLinkdin > span {
@@ -706,7 +743,7 @@
 }
     .cardBody .span1 {
         font-family: Roboto Slab;
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 500;
         line-height: 23px;
         text-align: left;
@@ -728,7 +765,7 @@
     }
     .amd {
         font-family: Roboto;
-        font-size: 13px;
+        font-size: 11px;
         font-weight: 400;
         line-height: 17.75px;
         text-align: left;
@@ -761,6 +798,11 @@
     }
     .carouselCourses .cardCourses {
         width: 300px;
+        height: 420px;
+    }
+    .cardCoursesBody {
+        height: 200px;
+        width: 260px;
     }
     .cardtxt1 span{
         font-family: Roboto Medium;
@@ -780,18 +822,15 @@
     .txt1, .txt2, .courses .title0 {
         font-size: 32px;
     }
-    .coursisBtnField {
-        width: 110px;
-        margin-left: 20px;
-    }
-    .coursisBtnField > button > img {
+    .footerCard button > img {
         position: relative;
-        width: 100px;
-        height: 40px;
     }
-    .coursisBtnField > button > span > a {
-        margin: 10px 25px;
-        font-size: 13px;
+    .footerCard button > span > a {
+        margin-top: 11px;
+        font-size: 14px;
+    }
+    .footerCard button {
+        margin-left: 28px;
     }
     .starDivCourses {
         width: 78px;
@@ -801,7 +840,51 @@
         height: 15px;
     }
 }
+@media screen and (max-width: 1500px){
+    .myCoursesProfileField {
+        height: 422px;
+        margin-right: 30px;
+    }
+    .myCoursesFieldSectionLeft {
+        width: 160px;
+        height: 350px;
+    }
+    .nameAndUsername {
+        font-size: 16px;
+    }
+    .usersProfileInfoEmail img, .usersProfileInfoPhone img, .usersProfileInfoLinkdin img {
+        width: 24px;
+        height: 24px;
+    }
+    .usersProfileInfoEmail > span, .usersProfileInfoLinkdin > span, .usersProfileInfoPhone > span {
+        margin-left: 11px;
+        font-size: 15px;
+    }
+    .myCoursesFieldSection {
+        width: 200px;
+        height: 350px;
+    }
+    .myCoursesFieldSectionLeft > img {
+        width: 160px;
+        height: 160px;
+    }
+    .mainCoursesFields {
+        height: 450px;
+    }
+}
 @media screen and (max-width: 1450px){
+    .myCoursesSection {
+        gap: 40px;
+    }
+    .myCourses {
+        height: 880px;
+    }
+    .courses {
+        height: 1190px;
+    }
+    .carouselCourses {
+        height: 400px;
+    }
     .txt1, .txt2, . {
         font-size: 30px;
     }
@@ -810,7 +893,7 @@
     }
     .carouselCourses .cardCourses {
         width: 260px;
-        /*height: 310px;*/
+        height: 370px;
     }
     .like-cnt, .footerImg3 {
         width: 25px;
@@ -829,8 +912,8 @@
         height: 33px;
     }
     .cardCoursesBody {
-        height: 200px;
-        /*padding: 16px 17px 16px 17px;*/
+        width: 230px;
+        height: 180px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -849,24 +932,22 @@
         flex-direction: column;
         justify-content: space-between;
     }
-    .coursisBtnField {
-        width: 85px;
-        height: 30px;
-        margin-left: 15px;
-    }
-    .coursisBtnField > button > img{
-        width: 85px;
-        height: 30px;
-    }
-    .coursisBtnField > button > span > a {
-        margin: 6px 19px;
-        font-size: 12px;
-    }
-    .coursisBtnField {
-        width: 100px;
+    .footerCard button > span > a {
+        margin-top: 6px;
+        font-size: 11px;
     }
 }
 @media screen and (max-width: 1420px) {
+    .myCoursesBlocksFieldMain > span {
+        font-size: 20px;
+    }
+    .myCoursesBlocksFieldMainInfo {
+        height: 40%;
+    }
+    .ratingStarMyourse img{
+        width: 19px;
+        height: 19px;
+    }
     .txt1, .txt2, .courses .title0{
         font-size: 26px;
     }
@@ -876,13 +957,6 @@
 }
 .myCoursesProfileField {
     height: 420px;
-}
-.myCoursesFieldSection {
-    height: auto;
-}
-.myCoursesFieldSection {
-    width: auto;
-    height: auto;
 }
 .cardMyCourses {
     width: 550px;
@@ -915,15 +989,16 @@
     gap: 70px;
 }
 .myCoursesFieldSection {
-    margin: 44px 20px;
+    width: 154px;
+    height: 300px;
 }
 .myCoursesProfileField {
-    width: 230px;
-    height: 350px;
+    width: 260px;
+    height: 342px;
 }
 .myCoursesFieldSectionLeft {
-    width: 210px;
-    height: 260px;
+    width: 132px;
+    height: 300px;
     align-items: center;
 }
 .myCoursesFieldSectionLeft > img {
@@ -936,7 +1011,7 @@
 }
 .usersProfileInfo {
     width: 184px;
-    height: 110px;
+    height: 145px;
     left: 0;
 }
 .usersProfileInfo img{
@@ -950,17 +1025,23 @@
 .myCoursesBlocksFieldMain > span {
     font-size: 18px;
 }
+    .usersProfileInfoEmail, .usersProfileInfoPhone, .usersProfileInfoLinkdin {
+        width: 157px;
+    }
 }
 @media screen and (max-width: 1200px) {
+    .courses {
+        height: 1140px;
+    }
+    .carouselCourses {
+        height: 350px;
+    }
+    .cardBody .span1 {
+        font-size: 12px;
+    }
 .cardMyCourses {
     width: 500px;
 }
-.cardCenter {
-    padding: 0 19px;
-}
-    .cardBody {
-        padding: 0 19px;
-    }
     .txt1, .txt2, .courses .title0 {
         font-size: 25px;
     }
@@ -977,6 +1058,24 @@
 }
     .carouselCourses .cardCourses {
         width: 220px;
+        height: 330px;
+    }
+    .starDivCourses img {
+        width: 11px;
+        height: 11px;
+    }
+    .starDivCourses {
+        width: 56px;
+    }
+    .cardBody .span2 {
+        font-size: 12px;
+    }
+    .amd {
+        font-size: 9px;
+    }
+    .cardCoursesBody {
+        width: 200px;
+        height: 170px;
     }
 }
 @media screen and (max-width: 1125px) {
@@ -985,7 +1084,20 @@
     }
 }
 @media screen and (max-width: 1100px) {
-.myCoursesSection {
+    .myCoursesSection {
+        gap: 40px;
+    }
+    .usersProfileInfo {
+        width: 170px;
+        height: 106px;
+    }
+    .myCourses {
+        height: 820px;
+    }
+    .courses .title0{
+        margin: 0 0 1% 6.8%;
+    }
+    .myCoursesSection {
     width: auto;
     padding: 95px 6.9% 0px 6.8%;
 }
@@ -995,6 +1107,25 @@
     .ratingStarMyourse img{
         width: 16px;
         height: 15px;
+    }
+    .footerCard button > span > a{
+        font-family: Roboto Medium;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.72px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .like-cnt, .footerImg3 {
+        width: 22px;
+        height: 22px;
+    }
+    .heart {
+        width: 12px;
+        height: 10px;
+    }
+    .like-cnt {
+        line-height: 16px;
     }
     .cardBody {
         padding: 0;
@@ -1020,11 +1151,12 @@
 }
 .myCoursesFieldSectionLeft {
     width: 150px;
-    height: 208px;
+    height: 230px;
 }
-.myCoursesFieldSection {
-    margin: 23px 29px;
-}
+    .myCoursesFieldSection {
+        width: 164px;
+        height: 240px;
+    }
 .myCoursesFieldSectionRight img{
     width: 15.18px;
     height: 15.18px;
@@ -1111,14 +1243,15 @@
         justify-content: space-between;
     }
     .courses{
+        height: 800px;
         padding-top: 0;
     }
     .headerCourses div {
         width: 90%;
     }
-    .courses .title0{
-        margin: 20px 6.9% 3px 6.8%;
-    }
+    /*.courses .title0{*/
+    /*    margin: 20px 6.9% 0px 6.8%;*/
+    /*}*/
     .txt1, .txt2, .courses .title0 {
         font-family: Roboto Slab;
         font-size: 25px;
@@ -1198,7 +1331,6 @@
     .cardtxt2 img {
         width: 14px;
         height: 14px;
-        margin-right: 6px;
     }
     .cardtxt1 span{
         font-family: Roboto Medium;
@@ -1214,6 +1346,10 @@
         font-weight: 500;
         line-height: 9.92px;
         text-align: left;
+        margin-left: 6px;
+    }
+    .footerCard button {
+        margin-left: 12px;
     }
     .footerImg1{
         width: 71.73px;
@@ -1227,7 +1363,11 @@
         height: 40px;
     }
     .cardCoursesBody {
-        height: 150px;
+        width: 170px;
+        height: 135px;
+    }
+    .carouselCourses {
+        height: 300px;
     }
     .cardCourses .img{
         padding: 0;
@@ -1237,36 +1377,50 @@
         gap: 28px;
     }
     .carouselCourses .cardCourses {
-        width: auto;
+        width: 200px;
+        height: 285px;
     }
     .footerCard{
         padding: 0;
     }
 }
 @media screen and (max-width: 950px) {
-    .cardCoursesBody{
-        padding: 10px 11px 10px 11px;
-    }
     .txt1, .txt2, .courses .title0 {
-        font-size: 24px;
-    }
-    .headerCourses div {
-         width: 100%;
+        font-size: 23px;
     }
     .carouselCourses {
         grid-auto-columns: calc((100% / 4));
     }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     .txt1, .txt2, .courses .title0 {
-        font-size: 22px;
+        font-size: 21px;
     }
     .carouselCourses {
-        grid-auto-columns: calc((100% / 3.3));
+        grid-auto-columns: calc((100% / 3.7));
     }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 830px) {
     .txt1, .txt2, .courses .title0 {
         font-size: 20px;
+    }
+    .carouselCourses {
+        grid-auto-columns: calc((100% / 3.5));
+    }
+}
+@media screen and (max-width: 760px) {
+    .txt1, .txt2, .courses .title0 {
+        font-size: 18px;
+    }
+    .carouselCourses {
+        grid-auto-columns: calc((100% / 3.33));
+    }
+    .headerCourses div {
+        width: 93%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .carouselCourses {
+        grid-auto-columns: calc((100% / 3));
     }
 }

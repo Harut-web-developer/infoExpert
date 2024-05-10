@@ -23,7 +23,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
         <div class="wrapper">
             <ul class="carouselCourses">
                 <li class="cardCourses">
-                    <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
+                    <div class="img"><img src="/images/coursesCardImg.png" alt="" draggable="false"> </div>
                     <div class="cardCoursesBody">
                         <div class="cardBody">
                             <span class="span1">1C: and Accounting for Beginners</span>
@@ -69,7 +69,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                     </div>
                 </li>
                 <li class="cardCourses">
-                    <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
+                    <div class="img"><img src="/images/coursesCardImg.png" alt="" draggable="false"> </div>
                     <div class="cardCoursesBody">
                         <div class="cardBody">
                             <span class="span1">1C: Accounting 8:3</span>
@@ -115,7 +115,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                     </div>
                 </li>
                 <li class="cardCourses">
-                    <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
+                    <div class="img"><img src="/images/coursesCardImg.png" alt="" draggable="false"> </div>
                     <div class="cardCoursesBody">
                         <div class="cardBody">
                             <span class="span1">1C: Payroll and personnel management</span>
@@ -161,7 +161,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                     </div>
                 </li>
                 <li class="cardCourses">
-                    <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
+                    <div class="img"><img src="/images/coursesCardImg.png" alt="" draggable="false"> </div>
                     <div class="cardCoursesBody">
                         <div class="cardBody">
                             <span class="span1">Trade management: marketing, sales BITRIX / CRM</span>
@@ -207,7 +207,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                     </div>
                 </li>
                 <li class="cardCourses">
-                    <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
+                    <div class="img"><img src="/images/coursesCardImg.png" alt="" draggable="false"> </div>
                     <div class="cardCoursesBody">
                         <div class="cardBody">
                             <span class="span1">1C: and Accounting for Beginners</span>
@@ -253,7 +253,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                     </div>
                 </li>
                 <li class="cardCourses">
-                    <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
+                    <div class="img"><img src="/images/coursesCardImg.png" alt="" draggable="false"> </div>
                     <div class="cardCoursesBody">
                         <div class="cardBody">
                             <span class="span1">1C: Accounting 8:3</span>
@@ -299,7 +299,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                     </div>
                 </li>
                 <li class="cardCourses">
-                    <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
+                    <div class="img"><img src="/images/coursesCardImg.png" alt="" draggable="false"> </div>
                     <div class="cardCoursesBody">
                         <div class="cardBody">
                             <span class="span1">1C: Payroll and personnel management</span>
@@ -345,7 +345,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                     </div>
                 </li>
                 <li class="cardCourses">
-                    <div class="img"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
+                    <div class="img"><img src="/images/coursesCardImg.png" alt="" draggable="false"> </div>
                     <div class="cardCoursesBody">
                         <div class="cardBody">
                             <span class="span1">Trade management: marketing, sales BITRIX / CRM</span>
@@ -371,12 +371,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                             </div>
                         </div>
                         <div class="footerCard">
-                            <div class="coursisBtnField">
-                                <button>
-                                    <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span><a href="">Buy now</a></span>
-                                </button>
-                            </div>
+                            <button>
+                                <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
+                                <span><a href="">Buy now</a></span>
+                            </button>
                             <div class="booterImgs">
                                 <div class="like-container">
                                     <div class="like-cnt unchecked">
