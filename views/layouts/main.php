@@ -102,7 +102,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <div class="searchFlagField">
                         <div class="tabletSearchField">
                             <button class="btn-searchTablet"><img src="/images/search.png" alt=""></button>
-                            <input type="text" class="input-searchTablet" placeholder="Type to Search...">
+                            <input type="text" class="input-searchTablet" placeholder="<?= $GLOBALS['text']['search']?>">
                         </div>
                         <div class="tabletFlagField">
                             <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/armflag.png" alt=""></a>
@@ -122,14 +122,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
             <div class="tabletMenuNavbar">
                 <ul class="tabletProfileMenuField">
-                    <li><a href="/user-profile/index">Profile</a></li>
-                    <li><a href="/wishlist/index">Wishlist</a></li>
-                    <li><a href="/user-profile/achievements">My achievements</a></li>
-                    <li><a href="/my-card/index">My card</a></li>
-                    <li><a href="/user-profile/achievements-edit">Edit profile</a></li>
-                    <li><a href="/my-card/checkout">Payment methods</a></li>
+                    <li><a href="/user-profile/index"><?=$GLOBALS['text']['tabletProfile']?></a></li>
+                    <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
+                    <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
+                    <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
+                    <li><a href="/user-profile/achievements-edit"><?=$GLOBALS['text']['tabletEdit']?></a></li>
+                    <li><a href="/my-card/checkout"><?=$GLOBALS['text']['tabletPayment']?></a></li>
                     <?php if(!empty(Yii::$app->user->identity)){ ?>
-                        <li><a href="/logout">Log out</a></li>
+                        <li><a href="/logout"><?=$GLOBALS['text']['headerLogout']?></a></li>
                     <?php }?>
                 </ul>
             </div>
@@ -160,7 +160,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 <div class="icons">
                     <div class="search-box">
                         <button class="btn-search"><img src="/images/search.png" alt=""></button>
-                        <input type="text" class="input-search" placeholder="<?= $GLOBALS['text']['search']?>">
+                        <input type="text" class="input-search" placeholder="<?=$GLOBALS['text']['search']?>">
                     </div>
                     <div class="profileField">
                         <?php if (empty(Yii::$app->user->identity)){?>
