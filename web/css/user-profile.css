@@ -301,31 +301,29 @@
     justify-content: space-between;
     align-items: start;
 }
-.usersProfileInfoPhone > span{
-    font-family: "Roboto",sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    margin-left: 37px;
-    color: white;
-
+.usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin{
+    display: flex;
+    word-wrap: break-word;
+    width: 249px;
+    flex-direction: row;
 }
-.usersProfileInfoEmail > span{
-    font-family: "Roboto",sans-serif;
-    margin-left: 37px;
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
-
-}
+.usersProfileInfoPhone > span,
+.usersProfileInfoEmail > span,
 .usersProfileInfoLinkdin > span{
-    font-size: 20px;
     font-family: "Roboto",sans-serif;
     margin-left: 37px;
+    font-size: 20px;
     color: white;
     font-weight: 400;
+    white-space: normal;
+    width: -webkit-fill-available;
 }
-
-
+.usersProfileInfoPhone > img,
+.usersProfileInfoEmail > img,
+.usersProfileInfoLinkdin > img{
+    width: 32px;
+    height: 32px;
+}
 .certificate{
     width: 624px;
     height: 529px;
@@ -507,9 +505,6 @@
     margin: 12px 33px;
     font-weight: 500;
 }
-.usersProfileInfoEmail {
-    display: flex;
-}
 .userFormsBtn_ > button:hover img{
     content: url("../images/userSaveBtnhover.png");
 }
@@ -614,6 +609,9 @@
     }
 }
 @media screen and (max-width: 1300px) {
+    .usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin {
+        width: 200px;
+    }
     .userProfileMenu > li > a {
         font-size: 18px;
     }

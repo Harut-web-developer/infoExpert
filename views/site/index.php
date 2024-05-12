@@ -1,8 +1,11 @@
 <?php
-
+use yii\web\View;
+use yii\web\YiiAsset;
 /** @var yii\web\View $this */
 
 $this->title = 'Infoexpert';
+$this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
+$this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
 ?>
 
 <div class="headerBackground">
@@ -458,7 +461,13 @@ $this->title = 'Infoexpert';
                         </div>
                         <div class="cardsLike">
                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                            <img src="/images/activeLike.png" alt="">
+                            <div class="like-container">
+                                <div class="like-cnt unchecked likeColor">
+                                    <i class="like-btn material-icons heart-icon">
+                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                    </i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -479,7 +488,13 @@ $this->title = 'Infoexpert';
                         </div>
                         <div class="cardsLike">
                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                            <img src="/images/activeLike.png" alt="">
+                            <div class="like-container">
+                                <div class="like-cnt unchecked likeColor">
+                                    <i class="like-btn material-icons heart-icon">
+                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                    </i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -500,7 +515,13 @@ $this->title = 'Infoexpert';
                         </div>
                         <div class="cardsLike">
                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                            <img src="/images/inactiveLike.png" alt="">
+                            <div class="like-container">
+                                <div class="like-cnt unchecked likeColor">
+                                    <i class="like-btn material-icons heart-icon">
+                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                    </i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

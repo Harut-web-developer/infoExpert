@@ -1,6 +1,13 @@
 <?php
+use yii\web\View;
+use yii\web\YiiAsset;
+
 /** @var yii\web\View $this */
+
 $this->registerCssFile('@web/css/wishlist.css');
+$this->registerJsFile('@web/js/courses.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
+$this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
+$this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
 ?>
 <div class="usersProfile wishlist">
     <div class="userProfileSection">
@@ -85,8 +92,16 @@ $this->registerCssFile('@web/css/wishlist.css');
                                                 <span><a href="">Buy now</a></span>
                                             </button>
                                         </div>
-                                        <img class="footerCard_2_img2" src="/images/likeActiv.png" alt="">
-                                        <img class="footerCard_2_img3" src="/images/courses5.png" alt="">
+                                        <div class="booterImgs">
+                                            <div class="like-container">
+                                                <div class="like-cnt unchecked">
+                                                    <i class="like-btn material-icons heart-icon">
+                                                        <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -123,8 +138,16 @@ $this->registerCssFile('@web/css/wishlist.css');
                                                 <span><a href="">Buy now</a></span>
                                             </button>
                                         </div>
-                                        <img class="footerCard_2_img2" src="/images/likeActiv.png" alt="">
-                                        <img class="footerCard_2_img3" src="/images/courses5.png" alt="">
+                                        <div class="booterImgs">
+                                            <div class="like-container">
+                                                <div class="like-cnt unchecked">
+                                                    <i class="like-btn material-icons heart-icon">
+                                                        <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -161,8 +184,16 @@ $this->registerCssFile('@web/css/wishlist.css');
                                                 <span><a href="">Buy now</a></span>
                                             </button>
                                         </div>
-                                        <img class="footerCard_2_img2" src="/images/likeActiv.png" alt="">
-                                        <img class="footerCard_2_img3" src="/images/courses5.png" alt="">
+                                        <div class="booterImgs">
+                                            <div class="like-container">
+                                                <div class="like-cnt unchecked">
+                                                    <i class="like-btn material-icons heart-icon">
+                                                        <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -199,8 +230,16 @@ $this->registerCssFile('@web/css/wishlist.css');
                                                 <span><a href="">Buy now</a></span>
                                             </button>
                                         </div>
-                                        <img class="footerCard_2_img2" src="/images/likeActiv.png" alt="">
-                                        <img class="footerCard_2_img3" src="/images/courses5.png" alt="">
+                                        <div class="booterImgs">
+                                            <div class="like-container">
+                                                <div class="like-cnt unchecked">
+                                                    <i class="like-btn material-icons heart-icon">
+                                                        <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -237,8 +276,16 @@ $this->registerCssFile('@web/css/wishlist.css');
                                                 <span><a href="">Buy now</a></span>
                                             </button>
                                         </div>
-                                        <img class="footerCard_2_img2" src="/images/likeActiv.png" alt="">
-                                        <img class="footerCard_2_img3" src="/images/courses5.png" alt="">
+                                        <div class="booterImgs">
+                                            <div class="like-container">
+                                                <div class="like-cnt unchecked">
+                                                    <i class="like-btn material-icons heart-icon">
+                                                        <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -265,7 +312,13 @@ $this->registerCssFile('@web/css/wishlist.css');
                                         </div>
                                         <div class="cardsLike_">
                                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                                            <img src="/images/likeActiv.png" alt="">
+                                            <div class="like-container">
+                                                <div class="like-cnt unchecked likeColor">
+                                                    <i class="like-btn material-icons heart-icon">
+                                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                                    </i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -288,7 +341,13 @@ $this->registerCssFile('@web/css/wishlist.css');
                                         </div>
                                         <div class="cardsLike_">
                                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                                            <img src="/images/likeActiv.png" alt="">
+                                            <div class="like-container">
+                                                <div class="like-cnt unchecked likeColor">
+                                                    <i class="like-btn material-icons heart-icon">
+                                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                                    </i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -311,7 +370,13 @@ $this->registerCssFile('@web/css/wishlist.css');
                                         </div>
                                         <div class="cardsLike_">
                                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                                            <img src="/images/likeActiv.png" alt="">
+                                            <div class="like-container">
+                                                <div class="like-cnt unchecked likeColor">
+                                                    <i class="like-btn material-icons heart-icon">
+                                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                                    </i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -334,7 +399,13 @@ $this->registerCssFile('@web/css/wishlist.css');
                                         </div>
                                         <div class="cardsLike_">
                                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                                            <img src="/images/likeActiv.png" alt="">
+                                            <div class="like-container">
+                                                <div class="like-cnt unchecked likeColor">
+                                                    <i class="like-btn material-icons heart-icon">
+                                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                                    </i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -383,8 +454,8 @@ $this->registerCssFile('@web/css/wishlist.css');
                 const totalCardWidth = carousel.scrollWidth;
                 const maxScrollLeft = totalCardWidth - carousel.offsetWidth;
                 if (carousel.scrollLeft >= maxScrollLeft) return;
-                timeoutId = setTimeout(() =>
-                    carousel.scrollLeft += firstCardWidth, 2500);
+                // timeoutId = setTimeout(() =>
+                //     carousel.scrollLeft += firstCardWidth, 2500);
             };
 
             carousel.addEventListener("touchstart", dragStart);

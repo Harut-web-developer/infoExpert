@@ -1743,6 +1743,37 @@
     color: #D9E3E4;
     font-size: 16px;
 }
+/*LIKE*/
+.heart2{
+    width: 25.63px;
+    height: 21.96px;
+}
+.like-container{
+    filter: url('#filter');
+    display: inline-block;
+}
+.like-cnt{
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    top: 100%;
+    transform: translate(-105%, -55%)!important;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    z-index: 10;
+}
+.like-btn{
+    color: #fff;
+}
+::-moz-selection { background: transparent;}
+::selection {background: transparent;}
+.likeColor{
+    border-color: #F36528;
+}
 /*end main page css*/
 
 /*@media screen and (max-width: 1800px) {*/
