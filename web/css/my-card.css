@@ -880,6 +880,35 @@
 .userProfileMenu > li > a:hover{
     color: #F36528;
 }
+/*LIKE*/
+.heart{
+    width: 24.19px;
+    height: 24px;
+}
+.like-container{
+    filter: url('#filter');
+    display: inline-block;
+}
+.like-cnt{
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    top: 100%;
+    transform: translate(-105%, -55%)!important;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    z-index: 10;
+}
+.like-btn{
+    color: #fff;
+}
+::-moz-selection { background: transparent;}
+::selection {background: transparent;}
+
 /*tablet of my card page */
 @media screen and (max-width: 1800px) {
     .myCoursesFieldSection {

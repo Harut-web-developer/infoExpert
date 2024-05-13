@@ -40,8 +40,7 @@
     box-shadow: 0px 1px 6px 1px #57939B;
 }
 .userProfileMenu{
-    /*width: 506px;*/
-    width: max-content;
+    width: 683px;
     height: 43px;
     display: flex;
     flex-direction: row;
@@ -302,31 +301,29 @@
     justify-content: space-between;
     align-items: start;
 }
-.usersProfileInfoPhone > span{
-    font-family: "Roboto",sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    margin-left: 37px;
-    color: white;
-
+.usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin{
+    display: flex;
+    word-wrap: break-word;
+    width: 249px;
+    flex-direction: row;
 }
-.usersProfileInfoEmail > span{
-    font-family: "Roboto",sans-serif;
-    margin-left: 37px;
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
-
-}
+.usersProfileInfoPhone > span,
+.usersProfileInfoEmail > span,
 .usersProfileInfoLinkdin > span{
-    font-size: 20px;
     font-family: "Roboto",sans-serif;
     margin-left: 37px;
+    font-size: 20px;
     color: white;
     font-weight: 400;
+    white-space: normal;
+    width: -webkit-fill-available;
 }
-
-
+.usersProfileInfoPhone > img,
+.usersProfileInfoEmail > img,
+.usersProfileInfoLinkdin > img{
+    width: 32px;
+    height: 32px;
+}
 .certificate{
     width: 624px;
     height: 529px;
@@ -510,9 +507,6 @@
     color: #F36528;
     font-weight: 500;
 }
-.usersProfileInfoEmail {
-    display: flex;
-}
 .userFormsBtn_ > button:hover img{
     content: url("../images/userSaveBtnhover.png");
 }
@@ -592,6 +586,11 @@
         height: auto;
     }
 }
+@media screen and (max-width: 1500px){
+    .userProfileMenuField > span {
+        font-size: 33px;
+    }
+}
 @media screen and (max-width: 1400px){
     .userCreateFieldForms {
         width: 100%;
@@ -601,9 +600,38 @@
         width: 90%;
     }
 }
+@media screen and (max-width: 1366px) {
+    .userProfileMenuField > span {
+        font-size: 30px;
+    }
+    .userProfileMenu > li {
+        margin-left: 25px;
+    }
+    .userProfileMenu{
+        width: 650px;
+    }
+}
 @media screen and (max-width: 1300px) {
+    .usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin {
+        width: 200px;
+    }
+    .userProfileMenu > li > a {
+        font-size: 18px;
+    }
+    .userProfileMenu {
+        width: 600px;
+    }
+    .userProfileMenuField > span {
+        font-size: 25px;
+    }
     .userAchievementsSection {
         justify-content: flex-start;
+    }
+    .userProfileMenu > li {
+        margin-left: 25px;
+    }
+    .userProfileMenu {
+        width: 625px;
     }
     .profilBody {
          padding-top: 70px;
@@ -653,10 +681,12 @@
         width: 245px;
     }
 }
+@media screen and (max-width: 1200px){
+    .userProfileMenuField > span {
+        font-size: 24px;
+    }
+}
 @media screen and (max-width: 1100px) {
-    /*.usersAchievements {*/
-    /*    height: 646px;*/
-    /*}*/
     .userProfileSection, .userCreateField, .userAchievementsSection{
         width: -webkit-fill-available;
         margin: 95px 6.9% 0px 6.8%;

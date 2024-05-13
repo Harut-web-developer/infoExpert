@@ -44,7 +44,7 @@ $this->registerCssFile('@web/css/courses.css');
                     <ul class="carouselMyCourses myCoursesFieldAcceptCourses">
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="">
+                                <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="myCoursesRating">
@@ -66,7 +66,7 @@ $this->registerCssFile('@web/css/courses.css');
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="">
+                                <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="myCoursesRating">
@@ -88,7 +88,7 @@ $this->registerCssFile('@web/css/courses.css');
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="">
+                                <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="myCoursesRating">
@@ -110,7 +110,7 @@ $this->registerCssFile('@web/css/courses.css');
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="">
+                                <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="myCoursesRating">
@@ -132,7 +132,7 @@ $this->registerCssFile('@web/css/courses.css');
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="">
+                                <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="myCoursesRating">
@@ -154,7 +154,7 @@ $this->registerCssFile('@web/css/courses.css');
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="">
+                                <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="myCoursesRating">

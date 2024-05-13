@@ -1,6 +1,13 @@
 <?php
+use yii\web\View;
+use yii\web\YiiAsset;
+
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/my-card.css');
+
+$this->registerJsFile('@web/js/my-card.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
+$this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
+$this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
 ?>
 <div class="myCard">
     <div class="myCardContent">
@@ -47,7 +54,7 @@ $this->registerCssFile('@web/css/my-card.css');
                                 <div class="myCoursesBlocksField">
                                     <div class="myCoursesBlocksFieldMain">
                                         <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="">
+                                            <img src="/images/courseimage.png" alt="" draggable="false">
                                             <div class="myCardNameRating">
                                                 <span>1C: Accounting 8.3</span>
                                                 <div class="rightContentMyCard">
@@ -79,7 +86,13 @@ $this->registerCssFile('@web/css/my-card.css');
                                                     <span>Buy now</span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
-                                                    <img src="/images/likeIconmycard.png" alt="">
+                                                    <div class="like-container">
+                                                        <div class="like-cnt unchecked">
+                                                            <i class="like-btn material-icons heart-icon">
+                                                                <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
+                                                            </i>
+                                                        </div>
+                                                    </div>
                                                     <img src="/images/iconmarketmycard.png" alt="">
                                                 </div>
                                             </div>
@@ -95,7 +108,7 @@ $this->registerCssFile('@web/css/my-card.css');
                                 <div class="myCoursesBlocksField">
                                     <div class="myCoursesBlocksFieldMain">
                                         <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="">
+                                            <img src="/images/courseimage.png" alt="" draggable="false">
                                             <div class="myCardNameRating">
                                                 <span>1C: Accounting 8.3</span>
                                                 <div class="rightContentMyCard">
@@ -127,7 +140,13 @@ $this->registerCssFile('@web/css/my-card.css');
                                                     <span>Buy now</span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
-                                                    <img src="/images/likeIconmycard.png" alt="">
+                                                    <div class="like-container">
+                                                        <div class="like-cnt unchecked">
+                                                            <i class="like-btn material-icons heart-icon">
+                                                                <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
+                                                            </i>
+                                                        </div>
+                                                    </div>
                                                     <img src="/images/iconmarketmycard.png" alt="">
                                                 </div>
                                             </div>
@@ -143,7 +162,7 @@ $this->registerCssFile('@web/css/my-card.css');
                                 <div class="myCoursesBlocksField">
                                     <div class="myCoursesBlocksFieldMain">
                                         <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="">
+                                            <img src="/images/courseimage.png" alt="" draggable="false">
                                             <div class="myCardNameRating">
                                                 <span>1C: Accounting 8.3</span>
                                                 <div class="rightContentMyCard">
@@ -175,7 +194,13 @@ $this->registerCssFile('@web/css/my-card.css');
                                                     <span>Buy now</span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
-                                                    <img src="/images/likeIconmycard.png" alt="">
+                                                    <div class="like-container">
+                                                        <div class="like-cnt unchecked">
+                                                            <i class="like-btn material-icons heart-icon">
+                                                                <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
+                                                            </i>
+                                                        </div>
+                                                    </div>
                                                     <img src="/images/iconmarketmycard.png" alt="">
                                                 </div>
                                             </div>
@@ -191,7 +216,7 @@ $this->registerCssFile('@web/css/my-card.css');
                                 <div class="myCoursesBlocksField">
                                     <div class="myCoursesBlocksFieldMain">
                                         <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="">
+                                            <img src="/images/courseimage.png" alt="" draggable="false">
                                             <div class="myCardNameRating">
                                                 <span>1C: Accounting 8.3</span>
                                                 <div class="rightContentMyCard">
@@ -223,7 +248,13 @@ $this->registerCssFile('@web/css/my-card.css');
                                                     <span>Buy now</span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
-                                                    <img src="/images/likeIconmycard.png" alt="">
+                                                    <div class="like-container">
+                                                        <div class="like-cnt unchecked">
+                                                            <i class="like-btn material-icons heart-icon">
+                                                                <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
+                                                            </i>
+                                                        </div>
+                                                    </div>
                                                     <img src="/images/iconmarketmycard.png" alt="">
                                                 </div>
                                             </div>
@@ -253,4 +284,3 @@ $this->registerCssFile('@web/css/my-card.css');
         </div>
     </div>
 </div>
-<?php $this->registerJsFile('@web/js/my-card.js'); ?>

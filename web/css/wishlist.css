@@ -189,6 +189,26 @@
 .applyNowBtnField > a:hover span{
     color: white;
 }
+.starDivCourses{
+    width: 118px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.starDivCourses img{
+    width: 21px;
+    height: 20px;
+}
+.starDivWishlistCourses{
+    width: 103px;
+    height: 20.37px;
+    display: flex;
+}
+.starDivWishlistCourses img{
+    width: 21px;
+    height: 20px;
+}
 hr{
     opacity: 1!important;
 }
@@ -486,6 +506,42 @@ hr.new1 {
     width: 43px;
     height: 43px;
 }
+
+/*LIKE*/
+.heart{
+    width: 24.19px;
+    height: 24px;
+}
+.heart2{
+    width: 25.63px;
+    height: 21.96px;
+}
+.like-container{
+    filter: url('#filter');
+    display: inline-block;
+}
+.like-cnt{
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    top: 100%;
+    transform: translate(-105%, -55%)!important;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    z-index: 10;
+}
+.like-btn{
+    color: #fff;
+}
+::-moz-selection { background: transparent;}
+::selection {background: transparent;}
+.likeColor{
+    border-color: #F36528;
+}
 @media screen and (max-width: 1900px) {
     .CoursesAndCategoriesCard {
         width: 58%;
@@ -569,8 +625,12 @@ hr.new1 {
         font-weight: 500;
         line-height: 14.3px;
     }
-    .starAndTxt_2 img{
-        width: 90px;
+    .starDivCourses {
+        width: 78px;
+    }
+    .starDivCourses img {
+        width: 15px;
+        height: 15px;
     }
     .card_2 .cardBody_2 .span2_2 {
         font-size: 18px;

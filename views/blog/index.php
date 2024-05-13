@@ -1,7 +1,13 @@
 <?php
+use yii\web\View;
+use yii\web\YiiAsset;
+
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/blog.css');
 
+$this->registerJsFile('@web/js/blog.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
+$this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
+$this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
 ?>
 <div class="blog">
     <div class="blogContent">
@@ -21,7 +27,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +45,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +63,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +81,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +99,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +117,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +135,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +153,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +171,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +189,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +207,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +225,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +243,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -177,7 +261,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +279,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -201,7 +297,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +315,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +333,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -237,7 +351,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -249,7 +369,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -261,7 +387,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +405,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +423,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -297,7 +441,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -309,7 +459,13 @@ $this->registerCssFile('@web/css/blog.css');
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
                                     <a href="/blog/categorie">READ MORE</a>
-                                    <img src="/images/imglike.png">
+                                    <div class="like-container">
+                                        <div class="like-cnt unchecked likeColor">
+                                            <i class="like-btn material-icons heart-icon">
+                                                <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                            </i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -332,4 +488,3 @@ $this->registerCssFile('@web/css/blog.css');
         </div>
     </div>
 </div>
-<?php $this->registerJsFile('@web/js/blog.js'); ?>
