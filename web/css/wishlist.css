@@ -40,7 +40,7 @@
     text-align: left;
 }
 .userProfileMenu{
-    width: 506px;
+    width: max-content;
     height: 43px;
     display: flex;
     flex-direction: row;
@@ -49,6 +49,9 @@
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
+}
+.userProfileMenu > li{
+    margin-left: 40px;
 }
 .userProfileMenu > li > a{
     text-decoration: none;

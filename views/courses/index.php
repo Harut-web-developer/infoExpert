@@ -13,10 +13,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
     <div class="headerCourses">
         <img class="backButton" src="/images/backButton.png" alt="">
         <div>
-            <span class="txt1">Our</span>
-            <span class="txt2">Best Courses</span>
-            <span class="txt1">Offered and Teach By</span>
-            <span class="txt2">Best of The Instructors</span>
+            <span class="txt1"><?=$GLOBALS['text']['mainCourseTitleFirst']?></span>
+            <span class="txt2"><?=$GLOBALS['text']['mainCourseTitleSecond']?></span>
+            <span class="txt1"><?=$GLOBALS['text']['mainCourseTitleThird']?></span>
+            <span class="txt2"><?=$GLOBALS['text']['mainCourseTitleFour']?></span>
         </div>
     </div>
     <div class="cardCourses_">
@@ -391,7 +391,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
             </ul>
         </div>
     </div>
-    <h1 class="title0">Meet Our Tutors</h1>
+    <h1 class="title0"><?=$GLOBALS['text']['mainCourseTutors']?></h1>
     <div class="cardCourses2">
         <div class="wrapper2">
             <ul class="carousel2">
