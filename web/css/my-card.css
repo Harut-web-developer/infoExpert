@@ -926,7 +926,7 @@
         align-items: end;
     }
     .myCardInfoButtonField {
-        width: calc(80%);
+        width: calc(90%);
         gap: 19px;
     }
     .myCardInfoButtonField > button {

@@ -1744,15 +1744,15 @@
     font-size: 16px;
 }
 /*LIKE*/
-.heartMain{
+#section01 .heartMain{
     width: 25.63px;
     height: 21.96px;
 }
-.like-container{
+#section01 .like-container{
     filter: url('#filter');
     display: inline-block;
 }
-.like-cnt{
+#section01 .like-cnt{
     position: absolute;
     cursor: pointer;
     left: 50%;
@@ -1766,12 +1766,12 @@
     line-height: 36px;
     z-index: 10;
 }
-.like-btn{
+#section01 .like-btn{
     color: #fff;
 }
 ::-moz-selection { background: transparent;}
 ::selection {background: transparent;}
-.likeColor{
+#section01 .likeColor{
     border-color: #F36528;
 }
 /*end main page css*/
