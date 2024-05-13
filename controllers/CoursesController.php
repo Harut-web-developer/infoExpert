@@ -9,8 +9,8 @@ class CoursesController extends \yii\web\Controller
 {
     public static function pages()
     {
-        $page['index'] = 1;
-        $page['about'] = 2;
+        $page['my-courses'] = 8;
+
         return $page;
     }
     public function beforeAction($action)

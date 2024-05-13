@@ -10,6 +10,8 @@ class UserProfileController extends \yii\web\Controller
     {
         $page['index'] = 4;
         $page['user-create'] = 5;
+        $page['achievements'] = 6;
+        $page['achievements-edit'] = 7;
         return $page;
     }
     public function beforeAction($action)
