@@ -587,9 +587,9 @@
     }
 }
 @media screen and (max-width: 1500px){
-    .userProfileMenuField > span {
-        font-size: 33px;
-    }
+    /*.userProfileMenuField > span {*/
+    /*    font-size: 33px;*/
+    /*}*/
 }
 @media screen and (max-width: 1400px){
     .userCreateFieldForms {
@@ -600,39 +600,39 @@
         width: 90%;
     }
 }
-@media screen and (max-width: 1366px) {
-    .userProfileMenuField > span {
-        font-size: 30px;
-    }
-    .userProfileMenu > li {
-        margin-left: 25px;
-    }
-    .userProfileMenu{
-        width: 650px;
-    }
-}
+/*@media screen and (max-width: 1366px) {*/
+/*    .userProfileMenuField > span {*/
+/*        font-size: 30px;*/
+/*    }*/
+/*    .userProfileMenu > li {*/
+/*        margin-left: 25px;*/
+/*    }*/
+/*    .userProfileMenu{*/
+/*        width: 650px;*/
+/*    }*/
+/*}*/
 @media screen and (max-width: 1300px) {
     .usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin {
         width: 200px;
     }
-    .userProfileMenu > li > a {
-        font-size: 18px;
-    }
-    .userProfileMenu {
-        width: 600px;
-    }
-    .userProfileMenuField > span {
-        font-size: 25px;
-    }
+    /*.userProfileMenu > li > a {*/
+    /*    font-size: 18px;*/
+    /*}*/
+    /*.userProfileMenu {*/
+    /*    width: 600px;*/
+    /*}*/
+    /*.userProfileMenuField > span {*/
+    /*    font-size: 25px;*/
+    /*}*/
     .userAchievementsSection {
         justify-content: flex-start;
     }
-    .userProfileMenu > li {
-        margin-left: 25px;
-    }
-    .userProfileMenu {
-        width: 625px;
-    }
+    /*.userProfileMenu > li {*/
+    /*    margin-left: 25px;*/
+    /*}*/
+    /*.userProfileMenu {*/
+    /*    width: 622px;*/
+    /*}*/
     .profilBody {
          padding-top: 70px;
     }
@@ -681,35 +681,40 @@
         width: 245px;
     }
 }
-@media screen and (max-width: 1200px){
-    .userProfileMenuField > span {
-        font-size: 24px;
-    }
-}
+/*@media screen and (max-width: 1200px){*/
+/*    .userProfileMenuField > span {*/
+/*        font-size: 24px;*/
+/*    }*/
+/*}*/
+/*@media screen and (max-width: 1120px){*/
+/*    .userProfileMenuField > span {*/
+/*        font-size: 23px;*/
+/*    }*/
+/*}*/
 @media screen and (max-width: 1100px) {
     .userProfileSection, .userCreateField, .userAchievementsSection{
         width: -webkit-fill-available;
         margin: 95px 6.9% 0px 6.8%;
         gap: 56px;
     }
-    .userProfileMenuField > span {
-        font-size: 32px;
-    }
-    .userProfileMenuField > span{
-        font-size: 22px;
-        font-weight: 600;
-        line-height: 29.01px;
-        text-align: left;
-    }
-    .userProfileMenu {
-        width: 423px;
-    }
-    .userProfileMenu > li > a{
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16.41px;
-        text-align: left;
-    }
+    /*.userProfileMenuField > span {*/
+    /*    font-size: 32px;*/
+    /*}*/
+    /*.userProfileMenuField > span{*/
+    /*    font-size: 22px;*/
+    /*    font-weight: 600;*/
+    /*    line-height: 29.01px;*/
+    /*    text-align: left;*/
+    /*}*/
+    /*.userProfileMenu {*/
+    /*    width: 423px;*/
+    /*}*/
+    /*.userProfileMenu > li > a{*/
+    /*    font-size: 14px;*/
+    /*    font-weight: 400;*/
+    /*    line-height: 16.41px;*/
+    /*    text-align: left;*/
+    /*}*/
     .fieldMoreAbout > span{
         font-size: 18px;
         font-weight: 500;

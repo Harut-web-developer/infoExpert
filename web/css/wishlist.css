@@ -663,6 +663,16 @@ hr.new1 {
         width: 100%;
         text-align: center;
     }
+    .like-cnt{
+        width: 35px;
+        height: 35px;
+        line-height: 32px;
+        transform: translate(-105%, -60%) !important;
+    }
+    .heart {
+        width: 20.19px;
+        height: 20px;
+    }
 }
 @media screen and (max-width: 1500px) {
     .topSlider {
