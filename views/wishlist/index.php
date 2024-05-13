@@ -12,12 +12,12 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
 <div class="usersProfile wishlist">
     <div class="userProfileSection">
         <div class="userProfileMenuField">
-            <span>My Profile</span>
+            <span><?=$GLOBALS['text']['wishlistTiltle']?></span>
             <ul class="userProfileMenu">
-                <li><a href="/user-profile/achievements">My achievements</a></li>
-                <li><a href="/courses/my-courses">My courses</a></li>
-                <li><a href="/wishlist/index">Wishlist</a></li>
-                <li><a href="/my-card/index">My card</a></li>
+                <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
+                <li><a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a></li>
+                <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
+                <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
             </ul>
         </div>
         <div class="mainContent">

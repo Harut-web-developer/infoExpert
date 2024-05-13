@@ -10,6 +10,7 @@ class CoursesController extends \yii\web\Controller
     public static function pages()
     {
         $page['my-courses'] = 8;
+        $page['index'] = 9;
 
         return $page;
     }
