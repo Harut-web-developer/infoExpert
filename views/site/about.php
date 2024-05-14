@@ -21,6 +21,7 @@ $this->registerCssFile('@web/css/about.css');
                     <div class="historyContent">
                         <div class="mainTextLeftContent">
                             <p><?=$GLOBALS['text']['aboutFirstText']?></p>
+                            <p><?=$GLOBALS['text']['aboutFirstBottomText']?></p>
                         </div>
                         <div class="blogContent"></div>
                     </div>

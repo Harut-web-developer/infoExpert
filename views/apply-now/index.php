@@ -4,89 +4,89 @@ $this->registerCssFile('@web/css/apply-now.css');
 ?>
 <div class="applyOne">
     <form class="appleFields" action="/apply-now/apply-application">
-        <span>Դասընթացի նախագրանցման հայտ</span>
-        <p>Խնդրում ենք լրացնել հայտը, որը ձեզ հնարավորություն կտա առաջինը տեղեկանալ և մասնակցել Ակադեմիայի կողմից առաջարկվող դաընթացներին:</p>
+        <span><?=$GLOBALS['text']['applyNowTitle']?></span>
+        <p><?=$GLOBALS['text']['applyNowText']?></p>
         <div class="apllyInputFields">
             <div class="applyNameInput">
-                <label for="name/surname">Անուն/Ազգանուն</label>
+                <label for="name/surname"><?=$GLOBALS['text']['applyNowInputName']?></label>
                 <input id="name/surname" type="text" name="name/surname">
             </div>
             <div class="applyEmailInput">
-                <label for="email">Էլ.հասցե</label>
+                <label for="email"><?=$GLOBALS['text']['applyNowInputEmail']?></label>
                 <input id="email" type="email" name="email">
             </div>
             <div class="coursesFieldsRadio">
-                <span>Դասընթացներ</span>
+                <span><?=$GLOBALS['text']['applyNowCourses']?></span>
                 <div class="radioFieldsBlocks">
                     <div class="coursesBlocksRadio">
                         <div class="accounting">
                             <input type="radio" id="accounting" name="accounting" checked>
-                            <label for="accounting">1C: Հաշվապահություն 8.3</label>
+                            <label for="accounting"><?=$GLOBALS['text']['applyNowCourseOne']?></label>
                         </div>
                         <div class="salary">
                             <input type="radio" id="salary" name="salary">
-                            <label for="salary">1C: Աշխատավարձ և կադրերի կառավարում</label>
+                            <label for="salary"><?=$GLOBALS['text']['applyNowCourseTwo']?></label>
                         </div>
                         <div class="trade">
                             <input type="radio" id="trade" name="trade">
-                            <label for="trade">1C: Առևտրի կառավարում</label>
+                            <label for="trade"><?=$GLOBALS['text']['applyNowCourseThree']?></label>
                         </div>
                         <div class="marketing">
                             <input type="radio" id="marketing" name="marketing">
-                            <label for="marketing">Մարքեթինգ, վաճառք և CRM/Bitrix24</label>
+                            <label for="marketing"><?=$GLOBALS['text']['applyNowCourseFour']?></label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="typeCoursesFields">
-                <span>Դասընթացի տեսակ</span>
+                <span><?=$GLOBALS['text']['applyNowTypeCourse']?></span>
                 <div class="radioFieldsBlocksType">
                     <div class="typeCoursesBlocksRadio">
                         <div class="individual">
                             <div class="mainIndividual">
                                 <input type="radio" id="individual" name="individual">
-                                <label for="individual">Անհատական</label>
+                                <label for="individual"><?=$GLOBALS['text']['applyNowIndividual']?></label>
                             </div>
                             <div class="individualChildFields sameTypeCourse">
                                 <div class="online">
                                     <input type="radio" id="individualOnline" name="individualOnline">
-                                    <label for="individualOnline">Օնլայն</label>
+                                    <label for="individualOnline"><?=$GLOBALS['text']['applyNowOnline']?></label>
                                 </div>
                                 <div class="offline">
                                     <input type="radio" id="individualOffline" name="individualOffline">
-                                    <label for="individualOffline">Օֆֆլայն</label>
+                                    <label for="individualOffline"><?=$GLOBALS['text']['applyNowOffline']?></label>
                                 </div>
                             </div>
                         </div>
                         <div class="group">
                             <div class="mainGroup">
                                 <input type="radio" id="group" name="group">
-                                <label for="group">Խմբային</label>
+                                <label for="group"><?=$GLOBALS['text']['applyNowGroup']?></label>
                             </div>
                             <div class="groupChildFields sameTypeCourse">
                                 <div class="online">
                                     <input type="radio" id="groupOnline" name="groupOnline">
-                                    <label for="groupOnline">Օնլայն</label>
+                                    <label for="groupOnline"><?=$GLOBALS['text']['applyNowOnline']?></label>
                                 </div>
                                 <div class="offline">
                                     <input type="radio" id="groupOffline" name="groupOffline">
-                                    <label for="groupOffline">Օֆֆլայն</label>
+                                    <label for="groupOffline"><?=$GLOBALS['text']['applyNowOffline']?></label>
                                 </div>
                             </div>
                         </div>
                         <div class="corporate">
                             <div class="mainCorporate">
                                 <input type="radio" id="corporate">
-                                <label for="corporate">Կորպորատիվ</label>
+                                <label for="corporate"><?=$GLOBALS['text']['applyNowCorporate']?></label>
                             </div>
                             <div class="corporateChildFields sameTypeCourse">
                                 <div class="online">
                                     <input type="radio" id="corporateOnline" name="corporateOnline">
-                                    <label for="corporateOnline">Օնլայն</label>
+                                    <label for="corporateOnline"><?=$GLOBALS['text']['applyNowOnline']?></label>
                                 </div>
                                 <div class="offline">
                                     <input type="radio" id="corporateOffline" name="corporateOffline">
-                                    <label for="corporateOffline">Օֆֆլայն</label>
+                                    <label for="corporateOffline"><?=$GLOBALS['text']['applyNowOffline']?></label>
                                 </div>
                             </div>
                         </div>
@@ -94,14 +94,14 @@ $this->registerCssFile('@web/css/apply-now.css');
                 </div>
             </div>
             <div class="applyPhoneInput">
-                <label for="phone">Հեռախոսահամար</label>
+                <label for="phone"><?=$GLOBALS['text']['applyNowPhone']?></label>
                 <input id="phone" type="number" name="phone">
             </div>
         </div>
         <div class="applyNowBtnField">
             <button>
                 <img src="/images/applySendBtn.png" alt="">
-                <span>Ուղարկել հայտ</span>
+                <span><?=$GLOBALS['text']['applyNowBtn']?></span>
             </button>
         </div>
     </form>

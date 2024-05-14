@@ -513,18 +513,20 @@
     /* padding: 0 19px; */
     /* height: 23%; */
 }
-.footerCard button{
+.footerCard a{
     background: transparent;
     border: none;
     position: relative;
     margin-left: 39px;
 }
-.footerCard button > img{
-    position: relative;
-    /*width: 112px;*/
-    /*height: 48px;*/
+.footerCard a > img{
+    width: 113px;
+    height: 50px;
 }
-.footerCard button > span > a{
+.footerCard a:hover img{
+    content: url("../images/wishlist1hover.png");
+}
+.footerCard a > span{
     color: white;
     width: 100%;
     margin-top: 13px;
@@ -1122,7 +1124,7 @@
         height: 15px;
     }
     .footerCard button > span > a{
-        font-family: Roboto Medium;
+        font-family: "Roboto",sans-serif;
         font-size: 10px;
         font-weight: 500;
         line-height: 11.72px;

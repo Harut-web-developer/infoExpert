@@ -50,10 +50,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                         </div>
                         <div class="footerCard">
                             <div class="coursisBtnField">
-                                <button>
+                                <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span><a href="">Buy now</a></span>
-                                </button>
+                                    <span>Buy now</span>
+                                </a>
                             </div>
                             <div class="booterImgs">
                                 <div class="like-container">
@@ -96,10 +96,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                         </div>
                         <div class="footerCard">
                             <div class="coursisBtnField">
-                                <button>
+                                <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span><a href="">Buy now</a></span>
-                                </button>
+                                    <span>Buy now</span>
+                                </a>
                             </div>
                             <div class="booterImgs">
                                 <div class="like-container">
@@ -142,10 +142,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                         </div>
                         <div class="footerCard">
                             <div class="coursisBtnField">
-                                <button>
+                                <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span><a href="">Buy now</a></span>
-                                </button>
+                                    <span>Buy now</span>
+                                </a>
                             </div>
                             <div class="booterImgs">
                                 <div class="like-container">
@@ -188,10 +188,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                         </div>
                         <div class="footerCard">
                             <div class="coursisBtnField">
-                                <button>
+                                <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span><a href="">Buy now</a></span>
-                                </button>
+                                    <span>Buy now</span>
+                                </a>
                             </div>
                             <div class="booterImgs">
                                 <div class="like-container">
@@ -234,10 +234,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                         </div>
                         <div class="footerCard">
                             <div class="coursisBtnField">
-                                <button>
+                                <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span><a href="">Buy now</a></span>
-                                </button>
+                                    <span>Buy now</span>
+                                </a>
                             </div>
                             <div class="booterImgs">
                                 <div class="like-container">
@@ -280,10 +280,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                         </div>
                         <div class="footerCard">
                             <div class="coursisBtnField">
-                                <button>
+                                <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span><a href="">Buy now</a></span>
-                                </button>
+                                    <span>Buy now</span>
+                                </a>
                             </div>
                             <div class="booterImgs">
                                 <div class="like-container">
@@ -326,10 +326,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                         </div>
                         <div class="footerCard">
                             <div class="coursisBtnField">
-                                <button>
+                                <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span><a href="">Buy now</a></span>
-                                </button>
+                                    <span>Buy now</span>
+                                </a>
                             </div>
                             <div class="booterImgs">
                                 <div class="like-container">

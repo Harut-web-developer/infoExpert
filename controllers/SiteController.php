@@ -63,6 +63,8 @@ class SiteController extends Controller
     {
         $page['index'] = 1;
         $page['about'] = 2;
+        $page['sign-up'] = 18;
+        $page['login'] = 19;
         return $page;
     }
 

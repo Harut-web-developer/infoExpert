@@ -9,8 +9,7 @@ class BlogController extends \yii\web\Controller
 {
     public static function pages()
     {
-        $page['index'] = 1;
-        $page['about'] = 2;
+        $page['index'] = 16;
         return $page;
     }
     public function beforeAction($action)

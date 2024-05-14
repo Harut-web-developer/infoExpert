@@ -89,7 +89,7 @@
     color: #F36528;
 }
 .userProfileMenu{
-    width: 506px;
+    width: max-content;
     height: 43px;
     display: flex;
     flex-direction: row;
@@ -98,6 +98,9 @@
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
+}
+.userProfileMenu > li{
+    margin-left: 40px;
 }
 .userProfileMenu > li > a{
     text-decoration: none;
@@ -673,7 +676,10 @@
     color: #F36528;
     position: absolute;
     left: 0;
-    margin: 15px 8px;
+    top: 15px;
+    width: 100%;
+    text-align: center;
+    /*margin: 15px 8px;*/
 }
 .checkoutTotalFieldInfoBottom > button:hover span{
     color: white;
@@ -848,14 +854,15 @@
 }
 .CongratulationApplyNowBtnField > a > span{
     color: #F36528;
-    margin: 25px 25px;
     position: absolute;
     left: 0px;
+    top: 6px;
+    width: 100%;
     font-family: 'Roboto';
     font-size: 13px;
     font-weight: 600;
     line-height: 18.2px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
 }
 .CongratulationApplyNowBtnField > a:hover span{

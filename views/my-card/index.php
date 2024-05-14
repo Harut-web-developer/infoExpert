@@ -13,12 +13,12 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
     <div class="myCardContent">
         <div class="myCardMainField">
             <div class="userProfileMenuField">
-                <span>My Profile</span>
+                <span><?=$GLOBALS['text']['myCardTitle']?></span>
                 <ul class="userProfileMenu">
-                    <li><a href="/user-profile/achievements">My achievements</a></li>
-                    <li><a href="/courses/my-courses">My courses</a></li>
-                    <li><a href="/wishlist/index">Wishlist</a></li>
-                    <li><a href="/my-card/index">My card</a></li>
+                    <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
+                    <li><a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a></li>
+                    <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
+                    <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
                 </ul>
             </div>
             <div class="myCardFields">
@@ -83,7 +83,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                             <div class="myCardInfoButtonField">
                                                 <button>
                                                     <img src="/images/btnBuyIcon.png" alt="">
-                                                    <span>Buy now</span>
+                                                    <span><?=$GLOBALS['text']['myCardBtn']?></span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
                                                     <div class="like-container">
@@ -100,8 +100,8 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                     </div>
                                 </div>
                                 <div class="myCardBlockButtons">
-                                    <span>Remove</span>
-                                    <span>Move to wishlist</span>
+                                    <span><?=$GLOBALS['text']['myCardRemove']?></span>
+                                    <span><?=$GLOBALS['text']['myCardMove']?></span>
                                 </div>
                             </li>
                             <li class="myCardBlocksField">
@@ -137,7 +137,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                             <div class="myCardInfoButtonField">
                                                 <button>
                                                     <img src="/images/btnBuyIcon.png" alt="">
-                                                    <span>Buy now</span>
+                                                    <span><?=$GLOBALS['text']['myCardBtn']?></span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
                                                     <div class="like-container">
@@ -154,8 +154,8 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                     </div>
                                 </div>
                                 <div class="myCardBlockButtons">
-                                    <span>Remove</span>
-                                    <span>Move to wishlist</span>
+                                    <span><?=$GLOBALS['text']['myCardRemove']?></span>
+                                    <span><?=$GLOBALS['text']['myCardMove']?></span>
                                 </div>
                             </li>
                             <li class="myCardBlocksField">
@@ -191,7 +191,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                             <div class="myCardInfoButtonField">
                                                 <button>
                                                     <img src="/images/btnBuyIcon.png" alt="">
-                                                    <span>Buy now</span>
+                                                    <span><?=$GLOBALS['text']['myCardBtn']?></span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
                                                     <div class="like-container">
@@ -208,8 +208,8 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                     </div>
                                 </div>
                                 <div class="myCardBlockButtons">
-                                    <span>Remove</span>
-                                    <span>Move to wishlist</span>
+                                    <span><?=$GLOBALS['text']['myCardRemove']?></span>
+                                    <span><?=$GLOBALS['text']['myCardMove']?></span>
                                 </div>
                             </li>
                             <li class="myCardBlocksField">
@@ -245,7 +245,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                             <div class="myCardInfoButtonField">
                                                 <button>
                                                     <img src="/images/btnBuyIcon.png" alt="">
-                                                    <span>Buy now</span>
+                                                    <span><?=$GLOBALS['text']['myCardBtn']?></span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
                                                     <div class="like-container">
@@ -262,8 +262,8 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                     </div>
                                 </div>
                                 <div class="myCardBlockButtons">
-                                    <span>Remove</span>
-                                    <span>Move to wishlist</span>
+                                    <span><?=$GLOBALS['text']['myCardRemove']?></span>
+                                    <span><?=$GLOBALS['text']['myCardMove']?></span>
                                 </div>
                             </li>
                         </ul>
@@ -274,10 +274,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
         <div class="totalPriceField">
             <div class="totalPriceFieldSection">
                 <div class="myCardTotalPrice">
-                    <span>Total:  $38.97</span>
+                    <span><?=$GLOBALS['text']['myCardTotal']?>:  $38.97</span>
                     <button>
                         <img src="/images/btncheckoutcard.png" alt="">
-                        <a href="/my-card/checkout">Checkout</a>
+                        <a href="/my-card/checkout"><?=$GLOBALS['text']['myCardCheckout']?></a>
                     </button>
                 </div>
             </div>

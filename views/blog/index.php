@@ -13,7 +13,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
     <div class="blogContent">
         <div class="title">
             <img class="backButton" src="/images/backButton.png" alt="">
-            <h1 class="blogTitle">BLOG</h1>
+            <h1 class="blogTitle"><?=$GLOBALS['text']['blogTitle']?></h1>
         </div>
         <div class="card-content bodyBlog">
             <div class="mainBlog">
