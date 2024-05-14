@@ -4,12 +4,12 @@ $this->registerCssFile('@web/css/my-card.css');
 ?>
 <div class="congratulation">
     <div class="congratulationMain">
-        <h1 class="spanHed">Congratulation!</h1>
-        <p class="spanAllCourses">The course is already yours</p>
+        <h1 class="spanHed"><?=$GLOBALS['text']['congratulationTitle']?></h1>
+        <p class="spanAllCourses"><?=$GLOBALS['text']['congratulationText']?></p>
         <div class="CongratulationApplyNowBtnField">
             <a class="CongratulationCoursesHref" href="/personel-management/index">
                 <img src="/images/conbtn.png" alt="">
-                <span>START LEARNING</span>
+                <span><?=$GLOBALS['text']['congratulationBtn']?></span>
             </a>
         </div>
     </div>

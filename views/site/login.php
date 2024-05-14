@@ -15,35 +15,35 @@ if (isset($_COOKIE['email'])){
     <div class="loginField">
         <div class="textCircle">
             <div class="mainTextCircle">
-                <div class="circleTextTop">Up Your <span>Skills</span> To <span>Advance</span> Your <span>Career</span> Path</div>
-                <div class="circleTextBottom">Just a couple of clicks and we start</div>
+                <div class="circleTextTop"><?=$GLOBALS['text']['signinTextOne']?> <span><?=$GLOBALS['text']['signinTextTwo']?></span> <?=$GLOBALS['text']['signinTextThree']?> <span><?=$GLOBALS['text']['signinTextFour']?></span> <?=$GLOBALS['text']['signinTextFive']?> <span><?=$GLOBALS['text']['signinTextSix']?></span> <?=$GLOBALS['text']['signinTextSeven']?></div>
+                <div class="circleTextBottom"><?=$GLOBALS['text']['signinTextCouple']?></div>
             </div>
         </div>
         <form action="" class="signin" method="post">
             <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
 
-            <span>WELCOME BACK</span>
+            <span><?=$GLOBALS['text']['signinFormTitle']?></span>
             <div class="signinMenu">
-                <input type="email" value="<?=$email?>" placeholder="Email Address" name="email" required>
+                <input type="email" value="<?=$email?>" placeholder="<?=$GLOBALS['text']['signinFormEmail']?>" name="email" required>
                 <div class="passEye">
-                    <input type="password" placeholder="Password" name="password" required>
+                    <input type="password" placeholder="<?=$GLOBALS['text']['signinFormPassword']?>" name="password" required>
                     <img src="/images/signEye.png" alt="">
                 </div>
                 <div class="rememberField">
                     <div class="mainCheck">
                         <input id="checkboxSignIn" type="checkbox" name="rememberme">
-                        <label for="checkboxSignIn">remember</label>
+                        <label for="checkboxSignIn"><?=$GLOBALS['text']['signinRemember']?></label>
                     </div>
-                    <a href="">Lost your password?</a>
+                    <a href=""><?=$GLOBALS['text']['signinLost']?></a>
                 </div>
             </div>
             <button type="submit" class="container_signin">
                 <img src="/images/Vector.png" alt="">
-                <span>SIGN IN</span>
+                <span><?=$GLOBALS['text']['signinBtn']?></span>
             </button>
             <div class="signUp">
-                <span>Not a member ?</span>
-                <a href="/signup">Sign Up now</a>
+                <span><?=$GLOBALS['text']['signinMember']?></span>
+                <a href="/signup"><?=$GLOBALS['text']['signinFormSignup']?></a>
             </div>
         </form>
     </div>

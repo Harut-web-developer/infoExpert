@@ -209,7 +209,7 @@
     box-shadow: 0px 0px 6px 2px #549099;
 }
 .myCardBlockButtons{
-    width: 377px;
+    width: calc(100%);
     height: 23px;
     display: flex;
     flex-direction: row;
@@ -279,7 +279,7 @@
 .myCardBlockInfo{
     width: calc(100%);
     height: 34%;
-    /*margin: 0px 16px;*/
+    margin: 0px 16px;
     padding: 0 16px;
     display: flex;
     flex-direction: column;
@@ -519,7 +519,7 @@
     background: #74A8AB;
 }
 .creditField{
-     width: 100%;
+    width: 100%;
     /*height: 410px;*/
 }
 .mainCreditField{
@@ -925,7 +925,7 @@
         width: calc(90%);
     }
     .myCardInfoButtonField > button {
-         margin-left: 0;
+        margin-left: 0;
     }
     .myCoursesFieldSection {
         margin: 36px 36px 37px 45px;

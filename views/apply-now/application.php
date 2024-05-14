@@ -5,13 +5,13 @@ $this->registerCssFile('@web/css/apply-now.css');
 <div class="application">
     <div class="applicationTextFields">
         <div class="applyApplicationTexts">
-            <div class="applicationTitle">Դասընթացի նախագրանցման հայտ</div>
-            <div class="applicationTextUnderline">Շնորհակալություն, Ձեր հայտն ընդունված է:</div>
+            <div class="applicationTitle"><?=$GLOBALS['text']['applicationTitle']?></div>
+            <div class="applicationTextUnderline"><?=$GLOBALS['text']['applicationText']?></div>
         </div>
         <div class="applicationButton">
             <button>
                 <img src="/images/applicationBtn.png" alt="">
-                <span>Գլխավոր էջ</span>
+                <span><?=$GLOBALS['text']['applicationBtn']?></span>
             </button>
         </div>
     </div>

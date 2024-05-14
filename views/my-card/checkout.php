@@ -5,13 +5,13 @@ $this->registerCssFile('@web/css/my-card.css');
 <div class="checkoutField">
     <div class="checkoutFieldSection">
         <div class="checkoutTitleField">
-            <div>Checkout</div>
-            <span onclick="window.location = document.referrer">Cancel</span>
+            <div><?=$GLOBALS['text']['checkoutTitle']?></div>
+            <span onclick="window.location = document.referrer"><?=$GLOBALS['text']['checkoutCancel']?></span>
         </div>
         <div class="checkoutInputsSectionField">
             <div class="checkoutInputsSectionLeftField">
                 <div class="checkoutInputsFirstField">
-                    <span>Payment method</span>
+                    <span><?=$GLOBALS['text']['checkoutPaymentMethod']?></span>
                     <div class="checkoutInputsRadioField">
                         <div class="checkoutCreditOtherField">
                             <div class="creditField">
@@ -19,21 +19,21 @@ $this->registerCssFile('@web/css/my-card.css');
                                     <input id="credit" type="radio" name="credit">
                                     <label for="credit">
                                         <img src="/images/creditIcon.png" alt="">
-                                        <span>Credit/Debit Card</span>
+                                        <span><?=$GLOBALS['text']['checkoutCredit']?></span>
                                     </label>
                                 </div>
                                 <div class="checkoutCreditField">
                                     <div class="checkoutInputsCreditField">
-                                        <label for="checkoutCreditName">Name on card</label>
+                                        <label for="checkoutCreditName"><?=$GLOBALS['text']['checkoutInputName']?></label>
                                         <input type="text" id="checkoutCreditName">
                                     </div>
                                     <div class="checkoutInputsCreditField">
-                                        <label for="checkoutCardNumber">Card number</label>
+                                        <label for="checkoutCardNumber"><?=$GLOBALS['text']['checkoutInputNumber']?></label>
                                         <input type="text" id="checkoutCardNumber">
                                     </div>
                                     <div class="checkoutInputsCreditFieldRow">
                                         <div class="checkoutInputLeftField">
-                                            <label for="checkoutCardDate">Expiry date</label>
+                                            <label for="checkoutCardDate"><?=$GLOBALS['text']['checkoutInputExpire']?></label>
                                             <input type="text" id="checkoutCardDate">
                                         </div>
                                         <div class="checkoutInputRightField">
@@ -43,7 +43,7 @@ $this->registerCssFile('@web/css/my-card.css');
                                     </div>
                                     <div class="checkoutCheckboxCreditField">
                                         <input id="creditCheckbox" type="checkbox">
-                                        <label for="creditCheckbox">Securely save this card for my later purchase</label>
+                                        <label for="creditCheckbox"><?=$GLOBALS['text']['checkoutCheckbox']?></label>
                                     </div>
                                 </div>
                             </div>
@@ -51,14 +51,14 @@ $this->registerCssFile('@web/css/my-card.css');
                                 <input id="other" type="radio" name="other">
                                 <label for="other">
                                     <img src="/images/creditIcon.png" alt="">
-                                    <span>Other</span>
+                                    <span><?=$GLOBALS['text']['checkoutOther']?></span>
                                 </label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="checkoutInputsSecondField">
-                    <span>Order Details</span>
+                    <span><?=$GLOBALS['text']['checkoutOrderDetalis']?></span>
                     <div class="checkoutDetalisCoursesField">
                         <div class="courseManualPriceField">
                             <div class="courseManualPriceFieldInfo">
@@ -81,15 +81,15 @@ $this->registerCssFile('@web/css/my-card.css');
                 <div class="checkoutTotalFieldInfo">
                     <div class="checkoutTotalFieldInfoTop">
                         <div class="checkoutCourseSumPrice">
-                            <span class="sumTitle">Summary:</span>
+                            <span class="sumTitle"><?=$GLOBALS['text']['checkoutSummary']?>:</span>
                             <span class="sumPriceAll">xxxx AMD</span>
                         </div>
-                        <p>By completing your purchase you agree to these <a href="">Terms of service</a></p>
+                        <p><?=$GLOBALS['text']['checkoutTermsText']?> <a href=""><?=$GLOBALS['text']['checkoutTerms']?></a></p>
                     </div>
                     <div class="checkoutTotalFieldInfoBottom">
                         <button>
                             <img src="/images/sumBtnCheckout.png" alt="">
-                            <span>Complete Checkout</span>
+                            <span><?=$GLOBALS['text']['checkoutCompleteBtn']?></span>
                         </button>
                     </div>
                 </div>

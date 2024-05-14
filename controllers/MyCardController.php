@@ -9,8 +9,9 @@ class MyCardController extends \yii\web\Controller
 {
     public static function pages()
     {
-        $page['index'] = 1;
-        $page['about'] = 2;
+        $page['index'] = 11;
+        $page['checkout'] = 12;
+        $page['congratulation'] = 13;
         return $page;
     }
     public function beforeAction($action)
@@ -52,7 +53,7 @@ class MyCardController extends \yii\web\Controller
         return $this->render('checkout');
     }
 
-    public function actionCongratulationOnAchievementMessages()
+    public function actionCongratulation()
     {
         return $this->render('congratulation-on-achievement-messages');
     }
