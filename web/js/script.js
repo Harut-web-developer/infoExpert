@@ -147,7 +147,10 @@ if (window.location.pathname == '/') {
     $(window).scroll(startCounter);
     function startCounter() {
         let scrollY = (window.pageYOffset || document.documentElement.scrollTop) + window.innerHeight;
-        let divPos = document.querySelector('.sectionInfo').offsetTop;
+        let divPos;
+        if(document.querySelector('.sectionInfo')){
+            divPos = document.querySelector('.sectionInfo').offsetTop;
+        }
 
         if (scrollY > divPos) {
             $(window).off("scroll", startCounter);
@@ -220,23 +223,49 @@ if (window.location.pathname == '/') {
     });
 }
 $(document).ready(function () {
-    $('body').on('click','.tabletMenuIcon', function () {
-        $('.menuTabletHeader').toggleClass('menuTabletActive');
-        $('.personMainMenu').css('width', '0px');
-        $('.personCoursesMenuList').css('width', '0px');
-    })
-    $('body').on('click','.tabletUserProfileMenu', function () {
-        $('.personMainMenu').css('width', '484px');
-    })
-    $('body').on('click','.tabletPersonMenuField', function () {
-        $('.personMainMenu').css('width', '0px');
-    })
-    $('body').on('click','.tabletAllCoursesList', function () {
-        $('.personCoursesMenuList').css('width', '484px');
-    })
-    $('body').on('click','.tabletPersonMenuField', function () {
-        $('.personCoursesMenuList').css('width', '0px');
-    })
+        $('body').on('click','.tabletMenuIcon', function () {
+            if($(window).width() < 600){
+                $('.menuTabletHeader').toggleClass('menuMobileActive');
+                $('.menuTabletHeader').removeClass('menuTabletActive');
+                $('.personMainMenu').css('width', '0px');
+                $('.personCoursesMenuList').css('width', '0px');
+            }else{
+                $('.menuTabletHeader').toggleClass('menuTabletActive');
+                $('.menuTabletHeader').removeClass('menuMobileActive');
+                $('.personMainMenu').css('width', '0px');
+                $('.personCoursesMenuList').css('width', '0px');
+            }
+        })
+        $('body').on('click','.tabletUserProfileMenu', function () {
+            if($(window).width() < 600) {
+                $('.personMainMenu').css('width', '76%');
+            }else{
+                $('.personMainMenu').css('width', '484px');
+            }
+        })
+        $('body').on('click','.tabletPersonMenuField', function () {
+            if($(window).width() < 600) {
+                $('.personMainMenu').css('width', '0px');
+            }else{
+                $('.personMainMenu').css('width', '0px');
+            }
+        })
+        $('body').on('click','.tabletAllCoursesList', function () {
+            if($(window).width() < 600) {
+                $('.personCoursesMenuList').css('width', '76%');
+            }else{
+                $('.personCoursesMenuList').css('width', '484px');
+            }
+        })
+        $('body').on('click','.tabletPersonMenuField', function () {
+            if($(window).width() < 600) {
+                $('.personCoursesMenuList').css('width', '0px');
+            }else{
+                $('.personCoursesMenuList').css('width', '0px');
+            }
+        })
+
+
     $(document).on('click', function(event) {
         if (!$(event.target).closest('.menuTabletHeader').length && !$(event.target).closest('.personMainMenu').length &&
             !$(event.target).closest('.personCoursesMenuList').length &&
@@ -247,10 +276,10 @@ $(document).ready(function () {
         }
     });
 
-    $('.tabletMenuIcon').on('click', function(event) {
-        event.stopPropagation();
-        $('.menuTabletHeader').toggleClass('menuTabletActive');
-    });
+    // $('.tabletMenuIcon').on('click', function(event) {
+    //     event.stopPropagation();
+    //     $('.menuTabletHeader').toggleClass('menuTabletActive');
+    // });
     $(".profileField").hover(function(){
         $('.profileFieldImg').show();
     },function(){
