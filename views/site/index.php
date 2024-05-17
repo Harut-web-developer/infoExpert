@@ -9,14 +9,14 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
 ?>
 
 <div class="headerBackground">
-    <div class="apply">
-        <span class="applyMarket"><?=$GLOBALS['text']['sectionOneMarket']?></span>
-        <span class="boundaries"><?=$GLOBALS['text']['sectionOneBoundaries']?></span>
-        <a href="/apply-now/index">
-            <img src="/images/apply.png" alt="">
-            <span><?=$GLOBALS['text']['__applynow__']?></span>
-        </a>
-    </div>
+<!--    <div class="apply">-->
+<!--        <span class="applyMarket">--><?php //=$GLOBALS['text']['sectionOneMarket']?><!--</span>-->
+<!--        <span class="boundaries">--><?php //=$GLOBALS['text']['sectionOneBoundaries']?><!--</span>-->
+<!--        <a href="/apply-now/index">-->
+<!--            <img src="/images/apply.png" alt="">-->
+<!--            <span>--><?php //=$GLOBALS['text']['__applynow__']?><!--</span>-->
+<!--        </a>-->
+<!--    </div>-->
 </div>
 <div class="sectionTwo">
     <div class="sectionInfo">
@@ -45,36 +45,36 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
             <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProgram']?></span>
         </div>
     </div>
-<!--    <div class="sectionInfoMobile">-->
-<!--        <div class="carousel">-->
-<!--            <ul class="carousel-slides">-->
-<!--                <li class="carousel-slide numbersInfo">-->
-<!--                    <img src="/images/partnerinfoimg.png" alt="">-->
-<!--                    <div class="counter-container">-->
-<!--                        <span class="numberSectionTwo">350</span>-->
-<!--                        <span class="addSymbol">+</span>-->
-<!--                    </div>-->
-<!--                    <span class="textSectionTwo">--><?php //=$GLOBALS['text']['sectionTwoPartner']?><!--</span>-->
-<!--                </li>-->
-<!--                <li class="carousel-slide numbersInfo">-->
-<!--                    <img src="/images/productinfoimg.png" alt="">-->
-<!--                    <div class="counter-container">-->
-<!--                        <span class="numberSectionTwo">17</span>-->
-<!--                        <span class="addSymbol">+</span>-->
-<!--                    </div>-->
-<!--                    <span class="textSectionTwo">--><?php //=$GLOBALS['text']['sectionTwoProduct']?><!--</span>-->
-<!--                </li>-->
-<!--                <li class="carousel-slide numbersInfo">-->
-<!--                    <img src="/images/programminfoimg.png" alt="">-->
-<!--                    <div class="counter-container">-->
-<!--                        <span class="numberSectionTwo">500</span>-->
-<!--                        <span class="addSymbol">+</span>-->
-<!--                    </div>-->
-<!--                    <span class="textSectionTwo">--><?php //=$GLOBALS['text']['sectionTwoProgram']?><!--</span>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
+    <div class="sectionInfoMobile">
+        <div class="carousel">
+            <ul class="carousel-slides">
+                <li class="carousel-slide numbersInfo">
+                    <img src="/images/partnerinfoimg.png" alt="">
+                    <div class="counter-container">
+                        <span class="numberSectionTwo">350</span>
+                        <span class="addSymbol">+</span>
+                    </div>
+                    <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoPartner']?></span>
+                </li>
+                <li class="carousel-slide numbersInfo">
+                    <img src="/images/productinfoimg.png" alt="">
+                    <div class="counter-container">
+                        <span class="numberSectionTwo">17</span>
+                        <span class="addSymbol">+</span>
+                    </div>
+                    <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProduct']?></span>
+                </li>
+                <li class="carousel-slide numbersInfo">
+                    <img src="/images/programminfoimg.png" alt="">
+                    <div class="counter-container">
+                        <span class="numberSectionTwo">500</span>
+                        <span class="addSymbol">+</span>
+                    </div>
+                    <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProgram']?></span>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 <!--<div class="sectionThree">-->
 <!--    <div class="learn">-->

@@ -289,38 +289,38 @@
         font-size: 20px;
     }
 }
-/*@media only screen and (min-width: 270px) and (max-width: 599px) {*/
-/*    .headerBackground {*/
-/*        background-image: url("../images/headerimgMobile.png");*/
-/*        background-repeat: no-repeat;*/
-/*        background-position: center;*/
-/*        background-size: cover;*/
-/*        width: 100%;*/
-/*        height: 812px;*/
-/*    }*/
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .headerBackground {
+        background-image: url("../images/headerimgMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 812px;
+    }
 
-/*    !*section Two*!*/
-/*    .sectionTwo{*/
-/*        background-image: url("../images/diagonalMobile.png");*/
-/*        background-repeat: no-repeat;*/
-/*        background-position: center;*/
-/*        background-size: cover;*/
-/*        width: 100%;*/
-/*        height: 208px;*/
-/*    }*/
-/*    .sectionInfo{*/
-/*        display: none;*/
-/*    }*/
+    /*section Two*/
+    .sectionTwo{
+        background-image: url("../images/diagonalMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 208px;
+    }
+    .sectionInfo{
+        display: none;
+    }
 
-/*    .sectionInfoMobile > .carousel{*/
-/*        width: 108px;*/
-/*        overflow: hidden;*/
-/*    }*/
-/*    .sectionInfoMobile > .carousel > ul{*/
-/*        width: 100%;*/
-/*        padding: 0px;*/
-/*    }*/
-/*}*/
+    .sectionInfoMobile > .carousel{
+        width: 108px;
+        overflow: hidden;
+    }
+    .sectionInfoMobile > .carousel > ul{
+        width: 100%;
+        padding: 0px;
+    }
+}
 /*section Four*/
 @media only screen and (min-width: 270px) and (max-width: 375px) {
     .questions {
