@@ -279,3 +279,66 @@
 <!--        }-->
 <!--    })-->
 <!--</script>-->
+
+
+
+<!--<style>-->
+<!--    .large-font {-->
+<!--        width: 28px;-->
+<!--        height: 28px;-->
+<!--        font-size: xxx-large;-->
+<!--        border-radius: 50%;-->
+<!--        text-align: center;-->
+<!--        align-items: center;-->
+<!--        display: flex;-->
+<!--        border: 1px solid #F36528;-->
+<!--        justify-content: center;-->
+<!--    }-->
+<!--    ion-icon.active {-->
+<!--        animation: like 0.5s 1;-->
+<!--        fill: #F36528;-->
+<!--        stroke: none;-->
+<!--        color: #F36528;-->
+<!--    }-->
+<!--    ion-icon {-->
+<!--        width: 20px;-->
+<!--        height: 18px;-->
+<!--        color: #F36528;-->
+<!--        fill: transparent;-->
+<!--        stroke-width: 30;-->
+<!--        transition: all 0.5s;-->
+<!--        position: absolute;-->
+<!--    }-->
+<!--    @-webkit-keyframes like {-->
+<!--        0% {-->
+<!--            transform: scale(1);-->
+<!--        }-->
+<!--        90% {-->
+<!--            transform: scale(1.2);-->
+<!--        }-->
+<!--        100% {-->
+<!--            transform: scale(1.1);-->
+<!--        }-->
+<!--    }-->
+<!--    .aaa{-->
+<!--        padding-top: 180px;-->
+<!--        background-color: lightgreen;-->
+<!--        height: 100vh;-->
+<!--    }-->
+<!--</style>-->
+<!--<div class="aaa">-->
+<!--    <div class='large-font'>-->
+<!--        <ion-icon name="heart">-->
+<!--            <div class='red-bg'></div>-->
+<!--        </ion-icon>-->
+<!--    </div>-->
+<!--</div>-->
+<!---->
+<!--<script>-->
+<!--    let icon = document.querySelector('ion-icon');-->
+<!--    icon.onclick = function(){-->
+<!--        icon.classList.toggle('active');-->
+<!--    }-->
+<!--</script>-->
+<!--<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>-->
+<!--<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>-->

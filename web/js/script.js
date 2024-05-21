@@ -219,6 +219,11 @@ if (window.location.pathname == '/') {
         }
     });
 }
+document.querySelectorAll('#section01 ion-icon').forEach(icon => {
+    icon.addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+});
 $(document).ready(function () {
     $('body').on('click','.tabletMenuIcon', function () {
         $('.menuTabletHeader').toggleClass('menuTabletActive');

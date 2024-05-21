@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .about{
     width: 100%;
-    height: 1298px;
+    /*height: 1679px;*/
     background-image: url("../images/background-about.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+.ellipseButton{
+    display: none;
 }
 .backButton{
     display: none;
@@ -30,17 +33,14 @@
     justify-content: space-between;
 }
 .leftContent{
-    width: 48.75%;
+    width: 46.75%;
     height: 100%;
-    margin-right: 5px;
     display: flex;
     gap: 32px;
     flex-direction: column;
     justify-content: space-between;
 }
 .aboutContnetTitle{
-    width: 100%;
-    height: 34px;
     color: #F16D35;
     font-family: "Roboto Slab",sans-serif;
     font-size: 40px;
@@ -96,19 +96,11 @@
 .rightContent{
     width: 48.75%;
     height: 100%;
-    margin-left: 5px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: end;
+    align-items: center;
 
-}
-.rightContentTop{
-    width: 100%;
-    /*height: 450px;*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 .rightContentTop p{
     font-family: Roboto;
@@ -133,8 +125,7 @@
     margin-bottom: 0px;
 }
 .rightContentBottom{
-    margin-top: 18px;
-    width: 86.37%;
+    width: 527px;
     height: 374px;
     display: flex;
     flex-direction: row;
@@ -143,18 +134,23 @@
 }
 .rightContentInfoShapeLeft{
     width: 364px;
-    height: 275px;
+    height: 283px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .rightContentInfoShapeRight{
     width: 143px;
-    height: 354px;
+    height: 352px;
     margin: 0px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.shapContentM{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .shapeLeft{
     background: #ACCBE6;
@@ -220,8 +216,11 @@
 .shapeRight{
     background: #ACCBE6;
     width: 100%;
+    display: flex;
     height: 171px;
     border-radius: 18px;
+    justify-content: center;
+    align-items: center;
 }
 .shapeRightMainField{
     width: 119px;
@@ -234,7 +233,7 @@
 }
 .shapeRightMainFieldText{
     width: 119px;
-    height: 63px;
+    /*height: 63px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -286,7 +285,104 @@
     font-weight: 400;
     line-height: normal;
 }
+.coursesAndChooseM{
+    display: none;
+}
+
+.mainLeftShapeFieldAm{
+    width: 320px;
+}
+.mainLeftShapeFieldTextsAm{
+    width: 254px;
+    height: 51px;
+}
+.shapeSecondTitleAm {
+    font-size: 17px;
+}
+.shapeRightMainFieldTextAm{
+    height: 130px;
+}
+.shapeRightMainFieldTextAm .rightShapeTextBig{
+    font-size: 15px;
+}
+.shapeRightMainFieldTextAm .rightShapeTextSmall{
+    color: #1C5484;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.shapeRightMainFieldAm{
+    width: 119px;
+    height: 134px;
+    margin: 12px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.shapeRightMainFieldAm .shapeRightBottomText {
+    width: 122px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.shapeRightMainFieldAm .rightShapeBottomTextBig {
+    color: #1C5484;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    height: 37px;
+    width: auto;
+}
+.shapeRightMainFieldAm .rightShapeBottomTextSmall {
+    color: #1C5484;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.mainLeftShapeFieldTextsAm .txt222,
+.mainLeftShapeFieldTextsAm .spanText{
+    color: #1C5484;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.aboutLangAm{
+    height: 1700px;
+}
+.aboutLangRu{
+    height: 1740px;
+}
+@media screen and (max-width: 1800px) {
+    .aboutLangAm{
+        height: 1760px;
+    }
+    .aboutLangRu{
+        height: 1770px;
+    }
+}
 @media screen and (max-width: 1600px) {
+    .shapeRightMainFieldTextAm .rightShapeTextSmall,
+    .shapeRightMainFieldAm .rightShapeBottomTextSmall{
+        font-size: 11px;
+    }
+    .shapeRightMainFieldTextAm .rightShapeTextBig,
+    .shapeRightMainFieldAm .rightShapeBottomTextBig{
+        font-size: 14px;
+    }
     .leftContent p {
         font-size: 1.05vw;
     }
@@ -298,6 +394,30 @@
     }
 }
 @media screen and (max-width: 1450px){
+    .shapeRightMainFieldTextAm .rightShapeTextBig {
+        font-size: 13px;
+    }
+    .shapeRightMainFieldTextAm .rightShapeTextSmall {
+        font-size: 10px;
+    }
+    .rightShapeTextBig {
+        font-size: 23px;
+    }
+    .shapeRightMainFieldTextAm {
+        height: 112px;
+    }
+    .shapeRightMainFieldAm .rightShapeBottomTextBig {
+        font-size: 13px;
+    }
+    .shapeRightMainFieldAm .rightShapeBottomTextSmall {
+        font-size: 10px;
+    }
+    .rightShapeTextSmall, .rightShapeBottomTextSmall {
+        font-size: 16px;
+    }
+    .top1 img{
+        width: 70px;
+    }
     .leftContent p {
         font-size: 1.17vw;
         font-weight: 400;
@@ -325,9 +445,9 @@
     .rightContentInfoShapeLeft{
         width: auto;
     }
-    .rightContentInfoShapeRight {
+    .rightContentInfoShapeRight, .shapContentM {
         width: auto;
-        height: 100%;
+        /*height: 100%;*/
         margin: 0;
         display: flex;
         gap: 10px;
@@ -339,25 +459,48 @@
     .rightContentBottom {
         width: auto;
     }
+    .aboutLangAm{
+        height: 1700px;
+    }
 }
 @media screen and (max-width: 1100px) {
+    .about{
+        background-color: #5D9A9D;
+        height: 1250px;
+    }
     .aboutContent {
         width: auto;
         margin: 102px 6.9% 0px 6.8%;
         gap: 20px;
     }
-    .aboutContnetTitle{
-        width: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .rightContentInfoShapeRight, .shapContentM {
+        gap: 10px;
+        flex-direction: column;
+    }
+    .shapeLeft{
+        width: 303.98px;
+        height: 60px;
+    }
+    .leftContent{
+        gap: 0;
+    }
+    .leftContentAboutTextTop {
+        width: 94%;
+    }
+    .aboutContnetTitle {
+        font-family: 'Roboto Slab';
         font-size: 22px;
-        text-align: left;
+        font-weight: 400;
+        /*line-height: 34px;*/
+        width: 100%;
+        text-align: center;
     }
     .backButton {
-        width: 20.02px;
-        height: 19.99px;
+        width: 40px;
+        height: 40px;
         display: block;
+        position: absolute;
+        /*top: 6px;*/
     }
     .leftContentAboutTextTop > span{
         font-size: 16px;
@@ -376,9 +519,10 @@
     .leftContent {
         width: auto;
     }
-    .historyContent{
+    .historyContent {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         gap: 64px;
     }
     .shapeRight{
@@ -395,9 +539,19 @@
         height: 44px;
         padding: 4px 0px 0px 0px;
     }
-    .rightShapeTextBig, .rightShapeBottomTextBig{
+    .rightShapeTextBig{
         font-size: 15px;
         line-height: 17.58px;
+        height: 17px;
+    }
+    .rightShapeBottomTextBig{
+        font-size: 15px;
+        line-height: 17.58px;
+        height: 36px;
+    }
+    .shapeRightMainFieldText {
+        width: 99px;
+        height: 36px;
     }
     .rightShapeTextSmall, .rightShapeBottomTextSmall{
         font-size: 14px;
@@ -408,11 +562,12 @@
         height: 40.91px;
     }
     .bottom1{
+        width: 113px;
         height: 140px;
     }
     .rightContent {
         width: auto;
-        flex-direction: row;
+        flex-direction: row-reverse;
         align-items: normal;
         gap: 24px;
         padding-top: 17px;
@@ -445,6 +600,15 @@
         font-size: 15px;
         line-height: 20.51px;
         text-align: left;
+        width: 75%;
+    }
+    .mainTextLeftContentBottom{
+        font-family: 'Roboto';
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20.51px;
+        text-align: left;
+        color: white;
     }
     .shapeLeft {
         width: max-content;
@@ -485,5 +649,186 @@
     }
     .mainLeftShapeFieldTexts {
         height: -webkit-fill-available;
+    }
+    .shapeRightBottomText {
+        width: 96px;
+        height: 54px;
+    }
+    .aboutLangRu .mainLeftShapeFieldTexts{
+        height: 51px;
+    }
+    .aboutLangAm .mainLeftShapeFieldTexts{
+        height: 51px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .about{
+        height: 1300px;
+    }
+}
+@media screen and (max-width: 900px){
+    .aboutLangRu{
+        height: 1400px;
+    }
+}
+@media screen and (max-width: 850px){
+    .about{
+        height: 1360px;
+    }
+}
+@media screen and (max-width: 800px){
+    .aboutLangAm{
+        height: 1460px;
+    }
+    .aboutLangRu{
+        height: 1460px;
+    }
+}
+@media screen and (max-width: 750px){
+    .aboutLangAm{
+        height: 1500px;
+    }
+    .aboutLangRu{
+        height: 1500px;
+    }
+}
+@media screen and (max-width: 700px){
+    .ellipseButton {
+        display: block;
+        position: absolute;
+    }
+    .backButton {
+        width: 30px;
+        height: 30px;
+    }
+    .historyContent {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .shapeRight {
+        height: 140px;
+        width: 119px;
+    }
+    .blogContent{
+        width: 268px;
+        height: 368px   ;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mainTextLeftContent {
+        width: 100%;
+    }
+    .leftContentAboutTextTop{
+        width: 100%;
+    }
+    .shapContentM{
+        width: 256px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .blogShapContent{
+        height: 212px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .rightContentTop, .rightContentBottom{
+        display: none;
+    }
+    .coursesAndChooseM{
+        display: block;
+    }
+    .rightContent {
+        padding-top: 24px;
+    }
+    .titleColapse span{
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 34px;
+        text-align: left;
+        color: white;
+    }
+    .title1{
+        display: flex;
+        width: 160px;
+        height: 24px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    .title2{
+        display: flex;
+        width: 185px;
+        height: 24px;
+        margin-top: 24px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    .arrowDown{
+        position: absolute;
+    }
+    .titleColapse div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mainTextLeftContentBottom {
+        display: none;
+        margin-top: 16px;
+    }
+    .mainLeftShapeField {
+        width: 268px;
+        padding: 11.5px 27px 11.5px 21px;
+    }
+    .bottom1 {
+        height: 128px;
+    }
+    .about {
+        height: 1040px;
+    }
+    .footerBackground {
+        margin-top: -55px!important;
+    }
+    .aboutLangAm .title1 {
+        width: 244px;
+    }
+    .aboutLangAm .title2 {
+        display: flex;
+        width: 208px;
+    }
+    .aboutLangRu .title2 {
+        display: flex;
+        width: 230px;
+    }
+    .aboutLangAm{
+        height: 1040px;
+    }
+}
+@media screen and (max-width: 600px){
+    .aboutLangRu {
+        height: 1100px;
+    }
+    .aboutLangAm{
+        height: 1100px;
+    }
+}
+@media screen and (max-width: 500px){
+    .aboutLangRu {
+        height: 1150px;
+    }
+    .aboutLangAm {
+        height: 1150px;
+    }
+}
+@media screen and (max-width: 400px){
+    .aboutLangAm {
+        height: 1200px;
     }
 }

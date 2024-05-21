@@ -704,7 +704,7 @@
 /*start footer css*/
 
 .footerBackground{
-    margin-top: -50px;
+    margin-top: -53px;
     background-image: url("../images/footerbg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1744,47 +1744,40 @@
     font-size: 16px;
 }
 /*LIKE*/
-#section01 .heartMain{
-    width: 25.63px;
-    height: 21.96px;
-}
-#section01 .like-container{
-    filter: url('#filter');
-    display: inline-block;
-}
-#section01 .like-cnt{
-    position: absolute;
-    cursor: pointer;
-    left: 50%;
-    top: 100%;
-    transform: translate(-105%, -55%)!important;
-    width: 42px;
-    height: 42px;
-    border: 1px solid #FFFFFF;
+#section01 .large-font {
+    width: 43px;
+    height: 43px;
+    font-size: xxx-large;
     border-radius: 50%;
     text-align: center;
-    line-height: 36px;
-    z-index: 10;
+    align-items: center;
+    display: flex;
+    border: 1px solid #F36528;
+    justify-content: center;
 }
-#section01 .like-btn{
-    color: #fff;
+#section01 ion-icon.active {
+    animation: like 0.5s 1;
+    fill: #F36528;
+    stroke: none;
+    color: #F36528;
 }
-::-moz-selection { background: transparent;}
-::selection {background: transparent;}
-#section01 .likeColor{
-    border-color: #F36528;
+#section01 ion-icon {
+    width: 29.63px;
+    height: 25.96px;
+    color: #F36528;
+    fill: transparent;
+    stroke-width: 30;
+    transition: all 0.5s;
+    position: absolute;
 }
-/*end main page css*/
-
-/*@media screen and (max-width: 1800px) {*/
-/*    .learnImg > img {*/
-/*        width: 548px;*/
-/*        height: 539px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 1400px) {*/
-/*    .learnImg > img {*/
-/*        width: 509px;*/
-/*        height: 500px;*/
-/*    }*/
-/*}*/
+@-webkit-keyframes like {
+    0% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}

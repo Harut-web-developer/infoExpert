@@ -4,8 +4,8 @@ use yii\web\YiiAsset;
 /** @var yii\web\View $this */
 
 $this->title = 'Infoexpert';
-$this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
-$this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
+$this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
+$this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);
 ?>
 
 <div class="headerBackground">
@@ -461,12 +461,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                         </div>
                         <div class="cardsLike">
                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                            <div class="like-container">
-                                <div class="like-cnt unchecked likeColor">
-                                    <i class="like-btn material-icons heart-icon">
-                                        <img class="heartMain" src="/images/innerHeart2.png" alt="" draggable="false">
-                                    </i>
-                                </div>
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
                             </div>
                         </div>
                     </div>
@@ -488,12 +486,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                         </div>
                         <div class="cardsLike">
                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                            <div class="like-container">
-                                <div class="like-cnt unchecked likeColor">
-                                    <i class="like-btn material-icons heart-icon">
-                                        <img class="heartMain" src="/images/innerHeart2.png" alt="" draggable="false">
-                                    </i>
-                                </div>
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
                             </div>
                         </div>
                     </div>
@@ -515,12 +511,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                         </div>
                         <div class="cardsLike">
                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                            <div class="like-container">
-                                <div class="like-cnt unchecked likeColor">
-                                    <i class="like-btn material-icons heart-icon">
-                                        <img class="heartMain" src="/images/innerHeart2.png" alt="" draggable="false">
-                                    </i>
-                                </div>
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
                             </div>
                         </div>
                     </div>
