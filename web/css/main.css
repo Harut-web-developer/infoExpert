@@ -1503,6 +1503,23 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.testimonialMobileBtn > button{
+    background: transparent;
+    border: none;
+    position: relative;
+}
+.testimonialMobileBtn > button > span{
+    position: absolute;
+    left: 0;
+    top: 11px;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.06px;
+    width: 100%;
+    text-align: center;
+    color: #F36528;
+}
 .sectionSeven{
     margin-top: -49px;
     background-image: url("../images/blogBg.png");

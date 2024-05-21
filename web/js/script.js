@@ -68,6 +68,7 @@ $(".questionField").click(function() {
         }
     }
 })()
+
 if (window.location.pathname == '/'){
     var swiper = new Swiper(".slide-content", {
         slidesPerView: 3,
