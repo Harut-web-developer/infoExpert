@@ -162,7 +162,7 @@
     font-family: "Tahoma", sans-serif;
     position: absolute;
     left: 0px;
-    top: 20px;
+    top: 23px;
     width: 100%;
     text-align: center;
 }
@@ -171,12 +171,28 @@
 }
 .managementBtnDiv .button1{
     color: #F36528;
+    font-family: 'Roboto Black';
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 17.58px;
 }
 .managementBtnDiv .button2{
     color: white;
+    font-family: 'Roboto Black';
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 17.58px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 5.5px;
 }
 .rightImgM, .diplomW{
     display: none;
+}
+.managementBtnDiv a{
+    z-index: 10;
+    position: relative;
 }
 /*LIKE*/
 .large-font {
@@ -413,12 +429,12 @@ ion-icon {
         justify-content: center;
         padding-top: 0px;
     }
-    .managementBtnDiv > button > img {
+    .buttonDiv > button > img {
         position: relative;
         width: 130px;
         height: 56px;
     }
-    .managementBtnDiv > button > span {
+    .buttonDiv > button > span {
         font-family: 'Roboto';
         font-size: 13px;
         font-weight: 900;
@@ -553,6 +569,12 @@ ion-icon {
     .personelManagement {
         background: #5D9A9D;
     }
+    .managementBtnDiv .button1{
+        top: 17px;
+    }
+    .managementBtnDiv .button2{
+        top: 8px;
+    }
     .managementBtnDiv .button2,
     .managementBtnDiv .button1{
         font-family: 'Roboto Black';
@@ -560,12 +582,9 @@ ion-icon {
         font-weight: 900;
         line-height: 11.72px;
     }
-    .managementBtnDiv > button > img {
+    .bottomImages img {
         width: 102px;
         height: 44px;
-    }
-    .managementBtnDiv .button2, .managementBtnDiv .button1{
-        top: 16px;
     }
     .amdFix{
         display: block;
@@ -576,9 +595,9 @@ ion-icon {
         color: #FFFFFF;
         height: max-content;
     }
-    .managementBtnDiv {
-        height: max-content;
-    }
+    /*.managementBtnDiv {*/
+    /*    height: max-content;*/
+    /*}*/
     .buttonDiv{
         display: flex;
         gap: 10px;

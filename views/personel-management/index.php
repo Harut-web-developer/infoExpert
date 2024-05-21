@@ -68,8 +68,10 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             </div>
             <div class="managementBtnDiv">
                 <button>
-                    <img src="/images/seeallcourse.png" alt="">
-                    <span class="button2">See all courses</span>
+                    <a href="/courses/index">
+                        <img src="/images/seeallcourse.png" alt="">
+                        <span class="button2">See all courses</span>
+                    </a>
                 </button>
             </div>
         </div>
