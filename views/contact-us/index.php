@@ -5,11 +5,14 @@ $this->registerCssFile('@web/css/contactus.css');
 ?>
 <div class="contactus d-flex justify-content-center">
     <div class="disinline">
-        <img class="backButton" src="/images/backButton.png" alt="">
-        <div class="sectionContactusTop d-flex flex-row">
+        <div class="contactUsTitleM">
+            <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+            <img class="backButton" src="/images/backButton.png" alt="">
+        </div>
+        <div class="sectionContactusTop">
             <div class="sectionContactusTopLeft">
                 <div class="contactusDiv">
-                    <h1 class="contactusTitle"><?=$GLOBALS['text']['contactTitle']?></h1>
+                    <h1 class="contactusTitle"></h1>
                     <p class="contactusTxt"><?=$GLOBALS['text']['contactText']?></p>
                 </div>
                 <div class="d-flex flex-row div1">
@@ -55,6 +58,7 @@ $this->registerCssFile('@web/css/contactus.css');
     </div>
 </div>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e243c296-f6a7-46b7-950a-bd42eb4b2684" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     var myMap;
     ymaps.ready(init);
@@ -67,4 +71,15 @@ $this->registerCssFile('@web/css/contactus.css');
             searchControlProvider: 'yandex#search'
         });
     }
+    function blogTitle() {
+        return  `<?=$GLOBALS['text']['contactTitle']?>`;
+    }
+    $(document).ready(function() {
+        if ($(window).width() > 1100) {
+            $('.contactusTitle').append(blogTitle());
+        }
+        if ($(window).width() <= 1100) {
+            $('.contactUsTitleM').append(blogTitle());
+        }
+    });
 </script>

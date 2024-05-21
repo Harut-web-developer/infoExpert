@@ -2142,7 +2142,7 @@
 /*footer section*/
 @media only screen and (min-width: 740px) and (max-width: 1340px) {
     .footerBackground{
-        margin-top: -50px;
+        margin-top: -53px;
         background-image: url("../images/footerbg.png");
         background-repeat: no-repeat;
         background-size: cover;

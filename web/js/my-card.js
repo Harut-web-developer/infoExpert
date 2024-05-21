@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    function slider(carousel, wrapper, firstCard, arrowBtns) {
-        const firstCardWidth = firstCard.offsetWidth;
+    function slider(carousel, wrapper, firstCard) {
+        const firstCardWidth = firstCard.offsetWidth + parseFloat(getComputedStyle(firstCard).marginRight);
         let isDragging = false,
             startX,
             startScrollLeft,
@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const totalCardWidth = carousel.scrollWidth;
             const maxScrollLeft = totalCardWidth - carousel.offsetWidth;
             if (carousel.scrollLeft >= maxScrollLeft) return;
-            timeoutId = setTimeout(() =>
-                carousel.scrollLeft += firstCardWidth, 2500);
+            // timeoutId = setTimeout(() =>
+            //     carousel.scrollLeft += firstCardWidth, 2500);
         };
 
         carousel.addEventListener("touchstart", dragStart);
@@ -46,19 +46,19 @@ document.addEventListener("DOMContentLoaded", function() {
         wrapper.addEventListener("mouseenter", () =>
             clearTimeout(timeoutId));
         wrapper.addEventListener("mouseleave", autoPlay);
-        arrowBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                carousel.scrollLeft += btn.id === "left" ?
-                    -firstCardWidth : firstCardWidth;
-            });
-        });
     }
 
-    const carousel = document.querySelector(".myCardFieldAcceptCourses");
-    const wrapper = document.querySelector(".wrapper");
-    const firstCard = carousel.querySelector(".myCardBlocksField");
-    const arrowBtns = Array.from(document.querySelectorAll(".arrow-btn"));
-    slider(carousel, wrapper, firstCard, arrowBtns);
+    const carousel = document.querySelector(".bottomSlider .carousel_");
+    const wrapper = document.querySelector(".bottomSlider");
+    const firstCard = carousel.querySelector(".card_");
+    slider(carousel, wrapper, firstCard);
+
+    const carousel_2 = document.querySelector(".changeBody2 .carousel_2");
+    const wrapper_2 = document.querySelector(".changeBody2");
+    if (carousel_2) {
+        const firstCard_2 = carousel_2.querySelector(".card_2");
+        slider(carousel_2, wrapper_2, firstCard_2);
+    }
 });
 if (window.location.pathname == '/my-card/index') {
     $(document).on("click", ".like-cnt", function () {

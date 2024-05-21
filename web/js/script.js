@@ -209,7 +209,7 @@ if (window.location.pathname == '/') {
             t2.to('.like-btn', 0.65, {scale: 1, ease: Elastic.easeOut.config(1, 0.3)}, '+=0.2');
             burst.replay();
             like_cnt.addClass("checked");
-            like_cnt.find(".heart2").attr("src", "/images/innerHeartHover.png");
+            like_cnt.find(".heartMain").attr("src", "/images/innerHeartHover.png");
             mojsShape.css({
                 'margin-left': '-25px',
                 'margin-top': '-40px'
@@ -219,10 +219,15 @@ if (window.location.pathname == '/') {
                 .to(like_cnt, 1, {scale: 1, background: 'transparent', ease: Power4.easeOut});
             t1.timeScale(7);
             like_cnt.removeClass("checked");
-            like_cnt.find(".heart2").attr("src", "/images/innerHeart2.png");
+            like_cnt.find(".heartMain").attr("src", "/images/innerHeart2.png");
         }
     });
 }
+document.querySelectorAll('#section01 ion-icon').forEach(icon => {
+    icon.addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+});
 $(document).ready(function () {
         $('body').on('click','.tabletMenuIcon', function () {
             if($(window).width() < 600){

@@ -4,10 +4,17 @@ const listItems = paginatedList.querySelectorAll(".card_");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 var paginationLimit = '';
-if (window.innerWidth > 1100) {
+if (window.innerWidth > 1100 || (window.innerWidth > 700 && window.innerWidth <= 926)) {
     paginationLimit = 9;
-}else if (window.innerWidth <= 1100) {
+}
+if (window.innerWidth > 926 && window.innerWidth <= 1100) {
     paginationLimit = 12;
+}
+if (window.innerWidth > 463 && window.innerWidth <= 700) {
+    paginationLimit = 6;
+}
+if (window.innerWidth <= 463) {
+    paginationLimit = 3;
 }
 let currentPage = 1;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
@@ -97,48 +104,9 @@ window.addEventListener("load", () => {
         setCurrentPage(currentPage + 1);
     });
 });
-
-if (window.location.pathname == '/blog/index') {
-    $(document).on("click", ".like-cnt", function () {
-        var like_cnt = $(this);
-        var like_parent = like_cnt.closest(".like-container");
-        var check_status = like_cnt.hasClass("checked");
-
-        var burst = new mojs.Burst({
-            parent: like_parent,
-            radius: {20: 60},
-            count: 15,
-            angle: {0: 30},
-            children: {
-                delay: 250,
-                duration: 700,
-                radius: {10: 0},
-                fill: ['#F36528'],
-                easing: mojs.easing.bezier(.08, .69, .39, .97)
-            }
-        });
-
-        var t1 = new TimelineLite();
-        var t2 = new TimelineLite();
-        var mojsShape = $("[data-name='mojs-shape']");
-        if (!check_status) {
-            t1.set(like_cnt, {scale: 0});
-            t1.set('.like-btn', {scale: 0});
-            t1.to(like_cnt, 0.6, {scale: 1, background: 'transparent', ease: Expo.easeOut});
-            t2.to('.like-btn', 0.65, {scale: 1, ease: Elastic.easeOut.config(1, 0.3)}, '+=0.2');
-            burst.replay();
-            like_cnt.addClass("checked");
-            like_cnt.find(".heart2").attr("src", "/images/innerHeartHover.png");
-            mojsShape.css({
-                'margin-left': '-25px',
-                'margin-top': '-40px'
-            });
-        } else {
-            t1.to(like_cnt, 1, {scale: 1})
-                .to(like_cnt, 1, {scale: 1, background: 'transparent', ease: Power4.easeOut});
-            t1.timeScale(7);
-            like_cnt.removeClass("checked");
-            like_cnt.find(".heart2").attr("src", "/images/innerHeart2.png");
-        }
+// Like js
+document.querySelectorAll('.blog ion-icon').forEach(icon => {
+    icon.addEventListener('click', function() {
+        this.classList.toggle('active');
     });
-}
+});

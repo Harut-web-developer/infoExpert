@@ -496,9 +496,9 @@
     scroll-snap-align: start;
 }
 .usersProfileInfoEmail, .usersProfileInfoPhone, .usersProfileInfoLinkdin{
-    width: 249px;
     display: flex;
     word-wrap: break-word;
+    width: 249px;
     flex-direction: row;
 }
 .usersProfileInfoEmail img,

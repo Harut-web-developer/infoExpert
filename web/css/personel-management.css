@@ -1,11 +1,12 @@
 .personelManagement{
     width: 100%;
-    height: 1490px;
     background-image: url("../images/background-personnel-managment.png");
     background-repeat: no-repeat;
     padding-top: 198px;
+    background-size: cover;
+    background-position: center;
 }
-.backButton{
+.backButton, .ellipseButton, .amdFix{
     display: none;
 }
 .topDivFlex{
@@ -44,7 +45,9 @@
     line-height: 30px;
     text-align: left;
     color: #FFFFFF;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 .rightImg{
     width: 469.52px;
@@ -66,7 +69,7 @@
     height: 352px;
     padding: 38px 34px 38px 34px;
     border-radius: 30px;
-    margin-top: 40px;
+    margin-top: 21px;
     border: 1px solid #0000000D;
     text-align: center;
     background: #FFFFFF24;
@@ -103,12 +106,18 @@
     background: #FFFFFF5C;
 }
 .divBottom{
-    padding: 0 16.666%;
-}
-.bottomImages{
-    width: 66%;
+    width: 67%;
     margin: 0px auto;
-    padding-top: 48px;
+    /*padding: 0 16.666%;*/
+}
+.footerBackground {
+    margin-top: -67px !important;
+}
+.bottomImages, .buttonDiv{
+    width: 67%;
+    margin: 0px auto;
+    padding-top: 30px;
+    padding-bottom: 62px;
     display: flex;
     justify-content: end;
     gap: 35px;
@@ -122,7 +131,7 @@
 .leftDipl img {
     width: 100%;
     height: auto;
-    padding-top: 40px;
+    margin-top: 24px;
 }
 .rightImgBottom span{
     color: #F36528;
@@ -131,7 +140,7 @@
     font-weight: 400;
     line-height: 44px;
     text-align: center;
-
+    display: flex;
 }
 .managementBtnDiv{
     width: max-content;
@@ -157,7 +166,6 @@
     width: 100%;
     text-align: center;
 }
-seeallcoursehover
 .managementBtnDiv > button:hover span{
     color: white;
 }
@@ -167,10 +175,49 @@ seeallcoursehover
 .managementBtnDiv .button2{
     color: white;
 }
-@media screen and (max-width: 1400px) {
-    .divBottom {
-        padding: 0 0 0 16.666%;
+.rightImgM, .diplomW{
+    display: none;
+}
+/*LIKE*/
+.large-font {
+    width: 43px;
+    height: 43px;
+    font-size: xxx-large;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    background-color: #ffffff50;
+    justify-content: center;
+    margin-left: 42px;
+}
+ion-icon.active {
+    animation: like 0.5s 1;
+    fill: #F36528;
+    stroke: none;
+    color: #F36528;
+}
+ion-icon {
+    width: 29.63px;
+    height: 25.96px;
+    color: #FFFFFF;
+    fill: transparent;
+    stroke-width: 30;
+    transition: all 0.5s;
+    position: absolute;
+}
+@-webkit-keyframes like {
+    0% {
+        transform: scale(1);
     }
+    90% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+@media screen and (max-width: 1400px) {
     .card_ {
         margin-top: 24px;
     }
@@ -179,21 +226,83 @@ seeallcoursehover
         width: 333.42px;
         height: 251.19px;
     }
+    .bottomDiv{
+        gap: 0;
+        justify-content: space-between;
+    }
+    .rightImgM, .diplomW{
+        display: none;
+    }
 }
-@media screen and (max-width: 1180px) {
-    .divBottom {
-        padding: 0 0 0 16.666%;
+@media screen and (max-width: 1228px) {
+    .rightImgBottom {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
-    .bottomDiv {
-        gap: 3.4%;
+    .rightImgBottom span {
+        font-family: 'Roboto Slab';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 44px;
+        text-align: center;
     }
-    .card_ {
-        margin-top: 24px;
+    .rightImgBottom .card_ {
+        width: 223px;
+        height: 295px;
+        border-radius: 30px;
+        padding: 0;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nameCard{
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
+    }
+    .textCard{
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        width: 100%;
+    }
+    .card-info{
+        padding: 0;
+    }
+
+
+    .leftDipl {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .leftDipl span {
+        font-family: 'Roboto Slab';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 44px;
+        text-align: center;
+    }
+    .leftDipl img {
+        width: 392px;
+        height: 294px;
+        border-radius: 30px;
+        padding-top: 0;
+    }
+    .rightImgM, .diplomW{
+        display: none;
     }
 }
 @media screen and (max-width: 1100px) {
     .personelManagement {
-        height: 1366px;
         padding-top: 61px;
     }
     .titleMan{
@@ -212,8 +321,8 @@ seeallcoursehover
         align-items: center;
     }
     .backButton {
-        width: 20.02px;
-        height: 19.99px;
+        width: 40px;
+        height: 40px;
         display: block;
     }
     .topDivFlex{
@@ -228,16 +337,18 @@ seeallcoursehover
         line-height: 30px;
         text-align: left;
         margin-top: 26px;
+        display: block;
     }
     .divBottom{
+        width: 100%;
         padding-left: 6.8%;
         padding-right: 6.9%;
-        padding-top: 3%;
+        padding-bottom: 22px;
     }
     .leftDipl {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
     .leftDipl span {
         order: 2;
@@ -259,6 +370,7 @@ seeallcoursehover
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-end;
     }
     .rightImgBottom span {
         order: 2;
@@ -299,7 +411,7 @@ seeallcoursehover
     }
     .bottomImages{
         justify-content: center;
-        padding-top: 39px;
+        padding-top: 0px;
     }
     .managementBtnDiv > button > img {
         position: relative;
@@ -311,10 +423,14 @@ seeallcoursehover
         font-size: 13px;
         font-weight: 900;
         line-height: 15.23px;
-        left: 22px;
     }
     .bottomDiv{
+        width: 670px;
+        margin: 0;
         padding-top: 0;
+    }
+    .rightImgM, .diplomW{
+        display: none;
     }
 }
 @media screen and (max-width: 800px) {
@@ -324,321 +440,189 @@ seeallcoursehover
     .brNone{
         display: none;
     }
+    .bottomDiv {
+        width: 625px;
+    }
 }
+@media screen and (max-width: 730px) {
+    .backButton {
+        margin-right: 51px;
+    }
+    .large-font{
+        min-width: 43px;
+        margin-left: 51px;
+    }
+    .titleMan{
+        height: max-content;
+        padding-top: 32px;
+        font-family: 'Roboto Slab';
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 21.1px;
+        text-align: center;
+    }
+    .diplomW{
+        max-width: 100%;
+        display: flex;
+        margin: 20px 0;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-info {
+        padding: 10px 20px 20px;
+    }
+    .rightImg, .diplomM{
+        display: none;
+    }
+    .rightImgM{
+        width: 342px;
+        height: 251px;
+        display: block;
+        border-radius: 30px;
+    }
+    .bottomDiv {
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    .topDivFlex{
+        margin: 0;
+    }
+    .infotxt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        font-family: 'Roboto';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+    }
+    .leftDipl span{
+        font-family: 'Roboto Slab';
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15.83px;
+        text-align: center;
+    }
+    .rightImgM {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 30px;
+        margin: 20px 0;
+    }
+    .rightImgBottom {
+        width: 60%;
+    }
+    .rightImgBottom .card_{
+        width: auto;
+        order: 3;
+    }
+    .leftDipl img{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+    .bottomImages {
+        background: #FFFFFF24;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        height: 68px;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        z-index: 100000;
+        left: 0;
+        bottom: 0;
+    }
+    .footerBackground {
+        margin-top: -37px !important;
+    }
+    .rightImgBottom span{
+        font-family: Roboto Slab;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15.83px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .personelManagement {
+        background: #5D9A9D;
+    }
+    .managementBtnDiv .button2,
+    .managementBtnDiv .button1{
+        font-family: 'Roboto Black';
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 11.72px;
+    }
+    .managementBtnDiv > button > img {
+        width: 102px;
+        height: 44px;
+    }
+    .managementBtnDiv .button2, .managementBtnDiv .button1{
+        top: 16px;
+    }
+    .amdFix{
+        display: block;
+        font-family: 'Roboto';
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 17.58px;
+        color: #FFFFFF;
+        height: max-content;
+    }
+    .managementBtnDiv {
+        height: max-content;
+    }
+    .buttonDiv{
+        display: flex;
+        gap: 10px;
+        height: max-content;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .ellipseButton {
+        display: block;
+        position: absolute;
+    }
+    .backButton {
+        width: 30px;
+        height: 30px;
+        margin-right: 51px;
+    }
+    .large-font {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        margin-left: 51px;
+    }
+    .titleMan{
+        font-family: 'Roboto Slab';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21.1px;
+        text-align: center;
+    }
+    ion-icon {
+        width: 24.63px;
+        height: 20.96px;
 
-
-/* Like style*/
-.like-button,
-.like-button:before,
-.like-button:after,
-.like-button .like-wrapper,
-.like-button .like-wrapper .ripple,
-.like-button .like-wrapper .heart,
-.like-button .like-wrapper .particles,
-.like-button,
-.like-button:before,
-.like-button:after,
-.like-button .like-wrapper,
-.like-button .like-wrapper .ripple,
-.like-button .like-wrapper .heart,
-.like-button .like-wrapper .particles:before,
-.like-button,
-.like-button:before,
-.like-button:after,
-.like-button .like-wrapper,
-.like-button .like-wrapper .ripple,
-.like-button .like-wrapper .heart,
-.like-button .like-wrapper .particles:after {
-    position: relative;
-    box-sizing: border-box;
-}
-
-.like-button {
-    --color-bg: #F36528;
-    --color-heart: #ffffff;
-    --easing: cubic-bezier(.7,0,.3,1);
-    --duration: .5s;
-}
-
-.like-button .like-wrapper .particles {
-    --total-particles: 6;
-}
-
-.like-button .like-wrapper .particle {
-    --i: 1;
-}
-
-.like-button .like-wrapper .particle:nth-child(2) {
-    --i: 2;
-}
-
-.like-button .like-wrapper .particle:nth-child(3) {
-    --i: 3;
-}
-
-.like-button .like-wrapper .particle:nth-child(4) {
-    --i: 4;
-}
-
-.like-button .like-wrapper .particle:nth-child(5) {
-    --i: 5;
-}
-
-.like-button .like-wrapper .particle:nth-child(6) {
-    --i: 6;
-}
-
-.like-button {
-    /*font-size: 35vmin;*/
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    border-radius: 50%;
-    background: white;
-    width: 1.25em;
-    height: 1.25em;
-    padding: 0;
-    margin-left: 42px;
-    outline: none;
-    z-index: 2;
-    -webkit-transition: -webkit-transform var(--duration) var(--easing);
-    transition: -webkit-transform var(--duration) var(--easing);
-    transition: transform var(--duration) var(--easing);
-    transition: transform var(--duration) var(--easing), -webkit-transform var(--duration) var(--easing);
-    cursor: pointer;
-}
-.like-button:before {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.3);
-    border-radius: inherit;
-    -webkit-transition: inherit;
-    transition: inherit;
-}
-.like-button:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #81B1B4;
-    border-radius: inherit;
-    z-index: -1;
-}
-.like-button:active:before {
-    -webkit-animation: depress-shadow var(--duration) var(--easing) both;
-    animation: depress-shadow var(--duration) var(--easing) both;
-}
-.like-button:focus:after {
-    -webkit-animation: depress var(--duration) var(--easing) both;
-    animation: depress var(--duration) var(--easing) both;
-}
-@-webkit-keyframes depress {
-    from, to {
-        -webkit-transform: none;
-        transform: none;
     }
-    50% {
-        -webkit-transform: translateY(5%) scale(0.9);
-        transform: translateY(5%) scale(0.9);
+    .rightImgBottom {
+        width: 100%;
+    }
+    .nameCard{
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
     }
 }
-@keyframes depress {
-    from, to {
-        -webkit-transform: none;
-        transform: none;
-    }
-    50% {
-        -webkit-transform: translateY(5%) scale(0.9);
-        transform: translateY(5%) scale(0.9);
-    }
-}
-@-webkit-keyframes depress-shadow {
-    from, to {
-        -webkit-transform: none;
-        transform: none;
-    }
-    50% {
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
-    }
-}
-@keyframes depress-shadow {
-    from, to {
-        -webkit-transform: none;
-        transform: none;
-    }
-    50% {
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
-    }
-}
-.like-wrapper {
-    display: grid;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    z-index: 1;
-}
-.like-wrapper > * {
-    margin: auto;
-    grid-area: 1 / 1;
-}
-
-.heart {
-    width: .68em;
-    height: .6em;
-    display: block;
-    -webkit-transform-origin: center 80%;
-    transform-origin: center 80%;
-}
-.heart > path {
-    stroke: var(--color-heart);
-    stroke-width: 2;
-    fill: transparent;
-    -webkit-transition: fill var(--duration) var(--easing);
-    transition: fill var(--duration) var(--easing);
-}
-.like-button:focus .heart > path {
-    fill: var(--color-bg);
-    stroke: var(--color-bg);
-}
-.like-button:focus .heart {
-    -webkit-animation: heart-bounce var(--duration) var(--easing);
-    animation: heart-bounce var(--duration) var(--easing);
-}
-@-webkit-keyframes heart-bounce {
-    40% {
-        -webkit-transform: scale(0.7);
-        transform: scale(0.7);
-    }
-    0%, 80%, 100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-@keyframes heart-bounce {
-    40% {
-        -webkit-transform: scale(0.7);
-        transform: scale(0.7);
-    }
-    0%, 80%, 100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-/* Added wrapper to prevent layout jank with resizing particles */
-.particles {
-    width: 1px;
-    height: 1px;
-}
-
-.particle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: .1em;
-    width: .1em;
-    border-radius: .05em;
-    background-color: var(--color);
-    --percentage: calc( var(--i) / var(--total-particles) );
-    --Θ: calc( var(--percentage) * 1turn );
-    -webkit-transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(0) scaleY(0);
-    transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(0) scaleY(0);
-    -webkit-transition: all var(--duration) var(--easing);
-    transition: all var(--duration) var(--easing);
-}
-.like-button:focus .particle {
-    -webkit-animation: particles-out calc(var(--duration) * 1.2) var(--easing) forwards;
-    animation: particles-out calc(var(--duration) * 1.2) var(--easing) forwards;
-}
-@-webkit-keyframes particles-out {
-    50% {
-        height: .3em;
-    }
-    50%, 60% {
-        height: .3em;
-        -webkit-transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(0.8em) scale(1);
-        transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(0.8em) scale(1);
-    }
-    60% {
-        height: .2em;
-    }
-    100% {
-        -webkit-transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(1em) scale(0);
-        transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(1em) scale(0);
-    }
-}
-@keyframes particles-out {
-    50% {
-        height: .3em;
-    }
-    50%, 60% {
-        height: .3em;
-        -webkit-transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(0.8em) scale(1);
-        transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(0.8em) scale(1);
-    }
-    60% {
-        height: .2em;
-    }
-    100% {
-        -webkit-transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(1em) scale(0);
-        transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(1em) scale(0);
-    }
-}
-.ripple {
-    height: 1.25em;
-    width: 1.25em;
-    border-radius: 50%;
-    overflow: hidden;
-    z-index: 1;
-}
-.ripple:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0.4em solid var(--color-heart);
-    border-radius: inherit;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-.like-button:focus .ripple:before {
-    -webkit-animation: ripple-out var(--duration) var(--easing);
-    animation: ripple-out var(--duration) var(--easing);
-}
-@-webkit-keyframes ripple-out {
-    from {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
-    to {
-        -webkit-transform: scale(5);
-        transform: scale(5);
-    }
-}
-@keyframes ripple-out {
-    from {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
-    to {
-        -webkit-transform: scale(5);
-        transform: scale(5);
-    }
-}
-/* Reset the animation when clicking again! */
-/*.like-button:focus {*/
-/*    pointer-events: none;*/
-/*    cursor: pointer;*/
-/*}*/

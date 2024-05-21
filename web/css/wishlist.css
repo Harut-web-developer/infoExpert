@@ -32,13 +32,6 @@
     font-weight: 600;
     color: #F36528;
 }
-.spanAmd{
-    font-family: 'Roboto';
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18.75px;
-    text-align: left;
-}
 .userProfileMenu{
     width: max-content;
     height: 43px;
@@ -63,10 +56,16 @@
 .userProfileMenu > li > a:hover{
     color: #F36528;
 }
+.spanAmd{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: left;
+}
 .myCoursesProfileField{
     width: 405px;
     height: 533px;
-    margin-right: 20px;
     background: #74A8AB;
     border-radius: 30px;
     box-shadow: 0px 0px 6px 2px #549099;
@@ -275,6 +274,8 @@ hr.new1 {
 .cardsimg_ > img{
     width: 100%;
     height: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
 }
 .cardsText_{
     height: 247px;
@@ -342,13 +343,13 @@ hr.new1 {
     display: flex;
 }
 .changeBody2 ul {
+    margin-bottom: 0;
     padding-left: 0rem!important;
 }
 .carousel_2{
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 46%;
-    gap: 54px;
+    gap: 44px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -392,10 +393,11 @@ hr.new1 {
     flex-direction: row;
     padding: 0 15px;
     justify-content: space-between;
+    gap: 5px;
 }
-.starAndTxt_2{
-    padding-left: 18px;
-}
+/*.starAndTxt_2{*/
+/*    padding-left: 18px;*/
+/*}*/
 .cardCenter_2{
     /*width: 312.12px;*/
     /*height: 73.09px;*/
@@ -413,6 +415,7 @@ hr.new1 {
     line-height: 26px;
     text-align: left;
     color: #FFFFFF;
+    width: 164px;
 }
 .card_2 .cardBody_2 .span2_2{
     font-family: 'Roboto',sans-serif;
@@ -421,6 +424,7 @@ hr.new1 {
     line-height: 28.13px;
     text-align: left;
     color: #FFFFFF;
+    margin-bottom: 0;
 }
 .cardtxt1_2{
     width: 223.11px;
@@ -444,7 +448,7 @@ hr.new1 {
     /*padding-right: 11px;*/
 }
 .cardtxt2_2{
-    width: 312.12px;
+    width: 313px;
     height: 28.09px;
 }
 .cardtxt2_2 span{
@@ -454,10 +458,12 @@ hr.new1 {
     line-height: 19.84px;
     text-align: left;
     color: #FFFFFF;
+    padding-left: 11px;
 }
 .cardtxt2_2 img {
+    width: 28px;
+    height: 28px;
     float: left;
-    padding-right: 11px;
 }
 .card_2  .img {
     padding-bottom: 19px;
@@ -466,18 +472,23 @@ hr.new1 {
     width: 100%;
 }
 .footerCard_2{
-    margin-right: 15px;
-    margin-left: 40px;
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    margin: 0 15px;
 }
-.wishlistBtnField{
-    width: 130px;
+.footerImg3 {
+    width: 43px;
+    height: 43px;
+    border: 1px;
 }
+/*.wishlistBtnField{*/
+/*    width: 130px;*/
+/*}*/
 .wishlistBtnField > button{
-    position: relative;
     background: transparent;
     border: none;
+    position: relative;
+    margin-left: 39px;
 }
 .wishlistBtnField > button > img{
     width: 113px;
@@ -509,11 +520,35 @@ hr.new1 {
     width: 43px;
     height: 43px;
 }
-
+.usersProfileInfoEmail,
+.usersProfileInfoLinkdin,
+.usersProfileInfoPhone {
+    display: flex;
+    word-wrap: break-word;
+    width: 249px;
+    flex-direction: row;
+}
+.usersProfileInfoEmail > span,
+.usersProfileInfoLinkdin > span,
+.usersProfileInfoPhone > span{
+    font-family: "Roboto",sans-serif;
+    margin-left: 37px;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    white-space: normal;
+    width: -webkit-fill-available;
+}
+.usersProfileInfoEmail > img,
+.usersProfileInfoLinkdin > img,
+.usersProfileInfoPhone > img {
+    width: 32px;
+    height: 32px;
+}
 /*LIKE*/
 .heart{
-    width: 24.19px;
-    height: 24px;
+    width: 27px;
+    height: 23px;
 }
 .heart2{
     width: 25.63px;
@@ -552,6 +587,14 @@ hr.new1 {
     .bottomSlider .carousel_ {
         grid-auto-columns: calc(100% / 2 - 22px);
     }
+    .changeBody2 .carousel_2{
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
+    .cardtxt2_2 {
+        width: 279px;
+        height: 45.09px;
+        display: flex;
+    }
     .bottomSlider {
          padding-left: 0;
     }
@@ -575,13 +618,16 @@ hr.new1 {
     .img_2{
         height: auto;
     }
+    .wishlistBtnField > button {
+        margin-left: 20px;
+    }
     .cardCenter_2 {
         width: min-content;
-        height: 81.09px;
+        height: 94.09px;
         margin: 0;
     }
     .cardtxt2_2 {
-        width: auto;
+        width: 266px;
     }
     .cardContent {
         width: 100%;
@@ -591,10 +637,47 @@ hr.new1 {
         padding: 0;
     }
 }
+@media screen and (max-width: 1700px) {
+    .wishlistBtnField > button > img {
+        width: auto;
+        height: 37px;
+    }
+    .wishlistBtnField > button > span > a {
+        top: 9px;
+        font-size: 13px;
+    }
+    .heart {
+        width: 20.19px;
+        height: 20px;
+    }
+    .like-cnt {
+        transform: translate(-105%, -61%) !important;
+        width: 37px;
+        height: 37px;
+        line-height: 32px;
+    }
+    .footerImg3 {
+        width: 37px;
+        height: 37px;
+        border: 1px;
+    }
+    .card_2 {
+        height: 440px;
+    }
+    .cardContent {
+        height: 50%;
+    }
+    .topSlider {
+        height: 515px;
+    }
+}
 @media screen and (max-width: 1600px) {
     .myCoursesProfileField {
         width: 360px;
         height: 470px;
+    }
+    .changeBody1 {
+        height: 339px;
     }
     .myCoursesFieldSectionLeft > img {
         width: 200px;
@@ -640,41 +723,105 @@ hr.new1 {
         font-weight: 400;
         line-height: 9.38px;
     }
-    .footerCard_2 {
-        padding-top: 20px;
-    }
+    /*.footerCard_2 {*/
+    /*    padding-top: 20px;*/
+    /*}*/
     .carousel_2 {
         gap: 40px;
     }
     .topSlider {
-        height: max-content;
+        height: 433px;
     }
     .bottomSlider {
         padding-top: 30px;
     }
-    .wishlistBtnField {
-        width: 90px;
+    .cardContent {
+        height: 53%;
     }
-    .wishlistBtnField > button > img{
-        width: 80px;
-        height: 30px;
+    /*.wishlistBtnField {*/
+    /*    width: 90px;*/
+    /*}*/
+    /*.wishlistBtnField > button > img{*/
+    /*    width: 80px;*/
+    /*    height: 30px;*/
+    /*}*/
+    /*.wishlistBtnField > button > span > a {*/
+    /*    font-size: 13px;*/
+    /*    top: 6px;*/
+    /*    left: 0px;*/
+    /*    width: 100%;*/
+    /*    text-align: center;*/
+    /*}*/
+    .like-cnt{
+        width: 35px;
+        height: 35px;
+        line-height: 32px;
+        transform: translate(-105%, -60%) !important;
     }
-    .wishlistBtnField > button > span > a {
+    .heart2 {
+        width: 20.19px;
+        height: 18px;
+    }
+    .spanAmd {
         font-size: 13px;
-        top: 6px;
-        left: 0px;
-        width: 100%;
-        text-align: center;
+    }
+    .starDivWishlistCourses img {
+        width: 17px;
+        height: 16px;
+    }
+    .starDivWishlistCourses {
+        width: 84px;
+        height: 15.37px;
     }
 }
 @media screen and (max-width: 1500px) {
+    .cardsTextField_ {
+        height: 200px;
+    }
+    .usersProfileInfoEmail > span, .usersProfileInfoLinkdin > span, .usersProfileInfoPhone > span {
+        margin-left: 16px;
+    }
+    .usersProfileInfoEmail, .usersProfileInfoLinkdin, .usersProfileInfoPhone {
+        width: 199px;
+    }
+    .usersProfileInfo {
+        width: 200px;
+    }
     .topSlider {
-         padding-left: 0;
+        height: 390px;
+        padding-left: 0;
     }
     .cardContent {
         width: 100%;
-        height: 57%;
+        height: 52%;
+        padding: 0 17px 10px 17px;
     }
+    .starDivWishlistCourses img {
+        width: 15px;
+        height: 14px;
+    }
+    .starDivWishlistCourses {
+        width: 75px;
+    }
+    .spanAmd {
+        font-size: 11px;
+    }
+    .card_2 .cardBody_2 .span2_2 {
+        font-size: 16px;
+    }
+    .cardCenter_2 {
+        height: 80px;
+    }
+    .heart {
+        width: 18px;
+        height: 17px;
+    }
+    .cardtxt1_2, .cardtxt2_2{
+        width: 223.11px;
+        height: 40px;
+        display: flex;
+    }
+
     .myCoursesFieldSectionRight img{
         position: relative;
         left: -51px;
@@ -705,21 +852,65 @@ hr.new1 {
     .cardsLike_ > a {
         font-size: 15px;
     }
-    .cardsLike_ img{
-        width: 28px;
-        height: 28px;
-    }
     .cardsTextInfo_ {
         height: 180px;
     }
     .cardsTextInfo_ {
         padding: 21px 5% 0;
     }
+    .heart2, .heart {
+        width: 18px;
+        height: 16px;
+    }
+    .wishlistBtnField > button {
+        margin-left: 11px;
+    }
+    .wishlistBtnField > button > img {
+        width: auto;
+        height: 28px;
+    }
+    .wishlistBtnField > button > span > a {
+        top: 5px;
+        font-size: 11px;
+    }
+    .footerImg3 {
+        width: 28px;
+        height: 28px;
+        border: 1px;
+    }
+    .like-cnt {
+        width: 28px;
+        height: 28px;
+        transform: translate(-105%, -62%) !important;
+        line-height: 23px;
+    }
+    .card_2 {
+        height: 360px;
+    }
+    .cardtxt1_2 span, .cardtxt2_2 span {
+        font-size: 14px;
+        line-height: 15.84px;
+    }
 }
 @media screen and (max-width: 1350px) {
+    .usersProfileInfoEmail > img, .usersProfileInfoLinkdin > img, .usersProfileInfoPhone > img{
+        width: 23px;
+        height: 23px;
+    }
+    .cardtxt1_2 span, .cardtxt2_2 span {
+        font-size: 12px;
+        line-height: 11.84px;
+    }
+    .cardtxt1_2, .cardtxt2_2 {
+        width: 203.11px;
+    }
+    .cardtxt1_2 img, .cardtxt2_2 img {
+        width: 20px;
+        height: 20px;
+    }
     .cardContent {
         width: 100%;
-        height: 60%;
+        height: 54%;
     }
     .card_2{
         padding: 0;
@@ -735,6 +926,16 @@ hr.new1 {
     }
 }
 @media screen and (max-width: 1300px) {
+    .usersProfileInfo {
+        width: 180px;
+    }
+    .cardsTextInfo_ {
+        height: 140px;
+        padding: 13px 5% 0;
+    }
+    .cardsTextField_ {
+        height: 180px;
+    }
     .mainContent {
         padding-top: 70px;
     }
@@ -752,6 +953,8 @@ hr.new1 {
     .myCoursesFieldSectionLeft > img {
         width: 100px;
         height: 100px;
+        position: relative;
+        right: -16px;
     }
     .myCoursesFieldSection {
         width: initial;
@@ -771,11 +974,8 @@ hr.new1 {
         font-size: 17px;
         margin-left: 15px;
     }
-    .usersProfileInfo {
-        width: 210px;
-    }
     .myCoursesFieldSectionRight img {
-        left: -35px;
+        left: 0px;
         width: 23px;
     }
     .myCoursesFieldSectionLeft > span {
@@ -787,15 +987,14 @@ hr.new1 {
     .usersProfileInfo {
         height: 110px;
     }
-    .cardtxt1_2 img,
-    .cardtxt2_2 img {
-        width: 23px;
-        height: 23px;
-        margin: 5px 7px 5px 0;
-        padding: 0;
-    }
     .card_2 {
-        height: 340px;
+        height: 310px;
+    }
+    .cardtxt1_2, .cardtxt2_2 {
+        height: 28px;
+    }
+    .cardCenter_2 {
+        height: 70px;
     }
     .img_2 img {
         width: 100%;
@@ -806,14 +1005,6 @@ hr.new1 {
         line-height: 14.3px;
         text-align: left;
     }
-    .cardtxt1_2 span,
-    .cardtxt2_2 span{
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 9.92px;
-        text-align: left;
-        padding: 0;
-    }
     .cardtxt1_2 {
         width: 174px;
         height: auto;
@@ -823,19 +1014,27 @@ hr.new1 {
         width: 80px;
         padding: 0;
     }
-    .footerCard_2{
-        margin-right: 6px;
-        margin-left: 25px;
-        padding-top: 0;
-        justify-content: center;
-        align-items: center;
-    }
     .cardContent {
-        height: 59%;
-        padding: 10px 10px 10px 10px;
+        padding: 0 17px 16px 17px;
+        height: 50%;
+    }
+    .topSlider {
+        height: 340px;
+        padding-left: 0;
     }
     .card_2 .cardBody_2 .span2_2{
         margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .cardContent {
+        height: 54%;
+    }
+    .cardtxt1_2, .cardtxt2_2 {
+        width: 170.11px;
+    }
+    .footerCard_2{
+        margin: 0;
     }
 }
 @media screen and (max-width: 1100px) {
@@ -847,6 +1046,9 @@ hr.new1 {
     }
     .userProfileMenu {
         width: 423px;
+    }
+    .myCoursesFieldSectionRight img {
+        left: -35px;
     }
     .starAndTxt_2 {
         display: flex;
@@ -870,6 +1072,7 @@ hr.new1 {
     }
     .myCoursesFieldSectionLeft > img{
         width: 93px;
+        left: 0;
         height: 94px;
     }
     .myCoursesFieldSectionRight img{
@@ -930,10 +1133,10 @@ hr.new1 {
         line-height: 9.38px;
         text-align: left;
     }
-    .starAndTxt_2 img{
-        width: 43.92px;
-        height: 8.69px;
-    }
+    /*.starAndTxt_2 img{*/
+    /*    width: 43.92px;*/
+    /*    height: 8.69px;*/
+    /*}*/
     .cardtxt1_2 img, .cardtxt2_2 img{
         width: 14px;
         height: 14px;
@@ -1016,9 +1219,6 @@ hr.new1 {
         width: auto;
         height: auto;
     }
-    .cardsLike_{
-        height: auto;
-    }
     .cardsInfo_{
         height: auto;
     }
@@ -1033,8 +1233,49 @@ hr.new1 {
         margin-bottom: 40px;
     }
     .card_2 .cardBody_2 {
+        width: 167px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        height: 28px;
+    }
+    .starDivWishlistCourses img {
+        width: 9px;
+        height: 8px;
+    }
+    .starDivWishlistCourses {
+        width: 45px;
+        height: 8px;
+    }
+    .cardContent {
+        height: 49%;
+        padding: 5px 18px 14px;
+    }
+    .cardtxt1_2, .cardtxt2_2 {
+        width: 163.11px;
+        align-items: center;
+    }
+    .topSlider {
+        height: 264px;
+    }
+    .like-cnt, .footerImg3 {
+        width: 22px;
+        height: 22px;
+    }
+    .like-cnt {
+        line-height: 17px;
+    }
+    .heart2, .heart {
+        width: 14px;
+        height: 12px;
+    }
+    .likeColor{
+        line-height: 20px;
+    }
+    .cardsLike_ > a{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14.06px;
+        text-align: left;
     }
 }

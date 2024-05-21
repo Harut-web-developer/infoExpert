@@ -4,8 +4,8 @@ use yii\web\YiiAsset;
 /** @var yii\web\View $this */
 
 $this->title = 'Infoexpert';
-$this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
-$this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
+$this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
+$this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);
 ?>
 
 <div class="headerBackground">
@@ -566,145 +566,139 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
 <!-- Swiper JS-->
 <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
 <div class="sectionSeven" id="section01">
-<!--    <div class="sectionBlog">-->
-<!--        <span>--><?php //=$GLOBALS['text']['sectionSevenTitle']?><!--</span>-->
-<!--        <div class="blogsCard">-->
-<!--            <div class="individualCards">-->
-<!--                <div class="cardsimg">-->
-<!--                    <img src="/images/blogimg.png" alt="">-->
-<!--                </div>-->
-<!--                <div class="cardsText">-->
-<!--                    <div class="cardsTextField">-->
-<!--                        <div class="cardsTextInfo">-->
-<!--                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>-->
-<!--                            <div class="cardsDate">-->
-<!--                                <img src="/images/calendarimg.png" alt="">-->
-<!--                                <div class="articleDate">--><?php //=date('M') . ' ' . date('d') . ', ' . date('Y') ?><!--</div>-->
-<!--                            </div>-->
-<!--                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>-->
-<!--                        </div>-->
-<!--                        <div class="cardsLike">-->
-<!--                            <a href="--><?php //= Yii::$app->urlManager->createUrl(['blog/categorie']) ?><!--">READ MORE</a>-->
-<!--                            <div class="like-container">-->
-<!--                                <div class="like-cnt unchecked likeColor">-->
-<!--                                    <i class="like-btn material-icons heart-icon">-->
-<!--                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">-->
-<!--                                    </i>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="individualCards cardsMiddle">-->
-<!--                <div class="cardsimg">-->
-<!--                    <img src="/images/blogimg.png" alt="">-->
-<!--                </div>-->
-<!--                <div class="cardsText">-->
-<!--                    <div class="cardsTextField">-->
-<!--                        <div class="cardsTextInfo">-->
-<!--                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>-->
-<!--                            <div class="cardsDate">-->
-<!--                                <img src="/images/calendarimg.png" alt="">-->
-<!--                                <div class="articleDate">--><?php //=date('M') . ' ' . date('d') . ', ' . date('Y') ?><!--</div>-->
-<!--                            </div>-->
-<!--                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>-->
-<!--                        </div>-->
-<!--                        <div class="cardsLike">-->
-<!--                            <a href="--><?php //= Yii::$app->urlManager->createUrl(['blog/categorie']) ?><!--">READ MORE</a>-->
-<!--                            <div class="like-container">-->
-<!--                                <div class="like-cnt unchecked likeColor">-->
-<!--                                    <i class="like-btn material-icons heart-icon">-->
-<!--                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">-->
-<!--                                    </i>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="individualCards">-->
-<!--                <div class="cardsimg">-->
-<!--                    <img src="/images/blogimg.png" alt="">-->
-<!--                </div>-->
-<!--                <div class="cardsText">-->
-<!--                    <div class="cardsTextField">-->
-<!--                        <div class="cardsTextInfo">-->
-<!--                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>-->
-<!--                            <div class="cardsDate">-->
-<!--                                <img src="/images/calendarimg.png" alt="">-->
-<!--                                <div class="articleDate">--><?php //=date('M') . ' ' . date('d') . ', ' . date('Y') ?><!--</div>-->
-<!--                            </div>-->
-<!--                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>-->
-<!--                        </div>-->
-<!--                        <div class="cardsLike">-->
-<!--                            <a href="--><?php //= Yii::$app->urlManager->createUrl(['blog/categorie']) ?><!--">READ MORE</a>-->
-<!--                            <div class="like-container">-->
-<!--                                <div class="like-cnt unchecked likeColor">-->
-<!--                                    <i class="like-btn material-icons heart-icon">-->
-<!--                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">-->
-<!--                                    </i>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="individualCards">-->
-<!--                <div class="cardsimg">-->
-<!--                    <img src="/images/blogimg.png" alt="">-->
-<!--                </div>-->
-<!--                <div class="cardsText">-->
-<!--                    <div class="cardsTextField">-->
-<!--                        <div class="cardsTextInfo">-->
-<!--                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>-->
-<!--                            <div class="cardsDate">-->
-<!--                                <img src="/images/calendarimg.png" alt="">-->
-<!--                                <div class="articleDate">--><?php //=date('M') . ' ' . date('d') . ', ' . date('Y') ?><!--</div>-->
-<!--                            </div>-->
-<!--                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>-->
-<!--                        </div>-->
-<!--                        <div class="cardsLike">-->
-<!--                            <a href="--><?php //= Yii::$app->urlManager->createUrl(['blog/categorie']) ?><!--">READ MORE</a>-->
-<!--                            <img src="/images/inactiveLike.png" alt="">-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="blogsArticles">-->
-<!--            <div class="blogText">--><?php //=$GLOBALS['text']['sectionSevenText']?><!--</div>-->
-<!--            <div class="blogLine">-->
-<!--                <div></div>-->
-<!--            </div>-->
-<!--            <div class="blogBtn">-->
-<!--                <a href="blog/index">-->
-<!--                    <img src="/images/articlebtn.png" alt="">-->
-<!--                    <span>--><?php //=$GLOBALS['text']['sectionSevenBtn']?><!--</span>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <div class="sectionBlog">
+        <span><?=$GLOBALS['text']['sectionSevenTitle']?></span>
+        <div class="blogsCard">
+            <div class="individualCards">
+                <div class="cardsimg">
+                    <img src="/images/blogimg.png" alt="">
+                </div>
+                <div class="cardsText">
+                    <div class="cardsTextField">
+                        <div class="cardsTextInfo">
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                            <div class="cardsDate">
+                                <img src="/images/calendarimg.png" alt="">
+                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                            </div>
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                        </div>
+                        <div class="cardsLike">
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="individualCards cardsMiddle">
+                <div class="cardsimg">
+                    <img src="/images/blogimg.png" alt="">
+                </div>
+                <div class="cardsText">
+                    <div class="cardsTextField">
+                        <div class="cardsTextInfo">
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                            <div class="cardsDate">
+                                <img src="/images/calendarimg.png" alt="">
+                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                            </div>
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                        </div>
+                        <div class="cardsLike">
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="individualCards">
+                <div class="cardsimg">
+                    <img src="/images/blogimg.png" alt="">
+                </div>
+                <div class="cardsText">
+                    <div class="cardsTextField">
+                        <div class="cardsTextInfo">
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                            <div class="cardsDate">
+                                <img src="/images/calendarimg.png" alt="">
+                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                            </div>
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                        </div>
+                        <div class="cardsLike">
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="individualCards">
+                <div class="cardsimg">
+                    <img src="/images/blogimg.png" alt="">
+                </div>
+                <div class="cardsText">
+                    <div class="cardsTextField">
+                        <div class="cardsTextInfo">
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                            <div class="cardsDate">
+                                <img src="/images/calendarimg.png" alt="">
+                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                            </div>
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                        </div>
+                        <div class="cardsLike">
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                            <img src="/images/inactiveLike.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blogsArticles">
+            <div class="blogText"><?=$GLOBALS['text']['sectionSevenText']?></div>
+            <div class="blogLine">
+                <div></div>
+            </div>
+            <div class="blogBtn">
+                <a href="blog/index">
+                    <img src="/images/articlebtn.png" alt="">
+                    <span><?=$GLOBALS['text']['sectionSevenBtn']?></span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
-<!--<div class="sectionEight">-->
-<!--    <div class="haveQuestions">-->
-<!--        <div class="questionTitle">--><?php //=$GLOBALS['text']['sectionEightStill']?><!--</div>-->
-<!--        <form action="" class="questionForm">-->
-<!--            <div class="questionFields">-->
-<!--                <div class="leftQuestionField">-->
-<!--                    <input type="text" name="name" placeholder="--><?php //=$GLOBALS['text']['sectionEightName']?><!--">-->
-<!--                    <input type="text"name="email" placeholder="--><?php //=$GLOBALS['text']['sectionEightEmail']?><!--">-->
-<!--                </div>-->
-<!--                <div class="rightQuestionField">-->
-<!--                    <textarea name="message" placeholder="--><?php //=$GLOBALS['text']['sectionEightMessage']?><!--"></textarea>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="questionbutton">-->
-<!--                <button type="submit">-->
-<!--                    <img src="/images/questionbtn.png" alt="">-->
-<!--                    <span>--><?php //=$GLOBALS['text']['sectionEightBtn']?><!--</span>-->
-<!--                </button>-->
-<!--            </div>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="sectionEight">
+    <div class="haveQuestions">
+        <div class="questionTitle"><?=$GLOBALS['text']['sectionEightStill']?></div>
+        <form action="" class="questionForm">
+            <div class="questionFields">
+                <div class="leftQuestionField">
+                    <input type="text" name="name" placeholder="<?=$GLOBALS['text']['sectionEightName']?>">
+                    <input type="text"name="email" placeholder="<?=$GLOBALS['text']['sectionEightEmail']?>">
+                </div>
+                <div class="rightQuestionField">
+                    <textarea name="message" placeholder="<?=$GLOBALS['text']['sectionEightMessage']?>"></textarea>
+                </div>
+            </div>
+            <div class="questionbutton">
+                <button type="submit">
+                    <img src="/images/questionbtn.png" alt="">
+                    <span><?=$GLOBALS['text']['sectionEightBtn']?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

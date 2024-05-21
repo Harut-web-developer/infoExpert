@@ -315,7 +315,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                             <div class="like-container">
                                                 <div class="like-cnt unchecked likeColor">
                                                     <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                                        <img class="heart2 bottomLike" src="/images/innerHeart2.png" alt="" draggable="false">
                                                     </i>
                                                 </div>
                                             </div>
@@ -344,7 +344,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                             <div class="like-container">
                                                 <div class="like-cnt unchecked likeColor">
                                                     <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                                        <img class="heart2 bottomLike" src="/images/innerHeart2.png" alt="" draggable="false">
                                                     </i>
                                                 </div>
                                             </div>
@@ -373,7 +373,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                             <div class="like-container">
                                                 <div class="like-cnt unchecked likeColor">
                                                     <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                                        <img class="heart2 bottomLike" src="/images/innerHeart2.png" alt="" draggable="false">
                                                     </i>
                                                 </div>
                                             </div>
@@ -402,7 +402,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                             <div class="like-container">
                                                 <div class="like-cnt unchecked likeColor">
                                                     <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart2" src="/images/innerHeart2.png" alt="" draggable="false">
+                                                        <img class="heart2 bottomLike" src="/images/innerHeart2.png" alt="" draggable="false">
                                                     </i>
                                                 </div>
                                             </div>
@@ -476,7 +476,9 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
 
         const carousel_2 = document.querySelector(".changeBody2 .carousel_2");
         const wrapper_2 = document.querySelector(".changeBody2");
-        const firstCard_2 = carousel_2.querySelector(".card_2");
-        slider(carousel_2, wrapper_2, firstCard_2);
+        if (carousel_2) {
+            const firstCard_2 = carousel_2.querySelector(".card_2");
+            slider(carousel_2, wrapper_2, firstCard_2);
+        }
     });
 </script>

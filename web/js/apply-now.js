@@ -18,7 +18,7 @@ $(document).ready(function () {
         $(this).closest('.individual').find('.individualChildFields').css('display', 'flex');
         $(this).closest('.individual').find('.online').children('input').prop('checked', true);
         $(this).closest('.typeCoursesBlocksRadio').css('height', '166px');
-        $(this).closest('.appleFields').css('height', '1170px');
+        // $(this).closest('.appleFields').css('height', '1170px');
         $(this).closest('.radioFieldsBlocksType').css('height', '215px');
         $(this).closest('.typeCoursesFields').css('height', '251px');
     })
@@ -29,7 +29,7 @@ $(document).ready(function () {
         $(this).closest('.group').find('.groupChildFields').css('display', 'flex');
         $(this).closest('.group').find('.online').children('input').prop('checked', true);
         $(this).closest('.typeCoursesBlocksRadio').css('height', '166px');
-        $(this).closest('.appleFields').css('height', '1170px');
+        // $(this).closest('.appleFields').css('height', '1170px');
         $(this).closest('.radioFieldsBlocksType').css('height', '215px');
         $(this).closest('.typeCoursesFields').css('height', '251px');
     })
@@ -40,7 +40,7 @@ $(document).ready(function () {
         $(this).closest('.corporate').find('.corporateChildFields').css('display', 'flex');
         $(this).closest('.corporate').find('.online').children('input').prop('checked', true);
         $(this).closest('.typeCoursesBlocksRadio').css('height', '166px');
-        $(this).closest('.appleFields').css('height', '1170px');
+        // $(this).closest('.appleFields').css('height', '1170px');
         $(this).closest('.radioFieldsBlocksType').css('height', '215px');
         $(this).closest('.typeCoursesFields').css('height', '251px');
     })
