@@ -29,6 +29,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?php $this->head() ?>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/mainTablet.css">
+    <link rel="stylesheet" href="/css/mainMobile.css">
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -60,13 +61,21 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <?php }?>
                     <div class="personSignOrInfo">
                         <div class="personNameField">
-                            <span class="personName"><?= $GLOBALS['text']['tabletHello']?>,  <?= Yii::$app->user->identity->username ?></span>
+                            <span class="personName">
+                                <?php
+                                if (count($first_letter) > 1){?>
+                                    <span><?= $GLOBALS['text']['tabletHello'] . ', ' . $first_letter[0] . ' '?></span>
+                                    <span><?=$first_letter[1]?></span>
+                                <?php }else{?>
+                                    <span><?= $GLOBALS['text']['tabletHello'] . ', ' . $first_letter[0]?></span>
+                                <?php }?>
+                            </span>
                             <span class="personGreetings"><?= $GLOBALS['text']['tabletWelcome']?></span>
                         </div>
                         <img class="tabletUserProfileMenu" src="/images/menuRightArrow.png" alt="">
                     </div>
                     <?php }else{ ?>
-                    <div class="personInfoCircle"></div>
+                    <div class="personInfoCircleMobile"></div>
                     <div class="personSignOrInfo">
                         <div class="personSignField">
                             <a href="/login">sign in</a>
@@ -86,6 +95,13 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                 <div class="tabletCoursesUnderline"></div>
                             </li>
                         <?php }?>
+                        <li class="mobileBackCall">
+                            <button>
+                                <img src="/images/tabletMenuBtn.png" alt="">
+                                <span><?= $GLOBALS['text']['__callback__'] ?></span>
+                            </button>
+                            <div class="mobileBackCallUnderline"></div>
+                        </li>
                         <li class="tabletAllCoursesList">
                             <span><?= $GLOBALS['text']['tabletAllCourses']?></span>
                             <img src="/images/menuRightArrow.png" alt="">
@@ -247,8 +263,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?= $content ?>
 </main>
 
-<footer class="footerBackground">
-    <div class="sectionFooter">
+<!--<footer class="footerBackground">-->
+<!--    <div class="sectionFooter">-->
 <!--        <div class="imagesFooterFields">-->
 <!--            <div class="leftFooterBg">-->
 <!--                <div class="footerFields">-->
@@ -312,7 +328,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <!--            <div class="policyText">-->
 <!--                <ul>-->
 <!--                    <li><a href="">--><?php //= $GLOBALS['text']['footerPolicy']?><!--&nbsp</a></li>-->
-<!--                    <li><a href="">&nbspTerms & Conditions</a></li>-->
+<!--                    <li><a href="">&nbsp--><?php //= $GLOBALS['text']['footerTerms']?><!--</a></li>-->
 <!--                </ul>-->
 <!--            </div>-->
 <!--            <div class="payLogoFooter">-->
@@ -320,8 +336,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <!--                <img src="/images/masterCardLogo.png" alt="">-->
 <!--            </div>-->
 <!--        </div>-->
-    </div>
-</footer>
+<!--    </div>-->
+<!--</footer>-->
 <?php $this->endBody() ?>
 </body>
 </html>

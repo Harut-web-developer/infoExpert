@@ -1,0 +1,1164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*start header css*/
+@media only screen and (min-width: 600px) {
+    .mobileBackCall{
+        display: none;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 370px) {
+    .tabletMenuNavField > ul {
+        width: 95%;
+    }
+}
+@media only screen and (min-width: 371px) and (max-width: 599px) {
+    .tabletMenuNavField > ul {
+        width: 96%;
+    }
+}
+@media only screen and (min-width: 280px) and (max-width: 330px) {
+    .personInfoCircle {
+        margin-right: 15px;
+    }
+    .personInfoCircle {
+        width: 60px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #79A7A9;
+        background: #80B0B2;
+        color: #FFF;
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        padding: 18px 0px;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 420px) {
+    .personNameField{
+        width: 110px;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 306px) {
+    .tabletProfileCoursesField {
+        width: 160px;
+        height: 210px;
+        position: absolute;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 307px) and (max-width: 372px) {
+    .tabletProfileCoursesField {
+        width: 185px;
+        height: 210px;
+        position: absolute;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 373px) and (max-width: 435px) {
+    .tabletProfileCoursesField {
+        width: 235px;
+        height: 160px;
+        position: absolute;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 430px) {
+    .personSignOrInfo{
+        height: 58px;
+    }
+    .personNameField{
+        height: 58px;
+    }
+    .personName{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .tabletCoursesUnderline{
+        display: none;
+    }
+    .header{
+        display: none;
+    }
+    .tabletHeader{
+        display: block;
+    }
+    .mainHeader{
+        height: 65px;
+    }
+    .mainField {
+        width: 88%;
+        margin: 21px 5.76% 9px 6.83%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logoTabletField > a > img{
+        width: 120px;
+        height: 22px;
+    }
+    .tabletMenuIcon{
+        width: 21px;
+        height: 14px;
+    }
+    .tabletMenuField > button{
+        display: none;
+    }
+    .tabletMenuField{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+    }
+    .menuTabletHeader{
+        /*width: 0%;*/
+        height: 706px;
+        top:65px;
+    }
+    .personMainMenu{
+        top:65px;
+    }
+    .personCoursesMenuList{
+        top:65px;
+    }
+    .personInfoCircle{
+        margin-right: 23px;
+    }
+    .personInfoCircleMobile{
+        display: none;
+    }
+    .personInfoField{
+        left: 23px;
+        width: 89%;
+    }
+    .personSignOrInfo{
+        width: 79%;
+        margin-right: 10px;
+    }
+    .tabletMenuNavField{
+        height: 545px;
+        width: 89%;
+        top: 32px;
+        margin: 0px 26px 20px 23px;
+    }
+    .tabletMenuNavField > ul{
+        /*width: 100%;*/
+        height: 448px;
+    }
+    .tabletMenuNavbar{
+        height: 600px;
+    }
+    .tabletCoursesList{
+        margin-bottom: 0px;
+    }
+    .searchFlagField{
+        height: 84px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .btn-searchTablet {
+        width: 50px;
+        height: 50px;
+        border-style: none;
+        font-size: 15px;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 38px;
+        left: -10px;
+        color: #ffffff;
+        background-color: transparent;
+        pointer-events: painted;
+    }
+    .tabletFlagField > a {
+        margin: 2px;
+    }
+
+    .personSignField > span{
+        display: none;
+    }
+    .personSignField {
+        width: max-content;
+        height: 46px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .personSignField > a{
+        color: white;
+    }
+    .personSignField > a:hover{
+        color: #F36528;
+    }
+    .tabletProfileCoursesField{
+        margin: 40px 21px 40px 23px;
+    }
+    .tabletProfileMenuField{
+        margin: 40px 23px;
+    }
+}
+/*end header css*/
+/*start main css*/
+/*section One*/
+@media only screen and (min-width: 270px) and (max-width: 329px) {
+    .applyMarket {
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 21.1px;
+        width: 100%;
+        font-family: "Roboto Slab", sans-serif;
+        font-weight: 900;
+        font-size: 16px;
+        color: #F36528;
+        z-index: 10;
+    }
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 4%;
+        top: 138px;
+        width: 92%;
+        height: 590px;
+        position: absolute;
+    }
+    .boundaries {
+        text-align: center;
+        margin-bottom: 35em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 13px;
+        font-weight: 500;
+        z-index: 10;
+    }
+}
+@media only screen and (min-width: 330px) and (max-width: 409px) {
+    .applyMarket {
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 21.1px;
+        width: 100%;
+        font-family: "Roboto Slab", sans-serif;
+        font-weight: 900;
+        font-size: 16px;
+        color: #F36528;
+        z-index: 10;
+    }
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 8%;
+        top: 138px;
+        width: 85%;
+        height: 590px;
+        position: absolute;
+    }
+    .boundaries {
+        text-align: center;
+        margin-bottom: 32em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        z-index: 10;
+    }
+}
+@media only screen and (min-width: 410px) and (max-width: 449px) {
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 14%;
+        top: 138px;
+        width: 76%;
+        height: 610px;
+        position: absolute;
+    }
+    .applyMarket {
+        text-align: center;
+        letter-spacing: 2px;
+        width: 100%;
+        font-family: "Roboto Slab", sans-serif;
+        font-weight: 900;
+        font-size: 25px;
+        color: #F36528;
+        z-index: 10;
+    }
+    .boundaries {
+        text-align: center;
+        margin-bottom: 32em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        z-index: 10;
+    }
+}
+@media only screen and (min-width: 450px) and (max-width: 499px) {
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 14%;
+        top: 138px;
+        width: 76%;
+        height: 630px;
+        position: absolute;
+    }
+    .applyMarket {
+        text-align: center;
+        letter-spacing: 2px;
+        width: 100%;
+        font-family: "Roboto Slab", sans-serif;
+        font-weight: 900;
+        font-size: 25px;
+        color: #F36528;
+        z-index: 10;
+    }
+    .boundaries {
+        text-align: center;
+        margin-bottom: 32em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        z-index: 10;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 529px) {
+    .boundaries {
+        text-align: center;
+        margin-bottom: 24em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 10;
+    }
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 14%;
+        top: 138px;
+        width: 76%;
+        height: 630px;
+        position: absolute;
+    }
+}
+@media only screen and (min-width: 530px) and (max-width: 560px) {
+    .boundaries {
+        text-align: center;
+        margin-bottom: 24em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 10;
+    }
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 14%;
+        top: 138px;
+        width: 76%;
+        height: 640px;
+        position: absolute;
+    }
+}
+@media only screen and (min-width: 561px) and (max-width: 599px) {
+    .boundaries {
+        text-align: center;
+        margin-bottom: 24em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 10;
+    }
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 14%;
+        top: 138px;
+        width: 76%;
+        height: 655px;
+        position: absolute;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+    .applyMarket {
+        text-align: center;
+        letter-spacing: 2px;
+        width: 100%;
+        font-family: "Roboto Slab", sans-serif;
+        font-weight: 900;
+        font-size: 30px;
+        color: #F36528;
+        z-index: 10;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .headerBackground {
+        background-image: url("../images/headerimgMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 812px;
+    }
+
+    .apply > a > img{
+        width: 94px;
+        height: 40px;
+    }
+    .apply > a > span{
+        top: 14px;
+        font-size: 10px;
+    }
+}
+/*section Two*/
+@media only screen and (min-width: 270px) and (max-width: 380px) {
+    .sectionInfoMobile > .carousel{
+        height: 150px;
+    }
+    .sectionInfoMobile > .carousel > ul{
+        margin-top: 39px;
+    }
+    .sectionInfoMobile{
+        height: 156px;
+        margin-top: 26px;
+    }
+    .numbersInfo{
+        width: 108px;
+        height: 107px;
+    }
+    .numbersInfo > img{
+        width: 60px;
+        height: 60px;
+    }
+    .numberSectionTwo{
+        font-size: 18px;
+        font-weight: 700
+    }
+    .addSymbol{
+        font-size: 18px;
+        font-weight: 700
+    }
+    .textSectionTwo{
+        font-weight: 400;
+        font-size: 13px;
+    }
+}
+@media only screen and (min-width: 381px) and (max-width: 599px) {
+    .sectionInfoMobile{
+        height: 156px;
+        margin-top: 26px;
+    }
+    .numbersInfo{
+        width: 108px;
+        height: 162px;
+    }
+    .numbersInfo > img{
+        width: 84px;
+        height: 84px;
+    }
+    .numberSectionTwo{
+        font-size: 32px;
+        font-weight: 700
+    }
+    .addSymbol{
+        font-size: 32px;
+        font-weight: 700
+    }
+    .textSectionTwo{
+        font-weight: 400;
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .sectionTwo{
+        background-image: url("../images/diagonalMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 208px;
+    }
+    .sectionInfo{
+        display: none;
+    }
+
+    .sectionInfoMobile > .carousel{
+        width: 108px;
+        overflow: hidden;
+    }
+    .sectionInfoMobile > .carousel > ul{
+        width: 100%;
+        padding: 0px;
+    }
+}
+/*section Four*/
+@media only screen and (min-width: 270px) and (max-width: 375px) {
+    .questions {
+        width: 100%;
+        height: 474px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .leftQuestions {
+        width: 100%;
+    }
+    .rightQuestions {
+        width: 100%;
+    }
+    .freqLook {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: white;
+    }
+    .answersField {
+        width: 100%;
+        min-height: 64px;
+        margin-bottom: 14px;
+        border-radius: 32px;
+        padding: 0px 26px;
+        background: rgba(147, 188, 191, 0.7);
+    }
+    .questions {
+        width: 100%;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 500px) {
+    .answers {
+        margin: 60px 5% 0px;
+        width: 90%;
+        height: 657px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .questionField > span{
+        font-size: 12px;
+    }
+    .answerQuestion {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        padding: 30px 0px;
+        font-size: 12px;
+        color: white;
+        display: none;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .sectionFour{
+        background-image: url("../images/sectionFourMobile.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: -21px;
+        width: 100%;
+        height: 739px;
+    }
+    .freqAsked {
+        font-size: 16px;
+        font-family: "Roboto Slab", sans-serif;
+        font-weight: 900;
+        color: #F16D35;
+        letter-spacing: 1.25px;
+        text-align: center;
+    }
+    .frequency {
+        width: 100%;
+        height: 65px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+/*sectionFive*/
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .sectionFive{
+        background-image: url("../images/partnerBgMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 246px;
+        margin-top: 0px;
+        position:relative;
+    }
+    .partnerSection {
+        width: 100%;
+        height: 180px;
+        position: absolute;
+        margin: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 50%;
+        top: 41%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+    .tabletWebPartner{
+        display: none;
+    }
+    .mobilePartner{
+        padding-left: 0px;
+        overflow: hidden;
+        margin: 0px auto;
+        width: 113px;
+    }
+    .mobilePartner > .carousel-slide > img{
+        width: 113px;
+        height: 113px;
+    }
+    .partnersTitle {
+        font-family: "Roboto Slab", sans-serif;
+        font-size: 22px;
+        font-weight: 900;
+        letter-spacing: 1.1px;
+        color: #F16D35;
+    }
+}
+/*start sectionSix css*/
+@media only screen and (min-width: 270px) and (max-width: 299px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 139px;
+        margin: 0px 46px 28px;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 329px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 158px;
+        margin: 0px 46px 28px;
+    }
+}
+@media only screen and (min-width: 330px) and (max-width: 359px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 178px;
+        margin: 0px 46px 28px;
+    }
+}
+@media only screen and (min-width: 360px) and (max-width: 380px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 191px;
+        margin: 0px 46px 28px;
+    }
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 83%;
+        height: 145px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 381px) and (max-width: 409px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        /*background-size: 100%;*/
+        width: 75%;
+        height: 190px;
+        margin: 0px 14.5%  28px;
+    }
+}
+@media only screen and (min-width: 410px) and (max-width: 439px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        width: 70%;
+        height: 190px;
+        margin: 0px 16.5%  28px;
+    }
+}
+@media only screen and (min-width: 440px) and (max-width: 479px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        width: 65%;
+        height: 190px;
+        margin: 0px 18.5%  28px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 519px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        width: 60%;
+        height: 190px;
+        margin: 0px 21.5%  28px;
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 560px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        width: 55%;
+        height: 190px;
+        margin: 0px 0px 28px 23.5%;
+    }
+}
+@media only screen and (min-width: 561px) and (max-width: 599px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        width: 51%;
+        height: 190px;
+        margin: 0px 0px 28px 25.5%;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 284px) {
+    .testimonialSimbol img {
+        width: 12px;
+        height: 10px;
+    }
+    .testimonialsText {
+        width: 100%;
+        height: 63px !important;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 15.23px;
+        text-align: justify;
+    }
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 82%;
+        height: 98px;
+        display: flex;
+        margin: 4% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 285px) and (max-width: 299px) {
+    .testimonialSimbol img {
+        width: 12px;
+        height: 10px;
+    }
+    .testimonialsText {
+        width: 100%;
+        height: 77px !important;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 15.23px;
+        text-align: justify;
+    }
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 82%;
+        height: 109px;
+        display: flex;
+        margin: 4% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 314px) {
+    .testimonialsText {
+        width: 100%;
+        height: 77px !important;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 15.23px;
+        text-align: justify;
+    }
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 82%;
+        height: 115px;
+        display: flex;
+        margin: 4% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 315px) and (max-width: 329px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 83%;
+        height: 124px;
+        display: flex;
+        margin: 4% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 330px) and (max-width: 344px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 83%;
+        height: 130px;
+        display: flex;
+        margin: 6% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 345px) and (max-width: 359px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 83%;
+        height: 136px;
+        display: flex;
+        margin: 6% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 381px) and (max-width: 394px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 80%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 395px) and (max-width: 409px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 78%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 410px) and (max-width: 424px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 80%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 425px) and (max-width: 439px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 78%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 440px) and (max-width: 459px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 80%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 460px) and (max-width: 479px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 76%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 499px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 79%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 519px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 76%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 539px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 80%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 540px) and (max-width: 560px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 77%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 561px) and (max-width: 580px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 80%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 581px) and (max-width: 599px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 78%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .blockTestimonialMobile{
+        position: relative;
+    }
+    .mobileTestimonial{
+        margin-top: 45px;
+    }
+    .webTabletTestimonial{
+        display: none;
+    }
+    .sectionSix{
+        margin-top: 0px;
+        background: linear-gradient(#2F688C, #5E91A2);
+        width: 100%;
+        height: 905px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .testimonial {
+        margin: 50px 0 0 0;
+        width: 100%;
+        height: 809px;
+        position: absolute;
+    }
+    .testimonialOrangeTitle{
+        font-size: 16px;
+        font-family: "Roboto Slab",sans-serif;
+        font-weight: 900;
+        letter-spacing: 2px;
+        line-height: 21.1px;
+        color: #F16D35;
+    }
+    .testimonialWhiteTitle{
+        font-family: "Roboto",sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #FFFFFF;
+    }
+    .testimonialsTitles {
+        height: 57px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .webTabletTestimonial{
+        margin-top: 45px;
+    }
+    .testimonialMobileBtn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 45px;
+    }
+    .testimonialsText {
+        width: 100%;
+        height: 90px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 15.23px;
+        text-align: justify;
+    }
+    .testimonialsAuthor{
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        height: 18px;
+        line-height: 17.58px;
+    }
+    .fieldsLinkdin {
+        height: 18px;
+    }
+    .fieldsLinkdin img{
+        width: 15px;
+        height: 15px;
+    }
+    .testimonialSimbol{
+        height: 12px;
+        display: flex;
+    }
+    .testimonialSimbol img{
+        width: 15px;
+        height: 12px;
+    }
+    .blockTestimonial {
+        display: flex;
+        height: auto;
+        align-items: start;
+        justify-content: center;
+    }
+}
+
+/*start sectionseven css*/
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .sectionSeven{
+        margin-top: 0px;
+        background: #ACCBE6;
+        /*background-image: url("../images/blogBg.png");*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: center;*/
+        /*background-size: cover;*/
+        width: 100%;
+        height: 1077px;
+    }
+}
+/*end main css*/
