@@ -11,8 +11,22 @@ if (isset($_COOKIE['email'])){
     $email = '';
 }
 ?>
+<?php
+$language = $_COOKIE['language'];
+$class1 = '';
+
+if ($language == 'en') {
+} elseif ($language == 'am') {
+    $class1 = 'loginFieldAm';
+} elseif ($language == 'ru') {
+    $class1 = 'loginFieldAm';
+}
+?>
 <div class="login">
-    <div class="loginField">
+    <div class="loginField <?php echo $class1; ?>">
+        <div class="signupFormTitle">
+            <?=$GLOBALS['text']['signinFormTitle']?>
+        </div>
         <div class="textCircle">
             <div class="mainTextCircle">
                 <div class="circleTextTop"><?=$GLOBALS['text']['signinTextOne']?> <span><?=$GLOBALS['text']['signinTextTwo']?></span> <?=$GLOBALS['text']['signinTextThree']?> <span><?=$GLOBALS['text']['signinTextFour']?></span> <?=$GLOBALS['text']['signinTextFive']?> <span><?=$GLOBALS['text']['signinTextSix']?></span> <?=$GLOBALS['text']['signinTextSeven']?></div>

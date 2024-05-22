@@ -263,9 +263,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?= $content ?>
 </main>
 
-<!--<footer class="footerBackground">-->
-<!--    <div class="sectionFooter">-->
-<!--        <div class="imagesFooterFields">-->
+<footer class="footerBackground">
+    <div class="sectionFooter">
+        <div class="imagesFooterFields">
 <!--            <div class="leftFooterBg">-->
 <!--                <div class="footerFields">-->
 <!--                    <div class="footerLogo">-->
@@ -335,9 +335,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <!--                <img src="/images/visaCardLogo.png" alt="">-->
 <!--                <img src="/images/masterCardLogo.png" alt="">-->
 <!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
+        </div>
+    </div>
+</footer>
 <?php $this->endBody() ?>
 </body>
 </html>

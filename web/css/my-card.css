@@ -541,7 +541,6 @@
     font-size: 24px;
     font-family: "Roboto",sans-serif;
     margin-left: 21px;
-
 }
 .mainCreditField > label >img{
     width: 33px;
@@ -669,7 +668,9 @@
     color: #F36528;
     position: absolute;
     left: 0;
-    margin: 15px 8px;
+    text-align: center;
+    margin: 15px 0px;
+    width: 100%;
 }
 .checkoutTotalFieldInfoBottom > button:hover span{
     color: white;
@@ -803,13 +804,18 @@
     height: 885px;
     background-image: url("../images/background-congratulation-on-achievement-messages.png");
     background-repeat: no-repeat;
-}
-.congratulationMain{
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.congratulationMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
-    height: 100%;
+    height: 300px;
 }
 .spanHed{
     font-family: Roboto Slab;
@@ -826,12 +832,11 @@
     line-height: 41.02px;
     text-align: center;
     color: #FFFFFF;
-    padding-top: 44px;
+    margin: 0;
 }
 .CongratulationApplyNowBtnField{
     position: relative;
     width: max-content;
-    padding-top: 44px;
     text-align: center;
 }
 .CongratulationApplyNowBtnField > a{
@@ -844,15 +849,16 @@
 }
 .CongratulationApplyNowBtnField > a > span{
     color: #F36528;
-    margin: 25px 25px;
+    margin: 25px 0;
     position: absolute;
     left: 0px;
     font-family: 'Roboto';
     font-size: 13px;
     font-weight: 600;
     line-height: 18.2px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
+    width: 100%;
 }
 .CongratulationApplyNowBtnField > a:hover span{
     color: white;
@@ -875,6 +881,9 @@
 }
 .userProfileMenu > li > a:hover{
     color: #F36528;
+}
+.backButtonCheckout, .summary{
+    display: none;
 }
 /*LIKE*/
 .heart{
@@ -932,6 +941,13 @@
     }
 }
 @media screen and (max-width: 1600px) {
+    .checkoutFieldAm .mainCreditField > label >span,
+    .checkoutFieldAm .otherField > label >span{
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 21.09px;
+        text-align: left;
+    }
     .myCoursesFieldSection {
         margin: 36px 36px 37px 45px;
     }
@@ -965,6 +981,13 @@
     }
 }
 @media screen and (max-width: 1500px) {
+    .checkoutFieldRu .mainCreditField > label >span,
+    .checkoutFieldRu .otherField > label >span{
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 21.09px;
+        text-align: left;
+    }
     .myCardBlockButtons > span {
         font-size: 17px;
     }
@@ -1111,6 +1134,20 @@
     }
 }
 @media screen and (max-width: 1300px) {
+    .checkoutFieldRu .mainCreditField > label >span,
+    .checkoutFieldRu .otherField > label >span{
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    .checkoutFieldAm .mainCreditField > label >span,
+    .checkoutFieldAm .otherField > label >span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21.09px;
+        text-align: left;
+    }
     .myCardImageBlock {
         height: 55%;
     }
@@ -1161,8 +1198,24 @@
     }
 }
 @media screen and (max-width: 1100px) {
+    .congratulationMain {
+        height: 160px;
+    }
+    .CongratulationApplyNowBtnField > a > span{
+        font-family: 'Roboto';
+        font-size: 8px;
+        font-weight: 600;
+        line-height: 9.38px;
+        margin: 16px 0;
+    }
+    .congratulation {
+        height: 480px;
+    }
     .myCard {
         height: 846px;
+    }
+    .checkoutField {
+        height: 720px;
     }
     .myCardContent {
         padding-top: 95px;
@@ -1241,6 +1294,7 @@
         font-weight: 600;
         line-height: 29.01px;
         text-align: left;
+        margin: 0;
     }
     .spanAllCourses{
         font-size: 20px;
@@ -1251,6 +1305,7 @@
     .CongratulationApplyNowBtnField{
         width: 93.73px;
         height: 40px;
+        padding-top: 0;
     }
     .CongratulationApplyNowBtnField > button > span > a{
         font-size: 8px;
@@ -1278,6 +1333,7 @@
     }
     .checkoutTitleField >span {
         font-size: 13px;
+        margin-right: 0;
     }
     .checkoutInputsFirstField > span{
         font-size: 18px;
@@ -1295,6 +1351,20 @@
     }
     .mainCreditField > label >span{
         font-size: 18px;
+        font-weight: 400;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    .checkoutFieldRu .mainCreditField > label >span,
+    .checkoutFieldRu .otherField > label >span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    .checkoutFieldAm .mainCreditField > label >span,
+    .checkoutFieldAm .otherField > label >span{
+        font-size: 15px;
         font-weight: 400;
         line-height: 21.09px;
         text-align: left;
@@ -1343,13 +1413,13 @@
     .checkoutInputsSecondField {
         height: 150px;
     }
-    .checkoutCreditOtherField {
-        height: max-content;
-    }
+    /*.checkoutCreditOtherField {*/
+    /*    height: max-content;*/
+    /*}*/
     .checkoutInputsSectionRightField {
         width: 313px;
         height: 200px;
-        margin-top: 40px;
+        margin-top: 63px;
     }
     .sumTitle{
         font-size: 18px;
@@ -1387,8 +1457,9 @@
     }
     .checkoutInputsCreditField ,
     .checkoutInputLeftField,
-    .checkoutInputRightField{
-        height: 78px;
+    .checkoutInputRightField,
+    .checkoutInputsCreditFieldRow{
+        height: 69px;
     }
     .checkoutInputsCreditField > input,
     .checkoutInputLeftField > input,
@@ -1403,6 +1474,22 @@
     }
 }
 @media screen and (max-width: 1100px){
+    .checkoutInputLeftField > label,
+    .checkoutInputsCreditField > label,
+    .checkoutInputRightField > label{
+        font-family: Roboto;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 11.72px;
+    }
+    .checkoutCheckboxCreditField > input {
+        width: 15px;
+        height: 15px;
+    }
+    .checkoutCreditField {
+        height: 275px;
+        margin-top: 10px;
+    }
     .myCardImageBlock .span2_2 {
         font-family: 'Roboto';
         font-size: 10px;
@@ -1524,5 +1611,122 @@
     }
     .myCoursesBlocksFieldMain {
         height: 280px;
+    }
+}
+@media screen and (max-width: 840px){
+    .checkoutInputsRadioField {
+        width: 300px;
+    }
+    .mainCreditField > input,
+    .otherField > input{
+        margin-left: 17px;
+    }
+}
+@media screen and (max-width: 720px){
+    .checkoutInputsSectionLeftField {
+        width: 290px;
+    }
+    .checkoutInputsRadioField {
+        width: 273px;
+    }
+    .mainCreditField > label >img,
+    .otherField > label >img{
+        margin-left: 21px;
+    }
+    .checkoutTotalFieldInfo {
+        width: 200px;
+        margin: 0;
+    }
+    .checkoutInputsSectionRightField {
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 600px) {
+    .congratulation{
+        height: 700px;
+    }
+    .backButtonCheckout{
+        display: block;
+    }
+    .checkoutTitleField > div{
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.09px;
+    }
+    .checkoutTitleField >span {
+        font-size: 10px;
+    }
+    .checkoutInputsSectionRightField{
+        display: none;
+    }
+    .summary{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .summaryText{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFFFFF24;
+    }
+    .checkoutTotalFieldInfoBottom {
+        width: auto;
+    }
+    .sumTitle{
+        margin-bottom: 21px;
+    }
+    .summaryText p {
+        width: 85%;
+        font-family: 'Roboto';
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 13.09px;
+        color: white;
+        text-align: center;
+    }
+    .summaryText p a{
+        color: white;
+        font-family: Roboto;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 13.09px;
+        text-decoration: underline;
+    }
+    .sumPriceAll {
+        margin: 12px 0 8px;
+    }
+    .checkoutTotalFieldInfoBottom img{
+        width: 98.12px;
+        height: 40px;
+    }
+    .checkoutTotalFieldInfoBottom {
+        width: auto;
+        height: 56px;
+    }
+    .checkoutInputsSectionLeftField {
+        width: 100%;
+    }
+    .checkoutInputsFirstField {
+        width: 100%;
+    }
+    .checkoutInputsRadioField {
+        width: 100%;
+    }
+    .courseManualPriceField {
+        width: 100%;
+    }
+    .checkoutDetalisCoursesField {
+        width: 100%;
     }
 }
