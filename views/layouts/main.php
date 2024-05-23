@@ -263,7 +263,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?= $content ?>
 </main>
 
-<footer class="footerBackground">
+<footer class="footerBackground" id="footerBackgroundM">
     <div class="sectionFooter">
         <div class="imagesFooterFields">
 <!--            <div class="leftFooterBg">-->

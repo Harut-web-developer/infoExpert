@@ -108,7 +108,7 @@ if ($language == 'en') {
             </div>
         </div>
     </div>
-    <div class="summary">
+    <div class="summary" id="summary">
         <span class="sumTitle"><?=$GLOBALS['text']['checkoutSummary']?>:</span>
         <div class="summaryText">
             <span class="sumPriceAll">xxxx AMD</span>

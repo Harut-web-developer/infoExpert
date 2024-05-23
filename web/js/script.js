@@ -228,6 +228,38 @@ document.querySelectorAll('#section01 ion-icon').forEach(icon => {
         this.classList.toggle('active');
     });
 });
+if (window.location.pathname == '/personel-management/index'){
+    document.addEventListener('scroll', function() {
+        const bottomImages = document.getElementById('bottomImages');
+        const footerBackground = document.getElementById('footerBackgroundM');
+        const footerTop = footerBackground.getBoundingClientRect().top;
+        const bottomImagesHeight = bottomImages.offsetHeight;
+        const windowHeight = window.innerHeight;
+        if (footerTop + bottomImagesHeight <= windowHeight) {
+            bottomImages.classList.remove('fixed');
+            bottomImages.classList.add('none');
+        } else {
+            bottomImages.classList.remove('none');
+            bottomImages.classList.add('fixed');
+        }
+    });
+}
+if (window.location.pathname == '/my-card/checkout'){
+    document.addEventListener('scroll', function() {
+        const summary = document.getElementById('summary');
+        const footerBackground = document.getElementById('footerBackgroundM');
+        const footerTop = footerBackground.getBoundingClientRect().top;
+        const summaryHeight = summary.offsetHeight;
+        const windowHeight = window.innerHeight;
+        if (footerTop + summaryHeight <= windowHeight) {
+            summary.classList.remove('fixed');
+            summary.classList.add('none');
+        } else {
+            summary.classList.remove('none');
+            summary.classList.add('fixed');
+        }
+    });
+}
 $(document).ready(function () {
         $('body').on('click','.tabletMenuIcon', function () {
             if($(window).width() < 600){

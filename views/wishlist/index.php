@@ -9,7 +9,19 @@ $this->registerJsFile('@web/js/courses.js', ['position' => \yii\web\View::POS_EN
 $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
 $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
 ?>
-<div class="usersProfile wishlist">
+<?php
+$language = $_COOKIE['language'];
+$class1 = '';
+if ($language == 'en') {
+    $class1 = 'usersProfileEn';
+} elseif ($language == 'am') {
+    $class1 = 'usersProfileAm';
+
+} elseif ($language == 'ru') {
+    $class1 = 'usersProfileRu';
+}
+?>
+<div class="usersProfile wishlist <?php echo $class1; ?>">
     <div class="userProfileSection">
         <div class="userProfileMenuField">
             <span><?=$GLOBALS['text']['wishlistTitle']?></span>

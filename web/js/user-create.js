@@ -17,4 +17,13 @@ $(document).ready(function (){
     $('body').on('click','.attachCvImg', function () {
         $(this).closest('#attachCvEdit').children('input').click();
     })
+    $('body').on('click','.userAddPhotoTextMobile', function () {
+        $(this).siblings('input').click();
+    })
+    $('body').on('click','.attachCvMobile', function () {
+        $(this).closest('#attachCvMobile').children('input').click();
+    })
+    $('body').on('click','.attachCvMobile img', function () {
+        $(this).closest('#attachCvMobile').children('input').click();
+    })
 })

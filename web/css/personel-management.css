@@ -541,20 +541,6 @@ ion-icon {
         height: auto;
         margin-top: 20px;
     }
-    .bottomImages {
-        background: #FFFFFF24;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        height: 68px;
-        align-items: center;
-        justify-content: space-evenly;
-        position: fixed;
-        z-index: 100000;
-        left: 0;
-        bottom: 0;
-    }
     .footerBackground {
         margin-top: -37px !important;
     }
@@ -569,11 +555,26 @@ ion-icon {
     .personelManagement {
         background: #5D9A9D;
     }
-    .managementBtnDiv .button1{
-        top: 17px;
+}
+@media screen and (max-width: 600px) {
+    .bottomImages {
+        background: #7BADAF;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        height: 68px;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 100000;
+        left: 0;
     }
-    .managementBtnDiv .button2{
-        top: 8px;
+    #bottomImages.fixed {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    #bottomImages.none {
+        display: none;
     }
     .managementBtnDiv .button2,
     .managementBtnDiv .button1{
@@ -581,6 +582,7 @@ ion-icon {
         font-size: 10px;
         font-weight: 900;
         line-height: 11.72px;
+        top: 7.5px;
     }
     .bottomImages img {
         width: 102px;
@@ -595,9 +597,6 @@ ion-icon {
         color: #FFFFFF;
         height: max-content;
     }
-    /*.managementBtnDiv {*/
-    /*    height: max-content;*/
-    /*}*/
     .buttonDiv{
         display: flex;
         gap: 10px;
@@ -606,8 +605,9 @@ ion-icon {
         margin: 0;
         padding: 0;
     }
-}
-@media screen and (max-width: 600px) {
+    .managementBtnDiv .button1{
+        top: 17px;
+    }
     .ellipseButton {
         display: block;
         position: absolute;
@@ -643,5 +643,21 @@ ion-icon {
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
+    }
+}
+@media screen and (max-width: 400px){
+    .bottomImages img {
+        width: 90px;
+        height: 40px;
+    }
+    .amdFix {
+        font-size: 13px;
+        margin-left: 20px;
+    }
+    .managementBtnDiv .button1 {
+        top: 15px;
+    }
+    .buttonDiv {
+        margin: 0 20px 0 0;
     }
 }

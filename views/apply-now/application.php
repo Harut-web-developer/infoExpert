@@ -9,10 +9,10 @@ $this->registerCssFile('@web/css/apply-now.css');
             <div class="applicationTextUnderline"><?=$GLOBALS['text']['applicationText']?></div>
         </div>
         <div class="applicationButton">
-            <button>
+            <a href="/">
                 <img src="/images/applicationBtn.png" alt="">
-                <span><?=$GLOBALS['text']['applicationBtn']?></span>
-            </button>
+                <div><?=$GLOBALS['text']['applicationBtn']?></div>
+            </a>
         </div>
     </div>
 </div>

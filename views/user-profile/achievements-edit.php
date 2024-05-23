@@ -2,7 +2,18 @@
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/user-profile.css');
 ?>
-<div class="usersAchievements">
+<?php
+$language = $_COOKIE['language'];
+$class1 = '';
+if ($language == 'en') {
+    $class1 = 'usersProfileEn';
+} elseif ($language == 'am') {
+    $class1 = 'usersProfileAm';
+} elseif ($language == 'ru') {
+    $class1 = 'usersProfileRu';
+}
+?>
+<div class="usersAchievements <?php echo $class1; ?>">
     <div class="userAchievementsSection">
         <div class="userProfileMenuField">
             <span><?=$GLOBALS['text']['editProfileTitle']?></span>

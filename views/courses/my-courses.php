@@ -2,6 +2,18 @@
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/courses.css');
 ?>
+<?php
+$language = $_COOKIE['language'];
+$class1 = '';
+if ($language == 'en') {
+    $class1 = 'myCoursesEn';
+} elseif ($language == 'am') {
+    $class1 = 'myCoursesAm';
+
+} elseif ($language == 'ru') {
+    $class1 = 'myCoursesRu';
+}
+?>
 <div class="myCourses">
     <div class="myCoursesSection">
         <div class="userProfileMenuField">
