@@ -30,6 +30,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/mainTablet.css">
     <link rel="stylesheet" href="/css/mainMobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -292,6 +293,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <!--                        </div>-->
 <!--                        <div class="footerConn">-->
 <!--                            <span>--><?php //= $GLOBALS['text']['footerTextConn']?><!--</span>-->
+<!--                            <div class="footerSocialMobile">-->
+<!--                                <a href=""><img src="/images/in.png" alt=""></a>-->
+<!--                                <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>-->
+<!--                                <a href=""><img src="/images/facebook.png" alt=""></a>-->
+<!--                            </div>-->
 <!--                        </div>-->
 <!--                        <div class="footerBtn">-->
 <!--                            <input type="text" name="leftEmail" placeholder="--><?php //= $GLOBALS['text']['footerEmailCon']?><!--">-->
@@ -334,6 +340,18 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <!--            <div class="payLogoFooter">-->
 <!--                <img src="/images/visaCardLogo.png" alt="">-->
 <!--                <img src="/images/masterCardLogo.png" alt="">-->
+<!--            </div>-->
+<!--            <div class="footerMobilePolicy">-->
+<!--                <div class="policyTextMobile">-->
+<!--                    <ul>-->
+<!--                        <li><a href="">--><?php //= $GLOBALS['text']['footerPolicy']?><!--&nbsp</a></li>-->
+<!--                        <li><a href="">&nbsp--><?php //= $GLOBALS['text']['footerTerms']?><!--</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="payLogoFooterMobile">-->
+<!--                    <img src="/images/visaCardLogo.png" alt="">-->
+<!--                    <img src="/images/masterCardLogo.png" alt="">-->
+<!--                </div>-->
 <!--            </div>-->
 <!--        </div>-->
 <!--    </div>-->

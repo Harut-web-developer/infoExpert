@@ -166,7 +166,7 @@
     }
 }
 /*sectionThree*/
-    @media only screen and (min-width: 376px) and (max-width: 1024px)  {
+    @media only screen and (min-width: 600px) and (max-width: 1024px)  {
     .sectionThree{
         background-image: url("../images/bgTablet.png");
         background-position: center;
@@ -362,92 +362,12 @@
     }
 }
 /*sectionthree */
-@media only screen and (min-width: 420px) and (max-width: 539px) {
-    .courseLogo > img{
-        /*margin-top:10px;*/
-        margin-left: 16px;
-        width: 100%;
-        height: 21px;
-    }
-    .learnImg > img {
-        width: 200px;
-        height: 200px;
-    }
-    .coursesBg{
-        background-image: url("../images/recTablet.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        width: 100%;
-        height: 60px;
-        top: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .coursesBg > span{
-        margin-top: 13px;
-        color: #F16D35;
-        font-family: "Roboto Slab", sans-serif;
-        font-size: 20px;
-        font-weight: 900;
-        letter-spacing: 1.5px;
-    }
-    .coursesBg > p{
-        color: white;
-        font-size: 14px;
-        font-family: "Roboto", sans-serif;
-        font-width: 400;
-    }
-    .logoManagement{
-        width: 230px;
-        height: 52px;
-        display: flex;
-        flex-direction: row;
-    }
-    .courseLogo{
-        width: 27px;
-    }
-    .courseLogo > img{
-        /*margin-top:10px;*/
-        margin-left: 30px;
-        width: 100%;
-        height: 21px;
-    }
-    .courseTitle{
-        width:159px;
-        padding-left:40px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-    .courseTitle > span{
-        -webkit-text-stroke: 1px white;
-        font-size: 15px;
-        font-weight: 900;
-        letter-spacing: 2.2px;
-        color: transparent;
-    }
-    .managementBtn > a > img{
-        width: 100px;
-        height: 50px;
-
-    }
-    .managementBtn > a >span{
-        position: absolute;
-        font-family: "Roboto",sans-serif;
-        font-size: 10px;
-        font-weight: 900;
-        left: 0px;
-        top: 6px;
-        width: 100%;
-        text-align: center;
-        color: #F36528;
+@media only screen and (min-width: 600px) {
+    .learnMobile{
+        display: none;
     }
 }
-@media only screen and (min-width: 540px) and (max-width: 670px) {
+@media only screen and (min-width: 600px) and (max-width: 670px) {
     .learnImg > img {
         width: 250px;
         height: 250px;
@@ -713,99 +633,7 @@
         display: none;
     }
 }
-/*@media only screen and (min-width: 376px) and (max-width: 519px) {*/
-/*    .blockTestimonial{*/
-/*        background-image: url("../images/inactivetestimonial.png");*/
-/*        background-repeat: no-repeat;*/
-/*        background-size: 100%;*/
-/*        !*width: 29%;*!*/
-/*        height: 100%;*/
-/*    }*/
-/*    .blockTestimonial:hover{*/
-/*        background-image: url("../images/activetestimonial.png");*/
-/*        background-repeat: no-repeat;*/
-/*        background-size: 100%;*/
-/*        cursor: pointer;*/
-/*        !*width: 29%;*!*/
-/*        height: 100%;*/
-/*    }*/
-/*}*/
-/*@media only screen and (min-width: 520px) and (max-width: 559px) {*/
-/*    .intoBlockTestimonial {*/
-/*        width: 79%;*/
-/*        height: 30%;*/
-/*        margin: 11.5% 9%;*/
-/*        padding: 4px 0 4px;*/
-/*    }*/
-/*    .testimonialSimbol > img{*/
-/*        width: 15px;*/
-/*    }*/
-/*    .fieldsLinkdin > a > img{*/
-/*        width: 24px;*/
-/*    }*/
-/*    .testimonialsText {*/
-/*        width: 100%;*/
-/*        height: 72px;*/
-/*        font-family: "Roboto", sans-serif;*/
-/*        font-weight: 400;*/
-/*        font-size: 16px;*/
-/*        color: white;*/
-/*        overflow: hidden;*/
-/*        text-overflow: ellipsis;*/
-/*    }*/
-/*    .testimonialsAuthor {*/
-/*        font-family: "Roboto", sans-serif;*/
-/*        font-weight: 400;*/
-/*        font-size: 21px;*/
-/*        width: 141px;*/
-/*        color: white;*/
-/*        display: -webkit-box;*/
-/*        -webkit-line-clamp: 2;*/
-/*        -webkit-box-orient: vertical;*/
-/*        height: 31px;*/
-/*        overflow: hidden;*/
-/*        text-overflow: ellipsis;*/
-/*        white-space: pre-wrap;*/
-/*    }*/
-/*}*/
-/*@media only screen and (min-width: 560px) and (max-width: 599px) {*/
-/*    .intoBlockTestimonial {*/
-/*        width: 79%;*/
-/*        height: 35%;*/
-/*        margin: 11.5% 9%;*/
-/*        padding: 11px 0 11px;*/
-/*    }*/
-/*    .testimonialSimbol > img{*/
-/*        width: 15px;*/
-/*    }*/
-/*    .fieldsLinkdin > a > img{*/
-/*        width: 22px;*/
-/*    }*/
-/*    .testimonialsText {*/
-/*        width: 100%;*/
-/*        height: 80px;*/
-/*        font-family: "Roboto", sans-serif;*/
-/*        font-weight: 400;*/
-/*        font-size: 14px;*/
-/*        color: white;*/
-/*        overflow: hidden;*/
-/*        text-overflow: ellipsis;*/
-/*    }*/
-/*    .testimonialsAuthor {*/
-/*        font-family: "Roboto", sans-serif;*/
-/*        font-weight: 400;*/
-/*        font-size: 19px;*/
-/*        width: 141px;*/
-/*        color: white;*/
-/*        display: -webkit-box;*/
-/*        -webkit-line-clamp: 2;*/
-/*        -webkit-box-orient: vertical;*/
-/*        height: 28px;*/
-/*        overflow: hidden;*/
-/*        text-overflow: ellipsis;*/
-/*        white-space: pre-wrap;*/
-/*    }*/
-/*}*/
+
 @media only screen and (min-width: 600px) and (max-width: 649px) {
     .intoBlockTestimonial {
         width: 79%;
@@ -818,6 +646,7 @@
     }
     .fieldsLinkdin > a > img{
         width: 27px;
+        height: 21px;
     }
     .testimonialsText {
         width: 100%;
@@ -856,6 +685,7 @@
     }
     .fieldsLinkdin > a > img{
         width: 28px;
+        height: 21px;
     }
     .testimonialsText {
         width: 100%;
@@ -1009,7 +839,7 @@
         height: calc(100% / 2) !important;
     }
 }
-@media only screen and (min-width: 600px) and (max-width: 950px) {
+@media only screen and (min-width: 600px) and (max-width: 949px) {
     .intoBlockTestimonial {
         width: 81%;
         height: calc(100% / 2 + 8px);
@@ -1115,7 +945,7 @@
     }
     .testimonialsText {
         width: 100%;
-        height: 100px;
+        height: 97px;
         font-family: "Roboto", sans-serif;
         font-weight: 400;
         font-size: 16px;
@@ -1153,7 +983,7 @@
     }
     .testimonialsText {
         width: 100%;
-        height: 120px;
+        height: 117px;
         font-family: "Roboto", sans-serif;
         font-weight: 400;
         font-size: 16px;
@@ -1191,7 +1021,7 @@
     }
     .testimonialsText {
         width: 100%;
-        height: 140px;
+        height: 135px;
         font-family: "Roboto", sans-serif;
         font-weight: 400;
         font-size: 18px;
@@ -1376,7 +1206,7 @@
     }
     .testimonialsText{
         width: 100%;
-        height: 155px;
+        height: 150px;
         font-family: "Roboto",sans-serif;
         font-weight: 400;
         font-size: 17px;
@@ -1434,7 +1264,7 @@
     }
     .testimonialsText{
         width: 100%;
-        height: 205px;
+        height: 199px;
         font-family: "Roboto",sans-serif;
         font-weight: 400;
         font-size: 22px;
@@ -1490,11 +1320,14 @@
         height: 115px;
     }
 }
-/*@media only screen and (min-width: 800px) and (max-width: 900px) {*/
-/*    .cardsimg{*/
-/*        height: 100px;*/
-/*    }*/
-/*}*/
+@media only screen and (min-width: 600px) {
+    .blogsTextMobile{
+        display: none;
+    }
+    .blogsMobileBtn{
+        display: none;
+    }
+}
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
     .sectionSeven{
         margin-top: -49px;
@@ -1515,7 +1348,7 @@
         justify-content: space-between;
         align-items: center;
     }
-    .sectionBlog > span{
+    .blogsTitle{
         color: #F16D35;
 
         font-family: "Roboto Slab",sans-serif;
@@ -1581,7 +1414,7 @@
     }
     .cardsLike{
         height: 28px;
-        width: 73%;
+        width: 85%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -1590,7 +1423,7 @@
     .cardsLike > a{
         color: #F36528;
         font-family: "Roboto",sans-serif;
-        font-size: 12px;
+        font-size: 11px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -1619,9 +1452,14 @@
         font-style: normal;
         line-height: normal;
     }
-    /*.blogLine {*/
-    /*    width: 45%;*/
-    /*}*/
+    #section01 .large-font{
+        width: 26px;
+        height: 24px;
+    }
+    #section01 ion-icon{
+        width: 23.63px;
+        height: 15.63px;
+    }
 }
 @media only screen and (min-width: 600px) and (max-width: 659px) {
     .blogBtn{
@@ -1635,9 +1473,11 @@
         height: 48px;
     }
     .blogBtn > a > span {
+        top: 3px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 3px 27px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1664,9 +1504,11 @@
         height: 48px;
     }
     .blogBtn > a > span {
+        top: 3px;
         left: 0;
+        width: 100%;
+        text-align: center;
         position: absolute;
-        margin: 3px 27px;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -1809,37 +1651,6 @@
     .cardsimg{
         height: 170px;
     }
-    .blogBtn {
-        width: 140px;
-    }
-    .blogLine {
-        width: 28%;
-    }
-    .blogBtn > a > img{
-        width: 140px;
-        height: 55px;
-    }
-    .blogBtn > a > span {
-        top: 4px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        font-family: "Roboto", sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-        color: #F36528;
-    }
-    .blogText{
-        width: 291px;
-        font-family: "Roboto",sans-serif;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        color: #1C5484;
-    }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1099px) {
     .blogBtn {
         width: 140px;
     }
@@ -2140,6 +1951,14 @@
     }
 }
 /*footer section*/
+@media only screen and (min-width: 600px) {
+    .footerMobilePolicy{
+        display: none;
+    }
+    .footerSocialMobile{
+        display: none;
+    }
+}
 @media only screen and (min-width: 740px) and (max-width: 1340px) {
     .footerBackground{
         margin-top: -53px;

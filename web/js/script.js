@@ -1,3 +1,9 @@
+if($(window).width()<=600){
+    $('.img-prev').each(function(){
+        $(this).next().addClass('img-prev').removeClass('img-top');
+        $(this).remove();
+    });
+}
 $(".menuAboutDropDown").hover(function(){
     $('.dropDownAbout').show();
 },function(){
@@ -116,6 +122,7 @@ if (window.location.pathname == '/'){
     });
 }
 $(document).ready(function () {
+
     $('body').on('click', '.mainFlag', function () {
         $(this).closest('.flagFields').find('.otherFlags').toggle();
     });
@@ -221,6 +228,33 @@ if (window.location.pathname == '/') {
             like_cnt.removeClass("checked");
             like_cnt.find(".heartMain").attr("src", "/images/innerHeart2.png");
         }
+    });
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const slider = document.querySelector('.sliderCourses');
+        slider.innerHTML += slider.innerHTML; // Duplicate the slides for continuous effect
+
+        let position = 0;
+        const slideWidth = slider.offsetWidth / 2;
+        const pauseTime = 5000; // Pause for 5 seconds
+        const slideSpeed = 1; // Adjust the speed as necessary
+
+        function animateSlider() {
+            position -= slideSpeed;
+            if (position <= -slideWidth) {
+                position = 0;
+                slider.style.transition = 'none'; // Disable transition to reset position instantly
+                slider.style.transform = `translateX(${position}px)`;
+                setTimeout(() => {
+                    slider.style.transition = ''; // Re-enable transition after pause
+                    requestAnimationFrame(animateSlider);
+                }, pauseTime);
+            } else {
+                slider.style.transform = `translateX(${position}px)`;
+                requestAnimationFrame(animateSlider);
+            }
+        }
+        animateSlider();
     });
 }
 document.querySelectorAll('#section01 ion-icon').forEach(icon => {
@@ -364,5 +398,11 @@ $(document).ready(function () {
             }
         });
     }
-
+    $('.autoplay').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    });
 })
+
