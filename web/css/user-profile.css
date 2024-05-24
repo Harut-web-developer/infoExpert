@@ -8,7 +8,7 @@
     background-position: center;
     background-size: cover;
 }
-.userCreateTitleField, .userCreateMoreInfo{
+.userCreateTitleField, .userCreateMoreInfo, .editAchievementsBtn{
     display: none;
 }
 .userCreateFieldFormsMobile{
@@ -216,7 +216,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 24px 0px 24px 11px;
+    margin: 17px 0px 17px 11px;
 }
 .attachCv > span{
     margin-right: 10px;
@@ -250,7 +250,7 @@
     width: 67%;
     height: 686px;
     position: absolute;
-    margin: 235px 16.5% 77px 16.5%;
+    margin: 212px 16.5% 77px 16.5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -394,17 +394,22 @@
     color: white;
 }
 .sameInfo{
+    width: 250px;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
+    word-wrap: break-word;
 }
 .sameInfo > span{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: white;
     margin-left: 42px;
+    padding-right: 20px;
+    white-space: normal;
+    width: -webkit-fill-available;
 }
 .cartificateImg_{
     background: #FFFFFF24;
@@ -532,6 +537,9 @@
 .attachCvEdit > span{
     margin-right: 10px;
     color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     text-decoration: underline;
 }
 .cvFileEdit{
@@ -578,6 +586,9 @@
 .editPhoto:hover{
     cursor:pointer;
 }
+.usersProfileAm .userProfileMenu {
+    width: 550px;
+}
 @media screen and (max-width: 1600px) {
     .certificate {
         height: auto;
@@ -591,6 +602,10 @@
     .cartificateImg img {
         width: 100%;
         height: auto;
+    }
+    .sameInfo > span {
+        width: 200px;
+        margin-left: 25px;
     }
 }
 @media screen and (max-width: 1400px){
@@ -672,16 +687,28 @@
     .usersProfileRu .userProfileMenu {
         width: 490px;
     }
+    .userCreateFieldForms_ > form {
+        width: 90%;
+        height: 550px;
+        margin: 34px auto;
+    }
 }
 @media screen and (max-width: 1200px){
     .usersProfileEn .userProfileMenu {
         width: 460px;
     }
-    .usersProfileRu .userProfileMenuField > span {
+    .usersProfileRu .userProfileMenuField > span,
+    .usersProfileAm .userProfileMenuField > span {
         font-size: 30px;
     }
 }
 @media screen and (max-width: 1100px) {
+    .userFormsBtn_ {
+        margin-top: 16px;
+    }
+    .usersAchievements {
+        height: 845px;
+    }
     .userFormsBtn > button > span{
         font-family: Roboto;
         font-size: 10px;
@@ -697,7 +724,8 @@
     }
     .usersProfileEn .userProfileMenu,
     .userProfileMenu,
-    .usersProfileRu .userProfileMenu{
+    .usersProfileRu .userProfileMenu,
+    .usersProfileAm .userProfileMenu{
         width: 375px;
         height: 16px;
     }
@@ -907,10 +935,12 @@
         text-align: center;
     }
     .sameInfo > span{
+        max-width: 54%;
         font-size: 14px;
         font-weight: 400;
         line-height: 16.41px;
         text-align: left;
+        padding: 0;
         margin-left: 16px;
     }
     .usersCardMain_ img{
@@ -935,9 +965,10 @@
     .userAchievementsEditLeft {
         width: 162px;
         height: 357px;
+        justify-content: space-evenly;
     }
     .usersCardMain_ {
-        width: auto;
+        width: -webkit-fill-available;
         height: 117px;
     }
     .userFormsInput_ {
@@ -945,9 +976,12 @@
     }
     .userCreateFieldForms_ {
         width: 75%;
+        height: 545px;
     }
     .userCreateFieldForms_ > form {
         width: 90%;
+        height: 453px;
+        margin: 46px 22px;
     }
     .attachCvEdit {
         margin: 18px 0px 18px 17px;
@@ -956,12 +990,20 @@
         padding-top: 0;
     }
 }
+@media screen and (max-width: 800px) {
+    .userCreateFieldForms_ {
+        width: 80%;
+    }
+}
 @media screen and (max-width: 730px) {
     .profilBody {
         width: 90%;
     }
 }
 @media screen and (max-width: 700px) {
+    .userCreateFieldForms_ {
+        width: 90%;
+    }
     .userCreateBg {
         height: 880px;
     }
@@ -990,6 +1032,18 @@
         width: 350px;
     }
 }
+@media screen and (max-width: 680px) {
+    .userCreateFieldForms_ {
+        width: 100%;
+        height: 530px;
+    }
+    .lllyy {
+        height: 94px;
+    }
+    .userCreateFieldForms_ > form {
+        margin: 31px 22px;
+    }
+}
 @media screen and (max-width: 650px) {
     .certificate, .cartificateImg {
         width: 290px;
@@ -999,11 +1053,41 @@
     .userCreateFieldForms, .userProfileMenuField{
         display: none;
     }
+    .editAchievementsBtn{
+        display: block;
+    }
+    .editAchievementsBtn img{
+        width: 95.37px;
+        height: 40px;
+    }
+    .editAchievementsBtn > a{
+        color: #F36528;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        font-family: 'Roboto';
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.72px;
+    }
+    .editAchievementsBtn div{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    .editAchievementsBtn > a:hover div{
+        color: white;
+    }
+    .editAchievementsBtn > a:hover img{
+        content: url("../images/applicationBtnhover.png");
+    }
     .userCreateFieldFormsMobile{
         width: 100%;
         display: block;
     }
-    .bbbbb{
+    .bbbbb, .userInputsFields_{
         display: none;
     }
     .userCreateTitleField{
@@ -1051,6 +1135,7 @@
         font-weight: 400;
         line-height: 16.41px;
         text-align: center;
+        text-decoration: underline;
     }
     .userPhotoFieldsMobile > span:hover{
         cursor: pointer;
@@ -1129,10 +1214,10 @@
     .userCreateBg {
         height: 812px;
     }
-    .userCreateField, .userAchievementsSection {
+    .userCreateField {
         gap: 30px;
     }
-    .llllll{
+    .usersAchievementsH .llllll{
         gap: 51px;
     }
     .userFormsInputMobile > input::placeholder{
@@ -1151,7 +1236,7 @@
     }
     .cartificateImgTxt{
         padding: 0;
-        gap: 67px;
+        gap: 45px;
         flex-direction: column;
     }
     .usersAchievementsH {
@@ -1179,14 +1264,95 @@
         line-height: 20.8px;
         text-align: center;
     }
+    .usersProfileHeightEn, .usersProfileHeightRu, .usersProfileHeightAm {
+        height: 812px;
+    }
+    .userProfileSection {
+        gap: 88px;
+    }
+    .userProfileMoreAboutField {
+        height: 463px;
+    }
+    .userAchievementsSection {
+        gap: 88px;
+    }
+    .userCreateFieldForms_ > form {
+        width: 300px;
+        height: 380px;
+        margin: 0;
+        flex-direction: column;
+    }
+    .userAchievementsEditLeft {
+        width: 300px;
+        height: 380px;
+        margin: 0;
+    }
+    .sameInfo {
+        width: auto;
+        justify-content: space-evenly;
+    }
+    .userCreateFieldForms_ {
+        width: 80%;
+        height: 463px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .userAchievementsEditLeft > span{
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 23.44px;
+        text-align: center;
+    }
+    .sameInfo > span {
+        width: 169px;
+        max-width: none;
+        margin: 0;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        text-align: left;
+    }
+    .usersCardMain_ {
+        width: 250px;
+        height: 110px;
+    }
+    .usersProfileHeight{
+        height: 812px;
+    }
 }
 @media screen and (max-width: 500px) {
     .certificate, .cartificateImg {
         width: 90%;
     }
+    .cartificateImgTxt{
+        gap: 67px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .userCreateFieldForms_ {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 400px) {
     .certificate, .cartificateImg {
         width: 100%;
+    }
+    .userCreateFieldForms_ {
+        height: 463px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .usersProfileHeightEn, .usersProfileHeightRu, .usersProfileHeightAm {
+        height: 730px;
+    }
+    .userProfileMoreAboutField {
+        width: 270px;
+        height: 372px;
+    }
+    .userCreateFieldForms_ {
+        height: 430px;
     }
 }

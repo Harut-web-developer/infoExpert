@@ -13,7 +13,7 @@ if ($language == 'en') {
     $class1 = 'usersProfileRu';
 }
 ?>
-<div class="usersAchievements <?php echo $class1; ?>">
+<div class="usersAchievements <?php echo $class1; ?>"  id="editContent">
     <div class="userAchievementsSection">
         <div class="userProfileMenuField">
             <span><?=$GLOBALS['text']['editProfileTitle']?></span>
@@ -24,32 +24,42 @@ if ($language == 'en') {
                 <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
             </ul>
         </div>
+        <div class="userCreateTitleField">
+            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <div><?=$GLOBALS['text']['editUserProfileTitle']?></div>
+        </div>
         <div class="profilBody_">
             <div class="userCreateFieldForms_">
                 <form action="">
                     <div class="userAchievementsEditLeft">
-                            <div class="usersCardHead_">
-                                <img class="cardImg_" src="/images/usersAchievements.png" alt="">
-                                <div class="middle">
-                                    <span class="editPhoto" href=""><?=$GLOBALS['text']['editUserEditPhoto']?></span>
-                                    <input type="file">
-                                </div>
+                        <div class="usersCardHead_">
+                            <img class="cardImg_" src="/images/usersAchievements.png" alt="">
+                            <div class="middle">
+                                <span class="editPhoto" href=""><?=$GLOBALS['text']['editUserEditPhoto']?></span>
+                                <input type="file">
                             </div>
-                            <span>Ani Martirosian</span>
-                            <div class="usersCardMain_">
-                                <div class="sameInfo">
-                                    <img src="/images/phonAchievements.png" alt="">
-                                    <span>369 258 147</span>
-                                </div>
-                                <div class="sameInfo">
-                                    <img src="/images/mailAchievements.png" alt="">
-                                    <span>a@martirosian.com</span>
-                                </div>
-                                <div class="sameInfo">
-                                    <img src="/images/linkdinAchievements.png" alt="">
-                                    <span>Ani Martirosian</span>
-                                </div>
+                        </div>
+                        <span>Ani Martirosian</span>
+                        <div class="usersCardMain_">
+                            <div class="sameInfo">
+                                <img src="/images/phonAchievements.png" alt="">
+                                <span>369 258 147</span>
                             </div>
+                            <div class="sameInfo">
+                                <img src="/images/mailAchievements.png" alt="">
+                                <span>a@martirosian.com</span>
+                            </div>
+                            <div class="sameInfo">
+                                <img src="/images/linkdinAchievements.png" alt="">
+                                <span>Ani Martirosian</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editAchievementsBtn">
+                        <a href="/user-profile/edit-profile">
+                            <img src="/images/userSaveBtn.png" alt="">
+                            <div><?=$GLOBALS['text']['editAchievementsBtn']?></div>
+                        </a>
                     </div>
                     <div class="userInputsFields_">
                         <div class="userFormsInput_">
@@ -64,7 +74,7 @@ if ($language == 'en') {
                             <label for=""><?=$GLOBALS['text']['editUserMail']?></label>
                             <input type="email">
                         </div>
-                        <div class="userFormsInput_">
+                        <div class="userFormsInput_ lllyy">
                             <label for=""><?=$GLOBALS['text']['editUserLinkdin']?></label>
                             <input type="text">
                         </div>

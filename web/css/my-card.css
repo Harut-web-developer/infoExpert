@@ -1668,15 +1668,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: sticky;
     }
-    #summary.fixed {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-    #summary.none {
-        display: none;
-    }
+    /*#summary.fixed {*/
+    /*    position: sticky;*/
+    /*    bottom: 0;*/
+    /*    width: 100%;*/
+    /*}*/
+    /*#summary.none {*/
+    /*    display: none;*/
+    /*}*/
     .summaryText{
         width: 100%;
         display: flex;

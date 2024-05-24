@@ -251,7 +251,7 @@ if (window.location.pathname == '/my-card/checkout'){
         const footerTop = footerBackground.getBoundingClientRect().top;
         const summaryHeight = summary.offsetHeight;
         const windowHeight = window.innerHeight;
-        if (footerTop + summaryHeight <= windowHeight) {
+        if (footerTop <= windowHeight) {
             summary.classList.remove('fixed');
             summary.classList.add('none');
         } else {

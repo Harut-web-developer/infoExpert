@@ -18,7 +18,7 @@ if ($language == 'en') {
     <div class="userCreateField">
         <div class="userCreateTitleField">
             <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
-            <div><?=$GLOBALS['text']['userCreateEditProfile']?></div>
+            <div><?=$GLOBALS['text']['profileTitle']?></div>
         </div>
         <span class="userCreateMoreInfo"><?=$GLOBALS['text']['userCreateMoreInfo']?></span>
         <div class="userProfileMenuField bbbbb">
@@ -77,8 +77,6 @@ if ($language == 'en') {
         <div class="userCreateFieldFormsMobile">
             <form action="">
                 <div class="userPhotoFieldsMobile">
-                    <!--                    <img src="/images/usersAchievements.png" alt="">-->
-                    <!--                    nkar yntreluc petqa es img i mech baci-->
                     <span class="userAddPhotoTextMobile"><?=$GLOBALS['text']['usercreatePhoto']?></span>
                     <input type="file">
                 </div>

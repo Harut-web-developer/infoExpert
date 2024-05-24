@@ -12,6 +12,7 @@ class UserProfileController extends \yii\web\Controller
         $page['user-create'] = 5;
         $page['achievements'] = 6;
         $page['achievements-edit'] = 7;
+        $page['edit-profile'] = 20;
         return $page;
     }
     public function beforeAction($action)
@@ -69,5 +70,9 @@ class UserProfileController extends \yii\web\Controller
     public function actionAchievementsEdit()
     {
         return $this->render('achievements-edit');
+    }
+    public function actionEditProfile()
+    {
+        return $this->render('edit-profile');
     }
 }

@@ -381,9 +381,6 @@
     color: white;
     text-decoration: underline;
 }
-.applicationButton > a:hover img{
-    content: url("../images/applicationBtnhover.png");
-}
 .applicationButton > a{
     color: #F36528;
     font-size: 16px;
@@ -403,7 +400,9 @@
 .applicationButton > a:hover div{
     color: white;
 }
-
+.applicationButton > a:hover img{
+    content: url("../images/applicationBtnhover.png");
+}
 @media screen and (max-width: 1150px) {
     .applicationTitle {
         font-size: 33px;

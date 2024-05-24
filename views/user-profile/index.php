@@ -28,6 +28,10 @@ if ($language == 'en') {
                 <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
             </ul>
         </div>
+        <div class="userCreateTitleField">
+            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <div class="myProfileMobile"><?=$GLOBALS['text']['profileTitle']?></div>
+        </div>
         <div class="userProfileMoreAboutField">
             <div class="fieldMoreAbout">
                 <span><?=$GLOBALS['text']['userMoreInfo']?></span>
