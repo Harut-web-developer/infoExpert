@@ -264,98 +264,98 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?= $content ?>
 </main>
 
-<!--<footer class="footerBackground">-->
-<!--    <div class="sectionFooter">-->
-<!--        <div class="imagesFooterFields">-->
-<!--            <div class="leftFooterBg">-->
-<!--                <div class="footerFields">-->
-<!--                    <div class="footerLogo">-->
-<!--                        <img src="/images/footerLogo.png" alt="">-->
-<!--                    </div>-->
-<!--                    <div class="leftFooterBlock">-->
-<!--                        <div class="footerMenu">-->
-<!--                            <div class="leftMenuFooter">-->
-<!--                                <ul>-->
-<!--                                    <li><a href="">--><?php //= $GLOBALS['text']['footerAbout']?><!--</a></li>-->
-<!--                                    <li><a href="">--><?php //= $GLOBALS['text']['footerMethodOur']?><!--</a></li>-->
-<!--                                    <li><a href="">--><?php //= $GLOBALS['text']['footerContact']?><!--</a></li>-->
-<!--                                    <li><a href="">--><?php //= $GLOBALS['text']['footerTestimonials']?><!--</a></li>-->
-<!--                                    <li><a href="">--><?php //= $GLOBALS['text']['footerFaq']?><!--</a></li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                            <div class="rightMenuFooter">-->
-<!--                                <ul>-->
-<!--                                    <li><a href="">--><?php //= $GLOBALS['text']['footerCourses']?><!--</a></li>-->
-<!--                                    <li><a href="">--><?php //= $GLOBALS['text']['footerBlog']?><!--</a></li>-->
-<!--                                    <li><a href="">--><?php //= $GLOBALS['text']['footerRecQuize']?><!--</a></li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="footerConn">-->
-<!--                            <span>--><?php //= $GLOBALS['text']['footerTextConn']?><!--</span>-->
-<!--                            <div class="footerSocialMobile">-->
-<!--                                <a href=""><img src="/images/in.png" alt=""></a>-->
-<!--                                <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>-->
-<!--                                <a href=""><img src="/images/facebook.png" alt=""></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="footerBtn">-->
-<!--                            <input type="text" name="leftEmail" placeholder="--><?php //= $GLOBALS['text']['footerEmailCon']?><!--">-->
-<!--                            <button>--><?php //= $GLOBALS['text']['footerEmailBtn']?><!--</button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="footerSocial">-->
-<!--                        <a href=""><img src="/images/in.png" alt=""></a>-->
-<!--                        <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>-->
-<!--                        <a href=""><img src="/images/facebook.png" alt=""></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="rightFooterBg">-->
-<!--                <form class="formMail" action="">-->
-<!--                    <div class="formName">-->
-<!--                        <span>--><?php //= $GLOBALS['text']['footerQuize']?><!--</span>-->
-<!--                    </div>-->
-<!--                    <div class="inputsMail" >-->
-<!--                        <input type="text" name="name" placeholder="--><?php //= $GLOBALS['text']['footerInputName']?><!--">-->
-<!--                        <input type="text" name="phone" placeholder="--><?php //= $GLOBALS['text']['footerInputPhone']?><!--">-->
-<!--                        <input type="text"  name="email" placeholder="--><?php //= $GLOBALS['text']['footerInputEmail']?><!--">-->
-<!--                    </div>-->
-<!--                    <div class="formContinue">-->
-<!--                        <button>--><?php //= $GLOBALS['text']['footerInputBtn']?><!--</button>-->
-<!--                    </div>-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="paypalFooter">-->
-<!--            <span class="copyTextFooter">-->
-<!--                &copy; --><?php //= $GLOBALS['text']['footerCopy']?><!-- --><?php //=date('Y')?><!-- - Infoexpert Academy-->
-<!--            </span>-->
-<!--            <div class="policyText">-->
-<!--                <ul>-->
-<!--                    <li><a href="">--><?php //= $GLOBALS['text']['footerPolicy']?><!--&nbsp</a></li>-->
-<!--                    <li><a href="">&nbsp--><?php //= $GLOBALS['text']['footerTerms']?><!--</a></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <div class="payLogoFooter">-->
-<!--                <img src="/images/visaCardLogo.png" alt="">-->
-<!--                <img src="/images/masterCardLogo.png" alt="">-->
-<!--            </div>-->
-<!--            <div class="footerMobilePolicy">-->
-<!--                <div class="policyTextMobile">-->
-<!--                    <ul>-->
-<!--                        <li><a href="">--><?php //= $GLOBALS['text']['footerPolicy']?><!--&nbsp</a></li>-->
-<!--                        <li><a href="">&nbsp--><?php //= $GLOBALS['text']['footerTerms']?><!--</a></li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--                <div class="payLogoFooterMobile">-->
-<!--                    <img src="/images/visaCardLogo.png" alt="">-->
-<!--                    <img src="/images/masterCardLogo.png" alt="">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
+<footer class="footerBackground">
+    <div class="sectionFooter">
+        <div class="imagesFooterFields">
+            <div class="leftFooterBg">
+                <div class="footerFields">
+                    <div class="footerLogo">
+                        <img src="/images/footerLogo.png" alt="">
+                    </div>
+                    <div class="leftFooterBlock">
+                        <div class="footerMenu">
+                            <div class="leftMenuFooter">
+                                <ul>
+                                    <li><a href=""><?= $GLOBALS['text']['footerAbout']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerMethodOur']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerContact']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerTestimonials']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerFaq']?></a></li>
+                                </ul>
+                            </div>
+                            <div class="rightMenuFooter">
+                                <ul>
+                                    <li><a href=""><?= $GLOBALS['text']['footerCourses']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerBlog']?></a></li>
+                                    <li><a href=""><?= $GLOBALS['text']['footerRecQuize']?></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footerConn">
+                            <span><?= $GLOBALS['text']['footerTextConn']?></span>
+                            <div class="footerSocialMobile">
+                                <a href=""><img src="/images/in.png" alt=""></a>
+                                <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>
+                                <a href=""><img src="/images/facebook.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="footerBtn">
+                            <input type="text" name="leftEmail" placeholder="<?= $GLOBALS['text']['footerEmailCon']?>">
+                            <button><?= $GLOBALS['text']['footerEmailBtn']?></button>
+                        </div>
+                    </div>
+                    <div class="footerSocial">
+                        <a href=""><img src="/images/in.png" alt=""></a>
+                        <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>
+                        <a href=""><img src="/images/facebook.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="rightFooterBg">
+                <form class="formMail" action="">
+                    <div class="formName">
+                        <span><?= $GLOBALS['text']['footerQuize']?></span>
+                    </div>
+                    <div class="inputsMail" >
+                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>">
+                        <input type="text" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>">
+                        <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>">
+                    </div>
+                    <div class="formContinue">
+                        <button><?= $GLOBALS['text']['footerInputBtn']?></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="paypalFooter">
+            <span class="copyTextFooter">
+                &copy; <?= $GLOBALS['text']['footerCopy']?> <?=date('Y')?> - Infoexpert Academy
+            </span>
+            <div class="policyText">
+                <ul>
+                    <li><a href=""><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
+                    <li><a href="">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
+                </ul>
+            </div>
+            <div class="payLogoFooter">
+                <img src="/images/visaCardLogo.png" alt="">
+                <img src="/images/masterCardLogo.png" alt="">
+            </div>
+            <div class="footerMobilePolicy">
+                <div class="policyTextMobile">
+                    <ul>
+                        <li><a href=""><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
+                        <li><a href="">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
+                    </ul>
+                </div>
+                <div class="payLogoFooterMobile">
+                    <img src="/images/visaCardLogo.png" alt="">
+                    <img src="/images/masterCardLogo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 <?php $this->endBody() ?>
 </body>
 </html>

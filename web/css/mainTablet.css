@@ -1959,7 +1959,256 @@
         display: none;
     }
 }
-@media only screen and (min-width: 740px) and (max-width: 1340px) {
+@media only screen and (min-width: 600px) and (max-width: 740px) {
+    .footerBackground{
+        margin-top: -53px;
+        background-image: url("../images/footerbgMiddleSize.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 436px;
+    }
+    .sectionFooter{
+        width: 89%;
+        height: 328px;
+        margin: 62px 5.5% 0px;
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .leftFooterBg{
+        background-image: url("../images/leftFooter.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        width:262px;
+        height: 291px;
+        margin-right: 5px;
+    }
+    .footerFields{
+        width: 221px;
+        height: 224px;
+        margin: 50px auto 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .footerLogo{
+        width: 100%;
+        height: 23px;
+    }
+    .footerLogo > img{
+        width: 125px;
+        height: 23px;
+    }
+    .leftFooterBlock{
+        width: 100%;
+        height: 169px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .footerSocial{
+        width: 100%;
+        height: 18px;
+        /*margin-bottom: 10px;*/
+    }
+    .footerSocial > a > img{
+        width: 18px;
+    }
+    .footerMenu{
+        width: 100%;
+        height: 97px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .leftMenuFooter{
+        width: 85px;
+        height: 97px;
+    }
+    .leftMenuFooter > ul{
+        list-style: none;
+        padding-left: 0px;
+        font-size: 11px;
+        font-family: "Roboto",sans-serif;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    .rightMenuFooter{
+        width: 116px;
+        height: 55px;
+    }
+    .rightMenuFooter > ul{
+        padding-left:0px;
+        list-style: none;
+        font-size: 11px;
+    }
+    .footerConn > span{
+        color: #F36528;
+        font-family: "Roboto",sans-serif;
+        font-size: 8px;
+        font-weight: 600;
+    }
+    .footerBtn{
+        width: 100%;
+    }
+    .footerBtn > input{
+        position: absolute;
+        width: 221px;
+        height: 33px;
+        border-radius: 33px;
+        color: white;
+        outline: none;
+        border: none;
+        background: #5D9A9D;
+        padding: 0px 80px 0px 10px;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+
+    }
+    .footerBtn > input::placeholder{
+        color: white;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .footerBtn > button{
+        left: 144px;
+        top: 1px;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        color: #5D9A9D;
+        border: 1px solid white;
+        width: 74px;
+        height: 27px;
+        border-radius: 20px;
+        background: white;
+        position: relative;
+    }
+    .rightFooterBg{
+        width:262px;
+        height: 227px;
+        background-image: url("../images/qwMidSize.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        margin-left: 5px;
+    }
+    .formMail{
+        width: 233px;
+        height: 190px;
+        margin: 20px auto 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .formName{
+        margin-left: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .formName > span{
+        text-align: center;
+        font-family: "Roboto",sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #5D9A9D;
+    }
+    .inputsMail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .inputsMail > input{
+        padding: 0px 22px;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        width: 100%;
+        height: 38px;
+        margin: 3px 0px;
+        background: none;
+        border: 2px solid #5D9A9D;
+        outline: none;
+        color: #ACACAC;
+        border-radius: 28px;
+    }
+    .inputsMail > input::placeholder{
+        color: #ACACAC;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .formContinue{
+        margin-top: 3px;
+    }
+    .formContinue > button{
+        height: 34px;
+        width: 100%;
+        border-radius: 30px;
+        background: #5D9A9D;
+        color:white;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        /*letter-spacing: 0.5px;*/
+        border:none;
+    }
+    .paypalFooter{
+        width: 100%;
+        height: 19px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .copyTextFooter{
+        width: max-content;
+        height: 13px;
+        font-family: "Roboto",sans-serif;
+        font-size: 9px;
+        font-weight: 500;
+        color: white;
+    }
+    .policyText{
+        height: 13px;
+        width: max-content;
+    }
+    .policyText > ul{
+        width: 100%;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        list-style: none;
+        font-family: "Roboto",sans-serif;
+        font-size: 9px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .payLogoFooter{
+        height: 19px;
+        width: 63px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .payLogoFooter > img{
+        width: 29px;
+        height: 19px;
+    }
+}
+@media only screen and (min-width: 741px) and (max-width: 1340px) {
     .footerBackground{
         margin-top: -53px;
         background-image: url("../images/footerbg.png");
