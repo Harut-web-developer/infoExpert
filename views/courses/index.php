@@ -6,8 +6,9 @@ use yii\web\YiiAsset;
 
 $this->registerCssFile('@web/css/courses.css');
 $this->registerJsFile('@web/js/courses.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
-$this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
-$this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
+$this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
+$this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);
+
 ?>
 <div class="courses">
     <div class="headerCourses">
@@ -56,12 +57,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                 </a>
                             </div>
                             <div class="booterImgs">
-                                <div class="like-container">
-                                    <div class="like-cnt unchecked">
-                                        <i class="like-btn material-icons heart-icon">
-                                            <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                        </i>
-                                    </div>
+                                <div class='large-font'>
+                                    <ion-icon name="heart">
+                                        <div class='red-bg'></div>
+                                    </ion-icon>
                                 </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                             </div>
@@ -102,12 +101,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                 </a>
                             </div>
                             <div class="booterImgs">
-                                <div class="like-container">
-                                    <div class="like-cnt unchecked">
-                                        <i class="like-btn material-icons heart-icon">
-                                            <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                        </i>
-                                    </div>
+                                <div class='large-font'>
+                                    <ion-icon name="heart">
+                                        <div class='red-bg'></div>
+                                    </ion-icon>
                                 </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                             </div>
@@ -148,12 +145,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                 </a>
                             </div>
                             <div class="booterImgs">
-                                <div class="like-container">
-                                    <div class="like-cnt unchecked">
-                                        <i class="like-btn material-icons heart-icon">
-                                            <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                        </i>
-                                    </div>
+                                <div class='large-font'>
+                                    <ion-icon name="heart">
+                                        <div class='red-bg'></div>
+                                    </ion-icon>
                                 </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                             </div>
@@ -194,12 +189,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                 </a>
                             </div>
                             <div class="booterImgs">
-                                <div class="like-container">
-                                    <div class="like-cnt unchecked">
-                                        <i class="like-btn material-icons heart-icon">
-                                            <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                        </i>
-                                    </div>
+                                <div class='large-font'>
+                                    <ion-icon name="heart">
+                                        <div class='red-bg'></div>
+                                    </ion-icon>
                                 </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                             </div>
@@ -240,12 +233,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                 </a>
                             </div>
                             <div class="booterImgs">
-                                <div class="like-container">
-                                    <div class="like-cnt unchecked">
-                                        <i class="like-btn material-icons heart-icon">
-                                            <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                        </i>
-                                    </div>
+                                <div class='large-font'>
+                                    <ion-icon name="heart">
+                                        <div class='red-bg'></div>
+                                    </ion-icon>
                                 </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                             </div>
@@ -286,12 +277,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                 </a>
                             </div>
                             <div class="booterImgs">
-                                <div class="like-container">
-                                    <div class="like-cnt unchecked">
-                                        <i class="like-btn material-icons heart-icon">
-                                            <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                        </i>
-                                    </div>
+                                <div class='large-font'>
+                                    <ion-icon name="heart">
+                                        <div class='red-bg'></div>
+                                    </ion-icon>
                                 </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                             </div>
@@ -332,56 +321,10 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View:
                                 </a>
                             </div>
                             <div class="booterImgs">
-                                <div class="like-container">
-                                    <div class="like-cnt unchecked">
-                                        <i class="like-btn material-icons heart-icon">
-                                            <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                        </i>
-                                    </div>
-                                </div>
-                                <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="cardCourses">
-                    <div class="img"><img src="/images/coursesCardImg.png" alt="" draggable="false"> </div>
-                    <div class="cardCoursesBody">
-                        <div class="cardBody">
-                            <span class="span1">Trade management: marketing, sales BITRIX / CRM</span>
-                            <div class="starAndTxt">
-                                <div class="starDivCourses">
-                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                    <img src="/images/cardStarWhite.png" alt="" draggable="false">
-                                </div>
-                                <h1 class="span2">xxxxx <span class="amd">AMD</span></h1>
-                            </div>
-                        </div>
-                        <div class="cardCenter">
-                            <div class="cardtxt1">
-                                <img src="/images/courses1.png" alt="" draggable="false">
-                                <span>Number of courses: 29+1 exam /3 days a week/</span>
-                            </div>
-                            <div class="cardtxt2">
-                                <img src="/images/courses2.png" alt="" draggable="false">
-                                <span>Certificate / in Armenian and English /</span>
-                            </div>
-                        </div>
-                        <div class="footerCard">
-                            <button>
-                                <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                <span><a href="">Buy now</a></span>
-                            </button>
-                            <div class="booterImgs">
-                                <div class="like-container">
-                                    <div class="like-cnt unchecked">
-                                        <i class="like-btn material-icons heart-icon">
-                                            <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                        </i>
-                                    </div>
+                                <div class='large-font'>
+                                    <ion-icon name="heart">
+                                        <div class='red-bg'></div>
+                                    </ion-icon>
                                 </div>
                                 <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                             </div>

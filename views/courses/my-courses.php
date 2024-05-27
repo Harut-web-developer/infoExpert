@@ -9,12 +9,11 @@ if ($language == 'en') {
     $class1 = 'myCoursesEn';
 } elseif ($language == 'am') {
     $class1 = 'myCoursesAm';
-
 } elseif ($language == 'ru') {
     $class1 = 'myCoursesRu';
 }
 ?>
-<div class="myCourses">
+<div class="myCourses <?php echo $class1; ?>">
     <div class="myCoursesSection">
         <div class="userProfileMenuField">
             <span><?=$GLOBALS['text']['mycoursesTitle']?></span>

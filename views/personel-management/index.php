@@ -76,25 +76,6 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             </div>
         </div>
     </div>
-<!--    <div class="bottomImages">-->
-<!--        <span class="amdFix">XXXXX AMD</span>-->
-<!--        <div class="buttonDiv">-->
-<!--            <div class="managementBtnDiv">-->
-<!--                <button>-->
-<!--                    <img src="/images/buycoursebtn.png" alt="">-->
-<!--                    <span class="button1">Buy now</span>-->
-<!--                </button>-->
-<!--            </div>-->
-<!--            <div class="managementBtnDiv">-->
-<!--                <button>-->
-<!--                    <a href="/courses/index">-->
-<!--                        <img src="/images/seeallcourse.png" alt="">-->
-<!--                        <span class="button2">See all courses</span>-->
-<!--                    </a>-->
-<!--                </button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 </div>
 <!--Like js-->
 <script>

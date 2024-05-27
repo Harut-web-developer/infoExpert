@@ -272,7 +272,7 @@
     width: 67%;
     margin: 0 auto 0 auto;
     /*height: 694px;*/
-    padding-top: 235px;
+    padding-top: 212px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -565,37 +565,52 @@
     width: 21px;
     height: 20px;
 }
+.myCoursesAm .userProfileMenu {
+    width: 550px;
+}
+.booterImgs{
+    display: flex;
+}
+
 /*LIKE*/
-.heart{
-    width: 24.19px;
-    height: 24px;
-}
-.like-container{
-    filter: url('#filter');
-    display: inline-block;
-}
-.like-cnt{
-    position: absolute;
-    cursor: pointer;
-    left: 50%;
-    top: 100%;
-    transform: translate(-105%, -55%)!important;
-    width: 42px;
-    height: 42px;
-    border: 1px solid #FFFFFF;
+.large-font {
+    width: 43px;
+    height: 43px;
+    font-size: xxx-large;
     border-radius: 50%;
     text-align: center;
-    line-height: 36px;
-    z-index: 10;
+    align-items: center;
+    display: flex;
+    border: 1px solid #FFFFFF;
+    position: relative;
+    justify-content: center;
 }
-.like-btn{
-    color: #fff;
+ion-icon.active {
+    animation: like 0.5s 1;
+    fill: #F36528;
+    stroke: none;
+    color: #F36528;
 }
-::-moz-selection { background: transparent;}
-::selection {background: transparent;}
-
-
-
+ion-icon {
+    width: 29.63px;
+    height: 25.96px;
+    color: #FFFFFF;
+    fill: transparent;
+    stroke-width: 30;
+    transition: all 0.5s;
+    position: absolute;
+}
+@-webkit-keyframes like {
+    0% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
 /* end my courses page css*/
 @media screen and (max-width: 1910px) {
     .cardMyCourses {
@@ -1034,6 +1049,15 @@
         width: 157px;
     }
 }
+@media screen and (max-width: 1270px) {
+    .myCoursesEn .userProfileMenuField > span {
+        font-size: 38px;
+    }
+
+    .myCoursesRu .userProfileMenu {
+        width: 490px;
+    }
+}
 @media screen and (max-width: 1200px) {
     .courses {
         height: 1140px;
@@ -1081,6 +1105,13 @@
     .cardCoursesBody {
         width: 200px;
         height: 170px;
+    }
+    .myCoursesEn .userProfileMenu {
+        width: 460px;
+    }
+    .myCoursesRu .userProfileMenuField > span,
+    .myCoursesAm .userProfileMenuField > span {
+        font-size: 30px;
     }
 }
 @media screen and (max-width: 1160px) {
@@ -1397,6 +1428,23 @@
     .footerCard{
         padding: 0;
     }
+    .myCoursesEn .userProfileMenu,
+    .userProfileMenu,
+    .myCoursesRu .userProfileMenu,
+    .myCoursesAm .userProfileMenu{
+        width: 375px;
+        height: 16px;
+    }
+    .myCoursesEn .userProfileMenuField > span,
+    .userProfileMenuField > span,
+    .myCoursesRu .userProfileMenuField > span{
+        color: #F36528;
+        font-family: 'Roboto Slab';
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29.01px;
+        text-align: left;
+    }
 }
 @media screen and (max-width: 950px) {
     .txt1, .txt2, .courses .title0 {
@@ -1436,5 +1484,13 @@
 @media screen and (max-width: 750px) {
     .carouselCourses {
         grid-auto-columns: calc((100% / 3));
+    }
+}
+@media screen and (max-width: 700px) {
+    .myCoursesEn .userProfileMenuField > span, .userProfileMenuField > span, .myCoursesRu .userProfileMenuField > span {
+        font-size: 19px;
+    }
+    .myCoursesEn .userProfileMenu, .userProfileMenu, .myCoursesRu .userProfileMenu {
+        width: 350px;
     }
 }
