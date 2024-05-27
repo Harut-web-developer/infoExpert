@@ -50,7 +50,8 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    scrollbar-width: 0;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
     padding-left: 0;
     margin-bottom: 0;
 }
@@ -86,7 +87,6 @@
     border-radius: 30px;
     display: flex;
     cursor: pointer;
-    /* padding: 16px 17px 16px 17px; */
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
