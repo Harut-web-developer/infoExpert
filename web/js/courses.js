@@ -1,4 +1,4 @@
-if (window.location.pathname == '/courses') {
+if (window.location.pathname == '/courses/index') {
     document.addEventListener("DOMContentLoaded", function () {
         function slider(carousel, wrapper, firstCard, arrowBtns) {
             const firstCardWidth = firstCard.offsetWidth;

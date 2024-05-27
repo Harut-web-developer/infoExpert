@@ -36,7 +36,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                     <img src="/images/cardStar.png" alt="" draggable="false">
                                     <img src="/images/cardStarWhite.png" alt="" draggable="false">
                                 </div>
-                                <h1 class="span2">xxxxx <span class="amd"><span class="amd">AMD</span></span></h1>
+                                <h1 class="span2">xxxxx <span class="amd">AMD</span></h1>
                             </div>
                         </div>
                         <div class="cardCenter">
