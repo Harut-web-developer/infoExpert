@@ -262,7 +262,7 @@ document.querySelectorAll('#section01 ion-icon').forEach(icon => {
         this.classList.toggle('active');
     });
 });
-if (window.location.pathname == '/personel-management/index'){
+if (window.location.pathname == '/personel-management/index' && $(window).width() <= 600){
     document.addEventListener('scroll', function() {
         const bottomImages = document.getElementById('bottomImages');
         const footerBackground = document.getElementById('footerBackgroundM');
@@ -278,14 +278,17 @@ if (window.location.pathname == '/personel-management/index'){
         }
     });
 }
-if (window.location.pathname == '/my-card/checkout'){
+if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600){
     document.addEventListener('scroll', function() {
         const summary = document.getElementById('summary');
         const footerBackground = document.getElementById('footerBackgroundM');
         const footerTop = footerBackground.getBoundingClientRect().top;
-        const summaryHeight = summary.offsetHeight;
+        const summaryHeight = 181;
         const windowHeight = window.innerHeight;
-        if (footerTop <= windowHeight) {
+        console.log(footerTop)
+        console.log(summaryHeight)
+        console.log(windowHeight)
+        if (footerTop + summaryHeight <= windowHeight) {
             summary.classList.remove('fixed');
             summary.classList.add('none');
         } else {

@@ -577,6 +577,9 @@ hr.new1 {
 .likeColor{
     border-color: #F36528;
 }
+.usersProfileAm .userProfileMenu {
+    width: 550px;
+}
 @media screen and (max-width: 1900px) {
     .CoursesAndCategoriesCard {
         width: 58%;

@@ -914,6 +914,9 @@
 ::-moz-selection { background: transparent;}
 ::selection {background: transparent;}
 
+.usersProfileAm .userProfileMenu {
+    width: 550px;
+}
 /*tablet of my card page */
 @media screen and (max-width: 1800px) {
     .myCoursesFieldSection {
@@ -1215,7 +1218,8 @@
         height: 846px;
     }
     .checkoutField {
-        height: 720px;
+        background: #5D9A9D;
+        height: 784px;
     }
     .myCardContent {
         padding-top: 95px;
@@ -1668,16 +1672,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: sticky;
+        z-index: 49;
     }
-    /*#summary.fixed {*/
-    /*    position: sticky;*/
-    /*    bottom: 0;*/
-    /*    width: 100%;*/
-    /*}*/
-    /*#summary.none {*/
-    /*    display: none;*/
-    /*}*/
+    #summary.fixed {
+        position: sticky;
+        bottom: -2px;
+        width: 100%;
+    }
+    #summary.none {
+        display: none;
+    }
     .summaryText{
         width: 100%;
         display: flex;
