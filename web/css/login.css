@@ -3,6 +3,9 @@
 .errorText{
     color: red;
 }
+.signupFormTitle{
+    display: none;
+}
 .login {
     width: 100%;
     height: 1088px;
@@ -10,11 +13,14 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .loginField{
     width: 58%;
+    margin: 0px auto;
     height: 503px;
-    margin: 338px 21% 0px;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -326,9 +332,25 @@
     font-weight: 500;
     line-height: normal;
 }
-
+.loginFieldAm .circleTextTop{
+    font-size: 25px;
+}
+.loginFieldAm .circleTextTop > span{
+    font-size: 25px;
+}
+.loginFieldAm .circleTextBottom{
+    font-size: 18px;
+}
+.loginFieldAm .mainTextCircle{
+    height: 202px;
+}
 /*tablet sign in*/
-@media only screen and (min-width: 740px) and (max-width: 1024px) {
+@media only screen and (max-width: 1600px){
+    .loginField {
+        width: 67%;
+    }
+}
+@media only screen and (min-width: 741px) and (max-width: 1024px) {
     .login {
         width: 100%;
         height: 581px;
@@ -337,11 +359,13 @@
         background-position: center;
         background-size: cover;
     }
-
+    .loginFieldAm .container_signin > span {
+        font-size: 11px;
+    }
     .loginField {
         width: 71%;
         height: 324px;
-        margin: 155px 14.5% 0px;
+        margin: 0 auto;
         position: absolute;
         display: flex;
         flex-direction: row;
@@ -615,7 +639,7 @@
         height: 40px;
     }
     .container_signup > span{
-        /*margin: 13px 29px;*/
+        top: 13px;
     }
     .rememberSignupField{
         margin-top: 17px;
@@ -638,8 +662,28 @@
         line-height: normal;
         letter-spacing: 1.6px;
     }
+    .loginFieldAm .circleTextTop{
+        font-size: 13px;
+        height: 77px;
+
+    }
+    .loginFieldAm .circleTextTop > span{
+        font-size: 13px;
+    }
+    .loginFieldAm .circleTextBottom{
+        font-size: 13px;
+    }
+    .loginFieldAm .mainTextCircle{
+        height: 135px;
+    }
 }
-@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+@media only screen and (min-width: 741px) and (max-width: 850px){
+    .loginField {
+        width: 80%;
+        margin: 0px auto;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
     .textCircle {
         width: 330px;
         height: 324px;
@@ -912,8 +956,22 @@
         line-height: normal;
         letter-spacing: 1.6px;
     }
+    .loginFieldAm .circleTextTop{
+        font-size: 13px;
+        height: 77px;
+
+    }
+    .loginFieldAm .circleTextTop > span{
+        font-size: 13px;
+    }
+    .loginFieldAm .circleTextBottom{
+        font-size: 13px;
+    }
+    .loginFieldAm .mainTextCircle{
+        height: 135px;
+    }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1360px) {
+@media only screen and (min-width: 1201px) and (max-width: 1360px) {
     .textCircle {
         width: 400px;
         height: 503px;
@@ -1032,6 +1090,18 @@
         right: 20px;
         margin-top: 20px;
     }
+    .loginFieldAm .circleTextTop{
+        font-size: 20px;
+    }
+    .loginFieldAm .circleTextTop > span{
+        font-size: 20px;
+    }
+    .loginFieldAm .circleTextBottom{
+        font-size: 15px;
+    }
+    .loginFieldAm .mainTextCircle{
+        height: 190px;
+    }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1530px) {
     .signin > span{
@@ -1053,5 +1123,257 @@
         font-weight: 900;
         line-height: normal;
         letter-spacing: 1.6px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 741px) {
+    .loginField{
+        height: auto;
+        flex-direction: column;
+    }
+    .signin {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px){
+    .signin {
+        width: 100%;
+    }
+    .passEye > img {
+        margin-top: 24px;
+    }
+    .loginField{
+        width: 87%;
+        height: auto;
+        flex-direction: column;
+    }
+    .mainTextCircle {
+        width: 176px;
+        height: 140px;
+        margin: 0;
+    }
+    .textCircle{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .circleTextTop {
+        height: 100px;
+        font-family: 'Roboto Slab';
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26.38px;
+        letter-spacing: -0.5px;
+        text-align: center;
+    }
+    .circleTextTop > span{
+        font-family: 'Roboto Slab';
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26.38px;
+        letter-spacing: -0.5px;
+        text-align: center;
+    }
+    .circleTextBottom{
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18.75px;
+        text-align: center;
+    }
+    .signupForm > span, .signin > span{
+        display: none;
+    }
+    .signupFormTitle{
+        display: block;
+        font-family: 'Roboto Slab';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21.1px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .signupForm {
+        width: 100%;
+    }
+    .loginFieldAm .circleTextTop > span ,
+    .loginFieldAm .circleTextTop{
+        font-size: 17px;
+    }
+    .loginFieldAm .mainTextCircle {
+        height: 162px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .passEye > img {
+        margin-top: 15px;
+    }
+    .passEye > input{
+        font-family: 'Roboto';
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15.23px;
+    }
+    .signin {
+        width: 100%;
+    }
+    .loginFieldAm .mainTextCircle {
+        width: 163px;
+        height: 115px;
+    }
+    .loginFieldAm .circleTextTop > span, .loginFieldAm .circleTextTop {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .loginFieldAm .circleTextBottom {
+        font-size: 12px;
+    }
+    .loginField {
+        width: 87%;
+        height: 660px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .mainTextCircle {
+        width: 176px;
+        height: 112px;
+        margin: 0;
+    }
+
+    .textCircle {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .circleTextTop {
+        height: 63px;
+        font-family: 'Roboto Slab';
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21.1px;
+        letter-spacing: -0.5px;
+        text-align: center;
+    }
+
+    .circleTextTop > span {
+        font-family: 'Roboto Slab';
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21.1px;
+        letter-spacing: -0.5px;
+        text-align: center;
+    }
+
+    .circleTextBottom {
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        text-align: center;
+        width: 176px;
+    }
+
+    .signupForm > span, .signin > span {
+        display: none;
+    }
+
+    .signupFormTitle {
+        display: block;
+        font-family: 'Roboto Slab';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21.1px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .signupForm {
+        width: 100%;
+        height: 260px;
+    }
+    .rememberSignupField > label,
+    .rememberSignupField > label > a{
+        font-family: Roboto;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.72px;
+        text-align: left;
+    }
+    .signupMenu > input, .passEye > input , .signinMenu > input{
+        height: 46px;
+    }
+    #submitButton img,
+    .container_signin img{
+        width: 107.96px;
+        height: 40px;
+    }
+    .container_signup > span,
+    .container_signin > span{
+        font-family: Roboto;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.72px;
+        top: 16px;
+    }
+    .signUp > span,
+    .signUp > a,
+    .rememberField > a,
+    .mainCheck > label{
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 15.23px;
+    }
+    .login {
+        height: 820px;
+    }
+    .rememberSignupField, .container_signup  {
+        padding-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .mainTextCircle {
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .loginField {
+        margin-top: 51px;
+        height: 606px;
+    }
+    .login {
+        height: 760px;
+    }
+    .circleTextBottom {
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .textCircle {
+        height: 253px;
+    }
+    .loginField {
+        margin-top: 10px;
+        height: 570px;
+    }
+    .login {
+        height: 710px;
+    }
+    .circleTextTop,
+    .circleTextTop > span,
+    .circleTextBottom{
+        font-size: 12px;
+    }
+    .mainTextCircle, .circleTextBottom {
+        width: 113px;
+    }
+    .loginFieldAm .mainTextCircle {
+        height: 130px;
     }
 }

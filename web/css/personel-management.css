@@ -162,7 +162,7 @@
     font-family: "Tahoma", sans-serif;
     position: absolute;
     left: 0px;
-    top: 20px;
+    top: 23px;
     width: 100%;
     text-align: center;
 }
@@ -171,12 +171,28 @@
 }
 .managementBtnDiv .button1{
     color: #F36528;
+    font-family: 'Roboto Black';
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 17.58px;
 }
 .managementBtnDiv .button2{
     color: white;
+    font-family: 'Roboto Black';
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 17.58px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 5.5px;
 }
 .rightImgM, .diplomW{
     display: none;
+}
+.managementBtnDiv a{
+    z-index: 10;
+    position: relative;
 }
 /*LIKE*/
 .large-font {
@@ -413,12 +429,12 @@ ion-icon {
         justify-content: center;
         padding-top: 0px;
     }
-    .managementBtnDiv > button > img {
+    .buttonDiv > button > img {
         position: relative;
         width: 130px;
         height: 56px;
     }
-    .managementBtnDiv > button > span {
+    .buttonDiv > button > span {
         font-family: 'Roboto';
         font-size: 13px;
         font-weight: 900;
@@ -525,20 +541,6 @@ ion-icon {
         height: auto;
         margin-top: 20px;
     }
-    .bottomImages {
-        background: #FFFFFF24;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        height: 68px;
-        align-items: center;
-        justify-content: space-evenly;
-        position: fixed;
-        z-index: 100000;
-        left: 0;
-        bottom: 0;
-    }
     .footerBackground {
         margin-top: -37px !important;
     }
@@ -553,19 +555,38 @@ ion-icon {
     .personelManagement {
         background: #5D9A9D;
     }
+}
+@media screen and (max-width: 600px) {
+    .bottomImages {
+        background: #7BADAF;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        height: 68px;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 100000;
+        left: 0;
+    }
+    #bottomImages.fixed {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    #bottomImages.none {
+        display: none;
+    }
     .managementBtnDiv .button2,
     .managementBtnDiv .button1{
         font-family: 'Roboto Black';
         font-size: 10px;
         font-weight: 900;
         line-height: 11.72px;
+        top: 7.5px;
     }
-    .managementBtnDiv > button > img {
+    .bottomImages img {
         width: 102px;
         height: 44px;
-    }
-    .managementBtnDiv .button2, .managementBtnDiv .button1{
-        top: 16px;
     }
     .amdFix{
         display: block;
@@ -576,9 +597,6 @@ ion-icon {
         color: #FFFFFF;
         height: max-content;
     }
-    .managementBtnDiv {
-        height: max-content;
-    }
     .buttonDiv{
         display: flex;
         gap: 10px;
@@ -587,8 +605,9 @@ ion-icon {
         margin: 0;
         padding: 0;
     }
-}
-@media screen and (max-width: 600px) {
+    .managementBtnDiv .button1{
+        top: 17px;
+    }
     .ellipseButton {
         display: block;
         position: absolute;
@@ -624,5 +643,21 @@ ion-icon {
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
+    }
+}
+@media screen and (max-width: 400px){
+    .bottomImages img {
+        width: 90px;
+        height: 40px;
+    }
+    .amdFix {
+        font-size: 13px;
+        margin-left: 20px;
+    }
+    .managementBtnDiv .button1 {
+        top: 15px;
+    }
+    .buttonDiv {
+        margin: 0 20px 0 0;
     }
 }

@@ -2,9 +2,26 @@
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/user-profile.css');
 ?>
-<div class="userCreateBg">
+<?php
+$language = $_COOKIE['language'];
+$class1 = '';
+if ($language == 'en') {
+    $class1 = 'usersProfileEn';
+} elseif ($language == 'am') {
+    $class1 = 'usersProfileAm';
+
+} elseif ($language == 'ru') {
+    $class1 = 'usersProfileRu';
+}
+?>
+<div class="userCreateBg <?php echo $class1; ?>">
     <div class="userCreateField">
-        <div class="userProfileMenuField">
+        <div class="userCreateTitleField">
+            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <div><?=$GLOBALS['text']['profileTitle']?></div>
+        </div>
+        <span class="userCreateMoreInfo"><?=$GLOBALS['text']['userCreateMoreInfo']?></span>
+        <div class="userProfileMenuField bbbbb">
             <span><?=$GLOBALS['text']['profileTitle']?></span>
             <ul class="userProfileMenu">
                 <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
@@ -44,6 +61,43 @@ $this->registerCssFile('@web/css/user-profile.css');
                             <input class="cvFile" type="file">
                             <div class="attachCv">
                                 <span><?=$GLOBALS['text']['usercreateAttach']?></span>
+                                <img src="/images/scriptIcon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userFormsBtn">
+                        <button>
+                            <img src="/images/userSaveBtn.png" alt="">
+                            <span><?=$GLOBALS['text']['usercreateSave']?></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="userCreateFieldFormsMobile">
+            <form action="">
+                <div class="userPhotoFieldsMobile">
+                    <span class="userAddPhotoTextMobile"><?=$GLOBALS['text']['usercreatePhoto']?></span>
+                    <input type="file">
+                </div>
+                <div class="userInputsFieldsMobile">
+                    <div class="userFormsInputMobile">
+                        <input type="text" placeholder="<?=$GLOBALS['text']['usercreateName']?>">
+                    </div>
+                    <div class="userFormsInputMobile">
+                        <input type="number" placeholder="<?=$GLOBALS['text']['usercreatePhone']?>">
+                    </div>
+                    <div class="userFormsInputMobile">
+                        <input type="email" placeholder="<?=$GLOBALS['text']['usercreateMail']?>">
+                    </div>
+                    <div class="userFormsInputMobile">
+                        <input type="text" placeholder="<?=$GLOBALS['text']['usercreateLinkdin']?>">
+                    </div>
+                    <div class="userFormsInputMobile">
+                        <div id="attachCvMobile" class="cvFileFieldMobile">
+                            <input class="cvFileMobile" type="file">
+                            <div class="attachCvMobile">
+                                <span><?=$GLOBALS['text']['usercreateCv']?></span>
                                 <img src="/images/scriptIcon.png" alt="">
                             </div>
                         </div>

@@ -14,7 +14,7 @@ $this->title = $name;
         <span class="span1">404</span>
         <span class="span2">page not found</span>
         <div class="errorBtnField">
-            <a class="errorHref" href="/personel-management/index">
+            <a class="errorHref" href="/">
                 <img src="/images/buttonImg1.png" alt="">
                 <span>GO BACK HOME</span>
             </a>

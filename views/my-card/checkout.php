@@ -2,9 +2,21 @@
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/my-card.css');
 ?>
-<div class="checkoutField">
+<?php
+$language = $_COOKIE['language'];
+$class1 = '';
+if ($language == 'en') {
+} elseif ($language == 'am') {
+    $class1 = 'checkoutFieldAm';
+
+} elseif ($language == 'ru') {
+    $class1 = 'checkoutFieldRu';
+}
+?>
+<div class="checkoutField <?php echo $class1; ?>">
     <div class="checkoutFieldSection">
         <div class="checkoutTitleField">
+            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
             <div><?=$GLOBALS['text']['checkoutTitle']?></div>
             <span onclick="window.location = document.referrer"><?=$GLOBALS['text']['checkoutCancel']?></span>
         </div>
@@ -93,6 +105,19 @@ $this->registerCssFile('@web/css/my-card.css');
                         </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="summary" id="summary">
+        <span class="sumTitle"><?=$GLOBALS['text']['checkoutSummary']?>:</span>
+        <div class="summaryText">
+            <span class="sumPriceAll">xxxx AMD</span>
+            <p><?=$GLOBALS['text']['checkoutTermsText']?> <a href=""><?=$GLOBALS['text']['checkoutTerms']?></a></p>
+            <div class="checkoutTotalFieldInfoBottom">
+                <button>
+                    <img src="/images/sumBtnCheckout.png" alt="">
+                    <span><?=$GLOBALS['text']['checkoutCompleteBtn']?></span>
+                </button>
             </div>
         </div>
     </div>

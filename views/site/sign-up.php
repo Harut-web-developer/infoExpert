@@ -7,8 +7,23 @@ $this->params['breadcrumbs'][] = $this->title;
 $this->registerCssFile('@web/css/login.css');
 
 ?>
+<?php
+$language = $_COOKIE['language'];
+$class1 = '';
+
+if ($language == 'en') {
+} elseif ($language == 'am') {
+    $class1 = 'loginFieldAm';
+} elseif ($language == 'ru') {
+    $class1 = 'loginFieldAm';
+
+}
+?>
 <div class="login">
-    <div class="loginField">
+    <div class="loginField  <?php echo $class1; ?>">
+        <div class="signupFormTitle">
+            <?=$GLOBALS['text']['signupFormTitle']?>
+        </div>
         <div class="textCircle">
             <div class="mainTextCircle">
                 <div class="circleTextTop"><?=$GLOBALS['text']['signupTextOne']?> <span><?=$GLOBALS['text']['signupTextTwo']?></span> <?=$GLOBALS['text']['signupTextThree']?> <span><?=$GLOBALS['text']['signupTextFour']?></span> <?=$GLOBALS['text']['signupTextFive']?> <span><?=$GLOBALS['text']['signupTextSix']?></span> <?=$GLOBALS['text']['signupTextSeven']?></div>

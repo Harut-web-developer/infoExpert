@@ -2,8 +2,24 @@
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/user-profile.css');
 ?>
-<div class="usersAchievements">
-    <div class="userAchievementsSection">
+<?php
+$language = $_COOKIE['language'];
+$class1 = '';
+if ($language == 'en') {
+    $class1 = 'usersProfileEn';
+} elseif ($language == 'am') {
+    $class1 = 'usersProfileAm';
+
+} elseif ($language == 'ru') {
+    $class1 = 'usersProfileRu';
+}
+?>
+<div class="usersAchievementsH usersAchievements <?php echo $class1; ?>">
+    <div class="userAchievementsSection llllll">
+        <div class="userCreateTitleField">
+            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <div><?=$GLOBALS['text']['tabletachievement']?></div>
+        </div>
         <div class="userProfileMenuField">
             <span><?=$GLOBALS['text']['achievementsTitle']?></span>
             <ul class="userProfileMenu">

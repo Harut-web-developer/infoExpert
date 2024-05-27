@@ -33,7 +33,7 @@
     color: #F36528;
 }
 .userProfileMenu{
-    width: max-content;
+    width: 506px;
     height: 43px;
     display: flex;
     flex-direction: row;
@@ -42,9 +42,6 @@
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
-}
-.userProfileMenu > li{
-    margin-left: 40px;
 }
 .userProfileMenu > li > a{
     text-decoration: none;

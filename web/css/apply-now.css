@@ -381,27 +381,27 @@
     color: white;
     text-decoration: underline;
 }
-.applicationButton > button{
-    background: transparent;
-    border: none;
-    position: relative;
-}
-.applicationButton > button:hover img{
-    content: url("../images/applicationBtnhover.png");
-}
-.applicationButton > button > span{
+.applicationButton > a{
     color: #F36528;
     font-size: 16px;
     font-weight: 700;
     font-family: "Tahoma",sans-serif;
-    position: absolute;
-    top: 28px;
-    left: 0px;
     width: 100%;
     text-align: center;
+    position: relative;
 }
-.applicationButton > button:hover span{
+.applicationButton div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.applicationButton > a:hover div{
     color: white;
+}
+.applicationButton > a:hover img{
+    content: url("../images/applicationBtnhover.png");
 }
 @media screen and (max-width: 1150px) {
     .applicationTitle {
@@ -472,8 +472,7 @@
         width: 112.92px;
         height: 44px;
     }
-    .applicationButton > button > span{
-        top: 14px;
+    .applicationButton > a{
         font-size: 11px;
     }
     .applyApplicationTexts {
@@ -489,6 +488,8 @@
         height: 520px;
     }
 }
+
+
 @media screen and (max-width: 900px) {
     .apllyInputFields {
         width: auto;
@@ -566,6 +567,23 @@
         line-height: 33.22px;
     }
     .application {
-        height: 707px;
+        height: 812px;
+    }
+    .applyApplicationTexts {
+        gap: 10px;
+        height: auto;
+    }
+    .applicationTextFields {
+        gap: 82px;
+    }
+    .applicationButton > a{
+        font-family: Tahoma;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 12.07px;
+    }
+    .applicationButton img{
+        width: 102.66px;
+        height: 40px;
     }
 }
