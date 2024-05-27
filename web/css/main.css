@@ -1597,7 +1597,7 @@
     align-items: center;
 }
 .blogText{
-    width: 291px;
+    width: max-content;
     font-family: "Roboto",sans-serif;
     font-size: 24px;
     font-style: normal;
@@ -1636,12 +1636,10 @@
 .individualCards{
     margin: 0px 15px;
     border-radius: 30px;
-    width: 377px;
+    /*width: 377px;*/
+    width: 33%;
     height: 482px;
 }
-/*.cardsMiddle{*/
-/*    margin: 0px 10px;*/
-/*}*/
 .cardsimg{
     height: 233px;
     width: 100%;

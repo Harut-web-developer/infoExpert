@@ -1922,15 +1922,15 @@
     .cardsTextField{
         height: 210px;
     }
-    .blogsCard .individualCards:last-child{
-        display:none;
-    }
+    /*.blogsCard .individualCards:last-child{*/
+    /*    display:none;*/
+    /*}*/
 }
-@media only screen and (min-width: 1401px) {
-    .blogsCard .individualCards:last-child{
-        display:none;
-    }
-}
+/*@media only screen and (min-width: 1401px) {*/
+/*    .blogsCard .individualCards:last-child{*/
+/*        display:none;*/
+/*    }*/
+/*}*/
 /*sectionEight*/
 @media only screen and (min-width: 376px) and (max-width: 1024px) {
     .questionTitle{

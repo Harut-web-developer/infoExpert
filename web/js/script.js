@@ -436,5 +436,8 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 3000,
     });
+    if ($('.individualCards').length >= 4 && $(window).width() >= 1024){
+        $('.individualCards').last().css('display', 'none');
+    }
 })
 

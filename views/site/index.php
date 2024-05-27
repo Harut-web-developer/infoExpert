@@ -581,31 +581,31 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                     </div>
                 </div>
             </div>
-<!--            <div class="individualCards">-->
-<!--                <div class="cardsimg">-->
-<!--                    <img src="/images/blogimg.png" alt="">-->
-<!--                </div>-->
-<!--                <div class="cardsText">-->
-<!--                    <div class="cardsTextField">-->
-<!--                        <div class="cardsTextInfo">-->
-<!--                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>-->
-<!--                            <div class="cardsDate">-->
-<!--                                <img src="/images/calendarimg.png" alt="">-->
-<!--                                <div class="articleDate">--><?php //=date('M') . ' ' . date('d') . ', ' . date('Y') ?><!--</div>-->
-<!--                            </div>-->
-<!--                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>-->
-<!--                        </div>-->
-<!--                        <div class="cardsLike">-->
-<!--                            <a href="--><?php //= Yii::$app->urlManager->createUrl(['blog/categorie']) ?><!--">READ MORE</a>-->
-<!--                            <div class='large-font'>-->
-<!--                                <ion-icon name="heart">-->
-<!--                                    <div class='red-bg'></div>-->
-<!--                                </ion-icon>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+            <div class="individualCards">
+                <div class="cardsimg">
+                    <img src="/images/blogimg.png" alt="">
+                </div>
+                <div class="cardsText">
+                    <div class="cardsTextField">
+                        <div class="cardsTextInfo">
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                            <div class="cardsDate">
+                                <img src="/images/calendarimg.png" alt="">
+                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                            </div>
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                        </div>
+                        <div class="cardsLike">
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="blogsMobileBtn">
             <button>
