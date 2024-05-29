@@ -45,26 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
             clearTimeout(timeoutId));
         wrapper.addEventListener("mouseleave", autoPlay);
     }
-
-    if (window.location.pathname == '/courses/my-courses') {
-        const carousel3 = document.querySelector(".myCoursesFieldAcceptCourses");
-        const wrapper3 = document.querySelector(".wrapperMyCourses");
-        const firstCard3 = carousel3.querySelector(".myCoursesBlocksField");
-        slider(carousel3, wrapper3, firstCard3);
-    } else {
-        const wrapper = document.querySelector(".wrapper"); // div
-        const carousel = document.querySelector(".carouselCourses"); /* ul*/
-        const firstCard = carousel.querySelector(".cardCourses"); // li
+        const wrapper = document.querySelector(".changeBody2");
+        const carousel = document.querySelector(".carousel_2");
+        const firstCard = carousel.querySelector(".card_2");
         slider(carousel, wrapper, firstCard);
 
-        const carousel2 = document.querySelector(".carousel2");
-        const wrapper2 = document.querySelector(".wrapper2");
-        const firstCard2 = carousel2.querySelector(".card2");
+        const wrapper2 = document.querySelector(".bottomSlider");
+        const carousel2 = document.querySelector(".carousel_");
+        const firstCard2 = carousel2.querySelector(".card_");
         slider(carousel2, wrapper2, firstCard2);
-    }
 });
 // Like js
-document.querySelectorAll('.courses ion-icon').forEach(icon => {
+document.querySelectorAll('.wishlist ion-icon').forEach(icon => {
     icon.addEventListener('click', function() {
         this.classList.toggle('active');
     });

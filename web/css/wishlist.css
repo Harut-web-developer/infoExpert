@@ -217,7 +217,7 @@ hr.new1 {
     margin: 0 0 0 60px;
 }
 .bottomSlider {
-    display: flex;
+    /*display: flex;*/
     padding-top: 70px;
     padding-left: 60px;
 }
@@ -228,7 +228,23 @@ hr.new1 {
     height: 482px;
 }
 
-.bottomSlider .carousel_ {
+/*.bottomSlider .carousel_ {*/
+/*    display: grid;*/
+/*    grid-auto-flow: column;*/
+/*    gap: 44px;*/
+/*    overflow-x: auto;*/
+/*    scroll-snap-type: x mandatory;*/
+/*    scroll-behavior: smooth;*/
+/*    scrollbar-width: none;*/
+/*    -ms-overflow-style: none;*/
+/*    margin-top: 0;*/
+/*    margin-bottom: 0rem!important;*/
+/*    padding-left: 0; !* Reset default padding *!*/
+/*    list-style-type: none; !* Remove bullet points *!*/
+/*}*/
+.bottomSlider ul {
+    margin-bottom: 0;
+    padding-left: 0rem!important;
     display: grid;
     grid-auto-flow: column;
     gap: 44px;
@@ -236,26 +252,27 @@ hr.new1 {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
-
-.bottomSlider ul {
-    margin-top: 0;
-    margin-bottom: 0rem!important;
-    padding-left: 0; /* Reset default padding */
-    list-style-type: none; /* Remove bullet points */
-}
-
-.carousel_::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
-}
-
-.carousel_ :where(.card_) {
+.card_ {
+    list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    cursor: pointer;
+    scroll-snap-align: start;
+    list-style: none;
+}
+.carousel_::-webkit-scrollbar {
+    display: none;
+}
+.carousel_.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel_.no-transition {
+    scroll-behavior: auto;
+}
+.carousel_.dragging .card_ {
     cursor: pointer;
     user-select: none;
 }
-
 .cardsimg_ {
     height: 233px;
     width: 100%;
@@ -336,14 +353,12 @@ hr.new1 {
 .articleDate_{
     margin-left: 10px;
 }
-.changeBody2{
-    display: flex;
-}
+/*.changeBody2{*/
+/*    display: flex;*/
+/*}*/
 .changeBody2 ul {
     margin-bottom: 0;
     padding-left: 0rem!important;
-}
-.carousel_2{
     display: grid;
     grid-auto-flow: column;
     gap: 44px;
@@ -358,15 +373,26 @@ hr.new1 {
     background: #FFFFFF24;
     border-radius: 30px;
     display: flex;
-    /*padding: 16px 17px 16px 17px;*/
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     cursor: pointer;
-    user-select: none;
+    scroll-snap-align: start;
+    list-style: none;
 }
 .carousel_2::-webkit-scrollbar {
     display: none;
+}
+.carousel_2.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel_2.no-transition {
+    scroll-behavior: auto;
+}
+.carousel_2.dragging .card_2 {
+    cursor: pointer;
+    user-select: none;
 }
 .img_2{
     width: 100%;
@@ -542,44 +568,59 @@ hr.new1 {
     width: 32px;
     height: 32px;
 }
-/*LIKE*/
-.heart{
-    width: 27px;
-    height: 23px;
-}
-.heart2{
-    width: 25.63px;
-    height: 21.96px;
-}
-.like-container{
-    filter: url('#filter');
-    display: inline-block;
-}
-.like-cnt{
-    position: absolute;
-    cursor: pointer;
-    left: 50%;
-    top: 100%;
-    transform: translate(-105%, -55%)!important;
-    width: 42px;
-    height: 42px;
-    border: 1px solid #FFFFFF;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 36px;
-    z-index: 10;
-}
-.like-btn{
-    color: #fff;
-}
-::-moz-selection { background: transparent;}
-::selection {background: transparent;}
-.likeColor{
-    border-color: #F36528;
-}
 .usersProfileAm .userProfileMenu {
     width: 550px;
 }
+.booterImgs{
+    display: flex;
+    gap: 8px;
+}
+/*LIKE*/
+.large-font {
+    width: 43px;
+    height: 43px;
+    font-size: xxx-large;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid #F36528;
+    justify-content: center;
+    position: relative;
+}
+.largeFont{
+    border: 1px solid #FFFFFF;
+}
+ion-icon.active {
+    animation: like 0.5s 1;
+    fill: #F36528;
+    stroke: none;
+    color: #F36528;
+}
+ion-icon {
+    width: 29.63px;
+    height: 25.96px;
+    color: #F36528;
+    fill: transparent;
+    stroke-width: 30;
+    transition: all 0.5s;
+    position: absolute;
+}
+.iconLike{
+    color: #FFFFFF;
+}
+@-webkit-keyframes like {
+    0% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 @media screen and (max-width: 1900px) {
     .CoursesAndCategoriesCard {
         width: 58%;
