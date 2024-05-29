@@ -5,6 +5,8 @@
     height: 1370px;
     background-image: url("../images/background-courses.png");
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding-top: 158px;
 }
 .headerCourses{
@@ -507,8 +509,7 @@
 .footerCard{
     display: flex;
     justify-content: space-between;
-    /* padding: 0 19px; */
-    /* height: 23%; */
+    align-items: center;
 }
 .footerCard a{
     background: transparent;
@@ -526,8 +527,8 @@
 .footerCard a > span{
     color: white;
     width: 100%;
-    margin-top: 13px;
     position: absolute;
+    top: 4px;
     left: 0px;
     font-family: 'Roboto';
     font-size: 16px;
@@ -569,7 +570,10 @@
     width: 550px;
 }
 .booterImgs{
+    width: 99px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /*LIKE*/
@@ -805,10 +809,6 @@ ion-icon {
         line-height: 32px;
         transform: translate(-105%, -60%) !important;
     }
-    .footerImg3{
-        width: 35px;
-        height: 35px;
-    }
     .heart {
         width: 20.19px;
         height: 20px;
@@ -822,14 +822,14 @@ ion-icon {
         width: 260px;
     }
     .cardtxt1 span{
-        font-family: Roboto Medium;
+        font-family: "Roboto",sans-serif;
         font-size: 14px;
         font-weight: 500;
         line-height: 13.92px;
         text-align: left;
     }
     .cardtxt2 span{
-        font-family: Roboto Medium;
+        font-family: "Roboto",sans-serif;
         font-size: 14px;
         font-weight: 500;
         line-height: 13.92px;
@@ -839,15 +839,16 @@ ion-icon {
     .txt1, .txt2, .courses .title0 {
         font-size: 32px;
     }
-    .footerCard button > img {
+    .footerCard a {
         position: relative;
     }
-    .footerCard button > span > a {
-        margin-top: 11px;
+    .footerCard a > span {
+        /*margin-top: 11px;*/
+        top: 5px;
         font-size: 14px;
     }
-    .footerCard button {
-        margin-left: 28px;
+    .footerCard a {
+        margin-left: 0px;
     }
     .starDivCourses {
         width: 78px;
@@ -912,10 +913,6 @@ ion-icon {
         width: 260px;
         height: 370px;
     }
-    .like-cnt, .footerImg3 {
-        width: 25px;
-        height: 25px;
-    }
     .heart {
         width: 15px;
         height: 15px;
@@ -924,10 +921,10 @@ ion-icon {
         transform: translate(-105%, -62%) !important;
         line-height: 21px;
     }
-    .footerImg1 {
-        width: 75px;
-        height: 33px;
-    }
+    /*.footerImg1 {*/
+    /*    width: 75px;*/
+    /*    height: 33px;*/
+    /*}*/
     .cardCoursesBody {
         width: 230px;
         height: 180px;
@@ -949,10 +946,27 @@ ion-icon {
         flex-direction: column;
         justify-content: space-between;
     }
-    .footerCard button > span > a {
-        margin-top: 6px;
+    .footerCard a > span {
+        /*margin-top: 6px;*/
+        top: 4px;
         font-size: 11px;
     }
+    .footerCard a > img{
+        width: 90px;
+        height: 40px;
+    }
+    .large-font{
+        width: 35px;
+        height: 35px;
+    }
+    .footerImg3 {
+        width: 35px;
+        height: 35px;
+    }
+    .booterImgs{
+        width: 85px;
+    }
+
 }
 @media screen and (max-width: 1420px) {
     .myCoursesBlocksFieldMain > span {
@@ -992,8 +1006,14 @@ ion-icon {
 
 }
 @media screen and (max-width: 1300px) {
+    .cardCoursesBody{
+        align-items: center;
+    }
+    .footerCard{
+        width: 88%;
+    }
     .booterImgs{
-        width: max-content;
+        width: 80px;
     }
     .carouselCourses .cardCourses {
         width: 250px;
@@ -1113,6 +1133,32 @@ ion-icon {
     .myCoursesAm .userProfileMenuField > span {
         font-size: 30px;
     }
+    .large-font{
+        width: 22px;
+        height: 22px;
+    }
+    ion-icon{
+        width: 14.63px;
+        height: 14.63px;
+    }
+    .footerImg3 {
+        width: 22px;
+        height: 22px;
+    }
+    .coursisBtnField > a > img{
+        width: 72px;
+        height: 31px;
+    }
+    .footerCard a > span{
+        top: 5px;
+        /*font-size: 10px;*/
+    }
+    .footerCard {
+        width: 78%;
+    }
+    .booterImgs {
+        width: 56px;
+    }
 }
 @media screen and (max-width: 1160px) {
     .myCoursesFieldSectionRight img{
@@ -1151,13 +1197,14 @@ ion-icon {
         width: 16px;
         height: 15px;
     }
-    .footerCard button > span > a{
+    .footerCard a > span{
         font-family: "Roboto",sans-serif;
         font-size: 10px;
         font-weight: 500;
         line-height: 11.72px;
         text-align: center;
-        margin-top: 10px;
+        left: 0;
+        top: 8px
     }
     .like-cnt, .footerImg3 {
         width: 22px;
@@ -1338,11 +1385,11 @@ ion-icon {
     }
     .cardCourses_ {
         width: auto;
-        margin: 40px 6.9% 0px 6.8%;
+        margin: 40px 5.9% 0px 5.8%;
         padding-top: 0;
     }
     .cardBody .span1{
-        font-family: Roboto Slab;
+        font-family: "Roboto Slab",sans-serif;
         font-size: 11px;
         font-weight: 500;
         line-height: 14.3px;
@@ -1356,14 +1403,14 @@ ion-icon {
         height: 8px;
     }
     .cardBody .span2{
-        font-family: Roboto;
+        font-family: "Roboto", sans-serif;
         font-size: 10px;
         font-weight: 400;
         line-height: 11.72px;
         text-align: left;
     }
     .amd{
-        font-family: Roboto;
+        font-family: "Roboto", sans-serif;
         font-size: 8px;
         font-weight: 400;
         line-height: 9.38px;
@@ -1378,23 +1425,23 @@ ion-icon {
         height: 14px;
     }
     .cardtxt1 span{
-        font-family: Roboto Medium;
-        font-size: 8px;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
         font-weight: 500;
         line-height: 9.92px;
         text-align: left;
         margin-left: 6px;
     }
     .cardtxt2 span{
-        font-family: Roboto Medium;
-        font-size: 8px;
+        font-family: "Roboto",sans-serif;
+        font-size: 10px;
         font-weight: 500;
         line-height: 9.92px;
         text-align: left;
         margin-left: 6px;
     }
-    .footerCard button {
-        margin-left: 12px;
+    .footerCard a {
+        margin-left: 0px;
     }
     .footerImg1{
         width: 71.73px;
@@ -1418,14 +1465,14 @@ ion-icon {
         padding: 0;
     }
     .carouselCourses {
-        grid-auto-columns: calc((100% / 4) - 21px);
-        gap: 28px;
+        grid-auto-columns: calc((100% / 4));
     }
     .carouselCourses .cardCourses {
         width: 200px;
         height: 285px;
     }
     .footerCard{
+        width: 90%;
         padding: 0;
     }
     .myCoursesEn .userProfileMenu,
@@ -1453,13 +1500,18 @@ ion-icon {
     .carouselCourses {
         grid-auto-columns: calc((100% / 4));
     }
+    .cardCourses_ {
+        width: auto;
+        margin: 40px 3.9% 0px 3.8%;
+        padding-top: 0;
+    }
 }
 @media screen and (max-width: 900px) {
     .txt1, .txt2, .courses .title0 {
         font-size: 21px;
     }
     .carouselCourses {
-        grid-auto-columns: calc((100% / 3.7));
+        grid-auto-columns: calc((100% / 3));
     }
 }
 @media screen and (max-width: 830px) {
@@ -1467,7 +1519,7 @@ ion-icon {
         font-size: 20px;
     }
     .carouselCourses {
-        grid-auto-columns: calc((100% / 3.5));
+        grid-auto-columns: calc((100% / 3));
     }
 }
 @media screen and (max-width: 760px) {
@@ -1475,7 +1527,7 @@ ion-icon {
         font-size: 18px;
     }
     .carouselCourses {
-        grid-auto-columns: calc((100% / 3.33));
+        grid-auto-columns: calc((100% / 3));
     }
     .headerCourses div {
         width: 93%;
