@@ -5,9 +5,9 @@ use yii\web\YiiAsset;
 /** @var yii\web\View $this */
 
 $this->registerCssFile('@web/css/wishlist.css');
-$this->registerJsFile('@web/js/courses.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
-$this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
-$this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
+$this->registerJsFile('@web/js/wishlist.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
+$this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
+$this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);
 ?>
 <?php
 $language = $_COOKIE['language'];
@@ -105,12 +105,10 @@ if ($language == 'en') {
                                             </button>
                                         </div>
                                         <div class="booterImgs">
-                                            <div class="like-container">
-                                                <div class="like-cnt unchecked">
-                                                    <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                                    </i>
-                                                </div>
+                                            <div class='large-font largeFont'>
+                                                <ion-icon name="heart" class="iconLike">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
                                             </div>
                                             <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                                         </div>
@@ -151,12 +149,10 @@ if ($language == 'en') {
                                             </button>
                                         </div>
                                         <div class="booterImgs">
-                                            <div class="like-container">
-                                                <div class="like-cnt unchecked">
-                                                    <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                                    </i>
-                                                </div>
+                                            <div class='large-font largeFont'>
+                                                <ion-icon name="heart" class="iconLike">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
                                             </div>
                                             <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                                         </div>
@@ -197,12 +193,10 @@ if ($language == 'en') {
                                             </button>
                                         </div>
                                         <div class="booterImgs">
-                                            <div class="like-container">
-                                                <div class="like-cnt unchecked">
-                                                    <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                                    </i>
-                                                </div>
+                                            <div class='large-font largeFont'>
+                                                <ion-icon name="heart" class="iconLike">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
                                             </div>
                                             <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                                         </div>
@@ -243,12 +237,10 @@ if ($language == 'en') {
                                             </button>
                                         </div>
                                         <div class="booterImgs">
-                                            <div class="like-container">
-                                                <div class="like-cnt unchecked">
-                                                    <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                                    </i>
-                                                </div>
+                                            <div class='large-font largeFont'>
+                                                <ion-icon name="heart" class="iconLike">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
                                             </div>
                                             <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                                         </div>
@@ -289,12 +281,10 @@ if ($language == 'en') {
                                             </button>
                                         </div>
                                         <div class="booterImgs">
-                                            <div class="like-container">
-                                                <div class="like-cnt unchecked">
-                                                    <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                                    </i>
-                                                </div>
+                                            <div class='large-font largeFont'>
+                                                <ion-icon name="heart" class="iconLike">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
                                             </div>
                                             <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
                                         </div>
@@ -324,12 +314,10 @@ if ($language == 'en') {
                                         </div>
                                         <div class="cardsLike_">
                                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                                            <div class="like-container">
-                                                <div class="like-cnt unchecked likeColor">
-                                                    <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart2 bottomLike" src="/images/innerHeart2.png" alt="" draggable="false">
-                                                    </i>
-                                                </div>
+                                            <div class='large-font'>
+                                                <ion-icon name="heart">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
                                             </div>
                                         </div>
                                     </div>
@@ -353,12 +341,10 @@ if ($language == 'en') {
                                         </div>
                                         <div class="cardsLike_">
                                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                                            <div class="like-container">
-                                                <div class="like-cnt unchecked likeColor">
-                                                    <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart2 bottomLike" src="/images/innerHeart2.png" alt="" draggable="false">
-                                                    </i>
-                                                </div>
+                                            <div class='large-font'>
+                                                <ion-icon name="heart">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
                                             </div>
                                         </div>
                                     </div>
@@ -382,12 +368,10 @@ if ($language == 'en') {
                                         </div>
                                         <div class="cardsLike_">
                                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                                            <div class="like-container">
-                                                <div class="like-cnt unchecked likeColor">
-                                                    <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart2 bottomLike" src="/images/innerHeart2.png" alt="" draggable="false">
-                                                    </i>
-                                                </div>
+                                            <div class='large-font'>
+                                                <ion-icon name="heart">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
                                             </div>
                                         </div>
                                     </div>
@@ -411,12 +395,10 @@ if ($language == 'en') {
                                         </div>
                                         <div class="cardsLike_">
                                             <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
-                                            <div class="like-container">
-                                                <div class="like-cnt unchecked likeColor">
-                                                    <i class="like-btn material-icons heart-icon">
-                                                        <img class="heart2 bottomLike" src="/images/innerHeart2.png" alt="" draggable="false">
-                                                    </i>
-                                                </div>
+                                            <div class='large-font'>
+                                                <ion-icon name="heart">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
                                             </div>
                                         </div>
                                     </div>
@@ -429,68 +411,3 @@ if ($language == 'en') {
         </div>
     </div>
 </div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        function slider(carousel, wrapper, firstCard) {
-            const firstCardWidth = firstCard.offsetWidth + parseFloat(getComputedStyle(firstCard).marginRight);
-            let isDragging = false,
-                startX,
-                startScrollLeft,
-                timeoutId;
-
-            const dragStart = (e) => {
-                isDragging = true;
-                carousel.classList.add("dragging");
-                startX = e.touches ? e.touches[0].pageX : e.pageX;
-                startScrollLeft = carousel.scrollLeft;
-            };
-
-            const dragging = (e) => {
-                if (!isDragging) return;
-                const newScrollLeft = startScrollLeft - ((e.touches ? e.touches[0].pageX : e.pageX) - startX);
-                if (newScrollLeft <= 0 || newScrollLeft >= carousel.scrollWidth - carousel.offsetWidth) {
-                    isDragging = false;
-                    return;
-                }
-                carousel.scrollLeft = newScrollLeft;
-            };
-
-            const dragStop = () => {
-                isDragging = false;
-                carousel.classList.remove("dragging");
-            };
-
-            const autoPlay = () => {
-                if (window.innerWidth < 800) return;
-                const totalCardWidth = carousel.scrollWidth;
-                const maxScrollLeft = totalCardWidth - carousel.offsetWidth;
-                if (carousel.scrollLeft >= maxScrollLeft) return;
-                // timeoutId = setTimeout(() =>
-                //     carousel.scrollLeft += firstCardWidth, 2500);
-            };
-
-            carousel.addEventListener("touchstart", dragStart);
-            carousel.addEventListener("mousedown", dragStart);
-            carousel.addEventListener("touchmove", dragging);
-            carousel.addEventListener("mousemove", dragging);
-            document.addEventListener("touchend", dragStop);
-            document.addEventListener("mouseup", dragStop);
-            wrapper.addEventListener("mouseenter", () =>
-                clearTimeout(timeoutId));
-            wrapper.addEventListener("mouseleave", autoPlay);
-        }
-
-        const carousel = document.querySelector(".bottomSlider .carousel_");
-        const wrapper = document.querySelector(".bottomSlider");
-        const firstCard = carousel.querySelector(".card_");
-        slider(carousel, wrapper, firstCard);
-
-        const carousel_2 = document.querySelector(".changeBody2 .carousel_2");
-        const wrapper_2 = document.querySelector(".changeBody2");
-        if (carousel_2) {
-            const firstCard_2 = carousel_2.querySelector(".card_2");
-            slider(carousel_2, wrapper_2, firstCard_2);
-        }
-    });
-</script>

@@ -407,6 +407,11 @@ ion-icon {
         height: 123px;
     }
 }
+@media screen and (max-width: 600px) {
+    .blog{
+        background: #ACCBE6;
+    }
+}
 @media screen and (max-width: 463.5px) {
     .pagination-container, .backButton{
         display: none;

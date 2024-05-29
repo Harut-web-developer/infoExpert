@@ -200,3 +200,8 @@ a.desc:after {
         height: 821px;
     }
 }
+@media screen and (max-width: 600px) {
+    .siteError{
+        background: #5D9A9D;
+    }
+}

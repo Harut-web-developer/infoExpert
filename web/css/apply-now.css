@@ -498,6 +498,11 @@
         width: auto;
     }
 }
+@media screen and (max-width: 600px) {
+    .applyOne{
+        background: #5D9A9D;
+    }
+}
 @media screen and (max-width: 520px) {
     .appleFields > span{
         font-family: Tahoma;

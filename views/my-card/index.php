@@ -6,8 +6,8 @@ use yii\web\YiiAsset;
 $this->registerCssFile('@web/css/my-card.css');
 
 $this->registerJsFile('@web/js/my-card.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
-$this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', ['position' => View::POS_END]);
-$this->registerJsFile('https://cdn.jsdelivr.net/npm/mo-js', ['position' => View::POS_END]);
+$this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
+$this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);
 ?>
 <?php
 $language = $_COOKIE['language'];
@@ -98,12 +98,10 @@ if ($language == 'en') {
                                                     <span><?=$GLOBALS['text']['myCardBtn']?></span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
-                                                    <div class="like-container">
-                                                        <div class="like-cnt unchecked">
-                                                            <i class="like-btn material-icons heart-icon">
-                                                                <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                                            </i>
-                                                        </div>
+                                                    <div class='large-font largeFont'>
+                                                        <ion-icon name="heart" class="iconLike">
+                                                            <div class='red-bg'></div>
+                                                        </ion-icon>
                                                     </div>
                                                     <img src="/images/iconmarketmycard.png" alt="">
                                                 </div>
@@ -152,12 +150,10 @@ if ($language == 'en') {
                                                     <span><?=$GLOBALS['text']['myCardBtn']?></span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
-                                                    <div class="like-container">
-                                                        <div class="like-cnt unchecked">
-                                                            <i class="like-btn material-icons heart-icon">
-                                                                <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                                            </i>
-                                                        </div>
+                                                    <div class='large-font largeFont'>
+                                                        <ion-icon name="heart" class="iconLike">
+                                                            <div class='red-bg'></div>
+                                                        </ion-icon>
                                                     </div>
                                                     <img src="/images/iconmarketmycard.png" alt="">
                                                 </div>
@@ -206,12 +202,10 @@ if ($language == 'en') {
                                                     <span><?=$GLOBALS['text']['myCardBtn']?></span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
-                                                    <div class="like-container">
-                                                        <div class="like-cnt unchecked">
-                                                            <i class="like-btn material-icons heart-icon">
-                                                                <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                                            </i>
-                                                        </div>
+                                                    <div class='large-font largeFont'>
+                                                        <ion-icon name="heart" class="iconLike">
+                                                            <div class='red-bg'></div>
+                                                        </ion-icon>
                                                     </div>
                                                     <img src="/images/iconmarketmycard.png" alt="">
                                                 </div>
@@ -260,12 +254,10 @@ if ($language == 'en') {
                                                     <span><?=$GLOBALS['text']['myCardBtn']?></span>
                                                 </button>
                                                 <div class="btnGroupLikeMarket">
-                                                    <div class="like-container">
-                                                        <div class="like-cnt unchecked">
-                                                            <i class="like-btn material-icons heart-icon">
-                                                                <img class="heart" src="/images/innerHeart.png" alt="" draggable="false">
-                                                            </i>
-                                                        </div>
+                                                    <div class='large-font largeFont'>
+                                                        <ion-icon name="heart" class="iconLike">
+                                                            <div class='red-bg'></div>
+                                                        </ion-icon>
                                                     </div>
                                                     <img src="/images/iconmarketmycard.png" alt="">
                                                 </div>

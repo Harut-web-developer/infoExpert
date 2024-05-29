@@ -186,7 +186,6 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    scrollbar-width: none;
     padding-left: 0rem!important;
     margin-bottom: 0;
 }
@@ -197,7 +196,22 @@
     justify-content: space-between;
     list-style: none;
     cursor: pointer;
+    scroll-snap-align: start;
     align-items: start;
+    user-select: none;
+}
+.myCardFieldAcceptCourses::-webkit-scrollbar {
+    display: none;
+}
+.myCardFieldAcceptCourses.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.myCardFieldAcceptCourses.no-transition {
+    scroll-behavior: auto;
+}
+.myCardFieldAcceptCourses.dragging .myCardBlocksField {
+    cursor: pointer;
     user-select: none;
 }
 .myCoursesBlocksField{
@@ -885,37 +899,54 @@
 .backButtonCheckout, .summary{
     display: none;
 }
-/*LIKE*/
-.heart{
-    width: 24.19px;
-    height: 24px;
-}
-.like-container{
-    filter: url('#filter');
-    display: inline-block;
-}
-.like-cnt{
-    position: absolute;
-    cursor: pointer;
-    left: 50%;
-    top: 100%;
-    transform: translate(-127%, -49%) !important;
-    width: 43px;
-    height: 44px;
-    border: 1px solid #FFFFFF;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 36px;
-    z-index: 10;
-}
-.like-btn{
-    color: #fff;
-}
-::-moz-selection { background: transparent;}
-::selection {background: transparent;}
-
 .usersProfileAm .userProfileMenu {
     width: 550px;
+}
+
+/*LIKE*/
+.large-font {
+    width: 43px;
+    height: 43px;
+    font-size: xxx-large;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid #F36528;
+    justify-content: center;
+    position: relative;
+}
+.largeFont{
+    border: 1px solid #FFFFFF;
+}
+ion-icon.active {
+    animation: like 0.5s 1;
+    fill: #F36528;
+    stroke: none;
+    color: #F36528;
+}
+ion-icon {
+    width: 29.63px;
+    height: 25.96px;
+    color: #F36528;
+    fill: transparent;
+    stroke-width: 30;
+    transition: all 0.5s;
+    position: absolute;
+}
+.iconLike{
+    color: #FFFFFF;
+}
+@-webkit-keyframes like {
+    0% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
 /*tablet of my card page */
 @media screen and (max-width: 1800px) {
@@ -1650,6 +1681,7 @@
 }
 @media screen and (max-width: 600px) {
     .congratulation{
+        background: #5D9A9D;
         height: 700px;
     }
     .backButtonCheckout{

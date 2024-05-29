@@ -1216,6 +1216,7 @@
     }
     .userCreateBg {
         height: 812px;
+        background: #5D9A9D;
     }
     .userCreateField {
         gap: 30px;
@@ -1270,6 +1271,7 @@
     }
     .usersProfileHeightEn, .usersProfileHeightRu, .usersProfileHeightAm {
         height: 812px;
+        background: #5D9A9D;
     }
     .userProfileSection {
         gap: 88px;
