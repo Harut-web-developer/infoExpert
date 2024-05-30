@@ -9,6 +9,17 @@
     background-size: cover;
     padding-top: 158px;
 }
+.mobilebtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.mobilebtn > button{
+    background: transparent;
+    border: none;
+    margin: 44px auto 42px;
+}
 .headerCourses{
     width: 67%;
     margin: 0 auto;
@@ -1346,7 +1357,7 @@ ion-icon {
     /*    margin: 20px 6.9% 0px 6.8%;*/
     /*}*/
     .txt1, .txt2, .courses .title0 {
-        font-family: Roboto Slab;
+        font-family: "Roboto Slab",sans-serif;
         font-size: 25px;
         font-weight: 400;
         line-height: 58px;
@@ -1360,14 +1371,14 @@ ion-icon {
         margin: 0px 6.9% 0px 6.8%;
     }
     .cardBody2 .span1slider2{
-        font-family: Roboto Slab;
+        font-family: "Roboto Slab",sans-serif;
         font-size: 14px;
         font-weight: 700;
         line-height: 18.46px;
         text-align: left;
     }
     .cardBody2 .span2slider2{
-        font-family: Roboto Medium;
+        font-family: 'Roboto',sans-serif;
         font-size: 12px;
         font-weight: 500;
         line-height: 14.06px;
@@ -1514,18 +1525,28 @@ ion-icon {
     .carouselCourses {
         grid-auto-columns: calc((100% / 3));
     }
+    .cardCourses_ {
+        width: auto;
+        margin: 40px 10.9% 0px 10.8%;
+        padding-top: 0;
+    }
 }
 @media screen and (max-width: 830px) {
     .txt1, .txt2, .courses .title0 {
         font-size: 20px;
     }
     .carouselCourses {
-        grid-auto-columns: calc((100% / 3));
+        grid-auto-columns: calc((100% / 3) + 1px);
+    }
+    .cardCourses_ {
+        width: auto;
+        margin: 40px 7.9% 0px 7.8%;
+        padding-top: 0;
     }
 }
 @media screen and (max-width: 760px) {
     .txt1, .txt2, .courses .title0 {
-        font-size: 18px;
+        font-size: 16px;
     }
     .carouselCourses {
         grid-auto-columns: calc((100% / 3));
@@ -1533,17 +1554,334 @@ ion-icon {
     .headerCourses div {
         width: 93%;
     }
+    .wrapper2 .carousel2 {
+        grid-auto-columns: calc((100% / 3));
+    }
+    .cardCourses2 {
+        width: auto;
+        margin: 0px 7.9% 0px 7.8%
+    }
+    .cardCourses_ {
+        width: auto;
+        margin: 40px 7.9% 0px 7.8%;
+        padding-top: 0;
+    }
 }
 @media screen and (max-width: 750px) {
     .carouselCourses {
         grid-auto-columns: calc((100% / 3));
     }
+    .cardCourses_ {
+        width: auto;
+        margin: 40px 4.9% 0px 4.8%;
+        padding-top: 0;
+    }
 }
-@media screen and (max-width: 700px) {
+@media screen  and (min-width: 600px) and (max-width: 700px) {
     .myCoursesEn .userProfileMenuField > span, .userProfileMenuField > span, .myCoursesRu .userProfileMenuField > span {
         font-size: 19px;
     }
     .myCoursesEn .userProfileMenu, .userProfileMenu, .myCoursesRu .userProfileMenu {
         width: 350px;
+    }
+    .cardCourses_ {
+        width: auto;
+        margin: 40px 12.9% 0px 12.8%;
+        padding-top: 0;
+    }
+    .carouselCourses {
+        grid-auto-columns: calc((100% / 2));
+    }
+}
+@media screen  and (min-width: 320px) and (max-width: 399px) {
+    .courses{
+        background: #5D9A9D;
+        height: min-content;
+    }
+    .title0,.cardCourses2, .cardCourses_{
+        display: none;
+    }
+    .headerCourses{
+        width: 100%;
+        height: 170px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .headerCourses div{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .txt1, .txt2{
+        font-size: 18px;
+        height: 20px;
+        line-height: 0;
+    }
+    .backButton{
+        top: 5px;
+    }
+    .cardCourses{
+        width: 300px;
+        height: 435px;
+        margin: 30px auto 0px;
+    }
+    .img{
+        width: 100% !important;
+        height: 203px !important;
+        border-top-right-radius: 24px;
+        border-top-left-radius: 24px;
+    }
+    .cardCoursesBody{
+        width: 100%;
+        height: 232px;
+        margin-top: 0px;
+        background: #74A8AB;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+    .cardBottomMainField{
+        width: 278px;
+        height: 193px;
+        margin: 17px auto 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .cardCenter{
+        width: 278px;
+        height: 70px;
+    }
+    .footerCard{
+        width: 240px;
+        height: 43px;
+    }
+    .cardtxt1{
+        width: 100%;
+        height: 38px;
+    }
+    .cardtxt1 > img{
+        width: 28px !important;
+        height: 28px !important;
+    }
+    .cardtxt1 > span{
+        width: 100%;
+        font-size: 14px;
+        line-height: 17.36px;
+    }
+    .cardtxt2 > img{
+        width: 28px !important;
+        height: 28px !important;
+    }
+    .cardtxt2 > span{
+        width: 100%;
+        font-size: 14px;
+        line-height: 17.36px;
+    }
+    .cardBody{
+        width: 100%;
+        height: 50px;
+    }
+    .span1{
+        width: 193px;
+        font-size: 16px !important;
+    }
+    .starAndTxt{
+        width: 84px;
+        height: 38px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        margin-left: 0px;
+    }
+    .starDivCourses > img{
+        width: 17px;
+        height: 16px;
+    }
+    .span2{
+        font-size: 16px !important;
+    }
+    .amd{
+        font-size: 16px !important;
+    }
+    .footerCard > a > img{
+        width: 97px;
+        height: 41px;
+    }
+    .footerCard > a > span{
+        top: 15px;
+        font-size: 14px;
+    }
+    .large-font{
+        width: 43px !important;
+        height: 43px !important;
+    }
+    .booterImgs{
+        width: 102px;
+        height: 43px;
+    }
+    .footerImg3{
+        width: 43px;
+        height: 43px;
+    }
+    ion-icon{
+        width: 29.63px;
+        height: 29.63px;
+    }
+}
+@media screen  and (min-width: 400px) and (max-width: 599px) {
+    .courses{
+        background: #5D9A9D;
+        height: min-content;
+    }
+    .title0,.cardCourses2, .cardCourses_{
+        display: none;
+    }
+    .headerCourses{
+        width: 100%;
+        height: 170px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .headerCourses div{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .txt1, .txt2{
+        font-size: 18px;
+        height: 20px;
+        line-height: 0;
+    }
+    .backButton{
+        top: 5px;
+    }
+    .cardCourses{
+        width: 320px;
+        height: 435px;
+        margin: 30px auto 0px;
+    }
+    .img{
+        width: 100% !important;
+        height: 203px !important;
+        border-top-right-radius: 24px;
+        border-top-left-radius: 24px;
+    }
+    .cardCoursesBody{
+        width: 100%;
+        height: 232px;
+        margin-top: 0px;
+        background: #74A8AB;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+    .cardBottomMainField{
+        width: 278px;
+        height: 193px;
+        margin: 17px auto 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .cardCenter{
+        width: 278px;
+        height: 70px;
+    }
+    .footerCard{
+        width: 240px;
+        height: 43px;
+    }
+    .cardtxt1{
+        width: 100%;
+        height: 38px;
+    }
+    .cardtxt1 > img{
+        width: 28px !important;
+        height: 28px !important;
+    }
+    .cardtxt1 > span{
+        width: 100%;
+        font-size: 14px;
+        line-height: 17.36px;
+    }
+    .cardtxt2 > img{
+        width: 28px !important;
+        height: 28px !important;
+    }
+    .cardtxt2 > span{
+        width: 100%;
+        font-size: 14px;
+        line-height: 17.36px;
+    }
+    .cardBody{
+        width: 100%;
+        height: 50px;
+    }
+    .span1{
+        width: 193px;
+        font-size: 16px !important;
+    }
+    .starAndTxt{
+        width: 84px;
+        height: 38px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        margin-left: 0px;
+    }
+    .starDivCourses > img{
+        width: 17px;
+        height: 16px;
+    }
+    .span2{
+        font-size: 16px !important;
+    }
+    .amd{
+        font-size: 16px !important;
+    }
+    .footerCard > a > img{
+        width: 97px;
+        height: 41px;
+    }
+    .footerCard > a > span{
+        top: 15px;
+        font-size: 14px;
+    }
+    .large-font{
+        width: 43px !important;
+        height: 43px !important;
+    }
+    .booterImgs{
+        width: 102px;
+        height: 43px;
+    }
+    .footerImg3{
+        width: 43px;
+        height: 43px;
+    }
+    ion-icon{
+        width: 29.63px;
+        height: 29.63px;
+    }
+}
+@media screen  and (min-width: 600px) {
+    .cardCourses{
+        display: none;
+    }
+    .mobilebtn{
+        display: none;
     }
 }

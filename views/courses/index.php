@@ -334,6 +334,143 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             </ul>
         </div>
     </div>
+    <div class="cardCoursesMobile">
+        <div class="cardCourses">
+            <img class="img" src="/images/coursesCardImg.png" alt="" draggable="false">
+            <div class="cardCoursesBody">
+                <div class="cardBottomMainField">
+                    <div class="cardBody">
+                        <span class="span1">1C: and Accounting for Beginners</span>
+                        <div class="starAndTxt">
+                            <div class="starDivCourses">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                            </div>
+                            <div class="span2">xxxxx <span class="amd">AMD</span></div>
+                        </div>
+                    </div>
+                    <div class="cardCenter">
+                        <div class="cardtxt1">
+                            <img src="/images/courses1.png" alt="" draggable="false">
+                            <span>Number of courses: 29+1 exam /3 days a week/</span>
+                        </div>
+                        <div class="cardtxt2">
+                            <img src="/images/courses2.png" alt="" draggable="false">
+                            <span>Certificate / in Armenian and English /</span>
+                        </div>
+                    </div>
+                    <div class="footerCard">
+                        <a href="">
+                            <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
+                            <span>Buy now</span>
+                        </a>
+                        <div class="booterImgs">
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
+                            </div>
+                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cardCourses">
+            <img class="img" src="/images/coursesCardImg.png" alt="" draggable="false">
+            <div class="cardCoursesBody">
+                <div class="cardBottomMainField">
+                    <div class="cardBody">
+                        <span class="span1">1C: and Accounting for Beginners</span>
+                        <div class="starAndTxt">
+                            <div class="starDivCourses">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                            </div>
+                            <div class="span2">xxxxx <span class="amd">AMD</span></div>
+                        </div>
+                    </div>
+                    <div class="cardCenter">
+                        <div class="cardtxt1">
+                            <img src="/images/courses1.png" alt="" draggable="false">
+                            <span>Number of courses: 29+1 exam /3 days a week/</span>
+                        </div>
+                        <div class="cardtxt2">
+                            <img src="/images/courses2.png" alt="" draggable="false">
+                            <span>Certificate / in Armenian and English /</span>
+                        </div>
+                    </div>
+                    <div class="footerCard">
+                        <a href="">
+                            <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
+                            <span>Buy now</span>
+                        </a>
+                        <div class="booterImgs">
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
+                            </div>
+                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cardCourses">
+            <img class="img" src="/images/coursesCardImg.png" alt="" draggable="false">
+            <div class="cardCoursesBody">
+                <div class="cardBottomMainField">
+                    <div class="cardBody">
+                        <span class="span1">1C: and Accounting for Beginners</span>
+                        <div class="starAndTxt">
+                            <div class="starDivCourses">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStar.png" alt="" draggable="false">
+                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                            </div>
+                            <div class="span2">xxxxx <span class="amd">AMD</span></div>
+                        </div>
+                    </div>
+                    <div class="cardCenter">
+                        <div class="cardtxt1">
+                            <img src="/images/courses1.png" alt="" draggable="false">
+                            <span>Number of courses: 29+1 exam /3 days a week/</span>
+                        </div>
+                        <div class="cardtxt2">
+                            <img src="/images/courses2.png" alt="" draggable="false">
+                            <span>Certificate / in Armenian and English /</span>
+                        </div>
+                    </div>
+                    <div class="footerCard">
+                        <a href="">
+                            <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
+                            <span>Buy now</span>
+                        </a>
+                        <div class="booterImgs">
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
+                            </div>
+                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobilebtn">
+        <button><img src="/images/coursesBtn.png" alt=""></button>
+    </div>
     <h1 class="title0"><?=$GLOBALS['text']['mainCourseTutors']?></h1>
     <div class="cardCourses2">
         <div class="wrapper2">
