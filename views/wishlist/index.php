@@ -16,13 +16,16 @@ if ($language == 'en') {
     $class1 = 'usersProfileEn';
 } elseif ($language == 'am') {
     $class1 = 'usersProfileAm';
-
 } elseif ($language == 'ru') {
     $class1 = 'usersProfileRu';
 }
 ?>
 <div class="usersProfile wishlist <?php echo $class1; ?>">
     <div class="userProfileSection">
+        <div class="myCoursesTitleField">
+            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <div><?=$GLOBALS['text']['tabletMyCourse']?></div>
+        </div>
         <div class="userProfileMenuField">
             <span><?=$GLOBALS['text']['wishlistTitle']?></span>
             <ul class="userProfileMenu">
@@ -253,7 +256,7 @@ if ($language == 'en') {
                                     <div class="cardBody_2">
                                         <span class="span1_2">1C: Accounting 8.3</span>
                                         <div class="starAndTxt_2">
-                                            <div class="starDivWishlist">
+                                            <div class="starDivWishlistCourses">
                                                 <img src="/images/cardStar.png" alt="" draggable="false">
                                                 <img src="/images/cardStar.png" alt="" draggable="false">
                                                 <img src="/images/cardStar.png" alt="" draggable="false">

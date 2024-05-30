@@ -15,6 +15,10 @@ if ($language == 'en') {
 ?>
 <div class="myCourses <?php echo $class1; ?>">
     <div class="myCoursesSection">
+        <div class="myCoursesTitleField">
+            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <div><?=$GLOBALS['text']['tabletMyCourse']?></div>
+        </div>
         <div class="userProfileMenuField">
             <span><?=$GLOBALS['text']['mycoursesTitle']?></span>
             <ul class="userProfileMenu">
@@ -97,7 +101,7 @@ if ($language == 'en') {
                                 </div>
                             </div>
                         </li>
-                        <li class="myCoursesBlocksField">
+                        <li class="myCoursesBlocksField hideMobile">
                             <div class="myCoursesBlocksFieldMain">
                                 <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
@@ -119,7 +123,7 @@ if ($language == 'en') {
                                 </div>
                             </div>
                         </li>
-                        <li class="myCoursesBlocksField">
+                        <li class="myCoursesBlocksField hideMobile">
                             <div class="myCoursesBlocksFieldMain">
                                 <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
@@ -141,7 +145,7 @@ if ($language == 'en') {
                                 </div>
                             </div>
                         </li>
-                        <li class="myCoursesBlocksField">
+                        <li class="myCoursesBlocksField hideMobile">
                             <div class="myCoursesBlocksFieldMain">
                                 <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
@@ -163,7 +167,7 @@ if ($language == 'en') {
                                 </div>
                             </div>
                         </li>
-                        <li class="myCoursesBlocksField">
+                        <li class="myCoursesBlocksField hideMobile">
                             <div class="myCoursesBlocksFieldMain">
                                 <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
@@ -186,6 +190,10 @@ if ($language == 'en') {
                             </div>
                         </li>
                     </ul>
+                </div>
+                <div class="containerSeeMoreMyCourses">
+                    <img class="seeMoreBlog" src="/images/seeMoreBlog.png" alt="">
+                    <div class="seeMoreText"><span>See more</span></div>
                 </div>
             </div>
         </div>
