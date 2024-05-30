@@ -20,7 +20,7 @@
 }
 .userProfileMenuField{
     width: 100%;
-    height: 53px;
+    /*height: 53px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -135,11 +135,11 @@
 }
 .mainContent{
     width: 100%;
+    height: -webkit-fill-available;
     padding-top: 108px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /*align-items: center;*/
 }
 .topSlider{
     height: 540px;
@@ -504,9 +504,6 @@ hr.new1 {
     height: 43px;
     border: 1px;
 }
-/*.wishlistBtnField{*/
-/*    width: 130px;*/
-/*}*/
 .wishlistBtnField > button{
     background: transparent;
     border: none;
@@ -679,6 +676,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1700px) {
+    .usersProfile {
+        height: 1560px;
+    }
     .wishlistBtnField > button > img {
         width: auto;
         height: 37px;
@@ -687,20 +687,18 @@ ion-icon {
         top: 9px;
         font-size: 13px;
     }
-    .heart {
-        width: 20.19px;
-        height: 20px;
-    }
-    .like-cnt {
-        transform: translate(-105%, -61%) !important;
-        width: 37px;
-        height: 37px;
-        line-height: 32px;
-    }
     .footerImg3 {
         width: 37px;
         height: 37px;
         border: 1px;
+    }
+    .large-font {
+        width: 37px;
+        height: 37px;
+    }
+    ion-icon {
+        width: 25.63px;
+        height: 23.96px;
     }
     .card_2 {
         height: 440px;
@@ -713,6 +711,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1600px) {
+    .usersProfile {
+        height: 1450px;
+    }
     .myCoursesProfileField {
         width: 360px;
         height: 470px;
@@ -779,30 +780,6 @@ ion-icon {
     .cardContent {
         height: 53%;
     }
-    /*.wishlistBtnField {*/
-    /*    width: 90px;*/
-    /*}*/
-    /*.wishlistBtnField > button > img{*/
-    /*    width: 80px;*/
-    /*    height: 30px;*/
-    /*}*/
-    /*.wishlistBtnField > button > span > a {*/
-    /*    font-size: 13px;*/
-    /*    top: 6px;*/
-    /*    left: 0px;*/
-    /*    width: 100%;*/
-    /*    text-align: center;*/
-    /*}*/
-    .like-cnt{
-        width: 35px;
-        height: 35px;
-        line-height: 32px;
-        transform: translate(-105%, -60%) !important;
-    }
-    .heart2 {
-        width: 20.19px;
-        height: 18px;
-    }
     .spanAmd {
         font-size: 13px;
     }
@@ -816,6 +793,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1500px) {
+    .usersProfile {
+        height: 1350px;
+    }
     .cardsTextField_ {
         height: 200px;
     }
@@ -899,10 +879,6 @@ ion-icon {
     .cardsTextInfo_ {
         padding: 21px 5% 0;
     }
-    .heart2, .heart {
-        width: 18px;
-        height: 16px;
-    }
     .wishlistBtnField > button {
         margin-left: 11px;
     }
@@ -919,11 +895,13 @@ ion-icon {
         height: 28px;
         border: 1px;
     }
-    .like-cnt {
+    .large-font {
         width: 28px;
         height: 28px;
-        transform: translate(-105%, -62%) !important;
-        line-height: 23px;
+    }
+    ion-icon {
+        width: 20.63px;
+        height: 18.96px;
     }
     .card_2 {
         height: 360px;
@@ -933,7 +911,13 @@ ion-icon {
         line-height: 15.84px;
     }
 }
+@media screen and (max-width: 1400px){
+    .usersProfile {
+        height: 1300px;
+    }
+}
 @media screen and (max-width: 1350px) {
+
     .usersProfileInfoEmail > img, .usersProfileInfoLinkdin > img, .usersProfileInfoPhone > img{
         width: 23px;
         height: 23px;
@@ -967,6 +951,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1300px) {
+    .usersProfile {
+        height: 1200px;
+    }
     .usersProfileInfo {
         width: 180px;
     }
@@ -1067,7 +1054,19 @@ ion-icon {
         margin-bottom: 0;
     }
 }
+@media screen and (max-width: 1270px) {
+    .usersProfileEn .userProfileMenuField > span {
+        font-size: 38px;
+    }
+
+    .usersProfileRu .userProfileMenu {
+        width: 490px;
+    }
+}
 @media screen and (max-width: 1200px) {
+    .usersProfile {
+        height: 1150px;
+    }
     .cardContent {
         height: 54%;
     }
@@ -1077,13 +1076,46 @@ ion-icon {
     .footerCard_2{
         margin: 0;
     }
+    .usersProfileEn .userProfileMenu {
+        width: 460px;
+    }
+    .usersProfileRu .userProfileMenuField > span,
+    .usersProfileAm .userProfileMenuField > span {
+        font-size: 30px;
+    }
 }
 @media screen and (max-width: 1100px) {
+    .mainContent {
+        padding-top: 40px;
+    }
+    .topSlider .title {
+        font-family: "Roboto";
+        font-size: 20px;
+        line-height: 25.5px;
+    }
+    .usersProfileEn .userProfileMenu,
+    .userProfileMenu,
+    .usersProfileRu .userProfileMenu,
+    .usersProfileAm .userProfileMenu{
+        width: 375px;
+        height: 16px;
+    }
+    .usersProfileEn .userProfileMenuField > span,
+    .userProfileMenuField > span,
+    .usersProfileRu .userProfileMenuField > span{
+        color: #F36528;
+        font-family: 'Roboto Slab';
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29.01px;
+        text-align: left;
+    }
     .usersProfile {
-        height: 955px;
+        height: 880px;
     }
     .CoursesAndCategoriesCard {
         width: 444px;
+        height: max-content;
     }
     .userProfileMenu {
         width: 423px;
@@ -1097,6 +1129,7 @@ ion-icon {
     }
     .userProfileSection {
         width: 86%;
+        height: 740px;
         margin: 95px 6.9% 0px 6.8%;
     }
     .userProfileMenuField > span{
@@ -1106,6 +1139,7 @@ ion-icon {
         text-align: left;
     }
     .userProfileMenu > li > a{
+        font-family: 'Roboto';
         font-size: 14px;
         font-weight: 400;
         line-height: 16.41px;
@@ -1299,24 +1333,65 @@ ion-icon {
     .topSlider {
         height: 264px;
     }
-    .like-cnt, .footerImg3 {
-        width: 22px;
-        height: 22px;
-    }
-    .like-cnt {
-        line-height: 17px;
-    }
-    .heart2, .heart {
-        width: 14px;
-        height: 12px;
-    }
-    .likeColor{
-        line-height: 20px;
-    }
     .cardsLike_ > a{
         font-size: 12px;
         font-weight: 500;
         line-height: 14.06px;
         text-align: left;
+    }
+}
+@media screen and (max-width: 800px) {
+    .changeBody2 ul, .bottomSlider ul {
+        gap: 20px;
+    }
+    hr.new1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .CoursesAndCategoriesCard {
+        width: 430px;
+    }
+    .changeBody2 .carousel_2 {
+        grid-auto-columns: 180px;
+    }
+    .bottomSlider .carousel_ {
+        grid-auto-columns: 195.94px;
+    }
+    .myCoursesProfileField {
+        width: 195px;
+    }
+    .CoursesAndCategoriesCard {
+        width: 380px;
+    }
+    .card_2 .cardBody_2 {
+        width: auto;
+    }
+    .cardtxt1_2, .cardtxt2_2 {
+        width: 146.11px;
+    }
+    .cardContent {
+        height: 54%;
+    }
+    .bottomSlider .carousel_ {
+        grid-auto-columns: 180px;
+    }
+    .usersProfile {
+        height: 830px;
+    }
+    .userProfileSection {
+        height: 672px;
+    }
+}
+@media screen and (max-width: 700px){
+    .myCoursesProfileField{
+        display: none;
+    }
+    .mainContent{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 600px){
+    .wishlist{
+        background: #5D9A9D;
     }
 }

@@ -47,9 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
         const wrapper = document.querySelector(".changeBody2");
         const carousel = document.querySelector(".carousel_2");
-        const firstCard = carousel.querySelector(".card_2");
-        slider(carousel, wrapper, firstCard);
-
+        if (carousel != null){
+            const firstCard = carousel.querySelector(".card_2");
+            slider(carousel, wrapper, firstCard);
+        }
         const wrapper2 = document.querySelector(".bottomSlider");
         const carousel2 = document.querySelector(".carousel_");
         const firstCard2 = carousel2.querySelector(".card_");

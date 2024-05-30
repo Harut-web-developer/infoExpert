@@ -16,7 +16,6 @@ if ($language == 'en') {
     $class1 = 'usersProfileEn';
 } elseif ($language == 'am') {
     $class1 = 'usersProfileAm';
-
 } elseif ($language == 'ru') {
     $class1 = 'usersProfileRu';
 }
@@ -253,7 +252,7 @@ if ($language == 'en') {
                                     <div class="cardBody_2">
                                         <span class="span1_2">1C: Accounting 8.3</span>
                                         <div class="starAndTxt_2">
-                                            <div class="starDivWishlist">
+                                            <div class="starDivWishlistCourses">
                                                 <img src="/images/cardStar.png" alt="" draggable="false">
                                                 <img src="/images/cardStar.png" alt="" draggable="false">
                                                 <img src="/images/cardStar.png" alt="" draggable="false">
