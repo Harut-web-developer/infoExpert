@@ -275,6 +275,118 @@ if ($language == 'en') {
                 </div>
             </div>
         </div>
+        <div class="myCardMobileField">
+            <div class="myCoursesTitleField">
+                <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+                <div><?=$GLOBALS['text']['tabletCard']?></div>
+            </div>
+            <div class="myCardBlogsSection">
+                <div class="myCardBlocksField">
+                    <div class="myCoursesBlocksField">
+                        <img src="/images/courseimage.png" alt="" draggable="false">
+                        <div class="myCoursesBlocksFieldMain">
+                            <div class="blogsBottomInfoField">
+                                <div class="myCardNameRating">
+                                    <span>1C: and Accounting for Begginers</span>
+                                    <div class="rightContentMyCard">
+                                        <div class="starDiv">
+                                            <img src="/images/cardStar.png" alt="">
+                                            <img src="/images/cardStar.png" alt="">
+                                            <img src="/images/cardStar.png" alt="">
+                                            <img src="/images/cardStar.png" alt="">
+                                            <img src="/images/cardStar.png" alt="">
+                                        </div>
+                                        <span class="span2_2">xxxxx <span class="spanAmd">AMD</span></span>
+                                    </div>
+                                </div>
+                                <div class="myCardBlockInfo">
+                                    <div class="myCardInfoTextIcon">
+                                        <div class="myCardInfoTextIconFirst">
+                                            <img src="/images/mycardicon1.png" alt="">
+                                            <span>Number of courses: 14+1 exam / 2days a week</span>
+                                        </div>
+                                        <div class="myCardInfoTextIconSecond">
+                                            <img src="/images/mycardicon2.png" alt="">
+                                            <span>Certificate / in Armenian and English/</span>
+                                        </div>
+                                    </div>
+                                    <div class="myCardInfoButtonField">
+                                        <button>
+                                            <img src="/images/btnBuyIcon.png" alt="">
+                                            <span><?=$GLOBALS['text']['myCardBtn']?></span>
+                                        </button>
+                                        <div class="btnGroupLikeMarket">
+                                            <div class='large-font largeFont'>
+                                                <ion-icon name="heart" class="iconLike">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
+                                            </div>
+                                            <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCardBlockButtons">
+                        <span><?=$GLOBALS['text']['myCardRemove']?></span>
+                        <span><?=$GLOBALS['text']['myCardMove']?></span>
+                    </div>
+                </div>
+                <div class="myCardBlocksField">
+                    <div class="myCoursesBlocksField">
+                        <img src="/images/courseimage.png" alt="" draggable="false">
+                        <div class="myCoursesBlocksFieldMain">
+                            <div class="blogsBottomInfoField">
+                                <div class="myCardNameRating">
+                                    <span>1C: and Accounting for Begginers</span>
+                                    <div class="rightContentMyCard">
+                                        <div class="starDiv">
+                                            <img src="/images/cardStar.png" alt="">
+                                            <img src="/images/cardStar.png" alt="">
+                                            <img src="/images/cardStar.png" alt="">
+                                            <img src="/images/cardStar.png" alt="">
+                                            <img src="/images/cardStar.png" alt="">
+                                        </div>
+                                        <span class="span2_2">xxxxx <span class="spanAmd">AMD</span></span>
+                                    </div>
+                                </div>
+                                <div class="myCardBlockInfo">
+                                    <div class="myCardInfoTextIcon">
+                                        <div class="myCardInfoTextIconFirst">
+                                            <img src="/images/mycardicon1.png" alt="">
+                                            <span>Number of courses: 14+1 exam / 2days a week</span>
+                                        </div>
+                                        <div class="myCardInfoTextIconSecond">
+                                            <img src="/images/mycardicon2.png" alt="">
+                                            <span>Certificate / in Armenian and English/</span>
+                                        </div>
+                                    </div>
+                                    <div class="myCardInfoButtonField">
+                                        <button>
+                                            <img src="/images/btnBuyIcon.png" alt="">
+                                            <span><?=$GLOBALS['text']['myCardBtn']?></span>
+                                        </button>
+                                        <div class="btnGroupLikeMarket">
+                                            <div class='large-font largeFont'>
+                                                <ion-icon name="heart" class="iconLike">
+                                                    <div class='red-bg'></div>
+                                                </ion-icon>
+                                            </div>
+                                            <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCardBlockButtons">
+                        <span><?=$GLOBALS['text']['myCardRemove']?></span>
+                        <span><?=$GLOBALS['text']['myCardMove']?></span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="totalPriceField">
             <div class="totalPriceFieldSection">
                 <div class="myCardTotalPrice">

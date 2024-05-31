@@ -1101,11 +1101,191 @@ ion-icon {
         height: 170px;
     }
 }
+@media screen and (max-width: 800px) {
+    .cardCourses {
+        width: 380px;
+    }
+    .myCoursesBlocksField {
+        height: 274px;
+        width: 180px;
+    }
+    .myCoursesBlocksFieldMain {
+        height: 263px;
+        width: 180px;
+    }
+    .myCardBlocksField {
+        height: 335px;
+        width: 180px;
+    }
+}
 @media screen and (max-width: 700px) {
     .usersProfileEn .userProfileMenu, .userProfileMenu, .usersProfileRu .userProfileMenu {
         width: 350px;
     }
     .usersProfileEn .userProfileMenuField > span, .userProfileMenuField > span, .usersProfileRu .userProfileMenuField > span {
         font-size: 19px;
+    }
+    .myCoursesProfileField{
+        display: none;
+    }
+    .cardCourses {
+        margin: 0px auto;
+    }
+}
+@media screen and (max-width: 599px) {
+    .myCoursesTitleField{
+        margin: 0px auto;
+        width: 86%;
+        display: flex;
+        align-items: center;
+    }
+    .myCoursesTitleField div{
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.09px;
+        text-align: center;
+        width: 100%;
+        color: #F36528;
+    }
+    .myCardBlogsSection{
+        margin: 30px 0px 0px;
+    }
+    .myCard{
+        background: #5D9A9D;
+        height: min-content;
+    }
+    .myCardMainField{
+        display: none;
+    }
+    .myCardBlocksField{
+        width: 320px;
+        height: 525px;
+        margin: 0px auto 38px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .myCoursesBlocksField{
+        width: 320px;
+        height: 435px;
+    }
+    .myCoursesBlocksField > img{
+        width: 320px;
+        height: 203px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .myCoursesBlocksFieldMain{
+        width: 320px;
+        height: 232px;
+    }
+    .blogsBottomInfoField{
+        width: 278px;
+        height: 193px;
+        margin: 17px 21px 21px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .myCardNameRating{
+        width: 100%;
+        height: 38px;
+    }
+    .myCardNameRating > span{
+        width: 100%;
+        height: 38px;
+        font-family: "Roboto Slab",sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20.8px;
+    }
+    .rightContentMyCard{
+        width: 85px;
+        height: 38px;
+    }
+    .starDiv{
+        width: 85px;
+        height: 16px;
+    }
+    .starDiv > img{
+        width: 17px;
+        height: 16px;
+    }
+    .span2_2, .spanAmd{
+        font-size: 16px !important;
+        font-weight: 400;
+        line-height: 18.75px;
+        color: white;
+        margin-left: 3px;
+    }
+    .myCardBlockInfo{
+        width: 100%;
+        height: 142px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .myCardInfoTextIcon{
+        width: 100%;
+        height: 77px;
+    }
+    .myCardInfoTextIconFirst, .myCardInfoTextIconSecond{
+        width: 100%;
+        height: 38px;
+    }
+    .myCardInfoTextIconFirst > img, .myCardInfoTextIconSecond > img{
+        width: 28px;
+        height: 28px;
+    }
+    .myCardInfoTextIconFirst > span, .myCardInfoTextIconSecond > span{
+        width: 100%;
+        height: 38px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17.36px;
+    }
+    .myCardInfoButtonField{
+        width: 240px;
+        height: 43px;
+    }
+    .myCardInfoButtonField > button > img{
+        width: 97px;
+        height: 41px;
+    }
+    .myCardInfoButtonField > button > span{
+        top: 15px;
+        font-size: 14px;
+    }
+    .btnGroupLikeMarket{
+        width: 102px;
+        height: 43px;
+    }
+    .large-font{
+        width: 43px;
+        height: 43px;
+    }
+    ion-icon{
+        width: 26px;
+        height: 26px;
+    }
+    .btnGroupLikeMarket > img{
+        width: 43px;
+        height: 43px;
+    }
+    .myCardBlockButtons{
+        width: max-content;
+        height: 60px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 600px) {
+    .myCardMobileField{
+        display: none;
     }
 }
