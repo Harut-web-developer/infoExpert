@@ -17,6 +17,9 @@
 .backButton, .containerSeeMoreBlog{
     display: none;
 }
+.ellipseButton{
+    display: none;
+}
 .blogTitle{
     font-family: 'Roboto Slab';
     font-size: 40px;
@@ -411,9 +414,17 @@ ion-icon {
     .blog{
         background: #ACCBE6;
     }
+    .ellipseButton {
+        display: block;
+        position: absolute;
+    }
+    .backButton {
+        width: 30px;
+        height: 30px;
+    }
 }
 @media screen and (max-width: 463.5px) {
-    .pagination-container, .backButton{
+    .pagination-container{
         display: none;
     }
     .card_{

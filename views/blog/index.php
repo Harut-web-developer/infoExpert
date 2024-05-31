@@ -14,6 +14,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     <div class="blogContent">
         <div class="title">
             <img class="backButton" src="/images/backButton.png" alt="">
+            <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
             <h1 class="blogTitle"><?=$GLOBALS['text']['blogTitle']?></h1>
             <span class="discoverSpan">Let's discover something interesting</span>
         </div>

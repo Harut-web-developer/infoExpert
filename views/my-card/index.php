@@ -103,7 +103,7 @@ if ($language == 'en') {
                                                             <div class='red-bg'></div>
                                                         </ion-icon>
                                                     </div>
-                                                    <img src="/images/iconmarketmycard.png" alt="">
+                                                    <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
                                                 </div>
                                             </div>
                                         </div>
@@ -155,7 +155,7 @@ if ($language == 'en') {
                                                             <div class='red-bg'></div>
                                                         </ion-icon>
                                                     </div>
-                                                    <img src="/images/iconmarketmycard.png" alt="">
+                                                    <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
                                                 </div>
                                             </div>
                                         </div>
@@ -207,7 +207,7 @@ if ($language == 'en') {
                                                             <div class='red-bg'></div>
                                                         </ion-icon>
                                                     </div>
-                                                    <img src="/images/iconmarketmycard.png" alt="">
+                                                    <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
                                                 </div>
                                             </div>
                                         </div>
@@ -259,7 +259,7 @@ if ($language == 'en') {
                                                             <div class='red-bg'></div>
                                                         </ion-icon>
                                                     </div>
-                                                    <img src="/images/iconmarketmycard.png" alt="">
+                                                    <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
                                                 </div>
                                             </div>
                                         </div>
