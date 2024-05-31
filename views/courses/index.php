@@ -13,6 +13,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
 <div class="courses">
     <div class="headerCourses">
         <img class="backButton" src="/images/backButton.png" alt="">
+        <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
         <div>
             <span class="txt1"><?=$GLOBALS['text']['mainCourseTitleFirst']?></span>
             <span class="txt2"><?=$GLOBALS['text']['mainCourseTitleSecond']?></span>

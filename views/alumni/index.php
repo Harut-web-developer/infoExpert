@@ -8,7 +8,13 @@ $this->registerCssFile('@web/css/alumni.css');
 <div class="alumni">
     <div class="sectionAlumni">
         <div class="alumniDiv">
-            <h1 class="alumniTitle"><img class="backButton" src="/images/backButton.png" alt=""><?=$GLOBALS['text']['alumniTitle']?></h1>
+            <div class="alumniTitleAll">
+                <img class="backButton" src="/images/backButton.png" alt="">
+                <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+                <div class="alumniTitle">
+                    <?=$GLOBALS['text']['alumniTitle']?>
+                </div>
+            </div>
             <p class="alumniTxt"><?=$GLOBALS['text']['alumniText']?></p>
         </div>
         <div class="swiper mySwiper swiper-container">

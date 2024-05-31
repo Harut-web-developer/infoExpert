@@ -693,14 +693,6 @@
     }
 }
 @media screen and (max-width: 700px){
-    .ellipseButton {
-        display: block;
-        position: absolute;
-    }
-    .backButton {
-        width: 30px;
-        height: 30px;
-    }
     .historyContent {
         flex-direction: column;
         align-items: center;
@@ -817,6 +809,14 @@
     }
     .aboutLangAm{
         height: 1100px;
+    }
+    .ellipseButton {
+        display: block;
+        position: absolute;
+    }
+    .backButton {
+        width: 30px;
+        height: 30px;
     }
 }
 @media screen and (max-width: 500px){

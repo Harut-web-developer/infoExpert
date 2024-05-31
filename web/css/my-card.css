@@ -8,13 +8,13 @@
 
 }
 .myCardContent{
-    padding-top: 235px;
+    padding-top: 212px;
     display: flex;
     flex-direction: column;
     gap: 99px;
 }
 .myCardMainField{
-    width: 68%;
+    width: 67%;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
@@ -75,7 +75,7 @@
 }
 .userProfileMenuField{
     width: auto;
-    height: 53px;
+    /*height: 53px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -164,15 +164,23 @@
     color: white;
 
 }
-.usersProfileInfoEmail{
+.usersProfileInfoEmail {
+    width: -webkit-fill-available;
+    word-wrap: break-word;
     display: flex;
+    align-items: center;
+}
+.usersProfileInfo img{
+    width: 32px;
+    height: 32px;
 }
 .usersProfileInfoEmail > span{
     font-family: "Roboto",sans-serif;
     margin-left: 37px;
     font-size: 20px;
     color: white;
-
+    white-space: normal;
+    width: -webkit-fill-available;
 }
 .usersProfileInfoLinkdin > span{
     font-size: 20px;
@@ -190,6 +198,7 @@
     scroll-behavior: smooth;
     padding-left: 0rem!important;
     margin-bottom: 0;
+    gap: 20px;
 }
 .myCardBlocksField{
     height: 99%;
@@ -217,9 +226,9 @@
     user-select: none;
 }
 .myCoursesBlocksField{
-    width: 377px;
+    width: 370px;
     height: 481px;
-    margin-right: 60px;
+    /*margin-right: 60px;*/
     border-radius: 30px;
     background: #74A8AB;
     box-shadow: 0px 0px 6px 2px #549099;
@@ -238,7 +247,7 @@
     font-weight: 400;
     font-family: "Roboto", sans-serif;
     text-decoration: underline;
-    margin-left: 54px;
+    margin-left: 30px;
 }
 .myCardBlockButtons > span:hover{
     cursor: pointer;
@@ -318,7 +327,7 @@
     display: flex;
     flex-direction: row;
     justify-content: start;
-    align-items: start;
+    align-items: center;
 }
 .myCardInfoTextIconFirst > img{
     margin-right: 11px;
@@ -333,6 +342,7 @@
 }
 .myCardInfoTextIconSecond{
     display: flex;
+    align-items: center;
 }
 .myCardInfoTextIconSecond > span{
     color: white;
@@ -386,6 +396,7 @@
     align-items: center;
 }
 /*end my-card page*/
+
 .myCardImageBlock .span2_2{
     font-family: Roboto;
     font-size: 24px;
@@ -490,7 +501,7 @@ ion-icon {
 }
 @media screen and (min-width: 1801px) and (max-width: 1999px) {
     .myCardFieldAcceptCourses{
-        grid-auto-columns: calc(100% / 2 + 4px);
+        grid-auto-columns: calc(100% / 2);
     }
     .cardCourses {
         width: 64%;
@@ -507,7 +518,7 @@ ion-icon {
         grid-auto-columns: calc(100% / 2 + 3px);
     }
     .cardCourses {
-        width: 60%;
+        width: 643px;
     }
     .myCardBlocksField{
         width: 310px;
@@ -537,6 +548,13 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1700px) {
+    .myCardInfoButtonField > button > a {
+        top: 9px;
+        font-size: 13px;
+    }
+    .myCoursesProfileField {
+        width: 380px;
+    }
     .myCardImageBlock {
         height: 52%;
     }
@@ -552,14 +570,28 @@ ion-icon {
     .myCoursesFieldSection {
         margin: 36px 36px 37px 45px;
     }
+    .large-font {
+        width: 37px;
+        height: 37px;
+    }
+    ion-icon {
+        width: 25.63px;
+        height: 23.96px;
+    }
+    .footerImg {
+        width: 37px;
+        height: 37px;
+        border: 1px;
+    }
+    .myCardInfoButtonField > button > img {
+        width: auto;
+        height: 37px;
+    }
+    .myCardInfoButtonField > button > span {
+        top: 5px
+    }
 }
 @media screen and (max-width: 1600px) {
-    .myCardMainField{
-        width: 78%;
-    }
-    .cardCourses {
-        width: 64%;
-    }
     .myCoursesProfileField{
         width: 319px;
     }
@@ -581,7 +613,7 @@ ion-icon {
         height: 34px;
     }
     .myCardInfoButtonField > button > span {
-        top: 10px;
+        top: 9px;
         font-size: 13px;
     }
     .myCardInfoButtonField > button > img{
@@ -595,35 +627,83 @@ ion-icon {
         font-size: 13px;
     }
     .starDiv img{
-        width: 15px;
-        height: 15px;
+        width: 17px;
+        height: 16px;
     }
-    .myCardNameRating > span {
-        font-size: 18px;
-    }
-}
-@media screen and (max-width: 1500px) {
-    .myCardBlockButtons > span {
-        font-size: 17px;
-    }
-    .myCardBlocksField {
-        height: 92%;
+    .starDiv {
+        width: 84px;
+        height: 15.37px;
     }
     .myCoursesBlocksFieldMain {
-        height: 420px;
+        height: 425px;
     }
-    .myCoursesBlocksField {
-        height: 460px;
+    .myCardBlockInfo {
+        height: 37%;
+    }
+    .myCardBlocksField {
+        height: 90%;
+    }
+    .myCoursesProfileField {
+        height: 492px;
     }
     .myCoursesFieldSectionLeft > img {
         width: 200px;
         height: 200px;
     }
     .myCoursesFieldSectionLeft {
+        height: 430px;
+    }
+    .myCardImageBlock {
+        height: 62%;
+    }
+    .myCardInfoTextIcon {
+        height: 104px;
+    }
+    .myCardBlockInfo {
+        gap: 2px;
+    }
+    .myCoursesBlocksField {
+            height: 440px;
+    }
+    .myCardNameRating > span {
+        font-size: 18px;
+    }
+    .myCardNameRating > span {
+        line-height: 21px;
+    }
+    .rightContentMyCard {
+        width: 82px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .myCardInfoButtonField > button > span {
+        top: 4px;
+    }
+    .myCardBlockButtons > span {
+        font-size: 17px;
+    }
+    .myCardBlocksField {
+        width: 290px;
+        height: 88%;
+    }
+    .myCoursesBlocksFieldMain {
+        width: 290px;
         height: 420px;
     }
+    .myCoursesBlocksField {
+        width: 290px;
+        height: 435px;
+    }
+    .myCoursesFieldSectionLeft > img {
+        width: 200px;
+        height: 200px;
+    }
+    .myCoursesFieldSectionLeft {
+        height: 400px;
+    }
     .myCoursesProfileField {
-        height: 503px;
+        width: 290px;
+        height: 450px;
     }
     .myCoursesFieldSection {
         margin: 36px 36px 37px 35px;
@@ -638,30 +718,58 @@ ion-icon {
         font-size: 17px;
         line-height: 18.13px;
     }
+    .cardCourses {
+        width: 610px;
+    }
+    .myCardFieldAcceptCourses {
+        grid-auto-columns: calc(100% / 2);
+        gap: 4px;
+    }
+    .myCardInfoButtonField > button > img {
+        width: auto;
+        height: 28px;
+    }
+    .large-font {
+        width: 28px;
+        height: 28px;
+    }
+    ion-icon {
+        width: 20.63px;
+        height: 18.96px;
+    }
+    .footerImg {
+        width: 28px;
+        height: 28px;
+        border: 1px;
+    }
 }
 @media screen and (max-width: 1400px) {
-    .myCardFieldAcceptCourses {
-        grid-auto-columns: calc(100% / 2 + 3px);
-    }
-    .myCoursesBlocksFieldMain {
-        height: 440px;
-    }
-    .myCardBlockInfo {
-        gap: 22px;
-    }
     .rightContentMyCard {
         width: 80px;
     }
-}
-@media screen and (max-width: 1300px) {
+    .cardCourses {
+        width: 460px;
+        height: 374px;
+    }
+    .usersProfileRu .userProfileMenuField > span {
+        font-size: 35px;
+    }
     .myCardImageBlock {
         height: 55%;
     }
-    .myCardMainField {
-        width: 84%;
+    .usersProfileEn .userProfileMenuField > span {
+        font-size: 38px;
     }
-}
-@media screen and (max-width: 1200px) {
+    .usersProfileRu .userProfileMenu {
+        width: 490px;
+    }
+    .usersProfileEn .userProfileMenu {
+        width: 460px;
+    }
+    .usersProfileRu .userProfileMenuField > span,
+    .usersProfileAm .userProfileMenuField > span {
+        font-size: 30px;
+    }
     .myCardMainField {
         gap: 60px;
         width: 67%;
@@ -721,7 +829,7 @@ ion-icon {
         margin-right: 0px;
     }
     .myCoursesBlocksFieldMain{
-        height: 270px;
+        height: 290px;
         width: 210px;
     }
     .myCardImageBlock{
@@ -757,7 +865,7 @@ ion-icon {
         width: 60px;
     }
     .myCardBlockInfo{
-        height: 83px;
+        height: 106px;
         width: 180px;
         display: flex;
         flex-direction: column;
@@ -767,7 +875,7 @@ ion-icon {
         margin: 0px;
     }
     .myCardInfoTextIcon{
-        height: 53px;
+        height: 70px;
         width: 180px;
     }
     .myCardInfoButtonField{
@@ -832,9 +940,6 @@ ion-icon {
     .myCardFieldAcceptCourses{
         height: 374px;
     }
-    .cardCourses{
-        height: 374px;
-    }
     .myCardFields{
         height: 374px;
     }
@@ -869,11 +974,16 @@ ion-icon {
         font-size: 12px;
         top: 8px;
     }
-    .cardCourses {
-        width: 60%;
+    .starDiv {
+        width: 57px;
     }
 }
 @media screen and (max-width: 1100px) {
+    .userProfileMenu > li > a {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+    }
     .myCardMainField {
         gap: 60px;
         width: 86%;
@@ -886,16 +996,116 @@ ion-icon {
         height: 846px;
     }
     .cardCourses {
-        width: 52%;
+        width: 430px;
+    }
+    .usersProfileEn .userProfileMenu,
+    .userProfileMenu,
+    .usersProfileRu .userProfileMenu,
+    .usersProfileAm .userProfileMenu{
+        width: 375px;
+        height: 16px;
+    }
+    .usersProfileEn .userProfileMenuField > span,
+    .userProfileMenuField > span,
+    .usersProfileRu .userProfileMenuField > span{
+        color: #F36528;
+        font-family: 'Roboto Slab';
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29.01px;
+        text-align: left;
+    }
+    .starDiv {
+        width: 45px;
+        height: 8px;
+    }
+    .starDiv img {
+        width: 9px;
+        height: 8px;
+    }
+    .myCardImageBlock .span2_2{
+        font-size: 10px !important;
+        font-weight: 400;
+        line-height: 11.72px;
+    }
+    .myCardImageBlock .spanAmd{
+        font-size: 8px !important;
+        font-weight: 400;
+        line-height: 9.38px;
+    }
+    .myCardNameRating > span{
+        font-family: 'Roboto Slab';
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 14.3px;
+    }
+    .rightContentMyCard {
+        height: 23px;
+        width: 45px;
+    }
+    .myCardNameRating {
+        width: 162px;
+        height: 35px;
+    }
+    .myCardInfoTextIconFirst > img, .myCardInfoTextIconSecond > img {
+        height: 14px;
+        width: 14px;
+    }
+    .myCardInfoTextIconFirst > span, .myCardInfoTextIconSecond > span{
+        font-family: 'Roboto Medium';
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 9.92px;
+        text-align: left;
+    }
+    .myCardBlockInfo {
+        height: 80px;
+        width: 167px;
+    }
+    .myCardInfoTextIcon {
+        height: 43px;
+        width: 160px;
+    }
+    .myCardInfoButtonField > button > img {
+        height: 30px;
+        width: 70px;
+    }
+    .myCardInfoButtonField > button > span{
+        font-family: 'Roboto Medium';
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.72px;
+        text-align: center;
+        top: 10px;
+    }
+    .myCoursesBlocksFieldMain {
+        height: 263px;
+        width: 200px;
+    }
+    .myCoursesBlocksField {
+        height: 274px;
+        width: 200px;
+    }
+    .myCardBlocksField {
+        height: 335px;
+        width: 200px;
+    }
+    .myCardBlockButtons > span{
+        font-family: 'Roboto';
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 17.58px;
+        text-align: left;
+    }
+    .myCardImageBlock {
+        height: 170px;
     }
 }
-@media screen and (max-width: 1000px) {
-    .cardCourses {
-        width: 59%;
+@media screen and (max-width: 700px) {
+    .usersProfileEn .userProfileMenu, .userProfileMenu, .usersProfileRu .userProfileMenu {
+        width: 350px;
     }
-}
-@media screen and (max-width: 900px) {
-    .cardCourses {
-        width: 65%;
+    .usersProfileEn .userProfileMenuField > span, .userProfileMenuField > span, .usersProfileRu .userProfileMenuField > span {
+        font-size: 19px;
     }
 }

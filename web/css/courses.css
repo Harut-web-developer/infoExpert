@@ -25,6 +25,9 @@
     margin: 0 auto;
     padding-top: 3%;
 }
+.ellipseButton{
+    display: none;
+}
 .myCoursesTitleField, .containerSeeMoreMyCourses{
     display: none;
 }
@@ -1348,16 +1351,16 @@ ion-icon {
         top: -10px;
     }
     .backButton {
-        width: 20.02px;
-        height: 19.99px;
+        width: 40px;
+        height: 40px;
         display: block;
         position: relative;
-        top: 20px;
     }
     .headerCourses {
         width: 100%;
         padding: 96px 6.9% 0px 6.8%;
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
     .courses{
@@ -1673,6 +1676,14 @@ ion-icon {
         width: 100%;
         color: #F36528;
     }
+    .ellipseButton {
+        display: block;
+        position: absolute;
+    }
+    .backButton {
+        width: 30px;
+        height: 30px;
+    }
 }
 @media screen and (max-width: 450px){
     .myCourses {
@@ -1793,7 +1804,7 @@ ion-icon {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
     }
     .headerCourses div{
         width: 100%;
@@ -1806,10 +1817,7 @@ ion-icon {
     .txt1, .txt2{
         font-size: 18px;
         height: 20px;
-        line-height: 0;
-    }
-    .backButton{
-        top: 5px;
+        line-height: 20px;
     }
     .cardCourses{
         width: 300px;
@@ -1935,7 +1943,7 @@ ion-icon {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
     }
     .headerCourses div{
         width: 100%;
@@ -1948,10 +1956,7 @@ ion-icon {
     .txt1, .txt2{
         font-size: 18px;
         height: 20px;
-        line-height: 0;
-    }
-    .backButton{
-        top: 5px;
+        line-height: 20px;
     }
     .cardCourses{
         width: 320px;

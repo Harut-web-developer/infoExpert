@@ -15,6 +15,9 @@
 .backButton, .seeMoreAlumni{
     display: none;
 }
+.ellipseButton{
+    display: none;
+}
 .alumniDiv{
     display: flex;
     flex-direction: column;
@@ -234,6 +237,11 @@
         display: block;
         position: absolute;
     }
+    .alumniTitleAll{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
     .alumniDiv {
         margin-bottom: 28px;
     }
@@ -298,6 +306,14 @@
     }
 }
 @media screen and (max-width: 600px){
+    .ellipseButton {
+        display: block;
+        position: absolute;
+    }
+    .backButton {
+        width: 30px;
+        height: 30px;
+    }
     .alumni{
         height: auto;
         background: #5D9A9D;
