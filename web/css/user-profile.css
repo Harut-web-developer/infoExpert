@@ -921,7 +921,7 @@
     .certificate {
         width: 317px;
         justify-content: space-between;
-        height: 264px;
+        height: 284px;
         gap: 7px;
     }
     .cartificateImg{
@@ -1268,7 +1268,7 @@
         height: 636px;
     }
     .certificate, .cartificateImg {
-        width: 85%;
+        /*width: 85%;*/
         height: auto;
         gap: 32px;
         align-items: center;
@@ -1350,9 +1350,9 @@
     }
 }
 @media screen and (max-width: 500px) {
-    .certificate, .cartificateImg {
-        width: 90%;
-    }
+    /*.certificate, .cartificateImg {*/
+    /*    width: 90%;*/
+    /*}*/
     .cartificateImgTxt{
         gap: 67px;
     }

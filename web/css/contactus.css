@@ -222,7 +222,7 @@
     left: 0px;
     width: 100%;
     text-align: center;
-    padding: 0 28px;
+    /*padding: 0 28px;*/
     font-family: 'Roboto';
     font-size: 13px;
     font-weight: 500;
@@ -381,12 +381,17 @@ input[type="text"] {
         position: relative;
     }
     .bottoming > button > span{
-        top: 14px;
+        top: 20px;
     }
 }
 @media screen and (max-width: 900px) {
     .inputdiv , .inputcomment{
         width: 85%;
+    }
+}
+@media screen and (max-width: 666px) {
+    .contactus {
+        height: 800px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -442,6 +447,18 @@ input[type="text"] {
     }
     .div1 {
         margin: 24px 0;
+    }
+    .bottoming > button > span {
+        top: 16px;
+    }
+    .contactUsTitleM{
+        font-family: 'Roboto Slab';
+        font-size: 22px;
+        font-weight: 400;
+        height: 31px;
+        line-height: 23px;
+        width: 100%;
+        text-align: center;
     }
 }
 @media screen and (max-width: 414px){
