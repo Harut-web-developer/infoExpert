@@ -45,5 +45,8 @@ class WishlistController extends \yii\web\Controller
     {
         return $this->render('index');
     }
-
+    public function actionBlogsWishlist()
+    {
+        return $this->render('blogs-wishlist');
+    }
 }

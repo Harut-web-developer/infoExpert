@@ -53,8 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         const wrapper2 = document.querySelector(".bottomSlider");
         const carousel2 = document.querySelector(".carousel_");
+    if (carousel2 != null){
         const firstCard2 = carousel2.querySelector(".card_");
         slider(carousel2, wrapper2, firstCard2);
+    }
+
 });
 // Like js
 document.querySelectorAll('.wishlist ion-icon').forEach(icon => {

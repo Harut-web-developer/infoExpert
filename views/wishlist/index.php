@@ -62,10 +62,6 @@ if ($language == 'en') {
                 </div>
             </div>
             <div class="CoursesAndCategoriesCard">
-                <div class="wishlistBlogBtn">
-                    <span>Courses</span>
-                    <a href="">Blog</a>
-                </div>
                 <div class="topSlider">
 <!--                    <div class="changeBody1">-->
 <!--                        <span class="title">Go to the All Courses tab to create a wishlist </span>-->
@@ -326,7 +322,118 @@ if ($language == 'en') {
                         </li>
                     </ul>
                 </div>
-
+            </div>
+        </div>
+        <div class="wishlistMobileSection">
+            <div class="wishlistBlogBtn">
+                <span>Courses</span>
+                <a href="/wishlist/blogs-wishlist">Blog</a>
+            </div>
+            <div class="wishlistMobile">
+<!--                <div class="changeBody1">-->
+<!--                    <span class="title">Go to the All Courses tab to create a wishlist </span>-->
+<!--                    <div class="applyNowBtnField">-->
+<!--                        <a class="coursesHref" href="/courses/index">-->
+<!--                            <img src="/images/buttonImg.png" alt="">-->
+<!--                            <span>All courses</span>-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="wishlistCardsField">
+                    <div class="card_2">
+                        <img src="/images/cardImageCourses.png" alt="" draggable="false">
+                        <div class="cardContent">
+                            <div class="cardContentField">
+                                <div class="cardBody_2">
+                                    <span class="span1_2">1C: and Accounting for Begginers</span>
+                                    <div class="starAndTxt_2">
+                                        <div class="starDivWishlistCourses">
+                                            <img src="/images/cardStar.png" alt="" draggable="false">
+                                            <img src="/images/cardStar.png" alt="" draggable="false">
+                                            <img src="/images/cardStar.png" alt="" draggable="false">
+                                            <img src="/images/cardStar.png" alt="" draggable="false">
+                                            <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                        </div>
+                                        <span class="span2_2">xxxxx <span class="spanAmd">AMD</span></span>
+                                    </div>
+                                </div>
+                                <div class="cardCenter_2">
+                                    <div class="cardtxt1_2">
+                                        <img src="/images/courses1.png" alt="">
+                                        <span>Number of courses: 29+1 exam /3 days a week/</span>
+                                    </div>
+                                    <div class="cardtxt2_2">
+                                        <img src="/images/courses2.png" alt="">
+                                        <span>Certificate / in Armenian and English /</span>
+                                    </div>
+                                </div>
+                                <div class="footerCard_2">
+                                    <button>
+                                        <img src="/images/wishlist1.png" alt="">
+                                        <span>Buy now</span>
+                                    </button>
+                                    <div class="booterImgs">
+                                        <div class='large-font largeFont'>
+                                            <ion-icon name="heart" class="iconLike">
+                                                <div class='red-bg'></div>
+                                            </ion-icon>
+                                        </div>
+                                        <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_2">
+                        <img src="/images/cardImageCourses.png" alt="" draggable="false">
+                        <div class="cardContent">
+                            <div class="cardContentField">
+                                <div class="cardBody_2">
+                                    <span class="span1_2">1C: and Accounting for Begginers</span>
+                                    <div class="starAndTxt_2">
+                                        <div class="starDivWishlistCourses">
+                                            <img src="/images/cardStar.png" alt="" draggable="false">
+                                            <img src="/images/cardStar.png" alt="" draggable="false">
+                                            <img src="/images/cardStar.png" alt="" draggable="false">
+                                            <img src="/images/cardStar.png" alt="" draggable="false">
+                                            <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                        </div>
+                                        <span class="span2_2">xxxxx <span class="spanAmd">AMD</span></span>
+                                    </div>
+                                </div>
+                                <div class="cardCenter_2">
+                                    <div class="cardtxt1_2">
+                                        <img src="/images/courses1.png" alt="">
+                                        <span>Number of courses: 29+1 exam /3 days a week/</span>
+                                    </div>
+                                    <div class="cardtxt2_2">
+                                        <img src="/images/courses2.png" alt="">
+                                        <span>Certificate / in Armenian and English /</span>
+                                    </div>
+                                </div>
+                                <div class="footerCard_2">
+                                    <button>
+                                        <img src="/images/wishlist1.png" alt="">
+                                        <span>Buy now</span>
+                                    </button>
+                                    <div class="booterImgs">
+                                        <div class='large-font largeFont'>
+                                            <ion-icon name="heart" class="iconLike">
+                                                <div class='red-bg'></div>
+                                            </ion-icon>
+                                        </div>
+                                        <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="courseMobileBtn">
+                    <button>
+                        <img src="/images/coursesBtn.png" alt="">
+                    </button>
+                </div>
             </div>
         </div>
     </div>

@@ -1413,6 +1413,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 599px){
+    .userProfileSection{
+        height: min-content;
+    }
     .wishlistBlogBtn{
         display: flex;
         flex-direction: row;
@@ -1448,18 +1451,261 @@ ion-icon {
     .wishlist{
         background: #5D9A9D;
         /*background-image: url("../images/wishlistMobileBg.png");*/
-        /*width: 100%;*/
-        /*height: min-content;*/
-        /*background-repeat: no-repeat;*/
+        width: 100%;
+        height: 1225px;
+    }
+    .wishlistMobileSection{
+        height: min-content;
+        margin-top: 30px;
     }
     .userProfileMenuField{
         display: none;
     }
-    .new1{
+    .mainContent{
         display: none;
     }
-    .bottomSlider{
-        display: none;
+    /*.topSlider{*/
+    /*    display: none;*/
+    /*}*/
+    /*.new1{*/
+    /*    display: none;*/
+    /*}*/
+    /*.bottomSlider{*/
+    /*    display: none;*/
+    /*}*/
+    .wishlistCardsField{
+        margin-top: 38px;
+    }
+    .card_2{
+        margin: 0px auto 30px;
+        width: 320px;
+        height: 435px;
+    }
+    .card_2 > img{
+        width: 320px;
+        height: 203px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .cardContent{
+        width: 320px;
+        height: 232px;
+        padding: 19px 21px;
+    }
+    .cardContentField{
+        width: 278px;
+        height: 193px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .cardBody_2{
+        width: 100% !important;
+        height: 38px !important;
+    }
+    .span1_2{
+        font-family: "Roboto slab",sans-serif;
+        font-size: 16px !important;
+        font-weight: 500;
+        line-height: 17.36px !important;
+    }
+    .starAndTxt_2{
+        width: 85px;
+        height: 38px;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .starDivWishlistCourses{
+        width: 85px;
+        height: 16px;
+    }
+    .starDivWishlistCourses img {
+        width: 17px;
+        height: 16px;
+    }
+    .span2_2{
+        font-size: 16px !important;
+        margin-left: 3px;
+    }
+    .spanAmd{
+        font-size: 16px !important;
+    }
+    .cardCenter_2{
+        width: 100%;
+        height: 85px;
+    }
+    .cardtxt1_2, .cardtxt2_2{
+        width: 100%;
+        height: 38px;
+    }
+    .cardtxt1_2 > img, .cardtxt2_2 > img{
+        width: 28px;
+        height: 28px;
+    }
+    .cardtxt1_2 > span, .cardtxt2_2 > span{
+        width: 100%;
+        height: 38px;
+        font-size: 14px;
+        line-height: 17.36px;
+    }
+    .footerCard_2{
+        width: 240px;
+        height: 43px;
+    }
+    .footerCard_2 > button{
+        background: transparent;
+        border: none;
+        position: relative;
+    }
+    .footerCard_2 > button > img{
+        width: 97px;
+        height: 41px;
+    }
+    .footerCard_2 > button > span{
+        left: 0;
+        top: 8px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        position: absolute;
+    }
+    .footerCard_2 > button:hover img{
+        content: url("../images/wishlist1hover.png");
+    }
+    .booterImgs{
+        width: 102px;
+        height: 43px;
+    }
+    .large-font{
+        width: 43px;
+        height: 43px;
+    }
+    ion-icon{
+        width: 29px;
+        height: 29px;
+    }
+    .footerImg3{
+        width: 43px;
+        height: 43px;
+    }
+    .courseMobileBtn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .courseMobileBtn > button{
+        margin: 10px auto 41px;
+        background: transparent;
+        border: none;
+    }
+    .title{
+        font-family: "Roboto slab",sans-serif;
+        font-size: 16px;
+        color: white;
+        font-weight: 500;
+        text-align: center;
+    }
+    .individualCards_{
+        width: 320px;
+        height: 435px;
+        margin: 0px auto 30px;
+    }
+    .individualCards_ > img{
+        width: 320px;
+        height: 211px;
+        border-top-right-radius: 26px;
+        border-top-left-radius: 26px;
+    }
+    .cardsText_{
+        width: 320px;
+        height: 224px;
+    }
+    .cardsTextField_{
+        width: 283px;
+        height: 224px;
+        margin: 0px auto;
+        padding: 22px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .cardsTextInfo_{
+        width: 283px;
+        height: 123px;
+        padding: 0px;
+
+    }
+    .cardsLike_{
+        width: 265px;
+        height: 43px;
+    }
+    .cardsInfo_{
+        font-size: 18px;
+        width: 283px;
+        height: 40px;
+        line-height: 21.6px;
+    }
+    .cardsDate_{
+        width: 120px;
+        height: 24px;
+    }
+    .cardsDate_ > img{
+        width: 16px;
+        height: 16px;
+    }
+    .articleDate_{
+        width: 102px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .cardsLike_ > a{
+        font-size: 19px;
+        font-weight: 500;
+    }
+}
+@media screen and (max-width: 370px) {
+    .individualCards_{
+        width: 280px;
+        height: 435px;
+        margin: 0px auto 30px;
+    }
+    .individualCards_ > img{
+        width: 280px;
+        height: 190px;
+    }
+    .cardsText_{
+        width: 280px;
+    }
+    .cardsTextField_{
+        width: 250px;
+    }
+    .cardsTextInfo_ {
+        width: 250px;
+    }
+    .cardsLike_ {
+        width: 235px;
+    }
+    .card_2 {
+        margin: 0px auto 30px;
+        width: 280px;
+        height: 435px;
+    }
+    .card_2 > img{
+        width: 280px;
+    }
+    .cardContent {
+        width: 280px;
+        height: 223px;
+        padding: 15px 15px;
+    }
+    .cardContentField {
+        width: 250px;
+    }
+    .wishlistBlogBtn{
+        margin-left: 3px;
     }
 }
 @media screen and (min-width: 600px){
@@ -1469,7 +1715,7 @@ ion-icon {
     .myCoursesTitleField, .containerSeeMoreMyCourses{
         display: none;
     }
-    .wishlistBlogBtn{
+    .wishlistMobileSection{
         display: none;
     }
 }
