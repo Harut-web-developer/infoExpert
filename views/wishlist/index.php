@@ -24,7 +24,7 @@ if ($language == 'en') {
     <div class="userProfileSection">
         <div class="myCoursesTitleField">
             <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
-            <div><?=$GLOBALS['text']['tabletMyCourse']?></div>
+            <div><?=$GLOBALS['text']['tabletWishlist']?></div>
         </div>
         <div class="userProfileMenuField">
             <span><?=$GLOBALS['text']['wishlistTitle']?></span>
@@ -62,6 +62,10 @@ if ($language == 'en') {
                 </div>
             </div>
             <div class="CoursesAndCategoriesCard">
+                <div class="wishlistBlogBtn">
+                    <span>Courses</span>
+                    <a href="">Blog</a>
+                </div>
                 <div class="topSlider">
 <!--                    <div class="changeBody1">-->
 <!--                        <span class="title">Go to the All Courses tab to create a wishlist </span>-->
@@ -74,94 +78,6 @@ if ($language == 'en') {
 <!--                    </div>-->
                     <div class="changeBody2">
                         <ul class="carousel_2">
-                            <li class="card_2">
-                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
-                                <div class="cardContent">
-                                    <div class="cardBody_2">
-                                        <span class="span1_2">1C: Accounting 8.3</span>
-                                        <div class="starAndTxt_2">
-                                            <div class="starDivWishlistCourses">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
-                                            </div>
-                                            <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
-                                        </div>
-                                    </div>
-                                    <div class="cardCenter_2">
-                                        <div class="cardtxt1_2">
-                                            <img src="/images/courses1.png" alt="">
-                                            <span>Number of courses: 29+1 exam /3 days a week/</span>
-                                        </div>
-                                        <div class="cardtxt2_2">
-                                            <img src="/images/courses2.png" alt="">
-                                            <span>Certificate / in Armenian and English /</span>
-                                        </div>
-                                    </div>
-                                    <div class="footerCard_2">
-                                        <div class="wishlistBtnField">
-                                            <button>
-                                                <img src="/images/wishlist1.png" alt="">
-                                                <span><a href="">Buy now</a></span>
-                                            </button>
-                                        </div>
-                                        <div class="booterImgs">
-                                            <div class='large-font largeFont'>
-                                                <ion-icon name="heart" class="iconLike">
-                                                    <div class='red-bg'></div>
-                                                </ion-icon>
-                                            </div>
-                                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card_2">
-                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
-                                <div class="cardContent">
-                                    <div class="cardBody_2">
-                                        <span class="span1_2">1C: Accounting 8.3</span>
-                                        <div class="starAndTxt_2">
-                                            <div class="starDivWishlistCourses">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
-                                            </div>
-                                            <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
-                                        </div>
-                                    </div>
-                                    <div class="cardCenter_2">
-                                        <div class="cardtxt1_2">
-                                            <img src="/images/courses1.png" alt="">
-                                            <span>Number of courses: 29+1 exam /3 days a week/</span>
-                                        </div>
-                                        <div class="cardtxt2_2">
-                                            <img src="/images/courses2.png" alt="">
-                                            <span>Certificate / in Armenian and English /</span>
-                                        </div>
-                                    </div>
-                                    <div class="footerCard_2">
-                                        <div class="wishlistBtnField">
-                                            <button>
-                                                <img src="/images/wishlist1.png" alt="">
-                                                <span><a href="">Buy now</a></span>
-                                            </button>
-                                        </div>
-                                        <div class="booterImgs">
-                                            <div class='large-font largeFont'>
-                                                <ion-icon name="heart" class="iconLike">
-                                                    <div class='red-bg'></div>
-                                                </ion-icon>
-                                            </div>
-                                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
                             <li class="card_2">
                                 <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
                                 <div class="cardContent">
@@ -410,6 +326,7 @@ if ($language == 'en') {
                         </li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </div>

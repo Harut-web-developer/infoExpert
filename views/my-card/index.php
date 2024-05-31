@@ -35,7 +35,7 @@ if ($language == 'en') {
             </div>
             <div class="myCardFields">
                 <div class="myCoursesProfileField">
-                    <div class="myCoursesFieldSection">
+                    <div class="myCoursesBlocksFieldMainPerson">
                         <div class="myCoursesFieldSectionLeft">
                             <img src="/images/profileimage.png" alt="">
                             <span>Ani Martirosian</span>
@@ -68,7 +68,7 @@ if ($language == 'en') {
                                         <div class="myCardImageBlock">
                                             <img src="/images/courseimage.png" alt="" draggable="false">
                                             <div class="myCardNameRating">
-                                                <span>1C: Accounting 8.3</span>
+                                                <span>1C: and Accounting for Begginers</span>
                                                 <div class="rightContentMyCard">
                                                     <div class="starDiv">
                                                         <img src="/images/cardStar.png" alt="">
