@@ -22,10 +22,10 @@ if ($language == 'en') {
 ?>
 <div class="usersProfile wishlist <?php echo $class1; ?>">
     <div class="userProfileSection">
-        <div class="myCoursesTitleField">
-            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
-            <div><?=$GLOBALS['text']['tabletMyCourse']?></div>
-        </div>
+<!--        <div class="myCoursesTitleField">-->
+<!--            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">-->
+<!--            <div>--><?php //=$GLOBALS['text']['tabletMyCourse']?><!--</div>-->
+<!--        </div>-->
         <div class="userProfileMenuField">
             <span><?=$GLOBALS['text']['wishlistTitle']?></span>
             <ul class="userProfileMenu">

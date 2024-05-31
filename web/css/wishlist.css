@@ -12,7 +12,7 @@
     width: 67%;
     height: -webkit-fill-available;
     position: absolute;
-    margin: 235px 16.5% 0px;
+    margin: 212px 16.5% 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -951,6 +951,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1300px) {
+    .usersProfileRu .userProfileMenuField > span {
+        font-size: 35px;
+    }
     .usersProfile {
         height: 1200px;
     }
@@ -1139,7 +1142,6 @@ ion-icon {
         text-align: left;
     }
     .userProfileMenu > li > a{
-        font-family: 'Roboto';
         font-size: 14px;
         font-weight: 400;
         line-height: 16.41px;
@@ -1388,6 +1390,12 @@ ion-icon {
     }
     .mainContent{
         justify-content: center;
+    }
+    .usersProfileEn .userProfileMenu, .userProfileMenu, .usersProfileRu .userProfileMenu {
+        width: 350px;
+    }
+    .usersProfileEn .userProfileMenuField > span, .userProfileMenuField > span, .usersProfileRu .userProfileMenuField > span {
+        font-size: 19px;
     }
 }
 @media screen and (max-width: 600px){

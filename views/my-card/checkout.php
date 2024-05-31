@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/my-card.css');
+$this->registerCssFile('@web/css/checkout.css');
 ?>
 <?php
 $language = $_COOKIE['language'];

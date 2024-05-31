@@ -11,7 +11,7 @@ $this->registerCssFile('@web/css/alumni.css');
             <h1 class="alumniTitle"><img class="backButton" src="/images/backButton.png" alt=""><?=$GLOBALS['text']['alumniTitle']?></h1>
             <p class="alumniTxt"><?=$GLOBALS['text']['alumniText']?></p>
         </div>
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide card_">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
@@ -37,7 +37,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -45,7 +45,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -53,7 +53,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -61,7 +61,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -69,7 +69,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -77,7 +77,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -85,7 +85,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -93,7 +93,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -101,7 +101,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -109,7 +109,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -117,7 +117,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -125,7 +125,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -133,7 +133,7 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_">
+                <div class="swiper-slide card_ hideMobile">
                     <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
@@ -142,6 +142,7 @@ $this->registerCssFile('@web/css/alumni.css');
                     </div>
                 </div>
             </div>
+            <img src="/images/seeMore.png" alt="" class="seeMoreAlumni">
             <div class="swiper-pagination"></div>
         </div>
     </div>
@@ -153,7 +154,9 @@ $this->registerCssFile('@web/css/alumni.css');
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        // slidesPerView: 4,
         loop: true,
         grid: {
             rows: 2,
@@ -163,6 +166,50 @@ $this->registerCssFile('@web/css/alumni.css');
             el: ".swiper-pagination",
             clickable: true,
         },
-
+        breakpoints: {
+            780: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1000: {
+                slidesPerView: 4,
+                spaceBetween: 15,
+            },
+            1060: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            1101: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+            },
+            1180: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1340: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1550: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            2100: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+            2400: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+            2600: {
+                slidesPerView: 6,
+                spaceBetween: 20,
+            },
+        }
     });
+    if (window.innerWidth <= 600) {
+        swiper.destroy();
+    }
 </script>

@@ -589,6 +589,21 @@
 .usersProfileAm .userProfileMenu {
     width: 550px;
 }
+.swiper-container {
+    width: 624px;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: #F36528;
+}
 @media screen and (max-width: 1600px) {
     .certificate {
         height: auto;
@@ -747,7 +762,6 @@
         text-align: left;
     }
     .userProfileMenu > li > a {
-        font-family: 'Roboto';
         font-size: 14px;
         font-weight: 400;
         line-height: 16.41px;
@@ -901,6 +915,9 @@
         text-align: left;
         margin-left: 16px;
     }
+    .swiper-container {
+        width: 317px;
+    }
     .certificate {
         width: 317px;
         justify-content: space-between;
@@ -1050,6 +1067,9 @@
     }
 }
 @media screen and (max-width: 600px) {
+    .swiper-container {
+        width: auto;
+    }
     .usersAchievements {
         background: #5D9A9D;
     }

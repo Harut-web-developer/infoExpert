@@ -2,6 +2,8 @@
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/user-profile.css');
 ?>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 <?php
 $language = $_COOKIE['language'];
 $class1 = '';
@@ -55,16 +57,45 @@ if ($language == 'en') {
                     </div>
                 </div>
             </div>
-            <div class="certificate">
-                <div class="cartificateImg">
-                    <img src="/images/certificateAchievements.png" alt="">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="certificate">
+                            <div class="cartificateImg">
+                                <img src="/images/certificateAchievements.png" alt="">
+                            </div>
+                            <div class="cartificateImgTxt">
+                                <span>1C: Payroll and personnel management</span>
+                                <img src="/images/downloade.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+<!-- Եթե այլ սերտիֆիկատներ կան օգտագործել այս կոդն -->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="certificate">-->
+<!--                            <div class="cartificateImg">-->
+<!--                                <img src="/images/certificateAchievements.png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="cartificateImgTxt">-->
+<!--                                <span>1C: Payroll and personnel management</span>-->
+<!--                                <img src="/images/downloade.png" alt="">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
-                <div class="cartificateImgTxt">
-                    <span>1C: Payroll and personnel management</span>
-                    <img src="/images/downloade.png" alt="">
-                </div>
-
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </div>
 </div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
