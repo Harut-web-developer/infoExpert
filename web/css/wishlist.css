@@ -635,7 +635,17 @@ ion-icon {
         transform: scale(1.1);
     }
 }
-
+@media screen and (min-width: 1930px){
+    .changeBody2{
+        width: 815px;
+    }
+    .bottomSlider {
+        width: 860px;
+    }
+    .CoursesAndCategoriesCard {
+        width: 855px;
+    }
+}
 @media screen and (max-width: 1900px) {
     .CoursesAndCategoriesCard {
         width: 58%;

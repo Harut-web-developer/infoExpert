@@ -387,7 +387,7 @@ if ($language == 'en') {
                 </div>
             </div>
         </div>
-        <div class="totalPriceField">
+        <div class="totalPriceField" id="totalPriceField">
             <div class="totalPriceFieldSection">
                 <div class="myCardTotalPrice">
                     <span><?=$GLOBALS['text']['myCardTotal']?>:  $70000</span>
