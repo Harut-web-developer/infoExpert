@@ -3,6 +3,8 @@
     height: 1088px;
     background-image: url("../images/background-contact-us.png");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding-top: 158px;
 }
 .disinline{
@@ -132,18 +134,19 @@
     text-align: center;
 }
 #validationDefault00_{
+    font-weight: 400;
     width: 100%;
     background-color: transparent;
     outline: none;
     border: none;
+    color: #FFFFFF;
+    font-size: 18px;
 }
 #validationDefault00_::placeholder{
     color: #FFFFFF;
-    font-family: 'Roboto';
+    font-family: 'Roboto',sans-serif;
     font-size: 18px;
     font-weight: 400;
-    line-height: 27px;
-    text-align: left;
 }
 .inputemail{
     height: 67px;
@@ -158,13 +161,14 @@
     background-color: transparent;
     outline: none;
     border: none;
-}
-#validationDefault02_::placeholder{
-    font-family: 'Roboto';
     font-size: 18px;
     font-weight: 400;
-    line-height: 27px;
-    text-align: left;
+    color: #FFFFFF;
+}
+#validationDefault02_::placeholder{
+    font-family: 'Roboto',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     color: #FFFFFF;
 }
 .inputcomment{
@@ -182,9 +186,12 @@
     background-color: transparent;
     outline: none;
     border: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
 }
 #validationDefault01_::placeholder{
-    font-family: 'Roboto';
+    font-family: 'Roboto',sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;

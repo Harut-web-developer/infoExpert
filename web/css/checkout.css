@@ -35,7 +35,7 @@
     font-family: 'Roboto',sans-serif;
     color: white;
 }
-.checkoutTitleField >span:hover{
+.checkoutTitleField > span:hover{
     cursor: pointer;
 }
 .checkoutInputsSectionField{
@@ -638,7 +638,8 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 20.8px;
-        text-align: left;
+        /*text-align: left;*/
+        width: 40px;
     }
     .courseManualPriceField {
         width: 431px;

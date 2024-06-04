@@ -54,7 +54,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="coursisBtnField">
                                 <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span>Buy now</span>
+                                    <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                                 </a>
                             </div>
                             <div class="booterImgs">
@@ -98,7 +98,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="coursisBtnField">
                                 <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span>Buy now</span>
+                                    <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                                 </a>
                             </div>
                             <div class="booterImgs">
@@ -142,7 +142,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="coursisBtnField">
                                 <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span>Buy now</span>
+                                    <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                                 </a>
                             </div>
                             <div class="booterImgs">
@@ -186,7 +186,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="coursisBtnField">
                                 <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span>Buy now</span>
+                                    <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                                 </a>
                             </div>
                             <div class="booterImgs">
@@ -230,7 +230,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="coursisBtnField">
                                 <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span>Buy now</span>
+                                    <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                                 </a>
                             </div>
                             <div class="booterImgs">
@@ -274,7 +274,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="coursisBtnField">
                                 <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span>Buy now</span>
+                                    <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                                 </a>
                             </div>
                             <div class="booterImgs">
@@ -318,7 +318,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="coursisBtnField">
                                 <a href="">
                                     <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                                    <span>Buy now</span>
+                                    <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                                 </a>
                             </div>
                             <div class="booterImgs">
@@ -366,7 +366,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                     <div class="footerCard">
                         <a href="">
                             <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                            <span>Buy now</span>
+                            <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                         </a>
                         <div class="booterImgs">
                             <div class='large-font'>
@@ -410,7 +410,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                     <div class="footerCard">
                         <a href="">
                             <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                            <span>Buy now</span>
+                            <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                         </a>
                         <div class="booterImgs">
                             <div class='large-font'>
@@ -454,7 +454,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                     <div class="footerCard">
                         <a href="">
                             <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
-                            <span>Buy now</span>
+                            <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                         </a>
                         <div class="booterImgs">
                             <div class='large-font'>

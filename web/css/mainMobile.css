@@ -673,12 +673,31 @@
 }
 /*section Four*/
 @media only screen and (min-width: 320px) and (max-width: 599px) {
-    .questions {
+    .sectionFour{
+        background-image: url("../images/sectionFourMobile.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: -21px;
         width: 100%;
-        height: 474px;
+        height: min-content;
+    }
+    .freqAsked {
+        font-size: 16px;
+        font-family: "Roboto Slab", sans-serif;
+        font-weight: 900;
+        color: #F16D35;
+        letter-spacing: 1.25px;
+        text-align: center;
+    }
+    .frequency {
+        width: 100%;
+        height: 65px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
     }
     .leftQuestions {
         width: 100%;
@@ -702,19 +721,20 @@
     }
     .questions {
         width: 100%;
-        height: 550px;
+        height: min-content;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 60px;
     }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 500px) {
     .answers {
-        margin: 60px 5% 0px;
+        padding-top: 60px;
+        margin: 0px 5% 0px;
         width: 90%;
-        height: 657px;
-        position: absolute;
+        height: min-content;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -730,33 +750,6 @@
         font-size: 12px;
         color: white;
         display: none;
-    }
-}
-@media only screen and (min-width: 320px) and (max-width: 599px) {
-    .sectionFour{
-        background-image: url("../images/sectionFourMobile.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-top: -21px;
-        width: 100%;
-        height: 739px;
-    }
-    .freqAsked {
-        font-size: 16px;
-        font-family: "Roboto Slab", sans-serif;
-        font-weight: 900;
-        color: #F16D35;
-        letter-spacing: 1.25px;
-        text-align: center;
-    }
-    .frequency {
-        width: 100%;
-        height: 65px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
     }
 }
 /*sectionFive*/
@@ -1083,24 +1076,28 @@
     .mobileTestimonial{
         margin-top: 45px;
     }
-    .webTabletTestimonial{
+    /*.webTabletTestimonial{*/
+    /*    display: none;*/
+    /*}  */
+    .testimonial{
         display: none;
     }
     .sectionSix{
         margin-top: 0px;
         background: linear-gradient(#2F688C, #5E91A2);
         width: 100%;
-        height: 905px;
+        height: min-content;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
-    .testimonial {
-        margin: 50px 0 0 0;
+    .testimonialSectionMobile {
+        padding-top: 50px;
+        margin: 0px;
         width: 100%;
-        height: 809px;
-        position: absolute;
+        height: min-content;
+        /*position: absolute;*/
     }
     .testimonialOrangeTitle{
         font-size: 16px;
@@ -1111,6 +1108,7 @@
         color: #F16D35;
     }
     .testimonialWhiteTitle{
+        text-align: center;
         font-family: "Roboto",sans-serif;
         font-size: 15px;
         font-weight: 400;
@@ -1132,6 +1130,7 @@
         justify-content: center;
         align-items: center;
         margin-top: 45px;
+        margin-bottom: 51px;
     }
     .testimonialsText {
         width: 100%;
@@ -1193,8 +1192,8 @@
         height: 136px;
         width: 100%;
         background: white;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 }
 @media only screen and (min-width: 361px) and (max-width: 400px) {
@@ -1214,8 +1213,8 @@
         height: 136px;
         width: 100%;
         background: white;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 }
 @media only screen and (min-width: 401px) and (max-width: 440px) {
@@ -1235,8 +1234,8 @@
         height: 136px;
         width: 100%;
         background: white;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 }
 @media only screen and (min-width: 441px) and (max-width: 480px) {
@@ -1256,8 +1255,8 @@
         height: 136px;
         width: 100%;
         background: white;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 }
 @media only screen and (min-width: 481px) and (max-width: 520px) {
@@ -1277,8 +1276,8 @@
         height: 136px;
         width: 100%;
         background: white;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 }
 @media only screen and (min-width: 521px) and (max-width: 560px) {
@@ -1298,8 +1297,8 @@
         height: 136px;
         width: 100%;
         background: white;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 }
 @media only screen and (min-width: 561px) and (max-width: 599px) {
@@ -1319,14 +1318,17 @@
         height: 136px;
         width: 100%;
         background: white;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
 }
 @media only screen and (min-width: 320px) and (max-width: 599px) {
-    .blogsArticles{
+    .sectionBlog{
         display: none;
+    }
+    .blogsMobileBtn{
+        margin-bottom: 49px;
     }
     .blogsTextMobile{
         color: #1C5484;
@@ -1335,22 +1337,21 @@
         font-weight: 400;
         line-height: 18.75px;
         text-align: center;
-
     }
     .sectionSeven{
         margin-top: 0px;
         background: #ACCBE6;
         width: 100%;
-        height: 1127px;
+        height: min-content;
     }
     .blogsTitle{
         font-size: 16px;
     }
-    .sectionBlog {
+    .sectionBlogMobile {
         width: 66%;
-        height: max-content;
-        position: absolute;
-        margin: 50px 17% 0px;
+        height: min-content;
+        padding-top: 50px;
+        margin: 0px 17% 0px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

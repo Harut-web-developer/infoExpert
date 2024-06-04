@@ -445,6 +445,12 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             </div>
             <div class="swiper-pagination"></div>
         </div>
+    </div>
+    <div class="testimonialSectionMobile">
+        <div class="testimonialsTitles">
+            <span class="testimonialOrangeTitle"><?=$GLOBALS['text']['sectionSixTitle']?></span>
+            <span class="testimonialWhiteTitle"><?=$GLOBALS['text']['sectionSixText']?></span>
+        </div>
         <div class="mobileTestimonial">
             <div class="blockTestimonialMobile">
                 <div class="intoBlockTestimonial">
@@ -521,7 +527,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="cardsInfo">Grid of different categories of accounting lessons</div>
                         </div>
                         <div class="cardsLike">
-                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                             <div class='large-font'>
                                 <ion-icon name="heart">
                                     <div class='red-bg'></div>
@@ -546,7 +552,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="cardsInfo">Grid of different categories of accounting lessons</div>
                         </div>
                         <div class="cardsLike">
-                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                             <div class='large-font'>
                                 <ion-icon name="heart">
                                     <div class='red-bg'></div>
@@ -571,7 +577,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="cardsInfo">Grid of different categories of accounting lessons</div>
                         </div>
                         <div class="cardsLike">
-                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                             <div class='large-font'>
                                 <ion-icon name="heart">
                                     <div class='red-bg'></div>
@@ -596,7 +602,77 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="cardsInfo">Grid of different categories of accounting lessons</div>
                         </div>
                         <div class="cardsLike">
-                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blogsArticles">
+            <div class="blogText"><?=$GLOBALS['text']['sectionSevenText']?></div>
+            <div class="blogLine">
+                <div></div>
+            </div>
+            <div class="blogBtn">
+                <a href="blog/index">
+                    <img src="/images/articlebtn.png" alt="">
+                    <span><?=$GLOBALS['text']['sectionSevenBtn']?></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="sectionBlogMobile">
+        <div class="blogTitleField">
+            <span class="blogsTitle"><?=$GLOBALS['text']['sectionSevenTitle']?></span>
+            <span class="blogsTextMobile"><?=$GLOBALS['text']['sectionSevenText']?></span>
+        </div>
+        <div class="blogsCard">
+            <div class="individualCards">
+                <div class="cardsimg">
+                    <img src="/images/blogimg.png" alt="">
+                </div>
+                <div class="cardsText">
+                    <div class="cardsTextField">
+                        <div class="cardsTextInfo">
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                            <div class="cardsDate">
+                                <img src="/images/calendarimg.png" alt="">
+                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                            </div>
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                        </div>
+                        <div class="cardsLike">
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
+                            <div class='large-font'>
+                                <ion-icon name="heart">
+                                    <div class='red-bg'></div>
+                                </ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="individualCards">
+                <div class="cardsimg">
+                    <img src="/images/blogimg.png" alt="">
+                </div>
+                <div class="cardsText">
+                    <div class="cardsTextField">
+                        <div class="cardsTextInfo">
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                            <div class="cardsDate">
+                                <img src="/images/calendarimg.png" alt="">
+                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                            </div>
+                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
+                        </div>
+                        <div class="cardsLike">
+                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                             <div class='large-font'>
                                 <ion-icon name="heart">
                                     <div class='red-bg'></div>
@@ -612,18 +688,6 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <img src="/images/mobileBtnSix.png" alt="">
                 <span><?=$GLOBALS['text']['sectionSixBtnMobile']?></span>
             </button>
-        </div>
-        <div class="blogsArticles">
-            <div class="blogText"><?=$GLOBALS['text']['sectionSevenText']?></div>
-            <div class="blogLine">
-                <div></div>
-            </div>
-            <div class="blogBtn">
-                <a href="blog/index">
-                    <img src="/images/articlebtn.png" alt="">
-                    <span><?=$GLOBALS['text']['sectionSevenBtn']?></span>
-                </a>
-            </div>
         </div>
     </div>
 </div>

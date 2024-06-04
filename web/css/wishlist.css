@@ -16,7 +16,7 @@
 }
 .usersProfile{
     width: 100%;
-    height: 1632px;
+    height: min-content;
     background-image: url("../images/background-wishlist.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -24,9 +24,12 @@
 }
 .userProfileSection{
     width: 67%;
-    height: -webkit-fill-available;
-    position: absolute;
-    margin: 212px 16.5% 0px;
+    /*height: -webkit-fill-available;*/
+    height: min-content;
+    /*position: absolute;*/
+    padding-top: 212px;
+    padding-bottom: 95px;
+    margin: 0px 16.5% 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -142,14 +145,15 @@
 }
 .CoursesAndCategoriesCard{
     width: 68%;
-    height: 1480px;
+    height: min-content;
     /*display: grid;*/
     /*align-items: center;*/
     /*justify-content: center;*/
 }
 .mainContent{
     width: 100%;
-    height: -webkit-fill-available;
+    /*height: -webkit-fill-available;*/
+    height: min-content;
     padding-top: 108px;
     display: flex;
     flex-direction: row;
@@ -1128,7 +1132,7 @@ ion-icon {
         text-align: left;
     }
     .usersProfile {
-        height: 880px;
+        height: min-content;
     }
     .CoursesAndCategoriesCard {
         width: 444px;
@@ -1146,8 +1150,9 @@ ion-icon {
     }
     .userProfileSection {
         width: 86%;
-        height: 740px;
-        margin: 95px 6.9% 0px 6.8%;
+        height: min-content;
+        padding-top: 95px;
+        margin: 0px 6.9% 0px 6.8%;
     }
     .userProfileMenuField > span{
         font-size: 22px;
@@ -1392,10 +1397,10 @@ ion-icon {
         grid-auto-columns: 180px;
     }
     .usersProfile {
-        height: 830px;
+        height: min-content;
     }
     .userProfileSection {
-        height: 672px;
+        height: min-content;
     }
 }
 @media screen and (max-width: 700px){
@@ -1415,6 +1420,7 @@ ion-icon {
 @media screen and (max-width: 599px){
     .userProfileSection{
         height: min-content;
+        padding-bottom: 0px;
     }
     .wishlistBlogBtn{
         display: flex;
@@ -1450,9 +1456,8 @@ ion-icon {
     }
     .wishlist{
         background: #5D9A9D;
-        /*background-image: url("../images/wishlistMobileBg.png");*/
         width: 100%;
-        height: 1225px;
+        height: min-content;
     }
     .wishlistMobileSection{
         height: min-content;

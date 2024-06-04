@@ -439,8 +439,20 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 3000,
     });
-    if ($('.individualCards').length >= 4 && $(window).width() >= 1024){
-        $('.individualCards').last().css('display', 'none');
+
+    if ($('.sectionBlog .blogsCard .individualCards').length >= 4 && $(window).width() >= 1024){
+        $('.sectionBlog .blogsCard .individualCards').last().css('display', 'none');
     }
+    $('.togglePassword').on('click', function() {
+        let passwordInput = $(this).siblings('input');
+        let toggleImage = $('.togglePassword');
+        if (passwordInput.attr('type') === 'password') {
+            passwordInput.attr('type', 'text');
+            toggleImage.attr('src', '/images/signEyeOpen.png');
+        } else {
+            passwordInput.attr('type', 'password');
+            toggleImage.attr('src', '/images/signEyeClose.png');
+        }
+    });
 })
 

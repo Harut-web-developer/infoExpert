@@ -144,7 +144,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                     <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
                     <li><a href="/user-profile/achievements-edit"><?=$GLOBALS['text']['tabletEdit']?></a></li>
-                    <li><a href="/my-card/checkout"><?=$GLOBALS['text']['tabletPayment']?></a></li>
+<!--                    <li><a href="/my-card/checkout">--><?php //=$GLOBALS['text']['tabletPayment']?><!--</a></li>-->
                     <?php if(!empty(Yii::$app->user->identity)){ ?>
                         <li><a href="/logout"><?=$GLOBALS['text']['headerLogout']?></a></li>
                     <?php }?>

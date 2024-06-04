@@ -91,11 +91,36 @@ if ($language == 'en') {
                         </div>
                     </div>
                 </div>
-                                <div class="courseMobileBtn">
-                                    <button>
-                                        <img src="/images/coursesBtn.png" alt="">
-                                    </button>
+                <div class="wishlistCardsField">
+                    <div class="individualCards_">
+                        <img src="/images/blogimg.png" alt="" draggable="false">
+                        <div class="cardsText_">
+                            <div class="cardsTextField_">
+                                <div class="cardsTextInfo_">
+                                    <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
+                                    <div class="cardsDate_">
+                                        <img src="/images/calendarimg.png" alt="">
+                                        <div class="articleDate_"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                                    </div>
+                                    <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
                                 </div>
+                                <div class="cardsLike_">
+                                    <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                                    <div class='large-font'>
+                                        <ion-icon name="heart">
+                                            <div class='red-bg'></div>
+                                        </ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="courseMobileBtn">
+                    <button>
+                        <img src="/images/coursesBtn.png" alt="">
+                    </button>
+                </div>
             </div>
         </div>
     </div>

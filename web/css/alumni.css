@@ -1,7 +1,7 @@
 .alumni{
     width: 100%;
     height: 1330px;
-    background-image: url("/images/background-alumni.png");
+    background-image: url("../images/background-alumni.png");
     padding-top: 158px;
     background-repeat: no-repeat;
     background-size: cover;

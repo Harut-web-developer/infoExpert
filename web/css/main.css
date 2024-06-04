@@ -1241,13 +1241,14 @@
     background-size: cover;
     margin-top: -57px;
     width: 100%;
-    height: 1077px;
+    height: min-content;
 }
 .answers{
-    margin: 200px 16.5% 0px;
+    padding-top: 155px;
+    margin: 0px 16.5% 0px;
     width: 67%;
-    height: 677px;
-    position: absolute;
+    height: min-content;
+    /*position: absolute;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1260,6 +1261,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 86px;
 }
 .freqAsked{
     font-size: 40px;
@@ -1277,7 +1279,9 @@
 }
 .questions{
     width: 100%;
-    height: 474px;
+    /*height: 474px;*/
+    height: min-content;
+    margin-bottom: 155px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1586,7 +1590,7 @@
     height: 482px;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
 }
 .blogsArticles{
     width: 100%;

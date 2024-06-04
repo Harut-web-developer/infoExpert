@@ -390,7 +390,7 @@ if ($language == 'en') {
         <div class="totalPriceField">
             <div class="totalPriceFieldSection">
                 <div class="myCardTotalPrice">
-                    <span><?=$GLOBALS['text']['myCardTotal']?>:  $38.97</span>
+                    <span><?=$GLOBALS['text']['myCardTotal']?>:  $70000</span>
                     <button>
                         <img src="/images/btncheckoutcard.png" alt="">
                         <a href="/my-card/checkout"><?=$GLOBALS['text']['myCardCheckout']?></a>

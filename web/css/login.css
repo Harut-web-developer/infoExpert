@@ -111,7 +111,7 @@
 .passEye > img{
     position: absolute;
     right: 28px;
-    margin-top: 24px;
+    margin-top: 20px;
 }
 .passEye > input{
     position: relative;
@@ -463,11 +463,11 @@
     }
 
     .passEye > img {
-        width: 13px;
-        height: 10px;
+        width: 20px;
+        height: 17px;
         position: absolute;
         right: 20px;
-        margin-top: 19px;
+        margin-top: 15px;
     }
 
     .passEye > input {
@@ -765,11 +765,11 @@
         height: 46px;
     }
     .passEye > img{
-        width: 13px;
-        height: 10px;
+        width: 20px;
+        height: 17px;
         position: absolute;
         right: 20px;
-        margin-top: 19px;
+        margin-top: 15px;
     }
     .passEye > input{
         position: relative;
@@ -1088,7 +1088,7 @@
     .passEye > img{
         position: absolute;
         right: 20px;
-        margin-top: 20px;
+        margin-top: 15px;
     }
     .loginFieldAm .circleTextTop{
         font-size: 20px;
@@ -1144,7 +1144,7 @@
         width: 100%;
     }
     .passEye > img {
-        margin-top: 24px;
+        margin-top: 20px;
     }
     .loginField{
         width: 87%;
@@ -1212,7 +1212,8 @@
 }
 @media only screen and (max-width: 400px) {
     .passEye > img {
-        margin-top: 15px;
+        margin-top: 10px;
+        right: 15px;
     }
     .passEye > input{
         font-family: 'Roboto';

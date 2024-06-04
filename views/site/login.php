@@ -41,7 +41,7 @@ if ($language == 'en') {
                 <input type="email" value="<?=$email?>" placeholder="<?=$GLOBALS['text']['signinFormEmail']?>" name="email" required>
                 <div class="passEye">
                     <input type="password" placeholder="<?=$GLOBALS['text']['signinFormPassword']?>" name="password" required>
-                    <img src="/images/signEye.png" alt="">
+                    <img class="togglePassword" src="/images/signEyeClose.png" alt="">
                 </div>
                 <div class="rememberField">
                     <div class="mainCheck">
