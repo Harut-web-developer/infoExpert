@@ -15,14 +15,14 @@ $(".menuCoursesDropDown").hover(function(){
     $('.dropDownCources').hide();
 });
 
-$(function() {
-    if (window.location.pathname == '/'){
-        $('a[href*=\\#]').on('click', function(e) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-        });
-    }
-});
+// $(function() {
+//     if (window.location.pathname == '/'){
+//         $('a[href*=\\#]').on('click', function(e) {
+//             e.preventDefault();
+//             $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+//         });
+//     }
+// });
 $(".questionField").click(function() {
     var panel = $(this).next(".answerQuestion");
     $(".answerQuestion").not(panel).css("display", "none");
@@ -146,6 +146,7 @@ if (window.location.pathname == '/') {
                     $(window).scrollTop($(window).scrollTop() - 50);
                     scrollWindow();
                 }, 1);
+                // $(window).scrollTop(0);
             }
         };
         scrollBtn.on("click", scrollWindow);
@@ -262,6 +263,23 @@ document.querySelectorAll('#section01 ion-icon').forEach(icon => {
         this.classList.toggle('active');
     });
 });
+if (window.location.pathname == '/my-card/index' && $(window).width() <= 600){
+    document.addEventListener('scroll', function() {
+        const bottomImages = document.getElementById('totalPriceField');
+        const footerBackground = document.getElementById('footerBackgroundM');
+        const footerTop = footerBackground.getBoundingClientRect().top;
+        const bottomImagesHeight = bottomImages.offsetHeight;
+        const windowHeight = window.innerHeight;
+        console.log(footerTop, bottomImagesHeight, windowHeight)
+        if (footerTop + bottomImagesHeight <= windowHeight) {
+            bottomImages.classList.remove('fixed');
+            bottomImages.classList.add('none');
+        } else {
+            bottomImages.classList.remove('none');
+            bottomImages.classList.add('fixed');
+        }
+    });
+}
 if (window.location.pathname == '/personel-management/index' && $(window).width() <= 600){
     document.addEventListener('scroll', function() {
         const bottomImages = document.getElementById('bottomImages');
@@ -298,47 +316,47 @@ if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600)
     });
 }
 $(document).ready(function () {
-        $('body').on('click','.tabletMenuIcon', function () {
-            if($(window).width() < 600){
-                $('.menuTabletHeader').toggleClass('menuMobileActive');
-                $('.menuTabletHeader').removeClass('menuTabletActive');
-                $('.personMainMenu').css('width', '0px');
-                $('.personCoursesMenuList').css('width', '0px');
-            }else{
-                $('.menuTabletHeader').toggleClass('menuTabletActive');
-                $('.menuTabletHeader').removeClass('menuMobileActive');
-                $('.personMainMenu').css('width', '0px');
-                $('.personCoursesMenuList').css('width', '0px');
-            }
-        })
-        $('body').on('click','.tabletUserProfileMenu', function () {
-            if($(window).width() < 600) {
-                $('.personMainMenu').css('width', '76%');
-            }else{
-                $('.personMainMenu').css('width', '484px');
-            }
-        })
-        $('body').on('click','.tabletPersonMenuField', function () {
-            if($(window).width() < 600) {
-                $('.personMainMenu').css('width', '0px');
-            }else{
-                $('.personMainMenu').css('width', '0px');
-            }
-        })
-        $('body').on('click','.tabletAllCoursesList', function () {
-            if($(window).width() < 600) {
-                $('.personCoursesMenuList').css('width', '76%');
-            }else{
-                $('.personCoursesMenuList').css('width', '484px');
-            }
-        })
-        $('body').on('click','.tabletPersonMenuField', function () {
-            if($(window).width() < 600) {
-                $('.personCoursesMenuList').css('width', '0px');
-            }else{
-                $('.personCoursesMenuList').css('width', '0px');
-            }
-        })
+    $('body').on('click','.tabletMenuIcon', function () {
+        if($(window).width() < 600){
+            $('.menuTabletHeader').toggleClass('menuMobileActive');
+            $('.menuTabletHeader').removeClass('menuTabletActive');
+            $('.personMainMenu').css('width', '0px');
+            $('.personCoursesMenuList').css('width', '0px');
+        }else{
+            $('.menuTabletHeader').toggleClass('menuTabletActive');
+            $('.menuTabletHeader').removeClass('menuMobileActive');
+            $('.personMainMenu').css('width', '0px');
+            $('.personCoursesMenuList').css('width', '0px');
+        }
+    })
+    $('body').on('click','.tabletUserProfileMenu', function () {
+        if($(window).width() < 600) {
+            $('.personMainMenu').css('width', '76%');
+        }else{
+            $('.personMainMenu').css('width', '484px');
+        }
+    })
+    $('body').on('click','.tabletPersonMenuField', function () {
+        if($(window).width() < 600) {
+            $('.personMainMenu').css('width', '0px');
+        }else{
+            $('.personMainMenu').css('width', '0px');
+        }
+    })
+    $('body').on('click','.tabletAllCoursesList', function () {
+        if($(window).width() < 600) {
+            $('.personCoursesMenuList').css('width', '76%');
+        }else{
+            $('.personCoursesMenuList').css('width', '484px');
+        }
+    })
+    $('body').on('click','.tabletPersonMenuField', function () {
+        if($(window).width() < 600) {
+            $('.personCoursesMenuList').css('width', '0px');
+        }else{
+            $('.personCoursesMenuList').css('width', '0px');
+        }
+    })
 
 
     $(document).on('click', function(event) {
@@ -439,20 +457,8 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 3000,
     });
-
-    if ($('.sectionBlog .blogsCard .individualCards').length >= 4 && $(window).width() >= 1024){
-        $('.sectionBlog .blogsCard .individualCards').last().css('display', 'none');
+    if ($('.individualCards').length >= 4 && $(window).width() >= 1024){
+        $('.individualCards').last().css('display', 'none');
     }
-    $('.togglePassword').on('click', function() {
-        let passwordInput = $(this).siblings('input');
-        let toggleImage = $('.togglePassword');
-        if (passwordInput.attr('type') === 'password') {
-            passwordInput.attr('type', 'text');
-            toggleImage.attr('src', '/images/signEyeOpen.png');
-        } else {
-            passwordInput.attr('type', 'password');
-            toggleImage.attr('src', '/images/signEyeClose.png');
-        }
-    });
 })
 

@@ -470,33 +470,33 @@ ion-icon {
     }
 }
 /*tablet of my card page */
-@media screen and (min-width: 2790px) {
-    .myCardFieldAcceptCourses{
-        grid-auto-columns: calc(100% / 3 + 2px);
-    }
-}
-@media screen and (min-width: 2500px) and (max-width: 2789px) {
-    .myCardFieldAcceptCourses{
-        grid-auto-columns: calc(100% / 3 + 2px);
-    }
-    .cardCourses {
-        width: 72%;
-    }
-}
-@media screen and (min-width: 2200px) and (max-width: 2499px) {
+/*@media screen and (min-width: 2790px) {*/
+/*    .myCardFieldAcceptCourses{*/
+/*        grid-auto-columns: calc(100% / 3 + 2px);*/
+/*    }*/
+/*}*/
+/*@media screen and (min-width: 2500px) and (max-width: 2789px) {*/
+/*    .myCardFieldAcceptCourses{*/
+/*        grid-auto-columns: calc(100% / 3 + 2px);*/
+/*    }*/
+/*    .cardCourses {*/
+/*        width: 72%;*/
+/*    }*/
+/*}*/
+/*@media screen and (min-width: 2200px) and (max-width: 2499px) {*/
+/*    .myCardFieldAcceptCourses{*/
+/*        grid-auto-columns: calc(100% / 2 + 2px);*/
+/*    }*/
+/*    .cardCourses {*/
+/*         width: 54%;*/
+/*     }*/
+/*}*/
+@media screen and (min-width: 2000px){
     .myCardFieldAcceptCourses{
         grid-auto-columns: calc(100% / 2 + 2px);
     }
     .cardCourses {
-         width: 54%;
-     }
-}
-@media screen and (min-width: 2000px) and (max-width: 2199px) {
-    .myCardFieldAcceptCourses{
-        grid-auto-columns: calc(100% / 2 + 2px);
-    }
-    .cardCourses {
-        width: 60%;
+        width: 815px;
     }
 }
 @media screen and (min-width: 1801px) and (max-width: 1999px) {
@@ -509,6 +509,7 @@ ion-icon {
     .myCardBlockInfo{
         height: 31%;
     }
+
 }
 @media screen and (max-width: 1800px) {
     .myCoursesFieldSection {
@@ -518,7 +519,7 @@ ion-icon {
         grid-auto-columns: calc(100% / 2 + 3px);
     }
     .cardCourses {
-        width: 643px;
+        width: 666px;
     }
     .myCardBlocksField{
         width: 310px;
@@ -1315,8 +1316,26 @@ ion-icon {
         width: 300px;
     }
 }
+@media screen and (max-width: 600px) {
+    #totalPriceField.fixed {
+        position: fixed;
+        bottom: -1px;
+        width: 100%;
+    }
+    #totalPriceField.none {
+        display: none;
+    }
+}
 @media screen and (min-width: 600px) {
     .myCardMobileField{
+        display: none;
+    }
+    #totalPriceField.fixed {
+        position: fixed;
+        bottom: -1px;
+        width: 100%;
+    }
+    #totalPriceField.none {
         display: none;
     }
 }

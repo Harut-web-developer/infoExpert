@@ -217,7 +217,6 @@ if ($language == 'en') {
         $('.aboutLangAm').css('height', '1350px');
         $('.aboutLangRu').css('height', '1300px');
     }
-    console.log(window.innerWidth)
     $(".titleColapse").click(function() {
         var panel = $(this).next(".mainTextLeftContentBottom");
         $(".mainTextLeftContentBottom").not(panel).css("display", "none");
