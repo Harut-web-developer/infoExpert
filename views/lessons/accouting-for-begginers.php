@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/lessonslessons.css');
+$this->registerCssFile('@web/css/lessons.css');
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);
 ?>
@@ -66,13 +66,11 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                     <span class="button1">Buy now</span>
                 </button>
             </div>
-            <div class="managementBtnDiv">
-                <button>
-                    <a href="/courses/index">
-                        <img src="/images/seeallcourse.png" alt="">
-                        <span class="button2">See all courses</span>
-                    </a>
-                </button>
+            <div class="managementBtnDivCourse">
+                <a href="/courses/index">
+                    <img src="/images/seeallcourse.png" alt="">
+                    <span class="button2">See all courses</span>
+                </a>
             </div>
         </div>
     </div>

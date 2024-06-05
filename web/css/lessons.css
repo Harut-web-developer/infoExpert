@@ -121,7 +121,7 @@
     /*padding: 0 16.666%;*/
 }
 .footerBackground {
-    margin-top: -70px !important;
+    margin-top: -73px !important;
 }
 .bottomImages {
     width: 100%;
@@ -156,26 +156,26 @@
 }
 .rightImgBottom span{
     color: #F36528;
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto Slab',sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 44px;
     text-align: center;
     display: flex;
 }
-.managementBtnDiv{
-    width: max-content;
-    position: relative;
-}
 .managementBtnDiv > button{
     background: transparent;
     border: none;
+    position: relative;
+}
+.managementBtnDivCourse > a{
+    position: relative;
 }
 .managementBtnDiv > button:hover img{
     content: url("../images/buycoursebtnhover.png");
 }
-.managementBtnDiv > button > img{
-    position: relative;
+.managementBtnDivCourse > a:hover img{
+    content: url("../images/buycoursebtnhover.png");
 }
 .managementBtnDiv > button > span{
     font-size: 16px;
@@ -183,35 +183,29 @@
     font-family: "Tahoma", sans-serif;
     position: absolute;
     left: 0px;
-    top: 25px;
+    top: 20px;
     width: 100%;
     text-align: center;
+    color: #F36528;
+}
+.managementBtnDivCourse > a > span{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Tahoma", sans-serif;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    color: white;
 }
 .managementBtnDiv > button:hover span{
     color: white;
 }
-.managementBtnDiv .button1{
-    color: #F36528;
-    font-family: 'Roboto',sans-serif;
-    font-size: 15px;
-    font-weight: 900;
-    line-height: 17.58px;
-}
-.managementBtnDiv .button2{
-    color: white;
-    font-family: 'Roboto',sans-serif;
-    font-size: 15px;
-    font-weight: 900;
-    line-height: 17.58px;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    top: 5.5px;
-}
 .rightImgM, .diplomW{
     display: none;
 }
-.managementBtnDiv a{
+.managementBtnDivCourse a{
     z-index: 10;
     position: relative;
 }
@@ -596,9 +590,9 @@ ion-icon {
     #bottomImages.none {
         display: none;
     }
-    .managementBtnDiv .button2,
-    .managementBtnDiv .button1{
-        font-family: 'Roboto Black';
+    .managementBtnDiv > button > span,
+    .managementBtnDivCourse > a > span{
+        font-family: 'Roboto',sans-serif;
         font-size: 10px;
         font-weight: 900;
         line-height: 11.72px;
@@ -624,7 +618,7 @@ ion-icon {
         margin: 0;
         padding: 0;
     }
-    .managementBtnDiv .button1{
+    .managementBtnDiv > button > span{
         top: 17px;
     }
     .ellipseButton {
@@ -672,7 +666,7 @@ ion-icon {
     .amdFix {
         font-size: 13px;
     }
-    .managementBtnDiv .button1 {
+    .managementBtnDiv > button > span {
         top: 15px;
     }
 }

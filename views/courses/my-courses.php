@@ -101,7 +101,7 @@ if ($language == 'en') {
                                 </div>
                             </div>
                         </li>
-                        <li class="myCoursesBlocksField hideMobile">
+                        <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
                                 <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
@@ -123,7 +123,7 @@ if ($language == 'en') {
                                 </div>
                             </div>
                         </li>
-                        <li class="myCoursesBlocksField hideMobile">
+                        <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
                                 <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
@@ -145,7 +145,7 @@ if ($language == 'en') {
                                 </div>
                             </div>
                         </li>
-                        <li class="myCoursesBlocksField hideMobile">
+                        <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
                                 <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
@@ -167,7 +167,7 @@ if ($language == 'en') {
                                 </div>
                             </div>
                         </li>
-                        <li class="myCoursesBlocksField hideMobile">
+                        <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
                                 <img src="/images/courseimage.png" alt="" draggable="false">
                                 <span>1C: Accounting 8.3</span>
@@ -191,11 +191,63 @@ if ($language == 'en') {
                         </li>
                     </ul>
                 </div>
-                <div class="containerSeeMoreMyCourses">
-                    <img class="seeMoreBlog" src="/images/seeMoreBlog.png" alt="">
-                    <div class="seeMoreText"><span>See more</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="myCoursesSectionMobile">
+        <div class="myCoursesTitleField">
+            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <div><?=$GLOBALS['text']['tabletMyCourse']?></div>
+        </div>
+        <div class="myCoursesMobile">
+            <div class="myCoursesBlocksField">
+                <img src="/images/courseimage.png" alt="" draggable="false">
+                <div class="myCoursesBlocksFieldMain">
+                    <span>Trade Management: Marketing, Sales BITRIX / CRM</span>
+                    <div class="myCoursesRating">
+                        <div class="ratingStarMyourse">
+                            <img src="/images/ratingStar.png" alt="">
+                            <img src="/images/ratingStar.png" alt="">
+                            <img src="/images/ratingStar.png" alt="">
+                            <img src="/images/ratingStar.png" alt="">
+                            <img src="/images/ratingStar.png" alt="">
+                        </div>
+                        <span>Leave a rating</span>
+                    </div>
+                    <div class="blogInfoPercent">
+                        <div class="progress" style="height: 3px;">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="myCourseercentText">46 % complete</span>
+                    </div>
                 </div>
             </div>
+            <div class="myCoursesBlocksField">
+                <img src="/images/courseimage.png" alt="" draggable="false">
+                <div class="myCoursesBlocksFieldMain">
+                    <span>Trade Management: Marketing, Sales BITRIX / CRM</span>
+                    <div class="myCoursesRating">
+                        <div class="ratingStarMyourse">
+                            <img src="/images/ratingStar.png" alt="">
+                            <img src="/images/ratingStar.png" alt="">
+                            <img src="/images/ratingStar.png" alt="">
+                            <img src="/images/ratingStar.png" alt="">
+                            <img src="/images/ratingStar.png" alt="">
+                        </div>
+                        <span>Leave a rating</span>
+                    </div>
+                    <div class="blogInfoPercent">
+                        <div class="progress" style="height: 3px;">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="myCourseercentText">46 % complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerSeeMoreMyCourses">
+            <img class="seeMoreBlog" src="/images/seeMoreBlog.png" alt="">
+            <span class="seeMoreText">See more</span>
         </div>
     </div>
 </div>

@@ -233,10 +233,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <span class="menuCourses"><?=$GLOBALS['text']['__courses__']?></span>
                         <div class="dropDownCources">
                             <ul>
-                                <li><a href=""><?= $GLOBALS['text']['headerCourseAccounting']?></a></li>
-                                <li><a href="/personel-management/index"><?=$GLOBALS['text']['headerCoursePayrol']?></a></li>
-                                <li><a href=""><?=$GLOBALS['text']['headerAccounting']?></a></li>
-                                <li><a href=""><?=$GLOBALS['text']['headerMarketing']?></a></li>
+                                <li><a href="/lessons/accounting-for-begginers"><?= $GLOBALS['text']['headerCourseAccounting']?></a></li>
+                                <li><a href="/lessons/management"><?=$GLOBALS['text']['headerCoursePayrol']?></a></li>
+                                <li><a href="/lessons/accounting"><?=$GLOBALS['text']['headerAccounting']?></a></li>
+                                <li><a href="/lessons/marketing"><?=$GLOBALS['text']['headerMarketing']?></a></li>
                             </ul>
                         </div>
                     </li>
