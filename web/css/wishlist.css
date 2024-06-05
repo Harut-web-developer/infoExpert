@@ -457,6 +457,10 @@ hr.new1 {
     text-align: left;
     color: #FFFFFF;
     width: 164px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .card_2 .cardBody_2 .span2_2{
     font-family: 'Roboto',sans-serif;
@@ -481,6 +485,10 @@ hr.new1 {
     text-align: left;
     color: #FFFFFF;
     padding-left: 11px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .cardtxt1_2 img{
     width: 28px;
@@ -500,6 +508,10 @@ hr.new1 {
     text-align: left;
     color: #FFFFFF;
     padding-left: 11px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .cardtxt2_2 img {
     width: 28px;
@@ -565,6 +577,7 @@ hr.new1 {
     word-wrap: break-word;
     width: 249px;
     flex-direction: row;
+    align-items: center;
 }
 .usersProfileInfoEmail > span,
 .usersProfileInfoLinkdin > span,
@@ -576,6 +589,10 @@ hr.new1 {
     font-weight: 400;
     white-space: normal;
     width: -webkit-fill-available;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .usersProfileInfoEmail > img,
 .usersProfileInfoLinkdin > img,
@@ -821,6 +838,10 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1500px) {
+    .myCoursesFieldSectionLeft > img {
+        width: 160px;
+        height: 160px;
+    }
     .usersProfile {
         height: 1350px;
     }
@@ -1131,6 +1152,9 @@ ion-icon {
         width: 375px;
         height: 16px;
     }
+    .usersProfileInfoEmail, .usersProfileInfoLinkdin, .usersProfileInfoPhone {
+        width: 170px;
+    }
     .usersProfileEn .userProfileMenuField > span,
     .userProfileMenuField > span,
     .usersProfileRu .userProfileMenuField > span{
@@ -1253,7 +1277,6 @@ ion-icon {
         font-weight: 500;
         line-height: 9.92px;
         text-align: left;
-        display: flex;
         align-items: center;
     }
     .footerCard_2_img1 {
