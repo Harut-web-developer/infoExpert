@@ -1586,11 +1586,14 @@
     align-items: center;
 }
 .blogsCard{
-    width: 98%;
+    width: 100%;
     height: 482px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.blogsCard >  .individualCards:nth-child(2){
+    margin: 0px 30px;
 }
 .blogsArticles{
     width: 100%;
@@ -1638,9 +1641,7 @@
     color: white;
 }
 .individualCards{
-    margin: 0px 15px;
     border-radius: 30px;
-    /*width: 377px;*/
     width: 33%;
     height: 482px;
 }
