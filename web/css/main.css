@@ -1613,6 +1613,7 @@
 }
 .blogLine{
     width: 59%;
+    margin: 0px 10px;
 }
 .blogLine > div{
     border-top: 2px solid white;

@@ -1607,7 +1607,7 @@
         width: 124px;
     }
     .blogLine {
-        width: 38%;
+        width: 42%;
         margin: 0px 10px;
     }
     .blogBtn > a > img{
@@ -1626,7 +1626,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -1655,7 +1655,8 @@
         width: 124px;
     }
     .blogLine {
-        width: 33%;
+        width: 40%;
+        margin: 0px 10px;
     }
     .blogBtn > a > img{
         width: 123px;
@@ -1673,7 +1674,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -1715,6 +1716,7 @@
     }
     .blogLine {
         width: 37%;
+        margin: 0px 10px;
     }
     .blogBtn > a > img{
         width: 123px;
@@ -1732,7 +1734,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -1779,6 +1781,7 @@
     }
     .blogLine {
         width: 42%;
+        margin: 0px 10px;
     }
     .blogBtn > a > img{
         width: 123px;
@@ -1796,7 +1799,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -1826,6 +1829,7 @@
     }
     .blogLine {
         width: 47%;
+        margin: 0px 10px;
     }
     .blogBtn > a > img{
         width: 123px;
@@ -1843,7 +1847,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -1880,7 +1884,8 @@
         width: 140px;
     }
     .blogLine {
-        width: 28%;
+        width: 45%;
+        margin: 0px 10px;
     }
     .blogBtn > a > img{
         width: 140px;
@@ -1898,7 +1903,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -1934,7 +1939,8 @@
         width: 140px;
     }
     .blogLine {
-        width: 33%;
+        width: 45%;
+        margin: 0px 10px;
     }
     .blogBtn > a > img{
         width: 140px;
@@ -1952,7 +1958,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -1988,7 +1994,8 @@
         width: 140px;
     }
     .blogLine {
-        width: 38%;
+        width: 50%;
+        margin: 0px 10px;
     }
     .blogBtn > a > img{
         width: 140px;
@@ -2006,7 +2013,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -2043,6 +2050,7 @@
     }
     .blogLine {
         width: 42%;
+        margin: 0px 10px;
     }
     .blogBtn > a > img{
         width: 160px;
@@ -2060,7 +2068,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -2098,6 +2106,7 @@
     }
     .blogLine {
         width: 46%;
+        margin: 0px 10px;
     }
     .blogBtn > a > img{
         width: 160px;
@@ -2115,7 +2124,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -2137,6 +2146,10 @@
     }
     .blogLine {
         width: 49%;
+        margin: 0px 10px;
+    }
+    .blogBtn {
+        width: 160px;
     }
     .blogBtn > a > img{
         width: 160px;
@@ -2154,7 +2167,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -2182,6 +2195,10 @@
     }
     .blogLine {
         width: 52%;
+        margin: 0px 10px;
+    }
+    .blogBtn {
+        width: 160px;
     }
     .blogBtn > a > img{
         width: 160px;
@@ -2199,7 +2216,7 @@
         color: #F36528;
     }
     .blogText{
-        width: 291px;
+        width: max-content;
         font-family: "Roboto",sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -2227,15 +2244,10 @@
     }
     .blogLine {
         width: 55%;
+        margin: 0px 10px;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1400px) {
-    /*.sectionBlog{*/
-    /*    width: 80%;*/
-    /*    height: 789px;*/
-    /*    margin: 144px 10% 0px;*/
-    /*}*/
-
     .cardsText{
         height: 230px;
     }
