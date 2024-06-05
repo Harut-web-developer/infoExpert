@@ -294,6 +294,7 @@
     font-size: 20px;
     font-weight: 600;
     font-family: "Roboto", sans-serif;
+    text-align: center;
 }
 .myCoursesFieldSectionLeft > img{
     border-radius: 50%;
@@ -313,6 +314,7 @@
     word-wrap: break-word;
     width: 249px;
     flex-direction: row;
+    align-items: center;
 }
 .usersProfileInfoPhone > span,
 .usersProfileInfoEmail > span,
@@ -324,6 +326,10 @@
     font-weight: 400;
     white-space: normal;
     width: -webkit-fill-available;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .usersProfileInfoPhone > img,
 .usersProfileInfoEmail > img,
@@ -604,6 +610,12 @@
 .swiper-button-prev {
     color: #F36528;
 }
+@media screen and (max-width: 1700px) {
+    .myCoursesFieldSectionLeft > img {
+        width: 220px;
+        height: 220px;
+    }
+}
 @media screen and (max-width: 1600px) {
     .certificate {
         height: auto;
@@ -798,7 +810,7 @@
         align-items: flex-start;
     }
     .usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin {
-        width: 149px;
+        width: 161px;
     }
     .userProfileMoreAboutField{
         width: 314.96px;
@@ -959,6 +971,10 @@
         text-align: left;
         padding: 0;
         margin-left: 16px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
     }
     .usersCardMain_ img{
         width: 22px;
