@@ -173,7 +173,7 @@
 .wrapper2 .carousel2 {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 4));
+    grid-auto-columns: calc((100% / 4 + 2px));
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -1413,9 +1413,7 @@ ion-icon {
         text-align: left;
     }
     .wrapper2 .carousel2 {
-        grid-auto-columns: calc((100% / 4));
-    }
-    .wrapper2 .carousel2 {
+        grid-auto-columns: calc((100% / 4 + 2px));
         gap: 0;
         margin-bottom: 0;
         padding-left: 0;
@@ -1586,7 +1584,7 @@ ion-icon {
         width: 93%;
     }
     .wrapper2 .carousel2 {
-        grid-auto-columns: calc((100% / 3));
+        grid-auto-columns: calc((100% / 3 + 2px));
     }
     .cardCourses2 {
         width: auto;
@@ -1642,7 +1640,7 @@ ion-icon {
 }
 @media screen and (max-width: 750px) {
     .carouselCourses {
-        grid-auto-columns: calc((100% / 3));
+        grid-auto-columns: calc((100% / 3 + 2px));
     }
     .cardCourses_ {
         width: auto;
@@ -1798,7 +1796,7 @@ ion-icon {
         padding-top: 0;
     }
     .carouselCourses {
-        grid-auto-columns: calc((100% / 2));
+        grid-auto-columns: calc((100% / 2 + 2px));
     }
 }
 @media screen  and (min-width: 320px) and (max-width: 399px) {
