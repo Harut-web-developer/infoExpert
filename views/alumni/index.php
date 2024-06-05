@@ -148,7 +148,7 @@ $this->registerCssFile('@web/css/alumni.css');
                     </div>
                 </div>
             </div>
-            <img src="/images/seeMore.png" alt="" class="seeMoreAlumni">
+            <img src="/images/seeMoreAlumni.png" alt="" class="seeMoreAlumni">
             <div class="swiper-pagination"></div>
         </div>
     </div>

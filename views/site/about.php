@@ -183,78 +183,11 @@ if ($language == 'en') {
             $('.rightContentInfoShapeLeft').append(shap());
         }
     });
-    if (window.innerWidth > 480 && window.innerWidth <= 530){
-        $('.about').css('height', '1120px');
-    }
-    if (window.innerWidth > 420 && window.innerWidth <= 480){
-        $('.about').css('height', '1120px');
-        $('.aboutLangAm').css('height', '1180px');
-        $('.aboutLangRu').css('height', '1150px');
-
-    }
-    if (window.innerWidth > 400 && window.innerWidth <= 420){
-        $('.about').css('height', '1150px');
-        $('.aboutLangAm').css('height', '1200px');
-        $('.aboutLangRu').css('height', '1180px');
-
-    }
-    if (window.innerWidth > 360 &&  window.innerWidth <= 400){
-        $('.about').css('height', '1150px');
-        $('.aboutLangAm').css('height', '1200px');
-        $('.aboutLangRu').css('height', '1200px');
-    }
-    if (window.innerWidth > 360 &&  window.innerWidth <= 370){
-        $('.aboutLangAm').css('height', '1250px');
-        $('.aboutLangRu').css('height', '1250px');
-    }
-    if (window.innerWidth > 340 && window.innerWidth <= 360){
-        $('.about').css('height', '1200px');
-        $('.aboutLangAm').css('height', '1300px');
-        $('.aboutLangRu').css('height', '1270px');
-    }
-    if (window.innerWidth <= 340){
-        $('.about').css('height', '1250px');
-        $('.aboutLangAm').css('height', '1350px');
-        $('.aboutLangRu').css('height', '1300px');
-    }
     $(".titleColapse").click(function() {
         var panel = $(this).next(".mainTextLeftContentBottom");
         $(".mainTextLeftContentBottom").not(panel).css("display", "none");
         $(".coursesAndChooseM").find('.arrowDown').css('transform', 'rotate(0deg)');
         panel.toggle();
         $(this).find('.arrowDown').css('transform', panel.is(":visible") ? 'rotate(180deg)' : 'rotate(0deg)');
-        if (window.innerWidth > 630 && window.innerWidth <= 700){
-            $('.about').css('height', panel.is(":visible") ? '1600px' : '1050px');
-            $('.aboutLangRu').css('height', panel.is(":visible") ? '1550px' : '1050px');
-            $('.aboutLangAm').css('height', panel.is(":visible") ? '1550px' : '1050px');
-        }else if (window.innerWidth > 550 && window.innerWidth <= 630){
-            $('.about').css('height', panel.is(":visible") ? '1520px' : '1040px');
-            $('.aboutLangRu').css('height', panel.is(":visible") ? '1620px' : '1070px');
-            $('.aboutLangAm').css('height', panel.is(":visible") ? '1600px' : '1070px');
-        }else if (window.innerWidth > 500 && window.innerWidth <= 550){
-            $('.about').css('height', panel.is(":visible") ? '1600px' : '1100px');
-            $('.aboutLangRu').css('height', panel.is(":visible") ? '1720px' : '1150px');
-            $('.aboutLangAm').css('height', panel.is(":visible") ? '1700px' : '1150px');
-        }else if (window.innerWidth > 480 && window.innerWidth <= 500){
-            $('.about').css('height', panel.is(":visible") ? '1700px' : '1100px');
-            $('.aboutLangRu').css('height', panel.is(":visible") ? '1750px' : '1150px');
-            $('.aboutLangAm').css('height', panel.is(":visible") ? '1750px' : '1150px');
-        }else if (window.innerWidth > 420 && window.innerWidth <= 480){
-            $('.about').css('height', panel.is(":visible") ? '1740' : '1120px');
-            $('.aboutLangRu').css('height', panel.is(":visible") ? '1820px' : '1180px');
-            $('.aboutLangAm').css('height', panel.is(":visible") ? '1800px' : '1200px');
-        }else if (window.innerWidth > 380 && window.innerWidth <= 420){
-            $('.about').css('height', panel.is(":visible") ? '1840px' : '1150');
-            $('.aboutLangRu').css('height', panel.is(":visible") ? '1900px' : '1200px');
-            $('.aboutLangAm').css('height', panel.is(":visible") ? '1900px' : '1200px');
-        }else if (window.innerWidth > 350 && window.innerWidth <= 380){
-            $('.about').css('height', panel.is(":visible") ? '1900' : '1200');
-            $('.aboutLangRu').css('height', panel.is(":visible") ? '2000px' : '1230px');
-            $('.aboutLangAm').css('height', panel.is(":visible") ? '2000px' : '1250px');
-        }else if (window.innerWidth <= 350){
-            $('.about').css('height', panel.is(":visible") ? '2000' : '1250');
-            $('.aboutLangRu').css('height', panel.is(":visible") ? '2150px' : '1300px');
-            $('.aboutLangAm').css('height', panel.is(":visible") ? '2050px' : '1300px');
-        }
     });
 </script>

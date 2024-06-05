@@ -142,11 +142,11 @@ if (window.location.pathname == '/') {
 
         const scrollWindow = function () {
             if ($(window).scrollTop() !== 0) {
-                setTimeout(function () {
-                    $(window).scrollTop($(window).scrollTop() - 50);
-                    scrollWindow();
-                }, 1);
-                // $(window).scrollTop(0);
+                // setTimeout(function () {
+                //     $(window).scrollTop($(window).scrollTop() - 50);
+                //     scrollWindow();
+                // }, 1);
+                $(window).scrollTop(0);
             }
         };
         scrollBtn.on("click", scrollWindow);
