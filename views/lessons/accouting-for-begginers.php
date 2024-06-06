@@ -63,13 +63,13 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             <div class="managementBtnDiv">
                 <button>
                     <img src="/images/buycoursebtn.png" alt="">
-                    <span class="button1">Buy now</span>
+                    <span class="button1"><?=$GLOBALS['text']['buyNowBtn']?></span>
                 </button>
             </div>
             <div class="managementBtnDivCourse">
                 <a href="/courses/index">
                     <img src="/images/seeallcourse.png" alt="">
-                    <span class="button2">See all courses</span>
+                    <span class="button2"><?=$GLOBALS['text']['seeAllCoursesBtn']?></span>
                 </a>
             </div>
         </div>

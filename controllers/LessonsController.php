@@ -9,8 +9,10 @@ class LessonsController extends \yii\web\Controller
 {
     public static function pages()
     {
-        $page['index'] = 1;
-        $page['about'] = 2;
+        $page['accounting-for-begginers'] = 21;
+        $page['management'] = 22;
+        $page['accounting'] = 23;
+        $page['marketing'] = 24;
         return $page;
     }
     public function beforeAction($action)

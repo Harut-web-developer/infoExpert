@@ -78,7 +78,7 @@ if ($language == 'en') {
                                 <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
                                 <div class="cardContent">
                                     <div class="cardBody_2">
-                                        <span class="span1_2">1C: Accounting 8.3</span>
+                                        <span class="span1_2">1C: and Accounting for Begginers</span>
                                         <div class="starAndTxt_2">
                                             <div class="starDivWishlistCourses">
                                                 <img src="/images/cardStar.png" alt="" draggable="false">
@@ -428,50 +428,6 @@ if ($language == 'en') {
                             </div>
                         </div>
                     </div>
-<!--                    <div class="card_2">-->
-<!--                        <img src="/images/cardImageCourses.png" alt="" draggable="false">-->
-<!--                        <div class="cardContent">-->
-<!--                            <div class="cardContentField">-->
-<!--                                <div class="cardBody_2">-->
-<!--                                    <span class="span1_2">1C: and Accounting for Begginers</span>-->
-<!--                                    <div class="starAndTxt_2">-->
-<!--                                        <div class="starDivWishlistCourses">-->
-<!--                                            <img src="/images/cardStar.png" alt="" draggable="false">-->
-<!--                                            <img src="/images/cardStar.png" alt="" draggable="false">-->
-<!--                                            <img src="/images/cardStar.png" alt="" draggable="false">-->
-<!--                                            <img src="/images/cardStar.png" alt="" draggable="false">-->
-<!--                                            <img src="/images/cardStarWhite.png" alt="" draggable="false">-->
-<!--                                        </div>-->
-<!--                                        <span class="span2_2">xxxxx <span class="spanAmd">AMD</span></span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="cardCenter_2">-->
-<!--                                    <div class="cardtxt1_2">-->
-<!--                                        <img src="/images/courses1.png" alt="">-->
-<!--                                        <span>Number of courses: 29+1 exam /3 days a week/</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="cardtxt2_2">-->
-<!--                                        <img src="/images/courses2.png" alt="">-->
-<!--                                        <span>Certificate / in Armenian and English /</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="footerCard_2">-->
-<!--                                    <button>-->
-<!--                                        <img src="/images/wishlist1.png" alt="">-->
-<!--                                        <span>Buy now</span>-->
-<!--                                    </button>-->
-<!--                                    <div class="booterImgs">-->
-<!--                                        <div class='large-font largeFont'>-->
-<!--                                            <ion-icon name="heart" class="iconLike">-->
-<!--                                                <div class='red-bg'></div>-->
-<!--                                            </ion-icon>-->
-<!--                                        </div>-->
-<!--                                        <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
                 </div>
                 <div class="courseMobileBtn">
                     <button>

@@ -92,7 +92,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <ul>
                         <?php if(!empty(Yii::$app->user->identity)){ ?>
                             <li class="tabletCoursesList">
-                                <a href=""><?=$GLOBALS['text']['tabletMyCourse']?></a>
+                                <a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a>
                                 <div class="tabletCoursesUnderline"></div>
                             </li>
                         <?php }?>
@@ -160,10 +160,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
             <div class="tabletMenuNavbar tabletMenuNavbarCourses">
                 <ul class="tabletProfileCoursesField">
-                    <li><a href=""><?=$GLOBALS['text']['headerCourseAccounting']?></a></li>
-                    <li><a href=""><?=$GLOBALS['text']['headerAccounting']?></a></li>
-                    <li><a href="/personel-management/index"><?=$GLOBALS['text']['headerCoursePayrol']?></a></li>
-                    <li><a href=""><?=$GLOBALS['text']['headerMarketing']?></a></li>
+                    <li><a href="/lessons/accounting-for-begginers"><?=$GLOBALS['text']['headerCourseAccounting']?></a></li>
+                    <li><a href="/lessons/accounting"><?=$GLOBALS['text']['headerAccounting']?></a></li>
+                    <li><a href="/lessons/management"><?=$GLOBALS['text']['headerCoursePayrol']?></a></li>
+                    <li><a href="/lessons/marketing"><?=$GLOBALS['text']['headerMarketing']?></a></li>
                 </ul>
             </div>
         </div>

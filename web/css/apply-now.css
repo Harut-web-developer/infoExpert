@@ -158,10 +158,15 @@
 }
 .coursesBlocksRadio > div{
     display: flex;
+    align-items: start;
+    flex-direction: row;
+}
+.coursesBlocksRadio > div > div{
+    display: flex;
     align-items: center;
     flex-direction: row;
 }
-.coursesBlocksRadio > div > input{
+.coursesBlocksRadio > div > div > input{
     width: 18px;
     height: 18px;
     accent-color: #F36528;
@@ -199,7 +204,7 @@
     align-items: center;
 }
 .mainIndividual > input{
-    min-width: 18px;
+    width: 18px;
     height: 18px;
     accent-color: #F36528;
 }
@@ -287,7 +292,7 @@
     align-items: center;
 }
 .mainCorporate > input{
-    min-width: 18px;
+    width: 18px;
     height: 18px;
     accent-color: #F36528;
 }
@@ -528,30 +533,43 @@
         height: 174px;
     }
     .applyNameInput label, .applyEmailInput label, .coursesFieldsRadio span, .typeCoursesFields span, .applyPhoneInput label{
-        font-family: Tahoma;
+        font-family: "Tahoma",sans-serif;
         font-size: 15px;
         font-weight: 400;
         line-height: 18.11px;
         text-align: left;
     }
     .coursesBlocksRadio > div > label{
-        font-family: Tahoma;
+        font-family: "Tahoma",sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 19.31px;
         text-align: left;
     }
+    .coursesBlocksRadio > div > div > input {
+        width: 15px;
+        height: 15px;
+        accent-color: #F36528;
+    }
+    .typeCoursesBlocksRadio .online > input{
+        width: 15px;
+        height: 15px;
+    }
+    .typeCoursesBlocksRadio .offline > input{
+        width: 15px;
+        height: 15px;
+    }
     .mainIndividual > input, .mainGroup > input, .mainCorporate > input {
-        min-width: 15px;
+        width: 15px;
         height: 15px;
     }
     .coursesBlocksRadio {
         width: auto;
     }
-    #accounting, #trade{
-        width: 15px;
-        height: 15px;
-    }
+    /*.coursesBlocksRadio > div > input {*/
+    /*    width: 15px;*/
+    /*    height: 15px;*/
+    /*}*/
     .applyNowBtnField{
         width: 100%;
         justify-content: center;
@@ -560,7 +578,7 @@
 }
 @media screen and (max-width: 625px) {
     .applicationTitle{
-        font-family: Tahoma;
+        font-family: "Tahoma",sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 21.73px;

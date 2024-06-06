@@ -20,19 +20,30 @@ $this->registerCssFile('@web/css/apply-now.css');
                 <div class="radioFieldsBlocks">
                     <div class="coursesBlocksRadio">
                         <div class="accounting">
-                            <input type="radio" id="accounting" name="accounting" checked>
+                            <div>
+                                <input type="radio" id="accounting" name="accounting" checked>
+
+                            </div>
                             <label for="accounting"><?=$GLOBALS['text']['applyNowCourseOne']?></label>
                         </div>
                         <div class="salary">
-                            <input type="radio" id="salary" name="salary">
+                            <div>
+                                <input type="radio" id="salary" name="salary">
+
+                            </div>
                             <label for="salary"><?=$GLOBALS['text']['applyNowCourseTwo']?></label>
                         </div>
                         <div class="trade">
-                            <input type="radio" id="trade" name="trade">
+                            <div>
+                                <input type="radio" id="trade" name="trade">
+                            </div>
                             <label for="trade"><?=$GLOBALS['text']['applyNowCourseThree']?></label>
                         </div>
                         <div class="marketing">
-                            <input type="radio" id="marketing" name="marketing">
+                            <div>
+                                <input type="radio" id="marketing" name="marketing">
+
+                            </div>
                             <label for="marketing"><?=$GLOBALS['text']['applyNowCourseFour']?></label>
                         </div>
                     </div>
