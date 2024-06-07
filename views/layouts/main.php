@@ -115,6 +115,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <li><a href="/alumni/index"><?= $GLOBALS['text']['headerAlumni']?></a></li>
                         <li><a href=""><?= $GLOBALS['text']['tabletRecQuize']?></a></li>
                         <li><a href="/contact-us/index"><?= $GLOBALS['text']['tabletContact']?></a></li>
+                        <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
                     </ul>
                     <div class="searchFlagField">
                         <div class="tabletSearchField">
