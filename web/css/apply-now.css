@@ -203,7 +203,7 @@
     flex-direction: row;
     align-items: center;
 }
-.mainIndividual > input{
+.mainIndividual > div > input{
     width: 18px;
     height: 18px;
     accent-color: #F36528;
@@ -247,7 +247,7 @@
     align-items: center;
     flex-direction: row;
 }
-.mainGroup > input{
+.mainGroup > div > input{
     width: 18px;
     height: 18px;
     accent-color: #F36528;
@@ -291,7 +291,7 @@
     flex-direction: row;
     align-items: center;
 }
-.mainCorporate > input{
+.mainCorporate > div > input{
     width: 18px;
     height: 18px;
     accent-color: #F36528;
@@ -559,7 +559,7 @@
         width: 15px;
         height: 15px;
     }
-    .mainIndividual > input, .mainGroup > input, .mainCorporate > input {
+    .mainIndividual > div > input, .mainGroup > div > input, .mainCorporate > div > input {
         width: 15px;
         height: 15px;
     }

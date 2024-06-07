@@ -187,7 +187,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             <div class="profileFieldImg">
                                 <ul>
                                     <li><a href="/user-profile/index"><?= $GLOBALS['text']['headerProfile']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['headerSecurity']?></a></li>
+                                    <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
                                     <li><a href="/logout"><?= $GLOBALS['text']['headerLogout']?></a></li>
                                 </ul>
                             </div>

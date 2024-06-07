@@ -214,9 +214,9 @@ class SiteController extends Controller
         return $this->goBack(Yii::$app->request->referrer);
     }
 
-    public function actionTest()
+    public function actionAccountSecurity()
     {
-        return $this->render('test');
+        return $this->render('security');
     }
     public function generateRandomString($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

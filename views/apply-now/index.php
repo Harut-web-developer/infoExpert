@@ -22,14 +22,12 @@ $this->registerCssFile('@web/css/apply-now.css');
                         <div class="accounting">
                             <div>
                                 <input type="radio" id="accounting" name="accounting" checked>
-
                             </div>
                             <label for="accounting"><?=$GLOBALS['text']['applyNowCourseOne']?></label>
                         </div>
                         <div class="salary">
                             <div>
                                 <input type="radio" id="salary" name="salary">
-
                             </div>
                             <label for="salary"><?=$GLOBALS['text']['applyNowCourseTwo']?></label>
                         </div>
@@ -42,7 +40,6 @@ $this->registerCssFile('@web/css/apply-now.css');
                         <div class="marketing">
                             <div>
                                 <input type="radio" id="marketing" name="marketing">
-
                             </div>
                             <label for="marketing"><?=$GLOBALS['text']['applyNowCourseFour']?></label>
                         </div>
@@ -55,7 +52,9 @@ $this->registerCssFile('@web/css/apply-now.css');
                     <div class="typeCoursesBlocksRadio">
                         <div class="individual">
                             <div class="mainIndividual">
-                                <input type="radio" id="individual" name="individual">
+                                <div>
+                                    <input type="radio" id="individual" name="individual">
+                                </div>
                                 <label for="individual"><?=$GLOBALS['text']['applyNowIndividual']?></label>
                             </div>
                             <div class="individualChildFields sameTypeCourse">
@@ -71,7 +70,9 @@ $this->registerCssFile('@web/css/apply-now.css');
                         </div>
                         <div class="group">
                             <div class="mainGroup">
-                                <input type="radio" id="group" name="group">
+                                <div>
+                                    <input type="radio" id="group" name="group">
+                                </div>
                                 <label for="group"><?=$GLOBALS['text']['applyNowGroup']?></label>
                             </div>
                             <div class="groupChildFields sameTypeCourse">
@@ -87,7 +88,9 @@ $this->registerCssFile('@web/css/apply-now.css');
                         </div>
                         <div class="corporate">
                             <div class="mainCorporate">
-                                <input type="radio" id="corporate">
+                                <div>
+                                    <input type="radio" id="corporate">
+                                </div>
                                 <label for="corporate"><?=$GLOBALS['text']['applyNowCorporate']?></label>
                             </div>
                             <div class="corporateChildFields sameTypeCourse">

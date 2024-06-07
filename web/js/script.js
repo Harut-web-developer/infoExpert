@@ -453,6 +453,37 @@ $(document).ready(function () {
     if ($('.individualCards').length >= 4 && $(window).width() >= 1024){
         $('.individualCards').last().css('display', 'none');
     }
+    $('.togglePassword').on('click', function() {
+        if ($(this).siblings('input').attr('type') === 'password') {
+            $(this).siblings('input').attr('type', 'text');
+            $(this).attr('src', '/images/signEyeOpen.png');
+        } else {
+            $(this).siblings('input').attr('type', 'password');
+            $(this).attr('src', '/images/signEyeClose.png');
+        }
+    });
+    $('.modalEye').on('click', function () {
+        if($(this).siblings('input').attr('type') === 'password'){
+            $(this).siblings('input').attr('type', 'text');
+            $(this).attr('src', '/images/signEyeOpen.png');
+        }else {
+            $(this).siblings('input').attr('type', 'password');
+            $(this).attr('src', '/images/signEyeClose.png');
+        }
+    })
+    $('body').on('click', '.modalOpenBtn', function () {
+        if ($('.securityModal').css('display') == 'none'){
+            $('.securityModal').css('display', 'flex');
+        }else {
+            $('.securityModal').css('display', 'none');
+        }
+    })
+    $(document).click(function(event) {
+        if (!$('.securityContentModal').is(event.target) && !$('.modalOpenBtn').is(event.target)
+            && $('.securityContentModal').has(event.target).length === 0 && $('.modalOpenBtn').has(event.target).length === 0) {
+            $('.securityModal').css('display', 'none');
+        }
+    });
 })
 
 function lessonsFieldFixed(){
