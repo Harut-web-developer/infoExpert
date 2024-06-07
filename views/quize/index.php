@@ -12,9 +12,6 @@ $this->registerCssFile('@web/css/quize.css');
                 <div class="lessonAccounting">1С: ՀԱՇՎԱՊԱՀՈՒԹՅՈՒՆ 8.3</div>
                 <div class="lessonAccountingForBeginners">1C: ՀԱՇՎԱՊԱՀՈՒԹՅՈՒՆ ՍԿՍՆԱԿՆԵՐԻ ՀԱՄԱՐ</div>
                 <div class="lessonPersonnelManagment">1С: ԱՇԽԱՏԱՎԱՐՁ ԵՒ ԿԱԴՐԵՐԻ ԿԱՌԱՎԱՐՈՒՄ</div>
-                <div class="lessonPersonnelManagment">1С: ԱՇԽԱՏԱՎԱՐՁ ԵՒ ԿԱԴՐԵՐԻ ԿԱՌԱՎԱՐՈՒՄ</div>
-                <div class="lessonPersonnelManagment">1С: ԱՇԽԱՏԱՎԱՐՁ ԵՒ ԿԱԴՐԵՐԻ ԿԱՌԱՎԱՐՈՒՄ</div>
-                <div class="lessonPersonnelManagment">1С: ԱՇԽԱՏԱՎԱՐՁ ԵՒ ԿԱԴՐԵՐԻ ԿԱՌԱՎԱՐՈՒՄ</div>
             </div>
             <button type="button" class="btnQuize">
                 <img src="/images/contactus.png" alt="">
