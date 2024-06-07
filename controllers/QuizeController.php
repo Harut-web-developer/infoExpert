@@ -46,5 +46,8 @@ class QuizeController extends \yii\web\Controller
     {
         return $this->render('index');
     }
-
+    public function actionTradeManagement()
+    {
+        return $this->render('trade-management');
+    }
 }
