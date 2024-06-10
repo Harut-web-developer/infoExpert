@@ -312,7 +312,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 </div>
             </div>
             <div class="rightFooterBg">
-                <form class="formMail" action="">
+                <form class="formMail" action="/quize/index">
                     <div class="formName">
                         <span><?= $GLOBALS['text']['footerQuize']?></span>
                     </div>
@@ -322,7 +322,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>">
                     </div>
                     <div class="formContinue">
-                        <button><?= $GLOBALS['text']['footerInputBtn']?></button>
+                        <button type="submit"><?= $GLOBALS['text']['footerInputBtn']?></button>
                     </div>
                 </form>
             </div>
