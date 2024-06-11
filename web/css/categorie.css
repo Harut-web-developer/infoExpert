@@ -120,6 +120,7 @@
     background-color: #ffffff50;
     justify-content: center;
     margin-left: 17px;
+    cursor: pointer;
 }
 ion-icon.active {
     animation: like 0.5s 1;
