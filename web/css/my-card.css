@@ -666,7 +666,11 @@ ion-icon {
         height: 160px;
     }
     .myCardInfoButtonField > button > span {
-        top: 4px;
+        top: 6px;
+        font-size: 11px;
+    }
+    .btnGroupLikeMarket {
+        width: 74px;
     }
     .myCardBlockButtons > span {
         font-size: 17px;

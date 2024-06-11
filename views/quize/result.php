@@ -2,25 +2,35 @@
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/quize.css');
 ?>
-<div class="result">
+<?php
+$language = $_COOKIE['language'];
+$class1 = '';
+if ($language == 'en') {
+} elseif ($language == 'am') {
+
+} elseif ($language == 'ru') {
+    $class1 = 'resultRu';
+}
+?>
+<div class="result <?php echo $class1; ?>">
     <div class="bodyResult">
-        <div class="titleResult">1С: ԱՌԵՎՏՐԻ ԿԱՌԱՎԱՐՈւՄ</div>
+        <div class="titleResult"><?=$GLOBALS['text']['lessonAdministration']?></div>
         <div class="resultBlackboard">
             <div class="resultBlackboardContainer">
                 <img src="/images/resultBlackboard.png" alt="">
                 <div class="resultBlackboardCntered">
                     <span class="resultBlackboardCount">5/5</span>
-                    <span class="resultBlackboardResult">ՁԵՐ ԱՐԴՅՈՒՆՔՆԵՐԸ</span>
+                    <span class="resultBlackboardResult"><?=$GLOBALS['text']['lessonAdministration']?></span>
                 </div>
             </div>
             <div class="resultButtons">
                 <button type="button" class="btnResult1">
                     <img src="/images/contactus.png" alt="">
-                    <span>ԱՅԼ QUIZE</span>
+                    <span><?=$GLOBALS['text']['btnResult1']?></span>
                 </button>
                 <button type="button" class="btnResult2">
                     <img src="/images/seeallcourse.png" alt="">
-                    <span>ԳԼԽԱՎՈՐ ԷՋ</span>
+                    <span><?=$GLOBALS['text']['btnResult2']?></span>
                 </button>
             </div>
         </div>

@@ -56,3 +56,8 @@ document.querySelectorAll('.myCard ion-icon').forEach(icon => {
         this.classList.toggle('active');
     });
 });
+$(document).ready(function() {
+    $('.myCardInfoButtonField button').on("click", function () {
+        window.location.href = '/my-card/checkout';
+    })
+})

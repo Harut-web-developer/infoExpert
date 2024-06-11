@@ -9,7 +9,9 @@ class QuizeController extends \yii\web\Controller
 {
     public static function pages()
     {
-        $page['index'] = 21;
+        $page['index'] = 25;
+        $page['trade-management'] = 25;
+        $page['result'] = 25;
         return $page;
     }
     public function beforeAction($action)

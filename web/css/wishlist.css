@@ -457,6 +457,7 @@ hr.new1 {
     text-align: left;
     color: #FFFFFF;
     width: 164px;
+    height: max-content;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -547,7 +548,7 @@ hr.new1 {
 .wishlistBtnField > button:hover img{
     content: url("../images/wishlist1hover.png");
 }
-.wishlistBtnField > button > span > a{
+.wishlistBtnField > button > span{
     color: white;
     position: absolute;
     top: 15px;
@@ -729,7 +730,7 @@ ion-icon {
         width: auto;
         height: 37px;
     }
-    .wishlistBtnField > button > span > a {
+    .wishlistBtnField > button > span {
         top: 9px;
         font-size: 13px;
     }
@@ -936,7 +937,7 @@ ion-icon {
         width: auto;
         height: 28px;
     }
-    .wishlistBtnField > button > span > a {
+    .wishlistBtnField > button > span{
         top: 5px;
         font-size: 11px;
     }
