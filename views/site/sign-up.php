@@ -38,7 +38,6 @@ if ($language == 'en') {
                 <input type="email" placeholder="<?=$GLOBALS['text']['signupFormEmail']?>" name="User[email]" required>
                 <div class="passEye">
                     <input type="password" placeholder="<?=$GLOBALS['text']['signupFormPassword']?>" name="User[password]" required>
-                    <img src="/images/signEye.png" alt="">
                 </div>
             </div>
             <div class="rememberSignupField">

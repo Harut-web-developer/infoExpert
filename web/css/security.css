@@ -166,7 +166,8 @@
     z-index: 50;
 }
 .securityContentModal{
-    margin-top: 335px;
+    /*margin-top: 335px;*/
+    margin-top: 17.7%;
     width: 36%;
     height: 515px;
     background: #74A8AB;
@@ -371,7 +372,8 @@
         top: 15px;
     }
     .securityContentModal {
-        margin-top: 251px;
+        /*margin-top: 251px;*/
+        margin-top: 42%;
         width: 90%;
         height: 396px;
     }
