@@ -441,6 +441,7 @@
     border: 1px solid #F36528;
     justify-content: center;
     position: relative;
+    cursor: pointer;
 }
 .largeFont{
     border: 1px solid #FFFFFF;

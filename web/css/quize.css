@@ -84,6 +84,124 @@
     font-weight: 700;
     line-height: 18.11px;
 }
+
+/* result page css */
+.result {
+    width: 100%;
+    background-color: #6DA4A7;;
+}
+.bodyResult{
+    width: 67%;
+    margin: 0px auto;
+    padding-top: 322px;
+    padding-bottom: 172px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 54px;
+}
+.titleResult{
+    font-family: 'Tahoma';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43.45px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.resultBlackboard{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.resultBlackboardContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.resultBlackboardCntered {
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.resultBlackboardCount{
+    font-family: 'Roboto';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56.25px;
+    text-align: center;
+    color: #F36528;
+}
+.resultBlackboardResult{
+    font-family: 'Tahoma';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.97px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.resultButtons{
+    width: 382px;
+    display: flex;
+    justify-content: space-between;
+}
+/* Button */
+.btnResult1,
+.btnResult2 {
+    border: none;
+    background: transparent;
+    outline: none;
+    position: relative;
+}
+
+.btnResult1 > img,
+.btnResult2 > img {
+    width: 157px;
+    height: 58px;
+}
+
+.btnResult1:hover img,
+.btnResult2:hover img {
+    content: url('../images/contactushover.png');
+}
+
+.btnResult1:hover span,
+.btnResult2:hover span {
+    color: white;
+}
+
+.btnResult1 > span {
+    color: #F36528;
+    position: absolute;
+    top: 22px;
+    left: 0px;
+    width: 100%;
+    font-family: 'Tahoma';
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18.11px;
+    text-align: center;
+}
+.btnResult2 > span {
+    color: #FFFFFF;
+    position: absolute;
+    top: 22px;
+    left: 0px;
+    width: 100%;
+    font-family: 'Tahoma';
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18.11px;
+    text-align: center;
+}
 @media screen and (max-width: 1780px){
     .lessonAdministration, .lessonAccounting, .lessonAccountingForBeginners, .lessonPersonnelManagment {
         width: 590px;
@@ -180,6 +298,11 @@
     .quize {
         background-position: right 9% bottom 50%, center;
     }
+    .bodyResult{
+        width: auto;
+        padding-top: 102px;
+        margin: 0px 6.9% 0px 6.8%;
+    }
 }
 @media screen and (max-width: 980px) {
     .quize {
@@ -222,6 +345,7 @@
 @media screen and (max-width: 710px) {
     .quize {
         background-size: 240px 200px, cover;
+        background-position: right 5% bottom 40%, center;
     }
     .quizeContainer {
         width: 310px;
@@ -235,13 +359,91 @@
         width: 310px;
         font-size: 18px;
     }
+    .btnQuize > span {
+        font-size: 12px;
+    }
 }
 @media screen and (max-width: 600px) {
     .quize{
         width: 100%;
+        height: 830px;
         background-image: url("../images/background-quize-image.png");
         background-color: #5D9A9D;
-        background-size: 100% auto;
-        background-position: center;
+        background-size: 225px 204px;
+        background-position: top 22% center;
+        background-repeat: no-repeat;
     }
+    .bodyResult {
+        width: auto;
+        padding-top: 224px;
+        padding-bottom: 62px;
+    }
+    .bodyQuize {
+        height: -webkit-fill-available;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+    .resultBlackboard{
+        height: auto;
+    }
+    .quizePlayAndTest{
+        width: 100%;
+        font-family: 'Tahoma';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.73px;
+        text-align: center;
+    }
+    .lessonAdministration, .lessonAccounting, .lessonAccountingForBeginners, .lessonPersonnelManagment {
+        height: 47px;
+        width: 100%;
+    }
+    .titleResult{
+        font-family: 'Tahoma';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: center;
+    }
+    .resultBlackboardContainer img{
+        width: 100%;
+        height: auto;
+    }
+    .resultBlackboardCount{
+        font-family: 'Roboto';
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 37px;
+    }
+    .resultBlackboardResult{
+        font-family: Tahoma;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24.14px;
+    }
+    .resultBlackboardCntered {
+        width: 200px;
+        height: 72px;
+    }
+    .resultButtons{
+        width: 100%;
+        height: 110px;
+        flex-direction: column;
+        margin-top: 112px;
+    }
+    .btnResult1 > img, .btnResult2 > img{
+        width: 93px;
+        height: 43px;
+    }
+    .btnResult1 > span, .btnResult2 > span{
+        font-family: 'Tahoma';
+        font-size: 8px;
+        font-weight: 700;
+        line-height: 9.66px;
+        top: 17px;
+    }
+}
+@media screen and (max-width: 360px) {
+
 }

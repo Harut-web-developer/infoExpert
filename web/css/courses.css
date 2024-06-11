@@ -613,6 +613,7 @@
     border: 1px solid #FFFFFF;
     position: relative;
     justify-content: center;
+    cursor: pointer;
 }
 ion-icon.active {
     animation: like 0.5s 1;

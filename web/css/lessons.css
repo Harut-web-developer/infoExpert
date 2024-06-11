@@ -221,6 +221,7 @@
     background-color: #ffffff50;
     justify-content: center;
     margin-left: 42px;
+    cursor: pointer;
 }
 ion-icon.active {
     animation: like 0.5s 1;
