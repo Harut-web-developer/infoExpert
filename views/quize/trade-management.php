@@ -6,7 +6,7 @@ $this->registerCssFile('@web/css/trade-management.css');
     <div class="bodyTradeManagement">
         <div class="stepperAndNumber">
             <div class="questionTradeManagement">
-                <div class="titleTradeManagement">1С: ԱՌԵՎՏՐԻ ԿԱՌԱՎԱՐՈւՄ</div>
+                <div class="titleTradeManagement"><?=$GLOBALS['text']['lessonAdministration']?></div>
                 <div class="numberTradeManagement">1/5</div>
                 <!-- Progress bar -->
                 <div class="progressbar">
@@ -19,128 +19,128 @@ $this->registerCssFile('@web/css/trade-management.css');
                 </div>
                 <!-- Steps -->
                 <form action="#" class="form-step form-step-active" method="post">
-                    <div class="questionQuize">1. <span>Ինչպե՞ս է կոչվում «1C: ԱռևՎտրի կառավարում» հիմնական կոնֆիգուրացիան, որը պարունակում է համակարգի հիմնական կարգավորումներն ու ֆունկցիոնալությունը:</span></div>
+                    <div class="questionQuize">1. <span><?=$GLOBALS['text']['questionQuize']?></span></div>
                     <div class="answerQuestionQuize">
                         <div class="answerQuize">
                             <input type="radio" id="option1" name="quizOption" value="1">
-                            <label for="option1">1. <span>1С: Առևտրի կառավարում</span></label>
+                            <label for="option1">1. <span><?=$GLOBALS['text']['lessonAdministration']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option2" name="quizOption" value="2">
-                            <label for="option2">2. <span>Ձեռնարկությունների կառավարում</span></label>
+                            <label for="option2">2. <span><?=$GLOBALS['text']['answerQuize2']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option3" name="quizOption" value="3">
-                            <label for="option3">3. <span>Մարդկային ռեսուրսների կառավարում</span></label>
+                            <label for="option3">3. <span><?=$GLOBALS['text']['answerQuize3']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option4" name="quizOption" value="4">
-                            <label for="option4">4. <span>1С: Աշխատավարձ և կադրերի կառավարում</span></label>
+                            <label for="option4">4. <span><?=$GLOBALS['text']['answerQuize4']?></span></label>
                         </div>
                     </div>
                     <button type="button" class="btn btn-next btnQuize">
                         <img src="/images/contactus.png" alt="">
-                        <span>ԱՌԱՋ</span>
+                        <span><?=$GLOBALS['text']['btnQuize']?></span>
                     </button>
                 </form>
                 <form action="#" class="form-step" method="post">
-                    <div class="questionQuize">2. <span>Բիզնեսի ո՞ր ոլորտներում կարող է առավել օգտակար լինել «1C: Առևվտրի կառավարումը»։</span></div>
+                    <div class="questionQuize">2. <span><?=$GLOBALS['text']['questionQuize2']?></span></div>
                     <div class="answerQuestionQuize">
                         <div class="answerQuize">
                             <input type="radio" id="option1" name="quizOption" value="1">
-                            <label for="option1">1. <span>Մանրածախ առևտուր</span></label>
+                            <label for="option1">1. <span><?=$GLOBALS['text']['answerQuize9']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option2" name="quizOption" value="2">
-                            <label for="option2">2. <span>Մեծածախ առևտուր</span></label>
+                            <label for="option2">2. <span><?=$GLOBALS['text']['answerQuize10']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option3" name="quizOption" value="3">
-                            <label for="option3">3. <span>Ծառայություններ</span></label>
+                            <label for="option3">3. <span><?=$GLOBALS['text']['answerQuize11']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option4" name="quizOption" value="4">
-                            <label for="option4">4. <span>Վերը նշված բոլոր պատասխանները ճիշտ են</span></label>
+                            <label for="option4">4. <span><?=$GLOBALS['text']['answerQuize8']?></span></label>
                         </div>
                     </div>
                     <button type="button" class="btn btn-next btnQuize">
                         <img src="/images/contactus.png" alt="">
-                        <span>ԱՌԱՋ</span>
+                        <span><?=$GLOBALS['text']['btnQuize']?></span>
                     </button>
                 </form>
                 <form action="#" class="form-step" method="post">
-                    <div class="questionQuize">3. <span>«1C: ԱռևՎտրի կառավարում» ծրագրի ո՞ր բաժինն է պատասխանատու պահեստային պաշարների կառավարման ևՎ ապրանքների առաքման համար։</span></div>
+                    <div class="questionQuize">3. <span><?=$GLOBALS['text']['questionQuize3']?></span></div>
                     <div class="answerQuestionQuize">
                         <div class="answerQuize">
                             <input type="radio" id="option1" name="quizOption" value="1">
-                            <label for="option1">1. <span>Մանրածախ առևտուր</span></label>
+                            <label for="option1">1. <span><?=$GLOBALS['text']['answerQuize9']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option2" name="quizOption" value="2">
-                            <label for="option2">2. <span>Մեծածախ առևտուր</span></label>
+                            <label for="option2">2. <span><?=$GLOBALS['text']['answerQuize10']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option3" name="quizOption" value="3">
-                            <label for="option3">3. <span>Ծառայություններ</span></label>
+                            <label for="option3">3. <span><?=$GLOBALS['text']['answerQuize11']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option4" name="quizOption" value="4">
-                            <label for="option4">4. <span>Վերը նշված բոլոր պատասխանները ճիշտ են</span></label>
+                            <label for="option4">4. <span><?=$GLOBALS['text']['answerQuize8']?></span></label>
                         </div>
                     </div>
                     <button type="button" class="btn btn-next btnQuize">
                         <img src="/images/contactus.png" alt="">
-                        <span>ԱՌԱՋ</span>
+                        <span><?=$GLOBALS['text']['btnQuize']?></span>
                     </button>
                 </form>
                 <form action="#" class="form-step" method="post">
-                    <div class="questionQuize">4. <span>Ի՞նչ գործիքներ է տրամադրում «1C: Առևտրի կառավարում»-ը ընկերության ֆինանսական կատարողականը վերլուծելու համար:</span></div>
+                    <div class="questionQuize">4. <span><?=$GLOBALS['text']['questionQuize4']?></span></div>
                     <div class="answerQuestionQuize">
                         <div class="answerQuize">
                             <input type="radio" id="option1" name="quizOption" value="1">
-                            <label for="option1">1. <span>Շահույթի և վնասի մասին հաշվետվություն</span></label>
+                            <label for="option1">1. <span><?=$GLOBALS['text']['answerQuize5']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option2" name="quizOption" value="2">
-                            <label for="option2">2. <span>Շրջանառու միջոցների վերլուծություն</span></label>
+                            <label for="option2">2. <span><?=$GLOBALS['text']['answerQuize6']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option3" name="quizOption" value="3">
-                            <label for="option3">3. <span>Ֆինանսական վահանակներ և հաշվետվություններ</span></label>
+                            <label for="option3">3. <span><?=$GLOBALS['text']['answerQuize7']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option4" name="quizOption" value="4">
-                            <label for="option4">4. <span>Վերը նշված բոլոր պատասխանները ճիշտ են</span></label>
+                            <label for="option4">4. <span><?=$GLOBALS['text']['answerQuize8']?></span></label>
                         </div>
                     </div>
                     <button type="button" class="btn btn-next btnQuize">
                         <img src="/images/contactus.png" alt="">
-                        <span>ԱՌԱՋ</span>
+                        <span><?=$GLOBALS['text']['btnQuize']?></span>
                     </button>
                 </form>
                 <form action="#" class="form-step" method="post">
-                    <div class="questionQuize">5. <span>Ի՞նչ է պահանջվում լրացնել «Ապրանքների ձեռքբերում» նոր փաստաթուղթ ստեղծելիս:</span></div>
+                    <div class="questionQuize">5. <span><?=$GLOBALS['text']['questionQuize5']?></span></div>
                     <div class="answerQuestionQuize">
                         <div class="answerQuize">
                             <input type="radio" id="option1" name="quizOption" value="1">
-                            <label for="option1">1. <span>Միայն ապրանքի անվանումը</span></label>
+                            <label for="option1">1. <span><?=$GLOBALS['text']['answerQuize14']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option2" name="quizOption" value="2">
-                            <label for="option2">2. <span>Ստացման ամսաթիվը և գումարը</span></label>
+                            <label for="option2">2. <span><?=$GLOBALS['text']['answerQuize15']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option3" name="quizOption" value="3">
-                            <label for="option3">3. <span>Ապրանքի քանակն ու գինը</span></label>
+                            <label for="option3">3. <span><?=$GLOBALS['text']['answerQuize16']?></span></label>
                         </div>
                         <div class="answerQuize">
                             <input type="radio" id="option4" name="quizOption" value="4">
-                            <label for="option4">4. <span>Կապալառու և պահեստ</span></label>
+                            <label for="option4">4. <span><?=$GLOBALS['text']['answerQuize17']?></span></label>
                         </div>
                     </div>
                     <button type="button" class="btn-next btnQuize">
                         <img src="/images/contactus.png" alt="">
-                        <span class="endSpan">ԱՌԱՋ</span>
+                        <span class="endSpan"><?=$GLOBALS['text']['btnQuize']?></span>
                     </button>
                 </form>
             </div>

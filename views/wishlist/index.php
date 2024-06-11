@@ -104,7 +104,7 @@ if ($language == 'en') {
                                         <div class="wishlistBtnField">
                                             <button>
                                                 <img src="/images/wishlist1.png" alt="">
-                                                <span><a href="">Buy now</a></span>
+                                                <span>Buy now</span>
                                             </button>
                                         </div>
                                         <div class="booterImgs">
@@ -148,7 +148,7 @@ if ($language == 'en') {
                                         <div class="wishlistBtnField">
                                             <button>
                                                 <img src="/images/wishlist1.png" alt="">
-                                                <span><a href="">Buy now</a></span>
+                                                <span>Buy now</span>
                                             </button>
                                         </div>
                                         <div class="booterImgs">
@@ -192,7 +192,7 @@ if ($language == 'en') {
                                         <div class="wishlistBtnField">
                                             <button>
                                                 <img src="/images/wishlist1.png" alt="">
-                                                <span><a href="">Buy now</a></span>
+                                                <span>Buy now</span>
                                             </button>
                                         </div>
                                         <div class="booterImgs">

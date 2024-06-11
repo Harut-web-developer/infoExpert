@@ -19,6 +19,10 @@ $(document).ready(function(){
     })
     $('body').on('click', '#other', function () {
         $(this).closest('.checkoutCreditOtherField').find('#credit').prop('checked', false)
-        // $(this).closest('.checkoutCreditOtherField').find('.checkoutCreditField').css('display', 'none')
+    })
+    $(document).ready(function() {
+        $('.checkoutTotalFieldInfoBottom button').on("click", function () {
+            window.location.href = '/my-card/congratulation';
+        })
     })
 })

@@ -75,6 +75,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!--Like js-->
 <script>
     document.querySelectorAll('.personelManagement ion-icon').forEach(icon => {
@@ -82,4 +83,9 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             this.classList.toggle('active');
         });
     });
+    $(document).ready(function() {
+        $('.managementBtnDiv button').on("click", function () {
+            window.location.href = '/my-card/checkout';
+        })
+    })
 </script>

@@ -6,16 +6,16 @@ $this->registerCssFile('@web/css/quize.css');
 <div class="quize">
     <div class="bodyQuize">
         <div class="quizeContainer">
-            <div class="quizePlayAndTest">ԽԱՂԱ ԵՎ ՍՏՈՒԳԻՐ ԳԻՏԵԼԻՔՆԵՐԴ</div>
+            <div class="quizePlayAndTest"><?=$GLOBALS['text']['quizePlayAndTest']?></div>
             <div class="lessonContainer">
-                <div class="lessonAdministration" data-option="trade-management">1С: ԱՌԵՎՏՐԻ ԿԱՌԱՎԱՐՈւՄ</div>
-                <div class="lessonAccounting" data-option="accounting">1С: ՀԱՇՎԱՊԱՀՈՒԹՅՈՒՆ 8.3</div>
-                <div class="lessonAccountingForBeginners" data-option="accountingForBeginners">1C: ՀԱՇՎԱՊԱՀՈՒԹՅՈՒՆ ՍԿՍՆԱԿՆԵՐԻ ՀԱՄԱՐ</div>
-                <div class="lessonPersonnelManagment" data-option="personnelManagment">1С: ԱՇԽԱՏԱՎԱՐՁ ԵՒ ԿԱԴՐԵՐԻ ԿԱՌԱՎԱՐՈՒՄ</div>
+                <div class="lessonAdministration" data-option="trade-management"><?=$GLOBALS['text']['lessonAdministration']?></div>
+                <div class="lessonAccounting" data-option="accounting"><?=$GLOBALS['text']['lessonAccounting']?></div>
+                <div class="lessonAccountingForBeginners" data-option="accountingForBeginners"><?=$GLOBALS['text']['lessonAccountingForBeginners']?></div>
+                <div class="lessonPersonnelManagment" data-option="personnelManagment"><?=$GLOBALS['text']['lessonPersonnelManagment']?></div>
             </div>
             <button type="button" class="btnQuize">
                 <img src="/images/contactus.png" alt="">
-                <span>ՍԿՍԵԼ</span>
+                <span><?=$GLOBALS['text']['btnQuize']?></span>
             </button>
         </div>
     </div>

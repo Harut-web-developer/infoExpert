@@ -65,3 +65,9 @@ document.querySelectorAll('.wishlist ion-icon').forEach(icon => {
         this.classList.toggle('active');
     });
 });
+
+$(document).ready(function() {
+    $('.wishlistBtnField button').on("click", function () {
+        window.location.href = '/my-card/checkout';
+    })
+})
