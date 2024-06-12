@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .quize {
     width: 100%;
     background-image: url("../images/background-quize-image.png"), url("../images/background-quize.png");
@@ -23,7 +21,7 @@
 }
 .quizePlayAndTest{
     width: 591px;
-    font-family: 'Tahoma';
+    font-family: 'RobotoSlab_',sans-serif;
     font-size: 36px;
     font-weight: 400;
     text-align: center;
@@ -79,7 +77,7 @@
     top: 16px;
     left: 0px;
     width: 100%;
-    font-family: 'Tahoma';
+    font-family: 'Roboto_',sans-serif;
     font-size: 15px;
     font-weight: 700;
     line-height: 18.11px;
@@ -102,7 +100,7 @@
     gap: 54px;
 }
 .titleResult{
-    font-family: 'Tahoma';
+    font-family: 'Roboto_',sans-serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 43.45px;
@@ -134,7 +132,7 @@
 }
 
 .resultBlackboardCount{
-    font-family: 'Roboto';
+    font-family: 'Roboto_',sans-serif;
     font-size: 48px;
     font-weight: 700;
     line-height: 56.25px;
@@ -142,7 +140,7 @@
     color: #F36528;
 }
 .resultBlackboardResult{
-    font-family: 'Tahoma';
+    font-family: 'Roboto_',sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 28.97px;
@@ -185,7 +183,7 @@
     top: 22px;
     left: 0px;
     width: 100%;
-    font-family: 'Tahoma';
+    font-family: 'Roboto_',sans-serif;
     font-size: 15px;
     font-weight: 700;
     line-height: 18.11px;
@@ -197,7 +195,7 @@
     top: 22px;
     left: 0px;
     width: 100%;
-    font-family: 'Tahoma';
+    font-family: 'Roboto_',sans-serif;
     font-size: 15px;
     font-weight: 700;
     line-height: 18.11px;
@@ -395,7 +393,7 @@
     }
     .quizePlayAndTest{
         width: 100%;
-        font-family: 'Tahoma';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 21.73px;
@@ -406,7 +404,7 @@
         width: 100%;
     }
     .titleResult{
-        font-family: 'Tahoma';
+        font-family: 'Roboto_',sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 21px;
@@ -417,13 +415,13 @@
         height: auto;
     }
     .resultBlackboardCount{
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 32px;
         font-weight: 700;
         line-height: 37px;
     }
     .resultBlackboardResult{
-        font-family: Tahoma;
+        font-family: "Roboto_",sans-serif;
         font-size: 20px;
         font-weight: 400;
         line-height: 24.14px;
@@ -443,7 +441,7 @@
         height: 43px;
     }
     .result .btnResult1 > span, .result .btnResult2 > span{
-        font-family: 'Tahoma';
+        font-family: 'Roboto_',sans-serif;
         font-size: 8px;
         font-weight: 700;
         line-height: 9.66px;

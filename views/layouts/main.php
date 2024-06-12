@@ -23,14 +23,28 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>" class="h-100">
+<html lang="<?= $_COOKIE['language'] ?>" class="h-100">
 <head>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <?php if($_COOKIE['language'] =='am') { ?>
+       <link rel="stylesheet" href="/css/am.css">
+    <?php } else if($_COOKIE['language'] =='ru'){ ?>
+    <link rel="stylesheet" href="/css/ru.css">
+    <?php } else if($_COOKIE['language'] =='en'){ ?>
+        <link rel="stylesheet" href="/css/en.css">
+    <?php }
+    if ($_COOKIE['language'] =='am'){
+        $dropdown_menu = 'dropDownCourcesArm';
+    }else{
+        $dropdown_menu = 'dropDownCources';
+    }
+    ?>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/mainTablet.css">
     <link rel="stylesheet" href="/css/mainMobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -232,7 +246,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     </li>
                     <li class="dropDownLi menuCoursesDropDown">
                         <span class="menuCourses"><?=$GLOBALS['text']['__courses__']?></span>
-                        <div class="dropDownCources">
+                        <div class="dropDownCoursesBg <?= $dropdown_menu ?>">
                             <ul>
                                 <li><a href="/lessons/accounting-for-begginers"><?= $GLOBALS['text']['headerCourseAccounting']?></a></li>
                                 <li><a href="/lessons/management"><?=$GLOBALS['text']['headerCoursePayrol']?></a></li>

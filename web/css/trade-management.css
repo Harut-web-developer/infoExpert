@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .tradeManagement{
     width: 100%;
     background-image: url(../images/applyOneBg.png);
@@ -14,7 +12,7 @@
     padding-bottom: 100px;
 }
 .titleTradeManagement{
-    font-family: 'Tahoma';
+    font-family: 'RobotoSlab_',sans-serif;
     font-size: 32px;
     font-weight: 400;
     line-height: 80px;
@@ -22,7 +20,7 @@
     color: #F36528;
 }
 .numberTradeManagement{
-    font-family: 'Roboto';
+    font-family: 'Roboto_',sans-serif;
     font-size: 48px;
     font-weight: 700;
     line-height: 56.25px;
@@ -30,7 +28,7 @@
     color: #FFFFFF;
 }
 .questionQuize{
-    font-family: 'Tahoma';
+    font-family: 'Roboto_',sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 24.14px;
@@ -39,7 +37,7 @@
     display: flex;
 }
 .questionQuize span{
-    font-family: 'Tahoma';
+    font-family: 'Roboto_',sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 24.14px;
@@ -193,7 +191,7 @@
     top: 26px;
     left: 0px;
     width: 100%;
-    font-family: 'Tahoma';
+    font-family: 'Roboto_',sans-serif;
     font-size: 15px;
     font-weight: 700;
     line-height: 18.11px;
@@ -229,7 +227,7 @@
         height: 400px;
     }
     .numberTradeManagement{
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 32px;
         font-weight: 700;
         line-height: 0px;
@@ -240,7 +238,7 @@
         height: 25px;
     }
     .titleTradeManagement{
-        font-family: 'Tahoma';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 0px;
@@ -254,14 +252,14 @@
         height: 47px;
     }
     .questionQuize span{
-        font-family: 'Tahoma';
+        font-family: 'Roboto_',sans-serif;
         font-size: 15px;
         font-weight: 400;
         line-height: 18.11px;
         text-align: center;
     }
     .answerQuize span{
-        font-family: 'Montserrat arm';
+        font-family: 'MontserratArm_',sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 19.5px;
@@ -272,7 +270,7 @@
         height: 40px;
     }
     .btnQuize > span{
-        font-family: 'Tahoma';
+        font-family: 'Roboto_',sans-serif;
         font-size: 8px;
         font-weight: 700;
         line-height: 9.66px;

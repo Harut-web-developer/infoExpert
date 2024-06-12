@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -51,7 +49,7 @@
     background-size: cover;
     width: 198px;
     height: 148px;
-    margin-top: -20px;
+    margin-top: -9px;
     left: -10px;
     z-index: 10;
 }
@@ -67,7 +65,7 @@
 
 }
 .profileFieldImg > ul > li > a{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 15px;
     font-weight: 400;
     text-decoration: none;
@@ -187,7 +185,7 @@
     color: #F36528;
 }
 .menuAbout{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-style: normal;
     font-size: 16px;
     font-weight: 400;
@@ -198,7 +196,7 @@
     cursor: pointer;
 }
 .menuCourses{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-style: normal;
     font-size: 16px;
     font-weight: 400;
@@ -231,7 +229,7 @@
     color: #F36528;
     font-size: 11px;
     font-weight: 500;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     position: absolute;
     top: 17px;
     left: 0px;
@@ -253,7 +251,7 @@
     position: relative;
 }
 .whiteLi > a{
-    font-family: "Roboto";
+    font-family: "Roboto_";
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
@@ -274,7 +272,7 @@
 .dropDownAbout > ul > li > a{
     color: #1C5484;
     text-decoration: none;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 15px;
     font-weight: 400;
 }
@@ -291,8 +289,29 @@
     margin-left: -9px;
     display: none;
 }
+.dropDownCourcesArm{
+    background-image: url("../images/big.png");
+    background-size: 100% 100%;
+    width: 300px;
+    height: 203px;
+    position: absolute;
+    margin-top: -6px;
+    margin-left: -9px;
+    display: none;
+}
 .dropDownCources > ul{
     width: 251px;
+    line-height: 1.5;
+    font-size: 14px;
+    top: 33px;
+    list-style: none;
+    position: relative;
+    left: 25px;
+    z-index: 100;
+    padding-left: 0px !important;
+}
+.dropDownCourcesArm > ul{
+    width: 253px;
     line-height: 1.5;
     font-size: 14px;
     top: 33px;
@@ -305,17 +324,25 @@
 .dropDownCources > ul > li > a{
     color: #1C5484;
     text-decoration: none;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 15px;
     font-weight: 400;
-
 }
-
+.dropDownCourcesArm > ul > li > a{
+    color: #1C5484;
+    text-decoration: none;
+    font-family: "Roboto_",sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
 .dropDownCources > ul > li > a:hover {
     text-decoration: none;
     color: #F36528;
 }
-
+.dropDownCourcesArm > ul > li > a:hover {
+    text-decoration: none;
+    color: #F36528;
+}
 .mainHeader{
     width: 100%;
     height: 61px;
@@ -378,7 +405,7 @@
     border: 1px solid #79A7A9;
     background: #80B0B2;
     color: #FFF;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -393,7 +420,7 @@
     border: 1px solid #79A7A9;
     background: #80B0B2;
     color: #FFF;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -403,14 +430,14 @@
 }
 .personName{
     color: #F36528;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }.personGreetings{
      color: #FFF;
-     font-family: "Roboto",sans-serif;
+     font-family: "Roboto_",sans-serif;
      font-size: 14px;
      font-style: normal;
      font-weight: 400;
@@ -435,7 +462,7 @@
 }
 .personSignField > a{
     color: #F36528;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
@@ -445,7 +472,7 @@
 }
 .personSignField > span{
     color: #FFF;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
@@ -462,14 +489,16 @@
 .tabletMenuNavbar{
     width: 100%;
     height: 437px;
-    background-color: rgba(121,172,174, 0.5);
+    background-color: rgba(121,172,174, 0.6);
     backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
 }
 .tabletMenuNavField{
     width: 366px;
     height: 400px;
-    position: absolute;
-    top: 17px;
+    /*position: absolute;*/
+    /*top: 17px;*/
+    padding-top: 17px;
     margin: 0px 71px 20px 47px;
     display: flex;
     flex-direction: column;
@@ -518,7 +547,7 @@
     height: 36px;
 }
 .mobileBackCall > button > span{
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto_',sans-serif;
     font-size: 8px;
     font-weight: 500;
     color: #F36528;
@@ -531,7 +560,7 @@
 .tabletMenuNavField > ul > li > a{
     text-decoration: none;
     color: #FFF;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -556,7 +585,7 @@
 }
 .tabletAllCoursesList > span{
     color: #FFF;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -589,7 +618,7 @@
     position: relative;
 }
 .input-searchTablet{
-    margin-left: 30px;
+    /*margin-left: 30px;*/
     height: 40px;
     width: 20px;
     border-style: none;
@@ -610,7 +639,8 @@
     font-weight: 100;
 }
 .btn-searchTablet{
-    width: 50px;
+    /*width: 50px;*/
+    width: 25px;
     height: 50px;
     border-style: none;
     font-size: 15px;
@@ -618,9 +648,9 @@
     outline: none;
     cursor: pointer;
     border-radius: 50%;
-    position: absolute;
-    bottom: -2px;
-    left: -10px;
+    /*position: absolute;*/
+    /*bottom: -2px;*/
+    /*left: -10px;*/
     color:#ffffff ;
     background-color:transparent;
     pointer-events: painted;
@@ -664,7 +694,7 @@
 }
 .tabletPersonMenuField > span{
     color: #FFF;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -685,7 +715,7 @@
 }
 .tabletProfileMenuField > li > a{
     color: #FFF;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -721,7 +751,7 @@
 .tabletProfileCoursesField > li > a{
     text-decoration: none;
     color: #FFF;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -806,7 +836,8 @@
 }
 .leftFooterBlock{
     width: 100%;
-    height: 236px;
+    /*height: 236px;*/
+    height: 256px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -820,7 +851,7 @@
     list-style: none;
     padding-left: 0px;
     font-size: 18px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-weight: 400;
 }
 .leftMenuFooter > ul > li > a{
@@ -842,7 +873,7 @@
 }
 .footerConn > span{
     color: #F36528;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 15px;
     font-weight: 600;
 }
@@ -859,20 +890,20 @@
     border: none;
     background: #5D9A9D;
     padding: 0px 170px 0px 20px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
 .footerBtn > input::placeholder{
     color: white;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
 .footerBtn > button{
     left: 351px;
     top: 3px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 20px;
     font-weight: 500;
     color: #5D9A9D;
@@ -910,7 +941,7 @@
     justify-content: start;
 }
 .formName > span{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 24px;
     font-weight: 600;
     color: #5D9A9D;
@@ -922,7 +953,7 @@
 }
 .inputsMail > input{
     padding: 0px 37px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 15px;
     font-weight: 400;
     width: 100%;
@@ -936,7 +967,7 @@
 }
 .inputsMail > input::placeholder{
     color: #ACACAC;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 15px;
     font-weight: 400;
 }
@@ -946,7 +977,7 @@
     border-radius: 29px;
     background: #5D9A9D;
     color:white;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 20px;
     font-weight: 600;
     border:none;
@@ -962,7 +993,7 @@
 .copyTextFooter{
     width: max-content;
     height: 18px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 15px;
     font-weight: 500;
     color: white;
@@ -976,7 +1007,7 @@
     margin-bottom: 0px;
     padding-left: 0px;
     list-style: none;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 15px;
     font-weight: 500;
     display: flex;
@@ -1019,7 +1050,7 @@
 .applyMarket{
     letter-spacing: 2px;
     width: 472px;
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "RobotoSlab_", sans-serif;
     font-weight: 900;
     font-size: 36px;
     color: #F36528;
@@ -1027,7 +1058,7 @@
 }
 .boundaries{
     margin-bottom: 60px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     letter-spacing: 1px;
     width: 100%;
     color: white;
@@ -1045,7 +1076,7 @@
 }
 .apply > a > span{
     position: absolute;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 18px;
     color: #F36528;
     font-weight: 700;
@@ -1094,19 +1125,19 @@
 }
 .addSymbol{
     color: #1C5484;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 32px;
     font-weight:700;
 }
 .numberSectionTwo{
     color: #1C5484;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 32px;
     font-weight:700;
 }
 .textSectionTwo{
     color: #1C5484;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 20px;
     font-weight:400;
 }
@@ -1169,7 +1200,7 @@
 }
 .managementBtn > a > span{
     position: absolute;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 20px;
     font-weight: 900;
     left: 0;
@@ -1197,7 +1228,7 @@
 }
 .coursesBg > span{
     color: #F16D35;
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "RobotoSlab_", sans-serif;
     font-size: 40px;
     font-weight: 900;
     letter-spacing: 2px;
@@ -1205,7 +1236,7 @@
 .coursesBg > p{
     color: white;
     font-size: 32px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto_", sans-serif;
     font-width: 400;
 }
 .logoManagement{
@@ -1265,14 +1296,14 @@
 }
 .freqAsked{
     font-size: 40px;
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "RobotoSlab_",sans-serif;
     font-weight: 900;
     color: #F16D35;
     letter-spacing: 2px;
     text-align: center;
 }
 .freqLook{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 32px;
     font-weight: 400;
     color: white;
@@ -1307,7 +1338,7 @@
     font-size: 16px;
     color: white;
     font-weight: 400;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
 }
 .questionField{
     padding-top: 20px;
@@ -1317,7 +1348,7 @@
     align-items: center;
 }
 .answerQuestion{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-weight: 400;
     padding: 30px 0px;
     font-size: 18px;
@@ -1349,7 +1380,7 @@
     overflow: hidden;
 }
 .partnersTitle{
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "RobotoSlab_",sans-serif;
     font-size: 40px;
     font-weight: 900;
     letter-spacing: 2px;
@@ -1418,13 +1449,13 @@
 }
 .testimonialOrangeTitle{
     font-size: 40px;
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "RobotoSlab_",sans-serif;
     font-weight: 900;
     letter-spacing: 2px;
     color: #F16D35;
 }
 .testimonialWhiteTitle{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 32px;
     font-weight: 400;
     color: #FFFFFF;
@@ -1469,7 +1500,7 @@
     align-items: center;
 }
 .testimonialsAuthor{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-weight: 400;
     font-size: 24px;
     width: 141px;
@@ -1498,7 +1529,7 @@
 .testimonialsText{
     width: 100%;
     height: 155px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-weight: 400;
     font-size: 20px;
     color: white;
@@ -1517,7 +1548,7 @@
     position: absolute;
     left: 0;
     top: 11px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto_", sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 14.06px;
@@ -1540,7 +1571,7 @@
     position: absolute;
     left: 0;
     top: 11px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto_", sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 14.06px;
@@ -1571,7 +1602,7 @@
     align-items: center;
 }
 .blogsTitle{
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "RobotoSlab_",sans-serif;
     font-size: 40px;
     color: #F16D35;
     font-weight: 900;
@@ -1605,7 +1636,7 @@
 }
 .blogText{
     width: max-content;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -1633,7 +1664,7 @@
     left: 0;
     width: 100%;
     text-align: center;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: #F36528;
@@ -1689,7 +1720,7 @@
     align-items: center;
 }
 .cardsLike > a{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 19px;
     color: #F36528;
     font-weight: 500;
@@ -1699,7 +1730,7 @@
 }
 .cardsInfo{
     display: -webkit-box;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #1C5484;
@@ -1720,7 +1751,7 @@
 }
 .articleDate{
     margin-left: 10px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-weight: 400;
     font-size: 16px;
 }
@@ -1744,7 +1775,7 @@
     align-items: center;
 }
 .questionTitle{
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "RobotoSlab_",sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 900;
@@ -1790,7 +1821,7 @@
     width: 100%;
     top: 17px;
     text-align: center;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 16px;
     color: #F36528;
     font-weight: 500;
@@ -1816,13 +1847,13 @@
     padding: 0px 15px;
     color: #D9E3E4;
     font-size: 16px;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto_',sans-serif;
     font-weight: 400;
 }
 .leftQuestionField > input::placeholder{
     color: #D9E3E4;
     font-size: 16px;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto_',sans-serif;
     font-weight: 400;
 }
 .rightQuestionField{
@@ -1839,7 +1870,7 @@
     padding: 20px 28px;
     color: #D9E3E4;
     font-size: 16px;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto_',sans-serif;
     font-weight: 400;
 }
 .rightQuestionField > textarea::placeholder{

@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .myCoursesTitleField{
     width: 100%;
     display: flex;
     align-items: center;
 }
 .myCoursesTitleField div{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 21.09px;
@@ -44,7 +42,7 @@
     align-items: center;
 }
 .userProfileMenuField > span{
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "RobotoSlab_",sans-serif;
     font-size: 40px;
     font-weight: 600;
     color: #F36528;
@@ -63,7 +61,7 @@
 .userProfileMenu > li > a{
     text-decoration: none;
     color: white;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 20px;
     font-height: 400;
 }
@@ -71,7 +69,7 @@
     color: #F36528;
 }
 .spanAmd{
-    font-family: 'Roboto';
+    font-family: 'Roboto_',sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 18.75px;
@@ -105,7 +103,7 @@
     color: white;
     font-size: 20px;
     font-weight: 600;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto_", sans-serif;
 }
 .myCoursesFieldSectionLeft > img{
     border-radius: 50%;
@@ -121,7 +119,7 @@
     align-items: start;
 }
 .usersProfileInfoPhone > span{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 20px;
     font-weight: 400;
     margin-left: 37px;
@@ -129,7 +127,7 @@
 
 }
 .usersProfileInfoEmail > span{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     margin-left: 37px;
     font-size: 20px;
     font-weight: 400;
@@ -138,7 +136,7 @@
 }
 .usersProfileInfoLinkdin > span{
     font-size: 20px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     margin-left: 37px;
     color: white;
     font-weight: 400;
@@ -171,7 +169,7 @@
     height: 540px;
 }
 .topSlider .title{
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "RobotoSlab_",sans-serif;
     font-size: 25px;
     font-weight: 500;
     line-height: 32.5px;
@@ -196,7 +194,7 @@
     margin: 11px 16px;
     position: absolute;
     left: 0px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 18.2px;
@@ -450,7 +448,7 @@ hr.new1 {
     margin: 0 15px;
 }
 .card_2 .cardBody_2 .span1_2{
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto_',sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 26px;
@@ -464,7 +462,7 @@ hr.new1 {
     -webkit-box-orient: vertical;
 }
 .card_2 .cardBody_2 .span2_2{
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto_',sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 28.13px;
@@ -479,7 +477,7 @@ hr.new1 {
     /*margin-bottom: 5px;*/
 }
 .cardtxt1_2 span{
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto_',sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 19.84px;
@@ -502,7 +500,7 @@ hr.new1 {
     height: 28.09px;
 }
 .cardtxt2_2 span{
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto_',sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 19.84px;
@@ -555,7 +553,7 @@ hr.new1 {
     left: 0px;
     width: 100%;
     text-align: center;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto_',sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
@@ -583,7 +581,7 @@ hr.new1 {
 .usersProfileInfoEmail > span,
 .usersProfileInfoLinkdin > span,
 .usersProfileInfoPhone > span{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     margin-left: 37px;
     font-size: 20px;
     color: white;
@@ -1143,7 +1141,7 @@ ion-icon {
         padding-top: 40px;
     }
     .topSlider .title {
-        font-family: "Roboto";
+        font-family: "Roboto_",sans-serif;
         font-size: 20px;
         line-height: 25.5px;
     }
@@ -1161,7 +1159,7 @@ ion-icon {
     .userProfileMenuField > span,
     .usersProfileRu .userProfileMenuField > span{
         color: #F36528;
-        font-family: 'Roboto Slab';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 22px;
         font-weight: 600;
         line-height: 29.01px;
@@ -1251,7 +1249,7 @@ ion-icon {
         text-align: left;
     }
     .card_2 .cardBody_2 .span2_2{
-        font-family: 'Roboto',sans-serif;
+        font-family: 'Roboto_',sans-serif;
         font-size: 10px;
         font-weight: 400;
         line-height: 11.72px;
@@ -1259,7 +1257,7 @@ ion-icon {
 
     }
     .spanAmd{
-        font-family: 'Roboto',sans-serif;
+        font-family: 'Roboto_',sans-serif;
         font-size: 8px;
         font-weight: 400;
         line-height: 9.38px;
@@ -1274,7 +1272,7 @@ ion-icon {
         height: 14px;
     }
     .cardtxt1_2 span, .cardtxt2_2 span{
-        font-family: 'Roboto',sans-serif;
+        font-family: 'Roboto_',sans-serif;
         font-size: 8px;
         font-weight: 500;
         line-height: 9.92px;
@@ -1304,7 +1302,7 @@ ion-icon {
         height: auto;
     }
     .cardsInfo_{
-        font-family: 'Roboto',sans-serif;
+        font-family: 'Roboto_',sans-serif;
         font-size: 11px;
         font-weight: 400;
         line-height: 13.2px;
@@ -1315,14 +1313,14 @@ ion-icon {
         height: 16px;
     }
     .articleDate_{
-        font-family: 'Roboto',sans-serif;
+        font-family: 'Roboto_',sans-serif;
         font-size: 11px;
         font-weight: 400;
         line-height: 16.5px;
         text-align: left;
     }
     .cardsLike_{
-        font-family: 'Roboto',sans-serif;
+        font-family: 'Roboto_',sans-serif;
         font-size: 12px;
         font-weight: 500;
         line-height: 14.06px;
@@ -1468,7 +1466,7 @@ ion-icon {
     .wishlistBlogBtn > span{
         color: #F36528;
         font-size: 18px;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-weight: 500;
         text-decoration: underline;
         text-underline-offset: 2px;
@@ -1476,7 +1474,7 @@ ion-icon {
     .wishlistBlogBtn > a{
         color: white;
         font-size: 18px;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-weight: 500;
         text-underline-offset: 2px;
     }
@@ -1545,7 +1543,7 @@ ion-icon {
         height: 38px !important;
     }
     .span1_2{
-        font-family: "Roboto slab",sans-serif;
+        font-family: "RobotoSlab_",sans-serif;
         font-size: 16px !important;
         font-weight: 500;
         line-height: 17.36px !important;
@@ -1641,7 +1639,7 @@ ion-icon {
         border: none;
     }
     .title{
-        font-family: "Roboto slab",sans-serif;
+        font-family: "RobotoSlab_",sans-serif;
         font-size: 16px;
         color: white;
         font-weight: 500;

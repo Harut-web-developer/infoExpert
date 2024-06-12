@@ -21,12 +21,12 @@
 .appleFields > span{
     font-size: 36px;
     color: #F36528;
-    font-family: 'Tahoma',sans-serif;
+    font-family: 'RobotoSlab_',sans-serif;
 }
 .appleFields > p{
     font-size: 20px;
     color: white;
-    font-family: 'Tahoma',sans-serif;
+    font-family: 'Roboto_',sans-serif;
     width: 100%;
     height: 48px;
 }
@@ -341,7 +341,7 @@
     color: #F36528;
     font-size: 16px;
     font-weight: 700;
-    font-family: "Tahoma",sans-serif;
+    font-family: "Roboto_",sans-serif;
     position: absolute;
     top: 28px;
     width: 100%;
@@ -392,7 +392,7 @@
     color: #F36528;
     font-size: 16px;
     font-weight: 700;
-    font-family: "Tahoma",sans-serif;
+    font-family: "Roboto_",sans-serif;
     width: 100%;
     text-align: center;
     position: relative;
@@ -512,13 +512,13 @@
 }
 @media screen and (max-width: 520px) {
     .appleFields > span{
-        font-family: Tahoma;
+        font-family: "RobotoSlab_",sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 19.31px;
     }
     .appleFields > p{
-        font-family: Tahoma;
+        font-family: "Roboto_",sans-serif;
         font-size: 15px;
         font-weight: 400;
         line-height: 18.11px;
@@ -535,14 +535,14 @@
         height: 174px;
     }
     .applyNameInput label, .applyEmailInput label, .coursesFieldsRadio span, .typeCoursesFields span, .applyPhoneInput label{
-        font-family: "Tahoma",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 15px;
         font-weight: 400;
         line-height: 18.11px;
         text-align: left;
     }
     .coursesBlocksRadio > div > label{
-        font-family: "Tahoma",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 19.31px;
@@ -580,13 +580,13 @@
 }
 @media screen and (max-width: 625px) {
     .applicationTitle{
-        font-family: "Tahoma",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 21.73px;
     }
     .applicationTextUnderline{
-        font-family: Tahoma;
+        font-family: "Roboto_",sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 33.22px;
@@ -603,7 +603,7 @@
         gap: 82px;
     }
     .applicationButton > a{
-        font-family: Tahoma;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 700;
         line-height: 12.07px;

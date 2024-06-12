@@ -21,7 +21,7 @@
     display: none;
 }
 .blogTitle{
-    font-family: 'Roboto Slab';
+    font-family: 'RobotoSlab_',sans-serif;
     font-size: 40px;
     font-weight: 900;
     line-height: 52.75px;
@@ -31,7 +31,7 @@
     margin-bottom: 0;
 }
 .discoverSpan{
-    font-family: 'Roboto Slab';
+    font-family: 'RobotoSlab_',sans-serif;
     letter-spacing: 0.05em;
     font-size: 24px;
     font-weight: 400;
@@ -73,7 +73,7 @@
     gap: 12px;
 }
 .textCard{
-    font-family: 'Roboto';
+    font-family: 'Roboto_',sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 21.6px;
@@ -105,7 +105,7 @@
 }
 .divImg a{
     color: #F36528;
-    font-family: Roboto;
+    font-family: "Roboto_",sans-serif;
     font-size: 19px;
     font-weight: 500;
     line-height: 22.27px;
@@ -341,7 +341,7 @@ ion-icon {
     }
     .divImg a{
         color: #F36528;
-        font-family: Roboto;
+        font-family: "Roboto_",sans-serif;
         font-size: 12px;
         font-weight: 500;
         line-height: 14.06px;
@@ -440,7 +440,7 @@ ion-icon {
         height: 263px;
     }
     .blogTitle{
-        font-family: 'Roboto Slab';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 16px;
         font-weight: 900;
         line-height: 21.1px;
@@ -448,7 +448,7 @@ ion-icon {
         height: 30px;
     }
     .discoverSpan{
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 18.75px;
@@ -468,7 +468,7 @@ ion-icon {
         left: 50%;
         transform: translate(-50%, -50%);
         color: #F36528;
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 12px;
         font-weight: 500;
         line-height: 14.06px;
@@ -476,7 +476,7 @@ ion-icon {
     }
     .seeMoreText span{
         color: #F36528;
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 12px;
         font-weight: 500;
         line-height: 14.06px;

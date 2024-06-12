@@ -27,7 +27,7 @@
         border: 1px solid #79A7A9;
         background: #80B0B2;
         color: #FFF;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -237,7 +237,7 @@
         letter-spacing: 2px;
         line-height: 21.1px;
         width: 100%;
-        font-family: "Roboto Slab", sans-serif;
+        font-family: "RobotoSlab_", sans-serif;
         font-weight: 900;
         font-size: 16px;
         color: #F36528;
@@ -257,7 +257,7 @@
     .boundaries {
         text-align: center;
         margin-bottom: 35em;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         letter-spacing: 1px;
         width: 100%;
         color: white;
@@ -272,7 +272,7 @@
         letter-spacing: 2px;
         line-height: 21.1px;
         width: 100%;
-        font-family: "Roboto Slab", sans-serif;
+        font-family: "RobotoSlab_", sans-serif;
         font-weight: 900;
         font-size: 16px;
         color: #F36528;
@@ -292,7 +292,7 @@
     .boundaries {
         text-align: center;
         margin-bottom: 32em;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         letter-spacing: 1px;
         width: 100%;
         color: white;
@@ -317,7 +317,7 @@
         text-align: center;
         letter-spacing: 2px;
         width: 100%;
-        font-family: "Roboto Slab", sans-serif;
+        font-family: "RobotoSlab_", sans-serif;
         font-weight: 900;
         font-size: 25px;
         color: #F36528;
@@ -326,7 +326,7 @@
     .boundaries {
         text-align: center;
         margin-bottom: 32em;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         letter-spacing: 1px;
         width: 100%;
         color: white;
@@ -351,7 +351,7 @@
         text-align: center;
         letter-spacing: 2px;
         width: 100%;
-        font-family: "Roboto Slab", sans-serif;
+        font-family: "RobotoSlab_", sans-serif;
         font-weight: 900;
         font-size: 25px;
         color: #F36528;
@@ -360,7 +360,7 @@
     .boundaries {
         text-align: center;
         margin-bottom: 32em;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         letter-spacing: 1px;
         width: 100%;
         color: white;
@@ -373,7 +373,7 @@
     .boundaries {
         text-align: center;
         margin-bottom: 24em;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         letter-spacing: 1px;
         width: 100%;
         color: white;
@@ -397,7 +397,7 @@
     .boundaries {
         text-align: center;
         margin-bottom: 24em;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         letter-spacing: 1px;
         width: 100%;
         color: white;
@@ -421,7 +421,7 @@
     .boundaries {
         text-align: center;
         margin-bottom: 24em;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         letter-spacing: 1px;
         width: 100%;
         color: white;
@@ -446,7 +446,7 @@
         text-align: center;
         letter-spacing: 2px;
         width: 100%;
-        font-family: "Roboto Slab", sans-serif;
+        font-family: "RobotoSlab_", sans-serif;
         font-weight: 900;
         font-size: 30px;
         color: #F36528;
@@ -630,7 +630,7 @@
     }
     .learnMobile > a > span{
         position: absolute;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 900;
         left: 0;
@@ -687,7 +687,7 @@
     }
     .freqAsked {
         font-size: 16px;
-        font-family: "Roboto Slab", sans-serif;
+        font-family: "RobotoSlab_", sans-serif;
         font-weight: 900;
         color: #F16D35;
         letter-spacing: 1.25px;
@@ -709,7 +709,7 @@
         width: 100%;
     }
     .freqLook {
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 15px;
         font-weight: 400;
         color: white;
@@ -754,7 +754,7 @@
         font-size: 12px;
     }
     .answerQuestion {
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-weight: 400;
         padding: 30px 0px;
         font-size: 12px;
@@ -802,7 +802,7 @@
         height: 99px;
     }
     .partnersTitle {
-        font-family: "Roboto Slab", sans-serif;
+        font-family: "RobotoSlab_", sans-serif;
         font-size: 22px;
         font-weight: 900;
         letter-spacing: 1.1px;
@@ -1114,7 +1114,7 @@
     }
     .testimonialOrangeTitle{
         font-size: 16px;
-        font-family: "Roboto Slab",sans-serif;
+        font-family: "RobotoSlab_",sans-serif;
         font-weight: 900;
         letter-spacing: 2px;
         line-height: 21.1px;
@@ -1123,7 +1123,7 @@
     .testimonialWhiteTitle{
         margin: 14px 21px 0px;
         text-align: center;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 15px;
         font-weight: 400;
         color: #FFFFFF;
@@ -1149,7 +1149,7 @@
     .testimonialsText {
         width: 100%;
         height: 90px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-weight: 400;
         font-size: 13px;
         color: white;
@@ -1159,7 +1159,7 @@
         text-align: justify;
     }
     .testimonialsAuthor{
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 15px;
         font-weight: 400;
         height: 18px;
@@ -1346,7 +1346,7 @@
     }
     .blogsTextMobile{
         color: #1C5484;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 18.75px;
@@ -1412,7 +1412,7 @@
     }
     .cardsInfo {
         display: -webkit-box;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-weight: 400;
         font-size: 11px;
         color: #1C5484;
@@ -1426,12 +1426,12 @@
     }
     .articleDate {
         margin-left: 10px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-weight: 400;
         font-size: 11px;
     }
     .cardsLike > a {
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 12px;
         color: #F36528;
         font-weight: 500;
@@ -1459,7 +1459,7 @@
         align-items: center;
     }
     .questionTitle{
-        font-family: "Roboto Slab", sans-serif;
+        font-family: "RobotoSlab_", sans-serif;
         font-size: 16px;
         font-weight: 900;
         line-height: 21.1px;
@@ -1651,7 +1651,7 @@
     }
     .inputsMail > input {
         padding: 0px 22px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 10px;
         font-weight: 400;
         width: 100%;
@@ -1704,14 +1704,14 @@
         border: none;
         background: #5D9A9D;
         padding: 0px 75px 0px 12px;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 400;
     }
     .footerBtn > button{
         left: 183px;
         top: -1px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 10px;
         font-weight: 500;
         color: #5D9A9D;
@@ -1725,7 +1725,7 @@
     }
     .footerBtn > input::placeholder{
         color: white;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 400;
     }
@@ -1759,7 +1759,7 @@
         margin-bottom: 0px;
         padding-left: 0px;
         list-style: none;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
         display: flex;
@@ -1838,7 +1838,7 @@
     }
     .inputsMail > input {
         padding: 0px 22px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 10px;
         font-weight: 400;
         width: 100%;
@@ -1890,14 +1890,14 @@
         border: none;
         background: #5D9A9D;
         padding: 0px 75px 0px 12px;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 400;
     }
     .footerBtn > button{
         left: 183px;
         top: -1px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 10px;
         font-weight: 500;
         color: #5D9A9D;
@@ -1911,7 +1911,7 @@
     }
     .footerBtn > input::placeholder{
         color: white;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 400;
     }
@@ -1945,7 +1945,7 @@
         margin-bottom: 0px;
         padding-left: 0px;
         list-style: none;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
         display: flex;
@@ -2050,7 +2050,7 @@
     }
     .inputsMail > input{
         padding: 0px 22px;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 400;
         width: 100%;
@@ -2095,14 +2095,14 @@
         border: none;
         background: #5D9A9D;
         padding: 0px 75px 0px 12px;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 400;
     }
     .footerBtn > button{
         left: 183px;
         top: -1px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 10px;
         font-weight: 500;
         color: #5D9A9D;
@@ -2116,7 +2116,7 @@
     }
     .footerBtn > input::placeholder{
         color: white;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 400;
     }
@@ -2137,7 +2137,7 @@
         margin-bottom: 0px;
         padding-left: 0px;
         list-style: none;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
         display: flex;
@@ -2166,7 +2166,7 @@
     }
     .leftFooterBlock{
         margin-top: 10px;
-        height: 236px;
+        height: 180px;
     }
     .footerBackground {
         background: #1D5485;
@@ -2185,6 +2185,11 @@
         align-items: center;
     }
 }
+@media only screen and (min-width: 320px) and (max-width: 436px) {
+    .leftFooterBlock{
+        height: 180px;
+    }
+}
 @media only screen and (min-width: 320px) and (max-width: 379px) {
     .inputsMail {
         width: 100%;
@@ -2192,7 +2197,7 @@
     }
     .inputsMail > input {
         padding: 0px 22px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 10px;
         font-weight: 400;
         width: 100%;
@@ -2238,14 +2243,14 @@
         border: none;
         background: #5D9A9D;
         padding: 0px 75px 0px 12px;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 400;
     }
     .footerBtn > button{
         left: 183px;
         top: -1px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-size: 10px;
         font-weight: 500;
         color: #5D9A9D;
@@ -2259,7 +2264,7 @@
     }
     .footerBtn > input::placeholder{
         color: white;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 400;
     }
@@ -2293,7 +2298,7 @@
         margin-bottom: 0px;
         padding-left: 0px;
         list-style: none;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
         display: flex;
@@ -2365,7 +2370,7 @@
         padding-left: 0px;
         margin-bottom: 0px;
         font-size: 11px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto_", sans-serif;
         font-weight: 400;
         display: flex;
         flex-direction: column;

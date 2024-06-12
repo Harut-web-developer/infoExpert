@@ -10,9 +10,9 @@ $(".menuAboutDropDown").hover(function(){
     $('.dropDownAbout').hide();
 });
 $(".menuCoursesDropDown").hover(function(){
-    $('.dropDownCources').show();
+    $('.dropDownCoursesBg').show();
 },function(){
-    $('.dropDownCources').hide();
+    $('.dropDownCoursesBg').hide();
 });
 
 // $(function() {

@@ -86,6 +86,20 @@ if ($language == 'en') {
                             </div>
                             <div class="courseManualPriceFieldPay">xxxxx AMD</div>
                         </div>
+                        <div class="courseManualPriceField">
+                            <div class="courseManualPriceFieldInfo">
+                                <img src="/images/creditminiimg.png" alt="">
+                                <span>1C: and Accounting for Beginners</span>
+                            </div>
+                            <div class="courseManualPriceFieldPay">xxxxx AMD</div>
+                        </div>
+                        <div class="courseManualPriceField">
+                            <div class="courseManualPriceFieldInfo">
+                                <img src="/images/creditminiimg.png" alt="">
+                                <span>1C: and Accounting for Beginners</span>
+                            </div>
+                            <div class="courseManualPriceFieldPay">xxxxx AMD</div>
+                        </div>
                     </div>
                 </div>
             </div>

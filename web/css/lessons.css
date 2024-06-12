@@ -11,7 +11,7 @@
     display: none;
 }
 .amdFix{
-    font-family: 'Roboto';
+    font-family: 'Roboto_',sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 28.13px;
@@ -36,7 +36,7 @@
 .titleMan{
     justify-content: flex-start;
     align-items: center;
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "RobotoSlab_", sans-serif;
     font-size: 36px;
     font-weight: 400;
     line-height: 58px;
@@ -48,7 +48,7 @@
     padding-left: 16.666%;
 }
 .infotxt{
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -97,7 +97,7 @@
 }
 .nameCard{
     color: #F16D35;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto_",sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 28px;
@@ -105,7 +105,7 @@
 }
 .textCard{
     /*width: 208.26px;*/
-    font-family: Roboto;
+    font-family: "Roboto_",sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
@@ -145,7 +145,7 @@
 }
 .leftDipl span{
     color: #F36528;
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "RobotoSlab_",sans-serif;
     font-size: 24px;
     font-weight: 400;
 }
@@ -156,7 +156,7 @@
 }
 .rightImgBottom span{
     color: #F36528;
-    font-family: 'Roboto Slab',sans-serif;
+    font-family: 'RobotoSlab_',sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 44px;
@@ -275,7 +275,7 @@ ion-icon {
         justify-content: space-between;
     }
     .rightImgBottom span {
-        font-family: 'Roboto Slab';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 44px;
@@ -292,14 +292,14 @@ ion-icon {
         justify-content: center;
     }
     .nameCard{
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
         text-align: center;
     }
     .textCard{
-        font-family: Roboto;
+        font-family: "Roboto_",sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
@@ -317,7 +317,7 @@ ion-icon {
         align-items: start;
     }
     .leftDipl span {
-        font-family: 'Roboto Slab';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 20px;
         font-weight: 400;
         line-height: 44px;
@@ -338,7 +338,7 @@ ion-icon {
         padding-top: 61px;
     }
     .titleMan{
-        font-family: "Roboto Slab",sans-serif;
+        font-family: "RobotoSlab_",sans-serif;
         font-size: 25px;
         font-weight: 400;
         line-height: 58px;
@@ -363,7 +363,7 @@ ion-icon {
         padding-right: 6.9%;
     }
     .infotxt{
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 30px;
@@ -384,7 +384,7 @@ ion-icon {
     }
     .leftDipl span {
         order: 2;
-        font-family: 'Roboto Slab';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 44px;
@@ -406,7 +406,7 @@ ion-icon {
     }
     .rightImgBottom span {
         order: 2;
-        font-family: 'Roboto Slab';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 44px;
@@ -424,14 +424,14 @@ ion-icon {
         justify-content: center;
     }
     .nameCard{
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
         text-align: center;
     }
     .textCard{
-        font-family: Roboto;
+        font-family: "Roboto_",sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
@@ -447,7 +447,7 @@ ion-icon {
         height: 56px;
     }
     .buttonDiv > button > span {
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 13px;
         font-weight: 900;
         line-height: 15.23px;
@@ -486,7 +486,7 @@ ion-icon {
     .titleMan{
         height: max-content;
         padding-top: 32px;
-        font-family: 'Roboto Slab';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 26px;
         font-weight: 400;
         line-height: 21.1px;
@@ -525,13 +525,13 @@ ion-icon {
         flex-direction: column;
         justify-content: center;
         text-align: left;
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 16.41px;
     }
     .leftDipl span{
-        font-family: 'Roboto Slab';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 12px;
         font-weight: 400;
         line-height: 15.83px;
@@ -560,7 +560,7 @@ ion-icon {
         margin-top: -37px !important;
     }
     .rightImgBottom span{
-        font-family: Roboto Slab;
+        font-family: "RobotoSlab_",sans-serif;
         font-size: 12px;
         font-weight: 400;
         line-height: 15.83px;
@@ -593,7 +593,7 @@ ion-icon {
     }
     .managementBtnDiv > button > span,
     .managementBtnDivCourse > a > span{
-        font-family: 'Roboto',sans-serif;
+        font-family: 'Roboto_',sans-serif;
         font-size: 10px;
         font-weight: 900;
         line-height: 11.72px;
@@ -604,7 +604,7 @@ ion-icon {
         height: 44px;
     }
     .amdFix{
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 15px;
         font-weight: 400;
         line-height: 17.58px;
@@ -638,7 +638,7 @@ ion-icon {
         margin-left: 51px;
     }
     .titleMan{
-        font-family: 'Roboto Slab';
+        font-family: 'RobotoSlab_',sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 21.1px;
@@ -653,7 +653,7 @@ ion-icon {
         width: 100%;
     }
     .nameCard{
-        font-family: 'Roboto';
+        font-family: 'Roboto_',sans-serif;
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
