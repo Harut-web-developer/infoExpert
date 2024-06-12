@@ -228,7 +228,7 @@ if ($language == 'en') {
                                             <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
                                         </div>
                                         <div class="cardsLike_">
-                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
                                             <div class='large-font'>
                                                 <ion-icon name="heart">
                                                     <div class='red-bg'></div>
@@ -255,7 +255,7 @@ if ($language == 'en') {
                                             <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
                                         </div>
                                         <div class="cardsLike_">
-                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
                                             <div class='large-font'>
                                                 <ion-icon name="heart">
                                                     <div class='red-bg'></div>
@@ -282,7 +282,7 @@ if ($language == 'en') {
                                             <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
                                         </div>
                                         <div class="cardsLike_">
-                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
                                             <div class='large-font'>
                                                 <ion-icon name="heart">
                                                     <div class='red-bg'></div>
@@ -309,7 +309,7 @@ if ($language == 'en') {
                                             <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
                                         </div>
                                         <div class="cardsLike_">
-                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>">READ MORE</a>
+                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
                                             <div class='large-font'>
                                                 <ion-icon name="heart">
                                                     <div class='red-bg'></div>
@@ -326,8 +326,8 @@ if ($language == 'en') {
         </div>
         <div class="wishlistMobileSection">
             <div class="wishlistBlogBtn">
-                <span>Courses</span>
-                <a href="/wishlist/blogs-wishlist">Blog</a>
+                <span><?= $GLOBALS['text']['footerCourses']?></span>
+                <a href="/wishlist/blogs-wishlist"><?= $GLOBALS['text']['footerBlog']?></a>
             </div>
             <div class="wishlistMobile">
 <!--                <div class="changeBody1">-->

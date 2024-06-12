@@ -412,7 +412,17 @@ ion-icon {
         width: 529px;
     }
     .card-info {
-        height: 123px;
+        height: 131px;
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .date {
+        line-height: 0;
+    }
+    .divImg {
+        height: 30px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -429,6 +439,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 463.5px) {
+    .card-info {
+        height: 140px;
+    }
     .bodyBlog{
         padding-top: 10px;
     }

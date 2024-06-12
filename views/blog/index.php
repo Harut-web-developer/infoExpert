@@ -29,7 +29,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -45,7 +45,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -61,7 +61,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -77,7 +77,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -93,7 +93,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -109,7 +109,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -125,7 +125,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -141,7 +141,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -157,7 +157,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -173,7 +173,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -189,7 +189,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -205,7 +205,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -221,7 +221,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -237,7 +237,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -253,7 +253,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -269,7 +269,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -285,7 +285,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -301,7 +301,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -317,7 +317,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -333,7 +333,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -349,7 +349,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -365,7 +365,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -381,7 +381,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -397,7 +397,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>
@@ -413,7 +413,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
                                 <p class="textCard"> Grid of different categories of accounting lessons</p>
                                 <div class='divImg'>
-                                    <a href="/blog/categorie">READ MORE</a>
+                                    <a href="/blog/categorie"><?= $GLOBALS['text']['mainReadMore']?></a>
                                     <div class='large-font'>
                                         <ion-icon name="heart">
                                             <div class='red-bg'></div>

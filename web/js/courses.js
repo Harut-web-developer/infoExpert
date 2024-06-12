@@ -73,4 +73,7 @@ $(document).ready(function() {
     $('.coursisBtnField button').on("click", function () {
         window.location.href = '/my-card/checkout';
     })
+    $('.footerCard button').on("click", function () {
+        window.location.href = '/my-card/checkout';
+    })
 })

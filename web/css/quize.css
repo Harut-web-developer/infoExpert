@@ -385,10 +385,12 @@
         padding-bottom: 62px;
     }
     .bodyQuize {
-        height: -webkit-fill-available;
+        height: 770px;
         display: flex;
         justify-content: center;
         align-items: end;
+        padding-top: 302px;
+        padding-bottom: 0;
     }
     .resultBlackboard{
         height: auto;
