@@ -71,3 +71,8 @@ $(document).ready(function() {
         window.location.href = '/my-card/checkout';
     })
 })
+$(document).ready(function() {
+    $('.footerCard_2 button').on("click", function () {
+        window.location.href = '/my-card/checkout';
+    })
+})

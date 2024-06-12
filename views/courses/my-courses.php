@@ -251,4 +251,3 @@ if ($language == 'en') {
         </div>
     </div>
 </div>
-<?php $this->registerJsFile('@web/js/courses.js'); ?>

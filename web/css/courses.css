@@ -258,6 +258,7 @@
 }
 .cardtxt2{
     display: flex;
+    align-items: center;
 }
 .cardtxt2 img{
     width: 28px;
@@ -281,7 +282,7 @@
 /* start my courses page css*/
 .myCourses{
     width: 100%;
-    height: 1061px;
+    height: auto;
     background-image: url("../images/myCoursesBg.png");
     background-position: center;
     background-size: cover;
@@ -290,7 +291,7 @@
 .myCoursesSection{
     width: 67%;
     margin: 0 auto 0 auto;
-    /*height: 694px;*/
+    padding-bottom: 100px;
     padding-top: 212px;
     display: flex;
     flex-direction: column;
@@ -336,7 +337,7 @@
 }
 .mainCoursesFields{
     width: -webkit-fill-available;
-    height: 500px;
+    /*height: 500px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -374,6 +375,7 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: 0;
+    margin-bottom: 0;
 }
 .myCoursesFieldSectionLeft{
     width: 250px;
@@ -419,21 +421,21 @@
     justify-content: space-between;
     align-items: start;
 }
-.myCoursesBlocksFieldMain > img{
-    border-top-left-radius: 30px;
+.myCoursesBlocksFieldMain img{
     border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
 }
 .myCoursesBlocksFieldMain > span{
     font-family: 'RobotoSlab_',sans-serif;
     font-size: 24px;
     color: white;
     font-weight: 500;
-    margin-left:20px;
+    margin: 20px 20px 0;
 }
 .myCoursesBlocksFieldMainInfo{
     width: 305px;
     height: 45%;
-    margin: 0px 20px;
+    margin: 0px 20px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -695,6 +697,12 @@ ion-icon {
 .myCoursesBlocksFieldMain > img {
     width: 100%;
     height: auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.myCoursesBlocksField > img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 .myCoursesFieldAcceptCourses .myCoursesBlocksField {
     width: 335px;
@@ -742,6 +750,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1600px) {
+    .myCoursesFieldAcceptCourses{
+        height: 440px;
+    }
     .courses {
         height: 1270px;
     }
@@ -869,7 +880,6 @@ ion-icon {
         position: relative;
     }
     .footerCard button > span {
-        /*margin-top: 11px;*/
         top: 16px;
         font-size: 14px;
     }
@@ -889,10 +899,6 @@ ion-icon {
         height: 422px;
         margin-right: 30px;
     }
-    /*.myCoursesFieldSectionLeft {*/
-    /*    width: 160px;*/
-    /*    height: 350px;*/
-    /*}*/
     .nameAndUsername {
         font-size: 16px;
     }
@@ -904,24 +910,14 @@ ion-icon {
         margin-left: 11px;
         font-size: 15px;
     }
-    /*.myCoursesFieldSection {*/
-    /*    width: 200px;*/
-    /*    height: 350px;*/
-    /*}*/
     .myCoursesFieldSectionLeft > img {
         width: 160px;
         height: 160px;
-    }
-    .mainCoursesFields {
-        height: 450px;
     }
 }
 @media screen and (max-width: 1450px){
     .myCoursesSection {
         gap: 40px;
-    }
-    .myCourses {
-        height: 880px;
     }
     .courses {
         height: 1190px;
@@ -947,10 +943,6 @@ ion-icon {
         transform: translate(-105%, -62%) !important;
         line-height: 21px;
     }
-    /*.footerImg1 {*/
-    /*    width: 75px;*/
-    /*    height: 33px;*/
-    /*}*/
     .cardCoursesBody {
         width: 230px;
         height: 180px;
@@ -999,7 +991,7 @@ ion-icon {
         font-size: 20px;
     }
     .myCoursesBlocksFieldMainInfo {
-        height: 40%;
+        height: 140px;
     }
     .ratingStarMyourse img{
         width: 19px;
@@ -1008,27 +1000,30 @@ ion-icon {
     .txt1, .txt2, .courses .title0{
         font-size: 26px;
     }
-.myCoursesBlocksFieldMain {
-    width: 259px;
-    /*height: 260px;*/
-}
-.myCoursesProfileField {
-    height: 420px;
-}
-.cardMyCourses {
-    width: 550px;
-}
-.myCoursesFieldAcceptCourses .myCoursesBlocksField {
-    width: auto;
-}
-.myCoursesFieldAcceptCourses .myCoursesBlocksField {
-    height: 360px;
-    margin-right: inherit;
-}
-.usersProfileInfo {
-    position: relative;
-    left: -7px;
-}
+    .myCoursesBlocksFieldMain {
+        width: 259px;
+        height: 360px;
+    }
+    .myCoursesProfileField {
+        height: 420px;
+    }
+    .cardMyCourses {
+        width: 550px;
+    }
+    .myCoursesFieldAcceptCourses .myCoursesBlocksField {
+        width: auto;
+    }
+    .myCoursesFieldAcceptCourses .myCoursesBlocksField {
+        height: 360px;
+        margin-right: inherit;
+    }
+    .usersProfileInfo {
+        position: relative;
+        left: -7px;
+    }
+    .myCoursesFieldAcceptCourses {
+        height: 365px;
+    }
 
 }
 @media screen and (max-width: 1300px) {
@@ -1046,6 +1041,9 @@ ion-icon {
     }
     .carouselCourses .cardCourses {
         width: 250px;
+    }
+    .myCoursesBlocksFieldMain {
+        height: 340px;
     }
 .myCoursesFieldAcceptCourses .myCoursesBlocksField {
     height: 341px;
@@ -1142,7 +1140,8 @@ ion-icon {
     }
 .myCoursesBlocksFieldMain {
     width: 234px;
-    margin: 0;
+    /*margin: 0;*/
+    height: 318px;
 }
 .myCoursesFieldAcceptCourses .myCoursesBlocksField {
     width: 234px;
@@ -1222,15 +1221,12 @@ ion-icon {
         width: 170px;
         height: 106px;
     }
-    .myCourses {
-        height: 820px;
-    }
     .courses .title0{
         margin: 0 0 1% 6.8%;
     }
     .myCoursesSection {
     width: auto;
-    padding: 95px 6.9% 0px 6.8%;
+    padding: 95px 6.9% 100px 6.8%;
 }
     .userProfileMenu {
         width: 423px;
@@ -1317,6 +1313,7 @@ ion-icon {
 }
     .myCoursesBlocksFieldMain {
         width: 200px;
+        height: 264px;
         gap: 10px;
     }
 .myCoursesBlocksFieldMain > span{
@@ -1324,10 +1321,11 @@ ion-icon {
     font-weight: 500;
     line-height: 14.3px;
     text-align: left;
+    margin: 5px 20px;
 }
 .myCoursesRating{
     width: 93.27px;
-    height: 15.28px;
+    height: 25.28px;
 }
 .myCoursesRating > span{
     font-size: 10px;
@@ -1356,7 +1354,7 @@ ion-icon {
     margin: 0;
 }
 .myCoursesBlocksFieldMainInfo {
-    height: 40%;
+    height: 105px;
     gap: 10px;
     justify-content: space-evenly;
 }
@@ -1575,9 +1573,6 @@ ion-icon {
     }
 }
 @media screen and (max-width: 760px) {
-    .myCourses {
-        height: 760px;
-    }
     .txt1, .txt2, .courses .title0 {
         font-size: 16px;
     }
@@ -1612,6 +1607,7 @@ ion-icon {
     }
     .myCoursesBlocksFieldMain {
         width: 180px;
+        height: 240px;
     }
     .usersProfileInfoPhone > span, .usersProfileInfoEmail > span, .usersProfileInfoLinkdin > span {
         font-size: 12px;
@@ -1641,6 +1637,9 @@ ion-icon {
     .myCoursesFieldSection {
         height: 210px;
     }
+    .myCoursesFieldAcceptCourses {
+        height: 510px;
+    }
 }
 @media screen and (max-width: 750px) {
     .carouselCourses {
@@ -1667,9 +1666,11 @@ ion-icon {
         justify-content: center;
     }
 }
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 599.5px) {
+    .myCoursesSection {
+        padding: 95px 6.9% 50px 6.8%;
+    }
     .myCourses{
-        height: 720px;
         background: #5D9A9D;
     }
     .userProfileMenuField{
@@ -1699,9 +1700,6 @@ ion-icon {
     }
 }
 @media screen and (max-width: 450px){
-    .myCourses {
-        height: auto;
-    }
     .myCoursesFieldAcceptCourses {
         flex-direction: column;
         overflow-x: visible;
@@ -1744,8 +1742,6 @@ ion-icon {
     }
     .myCoursesBlocksField > img{
         width: 318px;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
     }
     .myCoursesBlocksFieldMain{
         height: 131px;
