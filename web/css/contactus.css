@@ -137,6 +137,7 @@
     font-weight: 400;
     width: 100%;
     background-color: transparent;
+    font-family: 'Roboto',sans-serif;
     outline: none;
     border: none;
     color: #FFFFFF;
@@ -159,6 +160,7 @@
 #validationDefault02_{
     width: 100%;
     background-color: transparent;
+    font-family: 'Roboto',sans-serif;
     outline: none;
     border: none;
     font-size: 18px;
@@ -189,6 +191,7 @@
     font-size: 18px;
     font-weight: 400;
     color: #FFFFFF;
+    font-family: 'Roboto',sans-serif;
 }
 #validationDefault01_::placeholder{
     font-family: 'Roboto',sans-serif;
