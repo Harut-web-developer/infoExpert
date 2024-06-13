@@ -12,11 +12,11 @@ $this->title = $name;
 <div class="siteError">
     <div class="alert404">
         <span class="span1">404</span>
-        <span class="span2">page not found</span>
+        <span class="span2"><?=$GLOBALS['text']['notFound']?></span>
         <div class="errorBtnField">
             <a class="errorHref" href="/">
                 <img src="/images/buttonImg1.png" alt="">
-                <span>GO BACK HOME</span>
+                <span><?=$GLOBALS['text']['notFoundBtn']?></span>
             </a>
         </div>
     </div>

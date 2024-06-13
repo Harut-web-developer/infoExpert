@@ -98,7 +98,7 @@ a.desc:after {
     background-position: center;
 }
 .alert404{
-    width: 309px;
+    width: max-content;
     height: 237px;
     text-align: center;
     display: flex;
@@ -115,11 +115,11 @@ a.desc:after {
     color: #D6D6D6;
 }
 .alert404 .span2{
+    margin: 0px 10px;
     font-family: "RobotoSlab_",sans-serif;
     font-size: 40px;
     font-weight: 500;
-    line-height: 52.75px;
-    text-align: left;
+    text-align: center;
     color: #D6D6D6;
 }
 .errorBtnField{
@@ -162,13 +162,13 @@ a.desc:after {
         font-size: 35px;
         font-weight: 500;
         line-height: 46.16px;
-        text-align: left;
+        text-align: center;
     }
     .alert404 .span2{
         font-size: 30px;
         font-weight: 500;
         line-height: 39.57px;
-        text-align: left;
+        text-align: center;
     }
     .alert404 img {
         width: 105px;
