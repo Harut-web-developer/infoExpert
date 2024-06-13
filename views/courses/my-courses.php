@@ -247,7 +247,7 @@ if ($language == 'en') {
         </div>
         <div class="containerSeeMoreMyCourses">
             <img class="seeMoreBlog" src="/images/seeMoreBlog.png" alt="">
-            <span class="seeMoreText">See more</span>
+            <span class="seeMoreText"><?= $GLOBALS['text']['sectionSixBtnMobile'] ?></span>
         </div>
     </div>
 </div>

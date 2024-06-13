@@ -296,9 +296,6 @@ if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600)
         const footerTop = footerBackground.getBoundingClientRect().top;
         const summaryHeight = 181;
         const windowHeight = window.innerHeight;
-        // console.log(footerTop)
-        // console.log(summaryHeight)
-        // console.log(windowHeight)
         if (footerTop + summaryHeight <= windowHeight) {
             summary.classList.remove('fixed');
             summary.classList.add('none');
@@ -350,8 +347,6 @@ $(document).ready(function () {
             $('.personCoursesMenuList').css('width', '0px');
         }
     })
-
-
     $(document).on('click', function(event) {
         if (!$(event.target).closest('.menuTabletHeader').length && !$(event.target).closest('.personMainMenu').length &&
             !$(event.target).closest('.personCoursesMenuList').length &&
@@ -361,11 +356,6 @@ $(document).ready(function () {
             $('.personCoursesMenuList').css('width', '0px');
         }
     });
-
-    // $('.tabletMenuIcon').on('click', function(event) {
-    //     event.stopPropagation();
-    //     $('.menuTabletHeader').toggleClass('menuTabletActive');
-    // });
     $(".profileField").hover(function(){
         $('.profileFieldImg').show();
     },function(){

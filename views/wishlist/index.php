@@ -104,7 +104,7 @@ if ($language == 'en') {
                                         <div class="wishlistBtnField">
                                             <button>
                                                 <img src="/images/wishlist1.png" alt="">
-                                                <span>Buy now</span>
+                                                <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
                                             </button>
                                         </div>
                                         <div class="booterImgs">
@@ -148,7 +148,7 @@ if ($language == 'en') {
                                         <div class="wishlistBtnField">
                                             <button>
                                                 <img src="/images/wishlist1.png" alt="">
-                                                <span>Buy now</span>
+                                                <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
                                             </button>
                                         </div>
                                         <div class="booterImgs">
@@ -192,7 +192,7 @@ if ($language == 'en') {
                                         <div class="wishlistBtnField">
                                             <button>
                                                 <img src="/images/wishlist1.png" alt="">
-                                                <span>Buy now</span>
+                                                <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
                                             </button>
                                         </div>
                                         <div class="booterImgs">
@@ -370,7 +370,7 @@ if ($language == 'en') {
                                 <div class="footerCard_2">
                                     <button>
                                         <img src="/images/wishlist1.png" alt="">
-                                        <span>Buy now</span>
+                                        <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
                                     </button>
                                     <div class="booterImgs">
                                         <div class='large-font largeFont'>
@@ -414,7 +414,7 @@ if ($language == 'en') {
                                 <div class="footerCard_2">
                                     <button>
                                         <img src="/images/wishlist1.png" alt="">
-                                        <span>Buy now</span>
+                                        <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
                                     </button>
                                     <div class="booterImgs">
                                         <div class='large-font largeFont'>
