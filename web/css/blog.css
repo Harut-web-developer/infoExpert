@@ -207,7 +207,11 @@ ion-icon {
         transform: scale(1.1);
     }
 }
-
+@media screen and (min-width: 2100px) {
+    .grid-container {
+        grid-template-columns: 450px 450px 450px;
+    }
+}
 
 @media screen and (max-width: 1900px){
     .card_ {
@@ -336,7 +340,7 @@ ion-icon {
     }
     .card-info {
         padding: 9px 14px 12px 13px;
-        height: 130px;
+        height: 150px;
         gap: 5px;
     }
     .divImg a{

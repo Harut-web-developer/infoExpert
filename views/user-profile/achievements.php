@@ -71,17 +71,17 @@ if ($language == 'en') {
                         </div>
                     </div>
 <!-- Եթե այլ սերտիֆիկատներ կան օգտագործել այս կոդն -->
-<!--                    <div class="swiper-slide">-->
-<!--                        <div class="certificate">-->
-<!--                            <div class="cartificateImg">-->
-<!--                                <img src="/images/certificateAchievements.png" alt="">-->
-<!--                            </div>-->
-<!--                            <div class="cartificateImgTxt">-->
-<!--                                <span>1C: Payroll and personnel management</span>-->
-<!--                                <img src="/images/downloade.png" alt="">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div class="swiper-slide">
+                        <div class="certificate">
+                            <div class="cartificateImg">
+                                <img src="/images/certificateAchievements.png" alt="">
+                            </div>
+                            <div class="cartificateImgTxt">
+                                <span>1C: Payroll and personnel management</span>
+                                <img src="/images/downloade.png" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next"></div>
