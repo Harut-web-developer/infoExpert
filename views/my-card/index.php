@@ -3,7 +3,7 @@ use yii\web\View;
 use yii\web\YiiAsset;
 
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/my-card.css');
+$this->registerCssFile('@web/css/my-card.css?as=132');
 
 $this->registerJsFile('@web/js/my-card.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);

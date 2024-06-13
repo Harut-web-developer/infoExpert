@@ -1638,18 +1638,18 @@
         height: 605px;
     }
     .blogBtn{
-        width: 124px;
+        width: 133px;
     }
     .blogLine {
         width: 37%;
         margin: 0px 10px;
     }
     .blogBtn > a > img{
-        width: 123px;
-        height: 48px;
+        width: 133px;
+        height: 52px;
     }
     .blogBtn > a > span {
-        top: 3px;
+        top: 2px;
         left: 0;
         width: 100%;
         text-align: center;
