@@ -246,7 +246,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     </li>
                     <li class="dropDownLi menuCoursesDropDown">
                         <span class="menuCourses"><?=$GLOBALS['text']['__courses__']?></span>
-                        <div class="dropDownCoursesBg <?= $dropdown_menu ?>">
+                        <div class="dropDownCoursesBg <?php echo $dropdown_menu ?>">
                             <ul>
                                 <li><a href="/lessons/accounting-for-begginers"><?= $GLOBALS['text']['headerCourseAccounting']?></a></li>
                                 <li><a href="/lessons/management"><?=$GLOBALS['text']['headerCoursePayrol']?></a></li>

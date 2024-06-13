@@ -134,7 +134,7 @@
     border: none;
 }
 .buttonField > button > img{
-    width: 153px;
+    width: 161px;
     height: 64px;
 }
 .buttonField > button:hover img{
@@ -357,7 +357,7 @@
         padding: 0px 16px;
     }
     .buttonField > button > img{
-        width: 94px;
+        width: 100px;
         height: 40px;
     }
     .buttonField > button > span {
