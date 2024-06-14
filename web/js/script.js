@@ -474,6 +474,12 @@ $(document).ready(function () {
             $('.securityModal').css('display', 'none');
         }
     });
+    $('.btn-searchTablet').on('click', function () {
+        $('.input-searchTablet').focus();
+    })
+    $('.btn-search').on('click', function () {
+        $('.input-search').focus();
+    })
 })
 
 function lessonsFieldFixed(){
