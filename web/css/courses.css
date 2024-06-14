@@ -432,15 +432,16 @@
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
 }
-.myCoursesBlocksFieldMain > span{
+.infoTitle{
     display: block;
-    font-family: 'RobotoSlab_',sans-serif;
+    font-family: 'RobotoSlab_', sans-serif;
     font-size: 24px;
-    height: 80px;
+    height: 60px;
+    width: -webkit-fill-available;
     line-height: 30px;
     color: white;
     font-weight: 500;
-    margin: 10px 20px 0;
+    margin: 0 0;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -448,7 +449,7 @@
 }
 .myCoursesBlocksFieldMainInfo{
     width: 305px;
-    height: 45%;
+    height: 52%;
     margin: 0px 20px 20px;
     display: flex;
     flex-direction: column;
@@ -457,7 +458,7 @@
 }
 .myCoursesRating{
     width: 121px;
-    height: 60px;
+    height: 57px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1002,11 +1003,11 @@ ion-icon {
 
 }
 @media screen and (max-width: 1420px) {
-    .myCoursesBlocksFieldMain > span {
+    .infoTitle {
         font-size: 20px;
     }
     .myCoursesBlocksFieldMainInfo {
-        height: 140px;
+        height: 179px;
     }
     .ratingStarMyourse img{
         width: 19px;
@@ -1107,13 +1108,16 @@ ion-icon {
     right: -24px;
     top: 5px;
 }
-    .myCoursesBlocksFieldMain > span {
+    .infoTitle {
         font-size: 18px;
         line-height: 20px;
-        height: 57px;
+        height: 42px;
     }
     .usersProfileInfoEmail, .usersProfileInfoPhone, .usersProfileInfoLinkdin {
         width: 180px;
+    }
+    .myCoursesBlocksFieldMainInfo {
+        margin: 10px 20px 10px;
     }
 }
 @media screen and (max-width: 1270px) {
@@ -1228,11 +1232,11 @@ ion-icon {
         height: 15.18px;
     }
     .myCoursesBlocksFieldMainInfo {
-        height: 120px;
+        height: 162px;
         margin: 0px 20px 10px;
     }
-    .myCoursesBlocksFieldMain > span {
-        height: 50px;
+    .infoTitle {
+        height: 41px;
     }
 }
 @media screen and (max-width: 1125px) {
@@ -1254,7 +1258,7 @@ ion-icon {
     .myCoursesSection {
     width: auto;
     padding: 95px 6.9% 100px 6.8%;
-}
+    }
     .userProfileMenu {
         width: 423px;
     }
@@ -1341,19 +1345,18 @@ ion-icon {
     .myCoursesBlocksFieldMain {
         width: 200px;
         height: 264px;
-        gap: 10px;
+        /*gap: 10px;*/
     }
-.myCoursesBlocksFieldMain > span{
+.infoTitle{
     font-size: 11px;
     font-weight: 500;
     line-height: 15px;
     text-align: left;
-    margin: 0px 20px;
-    height: 45px;
+    height: 30px;
 }
 .myCoursesRating{
     width: 93.27px;
-    height: 25.28px;
+    height: 33.28px;
 }
 .myCoursesRating > span{
     font-size: 10px;
@@ -1382,15 +1385,16 @@ ion-icon {
     margin: 0;
 }
 .myCoursesBlocksFieldMainInfo {
-    height: 100px;
-    gap: 10px;
+    height: 130px;
+    /*gap: 10px;*/
+    margin: 0px 15px 10px;
     justify-content: space-evenly;
 }
-    .ratingStarMyourse {
-        display: flex;
-        position: relative;
-        top: -10px;
-    }
+    /*.ratingStarMyourse {*/
+    /*    display: flex;*/
+    /*    position: relative;*/
+    /*    top: -10px;*/
+    /*}*/
     .backButton {
         width: 40px;
         height: 40px;
@@ -1784,6 +1788,7 @@ ion-icon {
         margin-left: 0px;
         width: 100%;
         height: 42px;
+        color: white;
     }
     .blogInfoPercent{
         width: 100%;
