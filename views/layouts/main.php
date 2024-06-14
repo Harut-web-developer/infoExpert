@@ -42,7 +42,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     ?>
     <link rel="stylesheet" href="/css/main.css?v=1">
     <link rel="stylesheet" href="/css/mainTablet.css?v=1">
-    <link rel="stylesheet" href="/css/mainMobile.css?v=3">
+    <link rel="stylesheet" href="/css/mainMobile.css?v=4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
 
 </head>
