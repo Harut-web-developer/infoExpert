@@ -1014,7 +1014,7 @@
     }
     .userCreateFieldForms_ > form {
         width: 90%;
-        height: 453px;
+        height: 499px;
         margin: 46px 22px;
     }
     .attachCvEdit {
@@ -1075,7 +1075,7 @@
         height: 94px;
     }
     .userCreateFieldForms_ > form {
-        margin: 31px 22px;
+        margin: 15px 22px;
     }
 }
 @media screen and (max-width: 650px) {
@@ -1112,7 +1112,7 @@
     }
     .editAchievementsBtn div{
         position: absolute;
-        top: 50%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;

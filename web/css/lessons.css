@@ -168,9 +168,17 @@
     border: none;
     position: relative;
 }
+/*.managementBtnDiv > button > img{*/
+/*    width: 152px;*/
+/*    height: 66px;*/
+/*}*/
 .managementBtnDivCourse > a{
     position: relative;
 }
+/*.managementBtnDivCourse > a > img{*/
+/*    width: 152px;*/
+/*    height: 66px;*/
+/*}*/
 .managementBtnDiv > button:hover img{
     content: url("../images/buycoursebtnhover.png");
 }
@@ -599,7 +607,15 @@ ion-icon {
         line-height: 11.72px;
         top: 7.5px;
     }
-    .bottomImages img {
+    /*.bottomImages img {*/
+    /*    width: 102px;*/
+    /*    height: 44px;*/
+    /*}*/
+    .managementBtnDiv > button > img{
+        width: 102px;
+        height: 44px;
+    }
+    .managementBtnDivCourse > a > img{
         width: 102px;
         height: 44px;
     }
@@ -660,7 +676,15 @@ ion-icon {
     }
 }
 @media screen and (max-width: 400px){
-    .bottomImages img {
+    /*.bottomImages img {*/
+    /*    width: 90px;*/
+    /*    height: 40px;*/
+    /*}*/
+    .managementBtnDiv > button > img{
+        width: 90px;
+        height: 40px;
+    }
+    .managementBtnDivCourse > a > img{
         width: 90px;
         height: 40px;
     }

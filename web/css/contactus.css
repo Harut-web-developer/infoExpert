@@ -264,7 +264,7 @@ input[type="text"] {
         line-height: 24px;
     }
     .contactus {
-        height: 760px;
+        height: 790px;
         padding-top: 61px;
     }
     .rigthtxtdiv span{
@@ -312,6 +312,7 @@ input[type="text"] {
         padding-top: 0;
         font-size: 16px;
         line-height: 24px;
+        text-align: center;
     }
     .imgcontact {
         width: 40px;
@@ -350,6 +351,7 @@ input[type="text"] {
         margin-bottom: 16px;
     }
     .contactusBottomTxt{
+        text-align: center;
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 24px;
@@ -403,7 +405,7 @@ input[type="text"] {
         height: 800px;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
     .ellipseButton {
         display: block;
         position: absolute;
@@ -434,7 +436,7 @@ input[type="text"] {
         margin-top: 8px;
     }
     .contactus {
-        height: 1035px;
+        height: 1000px;
         background: #5D9A9D;
     }
     .inputdiv {
@@ -473,6 +475,6 @@ input[type="text"] {
 }
 @media screen and (max-width: 414px){
     .contactus {
-        height: 1050px;
+        height: 1030px;
     }
 }
