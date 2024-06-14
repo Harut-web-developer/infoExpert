@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/apply-now.css');
+$this->registerCssFile('@web/css/apply-now.css?v=1');
 ?>
 <div class="applyOne">
     <form class="appleFields" action="/apply-now/apply-application">
@@ -120,6 +120,6 @@ $this->registerCssFile('@web/css/apply-now.css');
         </div>
     </form>
 </div>
-<?php $this->registerJsFile('@web/js/apply-now.js', ['defer' => true]); ?>
+<?php $this->registerJsFile('@web/js/apply-now.js?v=1', ['defer' => true]); ?>
 
 
