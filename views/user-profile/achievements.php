@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/user-profile.css?v=1');
+$this->registerCssFile('@web/css/user-profile.css?v=2');
 ?>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 

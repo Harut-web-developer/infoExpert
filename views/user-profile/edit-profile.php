@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/user-profile.css?v=2');
+$this->registerCssFile('@web/css/user-profile.css?v=3');
 ?>
 <div class="usersAchievements usersProfileHeight"
     <div class="userAchievementsSection">
