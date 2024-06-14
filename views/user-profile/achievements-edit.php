@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/user-profile.css');
+$this->registerCssFile('@web/css/user-profile.css?v=1');
 ?>
 <?php
 $language = $_COOKIE['language'];
