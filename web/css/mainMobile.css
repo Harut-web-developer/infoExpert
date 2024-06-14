@@ -473,7 +473,7 @@
     }
 }
 /*section Two*/
-@media only screen and (min-width: 320px) and (max-width: 380px) {
+@media only screen and (min-width: 300px) and (max-width: 380px) {
     .numbersInfo > img{
         width: 60px;
         height: 60px;
@@ -587,7 +587,7 @@
         height: 208px;
     }
 }
-@media only screen and (min-width: 320px) and (max-width: 599px) {
+@media only screen and (min-width: 300px) and (max-width: 599px) {
 
     .sectionInfo{
         display: none;
@@ -595,7 +595,7 @@
 
 }
 /*section three*/
-@media only screen and (min-width: 320px) and (max-width: 599px) {
+@media only screen and (min-width: 300px) and (max-width: 599px) {
     .sectionThree{
         background-image: url("../images/mobileImgCourse.png");
         background-position: center;
@@ -675,7 +675,7 @@
     }
 }
 /*section Four*/
-@media only screen and (min-width: 320px) and (max-width: 599px) {
+@media only screen and (min-width: 300px) and (max-width: 599px) {
     .sectionFour{
         background-image: url("../images/sectionFourMobile.png");
         background-position: center;
@@ -739,7 +739,7 @@
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 500px) {
+@media only screen and (min-width: 300px) and (max-width: 500px) {
     .answers {
         padding-top: 60px;
         margin: 0px 5% 0px;
@@ -1189,7 +1189,7 @@
 }
 
 /*start sectionseven css*/
-@media only screen and (min-width: 320px) and (max-width: 360px) {
+@media only screen and (min-width: 300px) and (max-width: 360px) {
     .individualCards {
         margin: 0px auto 29px;
         border-radius: 30px;
@@ -1337,7 +1337,7 @@
     }
 
 }
-@media only screen and (min-width: 320px) and (max-width: 599px) {
+@media only screen and (min-width: 300px) and (max-width: 599px) {
     .sectionBlog{
         display: none;
     }
@@ -1438,7 +1438,7 @@
     }
 }
 /*start sectionEight css*/
-@media only screen and (min-width: 320px) and (max-width: 599px) {
+@media only screen and (min-width: 300px) and (max-width: 599px) {
     .sectionEight {
         background-image: url("../images/eightBgMobile.png");
         background-repeat: no-repeat;
@@ -1512,7 +1512,7 @@
 }
 /*end main css*/
 /*start footer css*/
-@media only screen and (min-width: 320px) and (max-width: 349px) {
+@media only screen and (min-width: 300px) and (max-width: 349px) {
     .imagesFooterFields {
         width: 100%;
         height: 88%;
@@ -2185,12 +2185,12 @@
         align-items: center;
     }
 }
-@media only screen and (min-width: 320px) and (max-width: 436px) {
+@media only screen and (min-width: 300px) and (max-width: 436px) {
     .leftFooterBlock{
         height: 180px;
     }
 }
-@media only screen and (min-width: 320px) and (max-width: 379px) {
+@media only screen and (min-width: 300px) and (max-width: 379px) {
     .inputsMail {
         width: 100%;
         height: 124px;
@@ -2326,7 +2326,7 @@
         height: 30px;
     }
 }
-@media only screen and (min-width: 320px) and (max-width: 599px) {
+@media only screen and (min-width: 300px) and (max-width: 599px) {
     .leftFooterBg{
         background-image: none;
     }

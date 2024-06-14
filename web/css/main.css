@@ -1660,7 +1660,7 @@
 }
 .blogBtn > a > span{
     position: absolute;
-    top: 2px;
+    top: 0px;
     left: 0;
     width: 100%;
     text-align: center;
