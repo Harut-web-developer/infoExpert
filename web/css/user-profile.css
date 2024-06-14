@@ -733,6 +733,7 @@
 @media screen and (max-width: 1100px) {
     .userFormsBtn_ {
         margin-top: 16px;
+        margin-bottom: 16px;
     }
     .usersAchievements {
         height: 845px;
@@ -1015,7 +1016,7 @@
     .userCreateFieldForms_ > form {
         width: 90%;
         height: 499px;
-        margin: 46px 22px;
+        /*margin: 46px 22px;*/
     }
     .attachCvEdit {
         margin: 18px 0px 18px 17px;
