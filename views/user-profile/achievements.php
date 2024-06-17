@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/user-profile.css?v=2');
+$this->registerCssFile('@web/css/user-profile.css?v=21');
 ?>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -68,7 +68,7 @@ if ($language == 'en') {
                             </div>
                             <div class="cartificateImgTxt">
                                 <span>1C: Payroll and personnel management</span>
-                                <img src="/images/downloade.png" alt="">
+                                <img src="/images/downloade.png" alt="" class="downloadeButton">
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@ if ($language == 'en') {
                             </div>
                             <div class="cartificateImgTxt">
                                 <span>1C: Payroll and personnel management</span>
-                                <img src="/images/downloade.png" alt="">
+                                <img src="/images/downloade.png" alt="" class="downloadeButton">
                             </div>
                         </div>
                     </div>
@@ -93,11 +93,20 @@ if ($language == 'en') {
     </div>
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+    });
+    // download sertificate
+    $('.downloadeButton').on("click", function () {
+        var imageSrc = $(this).closest('.certificate').find('.cartificateImg img').attr('src');
+        var link = document.createElement('a');
+        link.href = imageSrc;
+        link.download = imageSrc.split('/').pop();
+        link.click();
     });
 </script>

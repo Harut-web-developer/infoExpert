@@ -37,8 +37,10 @@ if ($language == 'en') {
 <div class="about <?php echo $class6; ?>">
     <div class="aboutContent">
         <span class="aboutContnetTitle">
-            <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
-            <img class="backButton" src="/images/backButton.png" alt="">
+            <a href="javascript:history.go(-1)" class="aboutBackButton">
+                <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+                <img class="backButton" src="/images/backButton.png" alt="">
+            </a>
             <?=$GLOBALS['text']['aboutTitle']?>
         </span>
         <div class="aboutContnetmain">

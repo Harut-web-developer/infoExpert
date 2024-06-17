@@ -9,8 +9,10 @@ $this->registerCssFile('@web/css/alumni.css');
     <div class="sectionAlumni">
         <div class="alumniDiv">
             <div class="alumniTitleAll">
-                <img class="backButton" src="/images/backButton.png" alt="">
-                <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+                <a href="javascript:history.go(-1)" class="alumniBackButton">
+                    <img class="backButton" src="/images/backButton.png" alt="">
+                    <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+                </a>
                 <div class="alumniTitle">
                     <?=$GLOBALS['text']['alumniTitle']?>
                 </div>

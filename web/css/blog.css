@@ -282,6 +282,9 @@ ion-icon {
     .blog {
         padding-top: 60px;
     }
+    .blogBackButton{
+        display: contents;
+    }
     .bodyBlog {
         padding-top: 35px;
         padding-bottom: 100px;

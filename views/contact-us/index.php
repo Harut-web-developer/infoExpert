@@ -6,8 +6,10 @@ $this->registerCssFile('@web/css/contactus.css?v=1');
 <div class="contactus d-flex justify-content-center">
     <div class="disinline">
         <div class="contactUsTitleM">
-            <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
-            <img class="backButton" src="/images/backButton.png" alt="">
+            <a href="javascript:history.go(-1)" class="contactBackButton">
+                <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+                <img class="backButton" src="/images/backButton.png" alt="">
+            </a>
         </div>
         <div class="sectionContactusTop">
             <div class="sectionContactusTopLeft">
