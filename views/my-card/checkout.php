@@ -15,14 +15,17 @@ if ($language == 'en') {
 ?>
 <div class="checkoutField <?php echo $class1; ?>">
     <div class="checkoutFieldSection">
+        <div class="myCoursesTitleField">
+            <a href="javascript:history.go(-1)" class="managmentBack">
+                <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            </a>
+            <div><?=$GLOBALS['text']['checkoutTitle']?></div>
+        </div>
         <div class="checkoutTitleField">
             <a href="javascript:history.go(-1)" class="managmentBack">
                 <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
             </a>
             <div><?=$GLOBALS['text']['checkoutTitle']?></div>
-            <a href="javascript:history.go(-1)" class="managmentBackButton">
-                <span><?=$GLOBALS['text']['checkoutCancel']?></span>
-            </a>
         </div>
         <div class="checkoutInputsSectionField">
             <div class="checkoutInputsSectionLeftField">
