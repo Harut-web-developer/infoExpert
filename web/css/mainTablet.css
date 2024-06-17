@@ -2561,7 +2561,8 @@
     }
     .leftFooterBlock{
         width: 100%;
-        height: 162px;
+        /*height: 162px;*/
+        height: 175px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

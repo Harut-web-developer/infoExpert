@@ -237,8 +237,8 @@ if (window.location.pathname == '/') {
 
         let position = 0;
         const slideWidth = slider.offsetWidth / 2;
-        const pauseTime = 5000; // Pause for 5 seconds
-        const slideSpeed = 1; // Adjust the speed as necessary
+        const pauseTime = 3000; // Pause for 5 seconds
+        const slideSpeed = 3; // Adjust the speed as necessary
 
         function animateSlider() {
             position -= slideSpeed;
