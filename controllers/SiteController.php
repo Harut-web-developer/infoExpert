@@ -187,7 +187,15 @@ class SiteController extends Controller
             $hash = Yii::$app->getSecurity()->generatePasswordHash($password);
             $existingUser = User::findOne(['email' => $post['User']['email']]);
             if ($existingUser !== null) {
-                Yii::$app->session->setFlash('error', 'This email is already registered.');
+                $message = '';
+                if($_COOKIE['language'] == 'am'){
+                    $message = 'Այս էլ․ հասցեն արդեն գրանցված է:';
+                }elseif ($_COOKIE['language'] == 'ru'){
+                    $message = 'Этот адрес эл. почты уже зарегистрирован.';
+                }elseif ($_COOKIE['language'] == 'en'){
+                    $message = 'This email is already registered.';
+                }
+                Yii::$app->session->setFlash('error', $message);
                 return $this->refresh();
             }
             if ($model->load($post)) {
