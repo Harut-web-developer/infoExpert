@@ -12,6 +12,9 @@
     width: 100%;
     color: #F36528;
 }
+.managmentBack{
+    display: contents;
+}
 .usersProfile{
     width: 100%;
     height: min-content;

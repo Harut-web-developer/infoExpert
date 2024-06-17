@@ -16,7 +16,9 @@ if ($language == 'en') {
 <div class="myCourses <?php echo $class1; ?>">
     <div class="myCoursesSection">
         <div class="myCoursesTitleField">
-            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <a href="javascript:history.go(-1)" class="managmentBack">
+                <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            </a>
             <div><?=$GLOBALS['text']['tabletMyCourse']?></div>
         </div>
         <div class="userProfileMenuField">

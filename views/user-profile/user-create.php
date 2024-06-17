@@ -17,7 +17,9 @@ if ($language == 'en') {
 <div class="userCreateBg <?php echo $class1; ?>">
     <div class="userCreateField">
         <div class="userCreateTitleField">
-            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <a href="javascript:history.go(-1)" class="managmentBack">
+                <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            </a>
             <div><?=$GLOBALS['text']['profileTitle']?></div>
         </div>
         <span class="userCreateMoreInfo"><?=$GLOBALS['text']['userCreateMoreInfo']?></span>

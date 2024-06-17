@@ -29,7 +29,9 @@ if ($language == 'en') {
             </ul>
         </div>
         <div class="userCreateTitleField">
-            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <a href="javascript:history.go(-1)" class="managmentBack">
+                <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            </a>
             <div class="myProfileMobile"><?=$GLOBALS['text']['profileTitle']?></div>
         </div>
         <div class="userProfileMoreAboutField">

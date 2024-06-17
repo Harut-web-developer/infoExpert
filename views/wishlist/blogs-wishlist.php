@@ -23,7 +23,9 @@ if ($language == 'en') {
 <div class="usersProfile wishlist <?php echo $class1; ?>">
     <div class="userProfileSection">
         <div class="myCoursesTitleField">
-            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <a href="javascript:history.go(-1)" class="managmentBack">
+                <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            </a>
             <div><?=$GLOBALS['text']['tabletWishlist']?></div>
         </div>
         <div class="wishlistMobileSection">

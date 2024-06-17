@@ -6,6 +6,9 @@
     background-position: center;
     background-size: cover;
 }
+.managmentBack{
+    display: contents;
+}
 .cardImg_{
     border-radius: 50%;
 }

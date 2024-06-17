@@ -277,7 +277,9 @@ if ($language == 'en') {
         </div>
         <div class="myCardMobileField">
             <div class="myCoursesTitleField">
-                <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+                <a href="javascript:history.go(-1)" class="managmentBackMyCard">
+                    <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+                </a>
                 <div><?=$GLOBALS['text']['tabletCard']?></div>
             </div>
             <div class="myCardBlogsSection">

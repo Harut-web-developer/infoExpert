@@ -6,7 +6,9 @@ $this->registerCssFile('@web/css/user-profile.css?v=3');
     <div class="userAchievementsSection">
         <div class="userCreateField">
             <div class="userCreateTitleField">
-                <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+                <a href="javascript:history.go(-1)" class="managmentBack">
+                    <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+                </a>
                 <div><?=$GLOBALS['text']['editProfileTitle']?></div>
             </div>
             <span class="userCreateMoreInfo"><?=$GLOBALS['text']['editProfileMoreInfo']?></span>

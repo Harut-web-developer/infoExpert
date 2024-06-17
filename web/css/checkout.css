@@ -16,6 +16,16 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.managmentBackButton{
+    margin-right: 39px;
+    font-size: 24px;
+    font-family: 'Roboto_',sans-serif;
+    color: white;
+    text-decoration: none;
+}
+.managmentBack{
+    display: contents;
+}
 .checkoutTitleField{
     width: 100%;
     height: 73px;
@@ -30,15 +40,15 @@
     font-weight: 600;
     color: #F36528;
 }
-.checkoutTitleField >span{
-    margin-right: 39px;
-    font-size: 24px;
-    font-family: 'Roboto_',sans-serif;
-    color: white;
-}
-.checkoutTitleField > span:hover{
-    cursor: pointer;
-}
+/*.checkoutTitleField > span{*/
+/*    margin-right: 39px;*/
+/*    font-size: 24px;*/
+/*    font-family: 'Roboto_',sans-serif;*/
+/*    color: white;*/
+/*}*/
+/*.checkoutTitleField > span:hover{*/
+/*    cursor: pointer;*/
+/*}*/
 .checkoutInputsSectionField{
     width: 100%;
     height: min-content;
@@ -502,7 +512,7 @@
         line-height: 29.01px;
         text-align: left;
     }
-    .checkoutTitleField >span {
+    .managmentBackButton {
         font-size: 13px;
         margin-right: 0;
     }
@@ -701,7 +711,7 @@
         font-weight: 500;
         line-height: 21.09px;
     }
-    .checkoutTitleField >span {
+    .managmentBackButton {
         font-size: 10px;
     }
     .checkoutInputsSectionRightField{

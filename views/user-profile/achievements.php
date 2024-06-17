@@ -19,7 +19,9 @@ if ($language == 'en') {
 <div class="usersAchievementsH usersAchievements <?php echo $class1; ?>">
     <div class="userAchievementsSection llllll">
         <div class="userCreateTitleField">
-            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <a href="javascript:history.go(-1)" class="managmentBack">
+                <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            </a>
             <div><?=$GLOBALS['text']['tabletachievement']?></div>
         </div>
         <div class="userProfileMenuField">

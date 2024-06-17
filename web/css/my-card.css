@@ -1139,6 +1139,9 @@ ion-icon {
         justify-content: space-between;
         align-items: center;
     }
+    .managmentBackMyCard{
+        display: contents;
+    }
     .myCoursesTitleField{
         margin: 0px auto;
         width: 86%;
