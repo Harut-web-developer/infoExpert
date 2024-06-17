@@ -201,6 +201,9 @@ ion-icon {
         padding-top: 100px;
         height: max-content;
     }
+    .categorieBackButton{
+        display: contents;
+    }
     .categorieTitle .large-font {
         width: 29px;
         height: 29px;

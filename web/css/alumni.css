@@ -225,6 +225,9 @@
         height: 900px;
         padding-top: 61px;
     }
+    .alumniBackButton{
+        display: contents;
+    }
     .sectionAlumni {
         width: auto;
         height: 748px;

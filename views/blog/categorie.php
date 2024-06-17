@@ -7,8 +7,10 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
 <div class="categorie">
     <div class="categorieTitleDiv">
         <h1 class="categorieTitle">
-            <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
-            <img class="backButton" src="/images/backButton.png" alt="">
+            <a href="javascript:history.go(-1)" class="categorieBackButton">
+                <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+                <img class="backButton" src="/images/backButton.png" alt="">
+            </a>
             Grid of different categories of accounting lessons
             <div class='large-font'>
                 <ion-icon name="heart">
