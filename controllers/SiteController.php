@@ -123,11 +123,14 @@ class SiteController extends Controller
                     setcookie('email',Yii::$app->user->identity->email, time()+60 * 5, '/');
                 }
                 $identity = Yii::$app->user->identity;
+//                var_dump($identity);
                 $session->set('user_id',$identity->id);
                 $session->set('user_name',$identity->username);
                 $session->set('user_email',$identity->email);
                 $session->set('logged',true);
-
+//                var_dump(isset($session['user_id']));
+//                var_dump($session['logged']);
+//                exit;
                 return $this->redirect('/');
             }else{
                 return $this->redirect('/login');
@@ -180,6 +183,7 @@ class SiteController extends Controller
 
     public function actionSignUp()
     {
+        $session = Yii::$app->session;
         $model = new User();
         if($this->request->isPost) {
             $post = Yii::$app->request->post();
@@ -198,6 +202,11 @@ class SiteController extends Controller
                     $log_model->email = $model->email;
                     $log_model->password = $post['User']['password'];
                     if($log_model->login()){
+                        $identity = Yii::$app->user->identity;
+                        $session->set('user_id',$identity->id);
+                        $session->set('user_name',$identity->username);
+                        $session->set('user_email',$identity->email);
+                        $session->set('logged',true);
                         return $this->redirect('/');
                     }else{
                         return $this->redirect('/signup');
@@ -217,7 +226,10 @@ class SiteController extends Controller
 
     public function actionAccountSecurity()
     {
-        return $this->render('security');
+        $email_value = Yii::$app->user->identity->email;
+        return $this->render('security',[
+            'email_value' => $email_value,
+        ]);
     }
     public function generateRandomString($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

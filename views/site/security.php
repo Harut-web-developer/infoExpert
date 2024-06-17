@@ -10,7 +10,7 @@ $this->registerCssFile('@web/css/security.css');
             <div class="emailField">
                 <label for="emailSecurity"><?=$GLOBALS['text']['inputEmail']?></label>
                 <div class="emailInput">
-                    <input type="text" id="emailSecurity" value="hovsepyanh@994@gmail.com">
+                    <input type="text" id="emailSecurity" value="<?=$email_value?>">
                     <img class="modalOpenBtn" src="/images/pencilModal.png" alt="">
                 </div>
             </div>
@@ -37,11 +37,11 @@ $this->registerCssFile('@web/css/security.css');
                 <div class="modalInputField">
                     <div class="modalEmailField">
                         <label for="modalEmail"><?=$GLOBALS['text']['inputEmail']?></label>
-                        <input type="text" id="modalEmail" value="hovsepyanh1994@gmail.com">
+                        <input type="text" id="modalEmail" value="<?=$email_value?>">
                     </div>
                     <div class="modalPasswordField">
                         <label for="modalPassword"><?=$GLOBALS['text']['inputPassword']?></label>
-                        <input type="password" id="modalPassword" value="asdv4as5df6bad4h">
+                        <input type="password" id="modalPassword" value="">
                         <img class="modalEye" src="/images/signEyeClose.png" alt="">
                     </div>
                 </div>

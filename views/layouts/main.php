@@ -70,9 +70,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <?php if(!empty(Yii::$app->user->identity)){
                         $first_letter = explode(' ' , Yii::$app->user->identity->username);
                         if (count($first_letter) > 1){?>
-                            <div class="personInfoCircle"><?=$first_letter[0][0].' '.$first_letter[1][0]?></div>
+                            <div class="personInfoCircle"><?=mb_substr($first_letter[0], 0, 1) . ' ' . mb_substr($first_letter[1], 0, 1)?></div>
                         <?php }else{?>
-                            <div class="personInfoCircle"><?=$first_letter[0][0]?></div>
+                            <div class="personInfoCircle"><?=mb_substr($first_letter[0], 0, 1)?></div>
                         <?php }?>
                     <div class="personSignOrInfo">
                         <div class="personNameField">
