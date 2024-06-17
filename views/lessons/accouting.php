@@ -6,7 +6,9 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
 ?>
 <div class="personelManagement">
     <div class="titleMan">
-        <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+        <a href="javascript:history.go(-1)" class="managmentBackButton">
+            <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+        </a>
         <img class="backButton" src="/images/backButton.png" alt="">
         1C: Payroll and personnel management
         <div class='large-font'>

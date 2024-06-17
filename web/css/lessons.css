@@ -345,6 +345,9 @@ ion-icon {
     .personelManagement {
         padding-top: 61px;
     }
+    .managmentBackButton{
+        display: contents;
+    }
     .titleMan{
         font-family: "RobotoSlab_",sans-serif;
         font-size: 25px;
