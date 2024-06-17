@@ -159,6 +159,9 @@
     background: transparent;
     outline: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btnResult1 > img,
@@ -180,8 +183,8 @@
 .btnResult1 > span {
     color: #F36528;
     position: absolute;
-    top: 22px;
-    left: 0px;
+    /*top: 22px;*/
+    /*left: 0px;*/
     width: 100%;
     font-family: 'Roboto_',sans-serif;
     font-size: 15px;
@@ -192,8 +195,8 @@
 .btnResult2 > span {
     color: #FFFFFF;
     position: absolute;
-    top: 22px;
-    left: 0px;
+    /*top: 22px;*/
+    /*left: 0px;*/
     width: 100%;
     font-family: 'Roboto_',sans-serif;
     font-size: 15px;
@@ -201,12 +204,12 @@
     line-height: 18.11px;
     text-align: center;
 }
-.resultRu .btnResult1 > span{
-    top: 12px;
-}
-.resultRu .btnResult2 > span{
-    top: 12px;
-}
+/*.resultRu .btnResult1 > span{*/
+/*    top: 12px;*/
+/*}*/
+/*.resultRu .btnResult2 > span{*/
+/*    top: 12px;*/
+/*}*/
 @media screen and (max-width: 1780px){
     .lessonAdministration, .lessonAccounting, .lessonAccountingForBeginners, .lessonPersonnelManagment {
         width: 590px;
@@ -447,7 +450,7 @@
         font-size: 8px;
         font-weight: 700;
         line-height: 9.66px;
-        top: 17px;
+        /*top: 17px;*/
     }
 }
 @media screen and (max-width: 360px) {
