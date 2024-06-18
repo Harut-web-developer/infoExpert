@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/contactus.css?v=1');
+$this->registerCssFile('@web/css/contactus.css?v=2');
 
 ?>
 <div class="contactus d-flex justify-content-center">
