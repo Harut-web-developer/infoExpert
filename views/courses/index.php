@@ -12,8 +12,10 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
 ?>
 <div class="courses">
     <div class="headerCourses">
-        <img class="backButton" src="/images/backButton.png" alt="">
-        <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+        <a href="javascript:history.go(-1)" class="coursesMobBackButton">
+            <img class="backButton" src="/images/backButton.png" alt="">
+            <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
+        </a>
         <div>
             <span class="txt1"><?=$GLOBALS['text']['mainCourseTitleFirst']?></span>
             <span class="txt2"><?=$GLOBALS['text']['mainCourseTitleSecond']?></span>

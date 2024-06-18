@@ -92,9 +92,6 @@
     height: auto;
     border-radius: 50%;
 }
-.card-info{
-    padding: 10px 20px 20px;
-}
 .nameCard{
     color: #F16D35;
     font-family: "Roboto_",sans-serif;
@@ -111,6 +108,12 @@
     line-height: 22px;
     text-align: center;
     color: #FFFFFF;
+    height: max-content;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    padding: 0 1rem;
 }
 .card_:hover{
     background: #FFFFFF5C;
@@ -314,11 +317,6 @@ ion-icon {
         text-align: center;
         width: 100%;
     }
-    .card-info{
-        padding: 0;
-    }
-
-
     .leftDipl {
         display: flex;
         flex-direction: column;
@@ -449,9 +447,6 @@ ion-icon {
         text-align: center;
         width: 100%;
     }
-    .card-info{
-        padding: 0;
-    }
     .buttonDiv > button > img {
         position: relative;
         width: 130px;
@@ -510,9 +505,6 @@ ion-icon {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-    }
-    .card-info {
-        padding: 10px 20px 20px;
     }
     .rightImg, .diplomM{
         display: none;
