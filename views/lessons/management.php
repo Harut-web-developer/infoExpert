@@ -53,7 +53,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                     <div class="card-info">
                         <p class="nameCard">Manana Davtyan</p>
                         <p class="textCard">iNFOEXPERT Academy trainer, Head of Service Department, qualified 1C program specialist in RA․</p>
-                        <img src="/images/alumniin.png">
+                        <img src="/images/linkedinLesson.png">
                     </div>
                 </div>
             </div>

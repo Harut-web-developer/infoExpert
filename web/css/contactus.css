@@ -31,7 +31,7 @@
 .contactusTitle{
     font-family: "RobotoSlab_",sans-serif;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 43.2px;
     text-align: left;
     color: #F36528;
@@ -67,6 +67,7 @@
     text-align: left;
     color: #FFFFFF;
     padding-top: 12px;
+    text-decoration: underline;
 }
 .rigthtxtdiv{
     /*width: 126px;*/
@@ -88,7 +89,7 @@
 .rigthtxtdiv span{
     font-family: "Roboto_",sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 19.2px;
     text-align: left;
     color: #FFFFFF;
@@ -100,6 +101,7 @@
     width: 100%;
     height: 350.74px;
     border-radius: 20px;
+    overflow: hidden;
 }
 /*.sectionContactusBottom{*/
 /*    margin-top: 28px;*/
@@ -107,7 +109,7 @@
 .contactusBottomTitle{
     font-family: "Roboto_",sans-serif;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 38.4px;
     text-align: left;
     color: #F36528;
@@ -132,6 +134,7 @@
     border: 1px;
     background: #FFFFFF24;
     text-align: center;
+    box-shadow: 0px 1px 20px 1px #1C54841A;
 }
 #validationDefault00_{
     font-weight: 400;
@@ -156,6 +159,7 @@
     border: 1px;
     background: #FFFFFF24;
     text-align: center;
+    box-shadow: 0px 1px 20px 1px #1C54841A;
 }
 #validationDefault02_{
     width: 100%;
@@ -182,6 +186,7 @@
     background: #FFFFFF24;
     text-align: center;
     margin-top: 20px;
+    box-shadow: 0px 1px 20px 1px #1C54841A;
 }
 #validationDefault01_{
     width: 100%;
@@ -273,13 +278,13 @@ input[type="text"] {
     .rigthtxtdiv span{
         font-family: 'Roboto_',sans-serif;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 19.2px;
     }
     .contactusNom{
         font-family: 'Roboto_',sans-serif;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 19.2px;
         padding: 0;
         margin: 0;
@@ -331,7 +336,7 @@ input[type="text"] {
     .contactusMail{
         font-family: 'Roboto_',sans-serif;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 19.2px;
         margin: 0;
         padding: 0;
@@ -453,7 +458,7 @@ input[type="text"] {
         font-family: 'Roboto_',sans-serif;
         padding: 0;
         font-size: 10px;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 11.72px;
     }
     .disinline, .sectionContactusTop {

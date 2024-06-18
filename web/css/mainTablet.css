@@ -20,11 +20,14 @@
         position: relative;
         background: transparent;
         border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .tabletMenuField > button > span{
         position: absolute;
-        top: 11px;
-        left: 0;
+        /*top: 11px;*/
+        /*left: 0;*/
         width: 100%;
         text-align: center;
         letter-spacing: 0.5px;
@@ -97,8 +100,8 @@
 
     .apply > a > span {
         position: absolute;
-        left: 0px;
-        top: 17px;
+        /*left: 0px;*/
+        /*top: 17px;*/
         width: 100%;
         text-align: center;
         font-family: "Roboto_", sans-serif;

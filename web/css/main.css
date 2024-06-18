@@ -214,6 +214,9 @@
     background: transparent;
     outline: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .btnBack > img{
     width: 132px;
@@ -231,8 +234,8 @@
     font-weight: 500;
     font-family: "Roboto_",sans-serif;
     position: absolute;
-    top: 17px;
-    left: 0px;
+    /*top: 17px;*/
+    /*left: 0px;*/
     width: 100%;
 }
 
@@ -541,6 +544,9 @@
     background-color: transparent;
     border: none;
     margin-bottom: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .mobileBackCall > button > img{
     width: 96px;
@@ -552,8 +558,8 @@
     font-weight: 500;
     color: #F36528;
     position: absolute;
-    left: 0;
-    top: 12px;
+    /*left: 0;*/
+    /*top: 12px;*/
     width: 100%;
     text-align: center;
 }
@@ -1073,6 +1079,9 @@
     border: none;
     z-index: 10;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .apply > a > span{
     position: absolute;
@@ -1080,9 +1089,9 @@
     font-size: 18px;
     color: #F36528;
     font-weight: 700;
-    left: 0;
+    /*left: 0;*/
     width: 100%;
-    top: 26px;
+    /*top: 26px;*/
     text-align: center;
 }
 .apply > a:hover span{
