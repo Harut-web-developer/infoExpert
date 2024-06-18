@@ -17,18 +17,18 @@ $this->registerCssFile('@web/css/contactus.css?v=1');
                     <h1 class="contactusTitle"></h1>
                     <p class="contactusTxt"><?=$GLOBALS['text']['contactText']?></p>
                 </div>
-                <div class="d-flex flex-row div1">
+                <div class="d-flex flex-row align-items-end div1">
                     <img class="imgcontact" src="/images/contactus_phon.png">
                     <div class="rigthtxtdiv">
                         <span><?=$GLOBALS['text']['contactPhone']?></span>
                         <p class="contactusNom">+ 374 12 533 361 </p>
                     </div>
                 </div>
-                <div class="d-flex flex-row">
+                <div class="d-flex flex-row align-items-end">
                     <img class="imgcontact" src="/images/contactus_email.png">
                     <div class="rigthtxtdiv">
                         <span><?=$GLOBALS['text']['contactEmail']?></span>
-                        <p class="contactusMail"> info@infoexpert.am</p>
+                        <p class="contactusMail">info@infoexpert.am</p>
                     </div>
                 </div>
             </div>

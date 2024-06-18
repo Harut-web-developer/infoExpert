@@ -468,7 +468,7 @@
         height: 40px;
     }
     .apply > a > span{
-        top: 14px;
+        /*top: 14px;*/
         font-size: 10px;
     }
 }
