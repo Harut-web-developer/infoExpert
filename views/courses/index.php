@@ -4,7 +4,7 @@ use yii\web\YiiAsset;
 
 /** @var yii\web\View $this */
 
-$this->registerCssFile('@web/css/courses.css?as=132');
+$this->registerCssFile('@web/css/courses.css?as=4');
 $this->registerJsFile('@web/js/courses.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);

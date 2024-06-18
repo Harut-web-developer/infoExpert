@@ -627,16 +627,19 @@
     .learnMobile > a{
         position: relative;
         text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .learnMobile > a > span{
         position: absolute;
         font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 900;
-        left: 0;
+        /*left: 0;*/
         width: 100%;
         text-align: center;
-        top: 15px;
+        /*top: 15px;*/
         color: #F36528;
     }
     .coursesBg{
@@ -1518,7 +1521,7 @@
     }
     .questionbutton > button > span{
         font-size: 10px;
-        top: 12px;
+        /*top: 12px;*/
     }
     .questionbutton{
         width: 101px;

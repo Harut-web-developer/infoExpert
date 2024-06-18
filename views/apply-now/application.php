@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/apply-now.css');
+$this->registerCssFile('@web/css/apply-now.css?v=1');
 ?>
 <div class="application">
     <div class="applicationTextFields">

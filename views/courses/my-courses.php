@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/courses.css');
+$this->registerCssFile('@web/css/courses.css?v=1');
 ?>
 <?php
 $language = $_COOKIE['language'];
@@ -270,8 +270,10 @@ if ($language == 'en') {
             </div>
         </div>
         <div class="containerSeeMoreMyCourses">
-            <img class="seeMoreBlog" src="/images/seeMoreBlog.png" alt="">
-            <span class="seeMoreText"><?= $GLOBALS['text']['sectionSixBtnMobile'] ?></span>
+            <button>
+                <img class="seeMoreBlog" src="/images/seeMoreBlog.png" alt="">
+                <span class="seeMoreText"><?= $GLOBALS['text']['sectionSixBtnMobile'] ?></span>
+            </button>
         </div>
     </div>
 </div>

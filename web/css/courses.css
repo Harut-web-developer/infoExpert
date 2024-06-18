@@ -1800,9 +1800,16 @@ ion-icon {
     .containerSeeMoreMyCourses{
         margin: 10px 0 41px;
         display: block;
-        position: relative;
         text-align: center;
         color: white;
+    }
+    .containerSeeMoreMyCourses > button{
+        position: relative;
+        background: transparent;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .myCoursesRating{
         height: 35px;
@@ -1819,9 +1826,9 @@ ion-icon {
     }
     .seeMoreText {
         position: absolute;
-        top: 48%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        /*top: 48%;*/
+        /*left: 50%;*/
+        /*transform: translate(-50%, -50%);*/
         color: #F36528;
         font-family: 'Roboto_',sans-serif;
         font-size: 12px;
@@ -1829,13 +1836,13 @@ ion-icon {
         line-height: 14.06px;
         width: max-content;
     }
-    .seeMoreText span{
-        color: #F36528;
-        font-family: 'Roboto_',sans-serif;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 14.06px;
-    }
+    /*.seeMoreText span{*/
+    /*    color: #F36528;*/
+    /*    font-family: 'Roboto_',sans-serif;*/
+    /*    font-size: 12px;*/
+    /*    font-weight: 500;*/
+    /*    line-height: 14.06px;*/
+    /*}*/
 }
 @media screen and (max-width: 380px) {
     .myCoursesBlocksField {

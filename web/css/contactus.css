@@ -223,6 +223,9 @@
     position: relative;
     background: transparent;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .bottoming > button > img{
     position: relative;
@@ -233,8 +236,8 @@
 .bottoming > button > span{
     color: #F36528;
     position: absolute;
-    top: 22px;
-    left: 0px;
+    /*top: 22px;*/
+    /*left: 0px;*/
     width: 100%;
     text-align: center;
     /*padding: 0 28px;*/
@@ -399,7 +402,7 @@ input[type="text"] {
         position: relative;
     }
     .bottoming > button > span{
-        top: 20px;
+        /*top: 20px;*/
     }
 }
 @media screen and (max-width: 900px) {
@@ -459,7 +462,7 @@ input[type="text"] {
         padding: 0;
         font-size: 10px;
         font-weight: 400;
-        line-height: 11.72px;
+        /*line-height: 11.72px;*/
     }
     .disinline, .sectionContactusTop {
         margin-top: 25px;
@@ -467,9 +470,9 @@ input[type="text"] {
     .div1 {
         margin: 24px 0;
     }
-    .bottoming > button > span {
-        top: 16px;
-    }
+    /*.bottoming > button > span {*/
+    /*    !*top: 16px;*!*/
+    /*}*/
     .contactUsTitleM{
         font-family: 'RobotoSlab_',sans-serif;
         font-size: 22px;

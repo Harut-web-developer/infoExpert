@@ -22,7 +22,7 @@
         height: 260px;
     }
     .spanHed{
-        font-family: Roboto Slab;
+        font-family: "RobotoSlab_",sans-serif;
         font-size: 48px;
         font-weight: 600;
         line-height: 63.3px;
@@ -31,7 +31,7 @@
         margin: 0;
     }
     .spanAllCourses{
-        font-family: Roboto;
+        font-family: "Roboto_",sans-serif;
         font-size: 35px;
         font-weight: 600;
         line-height: 41.02px;
@@ -40,7 +40,7 @@
         margin: 0;
     }
     .CongratulationApplyNowBtnField{
-        position: relative;
+        /*position: relative;*/
         width: max-content;
         text-align: center;
     }
@@ -48,19 +48,22 @@
         background: transparent;
         border: none;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .CongratulationApplyNowBtnField > a:hover img{
         content: url("../images/conbtnhover.png");
     }
     .CongratulationApplyNowBtnField > a > span{
         color: #F36528;
-        margin: 25px 0;
+        /*margin: 25px 0;*/
         position: absolute;
-        left: 0px;
-        font-family: 'Roboto';
+        /*left: 0px;*/
+        font-family: 'Roboto_',sans-serif;
         font-size: 13px;
         font-weight: 600;
-        line-height: 18.2px;
+        /*line-height: 18.2px;*/
         text-align: center;
         text-decoration: none;
         width: 100%;
@@ -74,11 +77,11 @@
         }
 
         .CongratulationApplyNowBtnField > a > span {
-            font-family: 'Roboto';
+            font-family: 'Roboto_',sans-serif;
             font-size: 8px;
             font-weight: 600;
-            line-height: 9.38px;
-            margin: 16px 0;
+            /*line-height: 9.38px;*/
+            /*margin: 16px 0;*/
         }
 
         .congratulation {
@@ -89,13 +92,13 @@
             height: 40px;
             padding-top: 0;
         }
-        .CongratulationApplyNowBtnField > button > span > a{
+        .CongratulationApplyNowBtnField > a > span{
             font-size: 8px;
             font-weight: 600;
-            line-height: 9.38px;
+            /*line-height: 9.38px;*/
             text-align: left;
             width: max-content;
-            margin: 15px 16px;
+            /*margin: 15px 16px;*/
         }
         .CongratulationApplyNowBtnField img{
             width: 93.73px;

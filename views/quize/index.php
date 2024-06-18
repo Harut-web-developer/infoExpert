@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/quize.css');
+$this->registerCssFile('@web/css/quize.css?v=2');
 ?>
 
 <div class="quize">

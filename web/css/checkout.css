@@ -258,6 +258,9 @@
     background: transparent;
     border: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .checkoutTotalFieldInfoBottom > button:hover img{
     content: url("../images/sumBtnCheckouthover.png");
@@ -268,9 +271,9 @@
     font-weight: 500;
     color: #F36528;
     position: absolute;
-    left: 0;
+    /*left: 0;*/
     text-align: center;
-    margin: 15px 0px;
+    /*margin: 15px 0px;*/
     width: 100%;
 }
 .checkoutTotalFieldInfoBottom > button:hover span{
@@ -607,7 +610,7 @@
     .checkoutTotalFieldInfoBottom > button > span{
         font-size: 10px;
         font-weight: 500;
-        line-height: 11.72px;
+        /*line-height: 11.72px;*/
         text-align: center;
     }
     .checkoutTotalFieldInfo {

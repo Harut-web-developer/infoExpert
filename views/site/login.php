@@ -4,7 +4,7 @@
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
-$this->registerCssFile('@web/css/login.css');
+$this->registerCssFile('@web/css/login.css?v=1');
 if (isset($_COOKIE['email'])){
     $email = $_COOKIE['email'];
 }else{

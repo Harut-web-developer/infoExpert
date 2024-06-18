@@ -167,6 +167,9 @@
     background: transparent;
     border: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*.managementBtnDiv > button > img{*/
 /*    width: 152px;*/
@@ -174,6 +177,9 @@
 /*}*/
 .managementBtnDivCourse > a{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*.managementBtnDivCourse > a > img{*/
 /*    width: 152px;*/
@@ -190,8 +196,8 @@
     font-weight: 700;
     font-family: "Tahoma", sans-serif;
     position: absolute;
-    left: 0px;
-    top: 20px;
+    /*left: 0px;*/
+    /*top: 20px;*/
     width: 100%;
     text-align: center;
     color: #F36528;
@@ -201,8 +207,8 @@
     font-weight: 700;
     font-family: "Tahoma", sans-serif;
     position: absolute;
-    left: 0px;
-    top: 0px;
+    /*left: 0px;*/
+    /*top: 0px;*/
     width: 100%;
     text-align: center;
     color: white;
@@ -607,8 +613,8 @@ ion-icon {
         font-family: 'Roboto_',sans-serif;
         font-size: 10px;
         font-weight: 900;
-        line-height: 11.72px;
-        top: 7.5px;
+        /*line-height: 11.72px;*/
+        /*top: 7.5px;*/
     }
     /*.bottomImages img {*/
     /*    width: 102px;*/
@@ -638,9 +644,9 @@ ion-icon {
         margin: 0;
         padding: 0;
     }
-    .managementBtnDiv > button > span{
-        top: 17px;
-    }
+    /*.managementBtnDiv > button > span{*/
+    /*    !*top: 17px;*!*/
+    /*}*/
     .ellipseButton {
         display: block;
         position: absolute;
@@ -694,7 +700,7 @@ ion-icon {
     .amdFix {
         font-size: 13px;
     }
-    .managementBtnDiv > button > span {
-        top: 15px;
-    }
+    /*.managementBtnDiv > button > span {*/
+    /*    top: 15px;*/
+    /*}*/
 }

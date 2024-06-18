@@ -60,6 +60,9 @@
     background: transparent;
     outline: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .btnQuize > img{
     width: 132px;
@@ -74,13 +77,13 @@
 .btnQuize > span{
     color: #F36528;
     position: absolute;
-    top: 16px;
-    left: 0px;
+    /*top: 16px;*/
+    /*left: 0px;*/
     width: 100%;
     font-family: 'Roboto_',sans-serif;
     font-size: 15px;
     font-weight: 700;
-    line-height: 18.11px;
+    /*line-height: 18.11px;*/
 }
 
 /* result page css */
@@ -296,7 +299,7 @@
     }
     .btnQuize > span {
         font-size: 13px;
-        top: 12px;
+        /*top: 12px;*/
     }
     .btnQuize > img {
         width: 110px;
@@ -449,7 +452,7 @@
         font-family: 'Roboto_',sans-serif;
         font-size: 8px;
         font-weight: 700;
-        line-height: 9.66px;
+        /*line-height: 9.66px;*/
         /*top: 17px;*/
     }
 }

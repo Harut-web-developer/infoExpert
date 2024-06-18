@@ -1203,6 +1203,9 @@
 }
 .managementBtn > a{
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .managementBtn > a:hover img{
     content: url("../images/logomanaghover.png");
@@ -1212,10 +1215,10 @@
     font-family: "Roboto_",sans-serif;
     font-size: 20px;
     font-weight: 900;
-    left: 0;
+    /*left: 0;*/
     width: 100%;
     text-align: center;
-    top: 0px;
+    /*top: 0px;*/
     color: #F36528;
 }
 .managementBtn > a:hover span{
@@ -1549,18 +1552,21 @@
     background: transparent;
     border: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .testimonialMobileBtn > button:hover img{
     content: url("../images/mobileSeeMore.png");
 }
 .testimonialMobileBtn > button > span{
     position: absolute;
-    left: 0;
-    top: 11px;
+    /*left: 0;*/
+    /*top: 11px;*/
     font-family: "Roboto_", sans-serif;
     font-size: 12px;
     font-weight: 500;
-    line-height: 14.06px;
+    /*line-height: 14.06px;*/
     width: 100%;
     text-align: center;
     color: #F36528;
@@ -1572,18 +1578,21 @@
     background: transparent;
     border: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .blogsMobileBtn > button:hover img{
     content: url("../images/mobileSeeMore.png");
 }
 .blogsMobileBtn > button > span{
     position: absolute;
-    left: 0;
-    top: 11px;
+    /*left: 0;*/
+    /*top: 11px;*/
     font-family: "Roboto_", sans-serif;
     font-size: 12px;
     font-weight: 500;
-    line-height: 14.06px;
+    /*line-height: 14.06px;*/
     width: 100%;
     text-align: center;
     color: #F36528;
@@ -1663,14 +1672,17 @@
 }
 .blogBtn > a{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .blogBtn > a:hover img{
     content: url("../images/articlebtnhover.png");
 }
 .blogBtn > a > span{
     position: absolute;
-    top: 0px;
-    left: 0;
+    /*top: 0px;*/
+    /*left: 0;*/
     width: 100%;
     text-align: center;
     font-family: "Roboto_",sans-serif;
@@ -1815,6 +1827,9 @@
     border: none;
     background: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .questionbutton > button > img{
     width: 145px;
@@ -1826,15 +1841,14 @@
 }
 .questionbutton > button > span{
     position: absolute;
-    left: 0;
+    /*left: 0;*/
     width: 100%;
-    top: 17px;
+    /*top: 17px;*/
     text-align: center;
     font-family: "Roboto_",sans-serif;
     font-size: 16px;
     color: #F36528;
     font-weight: 500;
-    /*margin: 28px 28px;*/
 }
 .questionbutton > button:hover span{
     color: white;

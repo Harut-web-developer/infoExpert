@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/security.css');
+$this->registerCssFile('@web/css/security.css?v=1');
 ?>
 
 <div class="securitySection">

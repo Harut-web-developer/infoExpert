@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/trade-management.css');
+$this->registerCssFile('@web/css/trade-management.css?v=1');
 ?>
 <div class="tradeManagement">
     <div class="bodyTradeManagement">

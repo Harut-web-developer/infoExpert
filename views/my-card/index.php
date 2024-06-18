@@ -3,7 +3,7 @@ use yii\web\View;
 use yii\web\YiiAsset;
 
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/my-card.css?as=132');
+$this->registerCssFile('@web/css/my-card.css?v=5');
 
 $this->registerJsFile('@web/js/my-card.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
@@ -395,7 +395,7 @@ if ($language == 'en') {
                     <span><?=$GLOBALS['text']['myCardTotal']?>:  $70000</span>
                     <button>
                         <img src="/images/btncheckoutcard.png" alt="">
-                        <a href="/my-card/checkout"><?=$GLOBALS['text']['myCardCheckout']?></a>
+                        <span><?=$GLOBALS['text']['myCardCheckout']?></span>
                     </button>
                 </div>
             </div>

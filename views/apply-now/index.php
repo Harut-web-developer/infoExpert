@@ -1,6 +1,6 @@
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/apply-now.css?v=1');
+$this->registerCssFile('@web/css/apply-now.css?v=2');
 ?>
 <div class="applyOne">
     <form class="appleFields" action="/apply-now/apply-application">

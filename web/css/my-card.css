@@ -48,6 +48,9 @@
     background: transparent;
     border: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .myCardTotalPrice > button:hover img{
     content: url("../images/btncheckoutcardhover.png");
@@ -60,10 +63,10 @@
     color: white;
     margin-right: 10px;
 }
-.myCardTotalPrice > button > a{
+.myCardTotalPrice > button > span{
     position: absolute;
-    left: 0;
-    top: 14px;
+    /*left: 0;*/
+    /*top: 14px;*/
     width: 100%;
     text-align: center;
     font-size: 16px;
@@ -72,7 +75,7 @@
     color: #F36528;
     text-decoration: none;
 }
-.myCardTotalPrice > button:hover a{
+.myCardTotalPrice > button:hover span{
     color: white;
 }
 .userProfileMenuField{
@@ -960,9 +963,9 @@ ion-icon {
         height: 34px;
         width: 80px;
     }
-    .myCardTotalPrice > button > a{
+    .myCardTotalPrice > button > span{
         font-size: 12px;
-        top: 8px;
+        /*top: 8px;*/
     }
     .starDiv {
         width: 57px;

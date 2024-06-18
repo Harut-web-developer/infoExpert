@@ -4,7 +4,7 @@
 
 $this->title = 'Sign-up';
 $this->params['breadcrumbs'][] = $this->title;
-$this->registerCssFile('@web/css/login.css');
+$this->registerCssFile('@web/css/login.css?v=1');
 
 ?>
 <?php
