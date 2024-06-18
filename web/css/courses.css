@@ -1729,6 +1729,9 @@ ion-icon {
         display: block;
         position: absolute;
     }
+    .coursesMobBackButton{
+        display: contents;
+    }
     .backButton {
         width: 30px;
         height: 30px;

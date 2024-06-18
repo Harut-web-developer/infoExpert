@@ -117,38 +117,6 @@ $this->registerCssFile('@web/css/alumni.css');
                         <img src="/images/alumniin.png">
                     </div>
                 </div>
-                <div class="swiper-slide card_ hideMobile">
-                    <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
-                    <div class="card-info">
-                        <p class="nameCard">Manana Davtyan</p>
-                        <p class="textCard">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet. Venenatis massa netus viverra turpis tortor arcu. </p>
-                        <img src="/images/alumniin.png">
-                    </div>
-                </div>
-                <div class="swiper-slide card_ hideMobile">
-                    <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
-                    <div class="card-info">
-                        <p class="nameCard">Manana Davtyan</p>
-                        <p class="textCard">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet. Venenatis massa netus viverra turpis tortor arcu. </p>
-                        <img src="/images/alumniin.png">
-                    </div>
-                </div>
-                <div class="swiper-slide card_ hideMobile">
-                    <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
-                    <div class="card-info">
-                        <p class="nameCard">Manana Davtyan</p>
-                        <p class="textCard">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet. Venenatis massa netus viverra turpis tortor arcu. </p>
-                        <img src="/images/alumniin.png">
-                    </div>
-                </div>
-                <div class="swiper-slide card_ hideMobile">
-                    <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
-                    <div class="card-info">
-                        <p class="nameCard">Manana Davtyan</p>
-                        <p class="textCard">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet. Venenatis massa netus viverra turpis tortor arcu. </p>
-                        <img src="/images/alumniin.png">
-                    </div>
-                </div>
             </div>
             <img src="/images/seeMoreAlumni.png" alt="" class="seeMoreAlumni">
             <div class="swiper-pagination"></div>
@@ -158,7 +126,7 @@ $this->registerCssFile('@web/css/alumni.css');
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper(".mySwiper", {
@@ -173,6 +141,7 @@ $this->registerCssFile('@web/css/alumni.css');
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
+
         },
         breakpoints: {
             780: {
@@ -219,5 +188,9 @@ $this->registerCssFile('@web/css/alumni.css');
     });
     if (window.innerWidth <= 600) {
         swiper.destroy();
+    }
+    if ($('.swiper-slide').length > 60) {
+        swiper.pagination.destroy();
+        $('.swiper-pagination').css('display','none');
     }
 </script>
