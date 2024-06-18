@@ -372,7 +372,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                     Enim egestas tellus risus quis ut </div>
                                 <div class="fieldsLinkdin">
                                     <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                    <a href=""><img src="/images/linkdinNew.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -388,7 +388,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                     Enim egestas tellus risus quis ut </div>
                                 <div class="fieldsLinkdin">
                                     <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                    <a href=""><img src="/images/linkdinNew.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -404,7 +404,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                     Enim egestas tellus risus quis ut </div>
                                 <div class="fieldsLinkdin">
                                     <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                    <a href=""><img src="/images/linkdinNew.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -420,7 +420,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                     Enim egestas tellus risus quis ut </div>
                                 <div class="fieldsLinkdin">
                                     <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                    <a href=""><img src="/images/linkdinNew.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -436,7 +436,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                     Enim egestas tellus risus quis ut </div>
                                 <div class="fieldsLinkdin">
                                     <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                    <a href=""><img src="/images/linkdin.png" alt=""></a>
+                                    <a href=""><img src="/images/linkdinNew.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -462,7 +462,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                         Enim egestas tellus risus quis ut </div>
                     <div class="fieldsLinkdin">
                         <span class="testimonialsAuthor">Lorem Ipsum</span>
-                        <a href=""><img src="/images/linkdin.png" alt=""></a>
+                        <a href=""><img src="/images/linkdinNew.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -476,7 +476,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                         Enim egestas tellus risus quis ut </div>
                     <div class="fieldsLinkdin">
                         <span class="testimonialsAuthor">Lorem Ipsum</span>
-                        <a href=""><img src="/images/linkdin.png" alt=""></a>
+                        <a href=""><img src="/images/linkdinNew.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -490,7 +490,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                         Enim egestas tellus risus quis ut </div>
                     <div class="fieldsLinkdin">
                         <span class="testimonialsAuthor">Lorem Ipsum</span>
-                        <a href=""><img src="/images/linkdin.png" alt=""></a>
+                        <a href=""><img src="/images/linkdinNew.png" alt=""></a>
                     </div>
                 </div>
             </div>

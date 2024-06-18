@@ -23,20 +23,20 @@ $(".menuCoursesDropDown").hover(function(){
 //         });
 //     }
 // });
-$(".questionField").click(function() {
-    var panel = $(this).next(".answerQuestion");
+$(".answersField").click(function() {
+    var panel = $(this).children(".answerQuestion");
     $(".answerQuestion").not(panel).css("display", "none");
     $(".answerQuestion").not(panel).closest('.answersField').find('.questionField span').css({
         'color': 'white',
-        'font-family': '"Exo", sans-serif',
+        'font-family': '"Roboto_", sans-serif',
         'line-height': '19.2px'
     });
     $(".questions").find('img').css('transform', 'rotate(0deg)');
     panel.toggle();
-    $(this).find('img').css('transform', panel.is(":visible") ? 'rotate(180deg)' : 'rotate(0deg)');
-    $(this).find('span').css({
+    $(this).children('.questionField').find('img').css('transform', panel.is(":visible") ? 'rotate(180deg)' : 'rotate(0deg)');
+    $(this).children('.questionField').find('span').css({
         'color': panel.is(":visible") ? '#FF782D' : 'white',
-        'font-family': 'Exo, sans-serif',
+        'font-family': 'Roboto_, sans-serif',
         'line-height': '19.2px'
     });
 });

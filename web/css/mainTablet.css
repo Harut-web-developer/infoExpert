@@ -671,8 +671,8 @@
         width: 15px;
     }
     .fieldsLinkdin > a > img{
-        width: 27px;
-        height: 21px;
+        width: 17px;
+        height: 15px;
     }
     .testimonialsText {
         width: 100%;
@@ -792,7 +792,7 @@
 @media only screen and (min-width: 600px) and (max-width: 949px) {
     .intoBlockTestimonial {
         width: 81%;
-        height: calc(100% / 2 + 8px);
+        height: calc(100% / 2 + 5px);
         display: flex;
         margin: 7% 11px 0 0;
         padding: 0;
@@ -875,7 +875,7 @@
         white-space: pre-wrap;
     }
     .fieldsLinkdin > a > img{
-        width: 28px;
+        width: 22px;
     }
 }
 @media screen and (max-width: 1080px){
