@@ -23,6 +23,9 @@
     color: white;
     text-decoration: none;
 }
+#creditCheckbox{
+    accent-color: #F36528;
+}
 .managmentBack{
     display: contents;
 }

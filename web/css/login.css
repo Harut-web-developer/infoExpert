@@ -5,6 +5,12 @@
 .signupFormTitle{
     display: none;
 }
+.mainCheck > input{
+    accent-color: #F36528;
+}
+.rememberSignupField > input{
+    accent-color: #F36528;
+}
 .login {
     width: 100%;
     height: 1088px;
