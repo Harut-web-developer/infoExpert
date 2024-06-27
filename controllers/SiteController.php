@@ -2,6 +2,11 @@
 
 namespace app\controllers;
 
+use app\models\AcAnswers;
+use app\models\AcBlog;
+use app\models\AcLessons;
+use app\models\AcPartners;
+use app\models\AcReviews;
 use app\models\Texts;
 use app\models\User;
 use Codeception\Lib\Generator\PageObject;
@@ -106,7 +111,42 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $language = $_COOKIE['language'];
+        $lessons = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+        $partners = AcPartners::find()->asArray()->all();
+        $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])->asArray()->all();
+        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => null])->asArray()->all();
+        $total_rows_faq = count($answers);
+        $middle_index_faq = floor($total_rows_faq / 2);
+        $first_part_faq = array_slice($answers, 0, $middle_index_faq);
+        $second_par_faq = array_slice($answers, $middle_index_faq);
+        $blogs = AcBlog::find()->select([
+            'id',
+            'page_name_' . $language . ' as page_name',
+            'page_title_' . $language . ' as page_title',
+            'page_content_' . $language . ' as page_content',
+            "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
+            'img'
+        ])->where(['status' => '1'])->limit(3)->asArray()->all();
+        $blogs_mobile = AcBlog::find()->select([
+            'id',
+            'page_name_' . $language . ' as page_name',
+            'page_title_' . $language . ' as page_title',
+            'page_content_' . $language . ' as page_content',
+            "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
+            'img'
+        ])->where(['status' => '1'])->asArray()->all();
+        return $this->render('index',[
+            'partners' => $partners,
+            'testimonials' => $testimonials,
+            'first_part_faq' => $first_part_faq,
+            'second_par_faq' => $second_par_faq,
+            'total_rows_faq' => $total_rows_faq,
+            'answers' => $answers,
+            'blogs' => $blogs,
+            'blogs_mobile' => $blogs_mobile,
+            'lessons' => $lessons
+        ]);
     }
 
     /**

@@ -231,32 +231,6 @@ if (window.location.pathname == '/') {
         }
     });
 
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const slider = document.querySelector('.sliderCourses');
-        slider.innerHTML += slider.innerHTML; // Duplicate the slides for continuous effect
-
-        let position = 0;
-        const slideWidth = slider.offsetWidth / 2;
-        const pauseTime = 3000; // Pause for 5 seconds
-        const slideSpeed = 3; // Adjust the speed as necessary
-
-        function animateSlider() {
-            position -= slideSpeed;
-            if (position <= -slideWidth) {
-                position = 0;
-                slider.style.transition = 'none'; // Disable transition to reset position instantly
-                slider.style.transform = `translateX(${position}px)`;
-                setTimeout(() => {
-                    slider.style.transition = ''; // Re-enable transition after pause
-                    requestAnimationFrame(animateSlider);
-                }, pauseTime);
-            } else {
-                slider.style.transform = `translateX(${position}px)`;
-                requestAnimationFrame(animateSlider);
-            }
-        }
-        animateSlider();
-    });
 }
 document.querySelectorAll('#section01 ion-icon').forEach(icon => {
     icon.addEventListener('click', function() {
@@ -440,6 +414,38 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 3000,
     });
+    // $('.single-item').slick({
+    //     // slidesToShow: 1,
+    //     // slidesToScroll: 1,
+    //     // autoplay: true,
+    //     // autoplaySpeed: 7000,
+    // });
+    if (window.location.pathname == '/') {
+        // if($(window).width() < 599) {
+            window.onload=function(){
+                $('.sectionThree .slider').slick({
+                    autoplay:true,
+                    autoplaySpeed:1500,
+                    arrows:false,
+                    slidesToShow:1,
+                    slidesToScroll:1
+                });
+            };
+        // }else{
+        //     window.onload=function(){
+        //         $('.sliderCourses .slider').slick({
+        //             autoplay:true,
+        //             autoplaySpeed:1500,
+        //             arrows:false,
+        //             slidesToShow:1,
+        //             slidesToScroll:1
+        //         });
+        //     };
+        // }
+    }
+
+
+
     if ($('.individualCards').length >= 4 && $(window).width() >= 1024){
         $('.individualCards').last().css('display', 'none');
     }
@@ -480,6 +486,7 @@ $(document).ready(function () {
     $('.btn-search').on('click', function () {
         $('.input-search').focus();
     })
+
 })
 
 function lessonsFieldFixed(){
@@ -498,4 +505,66 @@ function lessonsFieldFixed(){
         }
     });
 }
+if (window.location.pathname == '/') {
+    let seeMoreBtnTestimonial = document.querySelector('#testimonialBtnMobile');
+    let testimonial = [...document.querySelectorAll('.mobileTestimonial .blockTestimonialMobile')];
+    let currentItem = 2;
+    if (currentItem >= testimonial.length) {
+        seeMoreBtnTestimonial.style.display = 'none';
+    }
+    seeMoreBtnTestimonial.onclick = () => {
+        let itemsToShow = 2;
+        for (let i = currentItem; i < currentItem + itemsToShow; i++) {
+            if (i < testimonial.length) {
+                testimonial[i].style.display = 'flex';
+            }
+        }
+        currentItem += itemsToShow;
+        if (currentItem >= testimonial.length) {
+            seeMoreBtnTestimonial.style.display = 'none';
+        }
+    }
+    let seeMoreBtnBlogs = document.querySelector('#blogsBtnMobile');
+    let blogs = [...document.querySelectorAll('.sectionBlogMobile .blogsCard .individualCards')];
+    let currentItemBlogs = 2;
+    if (currentItemBlogs >= blogs.length) {
+        seeMoreBtnBlogs.style.display = 'none';
+    }
+    seeMoreBtnBlogs.onclick = () => {
+        let itemsToShow = 2;
+        for (let i = currentItemBlogs; i < currentItemBlogs + itemsToShow; i++) {
+            if (i < blogs.length) {
+                blogs[i].style.display = 'block';
+            }
+        }
+        currentItemBlogs += itemsToShow;
+        if (currentItemBlogs >= blogs.length) {
+            seeMoreBtnBlogs.style.display = 'none';
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

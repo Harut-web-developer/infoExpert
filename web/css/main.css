@@ -1178,11 +1178,14 @@
 }
 .learn{
     top: 188px;
-    /*width: 92%;*/
+    width: 94%;
     height: 639px;
     position: relative;
-    display: flex;
+    display: flex !important;
     flex-direction: row;
+}
+.slick-list{
+    overflow: unset !important;
 }
 .learnInfo{
     width: 58%;
@@ -1232,7 +1235,7 @@
     position: relative;
     width: 100%;
     height: 162px;
-    top: 40px;
+    top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1252,8 +1255,9 @@
     font-width: 400;
 }
 .logoManagement{
-    width: 515px;
-    height: 124px;
+    width: 870px;
+    /*height: 124px;*/
+    height: min-content;
     display: flex;
     flex-direction: row;
 }
@@ -1264,7 +1268,7 @@
     margin-top:10px;
 }
 .courseTitle{
-    width:401px;
+    width: 100%;
     padding-left:22px;
     display: flex;
     flex-direction: column;
@@ -1946,16 +1950,16 @@
     position: relative;
 }
 
-.sliderCourses {
-    display: flex;
-    width: 200%; /* Enough space to animate */
-    animation: slide 10s linear infinite;
-}
+/*.sliderCourses {*/
+/*    display: flex;*/
+/*    width: 200%; !* Enough space to animate *!*/
+/*    animation: slide 10s linear infinite;*/
+/*}*/
 
-.learn {
-    flex: 0 0 50%; /* Each item takes up 50% of the slider's width */
-    box-sizing: border-box; /* Adjust according to the number of elements */
-}
+/*.learn {*/
+/*    flex: 0 0 50%; !* Each item takes up 50% of the slider's width *!*/
+/*    box-sizing: border-box; !* Adjust according to the number of elements *!*/
+/*}*/
 
 @keyframes slide {
     0%, 10% { /* Start and pause */

@@ -77,3 +77,21 @@ $(document).ready(function() {
         window.location.href = '/my-card/checkout';
     })
 })
+let seeMoreBtnCourses = document.querySelector('#coursesBtnMobile');
+let courses = [...document.querySelectorAll('.cardCoursesMobile .cardCourses')];
+let currentItemCourses = 2;
+if (currentItemCourses >= courses.length) {
+    seeMoreBtnCourses.style.display = 'none';
+}
+seeMoreBtnCourses.onclick = () => {
+    let itemsToShow = 2;
+    for (let i = currentItemCourses; i < currentItemCourses + itemsToShow; i++) {
+        if (i < courses.length) {
+            courses[i].style.display = 'block';
+        }
+    }
+    currentItemCourses += itemsToShow;
+    if (currentItemCourses >= courses.length) {
+        seeMoreBtnCourses.style.display = 'none';
+    }
+}

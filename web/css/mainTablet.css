@@ -171,6 +171,26 @@
     }
 }
 /*sectionThree*/
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .learn{
+        top: 125px;
+        width: 98% !important;
+        height: 341px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media only screen and (min-width: 801px) and (max-width: 1024px) {
+    .learn{
+        top: 125px;
+        width: 88% !important;
+        height: 341px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+}
     @media only screen and (min-width: 600px) and (max-width: 1024px)  {
     .sectionThree{
         background-image: url("../images/bgTablet.png");
@@ -180,23 +200,15 @@
         width: 100%;
         height: 609px;
     }
-    .learn{
-        top: 141px;
-        width: 88%;
-        height: 304px;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-    }
     .learnInfo{
-        width: 49%;
+        width: 53%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
     .learnImg{
-        width: 51%;
+        width: 47%;
         display: flex;
         flex-direction: row;
         justify-content: end;
@@ -254,8 +266,8 @@
         font-width: 400;
     }
     .logoManagement{
-        width: 265px;
-        height: 52px;
+        width: min-content;
+        height: max-content;
         display: flex;
         flex-direction: row;
     }
@@ -263,12 +275,13 @@
         width: 45px;
     }
     .courseLogo > img{
+        margin-left: 16px;
         /*margin-top:10px;*/
         width: 100%;
         height: 21px;
     }
     .courseTitle{
-        width:159px;
+        width:100%;
         padding-left:21px;
         display: flex;
         flex-direction: column;
@@ -369,7 +382,7 @@
 }
 /*sectionthree */
 @media only screen and (min-width: 600px) {
-    .learnMobile{
+    .sliderCoursesMobile{
         display: none;
     }
 }
@@ -408,7 +421,7 @@
     }
     .learn{
         top: 100px;
-        width: 88%;
+        width: 96% !important;
         height: 600px;
         position: relative;
         display: flex;
@@ -444,23 +457,23 @@
         font-width: 400;
     }
     .courseLogo{
-        width: 112px;
+        width: 80px;
     }
     .courseLogo > img{
         margin-top:15px;
-        margin-left:40px;
+        /*margin-left:40px;*/
         width: 80px;
     }
     .courseTitle{
-        width:401px;
-        padding-left:65px;
+        width: 100%;
+        padding-left:30px;
         display: flex;
         flex-direction: column;
         align-items: start;
     }
     .courseTitle > span{
         -webkit-text-stroke: 2px white;
-        font-size: 38px;
+        font-size: 30px;
         font-weight: 900;
         letter-spacing: 4px;
         color: transparent;
@@ -478,7 +491,9 @@
         width: 100%;
         text-align: center;
         color: #F36528;
-
+    }
+    .logoManagement {
+        width: 520px;
     }
 }
 @media only screen and (min-width: 1301px) and (max-width: 1660px) {
@@ -492,15 +507,18 @@
     }
     .learn{
         top: 188px;
-        width: 88%;
+        width: 94% !important;
         height: 639px;
         position: relative;
         display: flex;
         flex-direction: row;
     }
+    .logoManagement {
+        width: 600px;
+    }
     .learnImg > img {
-        width: 490px;
-        height: 490px;
+        width: 430px;
+        height: 430px;
     }
     .coursesBg{
         background-image: url('../images/rec.png');
@@ -538,8 +556,8 @@
         width: 90px;
     }
     .courseTitle{
-        width:401px;
-        padding-left:50px;
+        width:100%;
+        padding-left: 25px;
         display: flex;
         flex-direction: column;
         align-items: start;

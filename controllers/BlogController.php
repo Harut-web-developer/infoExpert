@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\AcBlog;
 use Yii;
 use app\models\Texts;
 
@@ -44,10 +45,41 @@ class BlogController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-        return $this->render('index');
+        $language = $_COOKIE['language'];
+        $blogs = AcBlog::find()->select([
+            'id',
+            'page_name_' . $language . ' as page_name',
+            'page_title_' . $language . ' as page_title',
+            'page_content_' . $language . ' as page_content',
+            "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
+            'img'
+        ])->where(['status' => '1'])->asArray()->all();
+        $blogsMobile = AcBlog::find()->select([
+            'id',
+            'page_name_' . $language . ' as page_name',
+            'page_title_' . $language . ' as page_title',
+            'page_content_' . $language . ' as page_content',
+            "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
+            'img'
+        ])->where(['status' => '1'])->asArray()->all();
+        return $this->render('index',[
+            'blogs' => $blogs,
+            'blogsMobile' => $blogsMobile
+            ]);
     }
     public function actionCategorie()
     {
-        return $this->render('categorie');
+        $language = $_COOKIE['language'];
+        $blogs = AcBlog::find()->select([
+            'id',
+            'page_name_' . $language . ' as page_name',
+            'page_title_' . $language . ' as page_title',
+            'page_content_' . $language . ' as page_content',
+            "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
+            'img'
+        ])->where(['status' => '1'])->andWhere(['id' => $_GET['id']])->asArray()->one();
+        return $this->render('categorie',[
+            'blogs' => $blogs
+        ]);
     }
 }

@@ -11,7 +11,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
                 <img class="backButton" src="/images/backButton.png" alt="">
             </a>
-            Grid of different categories of accounting lessons
+            <?=$blogs['page_title']?>
             <div class='large-font'>
                 <ion-icon name="heart">
                     <div class='red-bg'></div>
@@ -19,16 +19,15 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             </div>
         </h1>
 
-        <p class="date"> <img src="/images/date.png"> Jan 24, 2025</p>
+        <span class="date">
+            <img src="/images/date.png">
+            <span class="dateNumber"> <?=$blogs['create_date']?></span>
+        </span>
     </div>
     <div class="sectionCategorie">
         <div class="sectionCategorieLeft">
-            <img class="categorieImage" src="/images/img_categorie.png">
-            <div class="categorieText">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel enim eu turpis imperdiet. </p>
-                <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus</p>
-            </div>
+            <img class="categorieImage" src="/<?=$blogs['img']?>">
+            <div class="categorieText"><?=$blogs['page_content']?></div>
         </div>
         <div class="sectionCategorieRight">
             <div class="categorieTitleDivRight">

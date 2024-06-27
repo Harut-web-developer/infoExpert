@@ -604,14 +604,14 @@
         width: 100%;
         height: 812px;
     }
-    .learn{
+    .sliderCourses{
         display: none;
     }
     .learnMobile{
         margin-top: 83px;
         width: 100%;
         height: 646px;
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -659,8 +659,8 @@
         text-align: center;
     }
     .logoManagement{
-        height: 52px;
-        width: max-content;
+        height: max-content;
+        width: 90%;
     }
     .courseLogo {
         width: 50px;
@@ -671,7 +671,7 @@
     }
     .courseTitle{
         width: max-content;
-        height: 52px;
+        height: min-content;
     }
     .courseTitle > span{
         font-size: 20px;
@@ -1103,6 +1103,11 @@
 @media only screen and (min-width: 270px) and (max-width: 599px) {
     .blockTestimonialMobile{
         position: relative;
+        display: none;
+    }
+    .blockTestimonialMobile:nth-child(1),
+    .blockTestimonialMobile:nth-child(2){
+        display: flex;
     }
     .mobileTestimonial{
         margin-top: 45px;
@@ -1209,7 +1214,7 @@
 /*start sectionseven css*/
 @media only screen and (min-width: 300px) and (max-width: 360px) {
     .individualCards {
-        margin: 0px auto 29px;
+        margin: 0px auto 29px !important;
         border-radius: 30px;
         width: 89%;
         height: 276px;
@@ -1230,7 +1235,7 @@
 }
 @media only screen and (min-width: 361px) and (max-width: 400px) {
     .individualCards {
-        margin: 0px auto 29px;
+        margin: 0px auto 29px !important;
         border-radius: 30px;
         width: 80%;
         height: 276px;
@@ -1251,7 +1256,7 @@
 }
 @media only screen and (min-width: 401px) and (max-width: 440px) {
     .individualCards {
-        margin: 0px auto 29px;
+        margin: 0px auto 29px !important;
         border-radius: 30px;
         width: 73%;
         height: 276px;
@@ -1272,7 +1277,7 @@
 }
 @media only screen and (min-width: 441px) and (max-width: 480px) {
     .individualCards {
-        margin: 0px auto 29px;
+        margin: 0px auto 29px !important;
         border-radius: 30px;
         width: 66%;
         height: 276px;
@@ -1293,7 +1298,7 @@
 }
 @media only screen and (min-width: 481px) and (max-width: 520px) {
     .individualCards {
-        margin: 0px auto 29px;
+        margin: 0px auto 29px !important;
         border-radius: 30px;
         width: 59%;
         height: 276px;
@@ -1314,7 +1319,7 @@
 }
 @media only screen and (min-width: 521px) and (max-width: 560px) {
     .individualCards {
-        margin: 0px auto 29px;
+        margin: 0px auto 29px !important;
         border-radius: 30px;
         width: 52%;
         height: 276px;
@@ -1335,7 +1340,7 @@
 }
 @media only screen and (min-width: 561px) and (max-width: 599px) {
     .individualCards {
-        margin: 0px auto 29px;
+        margin: 0px auto 29px !important;
         border-radius: 30px;
         width: 45%;
         height: 276px;
@@ -1356,6 +1361,13 @@
 
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
+    .individualCards{
+        display: none;
+    }
+    .individualCards:nth-child(1),
+    .individualCards:nth-child(2){
+        display: block;
+    }
     .sectionBlog{
         display: none;
     }

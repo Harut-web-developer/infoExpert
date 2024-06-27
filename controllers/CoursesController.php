@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\AcLessons;
 use Yii;
 use app\models\Texts;
 
@@ -46,7 +47,15 @@ class CoursesController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-        return $this->render('index');
+        $language = $_COOKIE['language'];
+        $courses = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name,
+         lesson_title_'.$language.' as lesson_title, lesson_content_'.$language.' as lesson_content')
+            ->where(['status' => '1'])
+            ->asArray()
+            ->all();
+        return $this->render('index',[
+            'courses' => $courses
+        ]);
     }
 
     public function actionMyCourses()

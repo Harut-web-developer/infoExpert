@@ -27,7 +27,7 @@
 .mobilebtn > button{
     background: transparent;
     border: none;
-    margin: 44px auto 42px;
+    margin: 0px auto 42px;
 }
 .headerCourses{
     width: 67%;
@@ -265,6 +265,14 @@
     line-height: 19.84px;
     text-align: left;
     color: #FFFFFF;
+    width: 100%;
+    height: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
 }
 .cardtxt2{
     display: flex;
@@ -283,6 +291,14 @@
     line-height: 19.84px;
     text-align: left;
     color: #FFFFFF;
+    width: 100%;
+    height: 22px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
 }
 .starAndTxt{
     display: flex;
@@ -878,17 +894,19 @@ ion-icon {
         width: 260px;
     }
     .cardtxt1 span{
+        height: 33px;
         font-family: "Roboto_",sans-serif;
         font-size: 14px;
         font-weight: 500;
-        line-height: 13.92px;
+        line-height: 15.92px;
         text-align: left;
     }
     .cardtxt2 span{
+        height: 16px;
         font-family: "Roboto_",sans-serif;
         font-size: 14px;
         font-weight: 500;
-        line-height: 13.92px;
+        line-height: 14.92px;
         text-align: left;
         display: block;
     }
@@ -1500,10 +1518,11 @@ ion-icon {
         height: 14px;
     }
     .cardtxt1 span{
+        height: 28px;
         font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
-        line-height: 9.92px;
+        line-height: 12.92px;
         text-align: left;
         margin-left: 6px;
     }
@@ -1511,7 +1530,7 @@ ion-icon {
         font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
-        line-height: 9.92px;
+        line-height: 14.92px;
         text-align: left;
         margin-left: 6px;
     }
@@ -1888,7 +1907,10 @@ ion-icon {
         grid-auto-columns: calc((100% / 2 + 2px));
     }
 }
-@media screen  and (min-width: 320px) and (max-width: 399px) {
+@media screen  and (min-width: 300px) and (max-width: 399px) {
+    .cardBody .span1 {
+        line-height: 17.3px;
+    }
     .courses{
         background: #5D9A9D;
         height: min-content;
@@ -1963,6 +1985,7 @@ ion-icon {
         height: 28px !important;
     }
     .cardtxt1 > span{
+        height: 34px;
         width: 100%;
         font-size: 14px;
         line-height: 17.36px;
@@ -1972,6 +1995,7 @@ ion-icon {
         height: 28px !important;
     }
     .cardtxt2 > span{
+        height: 18px;
         width: 100%;
         font-size: 14px;
         line-height: 17.36px;
@@ -2029,6 +2053,9 @@ ion-icon {
     }
 }
 @media screen  and (min-width: 400px) and (max-width: 599px) {
+    .cardBody .span1 {
+        line-height: 17.3px;
+    }
     .courses{
         background: #5D9A9D;
         height: min-content;
@@ -2106,12 +2133,14 @@ ion-icon {
         width: 100%;
         font-size: 14px;
         line-height: 17.36px;
+        height: 34px;
     }
     .cardtxt2 > img{
         width: 28px !important;
         height: 28px !important;
     }
     .cardtxt2 > span{
+        height: 18px;
         width: 100%;
         font-size: 14px;
         line-height: 17.36px;
@@ -2174,5 +2203,17 @@ ion-icon {
     }
     .mobilebtn{
         display: none;
+    }
+}
+@media screen  and (min-width: 300px) and (max-width: 599px) {
+    .cardCoursesMobile{
+        margin-bottom: 44px;
+    }
+    .cardCourses{
+        display: none;
+    }
+    .cardCourses:nth-child(1),
+    .cardCourses:nth-child(2){
+        display: block;
     }
 }

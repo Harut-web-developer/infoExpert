@@ -1,4 +1,6 @@
 <?php
+
+use app\models\AcReviews;
 use yii\web\View;
 use yii\web\YiiAsset;
 /** @var yii\web\View $this */
@@ -82,52 +84,61 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
 </div>
 <div class="sectionThree sliderWrapper">
     <div class="sliderCourses">
-        <div class="learn">
-            <div class="learnInfo">
-                <div class="coursesBg">
-                    <span><?=$GLOBALS['text']['sectionThreeCourses']?></span>
-                    <p><?=$GLOBALS['text']['sectionThreeLearn']?></p>
-                </div>
-                <div class="logoManagement">
-                    <div class="courseLogo">
-                        <img src="/images/logomanagcourse.png" alt="">
+        <div class="slider">
+            <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
+                <div class="learn slide">
+                    <div class="learnInfo">
+                        <div class="coursesBg">
+                            <span><?=$GLOBALS['text']['sectionThreeCourses']?></span>
+                            <p><?=$GLOBALS['text']['sectionThreeLearn']?></p>
+                        </div>
+                        <div class="logoManagement">
+                            <div class="courseLogo">
+                                <img src="/images/logomanagcourse.png" alt="">
+                            </div>
+                            <div class="courseTitle">
+                                <span><?=$lesson['lesson_name']?></span>
+                            </div>
+                        </div>
+                        <div class="managementBtn">
+                            <a href="/courses/index">
+                                <img src="/images/logomanag.png" alt="">
+                                <span><?=$GLOBALS['text']['sectionThreeBtn']?></span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="courseTitle">
-                        <span><?=$GLOBALS['text']['sectionThreePerson']?></span>
-                        <span><?=$GLOBALS['text']['sectionThreeManag']?></span>
+                    <div class="learnImg">
+                        <img src="/images/Group85.png" alt="">
                     </div>
                 </div>
-                <div class="managementBtn">
+            <?php }}?>
+        </div>
+    </div>
+    <div class="sliderCoursesMobile">
+        <div class="slider">
+            <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
+                <div class="learnMobile slide">
+                    <img src="/images/Group85.png" alt="">
+                    <div class="coursesBg">
+                        <span><?=$GLOBALS['text']['sectionThreeCourses']?></span>
+                        <p><?=$GLOBALS['text']['sectionThreeLearn']?></p>
+                    </div>
+                    <div class="logoManagement">
+                        <div class="courseLogo">
+                            <img src="/images/logomanagcourse.png" alt="">
+                        </div>
+                        <div class="courseTitle">
+                            <span><?=$lesson['lesson_name']?></span>
+                        </div>
+                    </div>
                     <a href="/courses/index">
                         <img src="/images/logomanag.png" alt="">
                         <span><?=$GLOBALS['text']['sectionThreeBtn']?></span>
                     </a>
                 </div>
-            </div>
-            <div class="learnImg">
-                <img src="/images/Group85.png" alt="">
-            </div>
+            <?php }}?>
         </div>
-        <div class="learnMobile">
-            <img src="/images/Group85.png" alt="">
-            <div class="coursesBg">
-                <span><?=$GLOBALS['text']['sectionThreeCourses']?></span>
-                <p><?=$GLOBALS['text']['sectionThreeLearn']?></p>
-            </div>
-            <div class="logoManagement">
-                <div class="courseLogo">
-                    <img src="/images/logomanagcourse.png" alt="">
-                </div>
-                <div class="courseTitle">
-                    <span><?=$GLOBALS['text']['sectionThreePerson']?></span>
-                    <span><?=$GLOBALS['text']['sectionThreeManag']?></span>
-                </div>
-            </div>
-            <a href="/courses/index">
-                <img src="/images/logomanag.png" alt="">
-                <span><?=$GLOBALS['text']['sectionThreeBtn']?></span>
-            </a>
-        </div>
+    </div>
     </div>
 </div>
 <div class="sectionFour">
@@ -138,85 +149,26 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         </div>
         <div class="questions">
             <div class="leftQuestions">
-                <div class="answersField">
-                    <div class="questionField">
-                        <span>What Does Royalty Free Mean?</span>
-                        <img src="/images/arrowDown.png" alt="">
+                <?php if(!empty($answers)){foreach ($first_part_faq as $part_one){?>
+                    <div class="answersField">
+                        <div class="questionField">
+                            <span><?=$part_one['question']?></span>
+                            <img src="/images/arrowDown.png" alt="">
+                        </div>
+                        <div class="answerQuestion"><?=$part_one['answer']?></div>
                     </div>
-                    <div class="answerQuestion">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
-                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
-                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
-                    </div>
-                </div>
-                <div class="answersField">
-                    <div class="questionField">
-                        <span>What Does Royalty Free Mean?</span>
-                        <img src="/images/arrowDown.png" alt="">
-                    </div>
-                    <div class="answerQuestion">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
-                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
-                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
-                    </div>
-                </div>
-                <div class="answersField">
-                    <div class="questionField">
-                        <span>What Does Royalty Free Mean?</span>
-                        <img src="/images/arrowDown.png" alt="">
-                    </div>
-                    <div class="answerQuestion">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
-                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
-                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
-                    </div>
-                </div>
+                <?php }}?>
             </div>
             <div class="rightQuestions">
-                <div class="answersField">
-                    <div class="questionField">
-                        <span>What Does Royalty Free Mean?</span>
-                        <img src="/images/arrowDown.png" alt="">
+                <?php if($total_rows_faq > 1){foreach ($second_par_faq as $part_two){?>
+                    <div class="answersField">
+                        <div class="questionField">
+                            <span><?=$part_two['question']?></span>
+                            <img src="/images/arrowDown.png" alt="">
+                        </div>
+                        <div class="answerQuestion"><?=$part_two['answer']?></div>
                     </div>
-                    <div class="answerQuestion">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
-                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
-                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
-                    </div>
-                </div>
-                <div class="answersField">
-                    <div class="questionField">
-                        <span>What Does Royalty Free Mean?</span>
-                        <img src="/images/arrowDown.png" alt="">
-                    </div>
-                    <div class="answerQuestion">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
-                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
-                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
-                    </div>
-                </div>
-                <div class="answersField">
-                    <div class="questionField">
-                        <span>What Does Royalty Free Mean?</span>
-                        <img src="/images/arrowDown.png" alt="">
-                    </div>
-                    <div class="answerQuestion">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
-                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
-                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
-                    </div>
-                </div>
-                <div class="answersField">
-                    <div class="questionField">
-                        <span>What Does Royalty Free Mean?</span>
-                        <img src="/images/arrowDown.png" alt="">
-                    </div>
-                    <div class="answerQuestion">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum, molestiae mollitia
-                        nesciunt perferendis reiciendis similique! Eligendi illo impedit nostrum quo voluptatibus?
-                        Beatae commodi, nihil odio quas ut vel. Perspiciatis.
-                    </div>
-                </div>
+                <?php }}?>
             </div>
         </div>
     </div>
@@ -226,126 +178,13 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <span class="partnersTitle"><?=$GLOBALS['text']['sectionFiveTitle']?></span>
         <div class="carousel">
             <ul class="carousel-slides">
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner1.png" alt="">
-                    <img src="/images/partner1_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner2.png" alt="">
-                    <img src="/images/partner2_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner3.png" alt="">
-                    <img src="/images/partner3_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner4.png" alt="">
-                    <img src="/images/partner4_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner5.png" alt="">
-                    <img src="/images/partner5_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner6.png" alt="">
-                    <img src="/images/partner6_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner7.png" alt="">
-                    <img src="/images/partner7_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner8.png" alt="">
-                    <img src="/images/partner8_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner9.png" alt="">
-                    <img src="/images/partner9_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner10.png" alt="">
-                    <img src="/images/partner10_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner11.png" alt="">
-                    <img src="/images/partner11_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner12.png" alt="">
-                    <img src="/images/partner12_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner13.png" alt="">
-                    <img src="/images/partner13_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner14.png" alt="">
-                    <img src="/images/partner14_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner15.png" alt="">
-                    <img src="/images/partner15_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner16.png" alt="">
-                    <img src="/images/partner16_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner17.png" alt="">
-                    <img src="/images/partner17_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner18.png" alt="">
-                    <img src="/images/partner18_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner19.png" alt="">
-                    <img src="/images/partner19_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner20.png" alt="">
-                    <img src="/images/partner20_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner21.png" alt="">
-                    <img src="/images/partner21_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner22.png" alt="">
-                    <img src="/images/partner22_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner23.png" alt="">
-                    <img src="/images/partner23_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner24.png" alt="">
-                    <img src="/images/partner24_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner25.png" alt="">
-                    <img src="/images/partner25_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner26.png" alt="">
-                    <img src="/images/partner26_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner27.png" alt="">
-                    <img src="/images/partner27_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner28.png" alt="">
-                    <img src="/images/partner28_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner29.png" alt="">
-                    <img src="/images/partner29_hov.png" class="img-top" alt="Card Front">
-                </li>
-                <li class="carousel-slide">
-                    <img class="img-prev" src="/images/partner30.png" alt="">
-                    <img src="/images/partner30_hov.png" class="img-top" alt="Card Front">
-                </li>
+                <?php
+                if (!empty($partners)){foreach ($partners as $partner){?>
+                    <li class="carousel-slide">
+                        <img class="img-prev" src="<?=$partner['img_black']?>" alt="">
+                        <img src="<?=$partner['img']?>" class="img-top" alt="Card Front">
+                    </li>
+                <?php }}?>
             </ul>
         </div>
     </div>
@@ -361,86 +200,23 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <div class="slide-container swiper webTabletTestimonial">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper testimonialsImg">
+                    <?php
+                    if (!empty($testimonials)){foreach ($testimonials as $testimonial){?>
                     <div class="swiper-slide">
                         <div class="blockTestimonial">
                             <div class="intoBlockTestimonial">
                                 <div class="testimonialSimbol">
                                     <img src="/images/symbolTestimonial.png" alt="">
                                 </div>
-                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                    Enim egestas tellus risus quis ut </div>
+                                <div class="testimonialsText"><?=$testimonial['text']?></div>
                                 <div class="fieldsLinkdin">
-                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                    <a href=""><img src="/images/linkdinNew.png" alt=""></a>
+                                    <span class="testimonialsAuthor"><?=$testimonial['name']?></span>
+                                    <a href="<?=$testimonial['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="blockTestimonial">
-                            <div class="intoBlockTestimonial">
-                                <div class="testimonialSimbol">
-                                    <img src="/images/symbolTestimonial.png" alt="">
-                                </div>
-                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                    Enim egestas tellus risus quis ut </div>
-                                <div class="fieldsLinkdin">
-                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                    <a href=""><img src="/images/linkdinNew.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="blockTestimonial">
-                            <div class="intoBlockTestimonial">
-                                <div class="testimonialSimbol">
-                                    <img src="/images/symbolTestimonial.png" alt="">
-                                </div>
-                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                    Enim egestas tellus risus quis ut </div>
-                                <div class="fieldsLinkdin">
-                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                    <a href=""><img src="/images/linkdinNew.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="blockTestimonial">
-                            <div class="intoBlockTestimonial">
-                                <div class="testimonialSimbol">
-                                    <img src="/images/symbolTestimonial.png" alt="">
-                                </div>
-                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                    Enim egestas tellus risus quis ut </div>
-                                <div class="fieldsLinkdin">
-                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                    <a href=""><img src="/images/linkdinNew.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="blockTestimonial">
-                            <div class="intoBlockTestimonial">
-                                <div class="testimonialSimbol">
-                                    <img src="/images/symbolTestimonial.png" alt="">
-                                </div>
-                                <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                                    Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                                    Enim egestas tellus risus quis ut </div>
-                                <div class="fieldsLinkdin">
-                                    <span class="testimonialsAuthor">Lorem Ipsum</span>
-                                    <a href=""><img src="/images/linkdinNew.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php }}?>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -452,51 +228,24 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             <span class="testimonialWhiteTitle"><?=$GLOBALS['text']['sectionSixText']?></span>
         </div>
         <div class="mobileTestimonial">
-            <div class="blockTestimonialMobile">
-                <div class="intoBlockTestimonial">
-                    <div class="testimonialSimbol">
-                        <img src="/images/symbolTestimonial.png" alt="">
-                    </div>
-                    <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                        Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                        Enim egestas tellus risus quis ut </div>
-                    <div class="fieldsLinkdin">
-                        <span class="testimonialsAuthor">Lorem Ipsum</span>
-                        <a href=""><img src="/images/linkdinNew.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="blockTestimonialMobile">
-                <div class="intoBlockTestimonial">
-                    <div class="testimonialSimbol">
-                        <img src="/images/symbolTestimonial.png" alt="">
-                    </div>
-                    <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                        Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                        Enim egestas tellus risus quis ut </div>
-                    <div class="fieldsLinkdin">
-                        <span class="testimonialsAuthor">Lorem Ipsum</span>
-                        <a href=""><img src="/images/linkdinNew.png" alt=""></a>
+            <?php
+            if (!empty($testimonials)){foreach ($testimonials as $item){?>
+                <div class="blockTestimonialMobile">
+                    <div class="intoBlockTestimonial">
+                        <div class="testimonialSimbol">
+                            <img src="/images/symbolTestimonial.png" alt="">
+                        </div>
+                        <div class="testimonialsText"><?=$item['text']?></div>
+                        <div class="fieldsLinkdin">
+                            <span class="testimonialsAuthor"><?=$item['name']?></span>
+                            <a href="<?=$item['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="blockTestimonialMobile">
-                <div class="intoBlockTestimonial">
-                    <div class="testimonialSimbol">
-                        <img src="/images/symbolTestimonial.png" alt="">
-                    </div>
-                    <div class="testimonialsText">Lorem ipsum dolor sit amet consectetur. Pellentesque enim risus mauris tellus vitae amet.
-                        Venenatis massa netus viverra turpis tortor arcu. Nulla gravida ipsum ut fringilla libero quis.
-                        Enim egestas tellus risus quis ut </div>
-                    <div class="fieldsLinkdin">
-                        <span class="testimonialsAuthor">Lorem Ipsum</span>
-                        <a href=""><img src="/images/linkdinNew.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
+            <?php }}?>
         </div>
         <div class="testimonialMobileBtn">
-            <button>
+            <button id="testimonialBtnMobile">
                 <img src="/images/mobileBtnSix.png" alt="">
                 <span><?=$GLOBALS['text']['sectionSixBtnMobile']?></span>
             </button>
@@ -512,81 +261,33 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             <span class="blogsTextMobile"><?=$GLOBALS['text']['sectionSevenText']?></span>
         </div>
         <div class="blogsCard">
-            <div class="individualCards">
-                <div class="cardsimg">
-                    <img src="/images/blogimg.png" alt="">
-                </div>
-                <div class="cardsText">
-                    <div class="cardsTextField">
-                        <div class="cardsTextInfo">
-                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
-                            <div class="cardsDate">
-                                <img src="/images/calendarimg.png" alt="">
-                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+            <?php if (!empty($blogs)){foreach ($blogs as $blog){?>
+                <div class="individualCards">
+                    <div class="cardsimg">
+                        <img src="<?=$blog['img']?>" alt="">
+                    </div>
+                    <div class="cardsText">
+                        <div class="cardsTextField">
+                            <div class="cardsTextInfo">
+                                <div class="cardsInfo"><?=$blog['page_name']?></div>
+                                <div class="cardsDate">
+                                    <img src="/images/calendarimg.png" alt="">
+                                    <div class="articleDate"><?=$blog['create_date']?></div>
+                                </div>
+                                <div class="cardsInfo"><?=$blog['page_title']?></div>
                             </div>
-                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
-                        </div>
-                        <div class="cardsLike">
-                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
-                            <div class='large-font'>
-                                <ion-icon name="heart">
-                                    <div class='red-bg'></div>
-                                </ion-icon>
+                            <div class="cardsLike">
+                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
+                                <div class='large-font'>
+                                    <ion-icon name="heart">
+                                        <div class='red-bg'></div>
+                                    </ion-icon>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="individualCards cardsMiddle">
-                <div class="cardsimg">
-                    <img src="/images/blogimg.png" alt="">
-                </div>
-                <div class="cardsText">
-                    <div class="cardsTextField">
-                        <div class="cardsTextInfo">
-                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
-                            <div class="cardsDate">
-                                <img src="/images/calendarimg.png" alt="">
-                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
-                            </div>
-                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
-                        </div>
-                        <div class="cardsLike">
-                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
-                            <div class='large-font'>
-                                <ion-icon name="heart">
-                                    <div class='red-bg'></div>
-                                </ion-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="individualCards">
-                <div class="cardsimg">
-                    <img src="/images/blogimg.png" alt="">
-                </div>
-                <div class="cardsText">
-                    <div class="cardsTextField">
-                        <div class="cardsTextInfo">
-                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
-                            <div class="cardsDate">
-                                <img src="/images/calendarimg.png" alt="">
-                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
-                            </div>
-                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
-                        </div>
-                        <div class="cardsLike">
-                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
-                            <div class='large-font'>
-                                <ion-icon name="heart">
-                                    <div class='red-bg'></div>
-                                </ion-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php }}?>
         </div>
         <div class="blogsArticles">
             <div class="blogText"><?=$GLOBALS['text']['sectionSevenText']?></div>
@@ -607,59 +308,36 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             <span class="blogsTextMobile"><?=$GLOBALS['text']['sectionSevenText']?></span>
         </div>
         <div class="blogsCard">
-            <div class="individualCards">
-                <div class="cardsimg">
-                    <img src="/images/blogimg.png" alt="">
-                </div>
-                <div class="cardsText">
-                    <div class="cardsTextField">
-                        <div class="cardsTextInfo">
-                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
-                            <div class="cardsDate">
-                                <img src="/images/calendarimg.png" alt="">
-                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+            <?php if (!empty($blogs_mobile)){foreach ($blogs_mobile as $blog){?>
+                <div class="individualCards">
+                    <div class="cardsimg">
+                        <img src="<?=$blog['img']?>" alt="">
+                    </div>
+                    <div class="cardsText">
+                        <div class="cardsTextField">
+                            <div class="cardsTextInfo">
+                                <div class="cardsInfo"><?=$blog['page_name']?></div>
+                                <div class="cardsDate">
+                                    <img src="/images/calendarimg.png" alt="">
+                                    <div class="articleDate"><?=$blog['create_date']?></div>
+                                </div>
+                                <div class="cardsInfo"><?=$blog['page_title']?></div>
                             </div>
-                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
-                        </div>
-                        <div class="cardsLike">
-                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
-                            <div class='large-font'>
-                                <ion-icon name="heart">
-                                    <div class='red-bg'></div>
-                                </ion-icon>
+                            <div class="cardsLike">
+                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
+                                <div class='large-font'>
+                                    <ion-icon name="heart">
+                                        <div class='red-bg'></div>
+                                    </ion-icon>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="individualCards">
-                <div class="cardsimg">
-                    <img src="/images/blogimg.png" alt="">
-                </div>
-                <div class="cardsText">
-                    <div class="cardsTextField">
-                        <div class="cardsTextInfo">
-                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
-                            <div class="cardsDate">
-                                <img src="/images/calendarimg.png" alt="">
-                                <div class="articleDate"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
-                            </div>
-                            <div class="cardsInfo">Grid of different categories of accounting lessons</div>
-                        </div>
-                        <div class="cardsLike">
-                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
-                            <div class='large-font'>
-                                <ion-icon name="heart">
-                                    <div class='red-bg'></div>
-                                </ion-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php }}?>
         </div>
         <div class="blogsMobileBtn">
-            <button>
+            <button id="blogsBtnMobile">
                 <img src="/images/mobileBtnSix.png" alt="">
                 <span><?=$GLOBALS['text']['sectionSixBtnMobile']?></span>
             </button>
