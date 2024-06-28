@@ -414,34 +414,16 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 3000,
     });
-    // $('.single-item').slick({
-    //     // slidesToShow: 1,
-    //     // slidesToScroll: 1,
-    //     // autoplay: true,
-    //     // autoplaySpeed: 7000,
-    // });
     if (window.location.pathname == '/') {
-        // if($(window).width() < 599) {
-            window.onload=function(){
-                $('.sectionThree .slider').slick({
-                    autoplay:true,
-                    autoplaySpeed:1500,
-                    arrows:false,
-                    slidesToShow:1,
-                    slidesToScroll:1
-                });
-            };
-        // }else{
-        //     window.onload=function(){
-        //         $('.sliderCourses .slider').slick({
-        //             autoplay:true,
-        //             autoplaySpeed:1500,
-        //             arrows:false,
-        //             slidesToShow:1,
-        //             slidesToScroll:1
-        //         });
-        //     };
-        // }
+        window.onload=function(){
+            $('.sectionThree .slider').slick({
+                autoplay:true,
+                autoplaySpeed:1600,
+                arrows:false,
+                slidesToShow:1,
+                slidesToScroll:1
+            });
+        };
     }
 
 

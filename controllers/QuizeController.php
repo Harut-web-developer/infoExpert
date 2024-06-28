@@ -2,6 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\AcQuestionAnswers;
+use app\models\AcQuestionList;
+use app\models\AcQuestionQuests;
 use Yii;
 use app\models\Texts;
 
@@ -46,14 +49,76 @@ class QuizeController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-        return $this->render('index');
+        $language = $_COOKIE['language'];
+        $quize_name = AcQuestionList::find()
+            ->select('id, name_'.$language.' as name')
+            ->where(['status' => '1'])
+            ->asArray()
+            ->all();
+        return $this->render('index',[
+            'quize_name' => $quize_name
+        ]);
     }
-    public function actionTradeManagement()
+    public function actionQuizeQuestions()
     {
-        return $this->render('trade-management');
+        $id = intval($_GET['id']);
+        $language = $_COOKIE['language'];
+        $answers = AcQuestionQuests::find()
+            ->select([
+                'ac_question_quests.id',
+                'ac_question_quests.name_'.$language.' as quest_name',
+            ])
+            ->joinWith([
+                'answers' => function($query) use ($language) {
+                    $query->select([
+                        'id',
+                        'name_'.$language.' as answer_name',
+                        'status',
+                        'order_num',
+                        'is_true',
+                        'quest_id'
+                    ]);
+                }
+            ])
+            ->where(['ac_question_quests.question_id' => $id])
+            ->asArray()
+            ->all();
+
+        $answers_list = AcQuestionList::find()->select('id,name_'.$language.' as name_list')
+            ->where(['status' => '1'])
+            ->andWhere(['id' => $id])
+            ->asArray()
+            ->one();
+        $questions_count = AcQuestionQuests::find()
+            ->where(['status' => '1'])
+            ->andWhere(['question_id' => $id])
+            ->count();
+
+        return $this->render('quize-questions',[
+            'answers' => $answers,
+            'answers_list' => $answers_list,
+            'questions_count' => $questions_count
+        ]);
+
     }
-    public function actionResult()
+    public function actionResult($id = false)
     {
-        return $this->render('result');
+        $id = intval($_GET['id']);
+        $true_answer_count = intval($_GET['count']);
+        $language = $_COOKIE['language'];
+        $answers_list = AcQuestionList::find()->select('id,name_'.$language.' as name_list')
+            ->where(['status' => '1'])
+            ->andWhere(['id' => $id])
+            ->asArray()
+            ->one();
+        $questions_count = AcQuestionQuests::find()
+            ->where(['status' => '1'])
+            ->andWhere(['question_id' => $id])
+            ->count();
+        return $this->render('result',[
+            'answers_list' => $answers_list,
+            'questions_count' => $questions_count,
+            'true_answer_count' => $true_answer_count
+        ]);
     }
 }

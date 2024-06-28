@@ -14,13 +14,13 @@ if ($language == 'en') {
 ?>
 <div class="result <?php echo $class1; ?>">
     <div class="bodyResult">
-        <div class="titleResult"><?=$GLOBALS['text']['lessonAdministration']?></div>
+        <div class="titleResult"><?=$answers_list['name_list']?></div>
         <div class="resultBlackboard">
             <div class="resultBlackboardContainer">
                 <img src="/images/resultBlackboard.png" alt="">
                 <div class="resultBlackboardCntered">
-                    <span class="resultBlackboardCount">5/5</span>
-                    <span class="resultBlackboardResult"><?=$GLOBALS['text']['lessonAdministration']?></span>
+                    <span class="resultBlackboardCount"><?=$true_answer_count?>/<?=$questions_count?></span>
+                    <span class="resultBlackboardResult"><?=$answers_list['name_list']?></span>
                 </div>
             </div>
             <div class="resultButtons">

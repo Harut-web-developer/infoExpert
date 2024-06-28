@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use app\models\AcQuestionAnswers;
+use app\models\AcQuestionQuests;
 
 /**
  * This is the model class for table "ac_question_list".
@@ -51,4 +53,15 @@ class AcQuestionList extends \yii\db\ActiveRecord
             'status' => 'Status',
         ];
     }
+
+//    public function getQuestionQuests()
+//    {
+//        return $this->hasMany(AcQuestionQuests::className(), ['question_id' => 'id']);
+//    }
+//
+//    public function getQuestionAnswers()
+//    {
+//        return $this->hasMany(AcQuestionAnswers::className(), ['quest_id' => 'id'])
+//            ->via('questionQuests');
+//    }
 }

@@ -5,19 +5,21 @@ $this->registerCssFile('@web/css/quize.css?v=2');
 
 <div class="quize">
     <div class="bodyQuize">
-        <div class="quizeContainer">
-            <div class="quizePlayAndTest"><?=$GLOBALS['text']['quizePlayAndTest']?></div>
-            <div class="lessonContainer">
-                <div class="lessonAdministration" data-option="trade-management"><?=$GLOBALS['text']['lessonAdministration']?></div>
-                <div class="lessonAccounting" data-option="accounting"><?=$GLOBALS['text']['lessonAccounting']?></div>
-                <div class="lessonAccountingForBeginners" data-option="accountingForBeginners"><?=$GLOBALS['text']['lessonAccountingForBeginners']?></div>
-                <div class="lessonPersonnelManagment" data-option="personnelManagment"><?=$GLOBALS['text']['lessonPersonnelManagment']?></div>
+        <?php
+        if(!empty($quize_name)){?>
+            <div class="quizeContainer">
+                <div class="quizePlayAndTest"><?=$GLOBALS['text']['quizePlayAndTest']?></div>
+                <div class="lessonContainer">
+                    <?php foreach ($quize_name as $item){ ?>
+                        <div class="lessonsQiize" data-id="<?=$item['id']?>"><?=$item['name']?></div>
+                    <?php }?>
+                </div>
+                <button type="button" class="btnQuize">
+                    <img src="/images/contactus.png" alt="">
+                    <span><?=$GLOBALS['text']['btnQuize']?></span>
+                </button>
             </div>
-            <button type="button" class="btnQuize">
-                <img src="/images/contactus.png" alt="">
-                <span><?=$GLOBALS['text']['btnQuize']?></span>
-            </button>
-        </div>
+        <?php }?>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -26,13 +28,13 @@ $this->registerCssFile('@web/css/quize.css?v=2');
         let selectedOption = '';
 
         $('.lessonContainer div').click(function() {
-            selectedOption = $(this).data('option');
+            selectedOption = $(this).data('id');
             $(this).css('background', '#F36528');
             $(this).siblings().css('background', '');
         });
         $('.btnQuize').click(function() {
             if (selectedOption) {
-                let url = '<?php echo Yii::$app->urlManager->createUrl(['quize']) ?>' + '/' + selectedOption;
+                let url = '<?php echo Yii::$app->urlManager->createUrl(['quize/quize-questions?id=']) ?>' + selectedOption;
                 window.location.href = url;
             } else {
                 alert('Please select an option first.');
