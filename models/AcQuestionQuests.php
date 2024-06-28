@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use app\models\AcQuestionAnswers;
 
 /**
  * This is the model class for table "ac_question_quests".
@@ -50,5 +51,10 @@ class AcQuestionQuests extends \yii\db\ActiveRecord
             'order_num' => 'Order Num',
             'question_id' => 'Question ID',
         ];
+    }
+
+    public function getAnswers()
+    {
+        return $this->hasMany(AcQuestionAnswers::className(), ['quest_id' => 'id']);
     }
 }
