@@ -13,6 +13,7 @@ class BlogController extends \yii\web\Controller
         $page['index'] = 16;
         return $page;
     }
+
     public function beforeAction($action)
     {
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
@@ -22,7 +23,7 @@ class BlogController extends \yii\web\Controller
             return false;
         }
         $lng = $_COOKIE['language'] ?? 'en';
-        if($lng !== 'am' && $lng !== 'ru' && $lng !== 'en'){
+        if ($lng !== 'am' && $lng !== 'ru' && $lng !== 'en') {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
             Yii::$app->end();
@@ -30,11 +31,11 @@ class BlogController extends \yii\web\Controller
         }
         $pId = self::pages();
         $txt = Texts::find()
-            ->select(['text_'.$lng.' as text']);
-        if(@$pId[Yii::$app->controller->action->id]){
+            ->select(['text_' . $lng . ' as text']);
+        if (@$pId[Yii::$app->controller->action->id]) {
             $txt->where(['page_id' => $pId[Yii::$app->controller->action->id]]);
         }
-        $txt = $txt->orWhere(['is','page_id' ,null ])
+        $txt = $txt->orWhere(['is', 'page_id', null])
             ->asArray()
             ->indexBy('slug')
             ->column();
@@ -43,6 +44,7 @@ class BlogController extends \yii\web\Controller
         $this->enableCsrfValidation = false;
         return parent::beforeAction($action);
     }
+
     public function actionIndex()
     {
         $language = $_COOKIE['language'];
@@ -62,10 +64,10 @@ class BlogController extends \yii\web\Controller
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
             'img'
         ])->where(['status' => '1'])->asArray()->all();
-        return $this->render('index',[
+        return $this->render('index', [
             'blogs' => $blogs,
-            'blogsMobile' => $blogsMobile
-            ]);
+            'blogsMobile' => $blogsMobile,
+        ]);
     }
     public function actionCategorie()
     {
