@@ -61,9 +61,13 @@
     border-radius: 30px;
     overflow: hidden;
 }
+.card-image{
+    width: 100%;
+    height: 230px;
+}
 .card-image img{
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 .card-info{
     /*position: relative;*/
@@ -136,32 +140,49 @@
     padding-left: 0px;
 }
 .pageItem{
-    padding: 9px 0px;
+    /*padding: 9px 0px;*/
     width: 48px;
     height: 48px;
     border-radius: 50%;
     border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F36528;
+}
+.pageItem span{
+    margin: 0px 12px !important;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
 }
 .pageItem  > .pageLink{
-    margin: 0px 18px;
+    padding: 0px 18px;
     text-decoration: none;
     font-family: "Roboto_",sans-serif;
     font-size: 18px;
     font-weight: 500;
     color: #F36528;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .prev  > .pageLink{
-    margin: 0px 12px !important;
+    /*margin: 0px 12px !important;*/
     text-decoration: none;
-    font-family: "Roboto_",sans-serif;
+    font-family: inherit;
     font-size: 18px;
     font-weight: 500;
     color: #F36528;
 }
 .next  > .pageLink{
-    margin: 0px 12px !important;
+    /*margin: 0px 12px !important;*/
     text-decoration: none;
-    font-family: "Roboto_",sans-serif;
+    font-family: inherit;
     font-size: 18px;
     font-weight: 500;
     color: #F36528;
@@ -169,6 +190,12 @@
 .pageLink > img{
     width: 20px;
     height: 20px;
+}
+.paginationBlog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 .paginationBlog .active{
     background: #F36528;
@@ -185,51 +212,6 @@
 .pageItem:hover .pageLink{
     color: white;
 }
-/*.pagination-container {*/
-/*    width: calc(100% - 2rem);*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    position: absolute;*/
-/*    justify-content: center;*/
-/*}*/
-/*.pagination-number{*/
-/*    font-family: Jost;*/
-/*    font-size: 18px;*/
-/*    font-weight: 500;*/
-/*    line-height: 27px;*/
-/*    text-align: center;*/
-/*    background-color: transparent;*/
-/*    color: #FF782D;*/
-/*    margin: 0.25rem 0.25rem;*/
-/*    cursor: pointer;*/
-/*    height: 2.5rem;*/
-/*    width: 2.5rem;*/
-/*    border-radius: 50%;*/
-/*    border: 1px solid #EAEAEA;*/
-/*}*/
-/*.pagination-button{*/
-/*    font-size: 1.1rem;*/
-/*    color: #EAEAEA;*/
-/*    background-color: transparent;*/
-/*    margin: 0.25rem 0.25rem;*/
-/*    cursor: pointer;*/
-/*    height: 2.5rem;*/
-/*    width: 2.5rem;*/
-/*    border-radius: 50%;*/
-/*    border: 1px solid #EAEAEA;*/
-/*}*/
-/*.pagination-number:hover,*/
-/*.pagination-button:not(.disabled):hover {*/
-/*    background: #fff;*/
-/*    outline: none;*/
-/*}*/
-/*.pagination-number.active {*/
-/*    border: none;*/
-/*    color: #fff;*/
-/*    background: #FF782D;*/
-/*    outline: none;*/
-/*}*/
-
 .triangle-element {
     width: 0;
     height: 0;
@@ -296,13 +278,16 @@ ion-icon {
     .card-info {
         height: 51%;
     }
+    .card-image{
+        height: 210px;
+    }
 }
 @media screen and (max-width: 1700px) {
     .card_ {
         height: 420px;
     }
-    .card-info {
-        height: 51%;
+    .card-image{
+        height: 200px;
     }
 }
 @media screen and (max-width: 1600px){
@@ -320,7 +305,10 @@ ion-icon {
     }
     .card-info {
         /*height: 218px;*/
-        height: 57%;
+        height: 52%;
+    }
+    .card-image{
+        height: 190px;
     }
 }
 @media screen and (max-width: 1400px){
@@ -337,10 +325,6 @@ ion-icon {
     }
     .card-info {
         gap: 10px;
-    }
-    .card-info {
-        /*height: 218px;*/
-        height: 57%;
         padding: 20.61px;
     }
 }
@@ -353,7 +337,7 @@ ion-icon {
     }
     .card-info {
         /*gap: 5px;*/
-        height: 60%;
+        height: 52%;
     }
     .dateNumber{
         font-size: 14px;
@@ -372,8 +356,8 @@ ion-icon {
         font-size: 14px;
     }
     .card-info {
-        height: 56%;
         padding: 12.61px;
+        height: 56%;
     }
     .large-font {
         width: 34px;
@@ -386,13 +370,13 @@ ion-icon {
     .divImg{
         height: 31px;
     }
+    .card-image {
+        height: 140px;
+    }
 }
 @media screen and (max-width: 1160px){
     .card_ {
         height: 330px;
-    }
-    .card-info {
-        height: 195px;
     }
 }
 @media screen and (max-width: 1100px) {
@@ -448,7 +432,7 @@ ion-icon {
     .textCard{
         font-size: 11px;
         font-weight: 400;
-        line-height: 17.2px;
+        /*line-height: 17.2px;*/
         text-align: left;
     }
     .date{
@@ -486,7 +470,9 @@ ion-icon {
         width: 20.63px;
         height: 18.96px;
     }
-
+    .card-image {
+        height: 130px;
+    }
 }
 @media  screen and (max-width: 1050px) {
     .card-info {
@@ -495,12 +481,15 @@ ion-icon {
 }
 @media  screen and (max-width: 1000px) {
     .card-info {
-        height: 162px;
+        height: 145px;
     }
 }
 @media  screen and (max-width: 960px) {
     .card-info {
         height: 166px;
+    }
+    .card-image{
+        height: 110px;
     }
 }
 @media  screen and (max-width: 941px) {
@@ -508,7 +497,7 @@ ion-icon {
         height: 255px;
     }
     .card-info {
-        height: 142px;
+        height: 150px;
     }
     .textCard {
         line-height: 14.2px;
@@ -517,6 +506,9 @@ ion-icon {
 @media  screen and (max-width: 927px) {
     .card_ {
         height: 253px;
+    }
+    .card-image {
+        height: 130px;
     }
 }
 @media  screen and (max-width: 926px) {
@@ -544,6 +536,12 @@ ion-icon {
 @media screen and (max-width: 780px) {
     .card_ {
         height: 280px;
+    }
+    .card-info {
+        height: 150px;
+    }
+    .card-image {
+        height: 120px;
     }
 }
 @media screen and (max-width: 750px) {
@@ -581,6 +579,9 @@ ion-icon {
     .card_ {
         height: 360px;
     }
+    .card-image{
+        height: 166px;
+    }
     .card-info {
         height: 193px;
     }
@@ -604,11 +605,6 @@ ion-icon {
     }
     .divImg a {
         font-size: 17px;
-    }
-}
-@media screen and (max-width: 650px) {
-    .card-info {
-        height: 204px;
     }
 }
 @media screen and (min-width: 600px) {
