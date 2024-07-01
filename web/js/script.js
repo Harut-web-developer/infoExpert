@@ -373,13 +373,22 @@ $(document).ready(function () {
 
     if (window.location.pathname != '/') {
         let pageName = location.pathname;
-        $('.menu li a').each(function(){
+        $('.orangeOrWhite a').each(function(){
             let x = $(this);
             if(x.attr('href').indexOf(pageName) !== -1){
                 x.css('color', '#F36528');
                 x.closest('div').closest('li').children('span').css('color', '#F36528');
             }
         })
+        $(".menuCoursesDropDown ul li a").each(function() {
+            let y = $(this);
+            let url = window.location;
+            let pageNameMenuCourses = new URL(url).pathname + new URL(url).search;
+            if (y.attr('href').indexOf(pageNameMenuCourses) !== -1) {
+                y.css('color', '#F36528');
+                y.closest('.menuCoursesDropDown').children('span').css('color', '#F36528');
+            }
+        });
         $('.profileFieldImg li a').each(function(){
             let x = $(this);
             if(x.attr('href').indexOf(pageName) !== -1){
@@ -394,17 +403,19 @@ $(document).ready(function () {
             }
         })
         let urlName = window.location.pathname;
-        $('.tabletMenuNavbar li a').each(function() {
+        $('.personMainMenu .tabletMenuNavbar li a').each(function() {
             let link = $(this);
             if (link.attr('href') === urlName) {
                 link.css('color', '#F36528');
             }
         });
         $('.tabletMenuNavbarCourses li a').each(function() {
-            let link = $(this);
-            if (link.attr('href') === urlName) {
-                $('.tabletAllCoursesList span').css('color', '#F36528')
-                link.css('color', '#F36528');
+            let y = $(this);
+            let url = window.location;
+            let pageNameMenuCourses = new URL(url).pathname + new URL(url).search;
+            if (y.attr('href').indexOf(pageNameMenuCourses) !== -1) {
+                y.css('color', '#F36528');
+                $('.tabletAllCoursesList').children('span').css('color', '#F36528');
             }
         });
     }
