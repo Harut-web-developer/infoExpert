@@ -22,3 +22,4 @@ seeMoreBtnBlogs.onclick = () => {
         seeMoreBtnBlogs.style.display = 'none';
     }
 }
+

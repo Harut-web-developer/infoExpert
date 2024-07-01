@@ -44,7 +44,6 @@ class BlogController extends \yii\web\Controller
         $this->enableCsrfValidation = false;
         return parent::beforeAction($action);
     }
-
     public function actionIndex()
     {
         $language = $_COOKIE['language'];

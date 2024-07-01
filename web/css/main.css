@@ -177,6 +177,9 @@
     list-style: none;
     padding-left: 0px !important;
 }
+.menu > ul > li:nth-child(3){
+    position: relative;
+}
 .menu > ul > li > a{
     color: white;
 }
@@ -201,6 +204,8 @@
     font-size: 16px;
     font-weight: 400;
     color: white;
+    position: relative;
+    z-index: 1;
 }
 .menuCourses:hover{
     color: #F36528;
@@ -234,10 +239,72 @@
     font-weight: 500;
     font-family: "Roboto_",sans-serif;
     position: absolute;
-    /*top: 17px;*/
-    /*left: 0px;*/
     width: 100%;
 }
+#curved-corner-bottomleft,
+#curved-corner-bottomright,
+#curved-corner-topleft,
+#curved-corner-topright {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+#curved-corner-bottomleft:before,
+#curved-corner-bottomright:before,
+#curved-corner-topleft:before,
+#curved-corner-topright:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40%;
+}
+#curved-corner-bottomleft:before {
+    bottom: 0;
+    left: 0;
+    box-shadow: -23px 44px 0 0 #ABCBCD;
+}
+.lessonsListMenu{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 300px;
+    height: min-content;
+    background: #ABCBCD;
+}
+.lessonsListMenu > ul{
+    margin: 0px;
+    padding: 10px 10px;
+    list-style: none;
+    width: 300px;
+    line-height: 1.5;
+    font-size: 14px;
+    /*top: 33px;*/
+    /*position: relative;*/
+    /*left: 25px;*/
+    /*z-index: 100;*/
+}
+.lessonsListMenu > ul > li > a{
+    color: #1C5484;
+    text-decoration: none;
+    font-family: "Roboto_",sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.lessonsListMenu > ul > li > a:hover {
+    text-decoration: none;
+    color: #F36528;
+}
+.dropDownCoursesBg{
+    position: absolute;
+    top: -26px;
+    left: -6px;
+    display: none;
+}
+
+
 
 .dropDownAbout{
     background-image: url("../images/small.png");
@@ -283,69 +350,69 @@
     text-decoration: none;
     color: #F36528;
 }
-.dropDownCources{
-    background-image: url("../images/big.png");
-    width: 296px;
-    height: 179px;
-    position: absolute;
-    margin-top: -6px;
-    margin-left: -9px;
-    display: none;
-}
-.dropDownCourcesArm{
-    background-image: url("../images/big.png");
-    background-size: 100% 100%;
-    width: 300px;
-    height: 203px;
-    position: absolute;
-    margin-top: -6px;
-    margin-left: -9px;
-    display: none;
-}
-.dropDownCources > ul{
-    width: 251px;
-    line-height: 1.5;
-    font-size: 14px;
-    top: 33px;
-    list-style: none;
-    position: relative;
-    left: 25px;
-    z-index: 100;
-    padding-left: 0px !important;
-}
-.dropDownCourcesArm > ul{
-    width: 253px;
-    line-height: 1.5;
-    font-size: 14px;
-    top: 33px;
-    list-style: none;
-    position: relative;
-    left: 25px;
-    z-index: 100;
-    padding-left: 0px !important;
-}
-.dropDownCources > ul > li > a{
-    color: #1C5484;
-    text-decoration: none;
-    font-family: "Roboto_",sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-}
-.dropDownCourcesArm > ul > li > a{
-    color: #1C5484;
-    text-decoration: none;
-    font-family: "Roboto_",sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-}
-.dropDownCources > ul > li > a:hover {
-    text-decoration: none;
-    color: #F36528;
-}
-.dropDownCourcesArm > ul > li > a:hover {
-    text-decoration: none;
-    color: #F36528;
-}
+/*.dropDownCources{*/
+/*    background-image: url("../images/big.png");*/
+/*    width: 296px;*/
+/*    height: 179px;*/
+/*    position: absolute;*/
+/*    margin-top: -6px;*/
+/*    margin-left: -9px;*/
+/*    display: none;*/
+/*}*/
+/*.dropDownCourcesArm{*/
+/*    background-image: url("../images/big.png");*/
+/*    background-size: 100% 100%;*/
+/*    width: 300px;*/
+/*    height: 203px;*/
+/*    position: absolute;*/
+/*    margin-top: -6px;*/
+/*    margin-left: -9px;*/
+/*    display: none;*/
+/*}*/
+/*.dropDownCources > ul{*/
+/*    width: 251px;*/
+/*    line-height: 1.5;*/
+/*    font-size: 14px;*/
+/*    top: 33px;*/
+/*    list-style: none;*/
+/*    position: relative;*/
+/*    left: 25px;*/
+/*    z-index: 100;*/
+/*    padding-left: 0px !important;*/
+/*}*/
+/*.dropDownCourcesArm > ul{*/
+/*    width: 253px;*/
+/*    line-height: 1.5;*/
+/*    font-size: 14px;*/
+/*    top: 33px;*/
+/*    list-style: none;*/
+/*    position: relative;*/
+/*    left: 25px;*/
+/*    z-index: 100;*/
+/*    padding-left: 0px !important;*/
+/*}*/
+/*.dropDownCources > ul > li > a{*/
+/*    color: #1C5484;*/
+/*    text-decoration: none;*/
+/*    font-family: "Roboto_",sans-serif;*/
+/*    font-size: 15px;*/
+/*    font-weight: 400;*/
+/*}*/
+/*.dropDownCourcesArm > ul > li > a{*/
+/*    color: #1C5484;*/
+/*    text-decoration: none;*/
+/*    font-family: "Roboto_",sans-serif;*/
+/*    font-size: 15px;*/
+/*    font-weight: 400;*/
+/*}*/
+/*.dropDownCources > ul > li > a:hover {*/
+/*    text-decoration: none;*/
+/*    color: #F36528;*/
+/*}*/
+/*.dropDownCourcesArm > ul > li > a:hover {*/
+/*    text-decoration: none;*/
+/*    color: #F36528;*/
+/*}*/
 .mainHeader{
     width: 100%;
     height: 61px;

@@ -11,6 +11,7 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 use yii\helpers\Url;
 use yii\web\UrlManager;
+use \app\models\AcLessons;
 
 AppAsset::register($this);
 
@@ -246,13 +247,24 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     </li>
                     <li class="dropDownLi menuCoursesDropDown">
                         <span class="menuCourses"><?=$GLOBALS['text']['__courses__']?></span>
-                        <div class="dropDownCoursesBg <?php echo $dropdown_menu ?>">
-                            <ul>
-                                <li><a href="/lessons/accounting-for-begginers"><?= $GLOBALS['text']['headerCourseAccounting']?></a></li>
-                                <li><a href="/lessons/management"><?=$GLOBALS['text']['headerCoursePayrol']?></a></li>
-                                <li><a href="/lessons/accounting"><?=$GLOBALS['text']['headerAccounting']?></a></li>
-                                <li><a href="/lessons/marketing"><?=$GLOBALS['text']['headerMarketing']?></a></li>
-                            </ul>
+                        <div class="dropDownCoursesBg">
+                            <div id="curved-corner-bottomleft"></div>
+                            <div class="lessonsListMenu">
+                                <ul>
+                                    <?php
+                                    $lang = $_COOKIE['language'];
+                                    $lessons = AcLessons::find()->select('id,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+                                    if (!empty($lessons)){ foreach ($lessons as $lesson) {?>
+                                        <li><a href="/lessons/lesson?id=<?=$lesson['id']?>"><?=$lesson['lesson_name']?></a></li>
+                                    <?php }}?>
+<!--                                    <li><a href="/lessons/accounting-for-begginers">--><?php //= $GLOBALS['text']['headerCourseAccounting']?><!--</a></li>-->
+<!--                                    <li><a href="/lessons/management">--><?php //=$GLOBALS['text']['headerCoursePayrol']?><!--</a></li>-->
+<!--                                    <li><a href="/lessons/accounting">--><?php //=$GLOBALS['text']['headerAccounting']?><!--</a></li>-->
+<!--                                    <li><a href="/lessons/marketing">--><?php //=$GLOBALS['text']['headerMarketing']?><!--</a></li>-->
+<!--                                    <li><a href="/lessons/management">--><?php //=$GLOBALS['text']['headerCoursePayrol']?><!--</a></li>-->
+<!--                                    <li><a href="/lessons/accounting">--><?php //=$GLOBALS['text']['headerAccounting']?><!--</a></li>-->
+                                </ul>
+                            </div>
                         </div>
                     </li>
                     <li class="whiteLi"><a href=""><?= $GLOBALS['text']['__faq__'] ?></a></li>

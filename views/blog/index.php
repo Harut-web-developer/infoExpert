@@ -5,7 +5,6 @@ use yii\web\YiiAsset;
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/blog.css');
 
-$this->registerJsFile('@web/js/blog.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);
 $itemsPerPage = 9;
@@ -129,3 +128,5 @@ $statisticsPerPage = array_slice($blogs, $startIndex, $itemsPerPage);
         </div>
     </div>
 </div>
+<?php $this->registerJsFile('@web/js/blog.js', ['defer' => true]);?>
+
