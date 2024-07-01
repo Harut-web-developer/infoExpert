@@ -41,9 +41,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         $dropdown_menu = 'dropDownCources';
     }
     ?>
-    <link rel="stylesheet" href="/css/main.css?v=3">
-    <link rel="stylesheet" href="/css/mainTablet.css?v=3">
-    <link rel="stylesheet" href="/css/mainMobile.css?v=6">
+    <link rel="stylesheet" href="/css/main.css?v=34">
+    <link rel="stylesheet" href="/css/mainTablet.css?v=34">
+    <link rel="stylesheet" href="/css/mainMobile.css?v=64">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
 
 </head>
