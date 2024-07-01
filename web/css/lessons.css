@@ -699,10 +699,6 @@ ion-icon {
     }
 }
 @media screen and (max-width: 400px){
-    /*.bottomImages img {*/
-    /*    width: 90px;*/
-    /*    height: 40px;*/
-    /*}*/
     .managementBtnDiv > button > img{
         width: 90px;
         height: 40px;
@@ -714,7 +710,4 @@ ion-icon {
     .amdFix {
         font-size: 13px;
     }
-    /*.managementBtnDiv > button > span {*/
-    /*    top: 15px;*/
-    /*}*/
 }

@@ -176,10 +176,16 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
             <div class="tabletMenuNavbar tabletMenuNavbarCourses">
                 <ul class="tabletProfileCoursesField">
-                    <li><a href="/lessons/accounting-for-begginers"><?=$GLOBALS['text']['headerCourseAccounting']?></a></li>
-                    <li><a href="/lessons/accounting"><?=$GLOBALS['text']['headerAccounting']?></a></li>
-                    <li><a href="/lessons/management"><?=$GLOBALS['text']['headerCoursePayrol']?></a></li>
-                    <li><a href="/lessons/marketing"><?=$GLOBALS['text']['headerMarketing']?></a></li>
+                    <?php
+                    $lang = $_COOKIE['language'];
+                    $lessons = AcLessons::find()->select('id,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+                    if (!empty($lessons)){ foreach ($lessons as $lesson) {?>
+                        <li><a href="/lessons/lesson?id=<?=$lesson['id']?>"><?=$lesson['lesson_name']?></a></li>
+                    <?php }}?>
+<!--                    <li><a href="/lessons/accounting-for-begginers">--><?php //=$GLOBALS['text']['headerCourseAccounting']?><!--</a></li>-->
+<!--                    <li><a href="/lessons/accounting">--><?php //=$GLOBALS['text']['headerAccounting']?><!--</a></li>-->
+<!--                    <li><a href="/lessons/management">--><?php //=$GLOBALS['text']['headerCoursePayrol']?><!--</a></li>-->
+<!--                    <li><a href="/lessons/marketing">--><?php //=$GLOBALS['text']['headerMarketing']?><!--</a></li>-->
                 </ul>
             </div>
         </div>
@@ -235,7 +241,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
             <div class="menu">
                 <ul>
-                    <li class="dropDownLi menuAboutDropDown">
+                    <li class="dropDownLi menuAboutDropDown orangeOrWhite">
                         <span class="menuAbout"><?=$GLOBALS['text']['__about__']?></span>
 <!--                        <span class="menuAbout">ABOUT</span>-->
                         <div class="dropDownAbout">
@@ -257,25 +263,19 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                     if (!empty($lessons)){ foreach ($lessons as $lesson) {?>
                                         <li><a href="/lessons/lesson?id=<?=$lesson['id']?>"><?=$lesson['lesson_name']?></a></li>
                                     <?php }}?>
-<!--                                    <li><a href="/lessons/accounting-for-begginers">--><?php //= $GLOBALS['text']['headerCourseAccounting']?><!--</a></li>-->
-<!--                                    <li><a href="/lessons/management">--><?php //=$GLOBALS['text']['headerCoursePayrol']?><!--</a></li>-->
-<!--                                    <li><a href="/lessons/accounting">--><?php //=$GLOBALS['text']['headerAccounting']?><!--</a></li>-->
-<!--                                    <li><a href="/lessons/marketing">--><?php //=$GLOBALS['text']['headerMarketing']?><!--</a></li>-->
-<!--                                    <li><a href="/lessons/management">--><?php //=$GLOBALS['text']['headerCoursePayrol']?><!--</a></li>-->
-<!--                                    <li><a href="/lessons/accounting">--><?php //=$GLOBALS['text']['headerAccounting']?><!--</a></li>-->
                                 </ul>
                             </div>
                         </div>
                     </li>
-                    <li class="whiteLi"><a href=""><?= $GLOBALS['text']['__faq__'] ?></a></li>
-                    <li class="whiteLi"><a href=""><?= $GLOBALS['text']['__testimonials__'] ?></a></li>
+                    <li class="whiteLi orangeOrWhite"><a href=""><?= $GLOBALS['text']['__faq__'] ?></a></li>
+                    <li class="whiteLi orangeOrWhite"><a href=""><?= $GLOBALS['text']['__testimonials__'] ?></a></li>
                     <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
                         <li class="whiteLi"><a href="#section01""><?= $GLOBALS['text']['__blog__'] ?></a></li>
                     <?php } else { ?>
-                        <li class="whiteLi"><a href="/blog/index"><?= $GLOBALS['text']['__blog__'] ?></a></li>
+                        <li class="whiteLi orangeOrWhite"><a href="/blog/index"><?= $GLOBALS['text']['__blog__'] ?></a></li>
                     <?php } ?>
-                    <li class="whiteLi"><a href="/contact-us/index"><?= $GLOBALS['text']['__contact__'] ?></a></li>
-                    <li class="whiteLi"><a href="/apply-now/index"><?= $GLOBALS['text']['__applynow__'] ?></a></li>
+                    <li class="whiteLi orangeOrWhite"><a href="/contact-us/index"><?= $GLOBALS['text']['__contact__'] ?></a></li>
+                    <li class="whiteLi orangeOrWhite"><a href="/apply-now/index"><?= $GLOBALS['text']['__applynow__'] ?></a></li>
                     <li>
                         <button type="button" class="btnBack">
                             <img src="/images/circle.png" alt="">

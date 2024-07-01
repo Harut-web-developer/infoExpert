@@ -281,6 +281,9 @@
     width: 300px;
     line-height: 1.5;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     /*top: 33px;*/
     /*position: relative;*/
     /*left: 25px;*/
@@ -337,7 +340,9 @@
     left: 22px;
     z-index: 100;
     padding-left: 0px !important;
-
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 .dropDownAbout > ul > li > a{
     color: #1C5484;
@@ -820,6 +825,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    gap: 16px;
 }
 .tabletProfileCoursesField > li > a{
     text-decoration: none;
