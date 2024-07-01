@@ -66,6 +66,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         </div>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!--Like js-->
 <script>
     document.querySelectorAll('.personelManagement ion-icon').forEach(icon => {
@@ -73,4 +74,23 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             this.classList.toggle('active');
         });
     });
+    function lessonsFieldFixed(){
+        document.addEventListener('scroll', function() {
+            const bottomImages = document.getElementById('bottomImages');
+            const footerBackground = document.getElementById('footerBackgroundM');
+            const footerTop = footerBackground.getBoundingClientRect().top;
+            const bottomImagesHeight = bottomImages.offsetHeight;
+            const windowHeight = window.innerHeight;
+            if (footerTop + bottomImagesHeight <= windowHeight) {
+                bottomImages.classList.remove('fixed');
+                bottomImages.classList.add('none');
+            } else {
+                bottomImages.classList.remove('none');
+                bottomImages.classList.add('fixed');
+            }
+        });
+    }
+    if ($(window).width() <= 600){
+        lessonsFieldFixed()
+    }
 </script>

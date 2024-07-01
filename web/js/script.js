@@ -254,15 +254,6 @@ if (window.location.pathname == '/my-card/index' && $(window).width() <= 600){
         }
     });
 }
-if (window.location.pathname == '/lessons/accounting-for-begginers' && $(window).width() <= 600){
-    lessonsFieldFixed()
-}else if(window.location.pathname == '/lessons/management' && $(window).width() <= 600){
-    lessonsFieldFixed()
-}else if(window.location.pathname == '/lessons/accounting' && $(window).width() <= 600){
-    lessonsFieldFixed()
-}else if(window.location.pathname == '/lessons/marketing' && $(window).width() <= 600){
-    lessonsFieldFixed()
-}
 if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600){
     document.addEventListener('scroll', function() {
         const summary = document.getElementById('summary');
@@ -481,23 +472,6 @@ $(document).ready(function () {
     })
 
 })
-
-function lessonsFieldFixed(){
-    document.addEventListener('scroll', function() {
-        const bottomImages = document.getElementById('bottomImages');
-        const footerBackground = document.getElementById('footerBackgroundM');
-        const footerTop = footerBackground.getBoundingClientRect().top;
-        const bottomImagesHeight = bottomImages.offsetHeight;
-        const windowHeight = window.innerHeight;
-        if (footerTop + bottomImagesHeight <= windowHeight) {
-            bottomImages.classList.remove('fixed');
-            bottomImages.classList.add('none');
-        } else {
-            bottomImages.classList.remove('none');
-            bottomImages.classList.add('fixed');
-        }
-    });
-}
 if (window.location.pathname == '/') {
     let seeMoreBtnTestimonial = document.querySelector('#testimonialBtnMobile');
     let testimonial = [...document.querySelectorAll('.mobileTestimonial .blockTestimonialMobile')];

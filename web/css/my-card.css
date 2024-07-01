@@ -1334,12 +1334,4 @@ ion-icon {
     .myCardMobileField{
         display: none;
     }
-    #totalPriceField.fixed {
-        position: fixed;
-        bottom: -1px;
-        width: 100%;
-    }
-    #totalPriceField.none {
-        display: none;
-    }
 }

@@ -37,6 +37,8 @@
     width: 69%;
 }
 .titleMan{
+    width: 67%;
+    margin: 0px auto;
     justify-content: flex-start;
     align-items: center;
     font-family: "RobotoSlab_", sans-serif;
@@ -45,10 +47,8 @@
     line-height: 58px;
     text-align: left;
     color: #F36528;
-    width: auto;
     height: min-content;
     display: flex;
-    padding-left: 16.666%;
 }
 .infotxt{
     font-family: "Roboto_",sans-serif;
@@ -244,7 +244,7 @@
     background-color: #ffffff50;
     justify-content: center;
     margin-left: 42px;
-    margin-right: 42px;
+    /*margin-right: 42px;*/
     cursor: pointer;
 }
 ion-icon.active {
@@ -378,21 +378,29 @@ ion-icon {
         font-family: "RobotoSlab_",sans-serif;
         font-size: 25px;
         font-weight: 400;
-        line-height: 58px;
+        line-height: 32px;
         text-align: left;
         color: #F36528;
         width: auto;
+        padding: 0;
         padding-top: 28px;
-        padding-left: 6.8%;
-        padding-right: 6.9%;
+        margin-left: 6.83%;
+        margin-right: 5.76%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    .titleMan span{
+        text-align: center;
     }
     .backButton {
         width: 40px;
         height: 40px;
         display: block;
+        margin-right: 51px;
+    }
+    .large-font{
+        margin-left: 51px;
     }
     .topDivFlex{
         width: 100%;
@@ -510,12 +518,8 @@ ion-icon {
     .bottomImages{
         gap: 30px;
     }
-    .backButton {
-        margin-right: 51px;
-    }
     .large-font{
         min-width: 43px;
-        margin-left: 51px;
     }
     .titleMan{
         height: max-content;
@@ -523,7 +527,7 @@ ion-icon {
         font-family: 'RobotoSlab_',sans-serif;
         font-size: 26px;
         font-weight: 400;
-        line-height: 21.1px;
+        line-height: 27px;
         text-align: center;
     }
     .diplomW{
@@ -627,13 +631,7 @@ ion-icon {
         font-family: 'Roboto_',sans-serif;
         font-size: 10px;
         font-weight: 400;
-        /*line-height: 11.72px;*/
-        /*top: 7.5px;*/
     }
-    /*.bottomImages img {*/
-    /*    width: 102px;*/
-    /*    height: 44px;*/
-    /*}*/
     .managementBtnDiv > button > img{
         width: 102px;
         height: 44px;
@@ -658,9 +656,6 @@ ion-icon {
         margin: 0;
         padding: 0;
     }
-    /*.managementBtnDiv > button > span{*/
-    /*    !*top: 17px;*!*/
-    /*}*/
     .ellipseButton {
         display: block;
         position: absolute;
@@ -668,13 +663,13 @@ ion-icon {
     .backButton {
         width: 30px;
         height: 30px;
-        margin-right: 51px;
+        margin-right: 25px;
     }
     .large-font {
         width: 30px;
         height: 30px;
         min-width: 30px;
-        margin-left: 51px;
+        margin-left: 25px;
     }
     .titleMan{
         font-family: 'RobotoSlab_',sans-serif;
