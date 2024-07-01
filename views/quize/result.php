@@ -20,7 +20,7 @@ if ($language == 'en') {
                 <img src="/images/resultBlackboard.png" alt="">
                 <div class="resultBlackboardCntered">
                     <span class="resultBlackboardCount"><?=$true_answer_count?>/<?=$questions_count?></span>
-                    <span class="resultBlackboardResult"><?=$answers_list['name_list']?></span>
+<!--                    <span class="resultBlackboardResult">--><?php //=$answers_list['name_list']?><!--</span>-->
                 </div>
             </div>
             <div class="resultButtons">

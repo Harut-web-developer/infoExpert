@@ -146,6 +146,8 @@
     line-height: 26px;
     text-align: left;
     color: #FFFFFF;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .cardBody .span2{
     font-family: "Roboto_",sans-serif;
@@ -728,9 +730,9 @@ ion-icon {
 .myCoursesBlocksFieldMain {
     width: 335px;
 }
-.myCoursesBlocksFieldMain > img {
+    .myCoursesPhoto{
     width: 100%;
-    height: auto;
+    height: 233px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
@@ -744,9 +746,9 @@ ion-icon {
 .txt1, .txt2{
     font-size: 36px;
 }
-    /*.carouselCourses {*/
-    /*    gap: 46px;*/
-    /*}*/
+    .myCoursesPhoto{
+        height: 210px;
+    }
 }
 @media screen and (max-width: 1700px) {
     .myCoursesFieldSectionLeft > img {
@@ -784,6 +786,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1600px) {
+    .myCoursesPhoto{
+        height: 170px;
+    }
     .myCoursesFieldAcceptCourses{
         height: 440px;
     }
@@ -1064,6 +1069,9 @@ ion-icon {
 
 }
 @media screen and (max-width: 1300px) {
+    .myCoursesPhoto{
+        height: 150px;
+    }
     .myCoursesRating {
         height: 46px;
     }
@@ -1266,6 +1274,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1100px) {
+    .myCoursesPhoto{
+        height: 127px;
+    }
     .myCoursesSection {
         gap: 40px;
     }

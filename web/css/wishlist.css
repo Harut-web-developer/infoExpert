@@ -306,7 +306,7 @@ hr.new1 {
 }
 .cardsimg_ > img{
     width: 100%;
-    height: 100%;
+    height: 233px;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
 }
@@ -427,7 +427,7 @@ hr.new1 {
 }
 .img_2 img{
     width: 100%;
-    height: 214px;
+    height: 233px;
     border-radius: 30px 30px 0px 0px;
 }
 .card_2 .cardBody_2{
@@ -458,7 +458,7 @@ hr.new1 {
     text-align: left;
     color: #FFFFFF;
     width: 164px;
-    height: max-content;
+    /*height: max-content;*/
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -690,9 +690,6 @@ ion-icon {
     .cardsimg_ {
         height: auto;
     }
-    .cardsimg_ > img {
-        height: auto;
-    }
     .topSlider {
          padding-left: 0;
     }
@@ -701,6 +698,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1800px) {
+    .img_2 img, .cardsimg_ > img {
+        height: 210px;
+    }
     .img_2{
         height: auto;
     }
@@ -779,8 +779,8 @@ ion-icon {
     .myCoursesFieldSection {
         margin: 37px 36px 37px 50px;
     }
-    .img_2 img {
-        height: auto;
+    .img_2 img, .cardsimg_ > img {
+        height: 170px;
     }
     /*.cardContent {*/
     /*    height: auto;*/
@@ -799,7 +799,7 @@ ion-icon {
     .card_2 .cardBody_2 .span1_2 {
         font-size: 17px;
         font-weight: 500;
-        line-height: 14.3px;
+        line-height: 16.3px;
     }
     .starDivCourses {
         width: 78px;
@@ -866,7 +866,7 @@ ion-icon {
     }
     .cardContent {
         width: 100%;
-        height: 52%;
+        height: 50%;
         padding: 0 17px 10px 17px;
     }
     .starDivWishlistCourses img {
@@ -998,9 +998,6 @@ ion-icon {
     .cardContent {
         padding: 10px 17px 16px 17px;
     }
-    .card_2 .cardBody_2 {
-         padding: 0;
-    }
 }
 @media screen and (max-width: 1300px) {
     .usersProfileRu .userProfileMenuField > span {
@@ -1079,13 +1076,14 @@ ion-icon {
     .cardCenter_2 {
         height: 70px;
     }
-    .img_2 img {
+    .img_2 img, .cardsimg_ > img {
         width: 100%;
+        height: 150px;
     }
     .card_2 .cardBody_2 .span1_2{
         font-size: 13px;
         font-weight: 500;
-        line-height: 14.3px;
+        line-height: 15.3px;
         text-align: left;
     }
     .cardtxt1_2 {
@@ -1123,7 +1121,7 @@ ion-icon {
         height: 1150px;
     }
     .cardContent {
-        height: 54%;
+        height: 50%;
     }
     .cardtxt1_2, .cardtxt2_2 {
         width: 170.11px;
@@ -1179,7 +1177,7 @@ ion-icon {
         width: 423px;
     }
     .myCoursesFieldSectionRight img {
-        left: -35px;
+        left: -20px;
     }
     .starAndTxt_2 {
         display: flex;
@@ -1333,10 +1331,8 @@ ion-icon {
         height: 136px;
         padding-top: 0;
     }
-    .cardsimg_ > img {
+    .cardsimg_ > img, .img_2 img {
         height: 127px;
-        border-top-right-radius: 30px;
-        border-top-left-radius: 30px;
     }
     .cardsTextInfo_{
         height: 100px;
