@@ -10,6 +10,9 @@
 .backButton, .ellipseButton{
     display: none;
 }
+.sizeLikeField{
+    width: min-content;
+}
 .amdFix{
     font-family: 'Roboto_',sans-serif;
     font-size: 24px;
@@ -25,7 +28,7 @@
 .bottomDiv{
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     margin: 0 auto;
     padding-top: 41px;
     gap: 11.4%;
@@ -43,7 +46,7 @@
     text-align: left;
     color: #F36528;
     width: auto;
-    height: 58px;
+    height: min-content;
     display: flex;
     padding-left: 16.666%;
 }
@@ -71,7 +74,10 @@
     max-width: 491.36px;
 }
 .rightImgBottom{
-    width: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .card_ {
     width: 296px;
@@ -219,7 +225,7 @@
 .managementBtnDiv > button:hover span{
     color: white;
 }
-.rightImgM, .diplomW{
+.diplomW{
     display: none;
 }
 .managementBtnDivCourse a{
@@ -238,6 +244,7 @@
     background-color: #ffffff50;
     justify-content: center;
     margin-left: 42px;
+    margin-right: 42px;
     cursor: pointer;
 }
 ion-icon.active {
@@ -279,8 +286,23 @@ ion-icon {
         gap: 0;
         justify-content: space-between;
     }
-    .rightImgM, .diplomW{
+    .diplomW{
         display: none;
+    }
+}
+@media screen and (max-width: 1340px) {
+    .rightImgBottom span {
+        font-family: 'RobotoSlab_',sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 44px;
+        text-align: center;
+    }
+    .leftDipl span {
+        color: #F36528;
+        font-family: "RobotoSlab_", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
     }
 }
 @media screen and (max-width: 1228px) {
@@ -291,13 +313,13 @@ ion-icon {
         align-items: center;
         justify-content: space-between;
     }
-    .rightImgBottom span {
-        font-family: 'RobotoSlab_',sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 44px;
-        text-align: center;
-    }
+    /*.rightImgBottom span {*/
+    /*    font-family: 'RobotoSlab_',sans-serif;*/
+    /*    font-size: 16px;*/
+    /*    font-weight: 400;*/
+    /*    line-height: 44px;*/
+    /*    text-align: center;*/
+    /*}*/
     .rightImgBottom .card_ {
         width: 223px;
         height: 295px;
@@ -330,7 +352,7 @@ ion-icon {
     }
     .leftDipl span {
         font-family: 'RobotoSlab_',sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
         line-height: 44px;
         text-align: center;
@@ -341,7 +363,7 @@ ion-icon {
         border-radius: 30px;
         padding-top: 0;
     }
-    .rightImgM, .diplomW{
+    .diplomW{
         display: none;
     }
 }
@@ -469,7 +491,7 @@ ion-icon {
         margin: 0;
         padding-top: 0;
     }
-    .rightImgM, .diplomW{
+    .diplomW{
         display: none;
     }
 }
@@ -512,14 +534,14 @@ ion-icon {
         justify-content: center;
         align-items: center;
     }
-    .rightImg, .diplomM{
+    .diplomM{
         display: none;
     }
-    .rightImgM{
-        width: 342px;
-        height: 251px;
-        display: block;
+    .rightImg{
+        width: 360px;
+        height: auto;
         border-radius: 30px;
+        margin: 20px 0;
     }
     .bottomDiv {
         width: 100%;
@@ -531,8 +553,9 @@ ion-icon {
     }
     .infotxt{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
+        align-items: center;
         text-align: left;
         font-family: 'Roboto_',sans-serif;
         font-size: 14px;
@@ -546,13 +569,6 @@ ion-icon {
         line-height: 15.83px;
         text-align: center;
     }
-    .rightImgM {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 30px;
-        margin: 20px 0;
-    }
     .rightImgBottom {
         width: 60%;
     }
@@ -561,7 +577,7 @@ ion-icon {
         order: 3;
     }
     .leftDipl img{
-        width: 100%;
+        width: 370px;
         height: auto;
         margin-top: 20px;
     }
@@ -580,7 +596,13 @@ ion-icon {
         background: #5D9A9D;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
+    .leftDipl img{
+        width: 100%;
+    }
+    .rightImg{
+        width: 100%;
+    }
     .bottomImages {
         background: #7BADAF;
         padding: 0;

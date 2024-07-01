@@ -33,7 +33,7 @@ $this->registerCssFile('@web/css/trade-management.css?v=1');
                         </div>
                         <button type="button" class="btn btn-next btnQuize">
                             <img src="/images/contactus.png" alt="">
-                            <span><?=$GLOBALS['text']['btnQuize']?></span>
+                            <span><?=$GLOBALS['text']['btnQuizeGo']?></span>
                         </button>
                     </form>
                 <?php }} ?>
