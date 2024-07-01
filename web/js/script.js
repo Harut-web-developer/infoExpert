@@ -419,7 +419,7 @@ $(document).ready(function () {
     if (window.location.pathname == '/') {
         window.onload=function(){
             $('.sectionThree .slider').slick({
-                autoplay:true,
+                autoplay:false,
                 autoplaySpeed:1600,
                 arrows:false,
                 slidesToShow:1,
