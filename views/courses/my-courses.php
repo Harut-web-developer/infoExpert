@@ -61,7 +61,7 @@ if ($language == 'en') {
                     <ul class="carouselMyCourses myCoursesFieldAcceptCourses">
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="" draggable="false">
+                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="infoTitle">1C: Accounting 8.3 dfbh dfherh drherh adryeh aey</div>
                                     <div class="myCoursesRating">
@@ -83,7 +83,7 @@ if ($language == 'en') {
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="" draggable="false">
+                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="infoTitle">1C: Accounting 8.3</div>
                                     <div class="myCoursesRating">
@@ -105,7 +105,7 @@ if ($language == 'en') {
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="" draggable="false">
+                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="infoTitle">1C: Accounting 8.3</div>
                                     <div class="myCoursesRating">
@@ -127,7 +127,7 @@ if ($language == 'en') {
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="" draggable="false">
+                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="infoTitle">1C: Accounting 8.3</div>
                                     <div class="myCoursesRating">
@@ -149,7 +149,7 @@ if ($language == 'en') {
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="" draggable="false">
+                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="infoTitle">1C: Accounting 8.3</div>
                                     <div class="myCoursesRating">
@@ -171,7 +171,7 @@ if ($language == 'en') {
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="" draggable="false">
+                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="infoTitle">1C: Accounting 8.3</div>
                                     <div class="myCoursesRating">
@@ -193,7 +193,7 @@ if ($language == 'en') {
                         </li>
                         <li class="myCoursesBlocksField">
                             <div class="myCoursesBlocksFieldMain">
-                                <img src="/images/courseimage.png" alt="" draggable="false">
+                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                                 <div class="myCoursesBlocksFieldMainInfo">
                                     <div class="infoTitle">1C: Accounting 8.3</div>
                                     <div class="myCoursesRating">
@@ -225,7 +225,7 @@ if ($language == 'en') {
         </div>
         <div class="myCoursesMobile">
             <div class="myCoursesBlocksField">
-                <img src="/images/courseimage.png" alt="" draggable="false">
+                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                 <div class="myCoursesBlocksFieldMain">
                     <span>Trade Management: Marketing, Sales BITRIX / CRM</span>
                     <div class="myCoursesRating">
@@ -247,7 +247,7 @@ if ($language == 'en') {
                 </div>
             </div>
             <div class="myCoursesBlocksField">
-                <img src="/images/courseimage.png" alt="" draggable="false">
+                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                 <div class="myCoursesBlocksFieldMain">
                     <span>Trade Management: Marketing, Sales BITRIX / CRM</span>
                     <div class="myCoursesRating">
