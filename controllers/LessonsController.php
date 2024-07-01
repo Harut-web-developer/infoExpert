@@ -43,25 +43,8 @@ class LessonsController extends \yii\web\Controller
         $this->enableCsrfValidation = false;
         return parent::beforeAction($action);
     }
-//    public function actionAccountingForBegginers()
-//    {
-//        return $this->render('accouting-for-begginers.php');
-//    }
-//    public function actionAccounting()
-//    {
-//        return $this->render('accouting');
-//    }
-//    public function actionManagement()
-//    {
-//        return $this->render('management');
-//    }
-//    public function actionMarketing()
-//    {
-//        return $this->render('marketing');
-//    }
     public function actionLesson()
     {
-//        echo "<pre>";
         $language = $_COOKIE['language'];
         $lesson_id = intval($_GET['id']);
         $lesson = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name,lesson_content_'.$language.' as lesson_content')

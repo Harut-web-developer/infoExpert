@@ -182,10 +182,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     if (!empty($lessons)){ foreach ($lessons as $lesson) {?>
                         <li><a href="/lessons/lesson?id=<?=$lesson['id']?>"><?=$lesson['lesson_name']?></a></li>
                     <?php }}?>
-<!--                    <li><a href="/lessons/accounting-for-begginers">--><?php //=$GLOBALS['text']['headerCourseAccounting']?><!--</a></li>-->
-<!--                    <li><a href="/lessons/accounting">--><?php //=$GLOBALS['text']['headerAccounting']?><!--</a></li>-->
-<!--                    <li><a href="/lessons/management">--><?php //=$GLOBALS['text']['headerCoursePayrol']?><!--</a></li>-->
-<!--                    <li><a href="/lessons/marketing">--><?php //=$GLOBALS['text']['headerMarketing']?><!--</a></li>-->
                 </ul>
             </div>
         </div>
