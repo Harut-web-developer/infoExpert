@@ -185,7 +185,9 @@
         height: 448px;
     }
     .tabletMenuNavbar{
-        height: 565px;
+        max-height: 565px;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     .tabletCoursesList{
         margin-bottom: 0px;
