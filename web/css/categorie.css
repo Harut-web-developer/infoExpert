@@ -37,7 +37,7 @@
     padding-top: 58px;
 }
 .categorieTitle{
-    width: 74%;
+    width: 100%;
     font-family: "RobotoSlab_",sans-serif;
     font-size: 36px;
     font-weight: 600;
@@ -117,6 +117,9 @@
     color: #1C5484;
 }
 /*LIKE*/
+.sizeLikeField{
+    width: min-content;
+}
 .large-font {
     width: 43px;
     height: 43px;
@@ -127,7 +130,7 @@
     display: flex;
     background-color: #ffffff50;
     justify-content: center;
-    margin-left: 17px;
+    margin-left: 42px;
     cursor: pointer;
 }
 ion-icon.active {
@@ -179,16 +182,7 @@ ion-icon {
     .categorieTitle {
         font-size: 35px;
     }
-    .categorieTitle .large-font{
-        width:32px;
-        height: 32px;
-    }
-    .categorieTitle ion-icon {
-        width: 24.63px;
-        height: 20.96px;
-
-    }
-    }
+}
 @media screen and (max-width: 1309px) {
     .categorieTitle {
         font-size: 33px;
@@ -213,9 +207,7 @@ ion-icon {
         display: contents;
     }
     .categorieTitle .large-font {
-        width: 29px;
-        height: 29px;
-        margin-left: 0;
+        margin-left: 51px;
     }
     .sectionCategorie {
         width: auto;
@@ -225,6 +217,7 @@ ion-icon {
         width: 40px;
         height: 40px;
         display: block;
+        margin-right: 51px;
     }
     .categorieTitleDiv {
         padding-top: 0;
@@ -239,7 +232,7 @@ ion-icon {
         font-size: 18px;
         font-weight: 600;
         line-height: 21.6px;
-        text-align: left;
+        text-align: center;
         margin-bottom: 20px;
     }
     .date{
@@ -288,16 +281,21 @@ ion-icon {
     .backButton {
         width: 30px;
         height: 30px;
-        margin-right: 51px;
+        margin-right: 25px;
     }
     .categorieTitle {
-        align-items: start;
+        align-items: center;
         text-align: center;
     }
     .categorieTitle .large-font {
-        min-width: 30px;
+        width: 30px;
         height: 30px;
-        margin-left: 51px;
+        min-width: 30px;
+        margin-left: 25px;
+    }
+    ion-icon {
+        width: 24.63px;
+        height: 20.96px;
     }
     .sectionCategorie{
         flex-direction: column;
