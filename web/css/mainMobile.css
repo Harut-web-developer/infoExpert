@@ -43,43 +43,57 @@
 }
 @media only screen and (min-width: 270px) and (max-width: 306px) {
     .tabletProfileCoursesField {
-        width: 160px;
-        height: 210px;
+        width: 86%;
+        height: 360px;
         position: absolute;
         padding-left: 0px;
         margin-bottom: 0px;
         list-style: none;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: start;
         align-items: start;
     }
 }
 @media only screen and (min-width: 307px) and (max-width: 372px) {
     .tabletProfileCoursesField {
-        width: 185px;
-        height: 210px;
+        width: 86%;
+        height: 360px;
         position: absolute;
         padding-left: 0px;
         margin-bottom: 0px;
         list-style: none;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: start;
         align-items: start;
     }
 }
 @media only screen and (min-width: 373px) and (max-width: 435px) {
     .tabletProfileCoursesField {
-        width: 235px;
-        height: 160px;
+        width: 86%;
+        height: 360px;
         position: absolute;
         padding-left: 0px;
         margin-bottom: 0px;
         list-style: none;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: start;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 436px) and (max-width: 599px) {
+    .tabletProfileCoursesField {
+        width: 86%;
+        height: 360px;
+        position: absolute;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
         align-items: start;
     }
 }
@@ -137,7 +151,7 @@
     }
     .menuTabletHeader{
         /*width: 0%;*/
-        height: 706px;
+        height: 673px;
         top:65px;
     }
     .personMainMenu{
@@ -222,7 +236,7 @@
         color: #F36528;
     }
     .tabletProfileCoursesField{
-        margin: 40px 21px 40px 23px;
+        margin: 40px 9% 40px 23px;
     }
     .tabletProfileMenuField{
         margin: 40px 23px;
