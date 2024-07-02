@@ -12,11 +12,18 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <img class="backButton" src="/images/backButton.png" alt="">
             </a>
             <?=$blogs['page_title']?>
-            <div class='large-font'>
-                <ion-icon name="heart">
-                    <div class='red-bg'></div>
-                </ion-icon>
+            <div class="sizeLikeField">
+                <div class="large-font">
+                    <ion-icon name="heart" role="img" class="md hydrated">
+                        <div class="red-bg"></div>
+                    </ion-icon>
+                </div>
             </div>
+<!--            <div class='large-font'>-->
+<!--                <ion-icon name="heart">-->
+<!--                    <div class='red-bg'></div>-->
+<!--                </ion-icon>-->
+<!--            </div>-->
         </h1>
 
         <span class="date">
