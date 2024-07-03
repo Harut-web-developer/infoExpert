@@ -22,6 +22,7 @@ if ($language == 'en') {
     $class1 = 'loginFieldAm';
 }
 ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
 <div class="login">
     <div class="loginField <?php echo $class1; ?>">
         <div class="signupFormTitle">
@@ -35,13 +36,12 @@ if ($language == 'en') {
         </div>
         <form action="" class="signin" method="post">
             <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
-
             <span><?=$GLOBALS['text']['signinFormTitle']?></span>
             <div class="signinMenu">
                 <input type="email" value="<?=$email?>" placeholder="<?=$GLOBALS['text']['signinFormEmail']?>" name="email" required>
                 <div class="passEye">
                     <input type="password" placeholder="<?=$GLOBALS['text']['signinFormPassword']?>" name="password" required>
-                    <img class="togglePassword" src="/images/signEyeClose.png" alt="">
+                    <i class="fas fa-eye-slash show_hide"></i>
                 </div>
                 <div class="rememberField">
                     <div class="mainCheck">
@@ -62,4 +62,44 @@ if ($language == 'en') {
         </form>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $('#checkboxSignIn').change(function(){
+        let submitButton = $('#submitButton');
+        let signupButtonText = $('#signupButtonText');
 
+        if ($(this).prop('checked')) {
+            submitButton.prop('disabled', false);
+            signupButtonText.css('color', '#F36528');
+
+        } else {
+            submitButton.prop('disabled', true);
+            signupButtonText.css('color', '#D9E3E4');
+        }
+    });
+    $("#submitButton").hover(
+        function () {
+            if (!$(this).prop("disabled")) {
+                $(this).find("img").attr("src", "/images/Vectorhover.png");
+                $(this).find("span").css("color", "white");
+            }
+        },
+        function () {
+            if (!$(this).prop("disabled")) {
+                $(this).find("img").attr("src", "/images/Vector.png");
+                $(this).find("span").css("color", "#F36528");
+            }
+        }
+    );
+    const showHide = document.querySelector(".show_hide"),
+          input = document.querySelector(".passEye input");
+        showHide.addEventListener("click", ()=>{
+        if(input.type === "password"){
+            input.type = "text";
+            showHide.classList.replace("fa-eye-slash","fa-eye");
+        }else {
+            input.type = "password";
+            showHide.classList.replace("fa-eye","fa-eye-slash");
+        }
+    });
+</script>
