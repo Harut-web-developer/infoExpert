@@ -37,20 +37,22 @@ if ($language == 'en') {
                 <div class="myCoursesProfileField">
                     <div class="myCoursesBlocksFieldMainPerson">
                         <div class="myCoursesFieldSectionLeft">
-                            <img src="/images/profileimage.png" alt="">
-                            <span>Ani Martirosian</span>
+                            <img src="/<?php if(!empty(Yii::$app->user->identity->image)){echo Yii::$app->user->identity->image;}?>" alt="">
+                            <span><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
                             <div class="usersProfileInfo">
                                 <div class="usersProfileInfoPhone">
                                     <img src="/images/phonAchievements.png" alt="">
-                                    <span>369 258 147</span>
+                                    <span><?php if(!empty(Yii::$app->user->identity->phone)){echo Yii::$app->user->identity->phone;}?></span>
                                 </div>
                                 <div class="usersProfileInfoEmail">
                                     <img src="/images/mailAchievements.png" alt="">
-                                    <span>a@martirosian.com</span>
+                                    <span><?php if(!empty(Yii::$app->user->identity->email)){echo Yii::$app->user->identity->email;}?></span>
                                 </div>
                                 <div class="usersProfileInfoLinkdin">
                                     <img src="/images/linkdinAchievements.png" alt="">
-                                    <span>Ani Martirosian</span>
+                                    <?php if(!empty(Yii::$app->user->identity->linkdin_url)){?>
+                                        <a href="<?=Yii::$app->user->identity->linkdin_url?>" target="_blank"><?=Yii::$app->user->identity->username?></a>
+                                    <?php }?>
                                 </div>
                             </div>
                         </div>

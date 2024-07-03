@@ -26,6 +26,9 @@
     width: 24%;
     margin: 0px 0px 50px 40px;
 }
+.sectionCategorieRight > a{
+    text-decoration: none;
+}
 .sectionCategorieRight img{
     width: 90px;
     height: 90px;
@@ -86,6 +89,7 @@
     color: #1C5484;
 }
 .categorieTitleDivRight{
+    width: max-content;
     height: 24px;
 }
 .categorieTitleDivRight h1{

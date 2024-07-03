@@ -274,7 +274,21 @@ class SiteController extends Controller
 
     public function actionAccountSecurity()
     {
+//        echo "<pre>";
         $email_value = Yii::$app->user->identity->email;
+        if($this->request->isPost){
+            $current_password = $this->request->post('currentPassword');
+//            $current_password_hash = password_hash($current_password, PASSWORD_DEFAULT);
+//            ->generatePasswordHash($current_password)
+            $current_password_hash = Yii::$app->getSecurity();
+            $new_password = $this->request->post('newPassword');
+            $confirm_password = $this->request->post('confirmPassword');
+            var_dump($current_password);
+            var_dump($current_password_hash);
+            var_dump($new_password);
+            var_dump($confirm_password);
+            exit();
+        }
         return $this->render('security',[
             'email_value' => $email_value,
         ]);

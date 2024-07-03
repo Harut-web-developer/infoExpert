@@ -70,6 +70,7 @@ class BlogController extends \yii\web\Controller
     }
     public function actionCategorie()
     {
+//        echo "<pre>";
         $language = $_COOKIE['language'];
         $blogs = AcBlog::find()->select([
             'id',
@@ -78,9 +79,24 @@ class BlogController extends \yii\web\Controller
             'page_content_' . $language . ' as page_content',
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
             'img'
-        ])->where(['status' => '1'])->andWhere(['id' => $_GET['id']])->asArray()->one();
+        ])
+            ->where(['status' => '1'])
+            ->andWhere(['id' => $_GET['id']])
+            ->asArray()
+            ->one();
+        $last_blogs = AcBlog::find()->select([
+            'id',
+            'page_name_' . $language . ' as page_name',
+            'img'
+        ])
+            ->where(['status' => '1'])
+            ->limit(3)
+            ->orderBy(['create_date' => SORT_DESC])
+            ->asArray()
+            ->all();
         return $this->render('categorie',[
-            'blogs' => $blogs
+            'blogs' => $blogs,
+            'last_blogs' => $last_blogs,
         ]);
     }
 }

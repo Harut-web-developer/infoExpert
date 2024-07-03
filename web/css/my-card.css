@@ -187,6 +187,19 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
+.usersProfileInfoLinkdin > a{
+    font-family: "Roboto_",sans-serif;
+    margin-left: 37px;
+    font-size: 20px;
+    color: white;
+    white-space: normal;
+    width: -webkit-fill-available;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-decoration: none;
+}
 .myCardFieldAcceptCourses{
     width: calc(100%);
     height: 547px;
@@ -804,6 +817,11 @@ ion-icon {
         height: 22px;
     }
     .usersProfileInfoPhone > span, .usersProfileInfoEmail > span, .usersProfileInfoLinkdin > span{
+        font-weight: 400;
+        font-size: 14px;
+        margin-left: 16px;
+    }
+    .usersProfileInfoLinkdin > span{
         font-weight: 400;
         font-size: 14px;
         margin-left: 16px;

@@ -38,26 +38,18 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         </div>
         <div class="sectionCategorieRight">
             <div class="categorieTitleDivRight">
-                <h1>RECENT NEWS</h1>
+                <h1><?= $GLOBALS['text']['recentNews'] ?></h1>
             </div>
-            <div class="rigthtxt">
-                <img src="/images/img_categorie1.png">
-                <div class="rigthtxtdiv">
-                    <span>Best LearnPress WordPress Theme Collection for 2023</span>
-                </div>
-            </div>
-            <div class="rigthtxt">
-                <img src="/images/img_categorie2.png">
-                <div class="rigthtxtdiv">
-                    <span>Best LearnPress WordPress Theme Collection for 2023</span>
-                </div>
-            </div>
-            <div class="rigthtxt">
-                <img src="/images/img_categorie3.png">
-                <div class="rigthtxtdiv">
-                    <span>Best LearnPress WordPress Theme Collection for 2023</span>
-                </div>
-            </div>
+            <?php if (!empty($last_blogs)){foreach ($last_blogs as $last_blog){ ?>
+                <a href="categorie?id=<?=$last_blog['id']?>">
+                    <div class="rigthtxt">
+                        <img src="/<?=$last_blog['img']?>">
+                        <div class="rigthtxtdiv">
+                            <span><?=$last_blog['page_name']?></span>
+                        </div>
+                    </div>
+                </a>
+            <?php }}?>
         </div>
     </div>
 </div>

@@ -33,34 +33,34 @@ if ($language == 'en') {
             </ul>
         </div>
         <div class="userCreateFieldForms">
-            <form action="">
+            <form action="" method="post" enctype='multipart/form-data'>
                 <div class="userPhotoFields">
 <!--                    <img src="/images/usersAchievements.png" alt="">-->
 <!--                    nkar yntreluc petqa es img i mech baci-->
                     <span class="userAddPhotoText"><?=$GLOBALS['text']['usercreatePhoto']?></span>
-                    <input type="file">
+                    <input type="file" name="image" required>
                 </div>
                 <div class="userInputsFields">
                     <div class="userFormsInput">
                         <label for=""><?=$GLOBALS['text']['usercreateName']?></label>
-                        <input type="text">
+                        <input type="text" name="username" required>
                     </div>
                     <div class="userFormsInput">
                         <label for=""><?=$GLOBALS['text']['usercreatePhone']?></label>
-                        <input type="number">
+                        <input type="number" name="phone" required>
                     </div>
                     <div class="userFormsInput">
                         <label for=""><?=$GLOBALS['text']['usercreateMail']?></label>
-                        <input type="email">
+                        <input type="email" name="email" required>
                     </div>
                     <div class="userFormsInput">
                         <label for=""><?=$GLOBALS['text']['usercreateLinkdin']?></label>
-                        <input type="text">
+                        <input type="text" name="linkdin_url" required>
                     </div>
                     <div class="userFormsInput">
                         <label for="attachCv"><?=$GLOBALS['text']['usercreateCv']?></label>
                         <div id="attachCv" class="cvFileField">
-                            <input class="cvFile" type="file">
+                            <input class="cvFile" type="file" name="cv" required>
                             <div class="attachCv">
                                 <span><?=$GLOBALS['text']['usercreateAttach']?></span>
                                 <img src="/images/scriptIcon.png" alt="">
@@ -68,7 +68,7 @@ if ($language == 'en') {
                         </div>
                     </div>
                     <div class="userFormsBtn">
-                        <button>
+                        <button type="submit">
                             <img src="/images/userSaveBtn.png" alt="">
                             <span><?=$GLOBALS['text']['usercreateSave']?></span>
                         </button>

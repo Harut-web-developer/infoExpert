@@ -273,7 +273,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <li class="whiteLi orangeOrWhite"><a href="/contact-us/index"><?= $GLOBALS['text']['__contact__'] ?></a></li>
                     <li class="whiteLi orangeOrWhite"><a href="/apply-now/index"><?= $GLOBALS['text']['__applynow__'] ?></a></li>
                     <li>
-                        <button type="button" class="btnBack">
+                        <button type="button" class="btnBack modalOpenBtn">
                             <img src="/images/circle.png" alt="">
                             <span><?= $GLOBALS['text']['__callback__'] ?></span>
                         </button>
@@ -282,6 +282,36 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
         </div>
     </div>
+        <div class="securityModal">
+            <div class="securityContentModal">
+                <form class="modalMainField">
+                    <div class="modalTitleField">
+                        <span class="modalTitle">GET A CALL BACK</span>
+                        <span class="modalText">Complete the form below and we will contact you as soon as possible.</span>
+                    </div>
+                    <div class="modalInputField">
+                        <div class="modalNameField">
+                            <label for="modalName"><?=$GLOBALS['text']['modalCallBackName']?></label>
+                            <input type="text" id="modalName">
+                        </div>
+                        <div class="modalEmailField">
+                            <label for="modalEmail"><?=$GLOBALS['text']['inputEmail']?></label>
+                            <input type="text" id="modalEmail">
+                        </div>
+                        <div class="modalPhoneField">
+                            <label for="modalPhone"><?=$GLOBALS['text']['modalCallBackPhone']?></label>
+                            <input type="password" id="modalPhone">
+                        </div>
+                    </div>
+                    <div class="modalBtnField">
+                        <button>
+                            <img src="/images/securityBtn.png" alt="">
+                            <span><?=$GLOBALS['text']['modalCallBackSubmit']?></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
 </header>
 <main id="main" class="flex-shrink-0" role="main">
     <?= $content ?>
