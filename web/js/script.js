@@ -326,34 +326,6 @@ $(document).ready(function () {
     },function(){
         $('.profileFieldImg').hide();
     });
-    $('#checkboxSignIn').change(function(){
-        let submitButton = $('#submitButton');
-        let signupButtonText = $('#signupButtonText');
-
-        if ($(this).prop('checked')) {
-            submitButton.prop('disabled', false);
-            signupButtonText.css('color', '#F36528');
-
-        } else {
-            submitButton.prop('disabled', true);
-            signupButtonText.css('color', '#D9E3E4');
-        }
-    });
-    $("#submitButton").hover(
-        function () {
-            if (!$(this).prop("disabled")) {
-                $(this).find("img").attr("src", "/images/Vectorhover.png");
-                $(this).find("span").css("color", "white");
-            }
-        },
-        function () {
-            if (!$(this).prop("disabled")) {
-                $(this).find("img").attr("src", "/images/Vector.png");
-                $(this).find("span").css("color", "#F36528");
-            }
-        }
-    );
-
     let current = location.pathname;
     $('.userProfileMenu li a').each(function(){
         let sthis = $(this);
@@ -428,20 +400,9 @@ $(document).ready(function () {
         };
     }
 
-
-
     if ($('.individualCards').length >= 4 && $(window).width() >= 1024){
         $('.individualCards').last().css('display', 'none');
     }
-    $('.togglePassword').on('click', function() {
-        if ($(this).siblings('input').attr('type') === 'password') {
-            $(this).siblings('input').attr('type', 'text');
-            $(this).attr('src', '/images/signEyeOpen.png');
-        } else {
-            $(this).siblings('input').attr('type', 'password');
-            $(this).attr('src', '/images/signEyeClose.png');
-        }
-    });
     $('.modalEye').on('click', function () {
         if($(this).siblings('input').attr('type') === 'password'){
             $(this).siblings('input').attr('type', 'text');

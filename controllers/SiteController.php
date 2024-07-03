@@ -157,6 +157,9 @@ class SiteController extends Controller
     public function actionLogin(){
         $session = Yii::$app->session;
         $model = new LoginForm();
+//        echo "<pre>";
+//        var_dump($_POST);
+//        die;
         if($_POST){
             if($model->load(Yii::$app->request->post(), '') && $model->login()){
                 if (isset($_POST['rememberme'])){
@@ -219,6 +222,11 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionTest()
+    {
+        return $this->render('test');
     }
 
     public function actionSignUp()

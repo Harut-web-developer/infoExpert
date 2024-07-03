@@ -13,7 +13,6 @@
 }
 .login {
     width: 100%;
-    height: 1088px;
     background-image: url("../images/background-sign-in.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -24,9 +23,7 @@
 }
 .loginField{
     width: 58%;
-    margin: 0px auto;
-    height: 503px;
-    position: absolute;
+    margin: 356px auto 230px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -82,75 +79,7 @@
     width: 202px;
     height: 46px;
 }
-
-.signin{
-    width: 406px;
-    height: 339px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.signin > span{
-    text-align: center;
-    color: #FFF;
-    font-family: "RobotoSlab_",sans-serif;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    letter-spacing: 1.6px;
-}
-.signinMenu{
-    width: 100%;
-    height: 156px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.passEye{
-    width: 100%;
-    height: 62px;
-    position: relative;
-}
-.passEye > input{
-    position: relative;
-    width: 100%;
-    height: 62px;
-    background: #74A8AB;
-    border: none;
-    border-radius: 30px;
-    padding: 0px 16px;
-    color: #D9E3E4;
-    font-family: "Roboto_",sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    outline: none;
-}
-.passEye > input::placeholder{
-    color: #D9E3E4;
-    font-family: "Roboto_",sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-}
-.signinMenu > input{
-    width: 100%;
-    height: 62px;
-    background: #74A8AB;
-    border: none;
-    border-radius: 30px;
-    padding: 0px 16px;
-    color: #D9E3E4;
-    font-family: "Roboto_",sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    outline: none;
-}
-.signinMenu > input::placeholder{
+.input-box > input::placeholder{
     color: #D9E3E4;
     font-family: "Roboto_",sans-serif;
     font-size: 16px;
@@ -173,34 +102,6 @@
     font-weight: 500;
     line-height: normal;
     text-decoration-line: underline;
-}
-.container_signin{
-    position: relative;
-    background: transparent;
-    border: none;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container_signin:hover img{
-    content: url("../images/Vectorhover.png");
-}
-.container_signin > span{
-    position: absolute;
-    /*top: 22px;*/
-    /*left: 0;*/
-    width: 100%;
-    text-align: center;
-    color: #F36528;
-    font-family: "Roboto_",sans-serif;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-.container_signin:hover span{
-    color: white;
 }
 .mainCheck{
     display: flex;
@@ -234,22 +135,14 @@
     line-height: normal;
     text-decoration: none;
 }
-.show_hide{
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #D9E3E4;
-    padding: 5px;
-    cursor: pointer;
-}
 .signupForm{
     width: 406px;
-    height: 419px;
+    /*height: 419px;*/
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
+    gap: 28px;
 }
 .signupForm > span{
     color: #FFF;
@@ -262,11 +155,12 @@
 }
 .signupMenu{
     width: 100%;
-    height: 200px;
+    height: min-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
 }
 .signupMenu > input{
     width: 100%;
@@ -351,6 +245,104 @@
 .loginFieldAm .mainTextCircle{
     height: 202px;
 }
+
+/*Password Strength Checker*/
+.container_{
+    position: relative;
+    /*max-width: 460px;*/
+    width: 100%;
+}
+.container_ .input-box{
+    position: relative;
+}
+.input-box .show_hide{
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #D9E3E4;
+    padding: 5px;
+    cursor: pointer;
+}
+.input-box input{
+    height: 62px;
+    width: 100%;
+    border: 2px solid #74A8AB;
+    background: #74A8AB;
+    /*border: none;*/
+    border-radius: 30px;
+    padding: 0px 16px;
+    color: #D9E3E4;
+    font-family: "Roboto_",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    outline: none;
+}
+.container_ .indicator{
+    display: none;
+}
+.container_ .indicator.active{
+    display: block;
+    margin-top: 14px;
+}
+.indicator .icon-text{
+    display: flex;
+    align-items: center;
+}
+.icon-text .error_icon{
+    margin-right: 8px;
+}
+.icon-text .text{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Styles for verification */
+.requirements {
+    position:absolute;
+    width: 220px;
+    padding:15px;
+    background:#fefefe;
+    border-radius:15px;
+    box-shadow:0 1px 3px #ccc;
+    border:1px solid #ddd;
+    display:none;
+    z-index: 1000;
+    top: 62px;
+    right: 0;
+    background-color: rgb(238,238,238);
+    box-shadow: 5px 5px 5px #888888;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #FF6333;
+}
+.requirements.active{
+    display: block;
+}
+.requirements:before,
+.requirements:after {
+    position: absolute;
+    bottom: 100%;
+    content: '';
+}
+
+.requirements:before {
+    right: 52px;
+    border-right: 17px solid transparent;
+    border-bottom: 17px solid #ddd;
+    border-left: 17px solid transparent;
+}
+
+.requirements:after {
+    right: 53px;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid rgb(238,238,238);
+    border-left: 16px solid transparent;
+}
+
+
 /*tablet sign in*/
 @media only screen and (max-width: 1600px){
     .loginField {
@@ -360,26 +352,27 @@
 @media only screen and (min-width: 742px) and (max-width: 1024px) {
     .login {
         width: 100%;
-        height: 581px;
         background-image: url("../images/signinTablet.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
-    .loginFieldAm .container_signin > span {
-        font-size: 11px;
-    }
     .loginField {
         width: 71%;
-        height: 324px;
-        margin: 0 auto;
-        position: absolute;
+        /*height: 324px;*/
+        margin: 200px auto 190px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-
+    .requirements {
+        width: 202px;
+        top: 50px;
+    }
+    .requirements ul{
+        margin-bottom: 0;
+    }
     .textCircle {
         width: 330px;
         height: 324px;
@@ -433,88 +426,6 @@
         width: 135px;
         height: 46px;
     }
-
-    .signin {
-        width: 371px;
-        height: 271px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .signin > span {
-        text-align: center;
-        color: #FFF;
-        font-family: "RobotoSlab_", sans-serif;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 900;
-        line-height: normal;
-        letter-spacing: 1.6px;
-    }
-
-    .signinMenu {
-        margin-top: 28px;
-        width: 100%;
-        height: 122px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .passEye {
-        width: 100%;
-        height: 46px;
-    }
-    .passEye > input {
-        position: relative;
-        width: 100%;
-        height: 46px;
-        background: #74A8AB;
-        border: none;
-        border-radius: 30px;
-        padding: 0px 20px;
-        color: #D9E3E4;
-        font-family: "Roboto_", sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        outline: none;
-    }
-
-    .passEye > input::placeholder {
-        color: #D9E3E4;
-        font-family: "Roboto_", sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-    }
-
-    .signinMenu > input {
-        width: 100%;
-        height: 46px;
-        background: #74A8AB;
-        border: none;
-        border-radius: 30px;
-        padding: 0px 20px;
-        color: #D9E3E4;
-        font-family: "Roboto_", sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        outline: none;
-    }
-
-    .signinMenu > input::placeholder {
-        color: #D9E3E4;
-        font-family: "Roboto_", sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-    }
-
     .rememberField {
         width: 88%;
         height: 14px;
@@ -533,33 +444,6 @@
         line-height: normal;
         text-decoration-line: underline;
     }
-
-    .container_signin {
-        position: relative;
-        background: transparent;
-        border: none;
-        margin: 14px 0px;
-    }
-
-    .container_signin > img {
-        width: 108px;
-        height: 40px;
-    }
-
-    .container_signin > span {
-        position: absolute;
-        /*top: 13px;*/
-        /*left: 0;*/
-        width: 100%;
-        text-align: center;
-        color: #F36528;
-        font-family: "Roboto_", sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-    }
-
     .mainCheck {
         display: flex;
         flex-direction: row;
@@ -597,16 +481,17 @@
     }
 
     .signupMenu {
-        margin-top: 8px;
+        /*margin-top: 8px;*/
         width: 100%;
-        height: 154px;
+        /*height: 154px;*/
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
         align-items: center;
     }
 
-    .signupMenu > input {
+    .signupMenu > input,
+    .input-box input{
         width: 100%;
         height: 46px;
         background: #74A8AB;
@@ -619,10 +504,10 @@
         font-style: normal;
         font-weight: 400;
         outline: none;
-        margin-bottom: 8px;
     }
 
-    .signupMenu > input::placeholder {
+    .signupMenu > input::placeholder,
+    .input-box input::placeholder{
         color: #D9E3E4;
         font-family: "Roboto_", sans-serif;
         font-size: 13px;
@@ -636,19 +521,17 @@
         width: 108px;
         height: 40px;
     }
-    /*.container_signup > span{*/
-    /*    !*top: 13px;*!*/
-    /*}*/
     .rememberSignupField{
         margin-top: 17px;
     }
     .signupForm {
         width: 317px;
-        height: 316px;
+        /*height: 316px;*/
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
         align-items: center;
+        gap: 14px;
     }
     .signupForm > span{
         text-align: center;
@@ -663,7 +546,6 @@
     .loginFieldAm .circleTextTop{
         font-size: 13px;
         height: 77px;
-
     }
     .loginFieldAm .circleTextTop > span{
         font-size: 13px;
@@ -678,7 +560,6 @@
 @media only screen and (min-width: 741px) and (max-width: 850px){
     .loginField {
         width: 80%;
-        margin: 0px auto;
     }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
@@ -731,82 +612,8 @@
         width: 135px;
         height: 46px;
     }
-    .signin{
-        width: 406px;
-        height: 271px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .signin > span{
-        text-align: center;
-        color: #FFF;
-        font-family: "RobotoSlab_",sans-serif;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 900;
-        line-height: normal;
-        letter-spacing: 1.6px;
-    }
-    .signinMenu{
-        margin-top: 28px;
-        width: 100%;
-        height: 122px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .passEye{
-        width: 100%;
-        height: 46px;
-    }
-    .passEye > input{
-        position: relative;
-        width: 100%;
-        height: 46px;
-        background: #74A8AB;
-        border: none;
-        border-radius: 30px;
-        padding: 0px 20px;
-        color: #D9E3E4;
-        font-family: "Roboto_",sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        outline: none;
-    }
-    .passEye > input::placeholder{
-        color: #D9E3E4;
-        font-family: "Roboto_",sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-    }
     .container_signup{
         margin: 14px 0px;
-    }
-    .signinMenu > input{
-        width: 100%;
-        height: 46px;
-        background: #74A8AB;
-        border: none;
-        border-radius: 30px;
-        padding: 0px 20px;
-        color: #D9E3E4;
-        font-family: "Roboto_",sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        outline: none;
-    }
-    .signinMenu > input::placeholder{
-        color: #D9E3E4;
-        font-family: "Roboto_",sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
     }
     .rememberField{
         width: 88%;
@@ -824,29 +631,6 @@
         font-weight: 500;
         line-height: normal;
         text-decoration-line: underline;
-    }
-    .container_signin{
-        position: relative;
-        background: transparent;
-        border: none;
-        margin: 14px 0px;
-    }
-    .container_signin > img{
-        width: 108px;
-        height: 40px;
-    }
-    .container_signin > span{
-        position: absolute;
-        /*top: 13px;*/
-        /*left: 0;*/
-        width: 100%;
-        text-align: center;
-        color: #F36528;
-        font-family: "Roboto_",sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
     }
     .container_signup > img{
         width: 108px;
@@ -881,9 +665,9 @@
         line-height: normal;
     }
     .signupMenu{
-        margin-top: 8px;
+        /*margin-top: 8px;*/
         width: 100%;
-        height: 154px;
+        /*height: 154px;*/
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -907,7 +691,8 @@
         line-height: normal;
         text-decoration: none;
     }
-    .signupMenu > input{
+    .signupMenu > input,
+    .input-box input{
         width: 100%;
         height: 46px;
         background: #74A8AB;
@@ -921,7 +706,8 @@
         font-weight: 400;
         outline: none;
     }
-    .signupMenu > input::placeholder{
+    .signupMenu > input::placeholder,
+    .input-box input::placeholder{
         color: #D9E3E4;
         font-family: "Roboto_",sans-serif;
         font-size: 13px;
@@ -933,11 +719,12 @@
     }
     .signupForm {
         width: 317px;
-        height: 316px;
+        /*height: 316px;*/
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        gap: 15px;
     }
     .signupForm > span{
         color: #FFF;
@@ -947,6 +734,16 @@
         font-weight: 900;
         line-height: normal;
         letter-spacing: 1.6px;
+    }
+    .loginField{
+        margin: 300px auto 190px;
+    }
+    .requirements {
+        width: 202px;
+        top: 50px;
+    }
+    .requirements ul{
+        margin-bottom: 0;
     }
     .loginFieldAm .circleTextTop{
         font-size: 13px;
@@ -1013,50 +810,8 @@
         width: 202px;
         height: 46px;
     }
-    .passEye > input{
-        position: relative;
-        width: 100%;
-        height: 54px;
-        background: #74A8AB;
-        border: none;
-        border-radius: 30px;
-        padding: 0px 20px;
-        color: #D9E3E4;
-        font-family: "Roboto_",sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        outline: none;
-    }
-    .passEye > input::placeholder{
-        color: #D9E3E4;
-        font-family: "Roboto_",sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-    }
-    .signinMenu > input{
-        width: 100%;
-        height: 54px;
-        background: #74A8AB;
-        border: none;
-        border-radius: 30px;
-        padding: 0px 20px;
-        color: #D9E3E4;
-        font-family: "Roboto_",sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        outline: none;
-    }
-    .signinMenu > input::placeholder{
-        color: #D9E3E4;
-        font-family: "Roboto_",sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-    }
-    .signupMenu > input{
+    .signupMenu > input,
+    .input-box input{
         width: 100%;
         height: 54px;
         background: #74A8AB;
@@ -1070,7 +825,8 @@
         font-weight: 400;
         outline: none;
     }
-    .signupMenu > input::placeholder{
+    .signupMenu > input::placeholder,
+    .input-box input::placeholder{
         color: #D9E3E4;
         font-family: "Roboto_",sans-serif;
         font-size: 13px;
@@ -1091,16 +847,6 @@
     }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1530px) {
-    .signin > span{
-        text-align: center;
-        color: #FFF;
-        font-family: "RobotoSlab_",sans-serif;
-        font-size: 27px;
-        font-style: normal;
-        font-weight: 900;
-        line-height: normal;
-        letter-spacing: 1.6px;
-    }
     .signupForm > span{
         text-align: center;
         color: #FFF;
@@ -1121,29 +867,27 @@
     .signupMenu {
         gap: 9px;
     }
-}
-@media only screen and (min-width: 600px) and (max-width: 741px) {
+    .login{
+        background: #5D9A9D;
+        height: auto;
+    }
     .loginField{
         height: auto;
         flex-direction: column;
+        position: relative;
+        margin: 60px auto 80px;
     }
-    .signin {
-        width: 100%;
+    .requirements {
+        width: 202px;
     }
-}
-@media screen and (max-width: 600px) {
-    .login{
-        background: #5D9A9D;
+    .requirements ul{
+        margin-bottom: 0;
     }
 }
 @media only screen and (min-width: 400px) and (max-width: 600px){
-    .signin {
-        width: 100%;
-    }
     .loginField{
         width: 87%;
-        height: auto;
-        flex-direction: column;
+        margin: 100px auto 60px;
     }
     .mainTextCircle {
         width: 176px;
@@ -1181,7 +925,7 @@
         line-height: 18.75px;
         text-align: center;
     }
-    .signupForm > span, .signin > span{
+    .signupForm > span{
         display: none;
     }
     .signupFormTitle{
@@ -1195,6 +939,7 @@
     }
     .signupForm {
         width: 100%;
+        gap: 20px;
     }
     .loginFieldAm .circleTextTop > span ,
     .loginFieldAm .circleTextTop{
@@ -1205,15 +950,6 @@
     }
 }
 @media only screen and (max-width: 400px) {
-    .passEye > input{
-        font-family: 'Roboto_',sans-serif;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 15.23px;
-    }
-    .signin {
-        width: 100%;
-    }
     .loginFieldAm .mainTextCircle {
         width: 163px;
         height: 115px;
@@ -1227,7 +963,7 @@
     }
     .loginField {
         width: 87%;
-        height: 660px;
+        margin: 100px auto 60px;
         flex-direction: column;
         justify-content: space-around;
     }
@@ -1274,7 +1010,7 @@
         width: 176px;
     }
 
-    .signupForm > span, .signin > span {
+    .signupForm > span {
         display: none;
     }
 
@@ -1290,7 +1026,7 @@
 
     .signupForm {
         width: 100%;
-        height: 311px;
+        gap: 14px;
     }
     .rememberSignupField > label,
     .rememberSignupField > label > a{
@@ -1299,16 +1035,15 @@
         font-weight: 500;
         text-align: left;
     }
-    .signupMenu > input, .passEye > input , .signinMenu > input{
+    .signupMenu > input,
+    .input-box input{
         height: 46px;
     }
-    #submitButton img,
-    .container_signin img{
+    #submitButton img{
         width: 107.96px;
         height: 40px;
     }
-    .container_signup > span,
-    .container_signin > span{
+    .container_signup > span{
         font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
@@ -1324,14 +1059,16 @@
         font-weight: 500;
         line-height: 15.23px;
     }
-    .login {
-        height: 820px;
-    }
     .rememberSignupField, .container_signup  {
         padding-bottom: 10px;
     }
-    .signupMenu {
-        height: 180px;
+    .requirements p{
+        margin-bottom: 0
+    }
+    .requirements{
+        width: 185px;
+        top: 50px;
+        font-size: 10px;
     }
 }
 @media only screen and (max-width: 375px) {
@@ -1340,13 +1077,6 @@
     }
 }
 @media only screen and (max-width: 350px) {
-    .loginField {
-        margin-top: 51px;
-        height: 606px;
-    }
-    .login {
-        height: 760px;
-    }
     .circleTextBottom {
         width: 150px;
     }
@@ -1354,13 +1084,6 @@
 @media only screen and (max-width: 300px) {
     .textCircle {
         height: 253px;
-    }
-    .loginField {
-        margin-top: 10px;
-        height: 570px;
-    }
-    .login {
-        height: 710px;
     }
     .circleTextTop,
     .circleTextTop > span,
