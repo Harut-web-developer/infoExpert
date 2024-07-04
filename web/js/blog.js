@@ -1,5 +1,20 @@
 // Like js
 document.querySelectorAll('.blog ion-icon').forEach(icon => {
+    if (icon.getAttribute('data-active') === "1") {
+        icon.classList.add('active');
+    } else {
+        icon.classList.remove('active');
+    }
+    icon.addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+});
+document.querySelectorAll('.categorie ion-icon').forEach(icon => {
+    if (icon.getAttribute('data-active') === "1") {
+        icon.classList.add('active');
+    } else {
+        icon.classList.remove('active');
+    }
     icon.addEventListener('click', function() {
         this.classList.toggle('active');
     });

@@ -53,7 +53,7 @@ class m240703_124001_change_translate_security extends Migration
         $this->insert('texts', [
             'slug' => 'modalCallBackSubmit',
             'text_am' => 'ՀԱՍՏԱՏԵԼ',
-            'text_ru'  => 'ОТПРАВИТЬ:',
+            'text_ru'  => 'ОТПРАВИТЬ',
             'text_en'  => 'SUBMIT',
             'page_id'  => null
         ]);

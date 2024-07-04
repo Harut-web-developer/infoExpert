@@ -3,6 +3,243 @@
     padding: 0;
 }
 /*start header css*/
+.animateOne{
+    width: 69px;
+    height: 69px;
+    position: absolute;
+    top: 207px;
+    left: 100px;
+    z-index: 1;
+    animation: circleMoveOne 10s linear infinite;
+}
+.animateTwo{
+    width: 93px;
+    height: 93px;
+    position: absolute;
+    top: 65px;
+    right: 80px;
+    z-index: 1;
+    animation: circleMoveTwo 10s linear infinite;
+}
+.animateThree{
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 350px;
+    right: 50px;
+    z-index: 1;
+    animation: circleMoveThree 10s linear infinite;
+
+}
+.animateFour{
+    width: 69px;
+    height: 69px;
+    position: absolute;
+    bottom: 70px;
+    right: 60px;
+    z-index: 1;
+    animation: circleMoveFour 10s linear infinite;
+
+}
+.animateFive{
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    bottom: 30px;
+    left: 38%;
+    z-index: 1;
+    animation: circleMoveFive 10s linear infinite;
+}
+.animateSix{
+    width: 135px;
+    height: 135px;
+    position: absolute;
+    bottom: 50px;
+    left: 15%;
+    z-index: 1;
+    animation: circleMoveSix 10s linear infinite;
+
+}
+@keyframes circleMoveOne {
+    0% {
+        left: 100px;
+        top: 207px;
+    }
+    20% {
+        left: 40%;
+        top: 0;
+    }
+    40% {
+        left: calc(100% - 69px);
+        top: 230px;
+    }
+    60% {
+        left: 75%;
+        top: calc(100% - 69px);
+    }
+    80% {
+        left: 0;
+        top: 43%;
+    }
+    100% {
+        left: 100px;
+        top: 207px;
+    }
+}
+@keyframes circleMoveTwo {
+    0% {
+        top: 65px;
+        right: 80px;
+    }
+    20% {
+        right: 80%;
+        top: 0;
+    }
+    40% {
+        right: calc(100% - 93px);
+        top: 68%;
+    }
+    60% {
+        right: 65%;
+        top: calc(100% - 93px);
+    }
+    80% {
+        right: 0;
+        top: 77%;
+    }
+    100% {
+        top: 65px;
+        right: 80px;
+    }
+}
+@keyframes circleMoveThree {
+    0% {
+        top: 350px;
+        right: 50px;
+    }
+    20% {
+        right: 0;
+        top: 72%;
+    }
+    40% {
+        right: 25%;
+        top: calc(100% - 33px);
+    }
+    60% {
+        right: calc(100% - 33px);
+        top: 22%;
+    }
+    80% {
+        right: 50%;
+        top: 0;
+    }
+    100% {
+        top: 350px;
+        right: 50px;
+    }
+}
+@keyframes circleMoveFour {
+    0% {
+        bottom: 70px;
+        right: 60px;
+    }
+    20% {
+        right: 0;
+        bottom: 84%;
+    }
+    40% {
+        right: 36%;
+        bottom: calc(100% - 69px);
+    }
+    60% {
+        right: calc(100% - 69px);
+        bottom: 75%;
+    }
+    80% {
+        right: 30%;
+        bottom: 0;
+    }
+    100% {
+        bottom: 70px;
+        right: 60px;
+    }
+}
+@keyframes circleMoveFive {
+    0% {
+        bottom: 30px;
+        left: 38%;
+        width: 0px;
+        height: 0px;
+    }
+    20% {
+        left: 33%;
+        bottom: 25%;
+        width: 20px;
+        height: 20px;
+    }
+    40% {
+        left: 42%;
+        bottom: 40%;
+        width: 25px;
+        height: 25px;
+    }
+    60% {
+        left: 35%;
+        bottom: 60%;
+        width: 30px;
+        height: 30px;
+    }
+    80% {
+        left: 42%;
+        bottom: 80%;
+        width: 40px;
+        height: 40px;
+    }
+    100% {
+        left: 31%;
+        bottom: calc(100% - 50px);
+        width: 45px;
+        height: 45px;
+    }
+}
+@keyframes circleMoveSix {
+    0% {
+        bottom: 30px;
+        left: 15%;
+        width: 20px;
+        height: 20px;
+    }
+    20% {
+        left: 68%;
+        bottom: 25%;
+        width: 40px;
+        height: 40px;
+    }
+    40% {
+        left: 35%;
+        bottom: 40%;
+        width: 60px;
+        height: 60px;
+    }
+    60% {
+        left: 75%;
+        bottom: 60%;
+        width: 90px;
+        height: 90px;
+    }
+    80% {
+        left: 22%;
+        bottom: 80%;
+        width: 120px;
+        height: 120px;
+    }
+    100% {
+        left: 31%;
+        bottom: calc(100% - 150px);
+        width: 135px;
+        height: 135px;
+    }
+}
 .securityModal{
     display: none;
     background: rgba(0, 0, 0, 0.6);
@@ -20,31 +257,55 @@
     width: 55%;
     height: 90vh;
     background: #74A8AB;
-    position: absolute;
+    position: relative;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.modalMainField{
-    width: 59%;
-    height: 356px;
-    /*margin: 79px auto;*/
+.firstField{
+    width: 100%;
+    height: 202px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
+.secondField{
+    width: 100%;
+    height: 62px
+}
+.modalMainField{
+    width: 60%;
+    height: 524px;
+    /*margin: 79px auto;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+}
 .modalTitle{
     font-family: "RobotoSlab_",sans-serif;
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 32px;
+    font-weight: 900;
     text-align: center;
     color: #F36528;
+    line-height: 42.2px;
+    letter-spacing: 0.05em;
+}
+.modalText{
+    font-family: "Roboto_",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: white;
 }
 .modalInputField{
     width: 65%;
-    height: 180px;
+    height: 298px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,30 +319,41 @@
     top: 41px;
     right: 24px;
 }
-.modalEmailField, .modalPasswordField{
+.modalTitleField{
     width: 100%;
-    height: 85px;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
-.modalEmailField > input, .modalPasswordField > input{
+.modalEmailField, .modalNameField, .modalPhoneField, .modalSelectField{
     width: 100%;
-    height: 64px;
+    height: 62px;
+}
+.modalEmailField > input, .modalNameField > input, .modalPhoneField > input, .modalSelectField > select{
+    width: 100%;
+    height: 62px;
     background: #5D9A9D;
     border: none;
     outline: none;
-    border-radius: 15px;
+    border-radius: 30px;
     font-family: "Roboto_",sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 0px 22px;
-    color: white;
-}
-.modalEmailField > label, .modalPasswordField > label{
-    color: white;
-    font-family: "Roboto_",sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    margin-left: 11px;
+    padding: 0px 16px;
+    color: white;
 }
+.modalEmailField > input::placeholder,
+.modalNameField > input::placeholder,
+.modalPhoneField > input::placeholder,
+.modalSelectField > select::placeholder{
+    font-family: "Roboto_",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
 .modalBtnField > button{
     background: transparent;
     border: none;
@@ -113,6 +385,72 @@
 }
 .modalOpenBtn:hover{
     cursor: pointer;
+}
+@media only screen and (min-width: 600px) and (max-width: 1100px) {
+    .securityContentModal{
+        width: 85%;
+    }
+    .modalMainField {
+        width: 90%;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+    .securityContentModal {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0px;
+    }
+    .modalMainField {
+        width: 85%;
+        height: 480px;
+    }
+    .modalTitle {
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 31.65px;
+        text-align: center;
+        color: #F36528;
+    }
+    .modalText{
+        font-size: 18px;
+    }
+    .modalInputField {
+        width: 100%;
+        height: 224px;
+    }
+    .firstField {
+        width: 100%;
+        height: 154px;
+    }
+    .secondField {
+        width: 100%;
+        height: 46px;
+    }
+    .modalEmailField > input,
+    .modalNameField > input,
+    .modalPhoneField > input,
+    .modalSelectField > select{
+        width: 100%;
+        height: 46px;
+        font-size: 13px;
+        padding: 0px 20px;
+
+    }
+    .modalPhoneField > input::-webkit-outer-spin-button,
+    .modalPhoneField > input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .modalEmailField > input::placeholder,
+    .modalNameField > input::placeholder,
+    .modalPhoneField > input::placeholder,
+    .modalSelectField > select::placeholder{
+        font-size: 13px;
+    }
+    .modalBtnField > button > img {
+        width: 108px;
+        height: 40px;
+    }
 }
 .header{
     width: 100%;

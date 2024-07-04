@@ -48,7 +48,7 @@ $statisticsPerPage = array_slice($blogs, $startIndex, $itemsPerPage);
                                     <div class='divImg'>
                                         <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?= $GLOBALS['text']['mainReadMore'] ?></a>
                                         <div class='large-font'>
-                                            <ion-icon name="heart">
+                                            <ion-icon name="heart" data-active="1">
                                                 <div class='red-bg'></div>
                                             </ion-icon>
                                         </div>
@@ -111,7 +111,7 @@ $statisticsPerPage = array_slice($blogs, $startIndex, $itemsPerPage);
                         <div class='divImg'>
                             <a href="/blog/categorie?id=<?=$item['id']?>"><?= $GLOBALS['text']['mainReadMore']?></a>
                             <div class='large-font'>
-                                <ion-icon name="heart">
+                                <ion-icon name="heart" data-active="1">
                                     <div class='red-bg'></div>
                                 </ion-icon>
                             </div>

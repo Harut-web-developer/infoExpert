@@ -57,7 +57,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <a href="/"><img src="/images/logo.png" alt=""></a>
                 </div>
                 <div class="tabletMenuField">
-                    <button>
+                    <button class="modalOpenBtn">
                         <img src="/images/tabletMenuBtn.png" alt="">
                         <span><?= $GLOBALS['text']['__callback__'] ?></span>
                     </button>
@@ -112,7 +112,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             </li>
                         <?php }?>
                         <li class="mobileBackCall">
-                            <button>
+                            <button class="modalOpenBtn">
                                 <img src="/images/tabletMenuBtn.png" alt="">
                                 <span><?= $GLOBALS['text']['__callback__'] ?></span>
                             </button>
@@ -284,32 +284,49 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     </div>
         <div class="securityModal">
             <div class="securityContentModal">
-                <form class="modalMainField">
+                <form class="modalMainField" action="" method="post">
                     <div class="modalTitleField">
-                        <span class="modalTitle">GET A CALL BACK</span>
-                        <span class="modalText">Complete the form below and we will contact you as soon as possible.</span>
+                        <span class="modalTitle"><?=$GLOBALS['text']['modalTitleCallBack']?></span>
+                        <span class="modalText"><?=$GLOBALS['text']['modalTextCallBack']?></span>
                     </div>
                     <div class="modalInputField">
-                        <div class="modalNameField">
-                            <label for="modalName"><?=$GLOBALS['text']['modalCallBackName']?></label>
-                            <input type="text" id="modalName">
+                        <div class="firstField">
+                            <div class="modalNameField">
+                                <input type="text" placeholder="<?=$GLOBALS['text']['modalCallBackName']?>" name="callBackName" required>
+                            </div>
+                            <div class="modalEmailField">
+                                <input type="email" placeholder="<?=$GLOBALS['text']['inputEmail']?>" name="callBackEmail" required>
+                            </div>
+                            <div class="modalPhoneField">
+                                <input type="number" placeholder="<?=$GLOBALS['text']['modalCallBackPhone']?>" name="callBackPhone" required>
+                            </div>
                         </div>
-                        <div class="modalEmailField">
-                            <label for="modalEmail"><?=$GLOBALS['text']['inputEmail']?></label>
-                            <input type="text" id="modalEmail">
-                        </div>
-                        <div class="modalPhoneField">
-                            <label for="modalPhone"><?=$GLOBALS['text']['modalCallBackPhone']?></label>
-                            <input type="password" id="modalPhone">
+                        <div class="secondField">
+                            <div class="modalSelectField">
+                                <select name="callBackCourses" required>
+                                    <option value=""><?=$GLOBALS['text']['modalCallBackCourses']?></option>
+                                    <?php
+                                    $lesson_select = AcLessons::find()->select('id, lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+                                    if (!empty($lesson_select)){ foreach ($lesson_select as $item){?>
+                                        <option value="<?=$item['id']?>"><?=$item['lesson_name']?></option>
+                                        <?php }} ?>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="modalBtnField">
-                        <button>
+                        <button type="submit" name="callBackBtn">
                             <img src="/images/securityBtn.png" alt="">
                             <span><?=$GLOBALS['text']['modalCallBackSubmit']?></span>
                         </button>
                     </div>
                 </form>
+                <img class="animateOne" src="/images/circleAnimation.png" alt="">
+                <img class="animateTwo" src="/images/circleAnimation.png" alt="">
+                <img class="animateThree" src="/images/circleAnimation.png" alt="">
+                <img class="animateFour" src="/images/circleAnimation.png" alt="">
+                <img class="animateFive" src="/images/circleAnimation.png" alt="">
+                <img class="animateSix" src="/images/circleAnimation.png" alt="">
             </div>
         </div>
 </header>

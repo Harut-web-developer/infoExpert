@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\AcAnswers;
 use app\models\AcBlog;
+use app\models\AcCallback;
 use app\models\AcLessons;
 use app\models\AcPartners;
 use app\models\AcReviews;
@@ -111,7 +112,24 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        date_default_timezone_set('Asia/Yerevan');
         $language = $_COOKIE['language'];
+        if ($this->request->isPost && isset($_POST['callBackBtn'])){
+            $name = $this->request->post('callBackName');
+            $email = $this->request->post('callBackEmail');
+            $phone = $this->request->post('callBackPhone');
+            $course = $this->request->post('callBackCourses');
+            $call_back = new AcCallback();
+            $call_back->name = $name;
+            $call_back->email = $email;
+            $call_back->phone = $phone;
+            $call_back->course = $course;
+            $call_back->create_date = date('Y-m-d H:i:s');
+            $call_back->save();
+            return $this->redirect('/');
+
+        }
+//exit();
         $lessons = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();
         $partners = AcPartners::find()->asArray()->all();
         $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])->asArray()->all();

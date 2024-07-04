@@ -14,16 +14,12 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             <?=$blogs['page_title']?>
             <div class="sizeLikeField">
                 <div class="large-font">
-                    <ion-icon name="heart" role="img" class="md hydrated">
+                    <ion-icon name="heart" role="img" class="md hydrated" data-active="1">
                         <div class="red-bg"></div>
                     </ion-icon>
                 </div>
             </div>
-<!--            <div class='large-font'>-->
-<!--                <ion-icon name="heart">-->
-<!--                    <div class='red-bg'></div>-->
-<!--                </ion-icon>-->
-<!--            </div>-->
+
         </h1>
 
         <span class="date">
@@ -53,11 +49,18 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         </div>
     </div>
 </div>
+<?php $this->registerJsFile('@web/js/blog.js', ['defer' => true]);?>
+
 <!--Like js-->
 <script>
-document.querySelectorAll('.categorie ion-icon').forEach(icon => {
-        icon.addEventListener('click', function() {
-            this.classList.toggle('active');
-        });
-    });
+// document.querySelectorAll('.categorie ion-icon').forEach(icon => {
+//     if (icon.getAttribute('data-active') === "1") {
+//         icon.classList.add('active');
+//     } else {
+//         icon.classList.remove('active');
+//     }
+//         icon.addEventListener('click', function() {
+//             this.classList.toggle('active');
+//         });
+//     });
 </script>
