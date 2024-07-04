@@ -282,25 +282,42 @@ class SiteController extends Controller
 
     public function actionAccountSecurity()
     {
-//        echo "<pre>";
-        $email_value = Yii::$app->user->identity->email;
-        if($this->request->isPost){
+        if ($this->request->isPost) {
             $current_password = $this->request->post('currentPassword');
-//            $current_password_hash = password_hash($current_password, PASSWORD_DEFAULT);
-//            ->generatePasswordHash($current_password)
-            $current_password_hash = Yii::$app->getSecurity();
             $new_password = $this->request->post('newPassword');
-            $confirm_password = $this->request->post('confirmPassword');
-            var_dump($current_password);
-            var_dump($current_password_hash);
-            var_dump($new_password);
-            var_dump($confirm_password);
-            exit();
+            $confirmPassword = $this->request->post('confirmPassword');
+            $user = User::findOne(['status' => '1', 'id' => Yii::$app->user->identity->id]);
+            $password_hash = $user->password;
+//            echo "<pre>";
+//            var_dump($this->request->isPost);
+//            var_dump($current_password);
+//            var_dump($new_password);
+//            var_dump($confirmPassword);
+//            var_dump($new_password === $confirmPassword);
+//            die;
+            if (!is_null($current_password) && Yii::$app->getSecurity()->validatePassword($current_password, $password_hash)) {
+                if ($new_password === $confirmPassword){
+                    $user->password = Yii::$app->getSecurity()->generatePasswordHash($new_password);
+                    if ($user->save(false)) {
+                        Yii::$app->session->setFlash('success', 'Password successfully changed.');
+                        return $this->redirect(['/']);
+                    } else {
+                        Yii::$app->session->setFlash('failedChangePassword', 'Failed to change password.');
+                        return $this->render('security');
+                    }
+                } else {
+                    Yii::$app->session->setFlash('newIncorrectPassword', 'The new password is incorrect');
+                    return $this->render('security');
+                }
+            } else {
+                Yii::$app->session->setFlash('oldIncorrectPassword', 'Old password is incorrect.');
+                return $this->render('security');
+            }
         }
-        return $this->render('security',[
-            'email_value' => $email_value,
-        ]);
+
+        return $this->render('security');
     }
+
     public function generateRandomString($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
