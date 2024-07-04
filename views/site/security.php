@@ -16,12 +16,32 @@ $this->registerCssFile('@web/css/security.css?v=1');
 <!--            </div>-->
             <div class="passwordField">
                 <div class="passwordInput">
-                    <label for="passwordLabel"><?=$GLOBALS['text']['inputPassword']?></label>
-                    <input type="password" id="passwordLabel" placeholder="<?=$GLOBALS['text']['inputCurrentPassword']?>" name="currentPassword" required>
+                    <label for="passwordLabel"><?= $GLOBALS['text']['inputPassword'] ?></label>
+                    <input type="password" id="passwordLabel" placeholder="<?= $GLOBALS['text']['inputCurrentPassword'] ?>" name="currentPassword" required>
+                    <?php if (Yii::$app->session->hasFlash('oldIncorrectPassword')): ?>
+                        <div style="color: red;">
+                            <?= Yii::$app->session->getFlash('oldIncorrectPassword') ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <input type="text" placeholder="<?=$GLOBALS['text']['inputNewPassword']?>" name="newPassword" required>
-                <input type="text" placeholder="<?=$GLOBALS['text']['inputConfirmPassword']?>" name="confirmPassword" required>
+                <input type="password" placeholder="<?= $GLOBALS['text']['inputNewPassword'] ?>" name="newPassword" required>
+                <?php if (Yii::$app->session->hasFlash('newIncorrectPassword')): ?>
+                    <div style="color: red;">
+                        <?= Yii::$app->session->getFlash('newIncorrectPassword') ?>
+                    </div>
+                <?php endif; ?>
+                <input type="password" placeholder="<?= $GLOBALS['text']['inputConfirmPassword'] ?>" name="confirmPassword" required>
+                <?php if (Yii::$app->session->hasFlash('newIncorrectPassword')): ?>
+                    <div style="color: red;">
+                        <?= Yii::$app->session->getFlash('newIncorrectPassword') ?>
+                    </div>
+                <?php endif; ?>
             </div>
+            <?php if (Yii::$app->session->hasFlash('failedChangePassword')): ?>
+                <div style="color: red;">
+                    <?= Yii::$app->session->getFlash('failedChangePassword') ?>
+                </div>
+            <?php endif; ?>
             <div class="buttonField">
                 <button type="submit">
                     <img src="/images/securityBtn.png" alt="">
