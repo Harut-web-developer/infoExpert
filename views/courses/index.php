@@ -1,4 +1,6 @@
 <?php
+
+use app\models\AcWishlist;
 use yii\web\View;
 use yii\web\YiiAsset;
 
@@ -64,7 +66,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 </div>
                                 <div class="booterImgs">
                                     <div class='large-font'>
-                                        <ion-icon name="heart">
+                                        <ion-icon name="heart" data-id="<?=$course['id']?>" data-active="<?=AcWishlist::getWishlist($course['id'],1)?>" data-type="1">
                                             <div class='red-bg'></div>
                                         </ion-icon>
                                     </div>

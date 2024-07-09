@@ -8,6 +8,7 @@ use app\models\AcCallback;
 use app\models\AcLessons;
 use app\models\AcPartners;
 use app\models\AcReviews;
+use app\models\AcWishlist;
 use app\models\Texts;
 use app\models\User;
 use Codeception\Lib\Generator\PageObject;
@@ -127,9 +128,7 @@ class SiteController extends Controller
             $call_back->create_date = date('Y-m-d H:i:s');
             $call_back->save();
             return $this->redirect('/');
-
         }
-//exit();
         $lessons = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();
         $partners = AcPartners::find()->asArray()->all();
         $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])->asArray()->all();
@@ -145,7 +144,7 @@ class SiteController extends Controller
             'page_content_' . $language . ' as page_content',
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
             'img'
-        ])->where(['status' => '1'])->limit(3)->asArray()->all();
+        ])->where(['status' => '1'])->limit(3)->orderBy(['create_date' => SORT_DESC])->asArray()->all();
         $blogs_mobile = AcBlog::find()->select([
             'id',
             'page_name_' . $language . ' as page_name',
@@ -304,7 +303,7 @@ class SiteController extends Controller
             $new_password = $this->request->post('newPassword');
             $confirmPassword = $this->request->post('confirmPassword');
             $user = User::findOne(['status' => '1', 'id' => Yii::$app->user->identity->id]);
-            $user = Yii::$app->user->identity;
+//            $user = Yii::$app->user->identity;
             $password_hash = $user->password;
             if ($_COOKIE['language'] == 'am'){
                 $success = 'Գաղտնաբառը հաջողությամբ փոխվեց:';
@@ -343,6 +342,25 @@ class SiteController extends Controller
         }
         return $this->render('security');
     }
+     public function actionGetWishlist(){
+        if($this->request->isGet){
+            $id = intval($this->request->get('indID'));
+            $type = intval($this->request->get('type'));
+            $wishlist = AcWishlist::addWishlist($id,$type);
+            if($_COOKIE['language'] == 'am'){
+                $title = 'fvafvadfvadvfadvf';
+                $btn_name = 'All dsf';
+            }elseif ($_COOKIE['language'] == 'ru'){
+                $title = 'vvfvzsdvfsdfv.';
+                $btn_name = 'All dsf';
+            }elseif ($_COOKIE['language'] == 'en'){
+                $title = 'Go to the All Courses tab to create a wishlist.';
+                $btn_name = 'All dsf';
+            }
+            return json_encode(['wishlist' => $wishlist, 'title' => $title, 'btn_name' => $btn_name]);
+        }
+     }
+
     public function generateRandomString($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);

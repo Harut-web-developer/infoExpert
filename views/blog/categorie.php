@@ -1,4 +1,6 @@
 <?php
+use app\models\AcWishlist;
+
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/categorie.css');
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
@@ -14,7 +16,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             <?=$blogs['page_title']?>
             <div class="sizeLikeField">
                 <div class="large-font">
-                    <ion-icon name="heart" role="img" class="md hydrated" data-active="1">
+                    <ion-icon name="heart" role="img" class="md hydrated" data-id="<?=$blogs['id']?>" data-active="<?=AcWishlist::getWishlist($blogs['id'],2)?>" data-type="2">
                         <div class="red-bg"></div>
                     </ion-icon>
                 </div>

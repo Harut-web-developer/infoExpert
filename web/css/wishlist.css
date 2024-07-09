@@ -188,28 +188,26 @@
     color: #FFFFFF;
 }
 .applyNowBtnField{
-    position: relative;
-    width: max-content;
+    /*width: max-content;*/
     padding-top: 53px;
 }
 .applyNowBtnField > a{
     background: transparent;
-    border: none;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .applyNowBtnField > a:hover img{
     content: url("../images/buttonImghover.png");
 }
 .applyNowBtnField > a > span{
     color: #F36528;
-    margin: 11px 16px;
     position: absolute;
-    left: 0px;
     font-family: "Roboto_",sans-serif;
     font-size: 14px;
     font-weight: 500;
-    line-height: 18.2px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
 }
 .applyNowBtnField > a:hover span{
@@ -252,7 +250,7 @@ hr.new1 {
 .individualCards_ {
     border-radius: 30px;
     width: 377px;
-    height: 482px;
+    height: min-content;
 }
 
 /*.bottomSlider .carousel_ {*/
@@ -686,6 +684,21 @@ ion-icon {
     .CoursesAndCategoriesCard {
         width: 855px;
     }
+    .bottomSlider .carousel_ {
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
+    .changeBody2 .carousel_2{
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
+}
+@media screen and (max-width: 1929px) {
+    .bottomSlider .carousel_ {
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
+
+    .changeBody2 .carousel_2 {
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
 }
 @media screen and (max-width: 1900px) {
     .CoursesAndCategoriesCard {
@@ -746,7 +759,7 @@ ion-icon {
 }
 @media screen and (max-width: 1700px) {
     .usersProfile {
-        height: 1560px;
+        height: min-content;
     }
     .wishlistBtnField > button > img {
         width: auto;
@@ -781,7 +794,7 @@ ion-icon {
 }
 @media screen and (max-width: 1600px) {
     .usersProfile {
-        height: 1450px;
+        height: min-content;
     }
     .myCoursesProfileField {
         width: 360px;
@@ -867,7 +880,7 @@ ion-icon {
         height: 160px;
     }
     .usersProfile {
-        height: 1350px;
+        height: min-content;
     }
     .cardsTextField_ {
         height: 200px;
@@ -989,7 +1002,7 @@ ion-icon {
 }
 @media screen and (max-width: 1400px){
     .usersProfile {
-        height: 1300px;
+        height: min-content;
     }
 }
 @media screen and (max-width: 1350px) {
@@ -1028,7 +1041,7 @@ ion-icon {
         font-size: 35px;
     }
     .usersProfile {
-        height: 1200px;
+        height: min-content;
     }
     .usersProfileInfo {
         width: 180px;
@@ -1146,7 +1159,7 @@ ion-icon {
 }
 @media screen and (max-width: 1200px) {
     .usersProfile {
-        height: 1150px;
+        height: min-content;
     }
     .cardContent {
         height: 50%;
@@ -1374,7 +1387,7 @@ ion-icon {
     }
     .bottomSlider .carousel_ {
         grid-auto-columns: 198.94px;
-        height: 263px;
+        height: min-content;
 
     }
     .individualCards_ {

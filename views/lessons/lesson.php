@@ -1,4 +1,5 @@
 <?php
+use app\models\AcWishlist;
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/lessons.css?v=2');
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
@@ -13,7 +14,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <span><?=$lesson['lesson_name']?></span>
         <div class="sizeLikeField">
             <div class='large-font'>
-                <ion-icon name="heart">
+                <ion-icon name="heart" data-id="<?=$lesson['id']?>" data-active="<?=AcWishlist::getWishlist($lesson['id'],1)?>" data-type="1">
                     <div class='red-bg'></div>
                 </ion-icon>
             </div>
@@ -67,13 +68,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!--Like js-->
 <script>
-    document.querySelectorAll('.personelManagement ion-icon').forEach(icon => {
-        icon.addEventListener('click', function() {
-            this.classList.toggle('active');
-        });
-    });
     function lessonsFieldFixed(){
         document.addEventListener('scroll', function() {
             const bottomImages = document.getElementById('bottomImages');

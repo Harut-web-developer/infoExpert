@@ -63,12 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         slider(carousel2, wrapper2, firstCard2);
     }
 });
-// Like js
-document.querySelectorAll('.courses ion-icon').forEach(icon => {
-    icon.addEventListener('click', function() {
-        this.classList.toggle('active');
-    });
-});
 $(document).ready(function() {
     $('.coursisBtnField button').on("click", function () {
         window.location.href = '/my-card/checkout';

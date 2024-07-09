@@ -232,7 +232,12 @@ if (window.location.pathname == '/') {
     });
 
 }
-document.querySelectorAll('#section01 ion-icon').forEach(icon => {
+document.querySelectorAll('ion-icon').forEach(icon => {
+    if (icon.getAttribute('data-active') === "1") {
+        icon.classList.add('active');
+    } else {
+        icon.classList.remove('active');
+    }
     icon.addEventListener('click', function() {
         this.classList.toggle('active');
     });
@@ -430,6 +435,46 @@ $(document).ready(function () {
     })
     $('.btn-search').on('click', function () {
         $('.input-search').focus();
+    })
+
+    $('body').on('click', 'ion-icon', function () {
+        let indID = $(this).data('id');
+        let thisItem = $(this);
+        let type = $(this).data('type');
+        let csrfToken = $('meta[name="csrf-token"]').attr("content");
+        $.ajax({
+            url: "/site/get-wishlist",
+            method: 'get',
+            datatype: 'json',
+            data: {
+                indID: indID,
+                type: type,
+                _csrf: csrfToken
+            },
+            success: function (data) {
+                let parse_data = JSON.parse(data);
+                if (window.location.pathname == '/wishlist/index' && parse_data.wishlist == 'inactivate'){
+                    console.log(thisItem.closest('ul').hasClass('carousel_'))
+                    if (thisItem.closest('ul').hasClass('carousel_')){
+                        thisItem.closest('.card_').remove();
+                    }else {
+                        thisItem.closest('.card_2').remove();
+                        if ($('.carousel_2').children('li').length === 0){
+                            $('changeBody2').remove();
+                            $('body').find('.topSlider').html('<div class="changeBody1">' +
+                                '<span class="title">'+ parse_data.title +'</span>' +
+                                '<div class="applyNowBtnField">' +
+                                '<a class="coursesHref" href="/courses/index">' +
+                                '<img src="/images/buttonImg.png" alt="">' +
+                                '<span>'+ parse_data.btn_name +'</span>' +
+                                '</a>' +
+                                '</div>' +
+                                '</div>')
+                        }
+                    }
+                }
+            }
+        })
     })
 
 })
