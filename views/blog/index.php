@@ -1,6 +1,7 @@
 <?php
 use yii\web\View;
 use yii\web\YiiAsset;
+use app\models\AcWishlist;
 
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/blog.css');
@@ -48,7 +49,7 @@ $statisticsPerPage = array_slice($blogs, $startIndex, $itemsPerPage);
                                     <div class='divImg'>
                                         <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?= $GLOBALS['text']['mainReadMore'] ?></a>
                                         <div class='large-font'>
-                                            <ion-icon name="heart" data-active="1">
+                                            <ion-icon name="heart" data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'],2)?>" data-type="2">
                                                 <div class='red-bg'></div>
                                             </ion-icon>
                                         </div>
@@ -111,7 +112,7 @@ $statisticsPerPage = array_slice($blogs, $startIndex, $itemsPerPage);
                         <div class='divImg'>
                             <a href="/blog/categorie?id=<?=$item['id']?>"><?= $GLOBALS['text']['mainReadMore']?></a>
                             <div class='large-font'>
-                                <ion-icon name="heart" data-active="1">
+                                <ion-icon name="heart" data-id="<?=$item['id']?>" data-active="<?=AcWishlist::getWishlist($item['id'],2)?>" data-type="2">
                                     <div class='red-bg'></div>
                                 </ion-icon>
                             </div>

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     function slider(carousel, wrapper, firstCard) {
-        const firstCardWidth = firstCard.offsetWidth;
+        // const firstCardWidth = firstCard.offsetWidth;
         let isDragging = false,
             startX,
             startScrollLeft,
@@ -58,12 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
         slider(carousel2, wrapper2, firstCard2);
     }
 
-});
-// Like js
-document.querySelectorAll('.wishlist ion-icon').forEach(icon => {
-    icon.addEventListener('click', function() {
-        this.classList.toggle('active');
-    });
 });
 
 $(document).ready(function() {

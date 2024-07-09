@@ -48,7 +48,7 @@ class CoursesController extends \yii\web\Controller
     public function actionIndex()
     {
         $language = $_COOKIE['language'];
-        $courses = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name,
+        $courses = AcLessons::find()->select('id,lesson_name_'.$language.' as lesson_name,
          lesson_title_'.$language.' as lesson_title, lesson_content_'.$language.' as lesson_content')
             ->where(['status' => '1'])
             ->asArray()

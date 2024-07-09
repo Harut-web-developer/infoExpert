@@ -15,9 +15,8 @@ class m240704_143237_create_table_ac_wishlist extends Migration
         $this->createTable('ac_wishlist', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer(11)->defaultValue(null),
-            'courses_id' => $this->integer(11)->defaultValue(null),
-            'blog_id' => $this->integer(11)->defaultValue(null),
-            'type' => $this->integer(11)->defaultValue(null),
+            'product_id' => $this->integer(11)->defaultValue(null),
+            'type' => $this->integer(11)->defaultValue(null)->comment('1_lessons, 2_blogs'),
             'active' => $this->integer(11)->defaultValue(null),
             'status' => $this->string(255)->defaultValue(1),
             'create_date' => $this->timestamp(),

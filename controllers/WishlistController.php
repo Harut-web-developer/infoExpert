@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\AcBlog;
+use app\models\AcLessons;
 use Yii;
 use app\models\Texts;
 
@@ -43,7 +45,37 @@ class WishlistController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-        return $this->render('index');
+//        echo "<pre>";
+        $language = $_COOKIE['language'];
+        $wishlist_courses = AcLessons::find()->select('ac_lessons.id as lessons_id, lesson_name_'.$language.' as lesson_name,
+         lesson_title_'.$language.' as lesson_title, lesson_content_'.$language.' as lesson_content')
+            ->leftJoin('ac_wishlist', 'ac_lessons.id = ac_wishlist.product_id')
+            ->where(['ac_lessons.status' => '1'])
+            ->andWhere(['ac_wishlist.status' => '1'])
+            ->andWhere(['active' => '1'])
+            ->andWhere(['type' => '1'])
+            ->andWhere(['user_id' => Yii::$app->user->identity->id])
+            ->asArray()
+            ->all();
+        $wishlist_blogs = AcBlog::find()->select([
+            'ac_blog.id as blog_id',
+            'img',
+            'page_name_'.$language.' as page_name',
+            'page_title_'.$language.' as page_title',
+            'page_content_'.$language.' as page_content',
+            " DATE_FORMAT(ac_blog.create_date, '%b %d, %Y') as create_date"])
+            ->leftJoin('ac_wishlist', 'ac_blog.id = ac_wishlist.product_id')
+            ->where(['ac_blog.status' => '1'])
+            ->andWhere(['ac_wishlist.status' => '1'])
+            ->andWhere(['active' => '1'])
+            ->andWhere(['type' => '2'])
+            ->andWhere(['user_id' => Yii::$app->user->identity->id])
+            ->asArray()
+            ->all();
+        return $this->render('index',[
+            'wishlist_courses' => $wishlist_courses,
+            'wishlist_blogs' => $wishlist_blogs
+        ]);
     }
     public function actionBlogsWishlist()
     {

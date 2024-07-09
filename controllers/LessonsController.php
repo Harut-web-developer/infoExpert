@@ -47,7 +47,7 @@ class LessonsController extends \yii\web\Controller
     {
         $language = $_COOKIE['language'];
         $lesson_id = intval($_GET['id']);
-        $lesson = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name,lesson_content_'.$language.' as lesson_content')
+        $lesson = AcLessons::find()->select('id,lesson_name_'.$language.' as lesson_name,lesson_content_'.$language.' as lesson_content')
             ->where(['status' => '1'])
             ->andWhere(['id' => $lesson_id])
             ->asArray()

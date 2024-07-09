@@ -1,6 +1,7 @@
 <?php
 
 use app\models\AcReviews;
+use app\models\AcWishlist;
 use yii\web\View;
 use yii\web\YiiAsset;
 /** @var yii\web\View $this */
@@ -279,7 +280,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="cardsLike">
                                 <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                                 <div class='large-font'>
-                                    <ion-icon name="heart">
+                                    <ion-icon name="heart" data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'],2)?>" data-type="2">
                                         <div class='red-bg'></div>
                                     </ion-icon>
                                 </div>
@@ -326,7 +327,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="cardsLike">
                                 <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                                 <div class='large-font'>
-                                    <ion-icon name="heart">
+                                    <ion-icon name="heart"  data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'],2)?>" data-type="2">
                                         <div class='red-bg'></div>
                                     </ion-icon>
                                 </div>

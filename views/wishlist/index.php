@@ -1,6 +1,7 @@
 <?php
 use yii\web\View;
 use yii\web\YiiAsset;
+use app\models\AcWishlist;
 
 /** @var yii\web\View $this */
 
@@ -67,263 +68,103 @@ if ($language == 'en') {
             </div>
             <div class="CoursesAndCategoriesCard">
                 <div class="topSlider">
-<!--                    <div class="changeBody1">-->
-<!--                        <span class="title">Go to the All Courses tab to create a wishlist </span>-->
-<!--                        <div class="applyNowBtnField">-->
-<!--                            <a class="coursesHref" href="/courses/index">-->
-<!--                                <img src="/images/buttonImg.png" alt="">-->
-<!--                                <span>All courses</span>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-                    <div class="changeBody2">
-                        <ul class="carousel_2">
-                            <li class="card_2">
-                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
-                                <div class="cardContent">
-                                    <div class="cardBody_2">
-                                        <span class="span1_2">1C: and Accounting for Begginers</span>
-                                        <div class="starAndTxt_2">
-                                            <div class="starDivWishlistCourses">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                    <?php if (!empty($wishlist_courses)){?>
+                        <div class="changeBody2">
+                            <ul class="carousel_2">
+                                <?php foreach ($wishlist_courses as $wishlist_cours){ ?>
+                                    <li class="card_2">
+                                        <div class="img_2">
+                                            <img src="/images/cardImageCourses.png" alt="" draggable="false">
+                                        </div>
+                                        <div class="cardContent">
+                                            <div class="cardBody_2">
+                                                <span class="span1_2"><?=$wishlist_cours['lesson_name']?></span>
+                                                <div class="starAndTxt_2">
+                                                    <div class="starDivWishlistCourses">
+                                                        <img src="/images/cardStar.png" alt="" draggable="false">
+                                                        <img src="/images/cardStar.png" alt="" draggable="false">
+                                                        <img src="/images/cardStar.png" alt="" draggable="false">
+                                                        <img src="/images/cardStar.png" alt="" draggable="false">
+                                                        <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                                    </div>
+                                                    <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
+                                                </div>
                                             </div>
-                                            <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
-                                        </div>
-                                    </div>
-                                    <div class="cardCenter_2">
-                                        <div class="cardtxt1_2">
-                                            <img src="/images/courses1.png" alt="">
-                                            <span>Number of courses: 29+1 exam /3 days a week/</span>
-                                        </div>
-                                        <div class="cardtxt2_2">
-                                            <img src="/images/courses2.png" alt="">
-                                            <span>Certificate / in Armenian and English /</span>
-                                        </div>
-                                    </div>
-                                    <div class="footerCard_2">
-                                        <div class="wishlistBtnField">
-                                            <button>
-                                                <img src="/images/wishlist1.png" alt="">
-                                                <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
-                                            </button>
-                                        </div>
-                                        <div class="booterImgs">
-                                            <div class='large-font largeFont'>
-                                                <ion-icon name="heart" class="iconLike">
-                                                    <div class='red-bg'></div>
-                                                </ion-icon>
+                                            <div class="cardCenter_2">
+                                                <div class="cardtxt1_2">
+                                                    <img src="/images/courses1.png" alt="">
+                                                    <span><?=$wishlist_cours['lesson_title']?></span>
+                                                </div>
+                                                <div class="cardtxt2_2">
+                                                    <img src="/images/courses2.png" alt="">
+                                                    <span><?=$wishlist_cours['lesson_content']?></span>
+                                                </div>
                                             </div>
-                                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card_2">
-                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
-                                <div class="cardContent">
-                                    <div class="cardBody_2">
-                                        <span class="span1_2">1C: Accounting 8.3</span>
-                                        <div class="starAndTxt_2">
-                                            <div class="starDivWishlistCourses">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                            <div class="footerCard_2">
+                                                <div class="wishlistBtnField">
+                                                    <button>
+                                                        <img src="/images/wishlist1.png" alt="">
+                                                        <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
+                                                    </button>
+                                                </div>
+                                                <div class="booterImgs">
+                                                    <div class='large-font largeFont'>
+                                                        <ion-icon name="heart" class="iconLike"  data-id="<?=$wishlist_cours['lessons_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_cours['lessons_id'],1)?>" data-type="1">
+                                                            <div class='red-bg'></div>
+                                                        </ion-icon>
+                                                    </div>
+                                                    <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                                                </div>
                                             </div>
-                                            <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
                                         </div>
-                                    </div>
-                                    <div class="cardCenter_2">
-                                        <div class="cardtxt1_2">
-                                            <img src="/images/courses1.png" alt="">
-                                            <span>Number of courses: 29+1 exam /3 days a week/</span>
-                                        </div>
-                                        <div class="cardtxt2_2">
-                                            <img src="/images/courses2.png" alt="">
-                                            <span>Certificate / in Armenian and English /</span>
-                                        </div>
-                                    </div>
-                                    <div class="footerCard_2">
-                                        <div class="wishlistBtnField">
-                                            <button>
-                                                <img src="/images/wishlist1.png" alt="">
-                                                <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
-                                            </button>
-                                        </div>
-                                        <div class="booterImgs">
-                                            <div class='large-font largeFont'>
-                                                <ion-icon name="heart" class="iconLike">
-                                                    <div class='red-bg'></div>
-                                                </ion-icon>
-                                            </div>
-                                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card_2">
-                                <div class="img_2"><img src="/images/cardImageCourses.png" alt="" draggable="false"> </div>
-                                <div class="cardContent">
-                                    <div class="cardBody_2">
-                                        <span class="span1_2">1C: Accounting 8.3</span>
-                                        <div class="starAndTxt_2">
-                                            <div class="starDivWishlistCourses">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStar.png" alt="" draggable="false">
-                                                <img src="/images/cardStarWhite.png" alt="" draggable="false">
-                                            </div>
-                                            <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
-                                        </div>
-                                    </div>
-                                    <div class="cardCenter_2">
-                                        <div class="cardtxt1_2">
-                                            <img src="/images/courses1.png" alt="">
-                                            <span>Number of courses: 29+1 exam /3 days a week/</span>
-                                        </div>
-                                        <div class="cardtxt2_2">
-                                            <img src="/images/courses2.png" alt="">
-                                            <span>Certificate / in Armenian and English /</span>
-                                        </div>
-                                    </div>
-                                    <div class="footerCard_2">
-                                        <div class="wishlistBtnField">
-                                            <button>
-                                                <img src="/images/wishlist1.png" alt="">
-                                                <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
-                                            </button>
-                                        </div>
-                                        <div class="booterImgs">
-                                            <div class='large-font largeFont'>
-                                                <ion-icon name="heart" class="iconLike">
-                                                    <div class='red-bg'></div>
-                                                </ion-icon>
-                                            </div>
-                                            <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                    <?php }else{ ?>
+                        <div class="changeBody1">
+                            <span class="title">Go to the All Courses tab to create a wishlist</span>
+                            <div class="applyNowBtnField">
+                                <a class="coursesHref" href="/courses/index">
+                                    <img src="/images/buttonImg.png" alt="">
+                                    <span>All courses</span>
+                                </a>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
                 <hr class="new1">
                 <div class="bottomSlider">
                     <ul class="carousel_">
-                        <li class="card_">
-                            <div class="individualCards_">
-                                <div class="cardsimg_">
-                                    <img src="/images/blogimg.png" alt="" draggable="false">
-                                </div>
-                                <div class="cardsText_">
-                                    <div class="cardsTextField_">
-                                        <div class="cardsTextInfo_">
-                                            <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                            <div class="cardsDate_">
-                                                <img src="/images/calendarimg.png" alt="">
-                                                <div class="articleDate_"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                        <?php if (!empty($wishlist_blogs)){foreach ($wishlist_blogs as $wishlist_blog){?>
+                            <li class="card_">
+                                <div class="individualCards_">
+                                    <div class="cardsimg_">
+                                        <img src="/<?=$wishlist_blog['img']?>" alt="" draggable="false">
+                                    </div>
+                                    <div class="cardsText_">
+                                        <div class="cardsTextField_">
+                                            <div class="cardsTextInfo_">
+                                                <div class="cardsInfo_"><?=$wishlist_blog['page_name']?></div>
+                                                <div class="cardsDate_">
+                                                    <img src="/images/calendarimg.png" alt="">
+                                                    <div class="articleDate_"><?=$wishlist_blog['create_date']?></div>
+                                                </div>
+                                                <div class="cardsInfo_"><?=$wishlist_blog['page_title']?></div>
                                             </div>
-                                            <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                        </div>
-                                        <div class="cardsLike_">
-                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
-                                            <div class='large-font'>
-                                                <ion-icon name="heart">
-                                                    <div class='red-bg'></div>
-                                                </ion-icon>
+                                            <div class="cardsLike_">
+                                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$wishlist_blog['blog_id']]) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
+                                                <div class='large-font'>
+                                                    <ion-icon name="heart"  data-id="<?=$wishlist_blog['blog_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_blog['blog_id'],2)?>" data-type="2">
+                                                        <div class='red-bg'></div>
+                                                    </ion-icon>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="card_">
-                            <div class="individualCards_">
-                                <div class="cardsimg_">
-                                    <img src="/images/blogimg.png" alt="" draggable="false">
-                                </div>
-                                <div class="cardsText_">
-                                    <div class="cardsTextField_">
-                                        <div class="cardsTextInfo_">
-                                            <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                            <div class="cardsDate_">
-                                                <img src="/images/calendarimg.png" alt="">
-                                                <div class="articleDate_"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
-                                            </div>
-                                            <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                        </div>
-                                        <div class="cardsLike_">
-                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
-                                            <div class='large-font'>
-                                                <ion-icon name="heart">
-                                                    <div class='red-bg'></div>
-                                                </ion-icon>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="card_">
-                            <div class="individualCards_">
-                                <div class="cardsimg_">
-                                    <img src="/images/blogimg.png" alt="" draggable="false">
-                                </div>
-                                <div class="cardsText_">
-                                    <div class="cardsTextField_">
-                                        <div class="cardsTextInfo_">
-                                            <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                            <div class="cardsDate_">
-                                                <img src="/images/calendarimg.png" alt="">
-                                                <div class="articleDate_"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
-                                            </div>
-                                            <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                        </div>
-                                        <div class="cardsLike_">
-                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
-                                            <div class='large-font'>
-                                                <ion-icon name="heart">
-                                                    <div class='red-bg'></div>
-                                                </ion-icon>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="card_">
-                            <div class="individualCards_">
-                                <div class="cardsimg_">
-                                    <img src="/images/blogimg.png" alt="" draggable="false">
-                                </div>
-                                <div class="cardsText_">
-                                    <div class="cardsTextField_">
-                                        <div class="cardsTextInfo_">
-                                            <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                            <div class="cardsDate_">
-                                                <img src="/images/calendarimg.png" alt="">
-                                                <div class="articleDate_"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
-                                            </div>
-                                            <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                        </div>
-                                        <div class="cardsLike_">
-                                            <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
-                                            <div class='large-font'>
-                                                <ion-icon name="heart">
-                                                    <div class='red-bg'></div>
-                                                </ion-icon>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        <?php }} ?>
                     </ul>
                 </div>
             </div>
