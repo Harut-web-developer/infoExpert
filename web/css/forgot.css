@@ -1,4 +1,4 @@
-.forgot, .verification{
+.forgot{
     width: 100%;
     height: 1088px;
     background-image: url("../images/forgotBackground.png");
@@ -88,13 +88,24 @@
 .sendForgot:hover span{
     color: white;
 }
-.contentVerification{
+.checkEmailDiv{
+    width: 100%;
+    height: 1088px;
+    background-image: url("../images/forgotBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentCheckEmail{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 635px;
-    height: 640px;
+    height: 510px;
 }
 .checkEmail{
     color: #F36528;
@@ -129,5 +140,11 @@
     line-height: 18.75px;
     text-align: center;
     color: #FFFFFF;
-
+}
+#letter{
+    width: 314px;
+    height: 314px;
+    display: block;
+    -webkit-user-select: none;
+    cursor: zoom-in;
 }
