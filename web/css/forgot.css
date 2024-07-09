@@ -94,7 +94,7 @@
     justify-content: space-between;
     align-items: center;
     width: 635px;
-    height: 640px;
+    height: 510px;
 }
 .checkEmail{
     color: #F36528;
@@ -129,5 +129,11 @@
     line-height: 18.75px;
     text-align: center;
     color: #FFFFFF;
-
+}
+#letter{
+    width: 314px;
+    height: 314px;
+    display: block;
+    -webkit-user-select: none;
+    cursor: zoom-in;
 }
