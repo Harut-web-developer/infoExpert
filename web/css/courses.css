@@ -1772,6 +1772,13 @@ ion-icon {
     }
 }
 @media screen and (max-width: 599.5px) {
+    .myCoursesBlocksField{
+        display: none;
+    }
+    .myCoursesBlocksField:nth-child(1),
+    .myCoursesBlocksField:nth-child(2){
+        display: block;
+    }
     .myCoursesSection {
         padding: 95px 6.9% 50px 6.8%;
     }

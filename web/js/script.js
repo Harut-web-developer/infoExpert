@@ -470,10 +470,9 @@ $(document).ready(function () {
                                 '</div>' +
                                 '</div>')
                         }
-                    }else if (thisItem.closest('ul').hasClass('wishlistCardsField')){
-                        console.log(2222)
+                    }else if (thisItem.closest('ul').hasClass('mobileCourses')){
                         thisItem.closest('.card_2').remove();
-                        if ($('.wishlistCardsField').children('.card_2').length === 0){
+                        if ($('.mobileCourses').children('.card_2').length === 0){
                             $('wishlistCardsField').remove();
                             $('body').find('.wishlistMobile').html('<div class="changeBody1">' +
                                 '<span class="title">'+ parse_data.title +'</span>' +
@@ -485,6 +484,10 @@ $(document).ready(function () {
                                 '</div>' +
                                 '</div>')
                         }
+                    }
+                }else if (window.location.pathname == '/wishlist/blogs-wishlist' && parse_data.wishlist == 'inactivate'){
+                    if (thisItem.closest('ul').hasClass('blogsWishlist')){
+                        thisItem.closest('.wishlistCardsField').remove();
                     }
                 }
             }

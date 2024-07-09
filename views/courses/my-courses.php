@@ -96,53 +96,33 @@ if ($language == 'en') {
             <div><?=$GLOBALS['text']['tabletMyCourse']?></div>
         </div>
         <div class="myCoursesMobile">
-            <div class="myCoursesBlocksField">
-                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
-                <div class="myCoursesBlocksFieldMain">
-                    <span>Trade Management: Marketing, Sales BITRIX / CRM</span>
-                    <div class="myCoursesRating">
-                        <div class="ratingStarMyourse">
-                            <img src="/images/ratingStar.png" alt="">
-                            <img src="/images/ratingStar.png" alt="">
-                            <img src="/images/ratingStar.png" alt="">
-                            <img src="/images/ratingStar.png" alt="">
-                            <img src="/images/ratingStar.png" alt="">
+            <?php if (!empty($my_lessons)){foreach ($my_lessons as $my_lesson){?>
+                <div class="myCoursesBlocksField">
+                    <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
+                    <div class="myCoursesBlocksFieldMain">
+                        <span><?=$my_lesson['lesson_name']?></span>
+                        <div class="myCoursesRating">
+                            <div class="ratingStarMyourse">
+                                <img src="/images/ratingStar.png" alt="">
+                                <img src="/images/ratingStar.png" alt="">
+                                <img src="/images/ratingStar.png" alt="">
+                                <img src="/images/ratingStar.png" alt="">
+                                <img src="/images/ratingStar.png" alt="">
+                            </div>
+                            <span>Leave a rating</span>
                         </div>
-                        <span>Leave a rating</span>
-                    </div>
-                    <div class="blogInfoPercent">
-                        <div class="progress" style="height: 3px;">
-                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="blogInfoPercent">
+                            <div class="progress" style="height: 3px;">
+                                <div class="progress-bar" role="progressbar" style="width: <?=$my_lesson['complete_percent']?>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="myCourseercentText"><?=$my_lesson['complete_percent']?> % complete</span>
                         </div>
-                        <span class="myCourseercentText">46 % complete</span>
-                    </div>
-                </div>
-            </div>
-            <div class="myCoursesBlocksField">
-                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
-                <div class="myCoursesBlocksFieldMain">
-                    <span>Trade Management: Marketing, Sales BITRIX / CRM</span>
-                    <div class="myCoursesRating">
-                        <div class="ratingStarMyourse">
-                            <img src="/images/ratingStar.png" alt="">
-                            <img src="/images/ratingStar.png" alt="">
-                            <img src="/images/ratingStar.png" alt="">
-                            <img src="/images/ratingStar.png" alt="">
-                            <img src="/images/ratingStar.png" alt="">
-                        </div>
-                        <span>Leave a rating</span>
-                    </div>
-                    <div class="blogInfoPercent">
-                        <div class="progress" style="height: 3px;">
-                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <span class="myCourseercentText">46 % complete</span>
                     </div>
                 </div>
-            </div>
+            <?php }} ?>
         </div>
         <div class="containerSeeMoreMyCourses">
-            <button>
+            <button id="btnMyCourse">
                 <img class="seeMoreBlog" src="/images/seeMoreBlog.png" alt="">
                 <span class="seeMoreText"><?= $GLOBALS['text']['sectionSixBtnMobile'] ?></span>
             </button>
@@ -204,4 +184,22 @@ if ($language == 'en') {
             slider(carousel, wrapper, firstCard);
         }
     });
+    let seeMoreBtnCourses = document.querySelector('#btnMyCourse');
+    let courses = [...document.querySelectorAll('.myCoursesMobile .myCoursesBlocksField')];
+    let currentItemCourses = 2;
+    if (currentItemCourses >= courses.length) {
+        seeMoreBtnCourses.style.display = 'none';
+    }
+    seeMoreBtnCourses.onclick = () => {
+        let itemsToShow = 2;
+        for (let i = currentItemCourses; i < currentItemCourses + itemsToShow; i++) {
+            if (i < courses.length) {
+                courses[i].style.display = 'block';
+            }
+        }
+        currentItemCourses += itemsToShow;
+        if (currentItemCourses >= courses.length) {
+            seeMoreBtnCourses.style.display = 'none';
+        }
+    }
 </script>

@@ -1497,11 +1497,33 @@ ion-icon {
     }
 }
 @media screen and (max-width: 599px){
+    .blogsHidden{
+        display: none;
+    }
+    .blogsHidden:nth-child(1),
+    .blogsHidden:nth-child(2){
+        display: flex;
+    }
+    .blogsWishlist > wishlistCardsField:last-child{
+        margin-bottom: 0px;
+    }
+    .blogsWishlist{
+        padding-left: 0;
+        margin-top: 38px;
+        margin-bottom: 50px;
+    }
     .userProfileSection{
         height: min-content;
         padding-bottom: 0px;
     }
     .wishlistBlogBtn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 21px;
+    }
+    .wishlistBlogBtnMobile{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -1515,7 +1537,7 @@ ion-icon {
         font-weight: 500;
         text-decoration: underline;
         text-underline-offset: 2px;
-        margin-right: 40px;
+        margin-right: 55px;
     }
     .wishlistBlogBtn > a{
         color: white;
@@ -1523,7 +1545,24 @@ ion-icon {
         font-family: "Roboto_",sans-serif;
         font-weight: 500;
         text-underline-offset: 2px;
-        margin-left: 40px;
+        margin-left: 55px;
+    }
+    .wishlistBlogBtnMobile > span{
+        color: #F36528;
+        font-size: 18px;
+        font-family: "Roboto_",sans-serif;
+        font-weight: 500;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        margin-left: 55px;
+    }
+    .wishlistBlogBtnMobile > a{
+        color: white;
+        font-size: 18px;
+        font-family: "Roboto_",sans-serif;
+        font-weight: 500;
+        text-underline-offset: 2px;
+        margin-right: 55px;
     }
     .wishlistBlogBtn > a:hover{
         color: #F36528;
@@ -1559,14 +1598,19 @@ ion-icon {
     /*.bottomSlider{*/
     /*    display: none;*/
     /*}*/
-    .wishlistCardsField{
+    .mobileCourses{
         margin-top: 38px;
         padding-left: 0px;
     }
     .card_2{
+        display: none;
         margin: 0px auto 30px;
         width: 320px;
         height: 435px;
+    }
+    .card_2:nth-child(1),
+    .card_2:nth-child(2){
+        display: flex;
     }
     .card_2 > img{
         width: 320px;
@@ -1683,7 +1727,7 @@ ion-icon {
         align-items: center;
     }
     .courseMobileBtn > button{
-        margin: 10px auto 41px;
+        margin: -30px auto 41px;
         background: transparent;
         border: none;
     }
@@ -1757,7 +1801,7 @@ ion-icon {
     .individualCards_{
         width: 280px;
         height: 435px;
-        margin: 0px auto 30px;
+        margin: 0px auto 10px;
     }
     .individualCards_ > img{
         width: 280px;

@@ -95,25 +95,25 @@ if ($language == 'en') {
                                                         <span><?=$item['lesson_content']?></span>
                                                     </div>
                                                 </div>
-                                                <div class="myCardInfoButtonField">
-                                                    <button>
-                                                        <img src="/images/btnBuyIcon.png" alt="">
-                                                        <span><?=$GLOBALS['text']['myCardBtn']?></span>
-                                                    </button>
-                                                    <div class="btnGroupLikeMarket">
-                                                        <div class='large-font largeFont'>
-                                                            <ion-icon name="heart" class="iconLike">
-                                                                <div class='red-bg'></div>
-                                                            </ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
+<!--                                                <div class="myCardInfoButtonField">-->
+<!--                                                    <button>-->
+<!--                                                        <img src="/images/btnBuyIcon.png" alt="">-->
+<!--                                                        <span>--><?php //=$GLOBALS['text']['myCardBtn']?><!--</span>-->
+<!--                                                    </button>-->
+<!--                                                    <div class="btnGroupLikeMarket">-->
+<!--                                                        <div class='large-font largeFont'>-->
+<!--                                                            <ion-icon name="heart" class="iconLike">-->
+<!--                                                                <div class='red-bg'></div>-->
+<!--                                                            </ion-icon>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
                                             </div>
                                         </div>
                                     </div>
                                     <div class="myCardBlockButtons">
                                         <span><?=$GLOBALS['text']['myCardRemove']?></span>
-<!--                                        <span>--><?php //=$GLOBALS['text']['myCardMove']?><!--</span>-->
+                                        <span><?=$GLOBALS['text']['myCardMove']?></span>
                                     </div>
                                 </li>
                             <?php }} ?>
@@ -159,19 +159,19 @@ if ($language == 'en') {
                                             <span>Certificate / in Armenian and English/</span>
                                         </div>
                                     </div>
-                                    <div class="myCardInfoButtonField">
-                                        <button>
-                                            <img src="/images/btnBuyIcon.png" alt="">
-                                            <span><?=$GLOBALS['text']['myCardBtn']?></span>
-                                        </button>
-                                        <div class="btnGroupLikeMarket">
-                                            <div class='large-font largeFont'>
-                                                <ion-icon name="heart" class="iconLike">
-                                                    <div class='red-bg'></div>
-                                                </ion-icon>
-                                            </div>
-                                        </div>
-                                    </div>
+<!--                                    <div class="myCardInfoButtonField">-->
+<!--                                        <button>-->
+<!--                                            <img src="/images/btnBuyIcon.png" alt="">-->
+<!--                                            <span>--><?php //=$GLOBALS['text']['myCardBtn']?><!--</span>-->
+<!--                                        </button>-->
+<!--                                        <div class="btnGroupLikeMarket">-->
+<!--                                            <div class='large-font largeFont'>-->
+<!--                                                <ion-icon name="heart" class="iconLike">-->
+<!--                                                    <div class='red-bg'></div>-->
+<!--                                                </ion-icon>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                 </div>
                             </div>
                         </div>

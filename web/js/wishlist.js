@@ -59,7 +59,42 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-
-$(document).ready(function() {
-
-})
+if (window.location.pathname == '/wishlist/index'){
+    let seeMoreBtnCourses = document.querySelector('#coursesBtnMobile');
+    let courses = [...document.querySelectorAll('.wishlistCardsField .card_2')];
+    let currentItemCourses = 2;
+    if (currentItemCourses >= courses.length) {
+        seeMoreBtnCourses.style.display = 'none';
+    }
+    seeMoreBtnCourses.onclick = () => {
+        let itemsToShow = 2;
+        for (let i = currentItemCourses; i < currentItemCourses + itemsToShow; i++) {
+            if (i < courses.length) {
+                courses[i].style.display = 'block';
+            }
+        }
+        currentItemCourses += itemsToShow;
+        if (currentItemCourses >= courses.length) {
+            seeMoreBtnCourses.style.display = 'none';
+        }
+    }
+}else if (window.location.pathname == '/wishlist/blogs-wishlist'){
+    let seeMoreBtnBlogs = document.querySelector('#blogsBtnMobile');
+    let blogs = [...document.querySelectorAll('.wishlistMobile .wishlistCardsField')];
+    let currentItemBlogs = 2;
+    if (currentItemBlogs >= blogs.length) {
+        seeMoreBtnBlogs.style.display = 'none';
+    }
+    seeMoreBtnBlogs.onclick = () => {
+        let itemsToShow = 2;
+        for (let i = currentItemBlogs; i < currentItemBlogs + itemsToShow; i++) {
+            if (i < blogs.length) {
+                blogs[i].style.display = 'block';
+            }
+        }
+        currentItemBlogs += itemsToShow;
+        if (currentItemBlogs >= blogs.length) {
+            seeMoreBtnBlogs.style.display = 'none';
+        }
+    }
+}

@@ -1,6 +1,7 @@
 <?php
 use yii\web\View;
 use yii\web\YiiAsset;
+use app\models\AcWishlist;
 
 /** @var yii\web\View $this */
 
@@ -29,11 +30,11 @@ if ($language == 'en') {
             <div><?=$GLOBALS['text']['tabletWishlist']?></div>
         </div>
         <div class="wishlistMobileSection">
-            <div class="wishlistBlogBtn">
+            <div class="wishlistBlogBtnMobile">
                 <a href="/wishlist/index"><?= $GLOBALS['text']['footerCourses']?></a>
                 <span><?= $GLOBALS['text']['footerBlog']?></span>
             </div>
-            <div class="wishlistMobile">
+            <ul class="wishlistMobile blogsWishlist">
 <!--                <div class="changeBody1">-->
 <!--                    <span class="title">Go to the All Courses tab to create a wishlist </span>-->
 <!--                    <div class="applyNowBtnField">-->
@@ -43,87 +44,41 @@ if ($language == 'en') {
 <!--                        </a>-->
 <!--                    </div>-->
 <!--                </div>-->
-                <div class="wishlistCardsField">
-                    <div class="individualCards_">
-                        <img src="/images/blogimg.png" alt="" draggable="false">
-                        <div class="cardsText_">
-                            <div class="cardsTextField_">
-                                <div class="cardsTextInfo_">
-                                    <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                    <div class="cardsDate_">
-                                        <img src="/images/calendarimg.png" alt="">
-                                        <div class="articleDate_"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
+                <?php if (!empty($wishlist_blogs)){foreach ($wishlist_blogs as $wishlist_blog){  ?>
+                    <li class="wishlistCardsField blogsHidden">
+                        <div class="individualCards_">
+                            <img src="/<?=$wishlist_blog['img']?>" alt="" draggable="false">
+                            <div class="cardsText_">
+                                <div class="cardsTextField_">
+                                    <div class="cardsTextInfo_">
+                                        <div class="cardsInfo_"><?=$wishlist_blog['page_name']?></div>
+                                        <div class="cardsDate_">
+                                            <img src="/images/calendarimg.png" alt="">
+                                            <div class="articleDate_"><?=$wishlist_blog['create_date']?></div>
+                                        </div>
+                                        <div class="cardsInfo_"><?=$wishlist_blog['page_title']?></div>
                                     </div>
-                                    <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                </div>
-                                <div class="cardsLike_">
-                                    <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
-                                    <div class='large-font'>
-                                        <ion-icon name="heart">
-                                            <div class='red-bg'></div>
-                                        </ion-icon>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wishlistCardsField">
-                    <div class="individualCards_">
-                        <img src="/images/blogimg.png" alt="" draggable="false">
-                        <div class="cardsText_">
-                            <div class="cardsTextField_">
-                                <div class="cardsTextInfo_">
-                                    <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                    <div class="cardsDate_">
-                                        <img src="/images/calendarimg.png" alt="">
-                                        <div class="articleDate_"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
-                                    </div>
-                                    <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                </div>
-                                <div class="cardsLike_">
-                                    <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
-                                    <div class='large-font'>
-                                        <ion-icon name="heart">
-                                            <div class='red-bg'></div>
-                                        </ion-icon>
+                                    <div class="cardsLike_">
+                                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$wishlist_blog['blog_id']]) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
+                                        <div class='large-font'>
+                                            <ion-icon name="heart" data-id="<?=$wishlist_blog['blog_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_blog['blog_id'],2)?>" data-type="2">
+                                                <div class='red-bg'></div>
+                                            </ion-icon>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="wishlistCardsField">
-                    <div class="individualCards_">
-                        <img src="/images/blogimg.png" alt="" draggable="false">
-                        <div class="cardsText_">
-                            <div class="cardsTextField_">
-                                <div class="cardsTextInfo_">
-                                    <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                    <div class="cardsDate_">
-                                        <img src="/images/calendarimg.png" alt="">
-                                        <div class="articleDate_"><?=date('M') . ' ' . date('d') . ', ' . date('Y') ?></div>
-                                    </div>
-                                    <div class="cardsInfo_">Grid of different categories of accounting lessons</div>
-                                </div>
-                                <div class="cardsLike_">
-                                    <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie']) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
-                                    <div class='large-font'>
-                                        <ion-icon name="heart">
-                                            <div class='red-bg'></div>
-                                        </ion-icon>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </li>
+                <?php }} ?>
+            </ul>
+            <?php if (!empty($wishlist_blogs)){?>
                 <div class="courseMobileBtn">
-                    <button>
+                    <button id="blogsBtnMobile">
                         <img src="/images/coursesBtn.png" alt="">
                     </button>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </div>
