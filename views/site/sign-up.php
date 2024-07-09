@@ -40,7 +40,7 @@ if ($language == 'en') {
                 <div class="container_">
                     <div class="input-box">
                         <i class="fas fa-eye-slash show_hide"></i>
-                        <input spellcheck="false" type="password" placeholder="<?=$GLOBALS['text']['signupFormPassword']?>" name="password" required>
+                        <input spellcheck="false" type="password" placeholder="<?=$GLOBALS['text']['signupFormPassword']?>" name="User[password]" required>
                     </div>
                     <div class="requirements">
                         <p><?=$GLOBALS['text']['passwordInclude']?></p>
@@ -134,9 +134,6 @@ if ($language == 'en') {
             charactersSize_.style.color = "#22C32A";
             passwordMustInclude.style.color = "#22C32A";
             $('#postValue').val('true');
-            console.log($('#postValue').val())
-            console.log($('#postValue').val() === 'true')
-            console.log($('#checkboxSignIn').prop('checked') && $('#postValue').val() === 'true')
             if ($('#checkboxSignIn').prop('checked') && $('#postValue').val() === 'true') {
                 $('#submitButton').prop('disabled', false);
                 $('#signupButtonText').css('color', '#F36528');
@@ -247,8 +244,6 @@ if ($language == 'en') {
     $('#checkboxSignIn').change(function(){
         let submitButton = $('#submitButton');
         let signupButtonText = $('#signupButtonText');
-        console.log($('#postValue').val())
-        console.log($('#postValue').val() === 'true')
         if ($(this).prop('checked') && $('#postValue').val() === 'true') {
             submitButton.prop('disabled', false);
             signupButtonText.css('color', '#F36528');

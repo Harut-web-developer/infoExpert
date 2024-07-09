@@ -270,7 +270,7 @@ class SiteController extends Controller
             if ($model->load($post)) {
                 $model->password = $hash;
                 $model->auth_key = $this->generateRandomString();
-                if($model->save()){
+                if($model->save(false)){
                     $log_model = new LoginForm();
                     $log_model->email = $model->email;
                     $log_model->password = $post['User']['password'];
@@ -296,7 +296,6 @@ class SiteController extends Controller
         setcookie('language', $lang, time() + (365 * 24 * 60 * 60),"/");
         return $this->goBack(Yii::$app->request->referrer);
     }
-
     public function actionAccountSecurity()
     {
         if ($this->request->isPost) {
@@ -304,34 +303,43 @@ class SiteController extends Controller
             $new_password = $this->request->post('newPassword');
             $confirmPassword = $this->request->post('confirmPassword');
             $user = User::findOne(['status' => '1', 'id' => Yii::$app->user->identity->id]);
+//            $user = Yii::$app->user->identity;
             $password_hash = $user->password;
-//            echo "<pre>";
-//            var_dump($this->request->isPost);
-//            var_dump($current_password);
-//            var_dump($new_password);
-//            var_dump($confirmPassword);
-//            var_dump($new_password === $confirmPassword);
-//            die;
+            if ($_COOKIE['language'] == 'am'){
+                $success = 'Գաղտնաբառը հաջողությամբ փոխվեց:';
+                $failedChangePassword = 'Չհաջողվեց փոխել գաղտնաբառը:';
+                $newIncorrectPassword = 'Նոր գաղտնաբառը սխալ է';
+                $oldIncorrectPassword = 'Հին գաղտնաբառը սխալ է:';
+            } elseif ($_COOKIE['language'] == 'ru'){
+                $success = 'Пароль успешно изменен.';
+                $failedChangePassword = 'Не удалось изменить пароль.';
+                $newIncorrectPassword = 'Новый пароль неверен.';
+                $oldIncorrectPassword = 'Старый пароль неверен.';
+            }else{
+                $success = 'Password successfully changed.';
+                $failedChangePassword = 'Failed to change password.';
+                $newIncorrectPassword = 'The new password is incorrect';
+                $oldIncorrectPassword = 'Old password is incorrect.';
+            }
             if (!is_null($current_password) && Yii::$app->getSecurity()->validatePassword($current_password, $password_hash)) {
                 if ($new_password === $confirmPassword){
                     $user->password = Yii::$app->getSecurity()->generatePasswordHash($new_password);
                     if ($user->save(false)) {
-                        Yii::$app->session->setFlash('success', 'Password successfully changed.');
+                        Yii::$app->session->setFlash('success', $success);
                         return $this->redirect(['/']);
                     } else {
-                        Yii::$app->session->setFlash('failedChangePassword', 'Failed to change password.');
+                        Yii::$app->session->setFlash('failedChangePassword', $failedChangePassword);
                         return $this->render('security');
                     }
                 } else {
-                    Yii::$app->session->setFlash('newIncorrectPassword', 'The new password is incorrect');
+                    Yii::$app->session->setFlash('newIncorrectPassword', $newIncorrectPassword);
                     return $this->render('security');
                 }
             } else {
-                Yii::$app->session->setFlash('oldIncorrectPassword', 'Old password is incorrect.');
+                Yii::$app->session->setFlash('oldIncorrectPassword', $oldIncorrectPassword);
                 return $this->render('security');
             }
         }
-
         return $this->render('security');
     }
      public function actionGetWishlist(){
@@ -362,4 +370,81 @@ class SiteController extends Controller
         }
         return $randomString;
     }
+    public function getToken($token)
+    {
+        $model = User::findOne(['token' => $token]);
+
+        if($model===null)
+            throw new CHttpException(404,'The requested page does not exist.');
+        return $model;
+    }
+
+
+    public function actionVerToken($token)
+    {
+        $model=$this->getToken($token);
+        if(isset($_POST['Ganti']))
+        {
+            if($model->token==$_POST['Ganti']['tokenhid']){
+                $model->password=md5($_POST['Ganti']['password']);
+                $model->token="null";
+                $model->save();
+                Yii::$app->user->setFlash('ganti','<b>Password has been successfully changed! please login</b>');
+                $this->redirect('?r=site/login');
+                $this->refresh();
+            }
+        }
+        $this->render('verifikasi',array(
+            'model'=>$model,
+        ));
+    }
+
+    public function actionForgot()
+    {
+        if (Yii::$app->request->isPost) {
+            $post = Yii::$app->request->post();
+            $email = Yii::$app->request->post('email');
+            $user = User::findOne(['email' => $email]);
+            if ($user !== null) {
+                $token = rand(0, 99999);
+                $user->password_reset_token = $token;
+                $user->save(false);
+
+                $senderName = "Owner Jsource Indonesia";
+                $senderEmail = "fahmi.j@programmer.net";
+                $subject = "Reset Password";
+                $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/vertoken/view', 'token' => $token]);
+                $message = "You have successfully reset your password.<br/>" .
+                    "<a href='{$resetLink}'>Click Here to Reset Password</a>";
+
+                $headers = [
+                    'From' => "$senderName <{$senderEmail}>",
+                    'Reply-To' => $senderEmail,
+                    'MIME-Version' => '1.0',
+                    'Content-type' => 'text/html; charset=UTF-8'
+                ];
+
+                $headersString = '';
+                foreach ($headers as $key => $value) {
+                    $headersString .= "$key: $value\r\n";
+                }
+
+                if (mail($email, $subject, $message, $headersString)) {
+                    Yii::$app->session->setFlash('forgot', 'Instructions to reset your password have been sent to your email.');
+                    return $this->render('verification');
+                } else {
+                    Yii::$app->session->setFlash('forgot', 'Sorry, we are unable to send the email.');
+                }
+//                return $this->refresh();
+            } else {
+                Yii::$app->session->setFlash('forgot', 'No user is registered with this email address.');
+            }
+        }
+        return $this->render('forgot');
+    }
+    public function actionVerification()
+    {
+        return $this->render('verification');
+    }
+
 }
