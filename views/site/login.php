@@ -48,7 +48,7 @@ if ($language == 'en') {
                         <input id="checkboxSignIn" type="checkbox" name="rememberme">
                         <label for="checkboxSignIn"><?=$GLOBALS['text']['signinRemember']?></label>
                     </div>
-                    <a href=""><?=$GLOBALS['text']['signinLost']?></a>
+                    <a href="site/forgot"><?=$GLOBALS['text']['signinLost']?></a>
                 </div>
             </div>
             <button type="submit" class="container_signin">
