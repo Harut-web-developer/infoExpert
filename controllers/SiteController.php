@@ -399,12 +399,58 @@ class SiteController extends Controller
         ));
     }
 
+//    public function actionForgot()
+//    {
+//        if (Yii::$app->request->isPost) {
+//            $post = Yii::$app->request->post();
+//            $email = Yii::$app->request->post('email');
+//            $user = User::findOne(['email' => $email]);
+//            if ($user !== null) {
+//                $token = rand(0, 99999);
+//                $user->password_reset_token = $token;
+//                $user->save(false);
+//
+//                $senderName = "Owner Jsource Indonesia";
+//                $senderEmail = "fahmi.j@programmer.net";
+//                $subject = "Reset Password";
+//                $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/vertoken/view', 'token' => $token]);
+//                $message = "You have successfully reset your password.<br/>" .
+//                    "<a href='{$resetLink}'>Click Here to Reset Password</a>";
+//
+//                $headers = [
+//                    'From' => "$senderName <{$senderEmail}>",
+//                    'Reply-To' => $senderEmail,
+//                    'MIME-Version' => '1.0',
+//                    'Content-type' => 'text/html; charset=UTF-8'
+//                ];
+//
+//                $headersString = '';
+//                foreach ($headers as $key => $value) {
+//                    $headersString .= "$key: $value\r\n";
+//                }
+//
+//                if (mail($email, $subject, $message, $headersString)) {
+//                    Yii::$app->session->setFlash('forgot', 'Instructions to reset your password have been sent to your email.');
+//                    return $this->render('verification');
+//                } else {
+//                    Yii::$app->session->setFlash('forgot', 'Sorry, we are unable to send the email.');
+//                }
+////                return $this->refresh();
+//            } else {
+//                Yii::$app->session->setFlash('forgot', 'No user is registered with this email address.');
+//            }
+//        }
+//        return $this->render('forgot');
+//    }
+
+
     public function actionForgot()
     {
         if (Yii::$app->request->isPost) {
             $post = Yii::$app->request->post();
             $email = Yii::$app->request->post('email');
             $user = User::findOne(['email' => $email]);
+
             if ($user !== null) {
                 $token = rand(0, 99999);
                 $user->password_reset_token = $token;
@@ -413,38 +459,33 @@ class SiteController extends Controller
                 $senderName = "Owner Jsource Indonesia";
                 $senderEmail = "fahmi.j@programmer.net";
                 $subject = "Reset Password";
-                $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/vertoken/view', 'token' => $token]);
+                $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/verification', 'token' => $token]);
                 $message = "You have successfully reset your password.<br/>" .
                     "<a href='{$resetLink}'>Click Here to Reset Password</a>";
 
-                $headers = [
-                    'From' => "$senderName <{$senderEmail}>",
-                    'Reply-To' => $senderEmail,
-                    'MIME-Version' => '1.0',
-                    'Content-type' => 'text/html; charset=UTF-8'
-                ];
+                try {
+                    Yii::$app->mailer->compose()
+                        ->setFrom([$senderEmail => $senderName])
+                        ->setTo($email)
+                        ->setSubject($subject)
+                        ->setHtmlBody($message)
+                        ->send();
 
-                $headersString = '';
-                foreach ($headers as $key => $value) {
-                    $headersString .= "$key: $value\r\n";
-                }
-
-                if (mail($email, $subject, $message, $headersString)) {
                     Yii::$app->session->setFlash('forgot', 'Instructions to reset your password have been sent to your email.');
-                    return $this->render('verification');
-                } else {
+                    return $this->render('check-email');
+                } catch (\Exception $e) {
+                    Yii::error("Failed to send email: " . $e->getMessage(), __METHOD__);
                     Yii::$app->session->setFlash('forgot', 'Sorry, we are unable to send the email.');
                 }
-//                return $this->refresh();
             } else {
                 Yii::$app->session->setFlash('forgot', 'No user is registered with this email address.');
             }
         }
+
         return $this->render('forgot');
     }
     public function actionVerification()
     {
         return $this->render('verification');
     }
-
 }
