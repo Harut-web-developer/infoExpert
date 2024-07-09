@@ -1515,6 +1515,7 @@ ion-icon {
         font-weight: 500;
         text-decoration: underline;
         text-underline-offset: 2px;
+        margin-right: 40px;
     }
     .wishlistBlogBtn > a{
         color: white;
@@ -1522,6 +1523,7 @@ ion-icon {
         font-family: "Roboto_",sans-serif;
         font-weight: 500;
         text-underline-offset: 2px;
+        margin-left: 40px;
     }
     .wishlistBlogBtn > a:hover{
         color: #F36528;
@@ -1540,6 +1542,7 @@ ion-icon {
     .wishlistMobileSection{
         height: min-content;
         margin-top: 30px;
+        /*width: 80%;*/
     }
     .userProfileMenuField{
         display: none;
@@ -1558,6 +1561,7 @@ ion-icon {
     /*}*/
     .wishlistCardsField{
         margin-top: 38px;
+        padding-left: 0px;
     }
     .card_2{
         margin: 0px auto 30px;

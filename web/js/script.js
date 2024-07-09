@@ -454,10 +454,9 @@ $(document).ready(function () {
             success: function (data) {
                 let parse_data = JSON.parse(data);
                 if (window.location.pathname == '/wishlist/index' && parse_data.wishlist == 'inactivate'){
-                    console.log(thisItem.closest('ul').hasClass('carousel_'))
                     if (thisItem.closest('ul').hasClass('carousel_')){
                         thisItem.closest('.card_').remove();
-                    }else {
+                    }else if (thisItem.closest('ul').hasClass('carousel_2')) {
                         thisItem.closest('.card_2').remove();
                         if ($('.carousel_2').children('li').length === 0){
                             $('changeBody2').remove();
@@ -471,8 +470,36 @@ $(document).ready(function () {
                                 '</div>' +
                                 '</div>')
                         }
+                    }else if (thisItem.closest('ul').hasClass('wishlistCardsField')){
+                        console.log(2222)
+                        thisItem.closest('.card_2').remove();
+                        if ($('.wishlistCardsField').children('.card_2').length === 0){
+                            $('wishlistCardsField').remove();
+                            $('body').find('.wishlistMobile').html('<div class="changeBody1">' +
+                                '<span class="title">'+ parse_data.title +'</span>' +
+                                '<div class="applyNowBtnField">' +
+                                '<a class="coursesHref" href="/courses/index">' +
+                                '<img src="/images/buttonImg.png" alt="">' +
+                                '<span>'+ parse_data.btn_name +'</span>' +
+                                '</a>' +
+                                '</div>' +
+                                '</div>')
+                        }
                     }
                 }
+            }
+        })
+    })
+    $('body').on('click', '.addMyCard', function () {
+        let lesson_id = $(this).data('id');
+        let csrfToken = $('meta[name="csrf-token"]').attr("content");
+        $.ajax({
+            url: '/my-card/add-card',
+            method: 'get',
+            datatype: 'json',
+            data: {
+                lesson_id: lesson_id,
+                _csrf: csrfToken
             }
         })
     })

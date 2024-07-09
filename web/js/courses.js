@@ -63,14 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slider(carousel2, wrapper2, firstCard2);
     }
 });
-$(document).ready(function() {
-    $('.coursisBtnField button').on("click", function () {
-        window.location.href = '/my-card/checkout';
-    })
-    $('.footerCard button').on("click", function () {
-        window.location.href = '/my-card/checkout';
-    })
-})
+
 let seeMoreBtnCourses = document.querySelector('#coursesBtnMobile');
 let courses = [...document.querySelectorAll('.cardCoursesMobile .cardCourses')];
 let currentItemCourses = 2;

@@ -61,12 +61,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function() {
-    $('.wishlistBtnField button').on("click", function () {
-        window.location.href = '/my-card/checkout';
-    })
-})
-$(document).ready(function() {
-    $('.footerCard_2 button').on("click", function () {
-        window.location.href = '/my-card/checkout';
-    })
+
 })

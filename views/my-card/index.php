@@ -64,214 +64,59 @@ if ($language == 'en') {
                 <div class="cardCourses">
                     <div class="wrapper">
                         <ul class="myCardFieldAcceptCourses">
-                            <li class="myCardBlocksField">
-                                <div class="myCoursesBlocksField">
-                                    <div class="myCoursesBlocksFieldMain">
-                                        <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="" draggable="false">
-                                            <div class="myCardNameRating">
-                                                <span>1C: and Accounting for Begginers</span>
-                                                <div class="rightContentMyCard">
-                                                    <div class="starDiv">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
+                            <?php if (!empty($my_card)){foreach ($my_card as $item){ ?>
+                                <li class="myCardBlocksField">
+                                    <div class="myCoursesBlocksField">
+                                        <div class="myCoursesBlocksFieldMain">
+                                            <div class="myCardImageBlock">
+                                                <img src="/images/courseimage.png" alt="" draggable="false">
+                                                <div class="myCardNameRating">
+                                                    <span><?=$item['lesson_name']?></span>
+                                                    <div class="rightContentMyCard">
+                                                        <div class="starDiv">
+                                                            <img src="/images/cardStar.png" alt="">
+                                                            <img src="/images/cardStar.png" alt="">
+                                                            <img src="/images/cardStar.png" alt="">
+                                                            <img src="/images/cardStar.png" alt="">
+                                                            <img src="/images/cardStar.png" alt="">
+                                                        </div>
+                                                        <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
                                                     </div>
-                                                    <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="myCardBlockInfo">
-                                            <div class="myCardInfoTextIcon">
-                                                <div class="myCardInfoTextIconFirst">
-                                                    <img src="/images/mycardicon1.png" alt="">
-                                                    <span>Number of courses: 14+1 exam / 2days a week</span>
-                                                </div>
-                                                <div class="myCardInfoTextIconSecond">
-                                                    <img src="/images/mycardicon2.png" alt="">
-                                                    <span>Certificate / in Armenian and English/</span>
-                                                </div>
-                                            </div>
-                                            <div class="myCardInfoButtonField">
-                                                <button>
-                                                    <img src="/images/btnBuyIcon.png" alt="">
-                                                    <span><?=$GLOBALS['text']['myCardBtn']?></span>
-                                                </button>
-                                                <div class="btnGroupLikeMarket">
-                                                    <div class='large-font largeFont'>
-                                                        <ion-icon name="heart" class="iconLike">
-                                                            <div class='red-bg'></div>
-                                                        </ion-icon>
+                                            <div class="myCardBlockInfo">
+                                                <div class="myCardInfoTextIcon">
+                                                    <div class="myCardInfoTextIconFirst">
+                                                        <img src="/images/mycardicon1.png" alt="">
+                                                        <span><?=$item['lesson_title']?></span>
                                                     </div>
-                                                    <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="myCardBlockButtons">
-                                    <span><?=$GLOBALS['text']['myCardRemove']?></span>
-                                    <span><?=$GLOBALS['text']['myCardMove']?></span>
-                                </div>
-                            </li>
-                            <li class="myCardBlocksField">
-                                <div class="myCoursesBlocksField">
-                                    <div class="myCoursesBlocksFieldMain">
-                                        <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="" draggable="false">
-                                            <div class="myCardNameRating">
-                                                <span>1C: Accounting 8.3</span>
-                                                <div class="rightContentMyCard">
-                                                    <div class="starDiv">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
+                                                    <div class="myCardInfoTextIconSecond">
+                                                        <img src="/images/mycardicon2.png" alt="">
+                                                        <span><?=$item['lesson_content']?></span>
                                                     </div>
-                                                    <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="myCardBlockInfo">
-                                            <div class="myCardInfoTextIcon">
-                                                <div class="myCardInfoTextIconFirst">
-                                                    <img src="/images/mycardicon1.png" alt="">
-                                                    <span>Number of courses: 14+1 exam / 2days a week</span>
-                                                </div>
-                                                <div class="myCardInfoTextIconSecond">
-                                                    <img src="/images/mycardicon2.png" alt="">
-                                                    <span>Certificate / in Armenian and English/</span>
-                                                </div>
-                                            </div>
-                                            <div class="myCardInfoButtonField">
-                                                <button>
-                                                    <img src="/images/btnBuyIcon.png" alt="">
-                                                    <span><?=$GLOBALS['text']['myCardBtn']?></span>
-                                                </button>
-                                                <div class="btnGroupLikeMarket">
-                                                    <div class='large-font largeFont'>
-                                                        <ion-icon name="heart" class="iconLike">
-                                                            <div class='red-bg'></div>
-                                                        </ion-icon>
+                                                <div class="myCardInfoButtonField">
+                                                    <button>
+                                                        <img src="/images/btnBuyIcon.png" alt="">
+                                                        <span><?=$GLOBALS['text']['myCardBtn']?></span>
+                                                    </button>
+                                                    <div class="btnGroupLikeMarket">
+                                                        <div class='large-font largeFont'>
+                                                            <ion-icon name="heart" class="iconLike">
+                                                                <div class='red-bg'></div>
+                                                            </ion-icon>
+                                                        </div>
                                                     </div>
-                                                    <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="myCardBlockButtons">
-                                    <span><?=$GLOBALS['text']['myCardRemove']?></span>
-                                    <span><?=$GLOBALS['text']['myCardMove']?></span>
-                                </div>
-                            </li>
-                            <li class="myCardBlocksField">
-                                <div class="myCoursesBlocksField">
-                                    <div class="myCoursesBlocksFieldMain">
-                                        <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="" draggable="false">
-                                            <div class="myCardNameRating">
-                                                <span>1C: Accounting 8.3</span>
-                                                <div class="rightContentMyCard">
-                                                    <div class="starDiv">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                    </div>
-                                                    <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="myCardBlockInfo">
-                                            <div class="myCardInfoTextIcon">
-                                                <div class="myCardInfoTextIconFirst">
-                                                    <img src="/images/mycardicon1.png" alt="">
-                                                    <span>Number of courses: 14+1 exam / 2days a week</span>
-                                                </div>
-                                                <div class="myCardInfoTextIconSecond">
-                                                    <img src="/images/mycardicon2.png" alt="">
-                                                    <span>Certificate / in Armenian and English/</span>
-                                                </div>
-                                            </div>
-                                            <div class="myCardInfoButtonField">
-                                                <button>
-                                                    <img src="/images/btnBuyIcon.png" alt="">
-                                                    <span><?=$GLOBALS['text']['myCardBtn']?></span>
-                                                </button>
-                                                <div class="btnGroupLikeMarket">
-                                                    <div class='large-font largeFont'>
-                                                        <ion-icon name="heart" class="iconLike">
-                                                            <div class='red-bg'></div>
-                                                        </ion-icon>
-                                                    </div>
-                                                    <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="myCardBlockButtons">
+                                        <span><?=$GLOBALS['text']['myCardRemove']?></span>
+<!--                                        <span>--><?php //=$GLOBALS['text']['myCardMove']?><!--</span>-->
                                     </div>
-                                </div>
-                                <div class="myCardBlockButtons">
-                                    <span><?=$GLOBALS['text']['myCardRemove']?></span>
-                                    <span><?=$GLOBALS['text']['myCardMove']?></span>
-                                </div>
-                            </li>
-                            <li class="myCardBlocksField">
-                                <div class="myCoursesBlocksField">
-                                    <div class="myCoursesBlocksFieldMain">
-                                        <div class="myCardImageBlock">
-                                            <img src="/images/courseimage.png" alt="" draggable="false">
-                                            <div class="myCardNameRating">
-                                                <span>1C: Accounting 8.3</span>
-                                                <div class="rightContentMyCard">
-                                                    <div class="starDiv">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                        <img src="/images/cardStar.png" alt="">
-                                                    </div>
-                                                    <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="myCardBlockInfo">
-                                            <div class="myCardInfoTextIcon">
-                                                <div class="myCardInfoTextIconFirst">
-                                                    <img src="/images/mycardicon1.png" alt="">
-                                                    <span>Number of courses: 14+1 exam / 2days a week</span>
-                                                </div>
-                                                <div class="myCardInfoTextIconSecond">
-                                                    <img src="/images/mycardicon2.png" alt="">
-                                                    <span>Certificate / in Armenian and English/</span>
-                                                </div>
-                                            </div>
-                                            <div class="myCardInfoButtonField">
-                                                <button>
-                                                    <img src="/images/btnBuyIcon.png" alt="">
-                                                    <span><?=$GLOBALS['text']['myCardBtn']?></span>
-                                                </button>
-                                                <div class="btnGroupLikeMarket">
-                                                    <div class='large-font largeFont'>
-                                                        <ion-icon name="heart" class="iconLike">
-                                                            <div class='red-bg'></div>
-                                                        </ion-icon>
-                                                    </div>
-                                                    <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="myCardBlockButtons">
-                                    <span><?=$GLOBALS['text']['myCardRemove']?></span>
-                                    <span><?=$GLOBALS['text']['myCardMove']?></span>
-                                </div>
-                            </li>
+                                </li>
+                            <?php }} ?>
                         </ul>
                     </div>
                 </div>
@@ -325,7 +170,6 @@ if ($language == 'en') {
                                                     <div class='red-bg'></div>
                                                 </ion-icon>
                                             </div>
-                                            <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
                                         </div>
                                     </div>
                                 </div>
@@ -377,7 +221,6 @@ if ($language == 'en') {
                                                     <div class='red-bg'></div>
                                                 </ion-icon>
                                             </div>
-                                            <img src="/images/iconmarketmycard.png" alt="" class="footerImg">
                                         </div>
                                     </div>
                                 </div>

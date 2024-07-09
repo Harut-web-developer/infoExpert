@@ -61,160 +61,30 @@ if ($language == 'en') {
             <div class="cardMyCourses">
                 <div class="wrapperMyCourses">
                     <ul class="carouselMyCourses myCoursesFieldAcceptCourses">
-                        <li class="myCoursesBlocksField">
-                            <div class="myCoursesBlocksFieldMain">
-                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
-                                <div class="myCoursesBlocksFieldMainInfo">
-                                    <div class="infoTitle">1C: Accounting 8.3 dfbh dfherh drherh adryeh aey</div>
-                                    <div class="myCoursesRating">
-                                        <div class="ratingStarMyourse">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
+                        <?php if (!empty($my_lessons)){foreach ($my_lessons as $my_lesson){?>
+                            <li class="myCoursesBlocksField">
+                                <div class="myCoursesBlocksFieldMain">
+                                    <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
+                                    <div class="myCoursesBlocksFieldMainInfo">
+                                        <div class="infoTitle"><?=$my_lesson['lesson_name']?></div>
+                                        <div class="myCoursesRating">
+                                            <div class="ratingStarMyourse">
+                                                <img src="/images/ratingStar.png" alt="">
+                                                <img src="/images/ratingStar.png" alt="">
+                                                <img src="/images/ratingStar.png" alt="">
+                                                <img src="/images/ratingStar.png" alt="">
+                                                <img src="/images/ratingStar.png" alt="">
+                                            </div>
+                                            <span>Leave a rating</span>
                                         </div>
-                                        <span>Leave a rating</span>
-                                    </div>
-                                    <div class="progress" style="height: 3px;">
-                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="myCourseercentText">46 % complete</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="myCoursesBlocksField">
-                            <div class="myCoursesBlocksFieldMain">
-                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
-                                <div class="myCoursesBlocksFieldMainInfo">
-                                    <div class="infoTitle">1C: Accounting 8.3</div>
-                                    <div class="myCoursesRating">
-                                        <div class="ratingStarMyourse">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
+                                        <div class="progress" style="height: 3px;">
+                                            <div class="progress-bar" role="progressbar" style="width: <?=$my_lesson['complete_percent']?>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
-                                        <span>Leave a rating</span>
+                                        <span class="myCourseercentText"><?=$my_lesson['complete_percent']?> % complete</span>
                                     </div>
-                                    <div class="progress" style="height: 3px;">
-                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="myCourseercentText">46 % complete</span>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="myCoursesBlocksField">
-                            <div class="myCoursesBlocksFieldMain">
-                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
-                                <div class="myCoursesBlocksFieldMainInfo">
-                                    <div class="infoTitle">1C: Accounting 8.3</div>
-                                    <div class="myCoursesRating">
-                                        <div class="ratingStarMyourse">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                        </div>
-                                        <span>Leave a rating</span>
-                                    </div>
-                                    <div class="progress" style="height: 3px;">
-                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="myCourseercentText">46 % complete</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="myCoursesBlocksField">
-                            <div class="myCoursesBlocksFieldMain">
-                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
-                                <div class="myCoursesBlocksFieldMainInfo">
-                                    <div class="infoTitle">1C: Accounting 8.3</div>
-                                    <div class="myCoursesRating">
-                                        <div class="ratingStarMyourse">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                        </div>
-                                        <span>Leave a rating</span>
-                                    </div>
-                                    <div class="progress" style="height: 3px;">
-                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="myCourseercentText">46 % complete</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="myCoursesBlocksField">
-                            <div class="myCoursesBlocksFieldMain">
-                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
-                                <div class="myCoursesBlocksFieldMainInfo">
-                                    <div class="infoTitle">1C: Accounting 8.3</div>
-                                    <div class="myCoursesRating">
-                                        <div class="ratingStarMyourse">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                        </div>
-                                        <span>Leave a rating</span>
-                                    </div>
-                                    <div class="progress" style="height: 3px;">
-                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="myCourseercentText">46 % complete</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="myCoursesBlocksField">
-                            <div class="myCoursesBlocksFieldMain">
-                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
-                                <div class="myCoursesBlocksFieldMainInfo">
-                                    <div class="infoTitle">1C: Accounting 8.3</div>
-                                    <div class="myCoursesRating">
-                                        <div class="ratingStarMyourse">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                        </div>
-                                        <span>Leave a rating</span>
-                                    </div>
-                                    <div class="progress" style="height: 3px;">
-                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="myCourseercentText">46 % complete</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="myCoursesBlocksField">
-                            <div class="myCoursesBlocksFieldMain">
-                                <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
-                                <div class="myCoursesBlocksFieldMainInfo">
-                                    <div class="infoTitle">1C: Accounting 8.3</div>
-                                    <div class="myCoursesRating">
-                                        <div class="ratingStarMyourse">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                            <img src="/images/ratingStar.png" alt="">
-                                        </div>
-                                        <span>Leave a rating</span>
-                                    </div>
-                                    <div class="progress" style="height: 3px;">
-                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="myCourseercentText">46 % complete</span>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        <?php }} ?>
                     </ul>
                 </div>
             </div>
