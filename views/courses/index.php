@@ -59,7 +59,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             </div>
                             <div class="footerCard">
                                 <div class="coursisBtnField">
-                                    <button>
+                                    <button class="buyCourses" data-buy="<?=$course['id']?>">
                                         <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
                                         <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
                                     </button>
