@@ -1,0 +1,207 @@
+main > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    background-color: #f5f5f5;
+    font-size: .9em;
+    height: 60px;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    content: '';
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 4px 4px 2px 4px;
+    background: transparent;
+}
+
+a.asc:after {
+    border-bottom: solid 7px #212529;
+    border-top-width: 0;
+}
+
+a.desc:after {
+    border-top: solid 7px #212529;
+    border-bottom-width: 0;
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding-top: 7px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.siteError{
+    width: 100%;
+    height: 1100px;
+    background-image: url("../images/background-error.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.alert404{
+    width: max-content;
+    height: 237px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.alert404 .span1{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 180px;
+    font-weight: 500;
+    line-height: 237.39px;
+    text-align: left;
+    color: #D6D6D6;
+}
+.alert404 .span2{
+    margin: 0px 10px;
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    color: #D6D6D6;
+}
+.errorBtnField{
+    position: relative;
+    width: max-content;
+    padding-top: 44px;
+    text-align: center;
+}
+.errorBtnField > a{
+    position: relative;
+    background: transparent;
+    border: none;
+}
+.errorBtnField > a:hover img{
+    content: url("../images/buttonImg1hover.png");
+}
+.errorBtnField > a > span{
+    color: #F36528;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto_',sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+}
+.errorBtnField > a:hover span{
+    color: white;
+}
+@media screen and (max-width: 1100px) {
+    .siteError {
+        padding-top: 61px;
+    }
+    .alert404 {
+        height: 213px;
+    }
+    .alert404 .span1 {
+        font-size: 35px;
+        font-weight: 500;
+        line-height: 46.16px;
+        text-align: center;
+    }
+    .alert404 .span2{
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 39.57px;
+        text-align: center;
+    }
+    .alert404 img {
+        width: 105px;
+        height: 43px;
+        padding: 0;
+    }
+    .errorBtnField{
+        width: 93.73px;
+        height: 40px;
+        padding-top: 0;
+    }
+    .errorBtnField > a > span{
+        font-size: 8px;
+        font-weight: 600;
+        line-height: 9.38px;
+        text-align: center;
+        width: 100%;
+        top: 9px;
+        left: 0px;
+        text-align: center;
+    }
+    .errorBtnField img{
+        width: 93.73px;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .siteError {
+        height: 821px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .siteError{
+        background: #5D9A9D;
+    }
+}

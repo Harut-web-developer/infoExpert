@@ -1,0 +1,1852 @@
+.myCoursesTitleField{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.myCoursesTitleField div{
+    font-family: "Roboto_",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.09px;
+    text-align: center;
+    width: 100%;
+    color: #F36528;
+}
+.managmentBack{
+    display: contents;
+}
+.usersProfile{
+    width: 100%;
+    height: min-content;
+    background-image: url("../images/background-wishlist.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.userProfileSection{
+    width: 67%;
+    /*height: -webkit-fill-available;*/
+    height: min-content;
+    /*position: absolute;*/
+    padding-top: 212px;
+    padding-bottom: 95px;
+    margin: 0px 16.5% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.userProfileMenuField{
+    width: 100%;
+    /*height: 53px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.userProfileMenuField > span{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #F36528;
+}
+.userProfileMenu{
+    width: 506px;
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.userProfileMenu > li > a{
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto_",sans-serif;
+    font-size: 20px;
+    font-height: 400;
+}
+.userProfileMenu > li > a:hover{
+    color: #F36528;
+}
+.spanAmd{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: left;
+}
+.myCoursesProfileField{
+    width: 405px;
+    height: 533px;
+    background: #74A8AB;
+    border-radius: 30px;
+    box-shadow: 0px 0px 6px 2px #549099;
+}
+.myCoursesFieldSection{
+    width: 291px;
+    height: 459px;
+    margin: 37px 36px 37px 78px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+.myCoursesFieldSectionLeft{
+    width: 250px;
+    height: 459px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.myCoursesFieldSectionLeft > span{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Roboto_", sans-serif;
+}
+.myCoursesFieldSectionLeft > img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+.usersProfileInfo{
+    width: 249px;
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.usersProfileInfoPhone > span{
+    font-family: "Roboto_",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 37px;
+    color: white;
+
+}
+.usersProfileInfoEmail > span{
+    font-family: "Roboto_",sans-serif;
+    margin-left: 37px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+
+}
+.usersProfileInfoLinkdin > span{
+    font-size: 20px;
+    font-family: "Roboto_",sans-serif;
+    margin-left: 37px;
+    color: white;
+    font-weight: 400;
+}
+.usersProfileInfoLinkdin > a{
+    font-size: 20px;
+    font-family: "Roboto_",sans-serif;
+    margin-left: 37px;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
+.CoursesAndCategoriesCard{
+    width: 68%;
+    height: min-content;
+    /*display: grid;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+.mainContent{
+    width: 100%;
+    /*height: -webkit-fill-available;*/
+    height: min-content;
+    padding-top: 108px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.topSlider{
+    height: 540px;
+    padding-left: 60px;
+}
+.changeBody1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 540px;
+}
+.topSlider .title{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 32.5px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.applyNowBtnField{
+    /*width: max-content;*/
+    padding-top: 53px;
+}
+.applyNowBtnField > a{
+    background: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.applyNowBtnField > a:hover img{
+    content: url("../images/buttonImghover.png");
+}
+.applyNowBtnField > a > span{
+    color: #F36528;
+    position: absolute;
+    font-family: "Roboto_",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+.applyNowBtnField > a:hover span{
+    color: white;
+}
+.starDivCourses{
+    width: 118px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.starDivCourses img{
+    width: 21px;
+    height: 20px;
+}
+.starDivWishlistCourses{
+    width: 103px;
+    height: 20.37px;
+    display: flex;
+}
+.starDivWishlistCourses img{
+    width: 21px;
+    height: 20px;
+}
+hr{
+    opacity: 1!important;
+}
+hr.new1 {
+    width: auto;
+    border: 3px solid #FFFFFF;
+    margin: 0 0 0 60px;
+}
+.bottomSlider {
+    /*display: flex;*/
+    padding-top: 70px;
+    padding-left: 60px;
+}
+
+.individualCards_ {
+    border-radius: 30px;
+    width: 377px;
+    height: min-content;
+}
+
+/*.bottomSlider .carousel_ {*/
+/*    display: grid;*/
+/*    grid-auto-flow: column;*/
+/*    gap: 44px;*/
+/*    overflow-x: auto;*/
+/*    scroll-snap-type: x mandatory;*/
+/*    scroll-behavior: smooth;*/
+/*    scrollbar-width: none;*/
+/*    -ms-overflow-style: none;*/
+/*    margin-top: 0;*/
+/*    margin-bottom: 0rem!important;*/
+/*    padding-left: 0; !* Reset default padding *!*/
+/*    list-style-type: none; !* Remove bullet points *!*/
+/*}*/
+.bottomSlider ul {
+    margin-bottom: 0;
+    padding-left: 0rem!important;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 44px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.card_ {
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    scroll-snap-align: start;
+    list-style: none;
+}
+.carousel_::-webkit-scrollbar {
+    display: none;
+}
+.carousel_.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel_.no-transition {
+    scroll-behavior: auto;
+}
+.carousel_.dragging .card_ {
+    cursor: pointer;
+    user-select: none;
+}
+.cardsimg_ {
+    height: 233px;
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.cardsimg_{
+    height: 233px;
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.cardsimg_ > img{
+    width: 100%;
+    height: 233px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.cardsText_{
+    height: 247px;
+    width: 100%;
+    background: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.cardsTextField_{
+    height: 227px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardsTextInfo_{
+    padding: 21px 5%;
+    width: 100%;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.cardsLike_{
+    height: 43px;
+    width: 74%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardsLike_ > a{
+    font-size: 19px;
+    color: #F36528;
+    font-weight: 500;
+}
+.cardsLike_ > img:hover{
+    cursor:pointer;
+}
+.cardsInfo_{
+    display: -webkit-box;
+    font-size: 18px;
+    color: #1C5484;
+    width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height:48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+}
+.cardsDate_{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    color: #555555;
+}
+.articleDate_{
+    margin-left: 10px;
+}
+/*.changeBody2{*/
+/*    display: flex;*/
+/*}*/
+.changeBody2 ul {
+    margin-bottom: 0;
+    padding-left: 0rem!important;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 44px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.card_2 {
+    width: 100%;
+    height: 481.45px;
+    list-style: none;
+    background: #FFFFFF24;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    scroll-snap-align: start;
+    list-style: none;
+}
+.carousel_2::-webkit-scrollbar {
+    display: none;
+}
+.carousel_2.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel_2.no-transition {
+    scroll-behavior: auto;
+}
+.carousel_2.dragging .card_2 {
+    cursor: pointer;
+    user-select: none;
+}
+.img_2{
+    width: 100%;
+    height: 50%;
+}
+.cardContent{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    padding: 0 17px 16px 17px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.img_2 img{
+    width: 100%;
+    height: 233px;
+    border-radius: 30px 30px 0px 0px;
+}
+.card_2 .cardBody_2{
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+    justify-content: space-between;
+    gap: 5px;
+}
+/*.starAndTxt_2{*/
+/*    padding-left: 18px;*/
+/*}*/
+.cardCenter_2{
+    /*width: 312.12px;*/
+    /*height: 73.09px;*/
+    width: 312.12px;
+    height: 81.09px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin: 0 15px;
+}
+.card_2 .cardBody_2 .span1_2{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    color: #FFFFFF;
+    width: 164px;
+    /*height: max-content;*/
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.card_2 .cardBody_2 .span2_2{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.13px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.cardtxt1_2{
+    width: 223.11px;
+    height: 40px;
+    display: flex;
+    /*margin-bottom: 5px;*/
+}
+.cardtxt1_2 span{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.84px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-left: 11px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.cardtxt1_2 img{
+    width: 28px;
+    height: 28px;
+    float: left;
+    /*padding-right: 11px;*/
+}
+.cardtxt2_2{
+    width: 313px;
+    height: 28.09px;
+}
+.cardtxt2_2 span{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.84px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-left: 11px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.cardtxt2_2 img {
+    width: 28px;
+    height: 28px;
+    float: left;
+}
+.card_2  .img {
+    padding-bottom: 19px;
+}
+.card_2  .img img {
+    width: 100%;
+}
+.footerCard_2{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+.footerImg3 {
+    width: 43px;
+    height: 43px;
+    border: 1px;
+}
+.wishlistBtnField > button{
+    background: transparent;
+    border: none;
+    position: relative;
+    margin-left: 39px;
+}
+.wishlistBtnField > button > img{
+    width: 113px;
+    height: 49px;
+}
+.wishlistBtnField > button:hover img{
+    content: url("../images/wishlist1hover.png");
+}
+.wishlistBtnField > button > span{
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto_',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-decoration: none;
+}
+.footerCard_2_img2{
+    width: 43px;
+    height: 43px;
+    display: block;
+    margin-left: auto;
+}
+.footerCard_2_img3{
+    width: 43px;
+    height: 43px;
+}
+.usersProfileInfoEmail,
+.usersProfileInfoLinkdin,
+.usersProfileInfoPhone {
+    display: flex;
+    word-wrap: break-word;
+    width: 249px;
+    flex-direction: row;
+    align-items: center;
+}
+.usersProfileInfoEmail > span,
+.usersProfileInfoLinkdin > span,
+.usersProfileInfoPhone > span{
+    font-family: "Roboto_",sans-serif;
+    margin-left: 37px;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    white-space: normal;
+    width: -webkit-fill-available;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.usersProfileInfoLinkdin > a{
+    font-family: "Roboto_",sans-serif;
+    margin-left: 37px;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    white-space: normal;
+    width: -webkit-fill-available;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.usersProfileInfoEmail > img,
+.usersProfileInfoLinkdin > img,
+.usersProfileInfoPhone > img {
+    width: 32px;
+    height: 32px;
+}
+.usersProfileAm .userProfileMenu {
+    width: 550px;
+}
+.booterImgs{
+    display: flex;
+    gap: 8px;
+}
+/*LIKE*/
+.large-font {
+    width: 43px;
+    height: 43px;
+    font-size: xxx-large;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid #F36528;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.largeFont{
+    border: 1px solid #FFFFFF;
+}
+ion-icon.active {
+    animation: like 0.5s 1;
+    fill: #F36528;
+    stroke: none;
+    color: #F36528;
+}
+ion-icon {
+    width: 29.63px;
+    height: 25.96px;
+    color: #F36528;
+    fill: transparent;
+    stroke-width: 30;
+    transition: all 0.5s;
+    position: absolute;
+}
+.iconLike{
+    color: #FFFFFF;
+}
+@-webkit-keyframes like {
+    0% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+@media screen and (min-width: 1930px){
+    .changeBody2{
+        width: 815px;
+    }
+    .bottomSlider {
+        width: 860px;
+    }
+    .CoursesAndCategoriesCard {
+        width: 855px;
+    }
+    .bottomSlider .carousel_ {
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
+    .changeBody2 .carousel_2{
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
+}
+@media screen and (max-width: 1929px) {
+    .bottomSlider .carousel_ {
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
+
+    .changeBody2 .carousel_2 {
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
+}
+@media screen and (max-width: 1900px) {
+    .CoursesAndCategoriesCard {
+        width: 58%;
+    }
+    .bottomSlider .carousel_ {
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
+    .changeBody2 .carousel_2{
+        grid-auto-columns: calc(100% / 2 - 22px);
+    }
+    .cardtxt2_2 {
+        width: 279px;
+        height: 45.09px;
+        display: flex;
+    }
+    .bottomSlider {
+         padding-left: 0;
+    }
+    hr.new1 {
+         margin-left: 0;
+    }
+    .cardsimg_ {
+        height: auto;
+    }
+    .topSlider {
+         padding-left: 0;
+    }
+    .footerCard_2_img1{
+        padding: 0 24px;
+    }
+}
+@media screen and (max-width: 1800px) {
+    .img_2 img, .cardsimg_ > img {
+        height: 210px;
+    }
+    .img_2{
+        height: auto;
+    }
+    .wishlistBtnField > button {
+        margin-left: 20px;
+    }
+    .cardCenter_2 {
+        width: min-content;
+        height: 94.09px;
+        margin: 0;
+    }
+    .cardtxt2_2 {
+        width: 266px;
+    }
+    .cardContent {
+        width: 100%;
+        height: 54%;
+    }
+    .card_2 .cardBody_2{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 1700px) {
+    .usersProfile {
+        height: min-content;
+    }
+    .wishlistBtnField > button > img {
+        width: auto;
+        height: 37px;
+    }
+    .wishlistBtnField > button > span {
+        top: 9px;
+        font-size: 13px;
+    }
+    .footerImg3 {
+        width: 37px;
+        height: 37px;
+        border: 1px;
+    }
+    .large-font {
+        width: 37px;
+        height: 37px;
+    }
+    ion-icon {
+        width: 25.63px;
+        height: 23.96px;
+    }
+    .card_2 {
+        height: 440px;
+    }
+    .cardContent {
+        height: 50%;
+    }
+    .topSlider {
+        height: 515px;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .usersProfile {
+        height: min-content;
+    }
+    .myCoursesProfileField {
+        width: 360px;
+        height: 470px;
+    }
+    .changeBody1 {
+        height: 339px;
+    }
+    .myCoursesFieldSectionLeft > img {
+        width: 200px;
+        height: 200px;
+    }
+    .myCoursesFieldSectionLeft {
+        height: 400px;
+    }
+    .myCoursesFieldSection {
+        margin: 37px 36px 37px 50px;
+    }
+    .img_2 img, .cardsimg_ > img {
+        height: 170px;
+    }
+    /*.cardContent {*/
+    /*    height: auto;*/
+    /*}*/
+    .footerCard_2_img1 {
+        width: 120px;
+    }
+    .footerCard_2_img2,
+    .footerCard_2_img3 {
+        width: 30px;
+        height: 30px;
+    }
+    .card_2 {
+        height: 403.45px;
+    }
+    .card_2 .cardBody_2 .span1_2 {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 16.3px;
+    }
+    .starDivCourses {
+        width: 78px;
+    }
+    .starDivCourses img {
+        width: 15px;
+        height: 15px;
+    }
+    .card_2 .cardBody_2 .span2_2 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 9.38px;
+    }
+    /*.footerCard_2 {*/
+    /*    padding-top: 20px;*/
+    /*}*/
+    .carousel_2 {
+        gap: 40px;
+    }
+    .topSlider {
+        height: 433px;
+    }
+    .bottomSlider {
+        padding-top: 30px;
+    }
+    .cardContent {
+        height: 53%;
+    }
+    .spanAmd {
+        font-size: 13px;
+    }
+    .starDivWishlistCourses img {
+        width: 17px;
+        height: 16px;
+    }
+    .starDivWishlistCourses {
+        width: 84px;
+        height: 15.37px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .myCoursesFieldSectionLeft > img {
+        width: 160px;
+        height: 160px;
+    }
+    .usersProfile {
+        height: min-content;
+    }
+    .cardsTextField_ {
+        height: 200px;
+    }
+    .usersProfileInfoEmail > span, .usersProfileInfoLinkdin > span, .usersProfileInfoPhone > span {
+        margin-left: 16px;
+    }
+    .usersProfileInfoLinkdin > a{
+        margin-left: 16px;
+    }
+    .usersProfileInfoEmail, .usersProfileInfoLinkdin, .usersProfileInfoPhone {
+        width: 199px;
+    }
+    .usersProfileInfo {
+        width: 200px;
+    }
+    .topSlider {
+        height: 390px;
+        padding-left: 0;
+    }
+    .cardContent {
+        width: 100%;
+        height: 50%;
+        padding: 0 17px 10px 17px;
+    }
+    .starDivWishlistCourses img {
+        width: 15px;
+        height: 14px;
+    }
+    .starDivWishlistCourses {
+        width: 75px;
+    }
+    .spanAmd {
+        font-size: 11px;
+    }
+    .card_2 .cardBody_2 .span2_2 {
+        font-size: 16px;
+    }
+    .cardCenter_2 {
+        height: 80px;
+    }
+    .heart {
+        width: 18px;
+        height: 17px;
+    }
+    .cardtxt1_2, .cardtxt2_2{
+        width: 223.11px;
+        height: 40px;
+        display: flex;
+    }
+
+    .myCoursesFieldSectionRight img{
+        position: relative;
+        left: -51px;
+    }
+    .myCoursesProfileField {
+        width: 300px;
+        height: 400px;
+    }
+    .myCoursesFieldSection {
+        width: 291px;
+        height: auto;
+        margin: 37px 36px 37px 30px;
+    }
+    .myCoursesFieldSectionLeft {
+        width: 240px;
+        height: 314px;
+    }
+    .myCoursesFieldSectionLeft > img{
+        width: 130px;
+        height: 130px;
+    }
+    .cardsText_ {
+        height: auto;
+    }
+    .cardsInfo_ {
+        font-size: 15px;
+    }
+    .cardsLike_ > a {
+        font-size: 15px;
+    }
+    .cardsTextInfo_ {
+        height: 160px;
+    }
+    .cardsTextInfo_ {
+        padding: 21px 5% 0;
+    }
+    .wishlistBtnField > button {
+        margin-left: 11px;
+    }
+    .wishlistBtnField > button > img {
+        width: auto;
+        height: 28px;
+    }
+    .wishlistBtnField > button > span{
+        top: 5px;
+        font-size: 11px;
+    }
+    .footerImg3 {
+        width: 28px;
+        height: 28px;
+        border: 1px;
+    }
+    .large-font {
+        width: 28px;
+        height: 28px;
+    }
+    ion-icon {
+        width: 20.63px;
+        height: 18.96px;
+    }
+    .card_2 {
+        height: 360px;
+    }
+    .cardtxt1_2 span, .cardtxt2_2 span {
+        font-size: 14px;
+        line-height: 15.84px;
+    }
+}
+@media screen and (max-width: 1400px){
+    .usersProfile {
+        height: min-content;
+    }
+}
+@media screen and (max-width: 1350px) {
+
+    .usersProfileInfoEmail > img, .usersProfileInfoLinkdin > img, .usersProfileInfoPhone > img{
+        width: 23px;
+        height: 23px;
+    }
+    .cardtxt1_2 span, .cardtxt2_2 span {
+        font-size: 12px;
+        line-height: 11.84px;
+    }
+    .cardtxt1_2, .cardtxt2_2 {
+        width: 203.11px;
+    }
+    .cardtxt1_2 img, .cardtxt2_2 img {
+        width: 20px;
+        height: 20px;
+    }
+    .cardContent {
+        width: 100%;
+        height: 54%;
+    }
+    .card_2{
+        padding: 0;
+    }
+    .img_2{
+        height: auto;
+    }
+    .cardContent {
+        padding: 10px 17px 16px 17px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .usersProfileRu .userProfileMenuField > span {
+        font-size: 35px;
+    }
+    .usersProfile {
+        height: min-content;
+    }
+    .usersProfileInfo {
+        width: 180px;
+    }
+    .cardsTextInfo_ {
+        height: 140px;
+        padding: 13px 5% 0;
+    }
+    .cardsTextField_ {
+        height: 180px;
+    }
+    .mainContent {
+        padding-top: 70px;
+    }
+    .carousel_2 {
+        /*gap: 44px;*/
+        grid-auto-columns: 45%;
+    }
+    .CoursesAndCategoriesCard {
+        width: 60%;
+    }
+    .myCoursesProfileField {
+        width: 250px;
+        height: 340px;
+    }
+    .myCoursesFieldSectionLeft > img {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        right: -16px;
+    }
+    .myCoursesFieldSection {
+        width: initial;
+        padding: 40px 20px;
+        margin: 0;
+    }
+    .myCoursesFieldSectionLeft {
+        width: 200px;
+        height: 250px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .usersProfileInfoPhone > span,
+    .usersProfileInfoEmail > span,
+    .usersProfileInfoLinkdin > span {
+        font-size: 17px;
+        margin-left: 15px;
+    }
+    .usersProfileInfoLinkdin > a {
+        font-size: 17px;
+        margin-left: 15px;
+    }
+    .myCoursesFieldSectionRight img {
+        left: 0px;
+        width: 23px;
+    }
+    .myCoursesFieldSectionLeft > span {
+        font-size: 18px;
+    }
+    .usersProfileInfo img{
+        width: 23px;
+    }
+    .usersProfileInfo {
+        height: 110px;
+    }
+    .card_2 {
+        height: 310px;
+    }
+    .cardtxt1_2, .cardtxt2_2 {
+        height: 28px;
+    }
+    .cardCenter_2 {
+        height: 70px;
+    }
+    .img_2 img, .cardsimg_ > img {
+        width: 100%;
+        height: 150px;
+    }
+    .card_2 .cardBody_2 .span1_2{
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 15.3px;
+        text-align: left;
+    }
+    .cardtxt1_2 {
+        width: 174px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .footerCard_2_img1 {
+        width: 80px;
+        padding: 0;
+    }
+    .cardContent {
+        padding: 0 17px 16px 17px;
+        height: 50%;
+    }
+    .topSlider {
+        height: 340px;
+        padding-left: 0;
+    }
+    .card_2 .cardBody_2 .span2_2{
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 1270px) {
+    .usersProfileEn .userProfileMenuField > span {
+        font-size: 38px;
+    }
+
+    .usersProfileRu .userProfileMenu {
+        width: 490px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .usersProfile {
+        height: min-content;
+    }
+    .cardContent {
+        height: 50%;
+    }
+    .cardtxt1_2, .cardtxt2_2 {
+        width: 170.11px;
+    }
+    .footerCard_2{
+        margin: 0;
+    }
+    .usersProfileEn .userProfileMenu {
+        width: 460px;
+    }
+    .usersProfileRu .userProfileMenuField > span,
+    .usersProfileAm .userProfileMenuField > span {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .mainContent {
+        padding-top: 40px;
+    }
+    .topSlider .title {
+        font-family: "Roboto_",sans-serif;
+        font-size: 20px;
+        line-height: 25.5px;
+    }
+    .usersProfileEn .userProfileMenu,
+    .userProfileMenu,
+    .usersProfileRu .userProfileMenu,
+    .usersProfileAm .userProfileMenu{
+        width: 375px;
+        height: 16px;
+    }
+    .usersProfileInfoEmail, .usersProfileInfoLinkdin, .usersProfileInfoPhone {
+        width: 170px;
+    }
+    .usersProfileEn .userProfileMenuField > span,
+    .userProfileMenuField > span,
+    .usersProfileRu .userProfileMenuField > span{
+        color: #F36528;
+        font-family: 'RobotoSlab_',sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29.01px;
+        text-align: left;
+    }
+    .usersProfile {
+        height: min-content;
+    }
+    .CoursesAndCategoriesCard {
+        width: 444px;
+        height: max-content;
+    }
+    .userProfileMenu {
+        width: 423px;
+    }
+    .myCoursesFieldSectionRight img {
+        left: -20px;
+    }
+    .starAndTxt_2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .userProfileSection {
+        width: 86%;
+        height: min-content;
+        padding-top: 95px;
+        margin: 0px 6.9% 0px 6.8%;
+    }
+    .userProfileMenuField > span{
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29.01px;
+        text-align: left;
+    }
+    .userProfileMenu > li > a{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .myCoursesFieldSectionLeft > img{
+        width: 93px;
+        left: 0;
+        height: 94px;
+    }
+    .myCoursesFieldSectionRight img{
+        width: 15.18px;
+        height: 15.18px;
+    }
+    .myCoursesFieldSectionLeft > span{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.41px;
+        text-align: center;
+    }
+    .usersProfileInfoPhone > span, .usersProfileInfoEmail > span, .usersProfileInfoLinkdin > span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .usersProfileInfoLinkdin > a{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .usersProfileInfo img{
+        width: 22px;
+        height: 22px;
+    }
+    .myCoursesProfileField{
+        width: 203px;
+        height: 264px;
+        padding: 10px;
+        border-radius: 30px;
+    }
+    .myCoursesFieldSection {
+        padding: 0;
+    }
+    .myCoursesFieldSectionLeft {
+        width: 178px;
+        height: 230px;
+    }
+    .usersProfileInfo {
+        width: 178px;
+        height: 100px;
+    }
+    .card_2 .cardBody_2 .span1_2{
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 14.3px;
+        text-align: left;
+    }
+    .card_2 .cardBody_2 .span2_2{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 11.72px;
+        text-align: left;
+
+    }
+    .spanAmd{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 9.38px;
+        text-align: left;
+    }
+    /*.starAndTxt_2 img{*/
+    /*    width: 43.92px;*/
+    /*    height: 8.69px;*/
+    /*}*/
+    .cardtxt1_2 img, .cardtxt2_2 img{
+        width: 14px;
+        height: 14px;
+    }
+    .cardtxt1_2 span, .cardtxt2_2 span{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 9.92px;
+        text-align: left;
+        align-items: center;
+    }
+    .footerCard_2_img1 {
+        width: 71px;
+    }
+    .footerCard_2_img2, .footerCard_2_img3 {
+        width: 22px;
+        height: 22px;
+    }
+    .carousel_2 {
+        height: 263px;
+        grid-auto-columns: 200px;
+        margin-bottom: 0;
+    }
+    .card_2 {
+        height: 263px;
+    }
+    .cardCenter_2{
+        height: auto;
+        margin-bottom: 0;
+    }
+    .cardtxt1_2{
+        height: auto;
+    }
+    .cardsInfo_{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 13.2px;
+        text-align: left;
+    }
+    .cardsDate_ img{
+        width: 16px;
+        height: 16px;
+    }
+    .articleDate_{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 16.5px;
+        text-align: left;
+    }
+    .cardsLike_{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14.06px;
+        text-align: left;
+    }
+    .cardsTextField_{
+        height: 136px;
+        padding-top: 0;
+    }
+    .cardsimg_ > img, .img_2 img {
+        height: 127px;
+    }
+    .cardsTextInfo_{
+        height: 100px;
+        padding: 9px 14px 9px 13px;
+    }
+    .bottomSlider .carousel_ {
+        grid-auto-columns: 198.94px;
+        height: min-content;
+
+    }
+    .individualCards_ {
+        width: auto;
+        height: auto;
+    }
+    .cardsInfo_{
+        height: auto;
+    }
+    .bottomSlider{
+        padding-top: 0;
+    }
+    .carousel_ :where(.card_) {
+        height: 263px;
+    }
+    hr.new1 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .card_2 .cardBody_2 {
+        width: 167px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 28px;
+    }
+    .starDivWishlistCourses img {
+        width: 9px;
+        height: 8px;
+    }
+    .starDivWishlistCourses {
+        width: 45px;
+        height: 8px;
+    }
+    .cardContent {
+        height: 49%;
+        padding: 5px 18px 14px;
+    }
+    .cardtxt1_2, .cardtxt2_2 {
+        width: 163.11px;
+        align-items: center;
+    }
+    .topSlider {
+        height: 264px;
+    }
+    .cardsLike_ > a{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14.06px;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 800px) {
+    .changeBody2 ul, .bottomSlider ul {
+        gap: 20px;
+    }
+    hr.new1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .CoursesAndCategoriesCard {
+        width: 430px;
+    }
+    .changeBody2 .carousel_2 {
+        grid-auto-columns: 180px;
+    }
+    .bottomSlider .carousel_ {
+        grid-auto-columns: 195.94px;
+    }
+    .myCoursesProfileField {
+        width: 195px;
+    }
+    .CoursesAndCategoriesCard {
+        width: 380px;
+    }
+    .card_2 .cardBody_2 {
+        width: auto;
+    }
+    .cardtxt1_2, .cardtxt2_2 {
+        width: 146.11px;
+    }
+    .cardContent {
+        height: 54%;
+    }
+    .bottomSlider .carousel_ {
+        grid-auto-columns: 180px;
+    }
+    .usersProfile {
+        height: min-content;
+    }
+    .userProfileSection {
+        height: min-content;
+    }
+}
+@media screen and (max-width: 700px){
+    .myCoursesProfileField{
+        display: none;
+    }
+    .mainContent{
+        justify-content: center;
+    }
+    .usersProfileEn .userProfileMenu, .userProfileMenu, .usersProfileRu .userProfileMenu {
+        width: 350px;
+    }
+    .usersProfileEn .userProfileMenuField > span, .userProfileMenuField > span, .usersProfileRu .userProfileMenuField > span {
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 599px){
+    .blogsHidden{
+        display: none;
+    }
+    .blogsHidden:nth-child(1),
+    .blogsHidden:nth-child(2){
+        display: flex;
+    }
+    .blogsWishlist > wishlistCardsField:last-child{
+        margin-bottom: 0px;
+    }
+    .blogsWishlist{
+        padding-left: 0;
+        margin-top: 38px;
+        margin-bottom: 50px;
+    }
+    .userProfileSection{
+        height: min-content;
+        padding-bottom: 0px;
+    }
+    .wishlistBlogBtn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 21px;
+    }
+    .wishlistBlogBtnMobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 21px;
+    }
+    .wishlistBlogBtn > span{
+        color: #F36528;
+        font-size: 18px;
+        font-family: "Roboto_",sans-serif;
+        font-weight: 500;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        margin-right: 55px;
+    }
+    .wishlistBlogBtn > a{
+        color: white;
+        font-size: 18px;
+        font-family: "Roboto_",sans-serif;
+        font-weight: 500;
+        text-underline-offset: 2px;
+        margin-left: 55px;
+    }
+    .wishlistBlogBtnMobile > span{
+        color: #F36528;
+        font-size: 18px;
+        font-family: "Roboto_",sans-serif;
+        font-weight: 500;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        margin-left: 55px;
+    }
+    .wishlistBlogBtnMobile > a{
+        color: white;
+        font-size: 18px;
+        font-family: "Roboto_",sans-serif;
+        font-weight: 500;
+        text-underline-offset: 2px;
+        margin-right: 55px;
+    }
+    .wishlistBlogBtn > a:hover{
+        color: #F36528;
+    }
+    .mainContent{
+        padding-top: 30px;
+    }
+    .topSlider{
+        margin-top: 38px;
+    }
+    .wishlist{
+        background: #5D9A9D;
+        width: 100%;
+        height: min-content;
+    }
+    .wishlistMobileSection{
+        height: min-content;
+        margin-top: 30px;
+        /*width: 80%;*/
+    }
+    .userProfileMenuField{
+        display: none;
+    }
+    .mainContent{
+        display: none;
+    }
+    /*.topSlider{*/
+    /*    display: none;*/
+    /*}*/
+    /*.new1{*/
+    /*    display: none;*/
+    /*}*/
+    /*.bottomSlider{*/
+    /*    display: none;*/
+    /*}*/
+    .mobileCourses{
+        margin-top: 38px;
+        padding-left: 0px;
+    }
+    .card_2{
+        display: none;
+        margin: 0px auto 30px;
+        width: 320px;
+        height: 435px;
+    }
+    .card_2:nth-child(1),
+    .card_2:nth-child(2){
+        display: flex;
+    }
+    .card_2 > img{
+        width: 320px;
+        height: 203px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .cardContent{
+        width: 320px;
+        height: 232px;
+        padding: 19px 21px;
+    }
+    .cardContentField{
+        width: 278px;
+        height: 193px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .cardBody_2{
+        width: 100% !important;
+        height: 38px !important;
+    }
+    .span1_2{
+        font-family: "RobotoSlab_",sans-serif;
+        font-size: 16px !important;
+        font-weight: 500;
+        line-height: 17.36px !important;
+    }
+    .starAndTxt_2{
+        width: 85px;
+        height: 38px;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .starDivWishlistCourses{
+        width: 85px;
+        height: 16px;
+    }
+    .starDivWishlistCourses img {
+        width: 17px;
+        height: 16px;
+    }
+    .span2_2{
+        font-size: 16px !important;
+        margin-left: 3px;
+    }
+    .spanAmd{
+        font-size: 15px !important;
+    }
+    .cardCenter_2{
+        width: 100%;
+        height: 85px;
+    }
+    .cardtxt1_2, .cardtxt2_2{
+        width: 100%;
+        height: 38px;
+    }
+    .cardtxt1_2 > img, .cardtxt2_2 > img{
+        width: 28px;
+        height: 28px;
+    }
+    .cardtxt1_2 > span, .cardtxt2_2 > span{
+        width: 100%;
+        height: 38px;
+        font-size: 14px;
+        line-height: 17.36px;
+    }
+    .footerCard_2{
+        width: 240px;
+        height: 43px;
+    }
+    .footerCard_2 > button{
+        background: transparent;
+        border: none;
+        position: relative;
+    }
+    .footerCard_2 > button > img{
+        width: 97px;
+        height: 41px;
+    }
+    .footerCard_2 > button > span{
+        left: 0;
+        top: 8px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        position: absolute;
+    }
+    .footerCard_2 > button:hover img{
+        content: url("../images/wishlist1hover.png");
+    }
+    .booterImgs{
+        width: 102px;
+        height: 43px;
+    }
+    .large-font{
+        width: 43px;
+        height: 43px;
+    }
+    ion-icon{
+        width: 29px;
+        height: 29px;
+    }
+    .footerImg3{
+        width: 43px;
+        height: 43px;
+    }
+    .courseMobileBtn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .courseMobileBtn > button{
+        margin: -30px auto 41px;
+        background: transparent;
+        border: none;
+    }
+    .title{
+        font-family: "RobotoSlab_",sans-serif;
+        font-size: 16px;
+        color: white;
+        font-weight: 500;
+        text-align: center;
+    }
+    .individualCards_{
+        width: 320px;
+        height: 435px;
+        margin: 0px auto 30px;
+    }
+    .individualCards_ > img{
+        width: 320px;
+        height: 211px;
+        border-top-right-radius: 26px;
+        border-top-left-radius: 26px;
+    }
+    .cardsText_{
+        width: 320px;
+        height: 224px;
+    }
+    .cardsTextField_{
+        width: 283px;
+        height: 224px;
+        margin: 0px auto;
+        padding: 22px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .cardsTextInfo_{
+        width: 283px;
+        height: 123px;
+        padding: 0px;
+
+    }
+    .cardsLike_{
+        width: 265px;
+        height: 43px;
+    }
+    .cardsInfo_{
+        font-size: 18px;
+        width: 283px;
+        height: 40px;
+        line-height: 21.6px;
+    }
+    .cardsDate_{
+        width: 120px;
+        height: 24px;
+    }
+    .cardsDate_ > img{
+        width: 16px;
+        height: 16px;
+    }
+    .articleDate_{
+        width: 102px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .cardsLike_ > a{
+        font-size: 19px;
+        font-weight: 500;
+    }
+}
+@media screen and (max-width: 370px) {
+    .individualCards_{
+        width: 280px;
+        height: 435px;
+        margin: 0px auto 10px;
+    }
+    .individualCards_ > img{
+        width: 280px;
+        height: 190px;
+    }
+    .cardsText_{
+        width: 280px;
+    }
+    .cardsTextField_{
+        width: 250px;
+    }
+    .cardsTextInfo_ {
+        width: 250px;
+    }
+    .cardsLike_ {
+        width: 235px;
+    }
+    .card_2 {
+        margin: 0px auto 30px;
+        width: 280px;
+        height: 435px;
+    }
+    .card_2 > img{
+        width: 280px;
+    }
+    .cardContent {
+        width: 280px;
+        height: 223px;
+        padding: 15px 15px;
+    }
+    .cardContentField {
+        width: 250px;
+    }
+    .wishlistBlogBtn{
+        margin-left: 3px;
+    }
+}
+@media screen and (min-width: 600px){
+    .wishlist{
+        background: #5D9A9D;
+    }
+    .myCoursesTitleField, .containerSeeMoreMyCourses{
+        display: none;
+    }
+    .wishlistMobileSection{
+        display: none;
+    }
+}

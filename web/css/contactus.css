@@ -1,0 +1,490 @@
+.contactus {
+    width: 100%;
+    height: 1088px;
+    background-image: url("../images/background-contact-us.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 158px;
+}
+.disinline{
+    width: 67%;
+}
+.ellipseButton{
+    display: none;
+}
+.sectionContactusTopLeft{
+    width: 44%;
+}
+.sectionContactusTop{
+    display: flex;
+    flex-direction: row;
+    margin-top: 77px;
+    gap: 10px;
+}
+.backButton{
+    display: none;
+}
+.ymaps-2-1-79-map-bg{
+    width: 715px;
+}
+.contactusTitle{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43.2px;
+    text-align: left;
+    color: #F36528;
+    margin-bottom: 0rem;
+}
+.contactUsTitleM{
+    color: #F16D35;
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+.contactusTxt{
+    margin: 0;
+    padding-top: 24px;
+    font-family: "Roboto_",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.imgcontact{
+    width: 56px;
+    height: 56px;
+}
+.contactusNom{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 12px;
+    text-decoration: underline;
+}
+.rigthtxtdiv{
+    /*width: 126px;*/
+    height: 58px;
+    margin-left: 24px;
+}
+.contactusMail{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 12px;
+}
+.div1{
+    margin: 16px 0;
+}
+.rigthtxtdiv span{
+    font-family: "Roboto_",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.sectionContactusTopRight {
+    width: 66%;
+}
+#map {
+    width: 100%;
+    height: 350.74px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+/*.sectionContactusBottom{*/
+/*    margin-top: 28px;*/
+/*}*/
+.contactusBottomTitle{
+    font-family: "Roboto_",sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38.4px;
+    text-align: left;
+    color: #F36528;
+    margin-bottom: 20px;
+}
+.contactusBottomTxt{
+    font-family: "Roboto_",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 19px;
+}
+.inputdiv{
+    columns: 2;
+}
+.inputname{
+    height: 67px;
+    padding: 20px 30px 20px 30px;
+    border-radius: 30px;
+    border: 1px;
+    background: #FFFFFF24;
+    text-align: center;
+    box-shadow: 0px 1px 20px 1px #1C54841A;
+}
+#validationDefault00_{
+    font-weight: 400;
+    width: 100%;
+    background-color: transparent;
+    font-family: 'Roboto',sans-serif;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+#validationDefault00_::placeholder{
+    color: #FFFFFF;
+    font-family: 'Roboto_',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.inputemail{
+    height: 67px;
+    padding: 20px 30px 20px 30px;
+    border-radius: 30px;
+    border: 1px;
+    background: #FFFFFF24;
+    text-align: center;
+    box-shadow: 0px 1px 20px 1px #1C54841A;
+}
+#validationDefault02_{
+    width: 100%;
+    background-color: transparent;
+    font-family: 'Roboto',sans-serif;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+#validationDefault02_::placeholder{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.inputcomment{
+    width: 100%;
+    height: 111px;
+    padding: 20px 30px 20px 30px;
+    border-radius: 30px;
+    border: 1px;
+    background: #FFFFFF24;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0px 1px 20px 1px #1C54841A;
+}
+#validationDefault01_{
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-family: 'Roboto',sans-serif;
+}
+#validationDefault01_::placeholder{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.sectionContactusBottomImg{
+    width: 157px;
+    height: 58.17px;
+    position: relative;
+    text-align: center;
+}
+.sectionContactusBottom .form-row{
+    margin-right: 0;
+    margin-left: 0px;
+}
+.bottoming{
+    margin-top: 43px;
+}
+.bottoming > button{
+    position: relative;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottoming > button > img{
+    position: relative;
+}
+.bottoming > button:hover img{
+    content: url("../images/contactushover.png");
+}
+.bottoming > button > span{
+    color: #F36528;
+    position: absolute;
+    /*top: 22px;*/
+    /*left: 0px;*/
+    width: 100%;
+    text-align: center;
+    /*padding: 0 28px;*/
+    font-family: 'Roboto_',sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15.23px;
+}
+.bottoming > button:hover span{
+    color: white;
+}
+input[type="text"] {
+    font-family: 'Roboto_', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+@media screen and (max-width: 1500px) {
+    .sectionContactusTopLeft{
+        width: 50%;
+    }
+    .sectionContactusTopRight {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    input[type="text"] {
+        font-family: 'Roboto_', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    .contactBackButton{
+        display: contents;
+    }
+    .contactus {
+        height: 790px;
+        padding-top: 61px;
+    }
+    .rigthtxtdiv span{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+    }
+    .contactusNom{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+        padding: 0;
+        margin: 0;
+    }
+    .contactUsTitleM{
+        font-family: 'RobotoSlab_',sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        /*line-height: 34px;*/
+        width: 100%;
+        text-align: center;
+    }
+    .disinline {
+        width: 100%;
+        padding-left: 6.8%;
+        padding-right: 6.9%;
+        margin-top: 21px;
+    }
+    .backButton{
+        width: 40px;
+        height: 40px;
+        display: block;
+        position: absolute;
+    }
+    .sectionContactusTop {
+        margin-top: 22px;
+    }
+    .contactusTitle{
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+    .contactusTxt{
+        padding-top: 0;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .imgcontact {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+    .div1 {
+        margin: 13px 0;
+    }
+    .rigthtxtdiv {
+        margin-left: 24px;
+        height: 40px;
+    }
+    .contactusMail{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+        margin: 0;
+        padding: 0;
+    }
+    #map{
+        height: 190px;
+        border-radius: 20px;
+    }
+    .sectionContactusBottom {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contactusBottomTitle{
+        font-size: 18px;
+        line-height: 21.6px;
+        margin-bottom: 16px;
+    }
+    .contactusBottomTxt{
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    .inputname {
+        width: 48%;
+        height: 54px;
+        display: inline-flex
+    }
+    .inputemail {
+        width: 48%;
+        height: 54px;
+        display: inline-flex
+    }
+    .inputcomment {
+        width: 63.8671875%;
+        height: 97px;
+        margin-top: 24px;
+    }
+    .inputdiv {
+        width: 63%;
+        display: flex;
+        gap: 4%;
+    }
+    .sectionContactusBottomImg{
+        width: 139px;
+        height: 52px;
+    }
+    .bottoming{
+        margin-top: 24px;
+    }
+    .bottoming > button{
+        position: relative;
+        background: transparent;
+        border: none;
+    }
+    .bottoming > button > img{
+        position: relative;
+    }
+    .bottoming > button > span{
+        /*top: 20px;*/
+    }
+}
+@media screen and (max-width: 900px) {
+    .inputdiv , .inputcomment{
+        width: 85%;
+    }
+}
+@media screen and (max-width: 666px) {
+    .contactus {
+        height: 800px;
+    }
+}
+@media screen and (max-width: 599px) {
+    .ellipseButton {
+        display: block;
+        position: absolute;
+    }
+    .backButton {
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: absolute;
+    }
+    .sectionContactusTop{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .sectionContactusTopLeft {
+        width: 100%;
+    }
+    .sectionContactusTopRight {
+        width: 100%;
+    }
+    .inputname, .inputemail {
+        width: 100%;
+        margin-top: 8px;
+    }
+    .inputcomment {
+        width: 100%;
+        margin-top: 8px;
+    }
+    .contactus {
+        height: 1000px;
+        background: #5D9A9D;
+    }
+    .inputdiv {
+        width: 100%;
+        display: contents;
+    }
+    .sectionContactusBottomImg{
+        width: 107px;
+        height: 40px;
+    }
+    .bottoming > button > span{
+        font-family: 'Roboto_',sans-serif;
+        padding: 0;
+        font-size: 10px;
+        font-weight: 400;
+        /*line-height: 11.72px;*/
+    }
+    .disinline, .sectionContactusTop {
+        margin-top: 25px;
+    }
+    .div1 {
+        margin: 24px 0;
+    }
+    /*.bottoming > button > span {*/
+    /*    !*top: 16px;*!*/
+    /*}*/
+    .contactUsTitleM{
+        font-family: 'RobotoSlab_',sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        height: 31px;
+        line-height: 23px;
+        width: 100%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 414px){
+    .contactus {
+        height: 1030px;
+    }
+}

@@ -1,0 +1,2457 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*start header css*/
+@media only screen and (min-width: 600px) {
+    .mobileBackCall{
+        display: none;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 370px) {
+    .tabletMenuNavField > ul {
+        width: 95%;
+    }
+}
+@media only screen and (min-width: 371px) and (max-width: 599px) {
+    .tabletMenuNavField > ul {
+        width: 96%;
+    }
+}
+@media only screen and (min-width: 280px) and (max-width: 330px) {
+    .personInfoCircle {
+        margin-right: 15px;
+    }
+    .personInfoCircle {
+        width: 60px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #79A7A9;
+        background: #80B0B2;
+        color: #FFF;
+        font-family: "Roboto_", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        padding: 18px 0px;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 420px) {
+    .personNameField{
+        width: 110px;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 306px) {
+    .tabletProfileCoursesField {
+        width: 86%;
+        height: 360px;
+        position: absolute;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 307px) and (max-width: 372px) {
+    .tabletProfileCoursesField {
+        width: 86%;
+        height: 360px;
+        position: absolute;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 373px) and (max-width: 435px) {
+    .tabletProfileCoursesField {
+        width: 86%;
+        height: 360px;
+        position: absolute;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 436px) and (max-width: 599px) {
+    .tabletProfileCoursesField {
+        width: 86%;
+        height: 360px;
+        position: absolute;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 430px) {
+    .personSignOrInfo{
+        height: 58px;
+    }
+    .personNameField{
+        height: 58px;
+    }
+    .personName{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .tabletCoursesUnderline{
+        display: none;
+    }
+    .header{
+        display: none;
+    }
+    .tabletHeader{
+        display: block;
+    }
+    .mainHeader{
+        height: 65px;
+    }
+    .mainField {
+        width: 88%;
+        margin: 21px 5.76% 9px 6.83%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logoTabletField > a > img{
+        width: 120px;
+        height: 22px;
+    }
+    .tabletMenuIcon{
+        width: 21px;
+        height: 14px;
+    }
+    .tabletMenuField > button{
+        display: none;
+    }
+    .tabletMenuField{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+    }
+    .menuTabletHeader{
+        /*width: 0%;*/
+        height: 673px;
+        top:65px;
+    }
+    .personMainMenu{
+        top:65px;
+    }
+    .personCoursesMenuList{
+        top:65px;
+    }
+    .personInfoCircle{
+        margin-right: 23px;
+    }
+    .personInfoCircleMobile{
+        display: none;
+    }
+    .personInfoField{
+        left: 23px;
+        width: 89%;
+    }
+    .personSignOrInfo{
+        width: 79%;
+        margin-right: 10px;
+    }
+    .tabletMenuNavField{
+        height: 545px;
+        width: 89%;
+        top: 32px;
+        margin: 0px 26px 20px 23px;
+    }
+    .tabletMenuNavField > ul{
+        /*width: 100%;*/
+        height: 448px;
+    }
+    .tabletMenuNavbar{
+        max-height: 565px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .tabletCoursesList{
+        margin-bottom: 0px;
+    }
+    .searchFlagField{
+        height: 84px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .btn-searchTablet {
+        width: 25px;
+        height: 50px;
+        border-style: none;
+        font-size: 15px;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        /*position: absolute;*/
+        bottom: 38px;
+        left: -10px;
+        color: #ffffff;
+        background-color: transparent;
+        pointer-events: painted;
+    }
+    .tabletFlagField > a {
+        margin: 2px;
+    }
+
+    .personSignField > span{
+        display: none;
+    }
+    .personSignField {
+        width: max-content;
+        height: 46px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .personSignField > a{
+        color: white;
+    }
+    .personSignField > a:hover{
+        color: #F36528;
+    }
+    .tabletProfileCoursesField{
+        margin: 40px 9% 40px 23px;
+    }
+    .tabletProfileMenuField{
+        margin: 40px 23px;
+    }
+}
+/*end header css*/
+/*start main css*/
+/*section One*/
+@media only screen and (min-width: 270px) and (max-width: 329px) {
+    .applyMarket {
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 21.1px;
+        width: 100%;
+        font-family: "RobotoSlab_", sans-serif;
+        font-weight: 900;
+        font-size: 16px;
+        color: #F36528;
+        z-index: 10;
+    }
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 4%;
+        top: 138px;
+        width: 92%;
+        height: 590px;
+        position: absolute;
+    }
+    .boundaries {
+        text-align: center;
+        margin-bottom: 35em;
+        font-family: "Roboto_", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 13px;
+        font-weight: 500;
+        z-index: 10;
+    }
+}
+@media only screen and (min-width: 330px) and (max-width: 409px) {
+    .applyMarket {
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 21.1px;
+        width: 100%;
+        font-family: "RobotoSlab_", sans-serif;
+        font-weight: 900;
+        font-size: 16px;
+        color: #F36528;
+        z-index: 10;
+    }
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 8%;
+        top: 138px;
+        width: 85%;
+        height: 590px;
+        position: absolute;
+    }
+    .boundaries {
+        text-align: center;
+        margin-bottom: 32em;
+        font-family: "Roboto_", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        z-index: 10;
+    }
+}
+@media only screen and (min-width: 410px) and (max-width: 449px) {
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 14%;
+        top: 138px;
+        width: 76%;
+        height: 610px;
+        position: absolute;
+    }
+    .applyMarket {
+        text-align: center;
+        letter-spacing: 2px;
+        width: 100%;
+        font-family: "RobotoSlab_", sans-serif;
+        font-weight: 900;
+        font-size: 25px;
+        color: #F36528;
+        z-index: 10;
+    }
+    .boundaries {
+        text-align: center;
+        margin-bottom: 32em;
+        font-family: "Roboto_", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        z-index: 10;
+    }
+}
+@media only screen and (min-width: 450px) and (max-width: 499px) {
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 14%;
+        top: 138px;
+        width: 76%;
+        height: 630px;
+        position: absolute;
+    }
+    .applyMarket {
+        text-align: center;
+        letter-spacing: 2px;
+        width: 100%;
+        font-family: "RobotoSlab_", sans-serif;
+        font-weight: 900;
+        font-size: 25px;
+        color: #F36528;
+        z-index: 10;
+    }
+    .boundaries {
+        text-align: center;
+        margin-bottom: 32em;
+        font-family: "Roboto_", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        z-index: 10;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 529px) {
+    .boundaries {
+        text-align: center;
+        margin-bottom: 24em;
+        font-family: "Roboto_", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 10;
+    }
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 14%;
+        top: 138px;
+        width: 76%;
+        height: 630px;
+        position: absolute;
+    }
+}
+@media only screen and (min-width: 530px) and (max-width: 560px) {
+    .boundaries {
+        text-align: center;
+        margin-bottom: 24em;
+        font-family: "Roboto_", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 10;
+    }
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 14%;
+        top: 138px;
+        width: 76%;
+        height: 640px;
+        position: absolute;
+    }
+}
+@media only screen and (min-width: 561px) and (max-width: 599px) {
+    .boundaries {
+        text-align: center;
+        margin-bottom: 24em;
+        font-family: "Roboto_", sans-serif;
+        letter-spacing: 1px;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 10;
+    }
+    .apply {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 14%;
+        top: 138px;
+        width: 76%;
+        height: 655px;
+        position: absolute;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+    .applyMarket {
+        text-align: center;
+        letter-spacing: 2px;
+        width: 100%;
+        font-family: "RobotoSlab_", sans-serif;
+        font-weight: 900;
+        font-size: 30px;
+        color: #F36528;
+        z-index: 10;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .headerBackground {
+        background-image: url("../images/headerimgMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 812px;
+    }
+
+    .apply > a > img{
+        width: 94px;
+        height: 40px;
+    }
+    .apply > a > span{
+        /*top: 14px;*/
+        font-size: 10px;
+    }
+}
+/*section Two*/
+@media only screen and (min-width: 300px) and (max-width: 380px) {
+    .numbersInfo > img{
+        width: 60px;
+        height: 60px;
+    }
+    .numberSectionTwo{
+        font-size: 18px;
+        font-weight: 700
+    }
+    .addSymbol{
+        font-size: 18px;
+        font-weight: 700
+    }
+    .textSectionTwo{
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .mobileInfoSection{
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .sectionInfoMobile{
+        width: 30%;
+        margin: 66px auto 0px;
+        /*height: 160px;*/
+        height: 168px;
+        /*margin-top: 26px;*/
+    }
+    .slick-prev{
+        display: none !important;
+    }
+    .slick-next{
+        display: none !important;
+    }
+    .slick-slide{
+        margin: 0px auto !important;
+    }
+    .numbersInfo{
+        margin: 0px auto;
+        width: 108px;
+        width: max-content;
+        height: 107px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sectionTwo{
+        background-image: url("../images/diagonalMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 168px;
+    }
+}
+@media only screen and (min-width: 381px) and (max-width: 599px) {
+    .mobileInfoSection{
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .sectionInfoMobile{
+        width: 33%;
+        margin: 26px auto 0px;
+        height: 160px;
+        /*margin-top: 26px;*/
+    }
+    .slick-prev{
+        display: none !important;
+    }
+    .slick-next{
+        display: none !important;
+    }
+    .slick-slide{
+        margin: 0px auto !important;
+        /*height: max-content;*/
+    }
+    .numbersInfo{
+        margin: 0px auto;
+        /*width: 108px;*/
+        width: max-content;
+        height: 162px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .numbersInfo > img{
+        width: 84px;
+        height: 84px;
+    }
+    .numberSectionTwo{
+        font-size: 32px;
+        font-weight: 700
+    }
+    .addSymbol{
+        font-size: 32px;
+        font-weight: 700
+    }
+    .textSectionTwo{
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .sectionTwo{
+        background-image: url("../images/diagonalMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 208px;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+
+    .sectionInfo{
+        display: none;
+    }
+
+}
+/*section three*/
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+    .sectionThree{
+        background-image: url("../images/mobileImgCourse.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 812px;
+    }
+    .sliderCourses{
+        display: none;
+    }
+    .learnMobile{
+        margin-top: 83px;
+        width: 100%;
+        height: 646px;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .learnMobile > img{
+        width: 301px;
+        height: 301px;
+    }
+    .learnMobile > a > img{
+        width: 101px;
+        height: 44px;
+    }
+    .learnMobile > a{
+        position: relative;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .learnMobile > a > span{
+        position: absolute;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 900;
+        /*left: 0;*/
+        width: 100%;
+        text-align: center;
+        /*top: 15px;*/
+        color: #F36528;
+    }
+    .coursesBg{
+        height: 72px;
+        width: 100%;
+    }
+    .coursesBg > span{
+        font-size: 17px;
+        line-height: 22.42px;
+        letter-spacing: 0.05em;
+        text-align: center;
+    }
+    .coursesBg > p{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 17.58px;
+        text-align: center;
+    }
+    .logoManagement{
+        /*height: max-content;*/
+        width: 90%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .courseLogo {
+        width: 50px;
+    }
+    .courseLogo > img{
+        height: 21px;
+        width: 45px;
+        margin-top: 0;
+    }
+    .courseTitle{
+        /*width: max-content;*/
+        /*height: min-content;*/
+        padding-left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .courseTitle > span{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+/*section Four*/
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+    .sectionFour{
+        background-image: url("../images/sectionFourMobile.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 0px;
+        width: 100%;
+        height: min-content;
+    }
+    .freqAsked {
+        font-size: 16px;
+        font-family: "RobotoSlab_", sans-serif;
+        font-weight: 900;
+        color: #F16D35;
+        letter-spacing: 1.25px;
+        text-align: center;
+    }
+    .frequency {
+        width: 100%;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .leftQuestions {
+        width: 100%;
+    }
+    .rightQuestions {
+        width: 100%;
+    }
+    .freqLook {
+        font-family: "Roboto_", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: white;
+    }
+    .answersField {
+        width: 100%;
+        min-height: 50px;
+        margin-bottom: 14px;
+        border-radius: 32px;
+        padding: 0px 26px;
+        background: rgba(147, 188, 191, 0.7);
+    }
+    .questions {
+        width: 100%;
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+    .questionField{
+        padding-top: 13px;
+    }
+    .questionField > span{
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .answers {
+        padding-top: 60px;
+        margin: 0px 5% 0px;
+        width: 90%;
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .questionField > span{
+        font-size: 12px;
+    }
+    .answerQuestion {
+        font-family: "Roboto_", sans-serif;
+        font-weight: 400;
+        padding: 30px 0px;
+        font-size: 12px;
+        color: white;
+        display: none;
+    }
+}
+/*sectionFive*/
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .sectionFive{
+        background-image: url("../images/partnerBgMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 246px;
+        margin-top: 0px;
+        position:relative;
+    }
+    .carousel-slides{
+        margin-bottom: 0px;
+    }
+    .partnerSection {
+        width: 100%;
+        height: 180px;
+        position: absolute;
+        margin: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        left: 50%;
+        top: 41%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+    .mobilePartner{
+        padding-left: 0px;
+        overflow: hidden;
+        margin: 0px auto;
+        width: 113px;
+    }
+    .carousel-slide > img{
+        width: 98px;
+        height: 99px;
+    }
+    .partnersTitle {
+        font-family: "RobotoSlab_", sans-serif;
+        font-size: 22px;
+        font-weight: 900;
+        letter-spacing: 1.1px;
+        color: #F16D35;
+    }
+}
+/*start sectionSix css*/
+@media only screen and (min-width: 300px) and (max-width: 314px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 158px;
+        margin: 0px 46px 28px;
+    }
+    .intoBlockTestimonial {
+        width: 78%;
+        height: 90%;
+        margin: 0 9%;
+        padding: 8px 0 8px;
+    }
+}
+@media only screen and (min-width: 315px) and (max-width: 329px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 158px;
+        margin: 0px 46px 28px;
+    }
+}
+@media only screen and (min-width: 330px) and (max-width: 359px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 178px;
+        margin: 0px 46px 28px;
+    }
+}
+@media only screen and (min-width: 360px) and (max-width: 380px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 191px;
+        margin: 0px 46px 28px;
+    }
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 83%;
+        height: 145px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 381px) and (max-width: 409px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        /*background-size: 100%;*/
+        width: 75%;
+        height: 190px;
+        margin: 0px 14.5%  28px;
+    }
+}
+@media only screen and (min-width: 410px) and (max-width: 439px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        width: 70%;
+        height: 190px;
+        margin: 0px 16.5%  28px;
+    }
+}
+@media only screen and (min-width: 440px) and (max-width: 479px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        width: 65%;
+        height: 190px;
+        margin: 0px 18.5%  28px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 519px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        width: 60%;
+        height: 190px;
+        margin: 0px 21.5%  28px;
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 560px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        width: 55%;
+        height: 190px;
+        margin: 0px 0px 28px 23.5%;
+    }
+}
+@media only screen and (min-width: 561px) and (max-width: 599px) {
+    .blockTestimonialMobile {
+        background-image: url(../images/mobileImgTestimonial.png);
+        background-repeat: no-repeat;
+        width: 51%;
+        height: 190px;
+        margin: 0px 0px 28px 25.5%;
+    }
+}
+@media only screen and (min-width: 315px) and (max-width: 329px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 83%;
+        height: 124px;
+        display: flex;
+        margin: 4% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 330px) and (max-width: 344px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 83%;
+        height: 130px;
+        display: flex;
+        margin: 6% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 345px) and (max-width: 359px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 83%;
+        height: 136px;
+        display: flex;
+        margin: 6% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 381px) and (max-width: 394px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 80%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 395px) and (max-width: 409px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 78%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 410px) and (max-width: 424px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 80%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 425px) and (max-width: 439px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 78%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 440px) and (max-width: 459px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 80%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 460px) and (max-width: 479px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 76%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 499px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 79%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 519px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 76%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 539px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 80%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 540px) and (max-width: 560px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 77%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 561px) and (max-width: 580px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 80%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 581px) and (max-width: 599px) {
+    .intoBlockTestimonial {
+        position: absolute;
+        width: 78%;
+        height: 151px;
+        display: flex;
+        margin: 7% 7% 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 270px) and (max-width: 599px) {
+    .blockTestimonialMobile{
+        position: relative;
+        display: none;
+    }
+    .blockTestimonialMobile:nth-child(1),
+    .blockTestimonialMobile:nth-child(2){
+        display: flex;
+    }
+    .mobileTestimonial{
+        margin-top: 45px;
+    }
+    /*.webTabletTestimonial{*/
+    /*    display: none;*/
+    /*}  */
+    .testimonial{
+        display: none;
+    }
+    .sectionSix{
+        margin-top: 0px;
+        background: linear-gradient(#2F688C, #5E91A2);
+        width: 100%;
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .testimonialSectionMobile {
+        padding-top: 50px;
+        margin: 0px;
+        width: 100%;
+        height: min-content;
+        /*position: absolute;*/
+    }
+    .testimonialOrangeTitle{
+        font-size: 16px;
+        font-family: "RobotoSlab_",sans-serif;
+        font-weight: 900;
+        letter-spacing: 2px;
+        line-height: 21.1px;
+        color: #F16D35;
+    }
+    .testimonialWhiteTitle{
+        margin: 14px 21px 0px;
+        text-align: center;
+        font-family: "Roboto_",sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #FFFFFF;
+    }
+    .testimonialsTitles {
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .webTabletTestimonial{
+        margin-top: 45px;
+    }
+    .testimonialMobileBtn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 45px;
+        margin-bottom: 51px;
+    }
+    .testimonialsText {
+        width: 100%;
+        height: 90px;
+        font-family: "Roboto_", sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 15.23px;
+        text-align: justify;
+    }
+    .testimonialsAuthor{
+        font-family: "Roboto_", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        height: 18px;
+        line-height: 17.58px;
+    }
+    .fieldsLinkdin {
+        height: 18px;
+    }
+    .fieldsLinkdin img{
+        width: 15px;
+        height: 15px;
+    }
+    .testimonialSimbol{
+        height: 12px;
+        display: flex;
+    }
+    .testimonialSimbol img{
+        width: 15px;
+        height: 12px;
+    }
+    .blockTestimonial {
+        display: flex;
+        height: auto;
+        align-items: start;
+        justify-content: center;
+    }
+}
+
+/*start sectionseven css*/
+@media only screen and (min-width: 300px) and (max-width: 360px) {
+    .individualCards {
+        margin: 0px auto 29px !important;
+        border-radius: 30px;
+        width: 89%;
+        height: 276px;
+    }
+    .cardsimg {
+        height: 127px;
+        width: 100%;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .cardsText {
+        height: 150px;
+        width: 100%;
+        background: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+@media only screen and (min-width: 361px) and (max-width: 400px) {
+    .individualCards {
+        margin: 0px auto 29px !important;
+        border-radius: 30px;
+        width: 80%;
+        height: 276px;
+    }
+    .cardsimg {
+        height: 127px;
+        width: 100%;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .cardsText {
+        height: 150px;
+        width: 100%;
+        background: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+@media only screen and (min-width: 401px) and (max-width: 440px) {
+    .individualCards {
+        margin: 0px auto 29px !important;
+        border-radius: 30px;
+        width: 73%;
+        height: 276px;
+    }
+    .cardsimg {
+        height: 127px;
+        width: 100%;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .cardsText {
+        height: 150px;
+        width: 100%;
+        background: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+@media only screen and (min-width: 441px) and (max-width: 480px) {
+    .individualCards {
+        margin: 0px auto 29px !important;
+        border-radius: 30px;
+        width: 66%;
+        height: 276px;
+    }
+    .cardsimg {
+        height: 127px;
+        width: 100%;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .cardsText {
+        height: 150px;
+        width: 100%;
+        background: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 520px) {
+    .individualCards {
+        margin: 0px auto 29px !important;
+        border-radius: 30px;
+        width: 59%;
+        height: 276px;
+    }
+    .cardsimg {
+        height: 127px;
+        width: 100%;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .cardsText {
+        height: 150px;
+        width: 100%;
+        background: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+@media only screen and (min-width: 521px) and (max-width: 560px) {
+    .individualCards {
+        margin: 0px auto 29px !important;
+        border-radius: 30px;
+        width: 52%;
+        height: 276px;
+    }
+    .cardsimg {
+        height: 127px;
+        width: 100%;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .cardsText {
+        height: 150px;
+        width: 100%;
+        background: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+@media only screen and (min-width: 561px) and (max-width: 599px) {
+    .individualCards {
+        margin: 0px auto 29px !important;
+        border-radius: 30px;
+        width: 45%;
+        height: 276px;
+    }
+    .cardsimg {
+        height: 127px;
+        width: 100%;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .cardsText {
+        height: 150px;
+        width: 100%;
+        background: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+}
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+    .individualCards{
+        display: none;
+    }
+    .individualCards:nth-child(1),
+    .individualCards:nth-child(2){
+        display: block;
+    }
+    .sectionBlog{
+        display: none;
+    }
+    .blogsMobileBtn{
+        margin: 45px 0px 49px;
+    }
+    .blogsTextMobile{
+        color: #1C5484;
+        font-family: "Roboto_",sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        text-align: center;
+    }
+    .sectionSeven{
+        margin-top: 0px;
+        background: #ACCBE6;
+        width: 100%;
+        height: min-content;
+    }
+    .blogsTitle{
+        font-size: 16px;
+    }
+    .sectionBlogMobile {
+        width: 66%;
+        height: min-content;
+        padding-top: 50px;
+        margin: 0px 17% 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .blogsCard {
+        width: 98%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-top: 45px;
+    }
+    #section01 .large-font {
+        width: 28px;
+        height: 28px;
+    }
+    #section01 ion-icon {
+        width: 20.63px;
+        height: 20.63px;
+        color: #F36528;
+        fill: transparent;
+        stroke-width: 30px;
+        transition: all 0.5s;
+        position: absolute;
+    }
+    .cardsTextField {
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cardsTextInfo {
+        padding: 8px 5%;
+        width: 100%;
+        height: 115px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .cardsInfo {
+        display: -webkit-box;
+        font-family: "Roboto_", sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        color: #1C5484;
+        width: 100%;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        height: 32px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: pre-wrap;
+    }
+    .articleDate {
+        margin-left: 10px;
+        font-family: "Roboto_", sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+    }
+    .cardsLike > a {
+        font-family: "Roboto_", sans-serif;
+        font-size: 12px;
+        color: #F36528;
+        font-weight: 500;
+    }
+}
+/*start sectionEight css*/
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+    .sectionEight {
+        background-image: url("../images/eightBgMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 548px;
+        margin-top: 0px;
+    }
+    .haveQuestions {
+        width: 91%;
+        height: 438px;
+        position: absolute;
+        margin: 83px 4.5% 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .questionTitle{
+        font-family: "RobotoSlab_", sans-serif;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 21.1px;
+        letter-spacing: 0.05em;
+        text-align: center;
+    }
+    .questionForm{
+        width: 100%;
+        height: 367px;
+        margin-top: 50px;
+    }
+    .questionFields{
+        width: 100%;
+        height: 276px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .leftQuestionField{
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .leftQuestionField > input{
+        height: 54px;
+        padding: 0px 30px;
+    }
+    .rightQuestionField{
+        width: 100%;
+        height: 144px;
+    }
+    .rightQuestionField > textarea{
+        padding: 20px 30px;
+
+    }
+    .questionbutton > button > img{
+        width: 101px;
+        height: 40px;
+    }
+    .questionbutton > button > span{
+        font-size: 10px;
+        /*top: 12px;*/
+    }
+    .questionbutton{
+        width: 101px;
+        height: 40px;
+    }
+}
+/*end main css*/
+/*start footer css*/
+@media only screen and (min-width: 300px) and (max-width: 349px) {
+    .imagesFooterFields {
+        width: 100%;
+        height: 88%;
+        background-image: url(../images/mobileFooterImg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .paypalFooter{
+        width: 289px;
+        height: 63px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .footerBackground {
+        background: #1D5485;
+        width: 100%;
+        height: 577px;
+        margin-top: 0px;
+    }
+    .sectionFooter {
+        width: 100%;
+        height: 523px;
+        margin: 40px 0% 0px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .formMail {
+        width: 100%;
+        height: 200px;
+        margin: 12px auto 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .leftFooterBg {
+        width: 250px;
+        height: 210px;
+        margin-right: 0px;
+        margin-bottom: 34px;
+    }
+}
+@media only screen and (min-width: 350px) and (max-width: 379px) {
+    .imagesFooterFields {
+        width: 100%;
+        height: 88%;
+        background-image: url(../images/mobileFooterImg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .paypalFooter{
+        width: 289px;
+        height: 63px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .footerBackground {
+        background: #1D5485;
+        width: 100%;
+        height: 577px;
+        margin-top: 0px;
+    }
+    .sectionFooter {
+        width: 90%;
+        height: 523px;
+        margin: 40px 5% 0px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .formMail {
+        width: 100%;
+        height: 200px;
+        margin: 8px auto 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .leftFooterBg {
+        width: 250px;
+        height: 210px;
+        margin-right: 0px;
+        margin-bottom: 34px;
+    }
+}
+@media only screen and (min-width: 380px) and (max-width: 409px) {
+    .imagesFooterFields {
+        width: 100%;
+        height: 88%;
+        background-image: url(../images/mobileFooterImg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .paypalFooter{
+        width: 289px;
+        height: 65px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .formMail {
+        width: 100%;
+        height: 200px;
+        margin: 28px auto 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .inputsMail {
+        width: 100%;
+        height: 124px;
+    }
+    .inputsMail > input {
+        padding: 0px 22px;
+        font-family: "Roboto_", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        width: 100%;
+        height: 38px;
+        margin: 0px;
+        background: none;
+        border: 2px solid #5D9A9D;
+        outline: none;
+        color: #ACACAC;
+        border-radius: 19px;
+    }
+    .inputsMail > input::placeholder{
+        font-size: 10px;
+    }
+    .rightFooterBg {
+        width: 248px;
+        height: 234px;
+        margin-left: 0px;
+        margin-bottom: 15px;
+    }
+    .leftFooterBg {
+        width: 250px;
+        height: 210px;
+        margin-right: 0px;
+        margin-bottom: 45px;
+    }
+    .footerFields {
+        width: 100%;
+        height: 200px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .footerMenu{
+        width: 100%;
+        height: 101px;
+    }
+    .footerBtn{
+        width: 90%;
+        height: 27px;
+    }
+    .footerBtn > input{
+        width: 251px;
+        height: 27px;
+        border-radius: 14px;
+        color: white;
+        outline: none;
+        border: none;
+        background: #5D9A9D;
+        padding: 0px 75px 0px 12px;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .footerBtn > button{
+        left: 183px;
+        top: -1px;
+        font-family: "Roboto_", sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        color: #5D9A9D;
+        /* outline: none; */
+        border: 1px solid white;
+        width: 66px;
+        height: 23px;
+        border-radius: 20px;
+        background: white;
+        position: relative;
+    }
+    .footerBtn > input::placeholder{
+        color: white;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .formContinue > button{
+        width: 104px;
+        height: 31px;
+        font-size: 10px;
+    }
+    .leftMenuFooter{
+        width: 89px;
+        height: 100%;
+    }
+    .rightMenuFooter{
+        width: 121px;
+        height: 57px;
+    }
+    .footerMobilePolicy{
+        width: 289px;
+        height: 19px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .policyTextMobile{
+        height: 18px;
+        width: 66%;
+    }
+    .policyTextMobile > ul{
+        width: 100%;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        list-style: none;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .policyTextMobile > ul > li > a{
+        text-decoration: none;
+        color: white;
+    }
+    .payLogoFooterMobile{
+        width: 63px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .payLogoFooterMobile > img{
+        width: 29px;
+        height: 19px;
+    }
+    .copyTextFooter{
+        font-size: 10px;
+        width: 100%;
+        height: 33px;
+    }
+    .footerBackground {
+        background: #1D5485;
+        width: 100%;
+        height: 600px;
+        margin-top: 0px;
+    }
+    .sectionFooter{
+        width: 86%;
+        height: 540px;
+        margin: 53px 7% 0px;
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media only screen and (min-width: 410px) and (max-width: 436px) {
+    .imagesFooterFields {
+        width: 100%;
+        height: 95%;
+        background-image: url(../images/mobileFooterImg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .paypalFooter{
+        width: 289px;
+        height: 70px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .formMail {
+        width: 100%;
+        height: 200px;
+        margin: 28px auto 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .inputsMail {
+        width: 100%;
+        height: 124px;
+    }
+    .inputsMail > input {
+        padding: 0px 22px;
+        font-family: "Roboto_", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        width: 100%;
+        height: 38px;
+        margin: 0px;
+        background: none;
+        border: 2px solid #5D9A9D;
+        outline: none;
+        color: #ACACAC;
+        border-radius: 19px;
+    }
+    .inputsMail > input::placeholder{
+        font-size: 10px;
+    }
+    .rightFooterBg {
+        width: 248px;
+        height: 234px;
+        margin-left: 0px;
+    }
+    .leftFooterBg {
+        width: 250px;
+        height: 210px;
+        margin-right: 0px;
+        margin-bottom: 54px;
+    }
+    .footerFields {
+        width: 100%;
+        height: 220px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .footerMenu{
+        width: 100%;
+        height: 101px;
+    }
+    .footerBtn{
+        width: 90%;
+        height: 27px;
+    }
+    .footerBtn > input{
+        width: 251px;
+        height: 27px;
+        border-radius: 14px;
+        color: white;
+        outline: none;
+        border: none;
+        background: #5D9A9D;
+        padding: 0px 75px 0px 12px;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .footerBtn > button{
+        left: 183px;
+        top: -1px;
+        font-family: "Roboto_", sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        color: #5D9A9D;
+        /* outline: none; */
+        border: 1px solid white;
+        width: 66px;
+        height: 23px;
+        border-radius: 20px;
+        background: white;
+        position: relative;
+    }
+    .footerBtn > input::placeholder{
+        color: white;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .formContinue > button{
+        width: 104px;
+        height: 31px;
+        font-size: 10px;
+    }
+    .leftMenuFooter{
+        width: 89px;
+        height: 100%;
+    }
+    .rightMenuFooter{
+        width: 121px;
+        height: 57px;
+    }
+    .footerMobilePolicy{
+        width: 289px;
+        height: 19px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .policyTextMobile{
+        height: 18px;
+        width: 66%;
+    }
+    .policyTextMobile > ul{
+        width: 100%;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        list-style: none;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .policyTextMobile > ul > li > a{
+        text-decoration: none;
+        color: white;
+    }
+    .payLogoFooterMobile{
+        width: 63px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .payLogoFooterMobile > img{
+        width: 29px;
+        height: 19px;
+    }
+    .copyTextFooter{
+        font-size: 10px;
+        width: 100%;
+        height: 33px;
+    }
+    .footerBackground {
+        background: #1D5485;
+        width: 100%;
+        height: 638px;
+        margin-top: 0px;
+    }
+    .sectionFooter{
+        width: 86%;
+        height: 579px;
+        margin: 53px 7% 0px;
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media only screen and (min-width: 437px) and (max-width: 599px) {
+    .imagesFooterFields {
+        width: 100%;
+        height: 95%;
+        background-image: url(../images/mobileFooterImg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .paypalFooter{
+        width: 289px;
+        height: 66px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .rightFooterBg {
+        width: 248px;
+        height: 234px;
+        margin-left: 0px;
+    }
+    .leftFooterBg {
+        width: 250px;
+        height: 210px;
+        margin-right: 0px;
+        margin-bottom: 54px;
+    }
+    .footerFields {
+        width: 100%;
+        height: 220px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .formMail {
+        width: 100%;
+        height: 215px;
+        margin: 20px auto 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .inputsMail{
+        width: 100%;
+        height: 124px;
+    }
+
+    .formContinue > button{
+        width: 104px;
+        height: 31px;
+        font-size: 10px;
+    }
+    .inputsMail > input{
+        padding: 0px 22px;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        width: 100%;
+        height: 38px;
+        margin: 0px;
+        background: none;
+        border: 2px solid #5D9A9D;
+        outline: none;
+        color: #ACACAC;
+        border-radius: 19px;
+    }
+    .inputsMail > input::placeholder{
+        font-size: 10px;
+    }
+
+    .footerMenu{
+        width: 100%;
+        height: 101px;
+    }
+    .leftMenuFooter{
+        width: 89px;
+        height: 100%;
+    }
+    .rightMenuFooter{
+        width: 121px;
+        height: 57px;
+    }
+    .footerSocialMobile{
+        width: 77px;
+        height: 20px;
+    }
+    .footerBtn{
+        width: 90%;
+        height: 27px;
+    }
+    .footerBtn > input{
+        width: 251px;
+        height: 27px;
+        border-radius: 14px;
+        color: white;
+        outline: none;
+        border: none;
+        background: #5D9A9D;
+        padding: 0px 75px 0px 12px;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .footerBtn > button{
+        left: 183px;
+        top: -1px;
+        font-family: "Roboto_", sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        color: #5D9A9D;
+        /* outline: none; */
+        border: 1px solid white;
+        width: 66px;
+        height: 23px;
+        border-radius: 20px;
+        background: white;
+        position: relative;
+    }
+    .footerBtn > input::placeholder{
+        color: white;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .footerMobilePolicy{
+        width: 289px;
+        height: 19px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .policyTextMobile{
+        height: 18px;
+        width: 66%;
+    }
+    .policyTextMobile > ul{
+        width: 100%;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        list-style: none;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .policyTextMobile > ul > li > a{
+        text-decoration: none;
+        color: white;
+    }
+    .payLogoFooterMobile{
+        width: 63px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .payLogoFooterMobile > img{
+        width: 29px;
+        height: 19px;
+    }
+    .copyTextFooter{
+        font-size: 10px;
+        width: 100%;
+        height: 31px;
+    }
+    .leftFooterBlock{
+        margin-top: 10px;
+        height: 180px;
+    }
+    .footerBackground {
+        background: #1D5485;
+        width: 100%;
+        height: 638px;
+        margin-top: 0px;
+    }
+    .sectionFooter{
+        width: 86%;
+        height: 579px;
+        margin: 53px 7% 0px;
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 436px) {
+    .leftFooterBlock{
+        height: 170px;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 379px) {
+    .inputsMail {
+        width: 100%;
+        height: 124px;
+    }
+    .inputsMail > input {
+        padding: 0px 22px;
+        font-family: "Roboto_", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        width: 100%;
+        height: 38px;
+        margin: 0px;
+        background: none;
+        border: 2px solid #5D9A9D;
+        outline: none;
+        color: #ACACAC;
+        border-radius: 19px;
+    }
+    .inputsMail > input::placeholder{
+        font-size: 10px;
+    }
+    .rightFooterBg {
+        width: 230px;
+        height: 234px;
+        margin-left: 0px;
+    }
+    .footerFields {
+        width: 100%;
+        height: 196px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .footerMenu{
+        width: 100%;
+        height: 101px;
+    }
+    .footerBtn{
+        width: 90%;
+        height: 27px;
+    }
+    .footerBtn > input{
+        width: 251px;
+        height: 27px;
+        border-radius: 14px;
+        color: white;
+        outline: none;
+        border: none;
+        background: #5D9A9D;
+        padding: 0px 75px 0px 12px;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .footerBtn > button{
+        left: 183px;
+        top: -1px;
+        font-family: "Roboto_", sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        color: #5D9A9D;
+        /* outline: none; */
+        border: 1px solid white;
+        width: 66px;
+        height: 23px;
+        border-radius: 20px;
+        background: white;
+        position: relative;
+    }
+    .footerBtn > input::placeholder{
+        color: white;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .formContinue > button{
+        width: 104px;
+        height: 31px;
+        font-size: 10px;
+    }
+    .leftMenuFooter{
+        width: 89px;
+        height: 100%;
+    }
+    .rightMenuFooter{
+        width: 121px;
+        height: 57px;
+    }
+    .footerMobilePolicy{
+        width: 289px;
+        height: 19px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .policyTextMobile{
+        height: 18px;
+        width: 66%;
+    }
+    .policyTextMobile > ul{
+        width: 100%;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        list-style: none;
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .policyTextMobile > ul > li > a{
+        text-decoration: none;
+        color: white;
+    }
+    .payLogoFooterMobile{
+        width: 63px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .payLogoFooterMobile > img{
+        width: 29px;
+        height: 19px;
+    }
+    .copyTextFooter{
+        font-size: 10px;
+        width: 100%;
+        height: 30px;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+    .leftFooterBg{
+        background-image: none;
+    }
+    .rightFooterBg{
+        background-image: none;
+    }
+
+    .formName{
+        margin-left: 0px;
+        justify-content: center;
+    }
+    .formName > span{
+        font-size: 14px;
+    }
+    .footerSocial{
+        display: none;
+    }
+    .policyText{
+        display: none;
+    }
+    .payLogoFooter{
+        display: none;
+    }
+    .formContinue{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .inputsMail{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footerLogo > img{
+        width: 89px;
+        height: 16px;
+    }
+    .leftMenuFooter > ul{
+        list-style: none;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        font-size: 11px;
+        font-family: "Roboto_", sans-serif;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .rightMenuFooter > ul{
+        font-size: 11px;
+    }
+    .footerConn{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footerSocialMobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footerSocialMobile > a > img{
+        width: 20px;
+        height: 20px;
+    }
+    .footerConn > span{
+        font-size: 8px;
+    }
+}

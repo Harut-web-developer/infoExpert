@@ -1,0 +1,320 @@
+.categorie {
+    width: 100%;
+    /*height: 1250px;*/
+    height: min-content;
+    background-image: url("../images/background-categories.png");
+    padding-top: 158px;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.backButton, .ellipseButton{
+    display: none;
+}
+.sectionCategorie{
+    width: 67%;
+    margin: 40px auto 50px;
+    display: flex;
+    flex-direction: row;
+}
+.sectionCategorieLeft{
+    width: 76%;
+}
+.sectionCategorieRight{
+    width: 24%;
+    margin: 0px 0px 50px 40px;
+}
+.sectionCategorieRight > a{
+    text-decoration: none;
+}
+.sectionCategorieRight img{
+    width: 90px;
+    height: 90px;
+}
+.categorieTitleDiv{
+    width: 67%;
+    margin: 0px auto;
+    height: max-content;
+    padding-top: 58px;
+}
+.categorieTitle{
+    width: 100%;
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43.2px;
+    color: #F36528;
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+}
+.date{
+    width: 115px;
+    height: 18px;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    font-family: "Roboto_",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 0;
+    color: #1C5484;
+}
+.divImg{
+    text-align: start;
+}
+.divImg img{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+.categorieImage{
+    width: 100%;
+    border-radius: 20px;
+}
+.categorieText{
+    width: 95%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.categorieText p{
+    font-family: "Roboto_",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #1C5484;
+}
+.categorieTitleDivRight{
+    width: max-content;
+    height: 24px;
+}
+.categorieTitleDivRight h1{
+    font-family: "Roboto_",sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: #1C5484;
+}
+.rigthtxt{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.rigthtxt > img{
+    border-radius: 12px;
+}
+.rigthtxtdiv{
+    padding-left: 16px;
+    /*height: 72px;*/
+}
+.rigthtxt span{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #1C5484;
+}
+/*LIKE*/
+.sizeLikeField{
+    width: min-content;
+}
+.large-font {
+    width: 43px;
+    height: 43px;
+    font-size: xxx-large;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    background-color: #ffffff50;
+    justify-content: center;
+    margin-left: 42px;
+    cursor: pointer;
+}
+ion-icon.active {
+    animation: like 0.5s 1;
+    fill: #F36528;
+    stroke: none;
+    color: #F36528;
+}
+ion-icon {
+    width: 29.63px;
+    height: 25.96px;
+    color: #FFFFFF;
+    fill: transparent;
+    stroke-width: 30;
+    transition: all 0.5s;
+    position: absolute;
+}
+@-webkit-keyframes like {
+    0% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+@media screen and (min-width: 1921px){
+    .categorieImage{
+        width: 990px;
+        height: 603px;
+    }
+}
+@media screen and (max-width: 1830px) {
+    .categorieTitle {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1674px) {
+    .categorieTitle {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1489px) {
+    .categorieTitle {
+        width: 100%;
+    }
+    .categorieTitle {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 1309px) {
+    .categorieTitle {
+        font-size: 33px;
+    }
+}
+@media screen and (max-width: 1237px) {
+    .categorieTitle {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 1237px) {
+    .categorieTitle {
+        font-size: 27px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .categorie {
+        padding-top: 100px;
+        height: max-content;
+    }
+    .categorieBackButton{
+        display: contents;
+    }
+    .categorieTitle .large-font {
+        margin-left: 51px;
+    }
+    .sectionCategorie {
+        width: auto;
+        margin: 0px 6.9% 50px 6.8%;
+    }
+    .backButton {
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin-right: 51px;
+    }
+    .categorieTitleDiv {
+        padding-top: 0;
+        width: auto;
+        margin: 0px 6.9% 0px 6.8%;
+    }
+    .categorieTitle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'RobotoSlab_',sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21.6px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .date{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 21px;
+    }
+    .categorieImage {
+         padding-top: 0;
+    }
+    .categorieText{
+        width: 100%;
+    }
+    .categorieText p{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .sectionCategorieRight{
+        width: 47%;
+    }
+    .categorieTitleDivRight h1{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 850px) {
+    .backButton {
+        width: 35px;
+        height: 35px;
+    }
+}
+@media screen and (max-width: 600px){
+    .ellipseButton {
+        display: block;
+        position: absolute;
+    }
+    .backButton {
+        width: 30px;
+        height: 30px;
+        margin-right: 25px;
+    }
+    .categorieTitle {
+        align-items: center;
+        text-align: center;
+    }
+    .categorieTitle .large-font {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        margin-left: 25px;
+    }
+    ion-icon {
+        width: 24.63px;
+        height: 20.96px;
+    }
+    .sectionCategorie{
+        flex-direction: column;
+    }
+    .sectionCategorieLeft{
+        width: 100%;
+    }
+    .sectionCategorieRight {
+        width: 100%;
+        margin: 0;
+    }
+    .rigthtxtdiv {
+        width: 164px;
+    }
+    .categorie{
+        background-color: #ACCBE6;
+    }
+}

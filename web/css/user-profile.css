@@ -1,0 +1,1494 @@
+.usersProfile{
+    width: 100%;
+    height: 1061px;
+    background-image: url("../images/userProfBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.managmentBack{
+    display: contents;
+}
+.cardImg_{
+    border-radius: 50%;
+    width: 251px;
+    height: 251px;
+}
+.userCreateTitleField, .userCreateMoreInfo, .editAchievementsBtn{
+    display: none;
+}
+.userCreateFieldFormsMobile{
+    display: none;
+}
+.userProfileSection{
+    width: 67%;
+    height: 541px;
+    position: absolute;
+    margin: 212px 16.5% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.userProfileMenuField{
+    width: 100%;
+    height: 53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.userProfileMenuField > span{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #F36528;
+}
+.userProfileMoreAboutField{
+    width: 406px;
+    height: 252px;
+    border-radius: 30px;
+    background: #74A8AB;
+    box-shadow: 0px 1px 6px 1px #57939B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userProfileMenu{
+    width: 506px;
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.userProfileMenu > li > a{
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto_",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+.userProfileMenu > li > a:hover{
+    color: #F36528;
+}
+.fieldMoreAbout{
+    width: 265px;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.usersProfileHeightAm .fieldMoreAbout,
+.usersProfileHeightRu .fieldMoreAbout{
+    height: 120px;
+}
+.fieldMoreAbout > span{
+    text-align: center;
+    font-family: "Roboto_",sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: white;
+}
+.userCreateBg{
+    width: 100%;
+    height: 1061px;
+    background-image: url("../images/userCreateBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.userCreateField{
+    width: 67%;
+    height: 745px;
+    position: absolute;
+    margin: 212px 16.5% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.userCreateFieldForms{
+    width: 83%;
+    height: 618px;
+    background: #74A8AB;
+    border-radius: 30px;
+    box-shadow: 0px 0px 6px 2px #549099;
+}
+.userCreateFieldForms > form{
+    width: 80%;
+    height: 519px;
+    margin: 49px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.userPhotoFields{
+    width: 250px;
+    height: 250px;
+    background: #5D9A9D;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.userPhotoFields > img{
+    border-radius: 50%;
+}
+.userInputsFields{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.userFormsInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: 85px;
+}
+.userFormsInput > label{
+    font-family: "Roboto_",sans-serif;
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    margin-left: 11px;
+}
+.userFormsInput > input{
+    width: 100%;
+    height: 64px;
+    background: #5D9A9D;
+    border-radius: 15px;
+    border:none;
+    outline: none;
+    padding: 0px 26px;
+    color: white;
+    font-size: 16px;
+}
+.userFormsBtn{
+    margin-top: 24px;
+}
+.userFormsBtn > button{
+    background: transparent;
+    border: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userFormsBtn > button:hover img{
+    content: url("../images/userSaveBtnhover.png");
+}
+.userFormsBtn > button:hover span{
+    color: white;
+}
+.userFormsBtn > button > span{
+    position: absolute;
+    /*left: 0;*/
+    /*top: 11px;*/
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Roboto_",sans-serif;
+    color: #F36528;
+    font-weight: 500;
+}
+
+.userPhotoFields > span{
+    font-family: "Roboto_",sans-serif;
+    color: white;
+    font-size: 23px;
+    top: 0;
+}
+.userPhotoFields > span:hover{
+    cursor: pointer;
+}
+.userPhotoFields > input{
+    display: none;
+}
+.attachCv{
+    width: max-content;
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 17px 0px 17px 11px;
+}
+.attachCv > span{
+    margin-right: 10px;
+    font-family: "Roboto_",sans-serif;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.cvFile{
+    display: none;
+}
+.cvFileField{
+    width: 100%;
+    height: 64px;
+    background: #5D9A9D;
+    border-radius: 15px;
+}
+.attachCv:hover{
+    cursor: pointer;
+}
+.usersAchievements{
+    width: 100%;
+    height: 1061px;
+    background-image: url("../images/background-achievements.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.userAchievementsSection{
+    width: 67%;
+    height: 686px;
+    position: absolute;
+    margin: 212px 16.5% 77px 16.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.profilBody{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+}
+.myCoursesProfileField{
+    width: 405px;
+    height: 533px;
+    margin-right: 20px;
+    background: #74A8AB;
+    border-radius: 30px;
+    box-shadow: 0px 0px 6px 2px #549099;
+}
+.myCoursesFieldSection{
+    width: 291px;
+    height: 459px;
+    margin: 37px 36px 37px 78px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+.myCoursesFieldSectionLeft{
+    width: 250px;
+    height: 459px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.myCoursesFieldSectionLeft > span{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Roboto_", sans-serif;
+    text-align: center;
+}
+.myCoursesFieldSectionLeft > img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+.usersProfileInfo{
+    width: 249px;
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin{
+    display: flex;
+    word-wrap: break-word;
+    width: 249px;
+    flex-direction: row;
+    align-items: center;
+}
+.usersProfileInfoPhone > span,
+.usersProfileInfoEmail > span,
+.usersProfileInfoLinkdin > span{
+    font-family: "Roboto_",sans-serif;
+    margin-left: 37px;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    white-space: normal;
+    width: -webkit-fill-available;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.usersProfileInfoLinkdin > a{
+    font-family: "Roboto_",sans-serif;
+    margin-left: 37px;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    white-space: normal;
+    width: -webkit-fill-available;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-decoration: none;
+}
+.usersProfileInfoPhone > img,
+.usersProfileInfoEmail > img,
+.usersProfileInfoLinkdin > img{
+    width: 32px;
+    height: 32px;
+}
+.certificate{
+    width: 624px;
+    height: 529px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.cartificateImg{
+    background: #FFFFFF24;
+    width: 624.07px;
+    height: 468.05px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 6px 2px #549099;
+
+}
+.cartificateImg img{
+    padding: 45.08px 44.84px;
+}
+
+.certificate span{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.4px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.cartificateImgTxt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 31px;
+}
+.profilBody_{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 67px;
+}
+.usersCard_{
+    width: 405px;
+    height: 532.72px;
+    top: 374.19px;
+    left: 320.04px;
+    padding: 37px 36px 37px 78px;
+    border-radius: 30px;
+    background: #FFFFFF24;
+}
+.usersCardHead_{
+    display: flex;
+    position: relative;
+}
+.userAchievementsEditLeft > span {
+    font-family: "Roboto_",sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+.sameInfo{
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    word-wrap: break-word;
+}
+.sameInfo > span{
+    font-family: "Roboto_", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-left: 42px;
+    padding-right: 20px;
+    white-space: normal;
+    width: -webkit-fill-available;
+}
+.sameInfo > a{
+    font-family: "Roboto_", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-left: 42px;
+    padding-right: 20px;
+    white-space: normal;
+    text-decoration: none;
+    width: -webkit-fill-available;
+}
+.cartificateImg_{
+    background: #FFFFFF24;
+    width: 624.07px;
+    height: 468.05px;
+    border-radius: 30px;
+}
+.cartificateImg_ img{
+    padding: 45.08px 44.84px;
+}
+.certificate_ span{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.4px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.cartificateImgTxt_{
+   padding: 29px 31px 0px 31px;
+}
+.usersCardMain_{
+    width: 250px;
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.userCreateFieldForms_{
+    width: 83%;
+    height: 618px;
+    background: #74A8AB;
+    border-radius: 30px;
+    box-shadow: 0px 0px 6px 2px #549099;
+}
+.userCreateFieldForms_ > form{
+    width: 80%;
+    height: 519px;
+    margin: 49px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.userAchievementsEditLeft{
+    margin-right: 20px;
+    width: 250px;
+    height: 458px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.userInputsFields_{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+}
+.userFormsInput_{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: 85px;
+}
+.userFormsInput_ > label{
+    font-family: "Roboto_",sans-serif;
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    margin-left: 11px;
+}
+.userFormsInput_ > input{
+    width: 100%;
+    height: 64px;
+    background: #5D9A9D;
+    border-radius: 15px;
+    border:none;
+    outline: none;
+    padding: 0px 26px;
+    color: white;
+    font-size: 16px;
+}
+.userFormsBtn_{
+    margin-top: 24px;
+}
+.userFormsBtn_ > button{
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userFormsBtn_ > button{
+    position: relative;
+}
+.userFormsBtn_ > button > span{
+    position: absolute;
+    /*top: 12px;*/
+    /*left: 0;*/
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-family: "Roboto_",sans-serif;
+    color: #F36528;
+    font-weight: 500;
+}
+.userFormsBtn_ > button:hover img{
+    content: url("../images/userSaveBtnhover.png");
+}
+.userFormsBtn_ > button:hover span{
+    color: white;
+}
+.attachCvEdit{
+    width: max-content;
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0px 24px 11px;
+}
+.attachCvEdit > span{
+    margin-right: 10px;
+    color: white;
+    font-family: "Roboto_", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.cvFileEdit{
+    display: none;
+}
+.cvFileFieldEdit{
+    width: 100%;
+    height: 64px;
+    background: #5D9A9D;
+    border-radius: 15px;
+}
+.attachCvEdit:hover{
+    cursor: pointer;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.middle > input{
+    display: none;
+}
+.usersCardHead_:hover .cardImg_ {
+    opacity: 0.5;
+}
+.usersCardHead_:hover .middle {
+    opacity: 1;
+}
+.editPhoto{
+    text-decoration: none;
+    font-family: 'Roboto_',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: left;
+    color: white;
+}
+.editPhoto:hover{
+    cursor:pointer;
+}
+.usersProfileAm .userProfileMenu {
+    width: 550px;
+}
+.swiper-container {
+    width: 624px;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: #F36528;
+}
+@media screen and (max-width: 1700px) {
+    .myCoursesFieldSectionLeft > img {
+        width: 220px;
+        height: 220px;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .certificate {
+        height: auto;
+        gap: 7px;
+        justify-content: space-between;
+    }
+    .cartificateImg {
+         width: auto;
+         height: auto;
+    }
+    .cartificateImg img {
+        width: 100%;
+        height: auto;
+    }
+    .sameInfo > span {
+        width: 200px;
+        margin-left: 25px;
+    }
+    .sameInfo > a {
+        width: 200px;
+        margin-left: 25px;
+    }
+}
+@media screen and (max-width: 1400px){
+    .userCreateFieldForms {
+        width: 100%;
+        height: auto;
+    }
+    .userCreateFieldForms > form {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1370px){
+    .usersProfileRu .userProfileMenuField > span {
+        font-size: 38px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .usersProfileRu .userProfileMenuField > span {
+        font-size: 35px;
+    }
+    .usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin {
+        width: 200px;
+    }
+    .userAchievementsSection {
+        justify-content: flex-start;
+    }
+    .profilBody {
+         padding-top: 70px;
+    }
+    .myCoursesProfileField {
+        width: 300px;
+        height: 449px;
+    }
+    .myCoursesFieldSectionLeft {
+        width: 220px;
+        height: 380px;
+    }
+    .myCoursesFieldSection {
+        margin: 37px 33px 37px 22px;
+    }
+    .myCoursesFieldSectionLeft > img {
+        width: 150px;
+        height: 150px;
+        margin-right: -34px;
+    }
+    .usersProfileInfo {
+        width: 200px;
+    }
+    .usersProfileInfo img{
+        width: 25px;
+        height: 25px;
+    }
+    .myCoursesFieldSectionLeft > span{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 16.41px;
+        text-align: center;
+        margin-right: -37px;
+    }
+    .usersProfileInfoPhone > span,
+    .usersProfileInfoEmail > span,
+    .usersProfileInfoLinkdin > span{
+        margin-left: 20px;
+        font-family: 'Roboto_',sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .usersProfileInfoLinkdin > a{
+        margin-left: 20px;
+        font-family: 'Roboto_',sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .myCoursesFieldSection {
+        width: 245px;
+    }
+}
+@media screen and (max-width: 1270px){
+    .usersProfileEn .userProfileMenuField > span {
+        font-size: 38px;
+    }
+    .usersProfileRu .userProfileMenu {
+        width: 490px;
+    }
+    .userCreateFieldForms_ > form {
+        width: 90%;
+        height: 550px;
+        margin: 34px auto;
+    }
+}
+@media screen and (max-width: 1200px){
+    .usersProfileEn .userProfileMenu {
+        width: 460px;
+    }
+    .usersProfileRu .userProfileMenuField > span,
+    .usersProfileAm .userProfileMenuField > span {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .userFormsBtn_ {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .usersAchievements {
+        height: 845px;
+    }
+    .userFormsBtn > button > span{
+        font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        /*line-height: 11.72px;*/
+        /*top: 14px;*/
+    }
+    .usersAchievementsH{
+        height: 646px;
+    }
+    .userCreateBg {
+        height: 959px;
+    }
+    .usersProfileEn .userProfileMenu,
+    .userProfileMenu,
+    .usersProfileRu .userProfileMenu,
+    .usersProfileAm .userProfileMenu{
+        width: 375px;
+        height: 16px;
+    }
+    .userProfileMenuField {
+        height: 29px;
+    }
+    .fieldMoreAbout img {
+        width: 30.56px;
+        height: 34.48px;
+    }
+    .usersProfileEn .userProfileMenuField > span,
+    .userProfileMenuField > span,
+    .usersProfileRu .userProfileMenuField > span{
+        color: #F36528;
+        font-family: 'RobotoSlab_',sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29.01px;
+        text-align: left;
+    }
+    .userProfileMenu > li > a {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+    }
+    .usersProfileHeightEn, .usersProfileHeightRu, .usersProfileHeightAm{
+        height: 580px;
+    }
+    .userProfileSection {
+        width: -webkit-fill-available;
+        height: auto;
+        margin: 95px 6.9% 0px 6.8%;
+        gap: 143px;
+    }
+    .userCreateField, .userAchievementsSection{
+        width: -webkit-fill-available;
+        height: auto;
+        margin: 95px 6.9% 0px 6.8%;
+        gap: 50px;
+    }
+    .fieldMoreAbout > span{
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.09px;
+        text-align: center;
+    }
+    .userAchievementsSection {
+        gap: 40px;
+        align-items: start;
+    }
+    .profilBody {
+        width: 94%;
+        padding-top: 0;
+        align-items: flex-start;
+    }
+    .usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin {
+        width: 161px;
+    }
+    .userProfileMoreAboutField{
+        width: 314.96px;
+        height: 152.46px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .fieldMoreAbout {
+        width: 227px;
+        height: 91.48px;
+        margin: 0;
+    }
+    .usersProfileHeightAm .fieldMoreAbout,
+    .usersProfileHeightRu .fieldMoreAbout{
+        height: 90px;
+    }
+    .userCreateFieldForms {
+        width: 79%;
+        height: 686px;
+    }
+    .userCreateFieldForms > form {
+        height: auto;
+        flex-direction: column;
+        margin: 28px auto;
+    }
+    .userPhotoFields {
+        width: 137px;
+        height: 137px;
+        margin-right: 0;
+    }
+    .userPhotoFields > span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: center;
+    }
+    .userInputsFields {
+        margin-top: inherit;
+        align-items: center;
+        width: 403px;
+        height: 468px;
+    }
+    .userFormsInput {
+        height: 75px;
+    }
+    .userFormsInput > input {
+        height: 52px;
+    }
+    .cvFileField {
+        height: 52px;
+    }
+    .myCoursesProfileField {
+        width: 203px;
+        height: 264px;
+    }
+    .myCoursesProfileField{
+        margin-right: 0;
+    }
+    .usersProfileInfo {
+        width: 166px;
+        height: 90px;
+    }
+    .myCoursesFieldSectionRight img{
+        width: 15.18px;
+        height: 15.18px;
+        margin-left: -32px;
+    }
+    .myCoursesFieldSectionLeft > span{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.41px;
+        text-align: center;
+        margin: 0;
+    }
+    .myCoursesFieldSectionLeft > img{
+        width: 93px;
+        height: 94px;
+        margin: 0;
+    }
+    .myCoursesFieldSection {
+        width: 181px;
+        height: 224px;
+        margin: 22px 35px 34px 17px;
+    }
+    .myCoursesFieldSectionLeft {
+        width: auto;
+        height: 220px;
+    }
+    .usersProfileInfoPhone > span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        margin-left: 16px;
+    }
+    .usersProfileInfoPhone img,
+    .usersProfileInfoEmail img,
+    .usersProfileInfoLinkdin img{
+        width: 22px;
+        height: 22px;
+    }
+    .usersProfileInfoEmail > span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        margin-left: 16px;
+    }
+    .usersProfileInfoLinkdin > span{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        margin-left: 16px;
+    }
+    .usersProfileInfoLinkdin > a{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        margin-left: 16px;
+    }
+    .swiper-container {
+        width: 317px;
+    }
+    .certificate {
+        width: 317px;
+        justify-content: space-between;
+        height: 284px;
+        gap: 7px;
+    }
+    .cartificateImg{
+        width: 317.02px;
+        height: 237.76px;
+    }
+    .certificate span{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.2px;
+        text-align: left;
+    }
+    .cartificateImgTxt img{
+        width: 17.52px;
+        height: 18.69px;
+    }
+    .cartificateImg img {
+        padding: 30.08px 30.84px;
+    }
+    .usersCardHead_ img{
+        width: 133px;
+        height: 134px;
+    }
+    .userAchievementsEditLeft > span{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.41px;
+        text-align: center;
+    }
+    .sameInfo > span{
+        max-width: 54%;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        padding: 0;
+        margin-left: 16px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    .sameInfo > a{
+        max-width: 54%;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: left;
+        padding: 0;
+        margin-left: 16px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    .usersCardMain_ img{
+        width: 22px;
+        height: 22px;
+    }
+    .userFormsInput_ > input {
+        height: 52px;
+    }
+    .cvFileFieldEdit {
+        height: 52px;
+    }
+    .userFormsBtn_ > button > span{
+        font-size: 10px;
+        font-weight: 500;
+        /*line-height: 11.72px;*/
+        text-align: center;
+        /*left: 0;*/
+        /*top: 15px;*/
+        width: 100%;
+    }
+    .userAchievementsEditLeft {
+        width: 162px;
+        height: 357px;
+        justify-content: space-evenly;
+    }
+    .usersCardMain_ {
+        width: -webkit-fill-available;
+        height: 117px;
+    }
+    .userFormsInput_ {
+        height: 75px;
+    }
+    .userCreateFieldForms_ {
+        width: 75%;
+        height: 545px;
+    }
+    .userCreateFieldForms_ > form {
+        width: 90%;
+        height: 499px;
+        /*margin: 46px 22px;*/
+    }
+    .attachCvEdit {
+        margin: 18px 0px 18px 17px;
+    }
+    .profilBody_{
+        padding-top: 0;
+    }
+}
+@media screen and (max-width: 800px) {
+    .userCreateFieldForms_ {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 730px) {
+    .profilBody {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .userCreateFieldForms_ {
+        width: 90%;
+    }
+    .userCreateBg {
+        height: 880px;
+    }
+    .profilBody {
+        width: 100%;
+    }
+    .userFormsInput > input {
+        height: 40px;
+    }
+    .userInputsFields {
+        margin-top: 24px;
+        align-items: center;
+        width: 320px;
+        height: 400px;
+    }
+    .userFormsInput {
+        height: 63px;
+    }
+    .userCreateFieldForms {
+        height: 613px;
+    }
+    .usersProfileEn .userProfileMenuField > span, .userProfileMenuField > span, .usersProfileRu .userProfileMenuField > span {
+        font-size: 19px;
+    }
+    .usersProfileEn .userProfileMenu, .userProfileMenu, .usersProfileRu .userProfileMenu {
+        width: 350px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .userCreateFieldForms_ {
+        width: 100%;
+        height: 530px;
+    }
+    .lllyy {
+        height: 94px;
+    }
+    .userCreateFieldForms_ > form {
+        margin: 15px 22px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .certificate, .cartificateImg {
+        width: 290px;
+    }
+}
+@media screen and (max-width: 599px) {
+    .middle{
+        display: none;
+    }
+    .usersCardHead_:hover .cardImg_{
+        opacity: unset;
+    }
+    .swiper-container {
+        width: auto;
+    }
+    .usersAchievements {
+        background: #5D9A9D;
+    }
+    .userCreateFieldForms, .userProfileMenuField{
+        display: none;
+    }
+    .editAchievementsBtn{
+        display: block;
+    }
+    .editAchievementsBtn img{
+        width: 95.37px;
+        height: 40px;
+    }
+    .editAchievementsBtn > a{
+        color: #F36528;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto_',sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.72px;
+    }
+    .editAchievementsBtn div{
+        position: absolute;
+        /*top: 70%;*/
+        /*left: 50%;*/
+        /*transform: translate(-50%, -50%);*/
+        width: 100%;
+    }
+    .editAchievementsBtn > a:hover div{
+        color: white;
+    }
+    .editAchievementsBtn > a:hover img{
+        content: url("../images/applicationBtnhover.png");
+    }
+    .userCreateFieldFormsMobile{
+        width: 100%;
+        display: block;
+    }
+    .bbbbb, .userInputsFields_{
+        display: none;
+    }
+    .userCreateTitleField{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .userCreateTitleField div{
+        font-family: "Roboto",sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.09px;
+        text-align: center;
+        width: 100%;
+        color: #F36528;
+    }
+    .userCreateMoreInfo{
+        display: block;
+        font-family: "Roboto_",sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.09px;
+        text-align: center;
+        color: white;
+    }
+    .userPhotoFieldsMobile{
+        width: 137px;
+        height: 137px;
+        background: #74A8AB;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .userPhotoFieldsMobile > img{
+        border-radius: 50%;
+    }
+    .userPhotoFieldsMobile > span{
+        font-family: "Roboto_",sans-serif;
+        color: white;
+        top: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .userPhotoFieldsMobile > span:hover{
+        cursor: pointer;
+    }
+    .userPhotoFieldsMobile > input{
+        display: none;
+    }
+    .userCreateFieldFormsMobile form{
+        height: 534px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .userFormsInputMobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        height: 60px;
+    }
+    .userFormsInputMobile > input{
+        width: 100%;
+        height: 52px;
+        background: #74A8AB;
+        border-radius: 15px;
+        border:none;
+        outline: none;
+        padding: 0px 26px;
+        color: white;
+        font-size: 16px;
+    }
+    .cvFileFieldMobile{
+        width: 100%;
+        height: 64px;
+        background: #5D9A9D;
+        border-radius: 15px;
+    }
+    .attachCvMobile{
+        width: max-content;
+        height: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 18px 0px 18px 27px;
+    }
+    .attachCvMobile > span{
+        margin-right: 14px;
+        font-family: "Roboto_",sans-serif;
+        color: #ffffffb8;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: underline;
+    }
+    .cvFileMobile{
+        display: none;
+    }
+    .cvFileFieldMobile{
+        width: 100%;
+        height: 52px;
+        background: #74A8AB;
+        border-radius: 15px;
+    }
+    .cvFileMobile:hover{
+        cursor: pointer;
+    }
+    .userInputsFieldsMobile{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .userCreateBg {
+        height: 812px;
+        background: #5D9A9D;
+    }
+    .userCreateField {
+        gap: 30px;
+    }
+    .usersAchievementsH .llllll{
+        gap: 51px;
+    }
+    .userFormsInputMobile > input::placeholder{
+        color: #D9E3E4;
+        font-family: "Roboto_",sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+    }
+    .attachCvMobile img{
+        width: 10px;
+        height: 10px;
+    }
+    .myCoursesProfileField{
+        display: none;
+    }
+    .cartificateImgTxt{
+        padding: 0;
+        gap: 45px;
+        flex-direction: column;
+    }
+    .usersAchievementsH {
+        background: #5D9A9D;
+        height: 636px;
+    }
+    .certificate, .cartificateImg {
+        /*width: 85%;*/
+        height: auto;
+        gap: 32px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .profilBody {
+        width: 100%;
+        justify-content: center;
+    }
+    .cartificateImgTxt img {
+        width: 25.02px;
+        height: 26.69px;
+    }
+    .certificate span{
+        font-family: 'RobotoSlab_',sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20.8px;
+        text-align: center;
+    }
+    .usersProfileHeightEn, .usersProfileHeightRu, .usersProfileHeightAm {
+        height: 812px;
+        background: #5D9A9D;
+    }
+    .userProfileSection {
+        gap: 88px;
+    }
+    .userProfileMoreAboutField {
+        height: 463px;
+    }
+    .userAchievementsSection {
+        gap: 88px;
+    }
+    .userCreateFieldForms_ > form {
+        width: 300px;
+        height: 380px;
+        margin: 0;
+        flex-direction: column;
+    }
+    .userAchievementsEditLeft {
+        width: 300px;
+        height: 380px;
+        margin: 0;
+    }
+    .sameInfo {
+        width: auto;
+        justify-content: space-evenly;
+    }
+    .userCreateFieldForms_ {
+        width: 80%;
+        height: 463px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .userAchievementsEditLeft > span{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 23.44px;
+        text-align: center;
+    }
+    .sameInfo > span {
+        width: 169px;
+        max-width: none;
+        margin: 0;
+        font-family: 'Roboto_',sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        text-align: left;
+    }
+    .sameInfo > a {
+        width: 169px;
+        max-width: none;
+        margin: 0;
+        font-family: 'Roboto_',sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        text-align: left;
+    }
+    .usersCardMain_ {
+        width: 250px;
+        height: 110px;
+    }
+    .usersProfileHeight{
+        height: 812px;
+    }
+}
+@media screen and (max-width: 500px) {
+    /*.certificate, .cartificateImg {*/
+    /*    width: 90%;*/
+    /*}*/
+    .cartificateImgTxt{
+        gap: 67px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .userCreateFieldForms_ {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .certificate, .cartificateImg {
+        width: 100%;
+    }
+    .userCreateFieldForms_ {
+        height: 463px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .usersProfileHeightEn, .usersProfileHeightRu, .usersProfileHeightAm {
+        height: 730px;
+    }
+    .userProfileMoreAboutField {
+        width: 270px;
+        height: 372px;
+    }
+    .userCreateFieldForms_ {
+        height: 430px;
+    }
+}

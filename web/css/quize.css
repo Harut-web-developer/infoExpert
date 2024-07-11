@@ -1,0 +1,473 @@
+.quize {
+    width: 100%;
+    background-image: url("../images/background-quize-image.png"), url("../images/background-quize.png");
+    background-repeat: no-repeat;
+    background-size: 686px 622px, cover;
+    background-position: right 9% bottom 36%, center;
+}
+.bodyQuize{
+    min-height: 87px;
+    display: flex;
+    align-items: center;
+    width: 67%;
+    margin: 0px auto;
+    padding-top: 212px;
+    padding-bottom: 107px;
+}
+.quizeContainer{
+    width: 624px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+.quizePlayAndTest{
+    width: 591px;
+    font-family: 'RobotoSlab_',sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    color: #F36528;
+}
+.lessonContainer{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+.lessonsQiize{
+    width: 624px;
+    height: 73px;
+    border-radius: 18px;
+    border: 1px solid #0000000D;
+    box-shadow: 0px 1px 6px 1px #1C548426;
+    font-family: 'Montserrat arm';
+    font-size: 18px;
+    font-weight: 500;
+    text-align: start;
+    background: #82B1B5;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding-left: 52px;
+    cursor: pointer;
+}
+.lessonsQiize:hover {
+    background: #F36528;
+}
+.btnQuize{
+    border: none;
+    background: transparent;
+    outline: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnQuize > img{
+    width: 132px;
+    height: 48px;
+}
+.btnQuize:hover img {
+    content: url('../images/contactushover.png');
+}
+.btnQuize:hover span {
+    color: white;
+}
+.btnQuize > span{
+    color: #F36528;
+    position: absolute;
+    /*top: 16px;*/
+    /*left: 0px;*/
+    width: 100%;
+    font-family: 'Roboto_',sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    /*line-height: 18.11px;*/
+}
+
+/* result page css */
+.result {
+    width: 100%;
+    background-color: #6DA4A7;;
+}
+.bodyResult{
+    width: 67%;
+    margin: 0px auto;
+    padding-top: 322px;
+    padding-bottom: 172px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 54px;
+}
+.titleResult{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43.45px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.resultBlackboard{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.resultBlackboardContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.resultBlackboardCntered {
+    width: 363px;
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.resultBlackboardCount{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56.25px;
+    text-align: center;
+    color: #F36528;
+}
+.resultBlackboardResult{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.97px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.resultButtons{
+    width: 382px;
+    display: flex;
+    justify-content: space-between;
+}
+/* Button */
+.btnResult1,
+.btnResult2 {
+    border: none;
+    background: transparent;
+    outline: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnResult1 > img,
+.btnResult2 > img {
+    width: 157px;
+    height: 58px;
+}
+
+.btnResult1:hover img,
+.btnResult2:hover img {
+    content: url('../images/contactushover.png');
+}
+
+.btnResult1:hover span,
+.btnResult2:hover span {
+    color: white;
+}
+
+.btnResult1 > span {
+    color: #F36528;
+    position: absolute;
+    /*top: 22px;*/
+    /*left: 0px;*/
+    width: 100%;
+    font-family: 'Roboto_',sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18.11px;
+    text-align: center;
+}
+.btnResult2 > span {
+    color: #FFFFFF;
+    position: absolute;
+    /*top: 22px;*/
+    /*left: 0px;*/
+    width: 100%;
+    font-family: 'Roboto_',sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18.11px;
+    text-align: center;
+}
+/*.resultRu .btnResult1 > span{*/
+/*    top: 12px;*/
+/*}*/
+/*.resultRu .btnResult2 > span{*/
+/*    top: 12px;*/
+/*}*/
+@media screen and (max-width: 1780px){
+    .lessonsQiize {
+        width: 590px;
+    }
+}
+@media screen and (max-width: 1700px) {
+    .quize {
+        background-size: 656px 592px, cover;
+    }
+
+    .lessonsQiize {
+        width: 540px;
+    }
+    .quizeContainer {
+        width: 540px;
+    }
+    .quizePlayAndTest {
+        width: 540px;
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 1600px){
+    .quizeContainer {
+        width: 550px;
+    }
+    .quizePlayAndTest {
+        width: 550px;
+        font-size: 33px;
+    }
+    .quize {
+        background-size: 590px 550px, cover;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .quize {
+        background-size: 560px 520px, cover;
+    }
+}
+@media screen and (max-width: 1420px) {
+    .quize {
+        background-size: 500px 470px, cover;
+    }
+    .quizePlayAndTest {
+        width: 480px;
+        font-size: 29px;
+    }
+    .quizeContainer {
+        width: 480px;
+        gap: 50px;
+    }
+    .lessonsQiize {
+        width: 480px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+@media screen and (max-width: 1270px) {
+    .lessonsQiize{
+        width: 400px;
+        font-size: 14px;
+    }
+    .quizeContainer {
+        width: 400px;
+    }
+    .quizePlayAndTest {
+        width: 400px;
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 1160px) {
+    .quize {
+        background-size: 475px 470px, cover;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .quizeContainer {
+        gap: 30px;
+    }
+    .bodyQuize {
+        min-height: 660px;
+        width: auto;
+        padding-top: 94px;
+        padding-bottom: 75px;
+        margin: 0 5.76% 0 6.83%;
+    }
+    .btnQuize > span {
+        font-size: 13px;
+        /*top: 12px;*/
+    }
+    .btnQuize > img {
+        width: 110px;
+        height: 40px;
+    }
+    .quize {
+        background-position: right 9% bottom 50%, center;
+    }
+    .bodyResult{
+        width: auto;
+        padding-top: 102px;
+        margin: 0px 6.9% 0px 6.8%;
+    }
+}
+@media screen and (max-width: 980px) {
+    .quize {
+        background-size: 420px 390px, cover;
+    }
+    .lessonsQiize {
+        height: 60px;
+        width: 380px;
+        font-size: 14px;
+    }
+    .quizeContainer {
+        width: 380px;
+    }
+    .quizePlayAndTest {
+        width: 380px;
+        font-size: 23px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .bodyQuize{
+        min-height: 530px;
+    }
+    .quizePlayAndTest {
+        width: 330px;
+        font-size: 20px;
+    }
+    .lessonsQiize {
+        height: 50px;
+        width: 330px;
+    }
+    .quizeContainer {
+        width: 330px;
+    }
+    .quize {
+        background-size: 360px 330px, cover;
+    }
+}
+@media screen and (max-width: 800px) {
+    .quize {
+        background-size: 300px 270px, cover;
+    }
+}
+@media screen and (max-width: 710px) {
+    .quize {
+        background-size: 240px 200px, cover;
+        background-position: right 5% bottom 40%, center;
+    }
+    .quizeContainer {
+        width: 310px;
+    }
+    .lessonsQiize {
+        height: 45px;
+        width: 310px;
+        font-size: 11px;
+    }
+    .quizePlayAndTest {
+        width: 310px;
+        font-size: 18px;
+    }
+    .btnQuize > span {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 599px) {
+    #main{
+        padding-top: 60px;
+    }
+    .quize{
+        width: 100%;
+        /*height: 830px;*/
+        height: min-content;
+        background-image: url("../images/background-quize-image.png");
+        background-color: #5D9A9D;
+        background-size: 225px 204px;
+        background-position: top 9% center;
+        background-repeat: no-repeat;
+    }
+    .bodyResult {
+        width: auto;
+        padding-top: 224px;
+        padding-bottom: 62px;
+    }
+    .bodyQuize {
+        /*height: 770px;*/
+        height: min-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 302px;
+        padding-bottom: 50px;
+    }
+    .resultBlackboard{
+        height: auto;
+    }
+    .quizePlayAndTest{
+        width: 100%;
+        font-family: 'RobotoSlab_',sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.73px;
+        text-align: center;
+    }
+    .lessonsQiize {
+        height: 47px;
+        width: 100%;
+    }
+    .titleResult{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: center;
+    }
+    .resultBlackboardContainer img{
+        width: 100%;
+        height: auto;
+    }
+    .resultBlackboardCount{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 37px;
+    }
+    .resultBlackboardResult{
+        font-family: "Roboto_",sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24.14px;
+    }
+    .resultBlackboardCntered {
+        width: 267px;
+        height: 72px;
+    }
+    .resultButtons{
+        width: 100%;
+        height: 110px;
+        flex-direction: column;
+        margin-top: 112px;
+    }
+    .btnResult1 > img, .btnResult2 > img{
+        width: 93px;
+        height: 43px;
+    }
+    .result .btnResult1 > span, .result .btnResult2 > span{
+        font-family: 'Roboto_',sans-serif;
+        font-size: 8px;
+        font-weight: 400;
+        /*line-height: 9.66px;*/
+        /*top: 17px;*/
+    }
+}
+@media screen and (max-width: 360px) {
+
+}
