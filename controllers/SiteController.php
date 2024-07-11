@@ -347,18 +347,27 @@ class SiteController extends Controller
             $id = intval($this->request->get('indID'));
             $type = intval($this->request->get('type'));
             $wishlist = AcWishlist::addWishlist($id,$type);
-            if($_COOKIE['language'] == 'am'){
-                $title = 'fvafvadfvadvfadvf';
-                $btn_name = 'All dsf';
-            }elseif ($_COOKIE['language'] == 'ru'){
-                $title = 'vvfvzsdvfsdfv.';
-                $btn_name = 'All dsf';
-            }elseif ($_COOKIE['language'] == 'en'){
-                $title = 'Go to the All Courses tab to create a wishlist.';
-                $btn_name = 'All dsf';
-            }
-            return json_encode(['wishlist' => $wishlist, 'title' => $title, 'btn_name' => $btn_name]);
+            return $wishlist;
         }
+     }
+
+     public function actionRemoveWishlist(){
+         if($this->request->isGet){
+             $id = intval($this->request->get('indID'));
+             $type = intval($this->request->get('type'));
+             $wishlist = AcWishlist::removeWishlist($id,$type);
+             if($_COOKIE['language'] == 'am'){
+                 $title = 'fvafvadfvadvfadvf';
+                 $btn_name = 'All dsf';
+             }elseif ($_COOKIE['language'] == 'ru'){
+                 $title = 'vvfvzsdvfsdfv.';
+                 $btn_name = 'All dsf';
+             }elseif ($_COOKIE['language'] == 'en'){
+                 $title = 'Go to the All Courses tab to create a wishlist.';
+                 $btn_name = 'All dsf';
+             }
+             return json_encode(['wishlist' => $wishlist, 'title' => $title, 'btn_name' => $btn_name]);
+         }
      }
 
     public function generateRandomString($length = 10) {

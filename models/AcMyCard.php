@@ -49,7 +49,6 @@ class AcMyCard extends \yii\db\ActiveRecord
         ];
     }
     public static function addCard($id){
-        date_default_timezone_set("Asia/Yerevan");
         $user_id = Yii::$app->user->identity->id;
         $add_card_exist = AcMyCard::find()->where(['and',['status' => '1'],['user_id' => $user_id],['lessons_id' => $id]])->exists();
         if (!$add_card_exist){

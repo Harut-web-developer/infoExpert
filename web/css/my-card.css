@@ -380,37 +380,6 @@
     width: 28.09px;
     height: 28.09px;
 }
-.myCardInfoButtonField{
-    width: calc(100%);
-    height: 48px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.myCardInfoButtonField > button{
-    background: transparent;
-    border: none;
-    margin-left: 37px;
-    position: relative;
-}
-.myCardInfoButtonField > button:hover img{
-    content: url("../images/wishlist1hover.png");
-}
-.myCardInfoButtonField > button > span{
-    position: absolute;
-    top: 13px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-family: "Roboto_", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-}
-.myCardInfoButtonField > button:hover span{
-    color: white;
-}
 .btnGroupLikeMarket{
     width: 99px;
     height: 43px;
@@ -558,10 +527,6 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1700px) {
-    .myCardInfoButtonField > button > a {
-        top: 9px;
-        font-size: 13px;
-    }
     .myCoursesProfileField {
         width: 380px;
     }
@@ -570,12 +535,6 @@ ion-icon {
     }
     .myCardBlockInfo {
         align-items: end;
-    }
-    .myCardInfoButtonField {
-        width: calc(90%);
-    }
-    .myCardInfoButtonField > button {
-        margin-left: 0;
     }
     .myCoursesFieldSection {
         margin: 36px 36px 37px 45px;
@@ -593,18 +552,8 @@ ion-icon {
         height: 37px;
         border: 1px;
     }
-    .myCardInfoButtonField > button > img {
-        width: auto;
-        height: 37px;
-    }
-    .myCardInfoButtonField > button > span {
-        top: 5px
-    }
 }
 @media screen and (max-width: 1600px) {
-    /*.myCardImageBlock > img{*/
-    /*    height: 170px;*/
-    /*}*/
     .myCoursesProfileField{
         width: 319px;
     }
@@ -624,14 +573,6 @@ ion-icon {
     .btnGroupLikeMarket .cardImgKarzina {
         width: 34px;
         height: 34px;
-    }
-    .myCardInfoButtonField > button > span {
-        top: 9px;
-        font-size: 13px;
-    }
-    .myCardInfoButtonField > button > img{
-        width: 87px;
-        height: 39px;
     }
     .myCardImageBlock .span2_2 {
         font-size: 18px;
@@ -696,10 +637,6 @@ ion-icon {
         width: 160px;
         height: 160px;
     }
-    .myCardInfoButtonField > button > span {
-        top: 6px;
-        font-size: 11px;
-    }
     .btnGroupLikeMarket {
         width: 74px;
     }
@@ -744,10 +681,6 @@ ion-icon {
     .myCardFieldAcceptCourses {
         grid-auto-columns: calc(100% / 2);
         gap: 4px;
-    }
-    .myCardInfoButtonField > button > img {
-        width: auto;
-        height: 28px;
     }
     .large-font {
         width: 28px;
@@ -907,19 +840,6 @@ ion-icon {
     .myCardInfoTextIcon{
         height: 103px;
         width: 180px;
-    }
-    .myCardInfoButtonField{
-        height: 31px;
-        width: 146px;
-    }
-    .myCardInfoButtonField > button > img{
-        height: 31px;
-        width: 72px;
-    }
-    .myCardInfoButtonField > button > span{
-        top: 8px;
-        font-size: 11px;
-        width: 100%;
     }
     .btnGroupLikeMarket{
         height: 22px;
@@ -1095,18 +1015,6 @@ ion-icon {
     .myCardInfoTextIcon {
         height: 80px;
         width: 160px;
-    }
-    .myCardInfoButtonField > button > img {
-        height: 30px;
-        width: 70px;
-    }
-    .myCardInfoButtonField > button > span{
-        font-family: 'Roboto_',sans-serif;
-        font-size: 10px;
-        font-weight: 500;
-        line-height: 11.72px;
-        text-align: center;
-        top: 10px;
     }
     .myCoursesBlocksFieldMain {
         height: 263px;
@@ -1296,18 +1204,6 @@ ion-icon {
         font-size: 14px;
         font-weight: 500;
         line-height: 17.36px;
-    }
-    .myCardInfoButtonField{
-        width: 240px;
-        height: 43px;
-    }
-    .myCardInfoButtonField > button > img{
-        width: 97px;
-        height: 41px;
-    }
-    .myCardInfoButtonField > button > span{
-        top: 15px;
-        font-size: 14px;
     }
     .btnGroupLikeMarket{
         width: 102px;
