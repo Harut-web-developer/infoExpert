@@ -73,7 +73,7 @@ if ($language == 'en') {
                 <?php }} ?>
             </ul>
             <?php if (!empty($wishlist_blogs)){?>
-                <div class="courseMobileBtn">
+                <div class="courseMobileBtnBlog">
                     <button id="blogsBtnMobile">
                         <img src="/images/coursesBtn.png" alt="">
                     </button>

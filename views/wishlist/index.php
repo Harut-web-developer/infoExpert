@@ -216,7 +216,7 @@ if ($language == 'en') {
                                                         <div class='red-bg'></div>
                                                     </ion-icon>
                                                 </div>
-                                                <img class="footerImg3" src="/images/courses5.png" alt="" draggable="false">
+                                                <img data-id="<?=$wishlist_cours['lessons_id']?>" class="footerImg3 addMyCard" src="/images/courses5.png" alt="" draggable="false">
                                             </div>
                                         </div>
                                     </div>

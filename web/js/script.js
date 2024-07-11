@@ -232,16 +232,7 @@ if (window.location.pathname == '/') {
     });
 
 }
-document.querySelectorAll('ion-icon').forEach(icon => {
-    if (icon.getAttribute('data-active') === "1") {
-        icon.classList.add('active');
-    } else {
-        icon.classList.remove('active');
-    }
-    icon.addEventListener('click', function() {
-        this.classList.toggle('active');
-    });
-});
+
 if (window.location.pathname == '/my-card/index' && $(window).width() <= 600){
     document.addEventListener('scroll', function() {
         const bottomImages = document.getElementById('totalPriceField');
@@ -442,56 +433,71 @@ $(document).ready(function () {
         let thisItem = $(this);
         let type = $(this).data('type');
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
-        $.ajax({
-            url: "/site/get-wishlist",
-            method: 'get',
-            datatype: 'json',
-            data: {
-                indID: indID,
-                type: type,
-                _csrf: csrfToken
-            },
-            success: function (data) {
-                let parse_data = JSON.parse(data);
-                if (window.location.pathname == '/wishlist/index' && parse_data.wishlist == 'inactivate'){
-                    if (thisItem.closest('ul').hasClass('carousel_')){
-                        thisItem.closest('.card_').remove();
-                    }else if (thisItem.closest('ul').hasClass('carousel_2')) {
-                        thisItem.closest('.card_2').remove();
-                        if ($('.carousel_2').children('li').length === 0){
-                            $('changeBody2').remove();
-                            $('body').find('.topSlider').html('<div class="changeBody1">' +
-                                '<span class="title">'+ parse_data.title +'</span>' +
-                                '<div class="applyNowBtnField">' +
-                                '<a class="coursesHref" href="/courses/index">' +
-                                '<img src="/images/buttonImg.png" alt="">' +
-                                '<span>'+ parse_data.btn_name +'</span>' +
-                                '</a>' +
-                                '</div>' +
-                                '</div>')
+        if ($(this).hasClass('active')){
+            $.ajax({
+                url: "/site/get-wishlist",
+                method: 'get',
+                datatype: 'json',
+                data: {
+                    indID: indID,
+                    type: type,
+                    _csrf: csrfToken
+                },
+            })
+        }else {
+            $.ajax({
+                url: "/site/remove-wishlist",
+                method: 'get',
+                datatype: 'json',
+                data: {
+                    indID: indID,
+                    type: type,
+                    _csrf: csrfToken
+                },
+                success: function (data) {
+                    let parse_data = JSON.parse(data);
+                    if (window.location.pathname == '/wishlist/index' && parse_data.wishlist == 'delete'){
+                        if (thisItem.closest('ul').hasClass('carousel_')){
+                            thisItem.closest('.card_').remove();
+                        }else if (thisItem.closest('ul').hasClass('carousel_2')) {
+                            thisItem.closest('.card_2').remove();
+                            if ($('.carousel_2').children('li').length === 0){
+                                $('changeBody2').remove();
+                                $('body').find('.topSlider').html('<div class="changeBody1">' +
+                                    '<span class="title">'+ parse_data.title +'</span>' +
+                                    '<div class="applyNowBtnField">' +
+                                    '<a class="coursesHref" href="/courses/index">' +
+                                    '<img src="/images/buttonImg.png" alt="">' +
+                                    '<span>'+ parse_data.btn_name +'</span>' +
+                                    '</a>' +
+                                    '</div>' +
+                                    '</div>')
+                            }
+                        }else if (thisItem.closest('ul').hasClass('mobileCourses')){
+                            thisItem.closest('.card_2').remove();
+                            if ($('.mobileCourses').children('.card_2').length === 0){
+                                $('wishlistCardsField').remove();
+                                $('body').find('.wishlistMobile').html('<div class="changeBody1">' +
+                                    '<span class="title">'+ parse_data.title +'</span>' +
+                                    '<div class="applyNowBtnField">' +
+                                    '<a class="coursesHref" href="/courses/index">' +
+                                    '<img src="/images/buttonImg.png" alt="">' +
+                                    '<span>'+ parse_data.btn_name +'</span>' +
+                                    '</a>' +
+                                    '</div>' +
+                                    '</div>')
+                            }
                         }
-                    }else if (thisItem.closest('ul').hasClass('mobileCourses')){
-                        thisItem.closest('.card_2').remove();
-                        if ($('.mobileCourses').children('.card_2').length === 0){
-                            $('wishlistCardsField').remove();
-                            $('body').find('.wishlistMobile').html('<div class="changeBody1">' +
-                                '<span class="title">'+ parse_data.title +'</span>' +
-                                '<div class="applyNowBtnField">' +
-                                '<a class="coursesHref" href="/courses/index">' +
-                                '<img src="/images/buttonImg.png" alt="">' +
-                                '<span>'+ parse_data.btn_name +'</span>' +
-                                '</a>' +
-                                '</div>' +
-                                '</div>')
+                    }else if (window.location.pathname == '/wishlist/blogs-wishlist' && parse_data.wishlist == 'inactivate'){
+                        if (thisItem.closest('ul').hasClass('blogsWishlist')){
+                            thisItem.closest('.wishlistCardsField').remove();
                         }
-                    }
-                }else if (window.location.pathname == '/wishlist/blogs-wishlist' && parse_data.wishlist == 'inactivate'){
-                    if (thisItem.closest('ul').hasClass('blogsWishlist')){
-                        thisItem.closest('.wishlistCardsField').remove();
                     }
                 }
-            }
-        })
+            })
+        }
+
+
     })
     $('body').on('click', '.addMyCard', function () {
         let lesson_id = $(this).data('id');
@@ -506,7 +512,16 @@ $(document).ready(function () {
             }
         })
     })
-
+    document.querySelectorAll('ion-icon').forEach(icon => {
+        if (icon.getAttribute('data-active') === "1") {
+            icon.classList.add('active');
+        } else {
+            icon.classList.remove('active');
+        }
+        icon.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    });
 })
 if (window.location.pathname == '/') {
     let seeMoreBtnTestimonial = document.querySelector('#testimonialBtnMobile');

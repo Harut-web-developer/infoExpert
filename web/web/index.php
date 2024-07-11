@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set("Asia/Yerevan");
 error_reporting(E_ALL);
 if($_SERVER['REQUEST_URI'] == ''){
     header('location /admin/login');

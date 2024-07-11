@@ -146,8 +146,13 @@
     line-height: 26px;
     text-align: left;
     color: #FFFFFF;
+    height: 50px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: pre-wrap;
 }
 .cardBody .span2{
     font-family: "Roboto_",sans-serif;
@@ -294,9 +299,9 @@
     text-align: left;
     color: #FFFFFF;
     width: 100%;
-    height: 22px;
+    height: 40px;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -714,6 +719,11 @@ ion-icon {
 
     .cardCenter > .cardtxt1{
         width: auto;
+        height: 40px;
+    }
+    .cardCenter > .cardtxt2{
+        width: auto;
+        height: 40px;
     }
     .cardtxt2 img {
         float: inline-start;
@@ -920,19 +930,19 @@ ion-icon {
         width: 260px;
     }
     .cardtxt1 span{
-        height: 33px;
+        height: 33px !important;
         font-family: "Roboto_",sans-serif;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
-        line-height: 15.92px;
+        line-height: 16.92px;
         text-align: left;
     }
     .cardtxt2 span{
-        height: 16px;
+        height: 33px !important;
         font-family: "Roboto_",sans-serif;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
-        line-height: 14.92px;
+        line-height: 16.92px;
         text-align: left;
         display: block;
     }
@@ -1018,10 +1028,11 @@ ion-icon {
         justify-content: space-between;
     }
     .cardBody .span1 {
+        height: 35px;
         font-family: "RobotoSlab_",sans-serif;
         font-size: 14px;
         font-weight: 500;
-        line-height: 15.3px;
+        line-height: 18.3px;
         text-align: left;
     }
     .cardCenter {
@@ -1303,6 +1314,12 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1100px) {
+    .cardCenter > .cardtxt1 {
+        height: 25px;
+    }
+    .cardCenter > .cardtxt2 {
+        height: 25px;
+    }
     .myCoursesPhoto{
         height: 127px;
     }
@@ -1528,6 +1545,7 @@ ion-icon {
         padding-top: 0;
     }
     .cardBody .span1{
+        height: 30px;
         font-family: "RobotoSlab_",sans-serif;
         font-size: 11px;
         font-weight: 500;
@@ -1564,19 +1582,20 @@ ion-icon {
         height: 14px;
     }
     .cardtxt1 span{
-        height: 28px;
+        height: 25px;
         font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
-        line-height: 12.92px;
+        line-height: 13.92px;
         text-align: left;
         margin-left: 6px;
     }
     .cardtxt2 span{
+        height: 25px !important;
         font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
-        line-height: 14.92px;
+        line-height: 13.92px;
         text-align: left;
         margin-left: 6px;
     }
@@ -1592,7 +1611,7 @@ ion-icon {
         height: 22px;
     }
     .cardCenter {
-        height: 40px;
+        height: 60px;
     }
     .cardCoursesBody {
         width: 170px;
@@ -1968,7 +1987,8 @@ ion-icon {
 }
 @media screen  and (min-width: 300px) and (max-width: 399px) {
     .cardBody .span1 {
-        line-height: 17.3px;
+        line-height: 20.3px;
+        height: 40px;
     }
     .courses{
         background: #5D9A9D;
@@ -2029,7 +2049,7 @@ ion-icon {
     }
     .cardCenter{
         width: 278px;
-        height: 70px;
+        height: 80px;
     }
     .footerCard{
         width: 240px;
@@ -2037,14 +2057,18 @@ ion-icon {
     }
     .cardtxt1{
         width: 100%;
-        height: 38px;
+        height: 35px !important;
+    }
+    .cardtxt2{
+        width: 100%;
+        height: 35px !important;
     }
     .cardtxt1 > img{
         width: 28px !important;
         height: 28px !important;
     }
     .cardtxt1 > span{
-        height: 34px;
+        height: 35px !important;
         width: 100%;
         font-size: 14px;
         line-height: 17.36px;
@@ -2054,7 +2078,7 @@ ion-icon {
         height: 28px !important;
     }
     .cardtxt2 > span{
-        height: 18px;
+        height: 35px !important;
         width: 100%;
         font-size: 14px;
         line-height: 17.36px;
@@ -2113,7 +2137,8 @@ ion-icon {
 }
 @media screen  and (min-width: 400px) and (max-width: 599px) {
     .cardBody .span1 {
-        line-height: 17.3px;
+        line-height: 20.3px;
+        height: 40px;
     }
     .courses{
         background: #5D9A9D;
@@ -2174,7 +2199,7 @@ ion-icon {
     }
     .cardCenter{
         width: 278px;
-        height: 70px;
+        height: 80px;
     }
     .footerCard{
         width: 240px;
@@ -2182,7 +2207,11 @@ ion-icon {
     }
     .cardtxt1{
         width: 100%;
-        height: 38px;
+        height: 35px !important;
+    }
+    .cardtxt2{
+        width: 100%;
+        height: 35px !important;
     }
     .cardtxt1 > img{
         width: 28px !important;
@@ -2192,14 +2221,14 @@ ion-icon {
         width: 100%;
         font-size: 14px;
         line-height: 17.36px;
-        height: 34px;
+        height: 35px !important;
     }
     .cardtxt2 > img{
         width: 28px !important;
         height: 28px !important;
     }
     .cardtxt2 > span{
-        height: 18px;
+        height: 35px !important;
         width: 100%;
         font-size: 14px;
         line-height: 17.36px;

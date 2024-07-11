@@ -50,14 +50,53 @@ document.addEventListener("DOMContentLoaded", function () {
     const firstCard = carousel.querySelector(".myCardBlocksField");
     slider(carousel, wrapper, firstCard);
 });
-// Like js
-document.querySelectorAll('.myCard ion-icon').forEach(icon => {
-    icon.addEventListener('click', function() {
-        this.classList.toggle('active');
-    });
-});
-$(document).ready(function() {
-    $('.myCardInfoButtonField button').on("click", function () {
-        window.location.href = '/my-card/checkout';
+// $(document).ready(function() {
+//     $('.myCardInfoButtonField button').on("click", function () {
+//         window.location.href = '/my-card/checkout';
+//     })
+// })
+$(document).ready(function () {
+    $('body').on('click','.removeItem',function () {
+        let itemId = $(this).data('remove');
+        let thisItem = $(this);
+        let csrfToken = $('meta[name="csrf-token"]').attr("content");
+        $.ajax({
+            url: '/my-card/remove-item',
+            method: 'get',
+            datatype: 'json',
+            data: {
+                itemId: itemId,
+                _csrf: csrfToken
+            },
+            success: function (data) {
+                let parseData = JSON.parse(data);
+                if (parseData === 'remove'){
+                    thisItem.closest('.myCardBlocksField').remove();
+                }
+            }
+        })
     })
+    $('body').on('click','.moveItem',function () {
+        let itemId = $(this).data('move');
+        let lessonId = $(this).data('lesson');
+        let thisItem = $(this);
+        let csrfToken = $('meta[name="csrf-token"]').attr("content");
+        $.ajax({
+            url: '/my-card/move-item',
+            method: 'get',
+            datatype: 'json',
+            data: {
+                itemId: itemId,
+                lessonId: lessonId,
+                _csrf: csrfToken
+            },
+            success: function (data) {
+                let parseData = JSON.parse(data);
+                if (parseData === 'moveAndDelete' || parseData === 'delete'){
+                    thisItem.closest('.myCardBlocksField').remove();
+                }
+            }
+        })
+    })
+
 })
