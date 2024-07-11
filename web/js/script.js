@@ -520,7 +520,8 @@ $(document).ready(function () {
             method: 'get',
             datatype: 'json',
             data: {
-
+                lessonId: lessonId,
+                _csrf: csrfToken
             }
         })
     })
