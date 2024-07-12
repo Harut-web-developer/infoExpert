@@ -27,7 +27,6 @@
     box-shadow: 0px 0px 6px 2px #549099;
 }
 .myCardTotalPrice{
-    /*width: 376px;*/
     width: max-content;
     height: 48px;
     display: flex;
@@ -44,15 +43,16 @@
     justify-content: end;
     align-items: center;
 }
-.myCardTotalPrice > button{
+.myCardTotalPrice > a{
     background: transparent;
     border: none;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
-.myCardTotalPrice > button:hover img{
+.myCardTotalPrice > a:hover img{
     content: url("../images/btncheckoutcardhover.png");
 }
 .myCardTotalPrice > span{
@@ -63,10 +63,8 @@
     color: white;
     margin-right: 10px;
 }
-.myCardTotalPrice > button > span{
+.myCardTotalPrice > a > span{
     position: absolute;
-    /*left: 0;*/
-    /*top: 14px;*/
     width: 100%;
     text-align: center;
     font-size: 16px;
@@ -75,7 +73,7 @@
     color: #F36528;
     text-decoration: none;
 }
-.myCardTotalPrice > button:hover span{
+.myCardTotalPrice > a:hover span{
     color: white;
 }
 .userProfileMenuField{
@@ -916,13 +914,12 @@ ion-icon {
         font-size: 18px;
         font-weight: 700;
     }
-    .myCardTotalPrice > button > img{
+    .myCardTotalPrice > a > img{
         height: 34px;
         width: 80px;
     }
-    .myCardTotalPrice > button > span{
+    .myCardTotalPrice > a > span{
         font-size: 12px;
-        /*top: 8px;*/
     }
     .starDiv {
         width: 57px;

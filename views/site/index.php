@@ -280,7 +280,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="cardsLike">
                                 <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                                 <div class='large-font'>
-                                    <ion-icon name="heart" data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'],2)?>" data-type="2">
+                                    <ion-icon name="heart" data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'], 2) ? AcWishlist::getWishlist($blog['id'], 2) : 0?>" data-type="2">
                                         <div class='red-bg'></div>
                                     </ion-icon>
                                 </div>
@@ -327,7 +327,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="cardsLike">
                                 <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                                 <div class='large-font'>
-                                    <ion-icon name="heart"  data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'],2)?>" data-type="2">
+                                    <ion-icon name="heart"  data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'],2) ? AcWishlist::getWishlist($blog['id'],2) : 0?>" data-type="2">
                                         <div class='red-bg'></div>
                                     </ion-icon>
                                 </div>
@@ -348,18 +348,19 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
 <div class="sectionEight">
     <div class="haveQuestions">
         <div class="questionTitle"><?=$GLOBALS['text']['sectionEightStill']?></div>
-        <form action="" class="questionForm">
+        <form action="" class="questionForm" method="post">
+            <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
             <div class="questionFields">
                 <div class="leftQuestionField">
-                    <input type="text" name="name" placeholder="<?=$GLOBALS['text']['sectionEightName']?>">
-                    <input type="text"name="email" placeholder="<?=$GLOBALS['text']['sectionEightEmail']?>">
+                    <input type="text" name="name" required placeholder="<?=$GLOBALS['text']['sectionEightName']?>">
+                    <input type="text"name="email" required placeholder="<?=$GLOBALS['text']['sectionEightEmail']?>">
                 </div>
                 <div class="rightQuestionField">
-                    <textarea name="message" placeholder="<?=$GLOBALS['text']['sectionEightMessage']?>"></textarea>
+                    <textarea name="question" required placeholder="<?=$GLOBALS['text']['sectionEightMessage']?>"></textarea>
                 </div>
             </div>
             <div class="questionbutton">
-                <button type="submit">
+                <button type="submit" name="haveQuestion">
                     <img src="/images/questionbtn.png" alt="">
                     <span><?=$GLOBALS['text']['sectionEightBtn']?></span>
                 </button>

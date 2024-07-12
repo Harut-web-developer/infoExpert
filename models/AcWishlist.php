@@ -53,7 +53,7 @@ class AcWishlist extends \yii\db\ActiveRecord
         ];
     }
     public static function addWishlist($id,$type){
-
+        date_default_timezone_set("Asia/Yerevan");
         $user_id = Yii::$app->user->identity->id;
         if($user_id != null){
             $wishlist_blog = new AcWishlist();

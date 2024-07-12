@@ -51,7 +51,6 @@ class MyCardController extends \yii\web\Controller
     {
         $language = $_COOKIE['language'];
         $user_id = Yii::$app->user->identity->id;
-//        echo "<pre>";
         $my_card = AcLessons::find()->select('ac_lessons.id as lesson_id,ac_my_card.id as my_card_id,
         lesson_name_'.$language.' as lesson_name, lesson_title_'.$language.' as lesson_title,
         lesson_content_'.$language.' as lesson_content')
@@ -59,15 +58,29 @@ class MyCardController extends \yii\web\Controller
             ->where(['and',['ac_my_card.status' => '1'],['ac_my_card.user_id' => $user_id],])
             ->asArray()
             ->all();
-//        var_dump($my_card);
-//        exit();
         return $this->render('index',[
             'my_card' => $my_card
         ]);
     }
     public function actionCheckout()
     {
-        return $this->render('checkout');
+        $language = $_COOKIE['language'];
+        $user_id = Yii::$app->user->identity->id;
+;
+            if ($this->request->get('lesson_id')){
+                $lesson_id = intval($this->request->get('lesson_id'));
+                $lessons = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name')
+                    ->where(['status' => '1'])
+                    ->andWhere(['ac_lessons.id' => $lesson_id]);
+            }else{
+                $lessons = AcMyCard::find()->select('lesson_name_'.$language.' as lesson_name')
+                    ->leftJoin('ac_lessons', 'ac_lessons.id = ac_my_card.lessons_id')
+                    ->where(['and',['ac_my_card.status' => '1'],['ac_my_card.user_id' => $user_id]]);
+            }
+        $lessons = $lessons->asArray()->all();
+        return $this->render('checkout',[
+            'lessons' => $lessons
+        ]);
     }
 
     public function actionCongratulation()

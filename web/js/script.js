@@ -512,19 +512,6 @@ $(document).ready(function () {
             }
         })
     })
-    $('body').on('click','.buyCourses',function () {
-        let lessonId = $(this).data('buy');
-        let csrfToken = $('meta[name="csrf-token"]').attr("content");
-        $.ajax({
-            url: '/site/simple-buy',
-            method: 'get',
-            datatype: 'json',
-            data: {
-                lessonId: lessonId,
-                _csrf: csrfToken
-            }
-        })
-    })
     document.querySelectorAll('ion-icon').forEach(icon => {
         if (icon.getAttribute('data-active') === "1") {
             icon.classList.add('active');

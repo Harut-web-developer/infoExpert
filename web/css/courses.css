@@ -591,25 +591,27 @@
     justify-content: space-between;
     align-items: center;
 }
-.footerCard button{
+.footerCard a{
     background: transparent;
     border: none;
     position: relative;
     margin-left: 39px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.footerCard button > img{
+.footerCard a > img{
     width: 113px;
     height: 50px;
 }
-.footerCard button:hover img{
+.footerCard a:hover img{
     content: url("../images/wishlist1hover.png");
 }
-.footerCard button > span{
+.footerCard a > span{
     color: white;
     width: 100%;
     position: absolute;
-    top: 15px;
-    left: 0px;
     font-family: 'Roboto_',sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -949,14 +951,10 @@ ion-icon {
     .txt1, .txt2, .courses .title0 {
         font-size: 32px;
     }
-    .footerCard button {
-        position: relative;
-    }
-    .footerCard button > span {
-        top: 16px;
+    .footerCard a > span {
         font-size: 14px;
     }
-    .footerCard button {
+    .footerCard a {
         margin-left: 0px;
     }
     .starDivCourses {
@@ -1042,12 +1040,10 @@ ion-icon {
         flex-direction: column;
         justify-content: space-between;
     }
-    .footerCard button > span {
-        /*margin-top: 6px;*/
-        top: 11px;
+    .footerCard a > span {
         font-size: 11px;
     }
-    .footerCard button > img{
+    .footerCard a > img{
         width: 90px;
         height: 40px;
     }
@@ -1280,13 +1276,9 @@ ion-icon {
         width: 22px;
         height: 22px;
     }
-    .coursisBtnField > button > img{
+    .coursisBtnField > a > img{
         width: 72px;
         height: 31px;
-    }
-    .footerCard button > span{
-        top: 7px;
-        /*font-size: 10px;*/
     }
     .footerCard {
         width: 78%;
@@ -1344,14 +1336,12 @@ ion-icon {
         width: 16px;
         height: 15px;
     }
-    .footerCard button > span{
+    .footerCard a > span{
         font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
         line-height: 11.72px;
         text-align: center;
-        left: 0;
-        top: 9px
     }
     .like-cnt, .footerImg3 {
         width: 22px;
@@ -1599,7 +1589,7 @@ ion-icon {
         text-align: left;
         margin-left: 6px;
     }
-    .footerCard button {
+    .footerCard a {
         margin-left: 0px;
     }
     .footerImg1{
@@ -2110,12 +2100,11 @@ ion-icon {
     .amd{
         font-size: 16px !important;
     }
-    .footerCard > button > img{
+    .footerCard > a > img{
         width: 97px;
         height: 41px;
     }
-    .footerCard > button > span{
-        top: 15px;
+    .footerCard > a > span{
         font-size: 14px;
     }
     .large-font{
@@ -2260,12 +2249,11 @@ ion-icon {
     .amd{
         font-size: 16px !important;
     }
-    .footerCard > button > img{
+    .footerCard > a > img{
         width: 97px;
         height: 41px;
     }
-    .footerCard > button > span{
-        top: 15px;
+    .footerCard > a > span{
         font-size: 14px;
     }
     .large-font{

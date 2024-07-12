@@ -61,7 +61,7 @@ if ($language == 'en') {
                                     <div class="cardsLike_">
                                         <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$wishlist_blog['blog_id']]) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
                                         <div class='large-font'>
-                                            <ion-icon name="heart" data-id="<?=$wishlist_blog['blog_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_blog['blog_id'],2)?>" data-type="2">
+                                            <ion-icon name="heart" data-id="<?=$wishlist_blog['blog_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_blog['blog_id'],2) ? AcWishlist::getWishlist($wishlist_blog['blog_id'],2) : 0?>" data-type="2">
                                                 <div class='red-bg'></div>
                                             </ion-icon>
                                         </div>

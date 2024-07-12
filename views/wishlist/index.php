@@ -102,14 +102,14 @@ if ($language == 'en') {
                                             </div>
                                             <div class="footerCard_2">
                                                 <div class="wishlistBtnField">
-                                                    <button>
+                                                    <a href="/my-card/checkout?lesson_id=<?=$wishlist_cours['lessons_id']?>">
                                                         <img src="/images/wishlist1.png" alt="">
                                                         <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
-                                                    </button>
+                                                    </a>
                                                 </div>
                                                 <div class="booterImgs">
                                                     <div class='large-font largeFont'>
-                                                        <ion-icon name="heart" class="iconLike"  data-id="<?=$wishlist_cours['lessons_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_cours['lessons_id'],1)?>" data-type="1">
+                                                        <ion-icon name="heart" class="iconLike"  data-id="<?=$wishlist_cours['lessons_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_cours['lessons_id'],1) ? AcWishlist::getWishlist($wishlist_cours['lessons_id'],1) : 0?>" data-type="1">
                                                             <div class='red-bg'></div>
                                                         </ion-icon>
                                                     </div>
@@ -123,11 +123,11 @@ if ($language == 'en') {
                         </div>
                     <?php }else{ ?>
                         <div class="changeBody1">
-                            <span class="title">Go to the All Courses tab to create a wishlist</span>
+                            <span class="title"><?=$GLOBALS['text']['titleOfLink']?></span>
                             <div class="applyNowBtnField">
                                 <a class="coursesHref" href="/courses/index">
                                     <img src="/images/buttonImg.png" alt="">
-                                    <span>All courses</span>
+                                    <span><?=$GLOBALS['text']['titleOfBtn']?></span>
                                 </a>
                             </div>
                         </div>
@@ -155,7 +155,7 @@ if ($language == 'en') {
                                             <div class="cardsLike_">
                                                 <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$wishlist_blog['blog_id']]) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>
                                                 <div class='large-font'>
-                                                    <ion-icon name="heart" data-id="<?=$wishlist_blog['blog_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_blog['blog_id'],2)?>" data-type="2">
+                                                    <ion-icon name="heart" data-id="<?=$wishlist_blog['blog_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_blog['blog_id'],2) ? AcWishlist::getWishlist($wishlist_blog['blog_id'],2) : 0?>" data-type="2">
                                                         <div class='red-bg'></div>
                                                     </ion-icon>
                                                 </div>
@@ -206,13 +206,13 @@ if ($language == 'en') {
                                             </div>
                                         </div>
                                         <div class="footerCard_2">
-                                            <button>
+                                            <a href="/my-card/checkout?lesson_id=<?=$wishlist_cours['lessons_id']?>">
                                                 <img src="/images/wishlist1.png" alt="">
                                                 <span><?=$GLOBALS['text']['seeMoreBtn']?></span>
-                                            </button>
+                                            </a>
                                             <div class="booterImgs">
                                                 <div class='large-font largeFont'>
-                                                    <ion-icon name="heart" class="iconLike" data-id="<?=$wishlist_cours['lessons_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_cours['lessons_id'],1)?>" data-type="1">
+                                                    <ion-icon name="heart" class="iconLike" data-id="<?=$wishlist_cours['lessons_id']?>" data-active="<?=AcWishlist::getWishlist($wishlist_cours['lessons_id'],1) ? AcWishlist::getWishlist($wishlist_cours['lessons_id'],1) : 0?>" data-type="1">
                                                         <div class='red-bg'></div>
                                                     </ion-icon>
                                                 </div>
@@ -231,11 +231,11 @@ if ($language == 'en') {
                     </div>
                 <?php }else{?>
                     <div class="changeBody1">
-                        <span class="title">Go to the All Courses tab to create a wishlist </span>
+                        <span class="title"><?=$GLOBALS['text']['titleOfLink']?></span>
                         <div class="applyNowBtnField">
                             <a class="coursesHref" href="/courses/index">
                                 <img src="/images/buttonImg.png" alt="">
-                                <span>All courses</span>
+                                <span><?=$GLOBALS['text']['titleOfBtn']?></span>
                             </a>
                         </div>
                     </div>

@@ -95,19 +95,6 @@ if ($language == 'en') {
                                                         <span><?=$item['lesson_content']?></span>
                                                     </div>
                                                 </div>
-<!--                                                <div class="myCardInfoButtonField">-->
-<!--                                                    <button>-->
-<!--                                                        <img src="/images/btnBuyIcon.png" alt="">-->
-<!--                                                        <span>--><?php //=$GLOBALS['text']['myCardBtn']?><!--</span>-->
-<!--                                                    </button>-->
-<!--                                                    <div class="btnGroupLikeMarket">-->
-<!--                                                        <div class='large-font largeFont'>-->
-<!--                                                            <ion-icon name="heart" class="iconLike">-->
-<!--                                                                <div class='red-bg'></div>-->
-<!--                                                            </ion-icon>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
                                             </div>
                                         </div>
                                     </div>
@@ -176,10 +163,10 @@ if ($language == 'en') {
             <div class="totalPriceFieldSection">
                 <div class="myCardTotalPrice">
                     <span><?=$GLOBALS['text']['myCardTotal']?>:  $70000</span>
-                    <button>
+                    <a href="/my-card/checkout">
                         <img src="/images/btncheckoutcard.png" alt="">
                         <span><?=$GLOBALS['text']['myCardCheckout']?></span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

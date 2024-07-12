@@ -538,24 +538,26 @@ hr.new1 {
     height: 43px;
     border: 1px;
 }
-.wishlistBtnField > button{
+.wishlistBtnField > a{
     background: transparent;
     border: none;
     position: relative;
     margin-left: 39px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.wishlistBtnField > button > img{
+.wishlistBtnField > a > img{
     width: 113px;
     height: 49px;
 }
-.wishlistBtnField > button:hover img{
+.wishlistBtnField > a:hover img{
     content: url("../images/wishlist1hover.png");
 }
-.wishlistBtnField > button > span{
+.wishlistBtnField > a > span{
     color: white;
     position: absolute;
-    top: 15px;
-    left: 0px;
     width: 100%;
     text-align: center;
     font-family: 'Roboto_',sans-serif;
@@ -734,7 +736,7 @@ ion-icon {
     .img_2{
         height: auto;
     }
-    .wishlistBtnField > button {
+    .wishlistBtnField > a {
         margin-left: 20px;
     }
     .cardCenter_2 {
@@ -757,12 +759,11 @@ ion-icon {
     .usersProfile {
         height: min-content;
     }
-    .wishlistBtnField > button > img {
+    .wishlistBtnField > a > img {
         width: auto;
         height: 37px;
     }
-    .wishlistBtnField > button > span {
-        top: 9px;
+    .wishlistBtnField > a > span {
         font-size: 13px;
     }
     .footerImg3 {
@@ -964,15 +965,14 @@ ion-icon {
     .cardsTextInfo_ {
         padding: 21px 5% 0;
     }
-    .wishlistBtnField > button {
+    .wishlistBtnField > a {
         margin-left: 11px;
     }
-    .wishlistBtnField > button > img {
+    .wishlistBtnField > a > img {
         width: auto;
         height: 28px;
     }
-    .wishlistBtnField > button > span{
-        top: 5px;
+    .wishlistBtnField > a > span{
         font-size: 11px;
     }
     .footerImg3 {
@@ -1682,24 +1682,28 @@ ion-icon {
         width: 240px;
         height: 43px;
     }
-    .footerCard_2 > button{
+    .footerCard_2 > a{
         background: transparent;
         border: none;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .footerCard_2 > button > img{
+    .footerCard_2 > a > img{
         width: 97px;
         height: 41px;
     }
-    .footerCard_2 > button > span{
-        left: 0;
-        top: 8px;
+    .footerCard_2 > a > span{
         width: 100%;
+        font-family: "Roboto_",sans-serif;
+        font-weight: 500;
+        font-size: 14px;
         text-align: center;
         color: white;
         position: absolute;
     }
-    .footerCard_2 > button:hover img{
+    .footerCard_2 > a:hover img{
         content: url("../images/wishlist1hover.png");
     }
     .booterImgs{

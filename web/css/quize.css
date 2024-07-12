@@ -6,7 +6,7 @@
     background-position: right 9% bottom 36%, center;
 }
 .bodyQuize{
-    min-height: 87px;
+    min-height: 1000px;
     display: flex;
     align-items: center;
     width: 67%;
@@ -238,6 +238,9 @@
     }
 }
 @media screen and (max-width: 1600px){
+    .bodyQuize {
+        min-height: 880px;
+    }
     .quizeContainer {
         width: 550px;
     }
@@ -255,6 +258,9 @@
     }
 }
 @media screen and (max-width: 1420px) {
+    .bodyQuize {
+        min-height: 800px;
+    }
     .quize {
         background-size: 500px 470px, cover;
     }
@@ -355,6 +361,9 @@
     }
 }
 @media screen and (max-width: 800px) {
+    .bodyQuize {
+        min-height: 470px;
+    }
     .quize {
         background-size: 300px 270px, cover;
     }

@@ -6,7 +6,7 @@ use yii\web\YiiAsset;
 
 /** @var yii\web\View $this */
 
-$this->registerCssFile('@web/css/courses.css?as=4');
+$this->registerCssFile('@web/css/courses.css?as=45');
 $this->registerJsFile('@web/js/courses.js', ['position' => \yii\web\View::POS_END,'depends' => [YiiAsset::class],]);
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);
@@ -59,14 +59,14 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             </div>
                             <div class="footerCard">
                                 <div class="coursisBtnField">
-                                    <button class="buyCourses" data-buy="<?=$course['id']?>">
+                                    <a href="/my-card/checkout?lesson_id=<?=$course['id']?>" class="buyCourses" data-buy="<?=$course['id']?>">
                                         <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
                                         <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
-                                    </button>
+                                    </a>
                                 </div>
                                 <div class="booterImgs">
                                     <div class='large-font'>
-                                        <ion-icon name="heart" data-id="<?=$course['id']?>" data-active="<?=AcWishlist::getWishlist($course['id'],1)?>" data-type="1">
+                                        <ion-icon name="heart" data-id="<?=$course['id']?>" data-active="<?=AcWishlist::getWishlist($course['id'],1) ? AcWishlist::getWishlist($course['id'],1) : 0?>" data-type="1">
                                             <div class='red-bg'></div>
                                         </ion-icon>
                                     </div>
@@ -109,13 +109,13 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             </div>
                         </div>
                         <div class="footerCard">
-                            <button>
+                            <a href="/my-card/checkout?lesson_id=<?=$course['id']?>">
                                 <img class="footerImg1" src="/images/wishlist1.png" alt="" draggable="false">
                                 <span><?=$GLOBALS['text']['mycoursesBtn']?></span>
-                            </button>
+                            </a>
                             <div class="booterImgs">
                                 <div class='large-font'>
-                                    <ion-icon name="heart" data-id="<?=$course['id']?>" data-active="<?=AcWishlist::getWishlist($course['id'],1)?>" data-type="1">
+                                    <ion-icon name="heart" data-id="<?=$course['id']?>" data-active="<?=AcWishlist::getWishlist($course['id'],1) ? AcWishlist::getWishlist($course['id'],1) : 0?>" data-type="1">
                                         <div class='red-bg'></div>
                                     </ion-icon>
                                 </div>

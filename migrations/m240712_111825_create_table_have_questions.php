@@ -3,20 +3,20 @@
 use yii\db\Migration;
 
 /**
- * Class m240711_161927_create_table_checkout
+ * Class m240712_111825_create_table_have_questions
  */
-class m240711_161927_create_table_checkout extends Migration
+class m240712_111825_create_table_have_questions extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable('ac_checkout', [
+        $this->createTable('ac_have_questions', [
             'id' => $this->primaryKey(),
-            'user_id' => $this->integer(11)->defaultValue(null),
-            'lessons_id' => $this->integer(11)->defaultValue(null),
-            'price' => $this->integer(11)->defaultValue(null),
+            'name' => $this->string(255)->defaultValue(null),
+            'email' => $this->string(255)->defaultValue(null),
+            'question' => $this->text()->defaultValue(null),
             'status' => $this->string(255)->defaultValue(1),
             'create_date' => $this->timestamp(),
         ]);
@@ -27,7 +27,7 @@ class m240711_161927_create_table_checkout extends Migration
      */
     public function safeDown()
     {
-        echo "m240711_161927_create_table_checkout cannot be reverted.\n";
+        echo "m240712_111825_create_table_have_questions cannot be reverted.\n";
 
         return false;
     }
@@ -41,7 +41,7 @@ class m240711_161927_create_table_checkout extends Migration
 
     public function down()
     {
-        echo "m240711_161927_create_table_checkout cannot be reverted.\n";
+        echo "m240712_111825_create_table_have_questions cannot be reverted.\n";
 
         return false;
     }

@@ -130,7 +130,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <li><a href="/alumni/index"><?= $GLOBALS['text']['headerAlumni']?></a></li>
                         <li><a href=""><?= $GLOBALS['text']['tabletRecQuize']?></a></li>
                         <li><a href="/contact-us/index"><?= $GLOBALS['text']['tabletContact']?></a></li>
-                        <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
+                        <?php if(!empty(Yii::$app->user->identity)){ ?>
+                            <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
+                        <?php }?>
                     </ul>
                     <div class="searchFlagField">
                         <div class="tabletSearchField">
@@ -196,6 +198,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <div class="search-box">
                         <button class="btn-search"><img src="/images/search.png" alt=""></button>
                         <input type="text" class="input-search" placeholder="<?=$GLOBALS['text']['search']?>">
+                        <div class="searchField" style="width: 100%;height: min-content; min-height: 100px; background: green">
+
+                        </div>
                     </div>
                     <div class="profileField">
                         <?php if (empty(Yii::$app->user->identity)){?>

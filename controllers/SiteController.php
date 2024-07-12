@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\AcAnswers;
 use app\models\AcBlog;
 use app\models\AcCallback;
+use app\models\AcHaveQuestions;
 use app\models\AcLessons;
 use app\models\AcPartners;
 use app\models\AcReviews;
@@ -127,6 +128,18 @@ class SiteController extends Controller
             $call_back->course = $course;
             $call_back->create_date = date('Y-m-d H:i:s');
             $call_back->save();
+            return $this->redirect('/');
+        }
+        if ($this->request->isPost && isset($_POST['haveQuestion'])){
+            $name = $this->request->post('name');
+            $email = $this->request->post('email');
+            $question = $this->request->post('question');
+            $have_question = new AcHaveQuestions();
+            $have_question->name = $name;
+            $have_question->email = $email;
+            $have_question->question = $question;
+            $have_question->create_date = date('Y-m-d H:i:s');
+            $have_question->save();
             return $this->redirect('/');
         }
         $lessons = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();
@@ -357,14 +370,14 @@ class SiteController extends Controller
              $type = intval($this->request->get('type'));
              $wishlist = AcWishlist::removeWishlist($id,$type);
              if($_COOKIE['language'] == 'am'){
-                 $title = 'fvafvadfvadvfadvf';
-                 $btn_name = 'All dsf';
+                 $title = 'Սեխմեք «Բոլոր դասերը», որպեսզի ստեղծեք ձեր հավանածները';
+                 $btn_name = 'Բոլոր դասերը';
              }elseif ($_COOKIE['language'] == 'ru'){
-                 $title = 'vvfvzsdvfsdfv.';
-                 $btn_name = 'All dsf';
+                 $title = 'Перейдите на вкладку «Все курсы», чтобы создать список желаний';
+                 $btn_name = 'Все курсы';
              }elseif ($_COOKIE['language'] == 'en'){
-                 $title = 'Go to the All Courses tab to create a wishlist.';
-                 $btn_name = 'All dsf';
+                 $title = 'Go to the All Courses tab to create a wishlist';
+                 $btn_name = 'All courses';
              }
              return json_encode(['wishlist' => $wishlist, 'title' => $title, 'btn_name' => $btn_name]);
          }

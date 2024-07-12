@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    $('body').on('change','#accounting, #salary, #trade, #marketing', function () {
-        $(this).closest('.coursesBlocksRadio').children('div').children('div').children('input').not(this).prop('checked',false);
-    })
     $('body').on('change','#individual', function () {
         $(this).closest('.typeCoursesBlocksRadio').children('div').children('div').children('div').children('input').not(this).prop('checked',false);
         $(this).closest('.typeCoursesBlocksRadio').children('.group').find('.groupChildFields').css('display', 'none');

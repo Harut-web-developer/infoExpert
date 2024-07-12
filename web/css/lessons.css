@@ -172,13 +172,14 @@
     text-align: center;
     display: flex;
 }
-.managementBtnDiv > button{
+.managementBtnDiv > a{
     background: transparent;
     border: none;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 /*.managementBtnDiv > button > img{*/
 /*    width: 152px;*/
@@ -194,13 +195,13 @@
 /*    width: 152px;*/
 /*    height: 66px;*/
 /*}*/
-.managementBtnDiv > button:hover img{
+.managementBtnDiv > a:hover img{
     content: url("../images/buycoursebtnhover.png");
 }
 .managementBtnDivCourse > a:hover img{
     content: url("../images/buycoursebtnhover.png");
 }
-.managementBtnDiv > button > span{
+.managementBtnDiv > a > span{
     font-size: 16px;
     font-weight: 400;
     font-family: "Tahoma", sans-serif;
@@ -222,7 +223,7 @@
     text-align: center;
     color: white;
 }
-.managementBtnDiv > button:hover span{
+.managementBtnDiv > a:hover span{
     color: white;
 }
 .diplomW{
@@ -626,13 +627,13 @@ ion-icon {
     #bottomImages.none {
         display: none;
     }
-    .managementBtnDiv > button > span,
+    .managementBtnDiv > a > span,
     .managementBtnDivCourse > a > span{
         font-family: 'Roboto_',sans-serif;
         font-size: 10px;
         font-weight: 400;
     }
-    .managementBtnDiv > button > img{
+    .managementBtnDiv > a > img{
         width: 102px;
         height: 44px;
     }
@@ -694,7 +695,7 @@ ion-icon {
     }
 }
 @media screen and (max-width: 400px){
-    .managementBtnDiv > button > img{
+    .managementBtnDiv > a > img{
         width: 90px;
         height: 40px;
     }

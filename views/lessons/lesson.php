@@ -14,7 +14,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <span><?=$lesson['lesson_name']?></span>
         <div class="sizeLikeField">
             <div class='large-font'>
-                <ion-icon name="heart" data-id="<?=$lesson['id']?>" data-active="<?=AcWishlist::getWishlist($lesson['id'],1)?>" data-type="1">
+                <ion-icon name="heart" data-id="<?=$lesson['id']?>" data-active="<?=AcWishlist::getWishlist($lesson['id'],1) ? AcWishlist::getWishlist($lesson['id'],1) : 0?>" data-type="1">
                     <div class='red-bg'></div>
                 </ion-icon>
             </div>
@@ -53,10 +53,10 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <span class="amdFix">XXXXX AMD</span>
         <div class="buttonDiv">
             <div class="managementBtnDiv">
-                <button>
+                <a href="/my-card/checkout?lesson_id=<?=$lesson['id']?>">
                     <img src="/images/buycoursebtn.png" alt="">
                     <span class="button1"><?=$GLOBALS['text']['buyNowBtn']?></span>
-                </button>
+                </a>
             </div>
             <div class="managementBtnDivCourse">
                 <a href="/courses/index">

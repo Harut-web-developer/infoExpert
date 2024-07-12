@@ -125,7 +125,7 @@
 }
 .coursesFieldsRadio{
     width: 100%;
-    height: 215px;
+    height: min-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -161,7 +161,7 @@
 
 }
 .coursesBlocksRadio{
-    width: 384px;
+    /*width: 384px;*/
     height: min-content;
     margin: 20px 34px;
     display: flex;

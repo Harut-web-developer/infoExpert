@@ -79,34 +79,15 @@ if ($language == 'en') {
                 <div class="checkoutInputsSecondField">
                     <span><?=$GLOBALS['text']['checkoutOrderDetalis']?></span>
                     <div class="checkoutDetalisCoursesField">
-                        <div class="courseManualPriceField">
-                            <div class="courseManualPriceFieldInfo">
-                                <img src="/images/creditminiimg.png" alt="">
-                                <span>1C: Accounting 8.3</span>
+                        <?php if (!empty($lessons)){ foreach ($lessons as $lesson){ ?>
+                            <div class="courseManualPriceField">
+                                <div class="courseManualPriceFieldInfo">
+                                    <img src="/images/creditminiimg.png" alt="">
+                                    <span><?=$lesson['lesson_name']?></span>
+                                </div>
+                                <div class="courseManualPriceFieldPay">xxxxx AMD</div>
                             </div>
-                            <div class="courseManualPriceFieldPay">xxxxx AMD</div>
-                        </div>
-                        <div class="courseManualPriceField">
-                            <div class="courseManualPriceFieldInfo">
-                                <img src="/images/creditminiimg.png" alt="">
-                                <span>1C: and Accounting for Beginners</span>
-                            </div>
-                            <div class="courseManualPriceFieldPay">xxxxx AMD</div>
-                        </div>
-                        <div class="courseManualPriceField">
-                            <div class="courseManualPriceFieldInfo">
-                                <img src="/images/creditminiimg.png" alt="">
-                                <span>1C: and Accounting for Beginners</span>
-                            </div>
-                            <div class="courseManualPriceFieldPay">xxxxx AMD</div>
-                        </div>
-                        <div class="courseManualPriceField">
-                            <div class="courseManualPriceFieldInfo">
-                                <img src="/images/creditminiimg.png" alt="">
-                                <span>1C: and Accounting for Beginners</span>
-                            </div>
-                            <div class="courseManualPriceFieldPay">xxxxx AMD</div>
-                        </div>
+                        <?php }} ?>
                     </div>
                 </div>
             </div>

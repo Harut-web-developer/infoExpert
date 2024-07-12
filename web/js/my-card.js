@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     function slider(carousel, wrapper, firstCard) {
-        const firstCardWidth = firstCard.offsetWidth;
+        // const firstCardWidth = firstCard.offsetWidth;
         let isDragging = false,
             startX,
             startScrollLeft,
