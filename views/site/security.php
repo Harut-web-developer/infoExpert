@@ -35,13 +35,13 @@ $this->registerCssFile('@web/css/security.css?v=1');
                         <?php endif; ?>
                     </div>
                     <div class="requirements">
-                        <p><?=$GLOBALS['text']['passwordIncludeSecurity']?></p>
+                        <p><?=$GLOBALS['text']['passwordInclude']?></p>
                         <ul>
-                            <li class="uppercase"><?=$GLOBALS['text']['uppercaseLettersSecurity']?></li>
-                            <li class="lowercase"><?=$GLOBALS['text']['lowercaseLettersSecurity']?></li>
-                            <li class="numbers"><?=$GLOBALS['text']['numbersSecurity']?></li>
-                            <li class="symbol"><?=$GLOBALS['text']['symbolsSecurity']?></li>
-                            <li class="charactersSize"><?=$GLOBALS['text']['charactersSecurity']?></li>
+                            <li class="uppercase"><?=$GLOBALS['text']['uppercaseLetters']?></li>
+                            <li class="lowercase"><?=$GLOBALS['text']['lowercaseLetters']?></li>
+                            <li class="numbers"><?=$GLOBALS['text']['numbers']?></li>
+                            <li class="symbol"><?=$GLOBALS['text']['symbols']?></li>
+                            <li class="charactersSize"><?=$GLOBALS['text']['characters']?></li>
                         </ul>
                     </div>
                     <div class="indicator">
