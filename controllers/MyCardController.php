@@ -51,8 +51,8 @@ class MyCardController extends \yii\web\Controller
     {
         $language = $_COOKIE['language'];
         $user_id = Yii::$app->user->identity->id;
-        $my_card = AcLessons::find()->select('ac_lessons.id as lesson_id,ac_my_card.id as my_card_id,
-        lesson_name_'.$language.' as lesson_name, lesson_title_'.$language.' as lesson_title,
+        $my_card = AcLessons::find()->select('ac_lessons.id as lesson_id, ac_lessons.img as img, ac_lessons.price as price, ac_lessons.rating as rating,
+        ac_my_card.id as my_card_id,lesson_name_'.$language.' as lesson_name, lesson_title_'.$language.' as lesson_title,
         lesson_content_'.$language.' as lesson_content')
             ->leftJoin('ac_my_card', 'ac_my_card.lessons_id = ac_lessons.id')
             ->where(['and',['ac_my_card.status' => '1'],['ac_my_card.user_id' => $user_id],])
@@ -69,11 +69,11 @@ class MyCardController extends \yii\web\Controller
 ;
             if ($this->request->get('lesson_id')){
                 $lesson_id = intval($this->request->get('lesson_id'));
-                $lessons = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name')
+                $lessons = AcLessons::find()->select('img, price, lesson_name_'.$language.' as lesson_name')
                     ->where(['status' => '1'])
                     ->andWhere(['ac_lessons.id' => $lesson_id]);
             }else{
-                $lessons = AcMyCard::find()->select('lesson_name_'.$language.' as lesson_name')
+                $lessons = AcMyCard::find()->select('img, price, lesson_name_'.$language.' as lesson_name')
                     ->leftJoin('ac_lessons', 'ac_lessons.id = ac_my_card.lessons_id')
                     ->where(['and',['ac_my_card.status' => '1'],['ac_my_card.user_id' => $user_id]]);
             }

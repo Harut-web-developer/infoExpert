@@ -82,10 +82,10 @@ if ($language == 'en') {
                         <?php if (!empty($lessons)){ foreach ($lessons as $lesson){ ?>
                             <div class="courseManualPriceField">
                                 <div class="courseManualPriceFieldInfo">
-                                    <img src="/images/creditminiimg.png" alt="">
+                                    <img src="/<?=$lesson['img']?>" alt="">
                                     <span><?=$lesson['lesson_name']?></span>
                                 </div>
-                                <div class="courseManualPriceFieldPay">xxxxx AMD</div>
+                                <div class="courseManualPriceFieldPay"><?=$lesson['price']?> AMD</div>
                             </div>
                         <?php }} ?>
                     </div>
@@ -96,7 +96,12 @@ if ($language == 'en') {
                     <div class="checkoutTotalFieldInfoTop">
                         <div class="checkoutCourseSumPrice">
                             <span class="sumTitle"><?=$GLOBALS['text']['checkoutSummary']?>:</span>
-                            <span class="sumPriceAll">xxxx AMD</span>
+                            <?php if (!empty($lessons)){
+                                $total_count = 0;
+                                foreach ($lessons as $lesson){
+                                    $total_count += $lesson['price'];
+                            }} ?>
+                            <span class="sumPriceAll"><?=$total_count?> AMD</span>
                         </div>
                         <p><?=$GLOBALS['text']['checkoutTermsText']?> <a href=""><?=$GLOBALS['text']['checkoutTerms']?></a></p>
                     </div>

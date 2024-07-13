@@ -3,6 +3,16 @@
     padding: 0;
 }
 /*start header css*/
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-track{
+    background: #81B1B4;
+}
+::-webkit-scrollbar-thumb{
+    background: #408689;
+    border-radius: 10px;
+}
 .animateOne{
     width: 69px;
     height: 69px;
@@ -11,6 +21,33 @@
     left: 100px;
     z-index: 1;
     animation: circleMoveOne 10s linear infinite;
+}
+.searchField{
+    width: 100%;
+    max-height: 194px;
+    min-height: 100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: white;
+    border-radius: 0px 0px 0px 20px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+.searchText{
+    color: #2F7A7E;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto_", sans-serif;
+    width: 260px;
+    height: 22px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    margin: 5px 10px;
 }
 .animateTwo{
     width: 93px;
@@ -1983,7 +2020,7 @@
     width: 141px;
     color: white;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     height:37px;
     overflow: hidden;
@@ -2242,13 +2279,83 @@
     font-size: 16px;
 }
 .sectionEight{
-    background-image: url("../images/eightBg.png");
+    background-image: url("../images/eight.png");
+    /*background-image: url("../images/eightBg.png");*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 502px;
     margin-top: -56px;
+    position: relative;
+}
+.puzzle1{
+    position: absolute;
+    top: 26%;
+    left: 12%;
+    animation: puzzle1 10s linear infinite;
+}
+.puzzle2{
+    position: absolute;
+    top: 15%;
+    right: 4%;
+}
+.puzzle3{
+    position: absolute;
+    top: 67%;
+    right: 16%;
+}
+.puzzle4{
+    position: absolute;
+    bottom: 10%;
+    right: 32%;
+}
+.puzzle5{
+    position: absolute;
+    bottom: 10%;
+    right: 35.1%;
+}
+.puzzle6{
+    position: absolute;
+    bottom: 9%;
+    left: 5%;
+}
+@keyframes puzzle1 {
+    0% {
+        top: 26%;
+        left: 12%;
+        rotate: 120deg;
+        transition: 700ms ease-in-out;
+    }
+    20% {
+        left: 48%;
+        top: calc(82% - 100px);
+        rotate: -120deg;
+    }
+    40% {
+        left: calc(100% - 90px);
+        top: 4%;
+        width: 60px;
+        height: 60px;
+    }
+    /*60% {*/
+    /*    left: 75%;*/
+    /*    bottom: 60%;*/
+    /*    width: 90px;*/
+    /*    height: 90px;*/
+    /*}*/
+    /*80% {*/
+    /*    left: 22%;*/
+    /*    bottom: 80%;*/
+    /*    width: 120px;*/
+    /*    height: 120px;*/
+    /*}*/
+    /*100% {*/
+    /*    left: 31%;*/
+    /*    bottom: calc(100% - 150px);*/
+    /*    width: 135px;*/
+    /*    height: 135px;*/
+    /*}*/
 }
 .haveQuestions{
     width: 44%;
@@ -2259,6 +2366,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 .questionTitle{
     font-family: "RobotoSlab_",sans-serif;

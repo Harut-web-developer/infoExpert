@@ -31,20 +31,27 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <?php if(!empty($courses)){foreach ($courses as $course){?>
                     <li class="cardCourses">
                         <div class="img">
-                            <img src="/images/coursesCardImg.png" alt="" draggable="false">
+                            <img src="/<?=$course['img']?>" alt="" draggable="false">
                         </div>
                         <div class="cardCoursesBody">
                             <div class="cardBody">
                                 <span class="span1"><?=$course['lesson_name']?></span>
                                 <div class="starAndTxt">
                                     <div class="starDivCourses">
-                                        <img src="/images/cardStar.png" alt="" draggable="false">
-                                        <img src="/images/cardStar.png" alt="" draggable="false">
-                                        <img src="/images/cardStar.png" alt="" draggable="false">
-                                        <img src="/images/cardStar.png" alt="" draggable="false">
-                                        <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                        <?php
+                                            $count = $course['rating'];
+                                            $img = '';
+                                            for ($i = 1; $i <= 5; $i++){
+                                                if ($i <= $count){
+                                                    $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
+                                                }else{
+                                                    $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                                }
+                                            }
+                                            echo $img;
+                                        ?>
                                     </div>
-                                    <h1 class="span2">xxxxx <span class="amd">AMD</span></h1>
+                                    <h1 class="span2"><?=$course['price']?> <span class="amd">AMD</span></h1>
                                 </div>
                             </div>
                             <div class="cardCenter">
@@ -82,20 +89,27 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     <div class="cardCoursesMobile">
         <?php if(!empty($courses)){foreach ($courses as $course){?>
             <div class="cardCourses">
-                <img class="img" src="/images/coursesCardImg.png" alt="" draggable="false">
+                <img class="img" src="/<?=$course['img']?>" alt="" draggable="false">
                 <div class="cardCoursesBody">
                     <div class="cardBottomMainField">
                         <div class="cardBody">
                             <span class="span1"><?=$course['lesson_name']?></span>
                             <div class="starAndTxt">
                                 <div class="starDivCourses">
-                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                    <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                    <?php
+                                        $count = $course['rating'];
+                                        $img = '';
+                                        for ($i = 1; $i <= 5; $i++){
+                                            if ($i <= $count){
+                                                $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
+                                            }else{
+                                                $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                            }
+                                        }
+                                        echo $img;
+                                    ?>
                                 </div>
-                                <div class="span2">xxxxx <span class="amd">AMD</span></div>
+                                <div class="span2"><?=$course['price']?> <span class="amd">AMD</span></div>
                             </div>
                         </div>
                         <div class="cardCenter">

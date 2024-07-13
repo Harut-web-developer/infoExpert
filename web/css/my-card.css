@@ -302,7 +302,7 @@
 .myCardNameRating > span{
     width: 66%;
     font-family: "RobotoSlab_", sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     color: white;
     font-weight: 500;
     overflow: hidden;
@@ -390,7 +390,7 @@
 
 .myCardImageBlock .span2_2{
     font-family: "Roboto_",sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 28.13px;
     text-align: left;
@@ -618,7 +618,7 @@ ion-icon {
             height: 440px;
     }
     .myCardNameRating > span {
-        font-size: 18px;
+        font-size: 17px;
     }
     .myCardNameRating > span {
         line-height: 21px;

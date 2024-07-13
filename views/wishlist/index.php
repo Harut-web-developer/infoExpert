@@ -74,20 +74,27 @@ if ($language == 'en') {
                                 <?php foreach ($wishlist_courses as $wishlist_cours){ ?>
                                     <li class="card_2">
                                         <div class="img_2">
-                                            <img src="/images/cardImageCourses.png" alt="" draggable="false">
+                                            <img src="/<?=$wishlist_cours['img']?>" alt="" draggable="false">
                                         </div>
                                         <div class="cardContent">
                                             <div class="cardBody_2">
                                                 <span class="span1_2"><?=$wishlist_cours['lesson_name']?></span>
                                                 <div class="starAndTxt_2">
                                                     <div class="starDivWishlistCourses">
-                                                        <img src="/images/cardStar.png" alt="" draggable="false">
-                                                        <img src="/images/cardStar.png" alt="" draggable="false">
-                                                        <img src="/images/cardStar.png" alt="" draggable="false">
-                                                        <img src="/images/cardStar.png" alt="" draggable="false">
-                                                        <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                                        <?php
+                                                        $count = $wishlist_cours['rating'];
+                                                        $img = '';
+                                                        for ($i = 1; $i <= 5; $i++){
+                                                            if ($i <= $count){
+                                                                $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
+                                                            }else{
+                                                                $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                                            }
+                                                        }
+                                                        echo $img;
+                                                        ?>
                                                     </div>
-                                                    <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
+                                                    <h1 class="span2_2"><?=$wishlist_cours['price']?> <span class="spanAmd">AMD</span></h1>
                                                 </div>
                                             </div>
                                             <div class="cardCenter_2">
@@ -179,20 +186,27 @@ if ($language == 'en') {
                     <ul class="wishlistCardsField mobileCourses">
                         <?php foreach ($wishlist_courses as $wishlist_cours){ ?>
                             <li class="card_2">
-                                <img src="/images/cardImageCourses.png" alt="" draggable="false">
+                                <img src="/<?=$wishlist_cours['img']?>" alt="" draggable="false">
                                 <div class="cardContent">
                                     <div class="cardContentField">
                                         <div class="cardBody_2">
                                             <span class="span1_2"><?=$wishlist_cours['lesson_name']?></span>
                                             <div class="starAndTxt_2">
                                                 <div class="starDivWishlistCourses">
-                                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                                    <img src="/images/cardStar.png" alt="" draggable="false">
-                                                    <img src="/images/cardStarWhite.png" alt="" draggable="false">
+                                                    <?php
+                                                    $count = $wishlist_cours['rating'];
+                                                    $img = '';
+                                                    for ($i = 1; $i <= 5; $i++){
+                                                        if ($i <= $count){
+                                                            $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
+                                                        }else{
+                                                            $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                                        }
+                                                    }
+                                                    echo $img;
+                                                    ?>
                                                 </div>
-                                                <span class="span2_2">xxxxx <span class="spanAmd">AMD</span></span>
+                                                <span class="span2_2"><?=$wishlist_cours['price']?> <span class="spanAmd">AMD</span></span>
                                             </div>
                                         </div>
                                         <div class="cardCenter_2">

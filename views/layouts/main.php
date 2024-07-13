@@ -198,8 +198,18 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <div class="search-box">
                         <button class="btn-search"><img src="/images/search.png" alt=""></button>
                         <input type="text" class="input-search" placeholder="<?=$GLOBALS['text']['search']?>">
-                        <div class="searchField" style="width: 100%;height: min-content; min-height: 100px; background: green">
-
+                        <div class="searchField">
+                            <span class="searchText">gsdfghsdfgsdg</span>
+                            <span class="searchText">gsdfghsdfgsdg</span>
+                            <span class="searchText">gsdfghsdvcqwdvqegvf uerhqf wie qjeioq ejwfiosdfgsdg</span>
+                            <span class="searchText">gsdfghsdfgsqwefkewfpkqw epofk qoewjkf qwekfqwe fdg</span>
+                            <span class="searchText">gsdfghsdfgsdg</span>
+                            <span class="searchText">gsdfghsdfgqwe fkqpowekf qpwefk pqwekfpq kwef qwefsdg</span>
+                            <span class="searchText">gsqwef qw[efl ewf[qw elf[w lef[k woejn wqedfghsdfgsdg</span>
+                            <span class="searchText">gsdfghsdfgsdg</span>
+                            <span class="searchText">gsdfghsdfgsdg</span>
+                            <span class="searchText">gsdfghsdfgsdg</span>
+                            <span class="searchText">gsdfghsdfgsdg</span>
                         </div>
                     </div>
                     <div class="profileField">

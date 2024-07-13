@@ -367,4 +367,10 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             </div>
         </form>
     </div>
+    <img class="puzzle1" src="/images/puzzle3.png" alt="">
+    <img class="puzzle2" src="/images/puzzle3.png" alt="">
+    <img class="puzzle3" src="/images/puzzle3.png" alt="">
+    <img class="puzzle4" src="/images/puzzle1.png" alt="">
+    <img class="puzzle5" src="/images/puzzle1.png" alt="">
+    <img class="puzzle6" src="/images/puzzle2.png" alt="">
 </div>

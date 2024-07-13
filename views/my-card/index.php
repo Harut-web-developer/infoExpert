@@ -69,18 +69,25 @@ if ($language == 'en') {
                                     <div class="myCoursesBlocksField">
                                         <div class="myCoursesBlocksFieldMain">
                                             <div class="myCardImageBlock">
-                                                <img src="/images/courseimage.png" alt="" draggable="false">
+                                                <img src="/<?=$item['img']?>" alt="" draggable="false">
                                                 <div class="myCardNameRating">
                                                     <span><?=$item['lesson_name']?></span>
                                                     <div class="rightContentMyCard">
                                                         <div class="starDiv">
-                                                            <img src="/images/cardStar.png" alt="">
-                                                            <img src="/images/cardStar.png" alt="">
-                                                            <img src="/images/cardStar.png" alt="">
-                                                            <img src="/images/cardStar.png" alt="">
-                                                            <img src="/images/cardStar.png" alt="">
+                                                            <?php
+                                                            $count = $item['rating'];
+                                                            $img = '';
+                                                            for ($i = 1; $i <= 5; $i++){
+                                                                if ($i <= $count){
+                                                                    $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
+                                                                }else{
+                                                                    $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                                                }
+                                                            }
+                                                            echo $img;
+                                                            ?>
                                                         </div>
-                                                        <h1 class="span2_2">xxxxx <span class="spanAmd">AMD</span></h1>
+                                                        <h1 class="span2_2"><?=$item['price']?> <span class="spanAmd">AMD</span></h1>
                                                     </div>
                                                 </div>
                                             </div>
@@ -120,20 +127,27 @@ if ($language == 'en') {
                 <?php if (!empty($my_card)){foreach ($my_card as $item){ ?>
                     <div class="myCardBlocksField">
                         <div class="myCoursesBlocksField">
-                            <img src="/images/courseimage.png" alt="" draggable="false">
+                            <img src="/<?=$item['img']?>" alt="" draggable="false">
                             <div class="myCoursesBlocksFieldMain">
                                 <div class="blogsBottomInfoField">
                                     <div class="myCardNameRating">
                                         <span><?=$item['lesson_name']?></span>
                                         <div class="rightContentMyCard">
                                             <div class="starDiv">
-                                                <img src="/images/cardStar.png" alt="">
-                                                <img src="/images/cardStar.png" alt="">
-                                                <img src="/images/cardStar.png" alt="">
-                                                <img src="/images/cardStar.png" alt="">
-                                                <img src="/images/cardStar.png" alt="">
+                                                <?php
+                                                $count = $item['rating'];
+                                                $img = '';
+                                                for ($i = 1; $i <= 5; $i++){
+                                                    if ($i <= $count){
+                                                        $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
+                                                    }else{
+                                                        $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                                    }
+                                                }
+                                                echo $img;
+                                                ?>
                                             </div>
-                                            <span class="span2_2">xxxxx <span class="spanAmd">AMD</span></span>
+                                            <span class="span2_2"><?=$item['price']?> <span class="spanAmd">AMD</span></span>
                                         </div>
                                     </div>
                                     <div class="myCardBlockInfo">
@@ -162,7 +176,13 @@ if ($language == 'en') {
         <div class="totalPriceField" id="totalPriceField">
             <div class="totalPriceFieldSection">
                 <div class="myCardTotalPrice">
-                    <span><?=$GLOBALS['text']['myCardTotal']?>:  $70000</span>
+
+                    <?php if (!empty($my_card)){
+                        $total = 0;
+                        foreach ($my_card as $item){
+                            $total += $item['price'];
+                        }} ?>
+                    <span><?=$GLOBALS['text']['myCardTotal']?>:  ֏ <?=$total?></span>
                     <a href="/my-card/checkout">
                         <img src="/images/btncheckoutcard.png" alt="">
                         <span><?=$GLOBALS['text']['myCardCheckout']?></span>
