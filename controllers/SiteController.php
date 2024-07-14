@@ -72,7 +72,12 @@ class SiteController extends Controller
         $page['about'] = 2;
         $page['sign-up'] = 18;
         $page['login'] = 19;
+        $page['forgot'] = 22;
+        $page['check-email'] = 23;
+        $page['new-password'] = 24;
         $page['account-security'] = 26;
+        $page['password-updated'] = 27;
+        $page['verification'] = 28;
         return $page;
     }
 
@@ -416,11 +421,10 @@ class SiteController extends Controller
 //    }
     public function actionForgot()
     {
+        $session = Yii::$app->session;
         if (Yii::$app->request->isPost) {
-            $post = Yii::$app->request->post();
             $email = Yii::$app->request->post('email');
             $user = User::findOne(['email' => $email]);
-
             if ($user !== null) {
                 $token = rand(10000, 99999);
                 $user->password_reset_token = $token;
@@ -442,6 +446,10 @@ class SiteController extends Controller
                         ->send();
 
                     Yii::$app->session->setFlash('forgot', 'Instructions to reset your password have been sent to your email.');
+                    $session->set('email', $email);
+                    if (Yii::$app->request->post('message')){
+                        return $this->redirect('verification');
+                    }
                     return $this->redirect('check-email');
                 } catch (\Exception $e) {
                     Yii::error("Failed to send email: " . $e->getMessage(), __METHOD__);
@@ -471,7 +479,7 @@ class SiteController extends Controller
                 return $this->redirect('forgot');
             }
             if($model->password_reset_token === $combinedCode){
-                $model->password_reset_token="null";
+                $model->password_reset_token = "NULL";
                 $model->save(false);
             }
         }
@@ -479,7 +487,11 @@ class SiteController extends Controller
     }
     public function actionVerification()
     {
-        return $this->render('verification');
+        $session = Yii::$app->session;
+        $email = $session->get('email');
+        return $this->render('verification',[
+            'email' => $email,
+        ]);
     }
     public function actionPasswordUpdated(){
         if(isset($_POST) && $_POST['newpassword'])
@@ -492,6 +504,6 @@ class SiteController extends Controller
                 return $this->redirect('new-password');
             }
         }
-        return $this->render('password-updated');
+//        return $this->render('password-updated');
     }
 }

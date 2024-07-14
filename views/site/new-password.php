@@ -5,12 +5,12 @@ $this->registerCssFile('@web/css/verification.css');
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
 <div class="newPassword">
     <form action="password-updated" class="newPasswordForm" method="post">
-        <span class="createNewPassword">CREATE NEW PASSWORD</span>
+        <span class="createNewPassword"><?=$GLOBALS['text']['createNewPassword']?></span>
         <div class="inputContent">
             <div class="container_">
                 <div class="input-box">
                     <i class="fas fa-eye-slash show_hide"></i>
-                    <input spellcheck="false" type="password" placeholder="New password" name="newpassword" required>
+                    <input spellcheck="false" type="password" placeholder="<?=$GLOBALS['text']['newpassword']?>" name="newpassword" required>
                 </div>
                 <div class="requirements">
                     <p><?=$GLOBALS['text']['passwordInclude']?></p>
@@ -36,12 +36,12 @@ $this->registerCssFile('@web/css/verification.css');
             <?php }?>
             <div class="input-box-2">
                 <i class="fas fa-eye-slash show_hide-2"></i>
-                <input class="confirmpassword" type="password" placeholder="Confirm password" name="confirmpassword" required>
+                <input class="confirmpassword" type="password" placeholder="<?=$GLOBALS['text']['confirmpassword']?>" name="confirmpassword" required>
             </div>
         </div>
         <button type="submit" class="newPasswordButton" id="submitButton" disabled>
             <img src="/images/securityBtn.png" alt="">
-            <span id="signupButtonText">CONFIRM PASSWORD</span>
+            <span id="signupButtonText"><?=$GLOBALS['text']['confirmpasswordupper']?></span>
         </button>
     </form>
 </div>

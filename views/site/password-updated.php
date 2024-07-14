@@ -5,9 +5,8 @@ $this->registerCssFile('@web/css/verification.css');
 <div class="passwordUpdated">
     <div class="passwordUpdatedContent">
         <video id="myVideo" src="/images/AnimationPasswordUpdated.webm" alt="" autoplay muted></video>
-<!--        <img src="/images/AnimationPasswordUpdated.gif" alt="" loop="">-->
-        <div class="passwordUpdatedTitle">PASSWORD UPDATED!</div>
-        <div class="successfully">Your password has been changed successfully.</div>
+        <div class="passwordUpdatedTitle"><?=$GLOBALS['text']['passwordUpdatedTitle']?></div>
+        <div class="successfully"><?=$GLOBALS['text']['successfully']?></div>
     </div>
 </div>
 <script>

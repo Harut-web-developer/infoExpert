@@ -99,6 +99,8 @@
     line-height: 18.75px;
     text-align: center;
     color: #F36528;
+    text-decoration: underline;
+    cursor: pointer;
 }
 .buttonField > button{
     position: relative;
@@ -144,7 +146,7 @@
     align-items: center;
 }
 .newPasswordForm{
-    width: 438px;
+    width: 466px;
     height: 294px;
     display: flex;
     align-items: center;
@@ -349,4 +351,152 @@ input::placeholder{
 .passwordUpdatedContent #myVideo{
     width: 258px;
     height: 258px;
+}
+@media screen and (max-width: 1100px) {
+    .contentVerification {
+        width: 100%;
+        margin: 0 5.76% 0 6.83%;
+    }
+    .verification {
+        height: 900px;
+    }
+    .newPassword{
+        height: 900px;
+    }
+    .passwordUpdated {
+        height: 900px;
+    }
+    .passwordUpdatedContent{
+        width: 100%;
+        margin: 0 5.76% 0 6.83%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .verification {
+        height: 812px;
+        margin-bottom: -20px;
+    }
+    #lock {
+        width: 94px;
+        height: 94px;
+    }
+    .enterCode{
+        font-size: 22px;
+        font-weight: 900;
+        line-height: 29.01px;
+        letter-spacing: 0.05em;
+    }
+    .digitCode{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.09px;
+    }
+    .otp-field input{
+        width: 40.05px;
+        height: 40.05px;
+    }
+    .getCode{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        bottom: -10px;
+    }
+    .resend{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+    }
+    .buttonField > button > img{
+        width: 107.96px;
+        height: 40px;
+    }
+    .buttonField > button > span{
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.72px;
+    }
+    .contentVerification{
+        height: 401px;
+    }
+    .card-custom {
+        height: 274px;
+    }
+    .enterCodeContent {
+        height: 206px;
+    }
+    .newPassword {
+        height: 812px;
+        margin-bottom: -20px;
+    }
+    .passwordUpdated{
+        height: 812px;
+        margin-bottom: -20px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .newPasswordForm{
+        width: 100%;
+        height: 231px;
+        margin: 0 5.76% 0 6.83%;
+    }
+    .createNewPassword{
+        font-size: 22px;
+        font-weight: 900;
+        line-height: 29.01px;
+        letter-spacing: 0.05em;
+    }
+    .input-box input {
+        width: 100%;
+        height: 46px;
+    }
+    .confirmpassword{
+        width: 100%;
+        height: 46px;
+    }
+    input::placeholder {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15.23px;
+    }
+    .newPasswordButton > img{
+        width: 124px;
+        height: 46px;
+    }
+    .newPasswordButton > span {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11.72px;
+    }
+    .inputContent {
+        width: 100%;
+    }
+    .container_ {
+        width: 100%;
+    }
+    .requirements{
+        margin-top: 0;
+    }
+    .passwordUpdatedContent #myVideo{
+        width: 150px;
+        height: 150px;
+    }
+    .passwordUpdatedTitle{
+        font-size: 22px;
+        font-weight: 900;
+        line-height: 29.01px;
+        letter-spacing: 0.05em;
+    }
+    .successfully{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.09px;
+    }
+    .passwordUpdatedContent {
+        height: 230px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .passwordUpdatedContent {
+        height: 266px;
+    }
 }
