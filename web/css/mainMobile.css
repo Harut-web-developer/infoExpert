@@ -1494,6 +1494,7 @@
 /*start sectionEight css*/
 @media only screen and (min-width: 300px) and (max-width: 599px) {
     .sectionEight {
+        /*background: #5D9A9D;*/
         background-image: url("../images/eightBgMobile.png");
         background-repeat: no-repeat;
         background-position: center;
