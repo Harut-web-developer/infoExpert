@@ -192,23 +192,16 @@ class SiteController extends Controller
     public function actionLogin(){
         $session = Yii::$app->session;
         $model = new LoginForm();
-//        echo "<pre>";
-//        var_dump($_POST);
-//        die;
         if($_POST){
             if($model->load(Yii::$app->request->post(), '') && $model->login()){
                 if (isset($_POST['rememberme'])){
                     setcookie('email',Yii::$app->user->identity->email, time()+60 * 5, '/');
                 }
                 $identity = Yii::$app->user->identity;
-//                var_dump($identity);
                 $session->set('user_id',$identity->id);
                 $session->set('user_name',$identity->username);
                 $session->set('user_email',$identity->email);
                 $session->set('logged',true);
-//                var_dump(isset($session['user_id']));
-//                var_dump($session['logged']);
-//                exit;
                 return $this->redirect('/');
             }else{
                 return $this->redirect('/login');
@@ -368,7 +361,6 @@ class SiteController extends Controller
             return $wishlist;
         }
      }
-
      public function actionRemoveWishlist(){
          if($this->request->isGet){
              $id = intval($this->request->get('indID'));
@@ -387,7 +379,6 @@ class SiteController extends Controller
              return json_encode(['wishlist' => $wishlist, 'title' => $title, 'btn_name' => $btn_name]);
          }
      }
-
     public function generateRandomString($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
@@ -397,7 +388,6 @@ class SiteController extends Controller
         }
         return $randomString;
     }
-
 //    public function actionForgot()
 //    {
 //        if (Yii::$app->request->isPost) {
@@ -486,46 +476,42 @@ class SiteController extends Controller
     public function actionCheckEmail() {
         return $this->render('check-email');
     }
-    public function actionNewPassword()
-    {
-        if(isset($_POST))
-        {
-            $number1 = $_POST['number1'];
-            $number2 = $_POST['number2'];
-            $number3 = $_POST['number3'];
-            $number4 = $_POST['number4'];
-            $number5 = $_POST['number5'];
-            $combinedCode = $number1 . $number2 . $number3 . $number4 . $number5;
-            $model = User::findOne(['password_reset_token' => $combinedCode]);
-            if($model === null) {
-                return $this->redirect('forgot');
-            }
-            if($model->password_reset_token === $combinedCode){
-                $model->password_reset_token = "NULL";
-                $model->save(false);
-            }
-        }
-        return $this->render('new-password');
-    }
     public function actionVerification()
     {
         $session = Yii::$app->session;
         $email = $session->get('email');
+        $number1 = $_POST['number1'];
+        $number2 = $_POST['number2'];
+        $number3 = $_POST['number3'];
+        $number4 = $_POST['number4'];
+        $number5 = $_POST['number5'];
+        $combinedCode = $number1 . $number2 . $number3 . $number4 . $number5;
+        if(isset($_POST)  && $combinedCode != '')
+        {
+            $model = User::findOne(['password_reset_token' => $combinedCode]);
+            if($model != null && $model->password_reset_token === $combinedCode){
+                $model->password_reset_token = "NULL";
+                $model->save(false);
+                return $this->redirect('new-password');
+            }
+        }
         return $this->render('verification',[
             'email' => $email,
         ]);
     }
-    public function actionPasswordUpdated(){
+    public function actionNewPassword()
+    {
         if(isset($_POST) && $_POST['newpassword'])
         {
             $password = $_POST['newpassword'];
             $confirm = $_POST['confirmpassword'];
             if($password === $confirm) {
-                return $this->render('password-updated');
-            }else{
-                return $this->redirect('new-password');
+                return $this->redirect('password-updated');
             }
         }
-//        return $this->render('password-updated');
+        return $this->render('new-password');
+    }
+    public function actionPasswordUpdated(){
+        return $this->render('password-updated');
     }
 }

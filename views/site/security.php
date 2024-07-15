@@ -66,6 +66,20 @@ $this->registerCssFile('@web/css/security.css?v=1');
     </div>
 </div>
 <script>
+    function getCookie(name) {
+        var cookieArr = document.cookie.split(";");
+
+        for(var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+
+            if(name == cookiePair[0].trim()) {
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+        return null;
+    }
+    let language = getCookie('language');
+    var message = '';
     const input = document.querySelector(".input-box input"),
         requirements = document.querySelector(".requirements"),
         indicator = document.querySelector(".indicator"),
@@ -96,7 +110,12 @@ $this->registerCssFile('@web/css/security.css?v=1');
         indicator.classList.add("active");
         let val = input.value;
         if(val.match(uppercase) && val.match(lowercase) && val.match(numbers) && val.match(symbols) && val.length >= charactersSize){
-            text.textContent = "Password is strong";
+            message = 'Password is strong';
+            if (language === 'ru')
+                message = 'Пароль надежный';
+            else if(language === 'am')
+                message = 'Գաղտնաբառը ուժեղ է';
+            text.textContent = message;
             input.style.borderColor = "#22C32A";
             iconText.style.color = "#22C32A";
             uppercase_.style.color = "#22C32A";
@@ -107,7 +126,12 @@ $this->registerCssFile('@web/css/security.css?v=1');
             passwordMustInclude.style.color = "#22C32A";
             $('#submitButton').prop('disabled', false);
         } else if(val.match(uppercase) && val.match(lowercase) && val.match(numbers) && val.length >= 6){
-            text.textContent = "Password is medium";
+            message = 'Password is medium';
+            if (language === 'ru')
+                message = 'Пароль средний';
+            else if(language === 'am')
+                message = 'Գաղտնաբառը միջին է';
+            text.textContent = message;
             input.style.borderColor = "#cc8500";
             iconText.style.color = "#cc8500";
             if (val.match(uppercase)) {
@@ -138,7 +162,12 @@ $this->registerCssFile('@web/css/security.css?v=1');
             passwordMustInclude.style.color = "#F36528";
             $('#submitButton').prop('disabled', true);
         } else {
-            text.textContent = "Password is weak";
+            message = 'Password is weak';
+            if (language === 'ru')
+                message = 'Пароль слабый';
+            else if(language === 'am')
+                message = 'Գաղտնաբառը թույլ է';
+            text.textContent = message;
             input.style.borderColor = "#F36528";
             iconText.style.color = "#F36528";
             if (val.match(uppercase)) {

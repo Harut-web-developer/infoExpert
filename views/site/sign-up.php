@@ -83,6 +83,20 @@ if ($language == 'en') {
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
+    function getCookie(name) {
+        var cookieArr = document.cookie.split(";");
+
+        for(var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+
+            if(name == cookiePair[0].trim()) {
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+        return null;
+    }
+    let language = getCookie('language');
+    var message = '';
     const input = document.querySelector(".input-box input"),
         showHide = document.querySelector(".show_hide"),
         requirements = document.querySelector(".requirements"),
@@ -123,7 +137,12 @@ if ($language == 'en') {
         indicator.classList.add("active");
         let val = input.value;
         if(val.match(uppercase) && val.match(lowercase) && val.match(numbers) && val.match(symbols) && val.length >= charactersSize){
-            text.textContent = "Password is strong";
+            message = 'Password is strong';
+            if (language === 'ru')
+                message = 'Пароль надежный';
+            else if(language === 'am')
+                message = 'Գաղտնաբառը ուժեղ է';
+            text.textContent = message;
             input.style.borderColor = "#22C32A";
             showHide.style.color = "#22C32A";
             iconText.style.color = "#22C32A";
@@ -142,7 +161,12 @@ if ($language == 'en') {
                 $('#signupButtonText').css('color', '#D9E3E4');
             }
         } else if(val.match(uppercase) && val.match(lowercase) && val.match(numbers) && val.length >= 6){
-            text.textContent = "Password is medium";
+            message = 'Password is medium';
+            if (language === 'ru')
+                message = 'Пароль средний';
+            else if(language === 'am')
+                message = 'Գաղտնաբառը միջին է';
+            text.textContent = message;
             input.style.borderColor = "#cc8500";
             showHide.style.color = "#cc8500";
             iconText.style.color = "#cc8500";
@@ -181,7 +205,12 @@ if ($language == 'en') {
                 $('#signupButtonText').css('color', '#D9E3E4');
             }
         } else {
-            text.textContent = "Password is weak";
+            message = 'Password is weak';
+            if (language === 'ru')
+                message = 'Пароль слабый';
+            else if(language === 'am')
+                message = 'Գաղտնաբառը թույլ է';
+            text.textContent = message;
             input.style.borderColor = "#F36528";
             showHide.style.color = "#F36528";
             iconText.style.color = "#F36528";

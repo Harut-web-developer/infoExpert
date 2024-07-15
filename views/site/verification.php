@@ -6,7 +6,7 @@ $this->registerCssFile('@web/css/verification.css');
     <div class="contentVerification">
         <img id="lock" src="/images/lockVerification.gif" alt="Lock Image">
         <div class="container-custom">
-            <form class="card-custom" action="new-password" method="post">
+            <form class="card-custom" action="verification" method="post">
                 <div class="enterCodeContent">
                     <div class="enterCode"><?=$GLOBALS['text']['enterCode']?></div>
                     <div class="digitCode"><?=$GLOBALS['text']['digitCode'] . ' ' . ($email ? $email : '')?> </div>
