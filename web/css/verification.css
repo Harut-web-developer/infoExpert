@@ -357,15 +357,6 @@ input::placeholder{
         width: 100%;
         margin: 0 5.76% 0 6.83%;
     }
-    .verification {
-        height: 900px;
-    }
-    .newPassword{
-        height: 900px;
-    }
-    .passwordUpdated {
-        height: 900px;
-    }
     .passwordUpdatedContent{
         width: 100%;
         margin: 0 5.76% 0 6.83%;
@@ -390,6 +381,8 @@ input::placeholder{
         font-size: 18px;
         font-weight: 400;
         line-height: 21.09px;
+        word-wrap: break-word;
+        word-break: break-all;
     }
     .otp-field input{
         width: 40.05px;
