@@ -5,23 +5,26 @@ $this->registerCssFile('@web/css/verification.css');
 <div class="verification">
     <div class="contentVerification">
         <img id="lock" src="/images/lockVerification.gif" alt="Lock Image">
-        <div class="enterCode">ENTER CODE</div>
-        <div class="digitCode">Code has been sent to yourmail@gmail.com</div>
         <div class="container-custom">
-            <form class="card-custom" action="" method="post">
-                <div class="otp-field">
-                    <input type="number" />
-                    <input type="number" disabled />
-                    <input type="number" disabled />
-                    <input type="number" disabled />
-                    <input type="number" disabled />
+            <form class="card-custom" action="new-password" method="post">
+                <div class="enterCodeContent">
+                    <div class="enterCode"><?=$GLOBALS['text']['enterCode']?></div>
+                    <div class="digitCode"><?=$GLOBALS['text']['digitCode'] . ' ' . ($email ? $email : '')?> </div>
+                    <div class="otp-field">
+                        <input name="number1" type="number"  placeholder="__"/>
+                        <input name="number2" type="number"  placeholder="__"  disabled />
+                        <input name="number3" type="number"  placeholder="__" disabled />
+                        <input name="number4" type="number"  placeholder="__" disabled />
+                        <input name="number5" type="number"  placeholder="__" disabled />
+                    </div>
+                    <div class="getCode"><?=$GLOBALS['text']['getCode']?></div>
+                    <div class="resend" id="resend"><?=$GLOBALS['text']['resend']?></div>
+                    <input type="hidden" value="<?=$email ?>" id="hiddenEmail">
                 </div>
-                <div class="getCode">Did not get a code?</div>
-                <a class="resend" href="#">RESEND</a>
                 <div class="buttonField">
                     <button type="submit" id="submitButton">
                         <img src="/images/securityBtn.png" alt="">
-                        <span id="signupButtonText">VERIFY</span>
+                        <span id="signupButtonText"><?=$GLOBALS['text']['verify']?></span>
                     </button>
                 </div>
             </form>
@@ -83,4 +86,18 @@ $this->registerCssFile('@web/css/verification.css');
             });
         });
     });
+    $('body').on('click', '#resend', function () {
+        let email = $('#hiddenEmail').val();
+        let csrfToken = $('meta[name="csrf-token"]').attr("content");
+        $.ajax({
+            url: '/site/forgot',
+            method: 'post',
+            datatype: 'json',
+            data: {
+                email: email,
+                message: 'resend_password',
+                _csrf: csrfToken
+            }
+        })
+    })
 </script>
