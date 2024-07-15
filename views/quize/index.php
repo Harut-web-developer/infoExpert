@@ -36,8 +36,6 @@ $this->registerCssFile('@web/css/quize.css?v=2');
             if (selectedOption) {
                 let url = '<?php echo Yii::$app->urlManager->createUrl(['quize/quize-questions?id=']) ?>' + selectedOption;
                 window.location.href = url;
-            } else {
-                alert('Please select an option first.');
             }
         });
     });

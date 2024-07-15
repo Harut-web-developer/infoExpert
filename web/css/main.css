@@ -39,7 +39,7 @@
     font-size: 14px;
     font-weight: 400;
     font-family: "Roboto_", sans-serif;
-    width: 260px;
+    width: 273px;
     height: 22px;
     display: -webkit-box;
     -webkit-line-clamp: 1;
@@ -2359,20 +2359,20 @@
             top: 80%;
         }
         50% {
-            left: 57%;
-            top: 70%;
+            left: 68%;
+            top: 18%;
         }
         60% {
-            left: 57%;
-            top: 70%;
+            left: calc(90% - 90px);
+            top: 73%;
         }
         70% {
-            left: 53%;
-            top: 80%;
+            left: 34%;
+            top: 70%;
         }
         100% {
             top: 26%;
-            left: 12%;
+            left: 5%;
         }
     }
     @keyframes puzzle2 {
@@ -2381,24 +2381,24 @@
             right: 4%;
         }
         30%{
-            right: 20%;
-            top: 15%;
+            right: 50%;
+            top: 75%;
         }
         50% {
-            right: 33.5%;
-            top: 53.2%;
+            right: 78%;
+            top: 24%;
         }
         60% {
             right: 33.5%;
             top: 53.2%;
         }
         70% {
-            right: 20%;
-            top: 15%;
+            right: calc(100% - 100px);
+            top: 68%;
         }
         100% {
-            top: 15%;
-            right: 4%;
+            top: 68%;
+            right: 65%;
         }
     }
     @keyframes puzzle3 {
@@ -2483,22 +2483,29 @@
         0% {
             bottom: 9%;
             left: 5%;
+            rotate: 45deg;
         }
         33% {
             bottom: 67%;
             left: calc(90% - 90px);
+            rotate: -80deg;
+
         }
         67% {
             bottom: 5%;
             left: 80%;
+            rotate: 120deg;
+
         }
         90% {
-            left: calc(100% -  38.1%);
-            bottom: 68.8%;
+            left: 39%;
+            bottom: 75%;
+            rotate: -90deg;
+
         }
         100% {
-            left: calc(100% -  38.1%);
-            bottom: 68.8%;
+            bottom: 9%;
+            left: 5%;
         }
     }
 }

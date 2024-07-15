@@ -81,9 +81,9 @@ class QuizeController extends \yii\web\Controller
                 }
             ])
             ->where(['ac_question_quests.question_id' => $id])
+            ->andWhere(['ac_question_quests.status' => '1'])
             ->asArray()
             ->all();
-
         $answers_list = AcQuestionList::find()->select('id,name_'.$language.' as name_list')
             ->where(['status' => '1'])
             ->andWhere(['id' => $id])
@@ -101,7 +101,7 @@ class QuizeController extends \yii\web\Controller
         ]);
 
     }
-    public function actionResult($id = false)
+    public function actionResult()
     {
         $id = intval($_GET['id']);
         $true_answer_count = intval($_GET['count']);
