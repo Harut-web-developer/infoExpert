@@ -49,6 +49,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 </head>
 <body>
 <?php $this->beginBody() ?>
+<?php
+    $lessons_ = $GLOBALS['lessons'];
+    $blogs_ = $GLOBALS['blogs'];
+?>
 <header>
     <div class="tabletHeader">
         <div class="mainHeader">
@@ -195,22 +199,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <a href="/"><img src="/images/logo.png" alt=""></a>
                 </div>
                 <div class="icons">
-                    <div class="search-box">
+                    <div class="search-box" id="search-box">
                         <button class="btn-search"><img src="/images/search.png" alt=""></button>
-                        <input type="text" class="input-search" placeholder="<?=$GLOBALS['text']['search']?>">
-                        <div class="searchField">
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdvcqwdvqegvf uerhqf wie qjeioq ejwfiosdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsqwefkewfpkqw epofk qoewjkf qwekfqwe fdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgqwe fkqpowekf qpwefk pqwekfpq kwef qwefsdg</span>
-                            <span class="searchText">gsqwef qw[efl ewf[qw elf[w lef[k woejn wqedfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                        </div>
+                        <input type="text" class="input-search" placeholder="<?= $GLOBALS['text']['search']?>" value="">
+                        <div id="searchField" class="searchField"></div>
                     </div>
                     <div class="profileField">
                         <?php if (empty(Yii::$app->user->identity)){?>

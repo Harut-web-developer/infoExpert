@@ -424,11 +424,58 @@ $(document).ready(function () {
     $('.btn-searchTablet').on('click', function () {
         $('.input-searchTablet').focus();
     })
-    $('.btn-search').on('click', function () {
-        $('.input-search').focus();
-    })
+    $(document).on('click', function (event) {
+        if ($(event.target).closest('.searchField').length === 0) {
+            $('.searchField').hide();
+        }else{
+            $('.btn-search').focus();
+            $('.input-search').focus();
+        }
+    });
 
-    $('body').on('click', 'ion-icon', function () {
+    $('.btn-search').on('click', function () {
+        // $('.input-search').focus();
+        let inputValue = $('.input-search').val();
+        let letterCount = inputValue.replace(/[^a-zA-Z]/g, '').length;
+        if (inputValue !== '' && letterCount > 3) {
+            $('.searchField').show();
+        }
+    });
+
+    function inputValue(this_) {
+        let inputVal = this_.val();
+        let csrfToken = $('meta[name="csrf-token"]').attr("content");
+        if (inputVal.length > 3) {
+            $.ajax({
+                url: "/site/search",
+                method: 'post',
+                dataType: 'json',
+                data: {
+                    input_val: inputVal,
+                    _csrf: csrfToken
+                },
+                success: function (data) {
+                    $('#searchField').html(data.html);
+                    $('.searchField').show();
+                },
+                error: function (xhr, status, error) {
+                    console.error('AJAX Error: ' + status + ' ' + error);
+                }
+            });
+        } else {
+            $('#searchField').hide();
+        }
+    }
+
+    $('.input-search').on('input', function () {
+        inputValue($(this));
+    });
+
+    $('.btn-search').on('click', function () {
+        inputValue($('.input-search'));
+    });
+
+        $('body').on('click', 'ion-icon', function () {
         let indID = $(this).data('id');
         let thisItem = $(this);
         let type = $(this).data('type');
