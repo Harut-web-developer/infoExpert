@@ -421,26 +421,26 @@ $(document).ready(function () {
             $('.securityModal').css('display', 'none');
         }
     });
-    $('.btn-searchTablet').on('click', function () {
-        $('.input-searchTablet').focus();
-    })
-    $(document).on('click', function (event) {
-        if ($(event.target).closest('.searchField').length === 0) {
-            $('.searchField').hide();
-        }else{
-            $('.btn-search').focus();
-            $('.input-search').focus();
-        }
-    });
+    // $('.btn-searchTablet').on('click', function () {
+    //     $('.input-searchTablet').focus();
+    // })
+    // $(document).on('click', function (event) {
+    //     if ($(event.target).closest('.searchField').length === 0) {
+    //         $('.searchField').hide();
+    //     }else{
+    //         $('.btn-search').focus();
+    //         $('.input-search').focus();
+    //     }
+    // });
 
-    $('.btn-search').on('click', function () {
-        // $('.input-search').focus();
-        let inputValue = $('.input-search').val();
-        let letterCount = inputValue.replace(/[^a-zA-Z]/g, '').length;
-        if (inputValue !== '' && letterCount > 3) {
-            $('.searchField').show();
-        }
-    });
+    // $('.btn-search').on('click', function () {
+    //     // $('.input-search').focus();
+    //     let inputValue = $('.input-search').val();
+    //     let letterCount = inputValue.replace(/[^a-zA-Z]/g, '').length;
+    //     if (inputValue !== '' && letterCount > 3) {
+    //         $('.searchField').show();
+    //     }
+    // });
 
     function inputValue(this_) {
         let inputVal = this_.val();
@@ -472,7 +472,20 @@ $(document).ready(function () {
     });
 
     $('.btn-search').on('click', function () {
-        inputValue($('.input-search'));
+        // inputValue($('.input-search'));
+        $('.btn-search').click(function(e) {
+            $('.popup-wrap').fadeIn(500);
+            $('.popup-box').removeClass('transform-out').addClass('transform-in');
+
+            e.preventDefault();
+        });
+
+        $('.popup-close').click(function(e) {
+            $('.popup-wrap').fadeOut(500);
+            $('.popup-box').removeClass('transform-in').addClass('transform-out');
+
+            e.preventDefault();
+        });
     });
 
         $('body').on('click', 'ion-icon', function () {
