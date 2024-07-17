@@ -21,7 +21,6 @@ if ($language == 'en') {
                 <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                 <li><a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a></li>
                 <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
-                <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
             </ul>
         </div>
         <div class="userCreateTitleField">
@@ -35,10 +34,14 @@ if ($language == 'en') {
                 <form action="" method="post" enctype='multipart/form-data'>
                     <div class="userAchievementsEditLeft">
                         <div class="usersCardHead_">
-                            <img class="cardImg_" src="/<?php if(!empty(Yii::$app->user->identity->image)){echo Yii::$app->user->identity->image;}?>" alt="">
+                            <?php if(!empty(Yii::$app->user->identity->image)){?>
+                                <img class="cardImg_" src="/<?=Yii::$app->user->identity->image?>" alt="">
+                           <?php }else{?>
+                                <img class="cardImg_" src="/images/avatar.png" alt="">
+                           <?php } ?>
                             <div class="middle">
                                 <span class="editPhoto" href=""><?=$GLOBALS['text']['editUserEditPhoto']?></span>
-                                <input type="file" name="image" required>
+                                <input type="file" name="image">
                             </div>
                         </div>
                         <span><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
@@ -68,28 +71,31 @@ if ($language == 'en') {
                     <div class="userInputsFields_">
                         <div class="userFormsInput_">
                             <label for=""><?=$GLOBALS['text']['editUserName']?></label>
-                            <input type="text" name="username" required>
+                            <input type="text" name="username" required value="<?=Yii::$app->user->identity->username?>">
                         </div>
                         <div class="userFormsInput_">
                             <label for=""><?=$GLOBALS['text']['editUserPhone']?></label>
-                            <input type="number" name="phone" required>
+                            <input type="number" name="phone" required value="<?=Yii::$app->user->identity->phone?>">
                         </div>
                         <div class="userFormsInput_">
                             <label for=""><?=$GLOBALS['text']['editUserMail']?></label>
-                            <input type="email" name="email" required>
+                            <input type="email" name="email" required value="<?=Yii::$app->user->identity->email?>">
                         </div>
                         <div class="userFormsInput_ lllyy">
                             <label for=""><?=$GLOBALS['text']['editUserLinkdin']?></label>
-                            <input type="text" name="linkdin_url" required>
+                            <input type="text" name="linkdin_url"  value="<?=Yii::$app->user->identity->linkdin_url?>">
                         </div>
                         <div class="userFormsInput_">
                             <label for="attachCvEdit"><?=$GLOBALS['text']['editUserCv']?></label>
                             <div id="attachCvEdit" class="cvFileFieldEdit">
-                                <input class="cvFileEdit" type="file" name="cv" required>
+                                <input class="cvFileEdit" type="file" name="cv">
                                 <div class="attachCvEdit">
                                     <span><?=$GLOBALS['text']['editUserAttach']?></span>
                                     <img class="attachCvImg" src="/images/scriptIcon.png" alt="">
                                 </div>
+                                <?php if (!empty(Yii::$app->user->identity->cv)){ ?>
+                                    <input class="nohidden" type="text" value="<?=Yii::$app->user->identity->cv?>">
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="userFormsBtn_">

@@ -45,11 +45,11 @@ class LessonsController extends \yii\web\Controller
     }
     public function actionLesson()
     {
+        $lesson_url = $_GET['url'];
         $language = $_COOKIE['language'];
-        $lesson_id = intval($_GET['id']);
         $lesson = AcLessons::find()->select('id,lesson_name_'.$language.' as lesson_name,lesson_content_'.$language.' as lesson_content')
             ->where(['status' => '1'])
-            ->andWhere(['id' => $lesson_id])
+            ->andWhere(['url' => $lesson_url])
             ->asArray()
             ->one();
         return $this->render('lesson',[
@@ -60,5 +60,6 @@ class LessonsController extends \yii\web\Controller
     {
         return $this->render('index');
     }
+
 
 }

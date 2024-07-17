@@ -30,14 +30,17 @@ if ($language == 'en') {
                     <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                     <li><a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a></li>
                     <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
-                    <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
                 </ul>
             </div>
             <div class="myCardFields">
                 <div class="myCoursesProfileField">
                     <div class="myCoursesBlocksFieldMainPerson">
                         <div class="myCoursesFieldSectionLeft">
-                            <img src="/<?php if(!empty(Yii::$app->user->identity->image)){echo Yii::$app->user->identity->image;}?>" alt="">
+                            <?php if(!empty(Yii::$app->user->identity->image)){?>
+                                <img src="/<?=Yii::$app->user->identity->image?>" alt="">
+                            <?php }else{?>
+                                <img src="/images/avatar.png" alt="">
+                            <?php } ?>
                             <span><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
                             <div class="usersProfileInfo">
                                 <div class="usersProfileInfoPhone">

@@ -26,7 +26,7 @@ $this->registerCssFile('@web/css/trade-management.css?v=1');
                         <div class="answerQuestionQuize">
                             <?php foreach ($answer['answers'] as $key => $item){?>
                                 <div class="answerQuize">
-                                    <input type="radio" id="option<?=$key + 1?>" name="quizOption" value="<?=$item['is_true']?>">
+                                    <input type="radio" id="option<?=$key + 1?>" name="quizOption" value="<?=$item['id']?>">
                                     <label for="option<?=$key + 1?>"><?=$key + 1?>. <span><?=$item['answer_name']?></span></label>
                                 </div>
                             <?php }?>
@@ -51,24 +51,30 @@ $this->registerCssFile('@web/css/trade-management.css?v=1');
         const progressSteps = $(".progress-step");
         let formStepsNum = 0;
         let count = 1;
-        let trueAnswer = 0;
+        let answers = [];
         let numberTradeManagement = $('.numberTradeManagement');
         progressSteps.first().addClass('progress-step-active');
         formSteps.first().addClass('form-step-active');
         nextBtns.on("click", function() {
+            let valueAnswer = $(this).closest('form').find('.answerQuestionQuize div input[type="radio"]:checked').val()
+            answers.push(valueAnswer);
             let checked = $(this).closest('form').find('.answerQuestionQuize div input[type="radio"]:checked').length > 0 ;
             if ((formStepsNum == formSteps.length - 1) && checked) {
-                window.location.href = 'result?id='+"<?php echo $answers_list['id']; ?>" + '&count=' + trueAnswer;
+                $.ajax({
+                    method: "POST",
+                    url: "/quize/check",
+                    data: { answers: answers, id: <?php echo $answers_list['id']; ?>, action: 'addQuize'},
+                    success:function (data){
+                        window.location.href = 'result?id='+"<?php echo $answers_list['id']; ?>" + '&count=' + data;
+                    }
+                });
             } else if (checked) {
                 formStepsNum++;
                 count++;
                 updateFormSteps();
                 updateProgressbar();
                 numberTradeManagement.text(count + '/'+ countList);
-                let valueAnswer = $(this).closest('form').find('.answerQuestionQuize div input[type="radio"]:checked').val()
-                if (valueAnswer == 1){
-                    trueAnswer++
-                }
+
             }
         });
         function updateFormSteps() {

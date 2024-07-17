@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-if (window.location.pathname == '/wishlist/index'){
+if (window.location.pathname == '/wishlist/index' && window.innerWidth < 600){
     let seeMoreBtnCourses = document.querySelector('#coursesBtnMobile');
     let courses = [...document.querySelectorAll('.wishlistCardsField .card_2')];
     let currentItemCourses = 2;
@@ -78,7 +78,7 @@ if (window.location.pathname == '/wishlist/index'){
             seeMoreBtnCourses.style.display = 'none';
         }
     }
-}else if (window.location.pathname == '/wishlist/blogs-wishlist'){
+}else if (window.location.pathname == '/wishlist/blogs-wishlist' && window.innerWidth < 600){
     let seeMoreBtnBlogs = document.querySelector('#blogsBtnMobile');
     let blogs = [...document.querySelectorAll('.wishlistMobile .wishlistCardsField')];
     let currentItemBlogs = 2;

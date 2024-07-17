@@ -68,6 +68,7 @@ class SiteController extends Controller
     public static function pages()
     {
         $page['index'] = 1;
+        $page['faq'] = 1;
         $page['about'] = 2;
         $page['sign-up'] = 18;
         $page['login'] = 19;
@@ -398,7 +399,7 @@ class SiteController extends Controller
             $email = Yii::$app->request->post('email');
             $user = User::findOne(['email' => $email]);
             if ($user !== null) {
-                $token = rand(0, 99999);
+                $token = rand(10000, 99999);
                 $user->password_reset_token = $token;
                 $user->save(false);
 

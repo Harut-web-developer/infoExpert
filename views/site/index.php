@@ -1,5 +1,6 @@
 <?php
 
+use app\models\AcLessons;
 use app\models\AcReviews;
 use app\models\AcWishlist;
 use yii\web\View;
@@ -15,10 +16,15 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     <div class="apply">
         <span class="applyMarket"><?=$GLOBALS['text']['sectionOneMarket']?></span>
         <span class="boundaries"><?=$GLOBALS['text']['sectionOneBoundaries']?></span>
+        <?php if (!empty($lessons)){
+        $lang = $_COOKIE['language'];
+        $lessons = AcLessons::find()->select('id,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+        ?>
         <a href="/apply-now/index">
             <img src="/images/apply.png" alt="">
             <span><?=$GLOBALS['text']['__applynow__']?></span>
         </a>
+        <?php } ?>
     </div>
 </div>
 <div class="sectionTwo">
@@ -142,7 +148,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     </div>
     </div>
 </div>
-<div class="sectionFour">
+<div class="sectionFour" id="sectionAnswers">
     <div class="answers">
         <div class="frequency">
             <span class="freqAsked"><?=$GLOBALS['text']['sectionFourTitle']?></span>
@@ -192,7 +198,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
 </div>
 <!-- Swiper CSS-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
-<div class="sectionSix">
+<div class="sectionSix" id="testimonials">
     <div class="testimonial">
         <div class="testimonialsTitles">
             <span class="testimonialOrangeTitle"><?=$GLOBALS['text']['sectionSixTitle']?></span>

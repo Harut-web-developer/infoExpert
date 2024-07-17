@@ -25,7 +25,6 @@ if ($language == 'en') {
                 <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                 <li><a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a></li>
                 <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
-                <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
             </ul>
         </div>
         <div class="userCreateTitleField">

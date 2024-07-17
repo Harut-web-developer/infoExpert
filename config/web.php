@@ -88,10 +88,12 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '<controller>/<action:\w+>' => '<controller>/<action>',
+                'lessons/lesson/<url:\w+>' => 'lessons/lesson',
                 '/login' => '/site/login',
                 '/' => '/site/index',
                 '/logout' => '/site/logout',
                 '/signup' => '/site/sign-up',
+                '/faq' => '/site/faq',
             ],
         ],
     ],

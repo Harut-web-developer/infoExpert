@@ -27,7 +27,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <img src="/images/personal-management-sertifikat.png" alt="">
             </div>
             <img class="rightImg" src="/images/personel-management-1.png" alt="">
-            <p><?=$lesson['lesson_content']?></p>
+            <div class="zxc"><?=$lesson['lesson_content']?></div>
         </div>
     </div>
     <div class="divBottom">

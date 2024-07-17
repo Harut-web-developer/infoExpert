@@ -12,6 +12,7 @@ use yii\bootstrap5\NavBar;
 use yii\helpers\Url;
 use yii\web\UrlManager;
 use \app\models\AcLessons;
+use Yii;
 
 AppAsset::register($this);
 
@@ -19,7 +20,7 @@ $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
-$this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
+$this->registerMetaTag(['name' => 'keywords', 'content' => 'infoexpert, courses, դասընթացներ, курсы']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('/images/faviconInfoexpert.ico')]);
 ?>
 <?php $this->beginPage() ?>
@@ -117,10 +118,13 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             </button>
                             <div class="mobileBackCallUnderline"></div>
                         </li>
-                        <li class="tabletAllCoursesList">
-                            <span><?= $GLOBALS['text']['tabletAllCourses']?></span>
-                            <img src="/images/menuRightArrow.png" alt="">
-                        </li>
+                         <?php $lessons = AcLessons::find()->where(['status' => '1'])->asArray()->all();
+                            if (!empty($lessons)){ ?>
+                                <li class="tabletAllCoursesList">
+                                    <span><?= $GLOBALS['text']['tabletAllCourses']?></span>
+                                    <img src="/images/menuRightArrow.png" alt="">
+                                </li>
+                            <?php } ?>
                         <li><a href="/site/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
                         <li><a href=""><?= $GLOBALS['text']['tabletMethodology']?></a></li>
                         <li><a href=""><?= $GLOBALS['text']['footerTestimonials']?></a></li>
@@ -153,11 +157,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
             <div class="tabletMenuNavbar">
                 <ul class="tabletProfileMenuField">
-                    <li><a href="/user-profile/index"><?=$GLOBALS['text']['tabletProfile']?></a></li>
+                    <li><a href="/user-profile/achievements-edit"><?=$GLOBALS['text']['tabletProfile']?></a></li>
                     <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
                     <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                     <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
-                    <li><a href="/user-profile/achievements-edit"><?=$GLOBALS['text']['tabletEdit']?></a></li>
+<!--                    <li><a href="/user-profile/achievements-edit">--><?php //=$GLOBALS['text']['tabletEdit']?><!--</a></li>-->
 <!--                    <li><a href="/my-card/checkout">--><?php //=$GLOBALS['text']['tabletPayment']?><!--</a></li>-->
                     <?php if(!empty(Yii::$app->user->identity)){ ?>
                         <li><a href="/logout"><?=$GLOBALS['text']['headerLogout']?></a></li>
@@ -176,9 +180,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 <ul class="tabletProfileCoursesField">
                     <?php
                     $lang = $_COOKIE['language'];
-                    $lessons = AcLessons::find()->select('id,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+                    $lessons = AcLessons::find()->select('url,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
                     if (!empty($lessons)){ foreach ($lessons as $lesson) {?>
-                        <li><a href="/lessons/lesson?id=<?=$lesson['id']?>"><?=$lesson['lesson_name']?></a></li>
+                        <li><a href="/lessons/lesson/<?=$lesson['url']?>"><?=$lesson['lesson_name']?></a></li>
                     <?php }}?>
                 </ul>
             </div>
@@ -199,7 +203,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             <img class="profileUserIcon" src="/images/user.png" alt="">
                             <div class="profileFieldImg">
                                 <ul>
-                                    <li><a href="/user-profile/index"><?= $GLOBALS['text']['headerProfile']?></a></li>
+                                    <li><a href="/user-profile/achievements-edit"><?= $GLOBALS['text']['headerProfile']?></a></li>
+                                    <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
                                     <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
                                     <li><a href="/logout"><?= $GLOBALS['text']['headerLogout']?></a></li>
                                 </ul>
@@ -243,22 +248,30 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     </li>
                     <li class="dropDownLi menuCoursesDropDown">
                         <span class="menuCourses"><?=$GLOBALS['text']['__courses__']?></span>
+                        <?php if (!empty($lessons)){
+                            $lang = $_COOKIE['language'];
+                            $lessons = AcLessons::find()->select('url,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+                            ?>
                         <div class="dropDownCoursesBg">
                             <div id="curved-corner-bottomleft"></div>
                             <div class="lessonsListMenu">
                                 <ul>
                                     <?php
-                                    $lang = $_COOKIE['language'];
-                                    $lessons = AcLessons::find()->select('id,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
-                                    if (!empty($lessons)){ foreach ($lessons as $lesson) {?>
-                                        <li><a href="/lessons/lesson?id=<?=$lesson['id']?>"><?=$lesson['lesson_name']?></a></li>
-                                    <?php }}?>
+                                    foreach ($lessons as $lesson) {?>
+                                        <li><a href="/lessons/lesson/<?=$lesson['url']?>"><?=$lesson['lesson_name']?></a></li>
+                                    <?php }?>
                                 </ul>
                             </div>
                         </div>
+                        <?php }?>
                     </li>
-                    <li class="whiteLi orangeOrWhite"><a href=""><?= $GLOBALS['text']['__faq__'] ?></a></li>
-                    <li class="whiteLi orangeOrWhite"><a href=""><?= $GLOBALS['text']['__testimonials__'] ?></a></li>
+                    <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
+                        <li class="whiteLi orangeOrWhite"><a href="#sectionAnswers"><?= $GLOBALS['text']['__faq__'] ?></a></li>
+                    <?php } else { ?>
+                        <li class="whiteLi orangeOrWhite"><a href="/site/faq"><?= $GLOBALS['text']['__faq__'] ?></a></li>
+                    <?php } ?>
+
+                    <li class="whiteLi orangeOrWhite"><a href="#testimonials"><?= $GLOBALS['text']['__testimonials__'] ?></a></li>
                     <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
                         <li class="whiteLi"><a href="#section01""><?= $GLOBALS['text']['__blog__'] ?></a></li>
                     <?php } else { ?>
@@ -404,17 +417,17 @@ if ($logged && $alertShown) {
                 </div>
             </div>
             <div class="rightFooterBg">
-                <form class="formMail" action="/quize/index">
+                <form class="formMail" action="/quize/index" method="post">
                     <div class="formName">
                         <span><?= $GLOBALS['text']['footerQuize']?></span>
                     </div>
                     <div class="inputsMail" >
-                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>">
-                        <input type="text" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>">
-                        <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>">
+                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username ? 'required' : ''?>>
+                        <input type="number" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>" <?=!Yii::$app->user->identity->phone ? 'required' : ''?>>
+                        <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>" <?=!Yii::$app->user->identity->email ? 'required' : ''?>>
                     </div>
                     <div class="formContinue">
-                        <button type="submit"><?= $GLOBALS['text']['footerInputBtn']?></button>
+                        <button name="enterQuize" type="submit"><?= $GLOBALS['text']['footerInputBtn']?></button>
                     </div>
                 </form>
             </div>

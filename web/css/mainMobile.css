@@ -689,6 +689,15 @@
         width: 100%;
         height: min-content;
     }
+    .sectionFourPage{
+        background-image: url("../images/sectionFourMobile.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 0px;
+        width: 100%;
+        height: min-content;
+    }
     .freqAsked {
         font-size: 16px;
         font-family: "RobotoSlab_", sans-serif;
@@ -706,6 +715,17 @@
         align-items: center;
         margin-bottom: 40px;
     }
+    .frequencyPage {
+        margin-top: 30px;
+        width: 100%;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
     .leftQuestions {
         width: 100%;
     }

@@ -303,6 +303,15 @@
         width: 100%;
         height: min-content;
     }
+        .sectionFourPage{
+            background-image: url("../images/sectionFourTablet.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 0px;
+            width: 100%;
+            height: min-content;
+        }
     .freqAsked{
         font-size: 25px;
         font-family: "RobotoSlab_",sans-serif;
@@ -586,25 +595,6 @@
 }
 
 /*sectionfour */
-@media only screen and (min-width: 377px) and (max-width: 499px) {
-    /*.frequency{*/
-    /*    width: 100%;*/
-    /*    height: 65px;*/
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    justify-content: start;*/
-    /*    align-items: center;*/
-    /*    border:1px solid;*/
-    /*}*/
-    /*.freqAsked{*/
-    /*    font-size: 20px;*/
-    /*    font-family: "RobotoSlab_",sans-serif;*/
-    /*    font-weight: 900;*/
-    /*    color: #F16D35;*/
-    /*    letter-spacing: 1.25px;*/
-    /*    text-align: center;*/
-    /*}*/
-}
 @media only screen and (min-width: 500px) and (max-width: 599px) {
     .answers{
         padding-top: 63px;
@@ -630,7 +620,7 @@
     }
 }
 @media only screen and (min-width: 500px) and (max-width: 697px) {
-    .frequency{
+    .frequency, .frequencyPage{
         width: 100%;
         height: 65px;
         display: flex;
@@ -646,7 +636,7 @@
     }
 }
 @media only screen and (min-width: 698px) and (max-width: 1024px) {
-    .frequency{
+    .frequency, .frequencyPage{
         width: 100%;
         height: 80px;
         display: flex;
@@ -709,10 +699,10 @@
         font-family: "Roboto_", sans-serif;
         font-weight: 400;
         font-size: 20px;
-        width: 141px;
+        width: max-content;
         color: white;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         height: 37px;
         overflow: hidden;
@@ -748,10 +738,10 @@
         font-family: "Roboto_", sans-serif;
         font-weight: 400;
         font-size: 21px;
-        width: 141px;
+        width: max-content;
         color: white;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         height: 37px;
         overflow: hidden;
@@ -885,10 +875,10 @@
         font-family: "Roboto_", sans-serif;
         font-weight: 400;
         font-size: 21px;
-        width: 141px;
+        width: max-content;
         color: white;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         height: 37px;
         overflow: hidden;
@@ -928,10 +918,10 @@
         font-family: "Roboto_", sans-serif;
         font-weight: 400;
         font-size: 21px;
-        width: 141px;
+        width: max-content;
         color: white;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         height: 37px;
         overflow: hidden;
@@ -966,10 +956,10 @@
         font-family: "Roboto_", sans-serif;
         font-weight: 400;
         font-size: 21px;
-        width: 141px;
+        width: max-content;
         color: white;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         height: 37px;
         overflow: hidden;
@@ -1007,10 +997,10 @@
         font-family: "Roboto_", sans-serif;
         font-weight: 400;
         font-size: 22px;
-        width: 141px;
+        width: max-content;
         color: white;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         height: 37px;
         overflow: hidden;
@@ -1108,10 +1098,10 @@
         font-family: "Roboto_", sans-serif;
         font-weight: 400;
         font-size: 22px;
-        width: 141px;
+        width: max-content;
         color: white;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         height: 37px;
         overflow: hidden;
