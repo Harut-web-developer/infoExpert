@@ -44,15 +44,27 @@ class ContactUsController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-        return $this->render('index');
-    }
-    public function actionSend()
-    {
-        if(isset($_POST)){
-            echo "<pre>";
-            var_dump($_POST);
-            die;
+        if($this->request->isPost && isset($_POST['name'])){
+            $email = 'info@infoexpert.am';
+            $post = $this->request->post();
+            $senderName = $post['name'];
+            $senderEmail = $post['email'];
+            $subject = "Contact us";
+            $message = $post['comment'];
+
+            $headers = [
+                'From' => "$senderName <{$senderEmail}>",
+                'Reply-To' => $senderEmail,
+                'MIME-Version' => '1.0',
+                'Content-type' => 'text/html; charset=UTF-8'
+            ];
+
+            $headersString = '';
+            foreach ($headers as $key => $value) {
+                $headersString .= "$key: $value\r\n";
+            }
+            mail($email, $subject, $message, $headersString);
         }
-        return $this->redirect('index');
+        return $this->render('index');
     }
 }

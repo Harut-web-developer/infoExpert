@@ -50,7 +50,6 @@ class SiteController extends Controller
             ],
         ];
     }
-
     /**
      * {@inheritdoc}
      */
@@ -66,7 +65,6 @@ class SiteController extends Controller
             ],
         ];
     }
-
     public static function pages()
     {
         $page['index'] = 1;
@@ -81,7 +79,6 @@ class SiteController extends Controller
         $page['verification'] = 28;
         return $page;
     }
-
     public function beforeAction($action)
     {
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
