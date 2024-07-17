@@ -24,7 +24,7 @@ $session = Yii::$app->session;
 $wrond_mess = $session->get('wrond-mess');
 $message = '';
 if($_COOKIE['language'] == 'am' && $wrond_mess){
-    $message = 'Գաղտնաբառն կամ էլ․ հաղցեն սխալ է։';
+    $message = 'Գաղտնաբառն կամ էլ․ հասցեն սխալ է։';
 }elseif ($_COOKIE['language'] == 'ru'  && $wrond_mess){
     $message = 'Пароль или адрес эл. почты это неверно.';
 }elseif ($_COOKIE['language'] == 'en'  && $wrond_mess){

@@ -226,6 +226,10 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
+    public function actionFac(){
+
+
+    }
     /**
      * Displays contact page.
      *
