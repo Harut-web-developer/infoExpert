@@ -45,14 +45,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <link rel="stylesheet" href="/css/mainTablet.css?v=40">
     <link rel="stylesheet" href="/css/mainMobile.css?v=40">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
-
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?php
-    $lessons_ = $GLOBALS['lessons'];
-    $blogs_ = $GLOBALS['blogs'];
-?>
 <header>
     <div class="tabletHeader">
         <div class="mainHeader">
@@ -139,6 +134,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <?php }?>
                     </ul>
                     <div class="searchFlagField">
+                        <img class="btn-search" src="/images/search-white.png" alt="">
                         <div class="tabletFlagField">
                             <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/armflag.png" alt=""></a>
                             <a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img src="/images/usaflag.png" alt=""></a>
@@ -332,15 +328,31 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <div class="popup-wrap">
     <div class="popup-box">
         <div class="search-input-x">
-            <span class="close-btn popup-close">x</span>
             <div class="search-container">
                 <input class="input-search" type="text" placeholder="<?= $GLOBALS['text']['search']?>"" name="search">
-                <img class="search-blue" src="/images/search-blue.png" alt="">
+                <span class="close-btn popup-close">x</span>
             </div>
-            <div id="searchField" class="searchField"></div>
         </div>
+        <div id="searchField" class="searchField"></div>
     </div>
 </div>
+<!--successfully logged popup-->
+<?php
+$session = Yii::$app->session;
+$logged = $session->get('logged');
+$alertShown = $session->get('alertShown');
+if ($logged && $alertShown) {
+    $session->set('alertShown', false); ?>
+    <div class="popup-wrap-logged">
+        <div class="popup-box-logged">
+            <div class="logged-content">
+                <span class="logged-txt"><?=$GLOBALS['text']['logged']?> </span>
+                <span class="close-btn popup-close close-logged">x</span>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
 <main id="main" class="flex-shrink-0" role="main">
     <?= $content ?>
 </main>

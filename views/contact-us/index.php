@@ -36,7 +36,7 @@ $this->registerCssFile('@web/css/contactus.css?v=3');
                 <div id="map"></div>
             </div>
         </div>
-        <form action="" class="sectionContactusBottom">
+        <form action="send" class="sectionContactusBottom" method="post">
             <h1 class="contactusBottomTitle"><?=$GLOBALS['text']['contactUs']?></h1>
             <p class="contactusBottomTxt"><?=$GLOBALS['text']['contactInputText']?></p>
             <div class="form-row inputdiv">

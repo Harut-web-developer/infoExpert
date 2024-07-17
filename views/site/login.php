@@ -14,12 +14,21 @@ if (isset($_COOKIE['email'])){
 <?php
 $language = $_COOKIE['language'];
 $class1 = '';
-
 if ($language == 'en') {
 } elseif ($language == 'am') {
     $class1 = 'loginFieldAm';
 } elseif ($language == 'ru') {
     $class1 = 'loginFieldAm';
+}
+$session = Yii::$app->session;
+$wrond_mess = $session->get('wrond-mess');
+$message = '';
+if($_COOKIE['language'] == 'am' && $wrond_mess){
+    $message = 'Գաղտնաբառն կամ էլ․ հաղցեն սխալ է։';
+}elseif ($_COOKIE['language'] == 'ru'  && $wrond_mess){
+    $message = 'Пароль или адрес эл. почты это неверно.';
+}elseif ($_COOKIE['language'] == 'en'  && $wrond_mess){
+    $message = 'Password or email it is wrong.';
 }
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
@@ -51,6 +60,7 @@ if ($language == 'en') {
                     <a href="site/forgot"><?=$GLOBALS['text']['signinLost']?></a>
                 </div>
             </div>
+            <div class="errormes"><?=$message?></div>
             <button type="submit" class="container_signin">
                 <img src="/images/Vector.png" alt="">
                 <span><?=$GLOBALS['text']['signinBtn']?></span>

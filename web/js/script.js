@@ -421,34 +421,13 @@ $(document).ready(function () {
             $('.securityModal').css('display', 'none');
         }
     });
-    // $('.btn-searchTablet').on('click', function () {
-    //     $('.input-searchTablet').focus();
-    // })
-    // $(document).on('click', function (event) {
-    //     if ($(event.target).closest('.searchField').length === 0) {
-    //         $('.searchField').hide();
-    //     }else{
-    //         $('.btn-search').focus();
-    //         $('.input-search').focus();
-    //     }
-    // });
-
-    // $('.btn-search').on('click', function () {
-    //     // $('.input-search').focus();
-    //     let inputValue = $('.input-search').val();
-    //     let letterCount = inputValue.replace(/[^a-zA-Z]/g, '').length;
-    //     if (inputValue !== '' && letterCount > 3) {
-    //         $('.searchField').show();
-    //     }
-    // });
-
     function inputValue(this_) {
         let inputVal = this_.val();
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
         if (inputVal.length > 3) {
             $.ajax({
                 url: "/site/search",
-                method: 'post',
+                method: 'get',
                 dataType: 'json',
                 data: {
                     input_val: inputVal,
@@ -466,28 +445,27 @@ $(document).ready(function () {
             $('#searchField').hide();
         }
     }
-
     $('.input-search').on('input', function () {
         inputValue($(this));
     });
-
     $('.btn-search').on('click', function () {
-        // inputValue($('.input-search'));
         $('.btn-search').click(function(e) {
             $('.popup-wrap').fadeIn(500);
             $('.popup-box').removeClass('transform-out').addClass('transform-in');
 
             e.preventDefault();
         });
-
         $('.popup-close').click(function(e) {
             $('.popup-wrap').fadeOut(500);
             $('.popup-box').removeClass('transform-in').addClass('transform-out');
-
             e.preventDefault();
         });
     });
-
+    $('.close-logged').click(function(e) {
+        $('.popup-wrap-logged').fadeOut(500);
+        $('.popup-box-logged').removeClass('transform-in').addClass('transform-out');
+        e.preventDefault();
+    });
         $('body').on('click', 'ion-icon', function () {
         let indID = $(this).data('id');
         let thisItem = $(this);
@@ -556,8 +534,6 @@ $(document).ready(function () {
                 }
             })
         }
-
-
     })
     $('body').on('click', '.addMyCard', function () {
         let lesson_id = $(this).data('id');

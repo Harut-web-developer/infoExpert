@@ -6,7 +6,7 @@ $this->registerCssFile('@web/css/forgot.css');
     <div class="contentForgot">
         <div class="lostPassword"><?=$GLOBALS['text']['lostPassword']?></div>
         <div class="enterMail"><?=$GLOBALS['text']['enterMail']?></div>
-        <form action="forgot" method="POST">
+        <form action="forgot" method="post">
             <div class="inputMail">
                 <input type="email" placeholder="<?=$GLOBALS['text']['inputEmail']?>" name="email" >
             </div>

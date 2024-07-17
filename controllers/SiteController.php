@@ -202,8 +202,10 @@ class SiteController extends Controller
                 $session->set('user_name',$identity->username);
                 $session->set('user_email',$identity->email);
                 $session->set('logged',true);
+                $session->set('alertShown',true);
                 return $this->redirect('/');
             }else{
+                $session->set('wrond-mess', true);
                 return $this->redirect('/login');
             }
         }
@@ -524,7 +526,7 @@ class SiteController extends Controller
         return $this->render('password-updated');
     }
     public function actionSearch() {
-        $searchval = Yii::$app->request->post('input_val');
+        $searchval = Yii::$app->request->get('input_val');
         $language = $_COOKIE['language'];
         $searchval = mb_convert_encoding($searchval, 'UTF-8', mb_detect_encoding($searchval));
         $blogs = AcBlog::find()

@@ -46,5 +46,13 @@ class ContactUsController extends \yii\web\Controller
     {
         return $this->render('index');
     }
-
+    public function actionSend()
+    {
+        if(isset($_POST)){
+            echo "<pre>";
+            var_dump($_POST);
+            die;
+        }
+        return $this->redirect('index');
+    }
 }
