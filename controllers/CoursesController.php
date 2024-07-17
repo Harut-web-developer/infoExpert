@@ -44,6 +44,16 @@ class CoursesController extends \yii\web\Controller
 
         $GLOBALS['text'] = $txt;
         $this->enableCsrfValidation = false;
+        $session = Yii::$app->session;
+        if ($action->id !== 'login' && !(isset($session['user_id']) && $session['logged'])) {
+            return $this->redirect('/login');
+        }
+        else if ($action->id == 'login' && !(isset($session['user_id']) && $session['logged'])) {
+            return $this->actionLogin();
+        }
+        if(!$session['user_name']){
+            $this->redirect('/logout');
+        }
         return parent::beforeAction($action);
     }
     public function actionIndex()
@@ -63,10 +73,8 @@ class CoursesController extends \yii\web\Controller
             'tutors' => $tutors
         ]);
     }
-
     public function actionMyCourses()
     {
-//        echo "<pre>";
         $language = $_COOKIE['language'];
         $user_id = Yii::$app->user->identity->id;
         $my_lessons = AcLessons::find()->select('ac_my_lessons.id as my_lessons_id,lesson_name_'.$language.' as lesson_name,
@@ -75,8 +83,6 @@ class CoursesController extends \yii\web\Controller
             ->where(['and',['ac_my_lessons.status' => '1'],['ac_my_lessons.user_id' => $user_id],])
             ->asArray()
             ->all();
-//        var_dump($my_lessons);
-//        exit();
         return $this->render('my-courses',[
             'my_lessons' => $my_lessons
         ]);

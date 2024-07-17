@@ -45,6 +45,16 @@ class MyCardController extends \yii\web\Controller
 
         $GLOBALS['text'] = $txt;
         $this->enableCsrfValidation = false;
+        $session = Yii::$app->session;
+        if ($action->id !== 'login' && !(isset($session['user_id']) && $session['logged'])) {
+            return $this->redirect('/login');
+        }
+        else if ($action->id == 'login' && !(isset($session['user_id']) && $session['logged'])) {
+            return $this->actionLogin();
+        }
+        if(!$session['user_name']){
+            $this->redirect('/logout');
+        }
         return parent::beforeAction($action);
     }
     public function actionIndex()
@@ -82,7 +92,6 @@ class MyCardController extends \yii\web\Controller
             'lessons' => $lessons
         ]);
     }
-
     public function actionCongratulation()
     {
         return $this->render('congratulation-on-achievement-messages');

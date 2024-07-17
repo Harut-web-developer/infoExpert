@@ -77,7 +77,7 @@ if ($language == 'en') {
                             </div>
                         </div>
                     </div>
- Եթե այլ սերտիֆիկատներ կան օգտագործել այս կոդն
+<!-- Եթե այլ սերտիֆիկատներ կան օգտագործել այս կոդն-->
                     <div class="swiper-slide">
                         <div class="certificate">
                             <div class="cartificateImg">

@@ -108,6 +108,10 @@ class SiteController extends Controller
 
         $GLOBALS['text'] = $txt;
         $this->enableCsrfValidation = false;
+        $session = Yii::$app->session;
+        if ($action->id == 'account-security' && !(isset($session['user_id']) && $session['logged'])) {
+            return $this->redirect('/login')->send();
+        }
         return parent::beforeAction($action);
     }
     /**
@@ -181,7 +185,6 @@ class SiteController extends Controller
             'lessons' => $lessons
         ]);
     }
-
     /**
      * Login action.
      *
@@ -223,11 +226,6 @@ class SiteController extends Controller
         Yii::$app->user->logout();
         return $this->goHome();
     }
-
-    public function actionFac(){
-
-
-    }
     /**
      * Displays contact page.
      *
@@ -245,7 +243,6 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
     /**
      * Displays about page.
      *
@@ -255,12 +252,6 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-
-    public function actionTest()
-    {
-        return $this->render('test');
-    }
-
     public function actionSignUp()
     {
         $session = Yii::$app->session;
@@ -423,8 +414,6 @@ class SiteController extends Controller
                 }
 
                 if (mail($email, $subject, $message, $headersString)) {
-                    var_dump($message);
-                    die;
                     $session->set('email', $email);
                     if (Yii::$app->request->post('message')){
                         return $this->redirect('verification');
@@ -559,7 +548,4 @@ class SiteController extends Controller
             ]),
         ]);
     }
-
-
-
 }
