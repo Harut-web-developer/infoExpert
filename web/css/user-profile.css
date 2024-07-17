@@ -25,6 +25,24 @@ input::-webkit-inner-spin-button {
 .userCreateFieldFormsMobile{
     display: none;
 }
+.nohidden{
+    width: 100%;
+    padding: 0px 10px;
+    border: none;
+    outline: none;
+    color: white;
+    background: #5D9A9D;
+    margin-bottom: 10px;
+}
+.nohiddenMobile{
+    width: 100%;
+    padding: 0px 26px;
+    border: none;
+    outline: none;
+    color: white;
+    background: #74A8AB;
+    margin-bottom: 10px;
+}
 .userProfileSection{
     width: 67%;
     height: 541px;
@@ -523,7 +541,7 @@ input::-webkit-inner-spin-button {
     justify-content: space-between;
     align-items: start;
     width: 100%;
-    height: 85px;
+    height: min-content;
 }
 .userFormsInput_ > label{
     font-family: "Roboto_",sans-serif;
@@ -544,7 +562,7 @@ input::-webkit-inner-spin-button {
     font-size: 16px;
 }
 .userFormsBtn_{
-    margin-top: 24px;
+    margin-top: 10px;
 }
 .userFormsBtn_ > button{
     background: transparent;
@@ -595,9 +613,12 @@ input::-webkit-inner-spin-button {
 }
 .cvFileFieldEdit{
     width: 100%;
-    height: 64px;
+    height: max-content;
     background: #5D9A9D;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 .attachCvEdit:hover{
     cursor: pointer;
@@ -1059,7 +1080,7 @@ input::-webkit-inner-spin-button {
         height: 52px;
     }
     .cvFileFieldEdit {
-        height: 52px;
+        height: max-content;
     }
     .userFormsBtn_ > button > span{
         font-size: 10px;
@@ -1080,7 +1101,7 @@ input::-webkit-inner-spin-button {
         height: 117px;
     }
     .userFormsInput_ {
-        height: 75px;
+        height: min-content;
     }
     .userCreateFieldForms_ {
         width: 75%;
@@ -1213,6 +1234,13 @@ input::-webkit-inner-spin-button {
     .bbbbb, .userInputsFields_{
         display: none;
     }
+    .avatar{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        /*position: absolute;*/
+        /*z-index: 2;*/
+    }
     .userCreateTitleField{
         width: 100%;
         display: flex;
@@ -1250,15 +1278,22 @@ input::-webkit-inner-spin-button {
     .userPhotoFieldsMobile > img{
         border-radius: 50%;
     }
+    .userPhotoFieldsMobile:hover .avatar {
+        opacity: 0.5;
+    }
+    .userPhotoFieldsMobile:hover .userAddPhotoTextMobile {
+        opacity: 1;
+    }
     .userPhotoFieldsMobile > span{
         font-family: "Roboto_",sans-serif;
         color: white;
-        top: 0;
         font-size: 14px;
         font-weight: 400;
         line-height: 16.41px;
         text-align: center;
         text-decoration: underline;
+        position: absolute;
+        z-index: 3;
     }
     .userPhotoFieldsMobile > span:hover{
         cursor: pointer;
@@ -1281,7 +1316,26 @@ input::-webkit-inner-spin-button {
         width: 100%;
         height: 60px;
     }
+    .userFormsInputMobileCv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        height: min-content;
+    }
     .userFormsInputMobile > input{
+        width: 100%;
+        height: 52px;
+        background: #74A8AB;
+        border-radius: 15px;
+        border:none;
+        outline: none;
+        padding: 0px 26px;
+        color: white;
+        font-size: 16px;
+    }
+    .userFormsInputMobileCv > input{
         width: 100%;
         height: 52px;
         background: #74A8AB;
@@ -1320,7 +1374,7 @@ input::-webkit-inner-spin-button {
     }
     .cvFileFieldMobile{
         width: 100%;
-        height: 52px;
+        height: max-content;
         background: #74A8AB;
         border-radius: 15px;
     }
@@ -1345,6 +1399,13 @@ input::-webkit-inner-spin-button {
         gap: 51px;
     }
     .userFormsInputMobile > input::placeholder{
+        color: #D9E3E4;
+        font-family: "Roboto_",sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+    }
+    .userFormsInputMobileCv > input::placeholder{
         color: #D9E3E4;
         font-family: "Roboto_",sans-serif;
         font-size: 16px;

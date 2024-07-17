@@ -61,7 +61,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 </div>
                                 <div class="cardtxt2">
                                     <img src="/images/courses2.png" alt="" draggable="false">
-                                    <span><?=$course['lesson_content']?></span>
+                                    <span><?=$course['lesson_certificate']?></span>
                                 </div>
                             </div>
                             <div class="footerCard">
@@ -119,7 +119,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             </div>
                             <div class="cardtxt2">
                                 <img src="/images/courses2.png" alt="" draggable="false">
-                                <span><?=$course['lesson_content']?></span>
+                                <span><?=$course['lesson_certificate']?></span>
                             </div>
                         </div>
                         <div class="footerCard">
@@ -150,69 +150,17 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     <div class="cardCourses2">
         <div class="wrapper2">
             <ul class="carousel2">
-                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
-                </li>
-                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
-                </li>
-                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
-                </li>
-                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
-                </li>
-                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
-                </li>
-                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
-                </li>
-                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
-                </li>
-                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
-                </li>
-                <li class="card2">
-                    <div class="img2"><img src="/images/courses6.png" alt="" draggable="false"> </div>
-                    <div class="cardBody2">
-                        <h1 class="span1slider2">Manana Davtyan</h1>
-                        <p class="span2slider2">Head of Service Department</p>
-                    </div>
-                </li>
+                <?php if (!empty($tutors)){foreach ($tutors as $tutor){?>
+                    <li class="card2">
+                        <div class="img2">
+                            <img src="/<?=$tutor['img']?>" alt="" draggable="false">
+                        </div>
+                        <div class="cardBody2">
+                            <h1 class="span1slider2"><?=$tutor['username']?></h1>
+                            <span class="span2slider2"><?=$tutor['text']?></span>
+                        </div>
+                    </li>
+                <?php }} ?>
             </ul>
         </div>
     </div>

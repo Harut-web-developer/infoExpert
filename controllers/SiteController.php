@@ -70,6 +70,7 @@ class SiteController extends Controller
     public static function pages()
     {
         $page['index'] = 1;
+        $page['faq'] = 1;
         $page['about'] = 2;
         $page['sign-up'] = 18;
         $page['login'] = 19;
@@ -431,6 +432,21 @@ class SiteController extends Controller
 //        }
 //        return $this->render('forgot');
 //    }
+
+    public function actionFaq(){
+        $language = $_COOKIE['language'];
+        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => null])->asArray()->all();
+        $total_rows_faq = count($answers);
+        $middle_index_faq = floor($total_rows_faq / 2);
+        $first_part_faq = array_slice($answers, 0, $middle_index_faq);
+        $second_par_faq = array_slice($answers, $middle_index_faq);
+        return $this->render('faq',[
+            'answers' => $answers,
+            'total_rows_faq' => $total_rows_faq,
+            'first_part_faq' => $first_part_faq,
+            'second_par_faq' => $second_par_faq
+        ]);
+    }
     public function actionForgot()
     {
         $session = Yii::$app->session;

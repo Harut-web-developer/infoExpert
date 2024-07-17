@@ -27,14 +27,17 @@ if ($language == 'en') {
                 <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                 <li><a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a></li>
                 <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
-                <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
             </ul>
         </div>
         <div class="mainCoursesFields">
             <div class="myCoursesProfileField">
                 <div class="myCoursesFieldSection">
                     <div class="myCoursesFieldSectionLeft">
-                        <img src="/<?php if(!empty(Yii::$app->user->identity->image)){echo Yii::$app->user->identity->image;}?>" alt="">
+                        <?php if(!empty(Yii::$app->user->identity->image)){?>
+                            <img src="/<?=Yii::$app->user->identity->image?>" alt="">
+                        <?php }else{?>
+                            <img src="/images/avatar.png" alt="">
+                        <?php } ?>
                         <div class="usersProfileInfo">
                             <span class="nameAndUsername"><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
                             <div class="usersProfileInfoPhone">
@@ -69,11 +72,14 @@ if ($language == 'en') {
                                         <div class="infoTitle"><?=$my_lesson['lesson_name']?></div>
                                         <div class="myCoursesRating">
                                             <div class="ratingStarMyourse">
-                                                <img src="/images/ratingStar.png" alt="">
-                                                <img src="/images/ratingStar.png" alt="">
-                                                <img src="/images/ratingStar.png" alt="">
-                                                <img src="/images/ratingStar.png" alt="">
-                                                <img src="/images/ratingStar.png" alt="">
+                                                <?php
+                                                    $count = $my_lesson['rating'];
+                                                    $img = '';
+                                                    for ($i = 1; $i <= $count; $i++){
+                                                        $img .= '<img src="/images/ratingStar.png" alt="" draggable="false">';
+                                                    }
+                                                    echo $img;
+                                                ?>
                                             </div>
                                             <span>Leave a rating</span>
                                         </div>
@@ -121,18 +127,17 @@ if ($language == 'en') {
                 </div>
             <?php }} ?>
         </div>
-        <div class="containerSeeMoreMyCourses">
-            <button id="btnMyCourse">
-                <img class="seeMoreBlog" src="/images/seeMoreBlog.png" alt="">
-                <span class="seeMoreText"><?= $GLOBALS['text']['sectionSixBtnMobile'] ?></span>
-            </button>
-        </div>
+<!--        <div class="containerSeeMoreMyCourses">-->
+<!--            <button id="btnMyCourse">-->
+<!--                <img class="seeMoreBlog" src="/images/seeMoreBlog.png" alt="">-->
+<!--                <span class="seeMoreText">--><?php //= $GLOBALS['text']['sectionSixBtnMobile'] ?><!--</span>-->
+<!--            </button>-->
+<!--        </div>-->
     </div>
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         function slider(carousel, wrapper, firstCard) {
-            const firstCardWidth = firstCard.offsetWidth;
             let isDragging = false,
                 startX,
                 startScrollLeft,
@@ -184,22 +189,4 @@ if ($language == 'en') {
             slider(carousel, wrapper, firstCard);
         }
     });
-    let seeMoreBtnCourses = document.querySelector('#btnMyCourse');
-    let courses = [...document.querySelectorAll('.myCoursesMobile .myCoursesBlocksField')];
-    let currentItemCourses = 2;
-    if (currentItemCourses >= courses.length) {
-        seeMoreBtnCourses.style.display = 'none';
-    }
-    seeMoreBtnCourses.onclick = () => {
-        let itemsToShow = 2;
-        for (let i = currentItemCourses; i < currentItemCourses + itemsToShow; i++) {
-            if (i < courses.length) {
-                courses[i].style.display = 'block';
-            }
-        }
-        currentItemCourses += itemsToShow;
-        if (currentItemCourses >= courses.length) {
-            seeMoreBtnCourses.style.display = 'none';
-        }
-    }
 </script>

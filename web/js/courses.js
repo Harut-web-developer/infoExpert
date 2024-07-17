@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     function slider(carousel, wrapper, firstCard) {
-        const firstCardWidth = firstCard.offsetWidth;
+        // const firstCardWidth = firstCard.offsetWidth;
         let isDragging = false,
             startX,
             startScrollLeft,
@@ -46,22 +46,20 @@ document.addEventListener("DOMContentLoaded", function () {
         wrapper.addEventListener("mouseleave", autoPlay);
     }
 
-    if (window.location.pathname == '/courses/my-courses') {
-        const carousel3 = document.querySelector(".myCoursesFieldAcceptCourses");
-        const wrapper3 = document.querySelector(".wrapperMyCourses");
-        const firstCard3 = carousel3.querySelector(".myCoursesBlocksField");
-        slider(carousel3, wrapper3, firstCard3);
-    } else {
         const wrapper = document.querySelector(".wrapper"); // div
         const carousel = document.querySelector(".carouselCourses"); /* ul*/
-        const firstCard = carousel.querySelector(".cardCourses"); // li
-        slider(carousel, wrapper, firstCard);
+            if (carousel != null){
+                const firstCard = carousel.querySelector(".cardCourses"); // li
+                slider(carousel, wrapper, firstCard);
+            }
 
         const carousel2 = document.querySelector(".carousel2");
         const wrapper2 = document.querySelector(".wrapper2");
-        const firstCard2 = carousel2.querySelector(".card2");
-        slider(carousel2, wrapper2, firstCard2);
-    }
+            if (carousel != null){
+                const firstCard2 = carousel2.querySelector(".card2");
+                slider(carousel2, wrapper2, firstCard2);
+            }
+
 });
 
 let seeMoreBtnCourses = document.querySelector('#coursesBtnMobile');

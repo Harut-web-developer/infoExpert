@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\AcQuestionAnswers;
 use app\models\AcQuestionList;
 use app\models\AcQuestionQuests;
+use app\models\AcQuizeLog;
 use Yii;
 use app\models\Texts;
 
@@ -49,6 +50,12 @@ class QuizeController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        if ($this->request->isPost && isset($_POST['enterQuize'])){
+            $session = Yii::$app->session;
+            $session->set('quizeName',$_POST['name']);
+            $session->set('quizePhone',$_POST['phone']);
+            $session->set('quizeEmail',$_POST['email']);
+        }
         $language = $_COOKIE['language'];
         $quize_name = AcQuestionList::find()
             ->select('id, name_'.$language.' as name')
@@ -100,6 +107,38 @@ class QuizeController extends \yii\web\Controller
             'questions_count' => $questions_count
         ]);
 
+    }
+    public function  actionCheck(){
+        $session = Yii::$app->session;
+        date_default_timezone_set('Asia/Yerevan');
+        $ansers = $_POST['answers'];
+        $true_answers = 0;
+        if(!empty($ansers)){
+            for ($i=0; $i< count($ansers);$i++){
+                $quest = AcQuestionAnswers::findOne($ansers[$i]);
+                if($quest->is_true){
+                    $true_answers ++;
+                }
+            }
+        }
+        $quizeLog = new AcQuizeLog();
+        if (Yii::$app->user->identity){
+            $quizeLog->username = Yii::$app->user->identity->username;
+            $quizeLog->phone = Yii::$app->user->identity->phone ? Yii::$app->user->identity->phone : $session['quizePhone'];
+            $quizeLog->email = Yii::$app->user->identity->email;
+        }else{
+            $quizeLog->username = $session['quizeName'];
+            $quizeLog->phone = $session['quizePhone'];
+            $quizeLog->email = $session['quizeEmail'];
+        }
+        $quizeLog->user_id = Yii::$app->user->identity->id;
+        $quizeLog->result = $true_answers;
+        $quizeLog->question_id = $_POST['id'];
+        $quizeLog->answers = json_encode($ansers);
+        $quizeLog->create_date = date('Y-m-d H:i:s');
+        $quizeLog->save(false);
+
+        return $true_answers;
     }
     public function actionResult()
     {
