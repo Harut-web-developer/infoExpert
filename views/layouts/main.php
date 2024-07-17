@@ -46,7 +46,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <link rel="stylesheet" href="/css/mainTablet.css?v=40">
     <link rel="stylesheet" href="/css/mainMobile.css?v=40">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
-
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -139,10 +138,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <?php }?>
                     </ul>
                     <div class="searchFlagField">
-                        <div class="tabletSearchField">
-                            <button class="btn-searchTablet"><img src="/images/search.png" alt=""></button>
-                            <input type="text" class="input-searchTablet" placeholder="<?= $GLOBALS['text']['search']?>">
-                        </div>
+                        <img class="btn-search" src="/images/search-white.png" alt="">
                         <div class="tabletFlagField">
                             <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/armflag.png" alt=""></a>
                             <a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img src="/images/usaflag.png" alt=""></a>
@@ -199,23 +195,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <a href="/"><img src="/images/logo.png" alt=""></a>
                 </div>
                 <div class="icons">
-                    <div class="search-box">
-                        <button class="btn-search"><img src="/images/search.png" alt=""></button>
-                        <input type="text" class="input-search" placeholder="<?=$GLOBALS['text']['search']?>">
-                        <div class="searchField">
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdvcqwdvqegvf uerhqf wie qjeioq ejwfiosdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsqwefkewfpkqw epofk qoewjkf qwekfqwe fdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgqwe fkqpowekf qpwefk pqwekfpq kwef qwefsdg</span>
-                            <span class="searchText">gsqwef qw[efl ewf[qw elf[w lef[k woejn wqedfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                            <span class="searchText">gsdfghsdfgsdg</span>
-                        </div>
-                    </div>
+                    <img class="btn-search" src="/images/search-white.png" alt="">
                     <div class="profileField">
                         <?php if (empty(Yii::$app->user->identity)){?>
                             <a href="/login"><img class="profileUserIcon" src="/images/user.png" alt=""></a>
@@ -230,7 +210,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                 </ul>
                             </div>
                         <?php }?>
-
                     </div>
                     <div class="flagFields">
                         <?php
@@ -310,58 +289,86 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
         </div>
     </div>
-        <div class="securityModal">
-            <div class="securityContentModal">
-                <form class="modalMainField" action="" method="post">
-                    <div class="modalTitleField">
-                        <span class="modalTitle"><?=$GLOBALS['text']['modalTitleCallBack']?></span>
-                        <span class="modalText"><?=$GLOBALS['text']['modalTextCallBack']?></span>
-                    </div>
-                    <div class="modalInputField">
-                        <div class="firstField">
-                            <div class="modalNameField">
-                                <input type="text" placeholder="<?=$GLOBALS['text']['modalCallBackName']?>" name="callBackName" required>
-                            </div>
-                            <div class="modalEmailField">
-                                <input type="email" placeholder="<?=$GLOBALS['text']['inputEmail']?>" name="callBackEmail" required>
-                            </div>
-                            <div class="modalPhoneField">
-                                <input type="number" placeholder="<?=$GLOBALS['text']['modalCallBackPhone']?>" name="callBackPhone" required>
-                            </div>
+    <div class="securityModal">
+        <div class="securityContentModal">
+            <form class="modalMainField" action="" method="post">
+                <div class="modalTitleField">
+                    <span class="modalTitle"><?=$GLOBALS['text']['modalTitleCallBack']?></span>
+                    <span class="modalText"><?=$GLOBALS['text']['modalTextCallBack']?></span>
+                </div>
+                <div class="modalInputField">
+                    <div class="firstField">
+                        <div class="modalNameField">
+                            <input type="text" placeholder="<?=$GLOBALS['text']['modalCallBackName']?>" name="callBackName" required>
                         </div>
-                        <div class="secondField">
-                            <div class="modalSelectField">
-                                <select name="callBackCourses" required>
-                                    <option value=""><?=$GLOBALS['text']['modalCallBackCourses']?></option>
-                                    <?php
-                                    $lesson_select = AcLessons::find()->select('id, lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
-                                    if (!empty($lesson_select)){ foreach ($lesson_select as $item){?>
-                                        <option value="<?=$item['id']?>"><?=$item['lesson_name']?></option>
-                                        <?php }} ?>
-                                </select>
-                            </div>
+                        <div class="modalEmailField">
+                            <input type="email" placeholder="<?=$GLOBALS['text']['inputEmail']?>" name="callBackEmail" required>
+                        </div>
+                        <div class="modalPhoneField">
+                            <input type="number" placeholder="<?=$GLOBALS['text']['modalCallBackPhone']?>" name="callBackPhone" required>
                         </div>
                     </div>
-                    <div class="modalBtnField">
-                        <button type="submit" name="callBackBtn">
-                            <img src="/images/securityBtn.png" alt="">
-                            <span><?=$GLOBALS['text']['modalCallBackSubmit']?></span>
-                        </button>
+                    <div class="secondField">
+                        <div class="modalSelectField">
+                            <select name="callBackCourses" required>
+                                <option value=""><?=$GLOBALS['text']['modalCallBackCourses']?></option>
+                                <?php
+                                $lesson_select = AcLessons::find()->select('id, lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+                                if (!empty($lesson_select)){ foreach ($lesson_select as $item){?>
+                                    <option value="<?=$item['id']?>"><?=$item['lesson_name']?></option>
+                                    <?php }} ?>
+                            </select>
+                        </div>
                     </div>
-                </form>
-                <img class="animateOne" src="/images/circleAnimation.png" alt="">
-                <img class="animateTwo" src="/images/circleAnimation.png" alt="">
-                <img class="animateThree" src="/images/circleAnimation.png" alt="">
-                <img class="animateFour" src="/images/circleAnimation.png" alt="">
-                <img class="animateFive" src="/images/circleAnimation.png" alt="">
-                <img class="animateSix" src="/images/circleAnimation.png" alt="">
+                </div>
+                <div class="modalBtnField">
+                    <button type="submit" name="callBackBtn">
+                        <img src="/images/securityBtn.png" alt="">
+                        <span><?=$GLOBALS['text']['modalCallBackSubmit']?></span>
+                    </button>
+                </div>
+            </form>
+            <img class="animateOne" src="/images/circleAnimation.png" alt="">
+            <img class="animateTwo" src="/images/circleAnimation.png" alt="">
+            <img class="animateThree" src="/images/circleAnimation.png" alt="">
+            <img class="animateFour" src="/images/circleAnimation.png" alt="">
+            <img class="animateFive" src="/images/circleAnimation.png" alt="">
+            <img class="animateSix" src="/images/circleAnimation.png" alt="">
+        </div>
+    </div>
+</header>
+<!--search popup-->
+<div class="popup-wrap">
+    <div class="popup-box">
+        <div class="search-input-x">
+            <div class="search-container">
+                <input class="input-search" type="text" placeholder="<?= $GLOBALS['text']['search']?>"" name="search">
+                <span class="close-btn popup-close">x</span>
             </div>
         </div>
-</header>
+        <div id="searchField" class="searchField"></div>
+    </div>
+</div>
+<!--successfully logged popup-->
+<?php
+$session = Yii::$app->session;
+$logged = $session->get('logged');
+$alertShown = $session->get('alertShown');
+if ($logged && $alertShown) {
+    $session->set('alertShown', false); ?>
+    <div class="popup-wrap-logged">
+        <div class="popup-box-logged">
+            <div class="logged-content">
+                <span class="logged-txt"><?=$GLOBALS['text']['logged']?> </span>
+                <span class="close-btn popup-close close-logged">x</span>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
 <main id="main" class="flex-shrink-0" role="main">
     <?= $content ?>
 </main>
-
 <footer class="footerBackground" id="footerBackgroundM">
     <div class="sectionFooter">
         <div class="imagesFooterFields">

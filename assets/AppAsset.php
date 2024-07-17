@@ -24,7 +24,7 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
-        'js/script.js?v=30',
+        'js/script.js?v=230',
     ];
     public $depends = [
         'yii\web\YiiAsset',

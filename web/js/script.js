@@ -421,14 +421,52 @@ $(document).ready(function () {
             $('.securityModal').css('display', 'none');
         }
     });
-    $('.btn-searchTablet').on('click', function () {
-        $('.input-searchTablet').focus();
-    })
+    function inputValue(this_) {
+        let inputVal = this_.val();
+        let csrfToken = $('meta[name="csrf-token"]').attr("content");
+        if (inputVal.length > 3) {
+            $.ajax({
+                url: "/site/search",
+                method: 'get',
+                dataType: 'json',
+                data: {
+                    input_val: inputVal,
+                    _csrf: csrfToken
+                },
+                success: function (data) {
+                    $('#searchField').html(data.html);
+                    $('.searchField').show();
+                },
+                error: function (xhr, status, error) {
+                    console.error('AJAX Error: ' + status + ' ' + error);
+                }
+            });
+        } else {
+            $('#searchField').hide();
+        }
+    }
+    $('.input-search').on('input', function () {
+        inputValue($(this));
+    });
     $('.btn-search').on('click', function () {
-        $('.input-search').focus();
-    })
+        $('.btn-search').click(function(e) {
+            $('.popup-wrap').fadeIn(500);
+            $('.popup-box').removeClass('transform-out').addClass('transform-in');
 
-    $('body').on('click', 'ion-icon', function () {
+            e.preventDefault();
+        });
+        $('.popup-close').click(function(e) {
+            $('.popup-wrap').fadeOut(500);
+            $('.popup-box').removeClass('transform-in').addClass('transform-out');
+            e.preventDefault();
+        });
+    });
+    $('.close-logged').click(function(e) {
+        $('.popup-wrap-logged').fadeOut(500);
+        $('.popup-box-logged').removeClass('transform-in').addClass('transform-out');
+        e.preventDefault();
+    });
+        $('body').on('click', 'ion-icon', function () {
         let indID = $(this).data('id');
         let thisItem = $(this);
         let type = $(this).data('type');
@@ -496,8 +534,6 @@ $(document).ready(function () {
                 }
             })
         }
-
-
     })
     $('body').on('click', '.addMyCard', function () {
         let lesson_id = $(this).data('id');

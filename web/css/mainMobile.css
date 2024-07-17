@@ -192,29 +192,6 @@
     .tabletCoursesList{
         margin-bottom: 0px;
     }
-    .searchFlagField{
-        height: 84px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: start;
-    }
-    .btn-searchTablet {
-        width: 25px;
-        height: 50px;
-        border-style: none;
-        font-size: 15px;
-        font-weight: bold;
-        outline: none;
-        cursor: pointer;
-        border-radius: 50%;
-        /*position: absolute;*/
-        bottom: 38px;
-        left: -10px;
-        color: #ffffff;
-        background-color: transparent;
-        pointer-events: painted;
-    }
     .tabletFlagField > a {
         margin: 2px;
     }
