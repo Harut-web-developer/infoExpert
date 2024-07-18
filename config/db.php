@@ -1,11 +1,10 @@
-<?php
 
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=infoexpert',
     'username' => 'root',
-    'password' => '',
-    'charset' => 'utf8mb4',
+    'password' => '16piOnJRNCMe',
+    'charset' => 'utf8',
 
     // Schema cache options (for production environment)
     //'enableSchemaCache' => true,
