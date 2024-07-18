@@ -1808,6 +1808,16 @@
     width: 100%;
     height: 924px;
 }
+.sectionSixPage{
+    margin-top: 0px;
+    background-image: url("../images/testimonialBg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: min-content;
+    padding-bottom: 90px;
+}
 .testimonialsImg{
     align-items: center;
 }
@@ -1817,11 +1827,26 @@
     height: 677px;
     position: absolute;
 }
+.testimonialPage {
+    margin: 0px;
+    padding-top: 190px;
+    width: 100%;
+    height: min-content;
+    /*position: absolute;*/
+}
 .slide-content {
     height: 500px;
     overflow: hidden;
 }
 .testimonialsTitles{
+    /*width: 447px;*/
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonialsTitlesPage{
     /*width: 447px;*/
     height: 112px;
     display: flex;
@@ -1836,7 +1861,7 @@
     letter-spacing: 2px;
     color: #F16D35;
 }
-.testimonialWhiteTitle{
+.testimonialWhiteTitle, .testimonialWhiteTitlePage{
     font-family: "Roboto_",sans-serif;
     font-size: 32px;
     font-weight: 400;

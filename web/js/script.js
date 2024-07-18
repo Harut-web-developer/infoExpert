@@ -75,7 +75,7 @@ $(".answersField").click(function() {
     }
 })()
 
-if (window.location.pathname == '/'){
+if (window.location.pathname == '/' || window.location.pathname == '/testimonials'){
     var swiper = new Swiper(".slide-content", {
         slidesPerView: 3,
         spaceBetween: 1,
@@ -559,7 +559,8 @@ $(document).ready(function () {
         });
     });
 })
-if (window.location.pathname == '/') {
+console.log(window.location.pathname)
+if (window.location.pathname == '/' || window.location.pathname == '/testimonials') {
     let seeMoreBtnTestimonial = document.querySelector('#testimonialBtnMobile');
     let testimonial = [...document.querySelectorAll('.mobileTestimonial .blockTestimonialMobile')];
     let currentItem = 2;

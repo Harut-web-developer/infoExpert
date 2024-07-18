@@ -71,6 +71,7 @@ class SiteController extends Controller
     {
         $page['index'] = 1;
         $page['faq'] = 1;
+        $page['testimonials'] = 1;
         $page['about'] = 2;
         $page['sign-up'] = 18;
         $page['login'] = 19;
@@ -227,6 +228,29 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
+    public function actionFaq(){
+        $language = $_COOKIE['language'];
+        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => null])->asArray()->all();
+        $total_rows_faq = count($answers);
+        $middle_index_faq = floor($total_rows_faq / 2);
+        $first_part_faq = array_slice($answers, 0, $middle_index_faq);
+        $second_par_faq = array_slice($answers, $middle_index_faq);
+        return $this->render('faq', [
+            'answers' => $answers,
+            'total_rows_faq' => $total_rows_faq,
+            'first_part_faq' => $first_part_faq,
+            'second_par_faq' => $second_par_faq,
+
+        ]);
+    }
+    public function actionTestimonials(){
+        $language = $_COOKIE['language'];
+        $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])->asArray()->all();
+
+        return $this->render('testimonials', [
+            'testimonials' => $testimonials
+        ]);
+    }
     /**
      * Displays contact page.
      *

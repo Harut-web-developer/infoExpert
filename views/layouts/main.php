@@ -267,14 +267,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     </li>
                     <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
                         <li class="whiteLi orangeOrWhite"><a href="#sectionAnswers"><?= $GLOBALS['text']['__faq__'] ?></a></li>
-                    <?php } else { ?>
-                        <li class="whiteLi orangeOrWhite"><a href="/site/faq"><?= $GLOBALS['text']['__faq__'] ?></a></li>
-                    <?php } ?>
-
-                    <li class="whiteLi orangeOrWhite"><a href="#testimonials"><?= $GLOBALS['text']['__testimonials__'] ?></a></li>
-                    <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
+                        <li class="whiteLi orangeOrWhite"><a href="#testimonials"><?= $GLOBALS['text']['__testimonials__'] ?></a></li>
                         <li class="whiteLi"><a href="#section01""><?= $GLOBALS['text']['__blog__'] ?></a></li>
                     <?php } else { ?>
+                        <li class="whiteLi orangeOrWhite"><a href="/faq"><?= $GLOBALS['text']['__faq__'] ?></a></li>
+                        <li class="whiteLi orangeOrWhite"><a href="/testimonials"><?= $GLOBALS['text']['__testimonials__'] ?></a></li>
                         <li class="whiteLi orangeOrWhite"><a href="/blog/index"><?= $GLOBALS['text']['__blog__'] ?></a></li>
                     <?php } ?>
                     <li class="whiteLi orangeOrWhite"><a href="/contact-us/index"><?= $GLOBALS['text']['__contact__'] ?></a></li>

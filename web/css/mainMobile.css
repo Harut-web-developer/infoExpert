@@ -1136,7 +1136,7 @@
     /*.webTabletTestimonial{*/
     /*    display: none;*/
     /*}  */
-    .testimonial{
+    .testimonial, .testimonialPage{
         display: none;
     }
     .sectionSix{
@@ -1148,6 +1148,17 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+    }
+    .sectionSixPage{
+        margin-top: 0px;
+        background: linear-gradient(#2F688C, #5E91A2);
+        width: 100%;
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 40px;
     }
     .testimonialSectionMobile {
         padding-top: 50px;
@@ -1178,6 +1189,14 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+    }
+    .testimonialsTitlesPage {
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
     }
     .webTabletTestimonial{
         margin-top: 45px;
