@@ -2645,24 +2645,24 @@
     width: 50%;
 }
 /*Global*/
-  .btn {
-      margin-top:30px;
-      padding:2.2% 5.5%;
-      display:inline-block;
-      -webkit-transition:all linear 0.15s;
-      transition:all linear 0.15s;
-      border-radius:3px;
-      background:#fff;
-      font-size:22px;
-      font-weight: bold;
-      text-decoration:none;
-      text-transform:uppercase;
-      color:#333;
+/*  .btn {*/
+/*      margin-top:30px;*/
+/*      padding:2.2% 5.5%;*/
+/*      display:inline-block;*/
+/*      -webkit-transition:all linear 0.15s;*/
+/*      transition:all linear 0.15s;*/
+/*      border-radius:3px;*/
+/*      background:#fff;*/
+/*      font-size:22px;*/
+/*      font-weight: bold;*/
+/*      text-decoration:none;*/
+/*      text-transform:uppercase;*/
+/*      color:#333;*/
 
-      &:hover {
-          opacity:0.75;
-      }
-  }
+/*      &:hover {*/
+/*          opacity:0.75;*/
+/*      }*/
+/*  }*/
 
 /*Popoup*/
   .popup-wrap {
@@ -2773,12 +2773,10 @@
     -webkit-transition:all ease 0.5s;
     transition:all ease 0.5s;
 }
-
 .transform-in {
     -webkit-transform:translate(-50%, -50%) scale(1);
     transform:translate(-50%, -50%) scale(1);
 }
-
 .transform-out {
     -webkit-transform:translate(-50%, -50%) scale(0.5);
     transform:translate(-50%, -50%) scale(0.5);
@@ -2787,10 +2785,16 @@
     .search-container {
         display: flex;
     }
+    .testimonial-container .txt-content {
+        font-size: 16px;
+    }
 }
 @media screen and (max-width: 800px) {
     .popup-box {
         width: 500px;
+    }
+    .testimonial-container .txt-content {
+        font-size: 15px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -2802,6 +2806,9 @@
     }
     .close-btn {
         top: 16px;
+    }
+    .testimonial-container .txt-content {
+        font-size: 14px;
     }
 }
 @media screen and (max-width: 500px) {
@@ -2828,15 +2835,28 @@
             line-height: 140%;
         }
     }
+    .popup-wrap-testimonial .testimonial-container{
+        width: 370px;
+    }
+    .testimonial-container .txt-content {
+        font-size: 13px;
+        margin: 35px 15px 15px 15px;
+    }
 }
 @media screen and (max-width: 470px) {
     .popup-box {
         width: 350px;
     }
+    .popup-wrap-testimonial .testimonial-container{
+        width: 340px;
+    }
 }
 @media screen and (max-width: 430px) {
     .popup-box {
         width: 300px;
+    }
+    .popup-wrap-testimonial .testimonial-container{
+        width: 310px;
     }
 }
 @media screen and (max-width: 380px) {
@@ -2844,9 +2864,89 @@
         width: 260px;
         height: 140px;
     }
+    .popup-wrap-testimonial .testimonial-container{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .popup-wrap-testimonial .testimonial-container{
+        width: 280px;
+    }
 }
 @media screen and (max-width: 330px) {
     .popup-box {
         width: 270px;
     }
+    .popup-wrap-testimonial .testimonial-container{
+        width: 260px;
+    }
+    .testimonial-container .txt-content {
+        font-size: 12px;
+        margin: 35px 15px 15px 15px;
+    }
+}
+
+/*testimonial popup css*/
+/*Popoup*/
+.popup-wrap-testimonial {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    content:'';
+    background:rgba(0,0,0,0.85);
+    z-index: 500;
+}
+.popup-box-testimonial {
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%) scale(1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    .close-btn-testimonial {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        cursor: pointer;
+        top: 0px;
+        right: 0;
+        display: inline-block;
+        -webkit-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+        border-radius: 1000px;
+        background: rgb(172, 203, 230);
+        border: 5px solid;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        line-height: 160%;
+
+        &:hover {
+            -webkit-transform:rotate(180deg);
+            transform:rotate(180deg);
+        }
+    }
+}
+.testimonial-container{
+    border-radius: 59px;
+    width: 400px;
+    height: max-content;
+    background: #ACCBE6;
+    border: 5px solid #FFFFFF;
+    position: relative;
+}
+.txt-content{
+    font-family: 'Roboto_',sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    margin: 35px;
+    color: white;
 }
