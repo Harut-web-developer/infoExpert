@@ -56,10 +56,4 @@ class LessonsController extends \yii\web\Controller
             'lesson' => $lesson,
         ]);
     }
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
-
-
 }

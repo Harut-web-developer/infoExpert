@@ -36,19 +36,19 @@ $this->registerCssFile('@web/css/contactus.css?v=3');
                 <div id="map"></div>
             </div>
         </div>
-        <form action="send" class="sectionContactusBottom" method="post">
+        <form action="" class="sectionContactusBottom" method="post">
             <h1 class="contactusBottomTitle"><?=$GLOBALS['text']['contactUs']?></h1>
             <p class="contactusBottomTxt"><?=$GLOBALS['text']['contactInputText']?></p>
             <div class="form-row inputdiv">
                 <div class="inputname">
-                    <input type="text" id="validationDefault00_" placeholder="<?=$GLOBALS['text']['contactInputName']?>" required>
+                    <input name="name" type="text" id="validationDefault00_" placeholder="<?=$GLOBALS['text']['contactInputName']?>" required>
                 </div>
                 <div class="inputemail">
-                    <input type="email" id="validationDefault02_" placeholder="<?=$GLOBALS['text']['contactInputEmail']?>" required>
+                    <input name="email" type="email" id="validationDefault02_" placeholder="<?=$GLOBALS['text']['contactInputEmail']?>" required>
                 </div>
             </div>
             <div class="form-row inputcomment">
-                <input type="text" id="validationDefault01_" placeholder="<?=$GLOBALS['text']['contactComment']?>">
+                <input name="comment" type="text" id="validationDefault01_" placeholder="<?=$GLOBALS['text']['contactComment']?>">
             </div>
             <div class="d-flex justify-content-center bottoming">
                 <button>
