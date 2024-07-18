@@ -43,20 +43,26 @@ if ($language == 'en') {
                         <?php } ?>
                         <span><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
                         <div class="usersProfileInfo">
-                            <div class="usersProfileInfoPhone">
-                                <img src="/images/phonAchievements.png" alt="">
-                                <span><?php if(!empty(Yii::$app->user->identity->phone)){echo Yii::$app->user->identity->phone;}?></span>
-                            </div>
-                            <div class="usersProfileInfoEmail">
-                                <img src="/images/mailAchievements.png" alt="">
-                                <span><?php if(!empty(Yii::$app->user->identity->email)){echo Yii::$app->user->identity->email;}?></span>
-                            </div>
-                            <div class="usersProfileInfoLinkdin">
-                                <img src="/images/linkdinAchievements.png" alt="">
-                                <?php if(!empty(Yii::$app->user->identity->linkdin_url)){?>
-                                    <a href="<?=Yii::$app->user->identity->linkdin_url?>" target="_blank"><?=Yii::$app->user->identity->username?></a>
-                                <?php }?>
-                            </div>
+                            <?php if (Yii::$app->user->identity->phone) { ?>
+                                <div class="usersProfileInfoPhone">
+                                    <img src="/images/phonAchievements.png" alt="">
+                                    <span><?php if(!empty(Yii::$app->user->identity->phone)){echo Yii::$app->user->identity->phone;}?></span>
+                                </div>
+                            <?php } ?>
+                            <?php if (Yii::$app->user->identity->email) { ?>
+                                <div class="usersProfileInfoEmail">
+                                    <img src="/images/mailAchievements.png" alt="">
+                                    <span><?php if(!empty(Yii::$app->user->identity->email)){echo Yii::$app->user->identity->email;}?></span>
+                                </div>
+                            <?php } ?>
+                            <?php if (Yii::$app->user->identity->linkdin_url) { ?>
+                                <div class="usersProfileInfoLinkdin">
+                                    <img src="/images/linkdinAchievements.png" alt="">
+                                    <?php if(!empty(Yii::$app->user->identity->linkdin_url)){?>
+                                        <a href="<?=Yii::$app->user->identity->linkdin_url?>" target="_blank"><?=Yii::$app->user->identity->username?></a>
+                                    <?php }?>
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="myCoursesFieldSectionRight">
@@ -66,29 +72,19 @@ if ($language == 'en') {
             </div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="certificate">
-                            <div class="cartificateImg">
-                                <img src="/images/certificateAchievements.png" alt="">
-                            </div>
-                            <div class="cartificateImgTxt">
-                                <span>1C: Payroll and personnel management</span>
-                                <img src="/images/downloade.png" alt="" class="downloadeButton">
-                            </div>
-                        </div>
-                    </div>
-<!-- Եթե այլ սերտիֆիկատներ կան օգտագործել այս կոդն-->
-                    <div class="swiper-slide">
-                        <div class="certificate">
-                            <div class="cartificateImg">
-                                <img src="/images/certificateAchievements.png" alt="">
-                            </div>
-                            <div class="cartificateImgTxt">
-                                <span>1C: Payroll and personnel management</span>
-                                <img src="/images/downloade.png" alt="" class="downloadeButton">
+                    <?php if (!empty($certificates)){foreach ($certificates as $certificate){?>
+                        <div class="swiper-slide">
+                            <div class="certificate">
+                                <div class="cartificateImg">
+                                    <img src="<?= $certificate['certificate_img'] ?>" alt="">
+                                </div>
+                                <div class="cartificateImgTxt">
+                                    <span><?= $certificate['lesson_name'] ?></span>
+                                    <img src="/images/downloade.png" alt="" class="downloadeButton">
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php }} ?>
                 </div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next"></div>

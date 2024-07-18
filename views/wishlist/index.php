@@ -48,20 +48,26 @@ if ($language == 'en') {
                         <?php } ?>
                         <span><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
                         <div class="usersProfileInfo">
-                            <div class="usersProfileInfoPhone">
-                                <img src="/images/phonAchievements.png" alt="">
-                                <span><?php if(!empty(Yii::$app->user->identity->phone)){echo Yii::$app->user->identity->phone;}?></span>
-                            </div>
-                            <div class="usersProfileInfoEmail">
-                                <img src="/images/mailAchievements.png" alt="">
-                                <span><?php if(!empty(Yii::$app->user->identity->email)){echo Yii::$app->user->identity->email;}?></span>
-                            </div>
-                            <div class="usersProfileInfoLinkdin">
-                                <img src="/images/linkdinAchievements.png" alt="">
-                                <?php if(!empty(Yii::$app->user->identity->linkdin_url)){?>
-                                    <a href="<?=Yii::$app->user->identity->linkdin_url?>" target="_blank"><?=Yii::$app->user->identity->username?></a>
-                                <?php }?>
-                            </div>
+                            <?php if (Yii::$app->user->identity->phone) { ?>
+                                <div class="usersProfileInfoPhone">
+                                    <img src="/images/phonAchievements.png" alt="">
+                                    <span><?php if(!empty(Yii::$app->user->identity->phone)){echo Yii::$app->user->identity->phone;}?></span>
+                                </div>
+                            <?php } ?>
+                            <?php if (Yii::$app->user->identity->email) { ?>
+                                <div class="usersProfileInfoEmail">
+                                    <img src="/images/mailAchievements.png" alt="">
+                                    <span><?php if(!empty(Yii::$app->user->identity->email)){echo Yii::$app->user->identity->email;}?></span>
+                                </div>
+                            <?php } ?>
+                            <?php if (Yii::$app->user->identity->linkdin_url) { ?>
+                                <div class="usersProfileInfoLinkdin">
+                                    <img src="/images/linkdinAchievements.png" alt="">
+                                    <?php if(!empty(Yii::$app->user->identity->linkdin_url)){?>
+                                        <a href="<?=Yii::$app->user->identity->linkdin_url?>" target="_blank"><?=Yii::$app->user->identity->username?></a>
+                                    <?php }?>
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="myCoursesFieldSectionRight">
