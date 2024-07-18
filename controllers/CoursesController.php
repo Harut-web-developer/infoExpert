@@ -45,14 +45,9 @@ class CoursesController extends \yii\web\Controller
         $GLOBALS['text'] = $txt;
         $this->enableCsrfValidation = false;
         $session = Yii::$app->session;
-        if ($action->id !== 'login' && !(isset($session['user_id']) && $session['logged'])) {
-            return $this->redirect('/login');
-        }
-        else if ($action->id == 'login' && !(isset($session['user_id']) && $session['logged'])) {
-            return $this->actionLogin();
-        }
-        if(!$session['user_name']){
-            $this->redirect('/logout');
+        $session = Yii::$app->session;
+        if ($action->id == 'my-courses' && !(isset($session['user_id']) && $session['logged'])) {
+            return $this->redirect('/login')->send();
         }
         return parent::beforeAction($action);
     }
