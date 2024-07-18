@@ -102,7 +102,7 @@ if ($language == 'en') {
                                                     </div>
                                                     <div class="myCardInfoTextIconSecond">
                                                         <img src="/images/mycardicon2.png" alt="">
-                                                        <span><?=$item['lesson_content']?></span>
+                                                        <span><?=$item['lesson_certificate']?></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -161,7 +161,7 @@ if ($language == 'en') {
                                             </div>
                                             <div class="myCardInfoTextIconSecond">
                                                 <img src="/images/mycardicon2.png" alt="">
-                                                <span><?=$item['lesson_content']?></span>
+                                                <span><?=$item['lesson_certificate']?></span>
                                             </div>
                                         </div>
                                     </div>

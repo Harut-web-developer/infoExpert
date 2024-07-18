@@ -559,8 +559,7 @@ $(document).ready(function () {
         });
     });
 })
-console.log(window.location.pathname)
-if (window.location.pathname == '/' || window.location.pathname == '/testimonials') {
+if (window.location.pathname == '/' || window.location.pathname == '/testimonials' && window.innerWidth < 600) {
     let seeMoreBtnTestimonial = document.querySelector('#testimonialBtnMobile');
     let testimonial = [...document.querySelectorAll('.mobileTestimonial .blockTestimonialMobile')];
     let currentItem = 2;

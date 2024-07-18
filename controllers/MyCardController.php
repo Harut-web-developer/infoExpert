@@ -63,7 +63,7 @@ class MyCardController extends \yii\web\Controller
         $user_id = Yii::$app->user->identity->id;
         $my_card = AcLessons::find()->select('ac_lessons.id as lesson_id, ac_lessons.img as img, ac_lessons.price as price, ac_lessons.rating as rating,
         ac_my_card.id as my_card_id,lesson_name_'.$language.' as lesson_name, lesson_title_'.$language.' as lesson_title,
-        lesson_content_'.$language.' as lesson_content')
+        lesson_certificate_'.$language.' as lesson_certificate')
             ->leftJoin('ac_my_card', 'ac_my_card.lessons_id = ac_lessons.id')
             ->where(['and',['ac_my_card.status' => '1'],['ac_my_card.user_id' => $user_id],])
             ->asArray()

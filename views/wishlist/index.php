@@ -107,7 +107,7 @@ if ($language == 'en') {
                                                 </div>
                                                 <div class="cardtxt2_2">
                                                     <img src="/images/courses2.png" alt="">
-                                                    <span><?=$wishlist_cours['lesson_content']?></span>
+                                                    <span><?=$wishlist_cours['lesson_certificate']?></span>
                                                 </div>
                                             </div>
                                             <div class="footerCard_2">
@@ -219,7 +219,7 @@ if ($language == 'en') {
                                             </div>
                                             <div class="cardtxt2_2">
                                                 <img src="/images/courses2.png" alt="">
-                                                <span><?=$wishlist_cours['lesson_content']?></span>
+                                                <span><?=$wishlist_cours['lesson_certificate']?></span>
                                             </div>
                                         </div>
                                         <div class="footerCard_2">

@@ -58,7 +58,7 @@ class WishlistController extends \yii\web\Controller
 //        echo "<pre>";
         $language = $_COOKIE['language'];
         $wishlist_courses = AcLessons::find()->select('ac_lessons.id as lessons_id, ac_lessons.img as img, ac_lessons.price as price, ac_lessons.rating as rating,
-         lesson_name_'.$language.' as lesson_name,lesson_title_'.$language.' as lesson_title, lesson_content_'.$language.' as lesson_content')
+         lesson_name_'.$language.' as lesson_name,lesson_title_'.$language.' as lesson_title,lesson_certificate_'.$language.' as lesson_certificate')
             ->leftJoin('ac_wishlist', 'ac_lessons.id = ac_wishlist.product_id')
             ->where(['ac_lessons.status' => '1'])
             ->andWhere(['ac_wishlist.status' => '1'])

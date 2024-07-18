@@ -1150,11 +1150,11 @@ ion-icon {
     }
     .myCardNameRating > span{
         width: 100%;
-        height: 38px;
+        height: 40px;
         font-family: "RobotoSlab_",sans-serif;
         font-size: 16px;
         font-weight: 500;
-        line-height: 20.8px;
+        line-height: 18.8px;
     }
     .rightContentMyCard{
         width: 85px;
@@ -1228,17 +1228,26 @@ ion-icon {
 }
 @media screen and (max-width: 370px) {
     .myCardBlocksField {
-        width: 300px;
+        width: 280px;
     }
     .myCoursesBlocksField {
-        width: 300px;
+        width: 280px;
         height: 435px;
     }
     .myCoursesBlocksField > img {
-        width: 300px;
+        width: 280px;
     }
     .myCoursesBlocksFieldMain {
-        width: 300px;
+        width: 280px;
+    }
+    .blogsBottomInfoField {
+        width: 257px;
+        height: 193px;
+        margin: 18px 10px 21px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 @media screen and (max-width: 600px) {

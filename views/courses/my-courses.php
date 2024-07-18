@@ -81,12 +81,12 @@ if ($language == 'en') {
                                                     echo $img;
                                                 ?>
                                             </div>
-                                            <span>Leave a rating</span>
+                                            <span><?=$GLOBALS['text']['rating']?></span>
                                         </div>
                                         <div class="progress" style="height: 3px;">
                                             <div class="progress-bar" role="progressbar" style="width: <?=$my_lesson['complete_percent']?>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
-                                        <span class="myCourseercentText"><?=$my_lesson['complete_percent']?> % complete</span>
+                                        <span class="myCourseercentText"><?=$my_lesson['complete_percent']?> % <?=$GLOBALS['text']['complete']?></span>
                                     </div>
                                 </div>
                             </li>
@@ -115,13 +115,13 @@ if ($language == 'en') {
                                 <img src="/images/ratingStar.png" alt="">
                                 <img src="/images/ratingStar.png" alt="">
                             </div>
-                            <span>Leave a rating</span>
+                            <span><?=$GLOBALS['text']['rating']?></span>
                         </div>
                         <div class="blogInfoPercent">
                             <div class="progress" style="height: 3px;">
                                 <div class="progress-bar" role="progressbar" style="width: <?=$my_lesson['complete_percent']?>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <span class="myCourseercentText"><?=$my_lesson['complete_percent']?> % complete</span>
+                            <span class="myCourseercentText"><?=$my_lesson['complete_percent']?> % <?=$GLOBALS['text']['complete']?></span>
                         </div>
                     </div>
                 </div>

@@ -507,7 +507,7 @@
     align-items: start;
 }
 .myCoursesRating{
-    width: 121px;
+    width: max-content;
     height: 57px;
     display: flex;
     flex-direction: column;

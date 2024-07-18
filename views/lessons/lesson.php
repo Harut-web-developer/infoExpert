@@ -26,7 +26,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <span><?=$GLOBALS['text']['lessonBeYour']?></span>
                 <img src="/images/personal-management-sertifikat.png" alt="">
             </div>
-            <img class="rightImg" src="/images/personel-management-1.png" alt="">
+            <img class="rightImg" src="/<?=$lesson['img']?>" alt="">
             <div class="zxc"><?=$lesson['lesson_content']?></div>
         </div>
     </div>
@@ -50,7 +50,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         </div>
     </div>
     <div id="bottomImages" class="bottomImages">
-        <span class="amdFix">XXXXX AMD</span>
+        <span class="amdFix"><?=$lesson['price']?> AMD</span>
         <div class="buttonDiv">
             <div class="managementBtnDiv">
                 <a href="/my-card/checkout?lesson_id=<?=$lesson['id']?>">
