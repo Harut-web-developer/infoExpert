@@ -581,21 +581,37 @@ if (window.location.pathname == '/' || window.location.pathname == '/testimonial
     let seeMoreBtnBlogs = document.querySelector('#blogsBtnMobile');
     let blogs = [...document.querySelectorAll('.sectionBlogMobile .blogsCard .individualCards')];
     let currentItemBlogs = 2;
-    if (currentItemBlogs >= blogs.length) {
-        seeMoreBtnBlogs.style.display = 'none';
-    }
-    seeMoreBtnBlogs.onclick = () => {
-        let itemsToShow = 2;
-        for (let i = currentItemBlogs; i < currentItemBlogs + itemsToShow; i++) {
-            if (i < blogs.length) {
-                blogs[i].style.display = 'block';
-            }
-        }
-        currentItemBlogs += itemsToShow;
+    if (blogs != null && seeMoreBtnBlogs != null){
         if (currentItemBlogs >= blogs.length) {
             seeMoreBtnBlogs.style.display = 'none';
         }
+        seeMoreBtnBlogs.onclick = () => {
+            let itemsToShow = 2;
+            for (let i = currentItemBlogs; i < currentItemBlogs + itemsToShow; i++) {
+                if (i < blogs.length) {
+                    blogs[i].style.display = 'block';
+                }
+            }
+            currentItemBlogs += itemsToShow;
+            if (currentItemBlogs >= blogs.length) {
+                seeMoreBtnBlogs.style.display = 'none';
+            }
+        }
     }
+}
+if (window.location.pathname == '/testimonials') {
+    $('.blockTestimonialPopup').on('click', function (e) {
+        $('.popup-wrap-testimonial').fadeIn(500);
+        $('.popup-box-testimonial').removeClass('transform-out').addClass('transform-in');
+        let txt_value = $(this).find('.testimonialsText').text();
+        $('.popup-box-testimonial .txt-content').text(txt_value);
+        e.preventDefault();
+    })
+    $('.popup-close-testimonial').click(function(e) {
+        $('.popup-wrap-testimonial').fadeOut(500);
+        $('.popup-box-testimonial').removeClass('transform-in').addClass('transform-out');
+        e.preventDefault();
+    });
 }
 document.cookie = "screenWidth=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 document.cookie = "screenWidth=" + screen.width;
