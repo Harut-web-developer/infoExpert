@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\AcLessons;
+use app\models\AcTutors;
 use Yii;
 use app\models\Texts;
 
@@ -52,8 +53,17 @@ class LessonsController extends \yii\web\Controller
             ->andWhere(['url' => $lesson_url])
             ->asArray()
             ->one();
+        $tutors = AcTutors::find()->select('id, username_'.$language.' as username, text_'.$language.' as text,img')
+            ->where(['status' => '1'])
+            ->andwhere(['lesson_id' => $lesson['id']])
+            ->asArray()
+            ->all();
+//        echo '<pre>';
+//        var_dump($tutors);
+//        exit();
         return $this->render('lesson',[
             'lesson' => $lesson,
+            'tutors' => $tutors
         ]);
     }
 }

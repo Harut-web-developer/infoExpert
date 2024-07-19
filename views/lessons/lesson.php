@@ -5,6 +5,7 @@ $this->registerCssFile('@web/css/lessons.css?v=2');
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', ['type' => "module"]);
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);
 ?>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <div class="personelManagement">
     <div class="titleMan">
         <a href="javascript:history.go(-1)" class="managmentBackButton">
@@ -38,13 +39,30 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             </div>
             <div class="rightImgBottom">
                 <span><?= $GLOBALS['text']['lessonsTutors']?></span>
-                <div class="card_">
-                    <div class="card-image"><img src="/images/alumnigirl.png" alt=""></div>
-                    <div class="card-info">
-                        <p class="nameCard">Manana Davtyan</p>
-                        <p class="textCard">iNFOEXPERT Academy trainer, Head of Service Department, qualified 1C program specialist in RA․</p>
-                        <img src="/images/linkedinLesson.png">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <?php if (!empty($tutors)){foreach ($tutors as $tutor) {?>
+                            <div class="swiper-slide">
+                                <div class="card_">
+                                    <div class="card-image">
+                                        <?php if (!empty($tutor['img'])){?>
+                                            <img src="/<?=$tutor['img']?>" alt="">
+                                        <?php }else{?>
+                                            <img src="/images/avatar.png" alt="">
+                                        <?php } ?>
+                                    </div>
+                                    <div class="card-info">
+                                        <span class="nameCard"><?=$tutor['username']?></span>
+                                        <span class="textCard"><?=$tutor['text']?></span>
+                                        <img src="/images/linkedinLesson.png">
+                                    </div>
+                                </div>
+                            </div>
+                        <?php }} ?>
                     </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
@@ -68,7 +86,14 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
     function lessonsFieldFixed(){
         document.addEventListener('scroll', function() {
             const bottomImages = document.getElementById('bottomImages');

@@ -13,6 +13,22 @@
 .sizeLikeField{
     width: min-content;
 }
+.swiper-container {
+    width: 296px;
+    /*height: 373px;*/
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: #F36528;
+}
 .amdFix{
     font-family: 'Roboto_',sans-serif;
     font-size: 24px;
@@ -91,11 +107,11 @@
 
 }
 .card-image {
-    max-height: 80px;
+    max-height: 81px;
 }
 .card-image img{
-    max-width: 100%;
-    height: auto;
+    width: 81px;
+    height: 81px;
     border-radius: 50%;
 }
 .nameCard{
@@ -109,11 +125,11 @@
 .textCard{
     /*width: 208.26px;*/
     font-family: "Roboto_",sans-serif;
-    font-size: 16px;
+    font-size: 16px !important;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 22px !important;
     text-align: center;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     height: max-content;
     overflow: hidden;
     display: -webkit-box;
@@ -171,6 +187,17 @@
     line-height: 44px;
     text-align: center;
     display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.nameCard{
+    height: min-content;
+}
+.textCard{
+    height: 88px;
+}
+.textCard > p{
+    margin-bottom: 0px;
 }
 .managementBtnDiv > a{
     background: transparent;

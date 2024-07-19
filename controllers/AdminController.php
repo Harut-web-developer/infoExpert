@@ -275,14 +275,14 @@ class AdminController extends Controller {
         if ($post && $post['add']) {
             $lesson = new AcLessons();
             $lesson->load($post);
-            $lesson->url = $this->transLateURRL($lesson->lesson_name_en);
+            $lesson->url = $this->transLateURRL($lesson->lesson_name_am);
             $lesson->save(false);
             $this->redirect(['lessons', 'success' => 'true', 'id' => 'key' . $lesson->id]);
         }
         else if ($post && $post['edite']) {
             $lesson = AcLessons::findOne(['id' => intval($post['id']) ]);
             $lesson->load($post);
-            $lesson->url = $this->transLateURRL($lesson->lesson_name_en);
+            $lesson->url = $this->transLateURRL($lesson->lesson_name_am);
             $lesson->save(false);
             $this->redirect(['lessons', 'success' => 'true', 'id' => 'key' . $lesson->id]);
         }
@@ -638,66 +638,8 @@ class AdminController extends Controller {
      *
      * @return Response
      */
-//    public  function  transLateURRL($rdata){
-//
-//        $rdata = str_replace(' ', '-', $rdata);
-//        $rdata = str_replace('×', '_', $rdata);
-//        $rdata = str_replace('*', '_', $rdata);
-//        $rdata = str_replace('^', '_', $rdata);
-//        $rdata = str_replace('%', '_', $rdata);
-//        $rdata = str_replace('(', '_', $rdata);
-//        $rdata = str_replace(')', '_', $rdata);
-//        $rdata = str_replace('/', '_', $rdata);
-//        $rdata = str_replace('\\', '_', $rdata);
-//        $rdata = str_replace('#', '_', $rdata);
-//        $rdata = str_replace('՝', '', $rdata);
-//        $rdata = str_replace('։', '_', $rdata);
-//        $rdata = str_replace(',', '_', $rdata);
-//        $rdata = str_replace('-', '_', $rdata);
-//        $rdata = str_replace('$', '_', $rdata);
-//        $rdata = str_replace('@', '_', $rdata);
-//        $rdata = str_replace('&', '_', $rdata);
-//        $rdata = str_replace('=', '_', $rdata);
-//        $rdata = str_replace(',', '_', $rdata);
-//        $rdata = str_replace('«', '', $rdata);
-//        $rdata = str_replace('»', '', $rdata);
-//        $rdata = str_replace('֊', '_', $rdata);
-//        $rdata = str_replace('__', '_', $rdata);
-//        $rdata = str_replace('+', '_', $rdata);
-//        $rdata = str_replace('"', '_', $rdata);
-//        $rdata = str_replace("'", '_', $rdata);
-//        $cyr = [
-//            'ա','բ','վ','գ','դ','ե','ժ','զ','ի','յ','կ','լ','մ','ն','օ','պ',
-//            'ռ','ս','տ','ու','փ','խ','ց','չ','շ','է','ը','ո','ր','և','ք','ջ','ծ','ղ','հ','ճ','թ','ֆ','ձ','ւ',
-//            'Ա','Բ','Վ','Գ','Դ','Ե','Ժ','Զ','Ի','Յ','Կ','Լ','Մ','Ն','Օ','Պ',
-//            'Ռ','Ս','Տ','ՈՒ','Փ','Խ','Ց','Չ','Շ','Է','Ը','Ո','Ր','և','Ք','Ջ','Ծ','Ղ','Հ','Ճ','Թ','Ֆ','Ձ'
-//        ];
-//
-//        $lat = [
-//            'a','b','v','g','d','e','zh','z','i','y','k','l','m','n','o','p',
-//            'r','s','t','u','ph','x','ts','ch','sh','e','y','o','r','ev','q','j','ts','x','h','j','t','f','zh','v',
-//            'A','B','V','G','D','E','ZH','Z','I','Y','K','L','M','N','O','P',
-//            'R','S','T','U','PH','X','TS','CH','SH','E','Y','VO','R','EV','Q','J','TS','X','H','J','T','F','ZH'
-//        ];
-//
-//        $rdata = str_replace($cyr, $lat, $rdata);
-//        return strtolower($rdata);
-//    }
-
-    public function getresultTree(array $elements, $parentId = 0) {
-        $branch = array();
-        foreach ($elements as $element) {
-            if ($element['parent_id'] == $parentId) {
-                $children = $this->getresultTree($elements, $element['id']);
-                if ($children) {
-                    $element['child'] = $children;
-                }
-                $branch[] = $element;
-            }
-        }
-        return $branch;
-    }
     public  function  transLateURRL($rdata){
+
         $rdata = str_replace(' ', '-', $rdata);    $rdata = str_replace('×', '_', $rdata);
         $rdata = str_replace('^', '_', $rdata);    $rdata = str_replace('%', '_', $rdata);
         $rdata = str_replace('(', '_', $rdata);    $rdata = str_replace(')', '_', $rdata);
@@ -712,32 +654,36 @@ class AdminController extends Controller {
         $rdata = str_replace('+', '_', $rdata);    $rdata = str_replace('"', '_', $rdata);
         $rdata = str_replace("'", '_', $rdata);    $rdata = str_replace('՞', '', $rdata);
         $rdata = str_replace(':', '', $rdata);    $rdata = str_replace('.', '', $rdata);
-        /*$cyr = [        'ա','բ','վ','գ','դ','ե','ժ','զ','ի','յ','կ','լ','մ','ն','օ','պ',
-            'ռ','ս','տ','ու','փ','խ','ց','չ','շ','է','ը','ո','ր','և','ք','ջ','ծ','ղ','հ','ճ','թ','ֆ','ձ','ւ',        'Ա','Բ','Վ','Գ','Դ','Ե','Ժ','Զ','Ի','Յ','Կ','Լ','Մ','Ն','Օ','Պ',
-            'Ռ','Ս','Տ','ՈՒ','Փ','Խ','Ց','Չ','Շ','Է','Ը','Ո','Ր','և','Ք','Ջ','Ծ','Ղ','Հ','Ճ','Թ','Ֆ','Ձ'    ];
-        $lat = [
-            'a','b','v','g','d','e','zh','z','i','y','k','l','m','n','o','p',        'r','s','t','u','ph','x','ts','ch','sh','e','y','o','r','ev','q','j','ts','x','h','j','t','f','zh','v',
-            'A','B','V','G','D','E','ZH','Z','I','Y','K','L','M','N','O','P',        'R','S','T','U','PH','X','TS','CH','SH','E','Y','VO','R','EV','Q','J','TS','X','H','J','T','F','ZH'
-        ];    $rdata = str_replace($cyr, $lat, $rdata);
-        return strtolower($rdata);    */
-        $cyr_lower = [
-            'ա','բ','վ','գ','դ','ե','ժ','զ','ի','յ','կ','լ','մ','ն','օ','պ','ռ','ս','տ','ու','փ','խ','ց','չ','շ','է','ը','ո','ր','և','ք','ջ','ծ','ղ','հ','ճ','թ','ֆ','ձ','ւ',
-            'а','б','в','г','д','е','ж','з','и','й','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','щ','ы','э','ю','я','ё','ъ','ь','і','ї','є','ґ'
+        $cyr = [
+            'ա','բ','վ','գ','դ','ե','ժ','զ','ի','յ','կ','լ','մ','ն','օ','պ',
+            'ռ','ս','տ','ու','փ','խ','ց','չ','շ','է','ը','ո','ր','և','ք','ջ','ծ','ղ','հ','ճ','թ','ֆ','ձ','ւ',
+            'Ա','Բ','Վ','Գ','Դ','Ե','Ժ','Զ','Ի','Յ','Կ','Լ','Մ','Ն','Օ','Պ',
+            'Ռ','Ս','Տ','ՈՒ','Փ','Խ','Ց','Չ','Շ','Է','Ը','Ո','Ր','և','Ք','Ջ','Ծ','Ղ','Հ','Ճ','Թ','Ֆ','Ձ'
         ];
-        $lat_lower = [        'a','b','v','g','d','e','zh','z','i','y','k','l','m','n','o','p',
-            'r','s','t','u','ph','x','ts','ch','sh','shch','yi','e','yu','ya','yo','ie','i','i','i','i','ye','g','a','b','v','g','d','e','zh','z','i','y','k','l','m','n','o','p',
-            'r','s','t','u','f','kh','ts','ch','sh','shch','y','e','yu','ya','yo','i','i','i','i','i','ye','g'    ];
-        $cyr_upper = [
-            'Ա','Բ','Վ','Գ','Դ','Ե','Ժ','Զ','Ի','Յ','Կ','Լ','Մ','Ն','Օ','Պ','Ռ','Ս','Տ','ՈՒ','Փ','Խ','Ց','Չ','Շ','Է','Ը','Ո','Ր','և','Ք','Ջ','Ծ','Ղ','Հ','Ճ','Թ','Ֆ','Ձ',
-            'А','Б','В','Г','Д','Е','Ж','З','И','Й','К','Л','М','Н','О','П','Р','С','Т','У','Ф','Х','Ц','Ч','Ш','Щ','Ы','Э','Ю','Я','Ё','Ъ','Ь','І','Ї','Є','Ґ'
-        ];
-        $lat_upper = [ 'A','B','V','G','D','E','ZH','Z','I','Y','K','L','M','N','O','P',
-            'R','S','T','U','PH','X','TS','CH','SH','SHCH','YI','E','YU','YA','YO','IE','I','I','I','I','YE','G','A','B','V','G','D','E','ZH','Z','I','Y','K','L','M','N','O','P',
-            'R','S','T','U','F','KH','TS','CH','SH','SHCH','Y','E','YU','YA','YO','I','I','I','I','I','YE','G'    ];
 
-        $rdata = str_replace($cyr_lower, $lat_lower, $rdata);
-        $rdata = str_replace($cyr_upper, $lat_upper, $rdata);
+        $lat = [
+            'a','b','v','g','d','e','zh','z','i','y','k','l','m','n','o','p',
+            'r','s','t','u','ph','x','ts','ch','sh','e','y','o','r','ev','q','j','ts','x','h','j','t','f','zh','v',
+            'A','B','V','G','D','E','ZH','Z','I','Y','K','L','M','N','O','P',
+            'R','S','T','U','PH','X','TS','CH','SH','E','Y','VO','R','EV','Q','J','TS','X','H','J','T','F','ZH'
+        ];
+
+        $rdata = str_replace($cyr, $lat, $rdata);
         return strtolower($rdata);
+    }
+
+    public function getresultTree(array $elements, $parentId = 0) {
+        $branch = array();
+        foreach ($elements as $element) {
+            if ($element['parent_id'] == $parentId) {
+                $children = $this->getresultTree($elements, $element['id']);
+                if ($children) {
+                    $element['child'] = $children;
+                }
+                $branch[] = $element;
+            }
+        }
+        return $branch;
     }
 
     public function actionLogout() {

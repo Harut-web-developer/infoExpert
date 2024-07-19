@@ -153,7 +153,11 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <?php if (!empty($tutors)){foreach ($tutors as $tutor){?>
                     <li class="card2">
                         <div class="img2">
-                            <img src="/<?=$tutor['img']?>" alt="" draggable="false">
+                            <?php if (!empty($tutor['img'])){?>
+                                <img src="/<?=$tutor['img']?>" alt="" draggable="false">
+                            <?php }else{ ?>
+                                <img src="/images/avatar.png" alt="" draggable="false">
+                            <?php } ?>
                         </div>
                         <div class="cardBody2">
                             <h1 class="span1slider2"><?=$tutor['username']?></h1>
