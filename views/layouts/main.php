@@ -127,9 +127,16 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             <?php } ?>
                         <li><a href="/site/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
                         <li><a href=""><?= $GLOBALS['text']['tabletMethodology']?></a></li>
-                        <li><a href=""><?= $GLOBALS['text']['footerTestimonials']?></a></li>
-                        <li><a href="/blog/index"><?= $GLOBALS['text']['footerBlog']?></a></li>
-                        <li><a href=""><?= $GLOBALS['text']['footerFaq']?></a></li>
+                        <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
+                            <li><a href="#testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
+                            <li><a href="#section01"><?= $GLOBALS['text']['footerBlog']?></a></li>
+                            <li><a href="#sectionAnswers"><?= $GLOBALS['text']['footerFaq']?></a></li>
+                        <?php } else { ?>
+                            <li><a href="/testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
+                            <li><a href="/blog/index"><?= $GLOBALS['text']['footerBlog']?></a></li>
+                            <li><a href="/faq"><?= $GLOBALS['text']['footerFaq']?></a></li>
+                        <?php }  ?>
+
                         <li><a href="/alumni/index"><?= $GLOBALS['text']['headerAlumni']?></a></li>
                         <li><a href=""><?= $GLOBALS['text']['tabletRecQuize']?></a></li>
                         <li><a href="/contact-us/index"><?= $GLOBALS['text']['tabletContact']?></a></li>
@@ -161,8 +168,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
                     <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                     <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
-<!--                    <li><a href="/user-profile/achievements-edit">--><?php //=$GLOBALS['text']['tabletEdit']?><!--</a></li>-->
-<!--                    <li><a href="/my-card/checkout">--><?php //=$GLOBALS['text']['tabletPayment']?><!--</a></li>-->
                     <?php if(!empty(Yii::$app->user->identity)){ ?>
                         <li><a href="/logout"><?=$GLOBALS['text']['headerLogout']?></a></li>
                     <?php }?>
@@ -401,10 +406,10 @@ if ($logged && $alertShown) {
                                 <a href=""><img src="/images/facebook.png" alt=""></a>
                             </div>
                         </div>
-                        <div class="footerBtn">
-                            <input type="text" name="leftEmail" placeholder="<?= $GLOBALS['text']['footerEmailCon']?>">
-                            <button><?= $GLOBALS['text']['footerEmailBtn']?></button>
-                        </div>
+                        <form action="" method="post" class="footerBtn">
+                            <input required type="email" name="leftEmail" placeholder="<?= $GLOBALS['text']['footerEmailCon']?>">
+                            <button type="submit" name="subscribe"><?= $GLOBALS['text']['footerEmailBtn']?></button>
+                        </form>
                     </div>
                     <div class="footerSocial">
                         <a href=""><img src="/images/in.png" alt=""></a>

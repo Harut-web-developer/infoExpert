@@ -7,6 +7,22 @@
     height: 1250px;
 
 }
+.textForEmpty{
+    width: 50%;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 100px;
+    margin: 16% auto 0px;
+}
+.textForEmpty > span{
+    font-family: "Roboto_",sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+}
 .myCardContent{
     padding-top: 212px;
     display: flex;

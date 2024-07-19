@@ -13,6 +13,9 @@
     background: #408689;
     border-radius: 10px;
 }
+/*.swiper-slide {*/
+/*    margin-right: 60px !important;*/
+/*}*/
 .animateOne{
     width: 69px;
     height: 69px;

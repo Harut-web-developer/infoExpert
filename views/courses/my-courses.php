@@ -67,39 +67,45 @@ if ($language == 'en') {
                     </div>
                 </div>
             </div>
-            <div class="cardMyCourses">
-                <div class="wrapperMyCourses">
-                    <ul class="carouselMyCourses myCoursesFieldAcceptCourses">
-                        <?php if (!empty($my_lessons)){foreach ($my_lessons as $my_lesson){?>
-                            <li class="myCoursesBlocksField">
-                                <div class="myCoursesBlocksFieldMain">
-                                    <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
-                                    <div class="myCoursesBlocksFieldMainInfo">
-                                        <div class="infoTitle"><?=$my_lesson['lesson_name']?></div>
-                                        <div class="myCoursesRating">
-                                            <div class="ratingStarMyourse">
-                                                <?php
-                                                    $count = $my_lesson['rating'];
-                                                    $img = '';
-                                                    for ($i = 1; $i <= $count; $i++){
-                                                        $img .= '<img src="/images/ratingStar.png" alt="" draggable="false">';
-                                                    }
-                                                    echo $img;
-                                                ?>
+            <?php if (!empty($my_lessons)){?>
+                <div class="cardMyCourses">
+                    <div class="wrapperMyCourses">
+                        <ul class="carouselMyCourses myCoursesFieldAcceptCourses">
+                            <?php foreach ($my_lessons as $my_lesson){?>
+                                <li class="myCoursesBlocksField">
+                                    <div class="myCoursesBlocksFieldMain">
+                                        <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
+                                        <div class="myCoursesBlocksFieldMainInfo">
+                                            <div class="infoTitle"><?=$my_lesson['lesson_name']?></div>
+                                            <div class="myCoursesRating">
+                                                <div class="ratingStarMyourse">
+                                                    <?php
+                                                        $count = $my_lesson['rating'];
+                                                        $img = '';
+                                                        for ($i = 1; $i <= $count; $i++){
+                                                            $img .= '<img src="/images/ratingStar.png" alt="" draggable="false">';
+                                                        }
+                                                        echo $img;
+                                                    ?>
+                                                </div>
+                                                <span><?=$GLOBALS['text']['rating']?></span>
                                             </div>
-                                            <span><?=$GLOBALS['text']['rating']?></span>
+                                            <div class="progress" style="height: 3px;">
+                                                <div class="progress-bar" role="progressbar" style="width: <?=$my_lesson['complete_percent']?>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="myCourseercentText"><?=$my_lesson['complete_percent']?> % <?=$GLOBALS['text']['complete']?></span>
                                         </div>
-                                        <div class="progress" style="height: 3px;">
-                                            <div class="progress-bar" role="progressbar" style="width: <?=$my_lesson['complete_percent']?>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <span class="myCourseercentText"><?=$my_lesson['complete_percent']?> % <?=$GLOBALS['text']['complete']?></span>
                                     </div>
-                                </div>
-                            </li>
-                        <?php }} ?>
-                    </ul>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            <?php }else{?>
+                <div class="textForEmpty">
+                    <span><?=$GLOBALS['text']['emptyCourses']?></span>
+                </div>
+            <?php } ?>
         </div>
     </div>
     <div class="myCoursesSectionMobile">
@@ -107,8 +113,9 @@ if ($language == 'en') {
             <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
             <div><?=$GLOBALS['text']['tabletMyCourse']?></div>
         </div>
+        <?php if (!empty($my_lessons)){?>
         <div class="myCoursesMobile">
-            <?php if (!empty($my_lessons)){foreach ($my_lessons as $my_lesson){?>
+            <?php foreach ($my_lessons as $my_lesson){?>
                 <div class="myCoursesBlocksField">
                     <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                     <div class="myCoursesBlocksFieldMain">
@@ -131,8 +138,13 @@ if ($language == 'en') {
                         </div>
                     </div>
                 </div>
-            <?php }} ?>
+            <?php }?>
         </div>
+        <?php }else{?>
+        <div class="textForEmpty">
+            <span><?=$GLOBALS['text']['emptyCourses']?></span>
+        </div>
+        <?php } ?>
 <!--        <div class="containerSeeMoreMyCourses">-->
 <!--            <button id="btnMyCourse">-->
 <!--                <img class="seeMoreBlog" src="/images/seeMoreBlog.png" alt="">-->

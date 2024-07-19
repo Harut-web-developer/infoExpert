@@ -70,59 +70,65 @@ if ($language == 'en') {
                         </div>
                     </div>
                 </div>
-                <div class="cardCourses">
-                    <div class="wrapper">
-                        <ul class="myCardFieldAcceptCourses">
-                            <?php if (!empty($my_card)){foreach ($my_card as $item){ ?>
-                                <li class="myCardBlocksField">
-                                    <div class="myCoursesBlocksField">
-                                        <div class="myCoursesBlocksFieldMain">
-                                            <div class="myCardImageBlock">
-                                                <img src="/<?=$item['img']?>" alt="" draggable="false">
-                                                <div class="myCardNameRating">
-                                                    <span><?=$item['lesson_name']?></span>
-                                                    <div class="rightContentMyCard">
-                                                        <div class="starDiv">
-                                                            <?php
-                                                            $count = $item['rating'];
-                                                            $img = '';
-                                                            for ($i = 1; $i <= 5; $i++){
-                                                                if ($i <= $count){
-                                                                    $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
-                                                                }else{
-                                                                    $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                <?php if (!empty($my_card)){?>
+                    <div class="cardCourses">
+                        <div class="wrapper">
+                            <ul class="myCardFieldAcceptCourses">
+                                <?php foreach ($my_card as $item){ ?>
+                                    <li class="myCardBlocksField">
+                                        <div class="myCoursesBlocksField">
+                                            <div class="myCoursesBlocksFieldMain">
+                                                <div class="myCardImageBlock">
+                                                    <img src="/<?=$item['img']?>" alt="" draggable="false">
+                                                    <div class="myCardNameRating">
+                                                        <span><?=$item['lesson_name']?></span>
+                                                        <div class="rightContentMyCard">
+                                                            <div class="starDiv">
+                                                                <?php
+                                                                $count = $item['rating'];
+                                                                $img = '';
+                                                                for ($i = 1; $i <= 5; $i++){
+                                                                    if ($i <= $count){
+                                                                        $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
+                                                                    }else{
+                                                                        $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                                                    }
                                                                 }
-                                                            }
-                                                            echo $img;
-                                                            ?>
+                                                                echo $img;
+                                                                ?>
+                                                            </div>
+                                                            <h1 class="span2_2"><?=$item['price']?> <span class="spanAmd">AMD</span></h1>
                                                         </div>
-                                                        <h1 class="span2_2"><?=$item['price']?> <span class="spanAmd">AMD</span></h1>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="myCardBlockInfo">
-                                                <div class="myCardInfoTextIcon">
-                                                    <div class="myCardInfoTextIconFirst">
-                                                        <img src="/images/mycardicon1.png" alt="">
-                                                        <span><?=$item['lesson_title']?></span>
-                                                    </div>
-                                                    <div class="myCardInfoTextIconSecond">
-                                                        <img src="/images/mycardicon2.png" alt="">
-                                                        <span><?=$item['lesson_certificate']?></span>
+                                                <div class="myCardBlockInfo">
+                                                    <div class="myCardInfoTextIcon">
+                                                        <div class="myCardInfoTextIconFirst">
+                                                            <img src="/images/mycardicon1.png" alt="">
+                                                            <span><?=$item['lesson_title']?></span>
+                                                        </div>
+                                                        <div class="myCardInfoTextIconSecond">
+                                                            <img src="/images/mycardicon2.png" alt="">
+                                                            <span><?=$item['lesson_certificate']?></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="myCardBlockButtons">
-                                        <span class="removeItem" data-remove="<?=$item['my_card_id']?>"><?=$GLOBALS['text']['myCardRemove']?></span>
-                                        <span class="moveItem" data-lesson="<?=$item['lesson_id']?>" data-move="<?=$item['my_card_id']?>"><?=$GLOBALS['text']['myCardMove']?></span>
-                                    </div>
-                                </li>
-                            <?php }} ?>
-                        </ul>
+                                        <div class="myCardBlockButtons">
+                                            <span class="removeItem" data-remove="<?=$item['my_card_id']?>"><?=$GLOBALS['text']['myCardRemove']?></span>
+                                            <span class="moveItem" data-lesson="<?=$item['lesson_id']?>" data-move="<?=$item['my_card_id']?>"><?=$GLOBALS['text']['myCardMove']?></span>
+                                        </div>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                <?php }else{?>
+                    <div class="textForEmpty">
+                        <span><?=$GLOBALS['text']['emptyCourses']?></span>
+                    </div>
+                <?php } ?>
             </div>
         </div>
         <div class="myCardMobileField">
@@ -132,8 +138,9 @@ if ($language == 'en') {
                 </a>
                 <div><?=$GLOBALS['text']['tabletCard']?></div>
             </div>
+            <?php if (!empty($my_card)){?>
             <div class="myCardBlogsSection">
-                <?php if (!empty($my_card)){foreach ($my_card as $item){ ?>
+                <?php foreach ($my_card as $item){ ?>
                     <div class="myCardBlocksField">
                         <div class="myCoursesBlocksField">
                             <img src="/<?=$item['img']?>" alt="" draggable="false">
@@ -179,8 +186,13 @@ if ($language == 'en') {
                             <span class="moveItem" data-lesson="<?=$item['lesson_id']?>" data-move="<?=$item['my_card_id']?>"><?=$GLOBALS['text']['myCardMove']?></span>
                         </div>
                     </div>
-                <?php }} ?>
+                <?php } ?>
             </div>
+            <?php }else{?>
+                <div class="textForEmpty">
+                    <span><?=$GLOBALS['text']['emptyCourses']?></span>
+                </div>
+            <?php } ?>
         </div>
         <div class="totalPriceField" id="totalPriceField">
             <div class="totalPriceFieldSection">
@@ -191,7 +203,7 @@ if ($language == 'en') {
                         foreach ($my_card as $item){
                             $total += $item['price'];
                         }} ?>
-                    <span><?=$GLOBALS['text']['myCardTotal']?>:  ֏ <?=$total?></span>
+                    <span><?=$GLOBALS['text']['myCardTotal']?>:  ֏ <span class="totalPriceLesson"><?=$total?></span></span>
                     <a href="/my-card/checkout">
                         <img src="/images/btncheckoutcard.png" alt="">
                         <span><?=$GLOBALS['text']['myCardCheckout']?></span>

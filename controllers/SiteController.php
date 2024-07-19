@@ -9,6 +9,7 @@ use app\models\AcHaveQuestions;
 use app\models\AcLessons;
 use app\models\AcPartners;
 use app\models\AcReviews;
+use app\models\AcSubscribers;
 use app\models\AcWishlist;
 use app\models\Texts;
 use app\models\User;
@@ -148,6 +149,14 @@ class SiteController extends Controller
             $have_question->question = $question;
             $have_question->create_date = date('Y-m-d H:i:s');
             $have_question->save();
+            return $this->redirect('/');
+        }
+        if ($this->request->isPost && isset($_POST['subscribe'])){
+            $email = $this->request->post('leftEmail');
+            $call_back = new AcSubscribers();
+            $call_back->email = $email;
+            $call_back->create_date = date('Y-m-d H:i:s');
+            $call_back->save();
             return $this->redirect('/');
         }
         $lessons = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();

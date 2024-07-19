@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\AcAlumni;
 use Yii;
 use app\models\Texts;
 
@@ -44,7 +45,14 @@ class AlumniController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-        return $this->render('index');
+        $language = $_COOKIE['language'];
+        $alumni = AcAlumni::find()->select('id,img,linkedin_link,alumni_'.$language.' as alumni, text_'.$language.' as text')
+            ->where(['status' => '1'])
+            ->asArray()
+            ->all();
+        return $this->render('index',[
+            'alumni' => $alumni
+        ]);
     }
 
 }

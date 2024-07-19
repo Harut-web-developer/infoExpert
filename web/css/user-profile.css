@@ -11,6 +11,20 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+.textForEmpty{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textForEmpty > span{
+    font-family: "Roboto_",sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+}
 .managmentBack{
     display: contents;
 }
@@ -338,10 +352,18 @@ input::-webkit-inner-spin-button {
     height: 138px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
 }
-.usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin{
+.usersProfileInfoPhone, .usersProfileInfoEmail{
+    display: flex;
+    word-wrap: break-word;
+    width: 249px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 21px;
+}
+.usersProfileInfoLinkdin{
     display: flex;
     word-wrap: break-word;
     width: 249px;
@@ -808,6 +830,9 @@ input::-webkit-inner-spin-button {
     }
 }
 @media screen and (max-width: 1100px) {
+    .textForEmpty > span{
+        margin-top: 100px;
+    }
     .userFormsBtn_ {
         margin-top: 16px;
         margin-bottom: 16px;
@@ -888,7 +913,11 @@ input::-webkit-inner-spin-button {
         padding-top: 0;
         align-items: flex-start;
     }
-    .usersProfileInfoPhone, .usersProfileInfoEmail, .usersProfileInfoLinkdin {
+    .usersProfileInfoPhone, .usersProfileInfoEmail {
+        width: 161px;
+        margin-bottom: 12px;
+    }
+    .usersProfileInfoLinkdin {
         width: 161px;
     }
     .userProfileMoreAboutField{

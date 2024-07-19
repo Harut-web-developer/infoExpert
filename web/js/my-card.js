@@ -47,14 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     const wrapper = document.querySelector(".wrapper");
     const carousel = document.querySelector(".myCardFieldAcceptCourses");
-    const firstCard = carousel.querySelector(".myCardBlocksField");
-    slider(carousel, wrapper, firstCard);
+    if (carousel != null){
+        const firstCard = carousel.querySelector(".myCardBlocksField");
+        slider(carousel, wrapper, firstCard);
+    }
+
 });
-// $(document).ready(function() {
-//     $('.myCardInfoButtonField button').on("click", function () {
-//         window.location.href = '/my-card/checkout';
-//     })
-// })
+
 $(document).ready(function () {
     $('body').on('click','.removeItem',function () {
         let itemId = $(this).data('remove');
@@ -72,6 +71,12 @@ $(document).ready(function () {
                 let parseData = JSON.parse(data);
                 if (parseData === 'remove'){
                     thisItem.closest('.myCardBlocksField').remove();
+                    let totalCount = 0;
+                    $('body').find('.myCardBlocksField').each(function () {
+                        console.log(parseInt($(this).find('.span2_2').text()))
+                        totalCount += parseInt($(this).find('.span2_2').text());
+                    })
+                    $('.totalPriceLesson').html(totalCount);
                 }
             }
         })

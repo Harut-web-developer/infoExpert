@@ -11,6 +11,21 @@
 .managmentBack{
     display: contents;
 }
+.textForEmpty{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textForEmpty > span{
+    font-family: "Roboto_",sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 40%;
+}
 .mobilebtn{
     display: flex;
     flex-direction: row;
@@ -438,7 +453,7 @@
     height: 190px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
 }
 .usersProfileInfoEmail > span,
@@ -567,6 +582,7 @@
     line-height: 23.44px;
     text-align: center;
     color: white;
+    margin-bottom: 19px;
 }
 .myCoursesFieldAcceptCourses .myCoursesBlocksField {
     width: 344px;
@@ -583,7 +599,15 @@
     flex-direction: column;
     scroll-snap-align: start;
 }
-.usersProfileInfoEmail, .usersProfileInfoPhone, .usersProfileInfoLinkdin{
+.usersProfileInfoEmail, .usersProfileInfoPhone{
+    display: flex;
+    word-wrap: break-word;
+    width: 249px;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 18px;
+}
+.usersProfileInfoLinkdin{
     display: flex;
     word-wrap: break-word;
     width: 249px;
@@ -1121,7 +1145,7 @@ ion-icon {
         font-size: 26px;
     }
     .myCoursesBlocksFieldMain {
-        width: 259px;
+        width: 100%;
         height: 360px;
     }
     .myCoursesProfileField {
@@ -1225,7 +1249,7 @@ ion-icon {
         height: 42px;
     }
     .usersProfileInfoEmail, .usersProfileInfoPhone, .usersProfileInfoLinkdin {
-        width: 180px;
+        width: 100%;
     }
     .myCoursesBlocksFieldMainInfo {
         margin: 10px 20px 10px;
@@ -1373,6 +1397,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1100px) {
+    .textForEmpty > span{
+        margin-top: 20%;
+    }
     .starAndTxt {
         width: 55px;
         height: 26px;
@@ -1394,7 +1421,7 @@ ion-icon {
         gap: 40px;
     }
     .usersProfileInfo {
-        width: 170px;
+        width: 100%;
         height: 106px;
     }
     .courses .title0{
@@ -1474,6 +1501,7 @@ ion-icon {
     font-weight: 600;
     line-height: 16.41px;
     text-align: center;
+    margin-bottom: 10px;
 }
 .usersProfileInfoPhone > span, .usersProfileInfoEmail > span, .usersProfileInfoLinkdin > span {
     font-size: 14px;
@@ -1481,6 +1509,9 @@ ion-icon {
     line-height: 16.41px;
     text-align: left;
 }
+    .usersProfileInfoPhone, .usersProfileInfoEmail{
+        margin-bottom: 10px;
+    }
     .usersProfileInfoLinkdin > a {
         font-size: 14px;
         font-weight: 400;
@@ -1870,6 +1901,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 599.5px) {
+    .textForEmpty > span {
+        margin-bottom: 20%;
+    }
     .myCoursesSection {
         padding: 95px 6.9% 50px 6.8%;
     }

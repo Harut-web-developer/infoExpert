@@ -70,9 +70,10 @@ if ($language == 'en') {
                     </div>
                 </div>
             </div>
+            <?php if (!empty($certificates)){?>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <?php if (!empty($certificates)){foreach ($certificates as $certificate){?>
+                    <?php foreach ($certificates as $certificate){?>
                         <div class="swiper-slide">
                             <div class="certificate">
                                 <div class="cartificateImg">
@@ -84,12 +85,17 @@ if ($language == 'en') {
                                 </div>
                             </div>
                         </div>
-                    <?php }} ?>
+                    <?php } ?>
                 </div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
+            <?php }else{?>
+                <div class="textForEmpty">
+                    <span><?=$GLOBALS['text']['emptyArchievement']?></span>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </div>

@@ -102,7 +102,7 @@ class UserProfileController extends \yii\web\Controller
             ->leftJoin('ac_lessons', 'ac_certificate.lesson_id = ac_lessons.id')
             ->leftJoin('user', 'ac_certificate.user_id = user.id')
             ->where([
-                'ac_lessons.status' => '1',
+                'ac_certificate.status' => '1',
                 'ac_certificate.user_id' => $user_id,
                 'user.id' => $user_id
             ])

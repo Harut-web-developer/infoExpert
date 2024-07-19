@@ -12,7 +12,7 @@
     height: 1050px;
     margin: 37px auto 0 auto;
 }
-.backButton, .seeMoreAlumni{
+.backButton{
     display: none;
 }
 .ellipseButton{
@@ -70,16 +70,16 @@
     box-shadow: 0px 1px 6px 1px #1C548440;
     text-align: center;
     border: 1px;
-    display: flex !important;
+    display: flex;
     justify-content: space-evenly;
     flex-direction: column;
 }
 .card-image {
-    max-height: 80px;
+    height: 81px;
 }
 .card-image img{
-    max-width: 100%;
-    height: auto;
+    width: 81px;
+    height: 81px;
 }
 .card-info{
     text-align: center;
@@ -91,10 +91,10 @@
     justify-content: space-between;
     height: 204px;
 }
-.card-info p{
-    margin: 0;
-}
-.card-info img{
+/*.card-info span{*/
+/*    margin: 0;*/
+/*}*/
+.card-info > a > img{
     width: 21px;
     height: 21px;
 }
@@ -283,7 +283,7 @@
         height: auto;
         margin: 0;
     }
-    .card-info img{
+    .card-info > a > img{
         width: 20px;
         height: 20px;
     }
@@ -307,7 +307,25 @@
         width: 440px;
     }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 599px){
+    .mobileAlumni > .card_{
+        width: 240px;
+        height: 300px;
+        display: none;
+    }
+    .mobileAlumni{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    .mobileAlumni > .card_{
+        margin-bottom: 30px;
+    }
+    .mobileAlumni > .card_:nth-child(1),
+    .mobileAlumni > .card_:nth-child(2){
+        display: flex;
+    }
     .ellipseButton {
         display: block;
         position: absolute;
@@ -321,15 +339,11 @@
         background: #5D9A9D;
     }
     .swiper {
-        width: 100%;
-        height: auto !important;
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
+        display: none !important;
     }
     .sectionAlumni {
         height: auto;
-        padding-bottom: 70px;
+        /*padding-bottom: 70px;*/
     }
     .hideMobile{
         display: none !important;
@@ -343,8 +357,13 @@
     }
     .seeMoreAlumni{
         display: block;
-        width: 30px;
-        height: 30px;
-        margin-top: 30px;
+    }
+    .alumniBtnField{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 600px) {
+    .mobileAlumni{
+        display: none;
     }
 }
