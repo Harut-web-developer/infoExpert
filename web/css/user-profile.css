@@ -418,6 +418,9 @@ input::-webkit-inner-spin-button {
     align-items: center;
     padding: 0px 31px;
 }
+.cartificateImgTxt img{
+    cursor: pointer;
+}
 .profilBody_{
     width: 100%;
     display: flex;
