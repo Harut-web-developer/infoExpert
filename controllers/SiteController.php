@@ -412,39 +412,51 @@ class SiteController extends Controller
     {
         $session = Yii::$app->session;
         if (Yii::$app->request->isPost) {
+
             $email = Yii::$app->request->post('email');
+
             $user = User::findOne(['email' => $email]);
+
+
             if ($user !== null) {
+
                 $token = rand(10000, 99999);
                 $user->password_reset_token = $token;
                 $user->save(false);
 
-                $senderName = "Owner Jsource Indonesia";
-                $senderEmail = "fahmi.j@programmer.net";
-                $subject = "Reset Password";
+                ///////////////////////////////////////////////////////////////////////////////
                 $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/verification', 'token' => $token]);
                 $message = "Your password recovery code is $token <br/>" .
                     "<a href='{$resetLink}'>Click Here to Reset Password</a>";
 
-                $headers = [
-                    'From' => "$senderName <{$senderEmail}>",
-                    'Reply-To' => $senderEmail,
-                    'MIME-Version' => '1.0',
-                    'Content-type' => 'text/html; charset=UTF-8'
-                ];
 
-                $headersString = '';
-                foreach ($headers as $key => $value) {
-                    $headersString .= "$key: $value\r\n";
+                $result = Yii::$app->mailer->compose('welcome', ['message' => $message])
+                    ->setFrom('hovhan.hovhan1995@gmail.com')
+                    ->setTo($email)
+                    ->setSubject('Recovery password')
+                    ->send();
+
+                if ($result) {
+                    echo "Email sent successfully!";
+                } else {
+                    echo "Failed to send email.";
                 }
 
-                if (mail($email, $subject, $message, $headersString)) {
-                    $session->set('email', $email);
-                    if (Yii::$app->request->post('message')){
-                        return $this->redirect('verification');
-                    }
-                    return $this->redirect('check-email');
-                }
+
+
+                // I think you will be able to continue :)
+                ///////////////////////////////////////////////////////////////////////////////
+
+
+
+//                if ($result) {
+//
+//                    $session->set('email', $email);
+//                    if (Yii::$app->request->post('message')){
+//                        return $this->redirect('verification');
+//                    }
+//                    return $this->redirect('check-email');
+//                }
 //                return $this->refresh();
             } else {
                 Yii::$app->session->setFlash('forgot', 'No user is registered with this email address.');
