@@ -6,6 +6,7 @@ use app\models\AcAnswers;
 use app\models\AcBlog;
 use app\models\AcCallback;
 use app\models\AcHaveQuestions;
+use app\models\AcInfo;
 use app\models\AcLessons;
 use app\models\AcPartners;
 use app\models\AcReviews;
@@ -159,6 +160,7 @@ class SiteController extends Controller
             $call_back->save();
             return $this->redirect('/');
         }
+        $url_info = AcInfo::find()->select('partner, products, programms')->where(['status' => '1'])->asArray()->one();
         $lessons = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();
         $partners = AcPartners::find()->asArray()->all();
         $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])->asArray()->all();
@@ -192,7 +194,8 @@ class SiteController extends Controller
             'answers' => $answers,
             'blogs' => $blogs,
             'blogs_mobile' => $blogs_mobile,
-            'lessons' => $lessons
+            'lessons' => $lessons,
+            'url_info' => $url_info
         ]);
     }
     /**

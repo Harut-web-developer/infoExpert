@@ -32,7 +32,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <div class="numbersInfo">
             <img src="/images/partnerinfoimg.png" alt="">
             <div class="counter-container">
-                <span class="numberSectionTwo">350</span>
+                <span class="numberSectionTwo"><?=$url_info['partner']?></span>
                 <span class="addSymbol">+</span>
             </div>
             <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoPartner']?></span>
@@ -40,7 +40,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <div class="numbersInfo">
             <img src="/images/productinfoimg.png" alt="">
             <div class="counter-container">
-                <span class="numberSectionTwo">17</span>
+                <span class="numberSectionTwo"><?=$url_info['products']?></span>
                 <span class="addSymbol">+</span>
             </div>
             <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProduct']?></span>
@@ -48,7 +48,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <div class="numbersInfo">
             <img src="/images/programminfoimg.png" alt="">
             <div class="counter-container">
-                <span class="numberSectionTwo">500</span>
+                <span class="numberSectionTwo"><?=$url_info['programms']?></span>
                 <span class="addSymbol">+</span>
             </div>
             <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProgram']?></span>

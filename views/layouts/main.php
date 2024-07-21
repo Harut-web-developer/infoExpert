@@ -12,6 +12,7 @@ use yii\bootstrap5\NavBar;
 use yii\helpers\Url;
 use yii\web\UrlManager;
 use \app\models\AcLessons;
+use \app\models\AcInfo;
 use Yii;
 
 AppAsset::register($this);
@@ -344,7 +345,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <div class="popup-box">
         <div class="search-input-x">
             <div class="search-container">
-                <input class="input-search" type="text" placeholder="<?= $GLOBALS['text']['search']?>"" name="search">
+                <input class="input-search" type="text" placeholder="<?= $GLOBALS['text']['search']?>" name="search">
                 <span class="close-btn popup-close">x</span>
             </div>
         </div>
@@ -372,6 +373,9 @@ if ($logged && $alertShown) {
     <?= $content ?>
 </main>
 <footer class="footerBackground" id="footerBackgroundM">
+    <?php
+    $url_info = AcInfo::find()->select('instagram_link,facebook_link,linkdin_link')->where(['status' => '1'])->asArray()->one();
+    ?>
     <div class="sectionFooter">
         <div class="imagesFooterFields">
             <div class="leftFooterBg">
@@ -401,9 +405,9 @@ if ($logged && $alertShown) {
                         <div class="footerConn">
                             <span><?= $GLOBALS['text']['footerTextConn']?></span>
                             <div class="footerSocialMobile">
-                                <a href=""><img src="/images/in.png" alt=""></a>
-                                <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>
-                                <a href=""><img src="/images/facebook.png" alt=""></a>
+                                <a target="_blank" href="<?=$url_info['linkdin_link']?>"><img src="/images/in.png" alt=""></a>
+                                <a target="_blank" class="linkInstagram" href="<?=$url_info['instagram_link']?>"><img src="/images/instagram.png" alt=""></a>
+                                <a target="_blank" href="<?=$url_info['facebook_link']?>"><img src="/images/facebook.png" alt=""></a>
                             </div>
                         </div>
                         <form action="" method="post" class="footerBtn">
@@ -412,9 +416,9 @@ if ($logged && $alertShown) {
                         </form>
                     </div>
                     <div class="footerSocial">
-                        <a href=""><img src="/images/in.png" alt=""></a>
-                        <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>
-                        <a href=""><img src="/images/facebook.png" alt=""></a>
+                        <a target="_blank" href="<?=$url_info['linkdin_link']?>"><img src="/images/in.png" alt=""></a>
+                        <a target="_blank" class="linkInstagram" href="<?=$url_info['instagram_link']?>"><img src="/images/instagram.png" alt=""></a>
+                        <a target="_blank" href="<?=$url_info['facebook_link']?>"><img src="/images/facebook.png" alt=""></a>
                     </div>
                 </div>
             </div>
