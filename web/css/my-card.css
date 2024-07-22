@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: start;
     margin-top: 100px;
-    margin: 16% auto 0px;
+    margin: 16% auto 50px;
 }
 .textForEmpty > span{
     font-family: "Roboto_",sans-serif;
@@ -1090,9 +1090,6 @@ ion-icon {
     }
 }
 @media screen and (max-width: 599px) {
-    .myCardContent {
-        min-height: 300px;
-    }
     .totalPriceField{
         height: 68px;
     }

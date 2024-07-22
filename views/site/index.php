@@ -60,7 +60,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <div class="numbersInfo">
                     <img src="/images/partnerinfoimg.png" alt="">
                     <div class="counter-container">
-                        <span class="numberSectionTwo">350</span>
+                        <span class="numberSectionTwo"><?=$url_info['partner']?></span>
                         <span class="addSymbol">+</span>
                     </div>
                     <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoPartner']?></span>
@@ -70,7 +70,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <div class="numbersInfo">
                     <img src="/images/productinfoimg.png" alt="">
                     <div class="counter-container">
-                        <span class="numberSectionTwo">17</span>
+                        <span class="numberSectionTwo"><?=$url_info['products']?></span>
                         <span class="addSymbol">+</span>
                     </div>
                     <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProduct']?></span>
@@ -80,7 +80,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <div class="numbersInfo">
                     <img src="/images/programminfoimg.png" alt="">
                     <div class="counter-container">
-                        <span class="numberSectionTwo">500</span>
+                        <span class="numberSectionTwo"><?=$url_info['programms']?></span>
                         <span class="addSymbol">+</span>
                     </div>
                     <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProgram']?></span>
@@ -92,7 +92,8 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
 <div class="sectionThree sliderWrapper">
     <div class="sliderCourses">
         <div class="slider">
-            <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
+            <?php
+            if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
                 <div class="learn slide">
                     <div class="learnInfo">
                         <div class="coursesBg">
@@ -123,7 +124,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     </div>
     <div class="sliderCoursesMobile">
         <div class="slider">
-            <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
+            <?php if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
                 <div class="learnMobile slide">
                     <img src="/images/Group85.png" alt="">
                     <div class="coursesBg">

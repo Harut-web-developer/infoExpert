@@ -161,7 +161,10 @@ class SiteController extends Controller
             return $this->redirect('/');
         }
         $url_info = AcInfo::find()->select('partner, products, programms')->where(['status' => '1'])->asArray()->one();
-        $lessons = AcLessons::find()->select('lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+        $lessons_courses = AcLessons::find()->select('img, lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+//        echo "<pre>";
+//        var_dump($lessons);
+//        exit();
         $partners = AcPartners::find()->asArray()->all();
         $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])->asArray()->all();
         $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => null])->asArray()->all();
@@ -194,7 +197,7 @@ class SiteController extends Controller
             'answers' => $answers,
             'blogs' => $blogs,
             'blogs_mobile' => $blogs_mobile,
-            'lessons' => $lessons,
+            'lessons_courses' => $lessons_courses,
             'url_info' => $url_info
         ]);
     }

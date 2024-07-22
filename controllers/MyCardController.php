@@ -136,11 +136,25 @@ class MyCardController extends \yii\web\Controller
                 $add_wishlist->save();
                 $delete_card = AcMyCard::findOne($id);
                 $delete_card->delete();
-                return json_encode('moveAndDelete');
+                if($_COOKIE['language'] == 'am'){
+                    $message = 'Դասընթացներ առկա չէ';
+                }elseif ($_COOKIE['language'] == 'ru'){
+                    $message = 'Нет доступных курсов';
+                }elseif ($_COOKIE['language'] == 'en'){
+                    $message = 'No courses available';
+                }
+                return json_encode(['result' => 'moveAndDelete', 'message' => $message]);
             }else{
                 $delete_card = AcMyCard::findOne($id);
                 $delete_card->delete();
-                return json_encode('delete');
+                if($_COOKIE['language'] == 'am'){
+                    $message = 'Դասընթացներ առկա չէ';
+                }elseif ($_COOKIE['language'] == 'ru'){
+                    $message = 'Нет доступных курсов';
+                }elseif ($_COOKIE['language'] == 'en'){
+                    $message = 'No courses available';
+                }
+                return json_encode(['result' => 'delete', 'message' => $message]);
             }
             return false;
         }

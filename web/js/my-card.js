@@ -114,8 +114,7 @@ $(document).ready(function () {
             },
             success: function (data) {
                 let parseData = JSON.parse(data);
-                if (parseData === 'moveAndDelete' || parseData === 'delete'){
-                    // thisItem.closest('.myCardBlocksField').remove();
+                if (parseData.result === 'moveAndDelete' || parseData.result === 'delete'){
                     $('body').find('.removeItem').each(function (){
                         if ($(this).data('remove') == itemId){
                             $(this).closest('.myCardBlocksField').remove();
@@ -126,6 +125,21 @@ $(document).ready(function () {
                         totalCount += parseInt($(this).find('.span2_2').text());
                     })
                     $('.totalPriceLesson').html(totalCount);
+                    if ($(window).width() < 600){
+                        if ($('.myCardBlogsSection').children('.myCardBlocksField').length === 0){
+                            $('.myCardBlogsSection').remove();
+                            $('body').find('.myCoursesTitleField').after('<div class="textForEmpty">' +
+                                '<span>'+ parseData.message +'</span>' +
+                                '</div>')
+                        }
+                    }else {
+                        if ($('.myCardFieldAcceptCourses').children('li').length === 0){
+                            $('.cardCourses').remove();
+                            $('body').find('.myCoursesProfileField').after('<div class="textForEmpty">' +
+                                '<span>'+ parseData.message +'</span>' +
+                                '</div>')
+                        }
+                    }
                 }
             }
         })
