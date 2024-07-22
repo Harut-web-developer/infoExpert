@@ -7,7 +7,7 @@
             <span class="testimonialWhiteTitlePage"><?=$GLOBALS['text']['sectionSixText']?></span>
         </div>
         <div class="slide-container swiper webTabletTestimonial">
-            <div class="slide-content">
+            <div class="slide-content pageTestimonial">
                 <div class="card-wrapper swiper-wrapper testimonialsImg">
                     <?php
                     if (!empty($testimonials)){foreach ($testimonials as $testimonial){?>

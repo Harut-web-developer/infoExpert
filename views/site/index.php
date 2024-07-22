@@ -116,7 +116,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                         </div>
                     </div>
                     <div class="learnImg">
-                        <img src="/images/Group85.png" alt="">
+                        <img src="/<?=$lesson['img']?>" alt="">
                     </div>
                 </div>
             <?php }}?>
@@ -126,7 +126,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <div class="slider">
             <?php if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
                 <div class="learnMobile slide">
-                    <img src="/images/Group85.png" alt="">
+                    <img src="/<?=$lesson['img']?>" alt="">
                     <div class="coursesBg">
                         <span><?=$GLOBALS['text']['sectionThreeCourses']?></span>
                         <p><?=$GLOBALS['text']['sectionThreeLearn']?></p>

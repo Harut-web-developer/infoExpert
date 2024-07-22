@@ -141,11 +141,11 @@ if (window.location.pathname == '/testimonials'){
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
-            800: {
+            950: {
                 slidesPerView: 3,
                 spaceBetween: 20,
             },
-            1100: {
+            1101: {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
