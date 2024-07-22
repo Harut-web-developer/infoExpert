@@ -1831,11 +1831,10 @@
     position: absolute;
 }
 .testimonialPage {
-    margin: 0px;
     padding-top: 190px;
-    width: 100%;
     height: min-content;
-    /*position: absolute;*/
+    width: 67%;
+    margin: 0px auto;
 }
 .slide-content {
     height: 500px;

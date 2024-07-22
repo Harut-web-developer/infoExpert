@@ -424,14 +424,9 @@ class SiteController extends Controller
     {
         $session = Yii::$app->session;
         if (Yii::$app->request->isPost) {
-
             $email = Yii::$app->request->post('email');
-
             $user = User::findOne(['email' => $email]);
-
-
             if ($user !== null) {
-
                 $token = rand(10000, 99999);
                 $user->password_reset_token = $token;
                 $user->save(false);
@@ -440,8 +435,6 @@ class SiteController extends Controller
                 $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/verification', 'token' => $token]);
                 $message = "Your password recovery code is $token <br/>" .
                     "<a href='{$resetLink}'>Click Here to Reset Password</a>";
-
-
                 $result = Yii::$app->mailer->compose('welcome', ['message' => $message])
                     ->setFrom('hovhan.hovhan1995@gmail.com')
                     ->setTo($email)
@@ -453,23 +446,6 @@ class SiteController extends Controller
                 } else {
                     echo "Failed to send email.";
                 }
-
-
-
-                // I think you will be able to continue :)
-                ///////////////////////////////////////////////////////////////////////////////
-
-
-
-//                if ($result) {
-//
-//                    $session->set('email', $email);
-//                    if (Yii::$app->request->post('message')){
-//                        return $this->redirect('verification');
-//                    }
-//                    return $this->redirect('check-email');
-//                }
-//                return $this->refresh();
             } else {
                 Yii::$app->session->setFlash('forgot', 'No user is registered with this email address.');
             }
