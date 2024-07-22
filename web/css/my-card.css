@@ -174,7 +174,7 @@
     height: 138px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
 }
 .usersProfileInfoEmail, .usersProfileInfoPhone, .usersProfileInfoLinkdin {
@@ -182,6 +182,9 @@
     word-wrap: break-word;
     display: flex;
     align-items: center;
+}
+.usersProfileInfoEmail, .usersProfileInfoPhone{
+    margin-bottom: 21px;
 }
 .usersProfileInfo img{
     width: 32px;
@@ -789,6 +792,9 @@ ion-icon {
         justify-content: start;
         align-items: center;
     }
+    .usersProfileInfoEmail, .usersProfileInfoPhone {
+        margin-bottom: 8px;
+    }
     .myCoursesFieldSectionLeft > span{
         font-weight: 600;
         font-size: 14px;
@@ -1084,6 +1090,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 599px) {
+    .myCardContent {
+        min-height: 300px;
+    }
     .totalPriceField{
         height: 68px;
     }

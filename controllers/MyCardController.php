@@ -108,7 +108,14 @@ class MyCardController extends \yii\web\Controller
             $id = intval($this->request->get('itemId'));
             $remove_item = AcMyCard::findOne($id);
             $remove_item->delete();
-            return json_encode('remove');
+            if($_COOKIE['language'] == 'am'){
+                $message = 'Դասընթացներ առկա չէ';
+            }elseif ($_COOKIE['language'] == 'ru'){
+                $message = 'Нет доступных курсов';
+            }elseif ($_COOKIE['language'] == 'en'){
+                $message = 'No courses available';
+            }
+            return json_encode(['result' => 'remove', 'message' => $message]);
         }
     }
     public function actionMoveItem(){

@@ -276,7 +276,6 @@ if (window.location.pathname == '/my-card/index' && $(window).width() <= 600){
         const footerTop = footerBackground.getBoundingClientRect().top;
         const bottomImagesHeight = bottomImages.offsetHeight;
         const windowHeight = window.innerHeight;
-        console.log(footerTop, bottomImagesHeight, windowHeight)
         if (footerTop + bottomImagesHeight <= windowHeight) {
             bottomImages.classList.remove('fixed');
             bottomImages.classList.add('none');
@@ -536,7 +535,7 @@ $(document).ready(function () {
                         }else if (thisItem.closest('ul').hasClass('carousel_2')) {
                             thisItem.closest('.card_2').remove();
                             if ($('.carousel_2').children('li').length === 0){
-                                $('changeBody2').remove();
+                                $('.changeBody2').remove();
                                 $('body').find('.topSlider').html('<div class="changeBody1">' +
                                     '<span class="title">'+ parse_data.title +'</span>' +
                                     '<div class="applyNowBtnField">' +
@@ -550,7 +549,7 @@ $(document).ready(function () {
                         }else if (thisItem.closest('ul').hasClass('mobileCourses')){
                             thisItem.closest('.card_2').remove();
                             if ($('.mobileCourses').children('.card_2').length === 0){
-                                $('wishlistCardsField').remove();
+                                $('.wishlistCardsField').remove();
                                 $('body').find('.wishlistMobile').html('<div class="changeBody1">' +
                                     '<span class="title">'+ parse_data.title +'</span>' +
                                     '<div class="applyNowBtnField">' +
