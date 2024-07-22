@@ -430,21 +430,21 @@ class SiteController extends Controller
                 $token = rand(10000, 99999);
                 $user->password_reset_token = $token;
                 $user->save(false);
-
-                ///////////////////////////////////////////////////////////////////////////////
                 $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/verification', 'token' => $token]);
                 $message = "Your password recovery code is $token <br/>" .
                     "<a href='{$resetLink}'>Click Here to Reset Password</a>";
                 $result = Yii::$app->mailer->compose('welcome', ['message' => $message])
-                    ->setFrom('hovhan.hovhan1995@gmail.com')
+                    ->setFrom('user2002mm@gmail.com')
                     ->setTo($email)
                     ->setSubject('Recovery password')
                     ->send();
-
+                Yii::$app->session->setFlash('forgot', 'Instructions to reset your password have been sent to your email.');
+                $session->set('email', $email);
+                if (Yii::$app->request->post('message')){
+                    return $this->redirect('verification');
+                }
                 if ($result) {
-                    echo "Email sent successfully!";
-                } else {
-                    echo "Failed to send email.";
+                    return $this->redirect('check-email');
                 }
             } else {
                 Yii::$app->session->setFlash('forgot', 'No user is registered with this email address.');
@@ -452,47 +452,6 @@ class SiteController extends Controller
         }
         return $this->render('forgot');
     }
-//    public function actionForgot()
-//    {
-//        $session = Yii::$app->session;
-//        if (Yii::$app->request->isPost) {
-//            $email = Yii::$app->request->post('email');
-//            $user = User::findOne(['email' => $email]);
-//            if ($user !== null) {
-//                $token = rand(10000, 99999);
-//                $user->password_reset_token = $token;
-//                $user->save(false);
-//
-//                $senderName = "Owner Jsource Indonesia";
-//                $senderEmail = "user2002mm@gmail.com";
-//                $subject = "Reset Password";
-//                $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/verification']);
-//                $message = "Your password recovery code is $token <br/>" .
-//                    "<a href='{$resetLink}'>Click Here to Reset Password</a>";
-//
-//                try {
-//                    Yii::$app->mailer->compose()
-//                        ->setFrom([$senderEmail => $senderName])
-//                        ->setTo($email)
-//                        ->setSubject($subject)
-//                        ->setHtmlBody($message)
-//                        ->send();
-//                    Yii::$app->session->setFlash('forgot', 'Instructions to reset your password have been sent to your email.');
-//                    $session->set('email', $email);
-//                    if (Yii::$app->request->post('message')){
-//                        return $this->redirect('verification');
-//                    }
-//                    return $this->redirect('check-email');
-//                } catch (\Exception $e) {
-//                    Yii::error("Failed to send email: " . $e->getMessage(), __METHOD__);
-//                    Yii::$app->session->setFlash('forgot', 'Sorry, we are unable to send the email.');
-//                }
-//            } else {
-//                Yii::$app->session->setFlash('forgot', 'No user is registered with this email address.');
-//            }
-//        }
-//        return $this->render('forgot');
-//    }
     public function actionCheckEmail() {
         return $this->render('check-email');
     }
@@ -530,6 +489,11 @@ class SiteController extends Controller
             if($password === $confirm) {
                 $hash = Yii::$app->getSecurity()->generatePasswordHash($password);
                 $user = User::findOne(['email' => $email]);
+//                echo "<pre>";
+//                var_dump($_POST);
+//                var_dump($hash);
+//                var_dump($user);
+//                die;
                 $user->password = $hash;
                 $user->auth_key = $this->generateRandomString();
                 $user->save(false);
@@ -556,7 +520,7 @@ class SiteController extends Controller
             ->asArray()
             ->all();
         $lessons = AcLessons::find()
-            ->select(['id', 'lesson_name_am', 'lesson_name_ru', 'lesson_name_en'])
+            ->select(['id', 'lesson_name_am', 'lesson_name_ru', 'lesson_name_en', 'url'])
             ->where(['status' => '1'])
             ->andWhere(['or',
                 ['like', 'lesson_name_am', $searchval],

@@ -640,7 +640,9 @@ if (window.location.pathname == '/testimonials') {
         $('.popup-wrap-testimonial').fadeIn(500);
         $('.popup-box-testimonial').removeClass('transform-out').addClass('transform-in');
         let txt_value = $(this).find('.testimonialsText').text();
-        $('.popup-box-testimonial .txt-content').text(txt_value);
+        let name_value = $(this).find('.testimonialsAuthor').text();
+        console.log(name_value)
+        $('.popup-box-testimonial .txt-content').html(txt_value + '<br><br>' + name_value);
         e.preventDefault();
     })
     $('.popup-close-testimonial').click(function(e) {

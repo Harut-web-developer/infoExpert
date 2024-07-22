@@ -29,19 +29,23 @@ $config = [
         ],
 
         'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
+//            'class' => 'yii\swiftmailer\Mailer',
 //            'viewPath' => '@common/mail',
+            'class' => \yii\symfonymailer\Mailer::class,
             'useFileTransport' => false,
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
+                'scheme' => 'smtp',
                 'host' => 'smtp.gmail.com',
-                'username' => 'hovhan.hovhan1995@gmail.com',
-                'password' => 'tbii duut yreh rsly',
+//                'username' => 'hovhan.hovhan1995@gmail.com',
+//                'password' => 'tbii duut yreh rsly',
+                'username' => 'user2002mm@gmail.com',
+                'password' => 'anaw xbof kidq zvmb',
                 'port' => '587', // Port 25, 465 or 587
                 'encryption' => 'tls', // or 'ssl'
             ],
         ],
-        
+
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
