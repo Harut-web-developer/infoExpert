@@ -2,7 +2,12 @@
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/quize.css?v=2');
 ?>
+<?php
+$session = Yii::$app->session;
 
+var_dump($session['enterQuize']);
+exit();
+?>
 <div class="quize">
     <div class="bodyQuize">
         <?php

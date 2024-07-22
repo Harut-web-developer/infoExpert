@@ -10,6 +10,9 @@
 .backButton, .ellipseButton{
     display: none;
 }
+.zxc{
+    margin-right: 20px;
+}
 .sizeLikeField{
     width: min-content;
 }

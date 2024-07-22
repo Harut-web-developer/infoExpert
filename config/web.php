@@ -69,6 +69,7 @@ $config = [
                 '/signup' => '/site/sign-up',
                 '/faq' => '/site/faq',
                 '/testimonials' => '/site/testimonials',
+                '/about' => '/site/about',
             ],
         ],
     ],

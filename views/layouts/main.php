@@ -126,7 +126,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                     <img src="/images/menuRightArrow.png" alt="">
                                 </li>
                             <?php } ?>
-                        <li><a href="/site/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
+                        <li><a href="/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
                         <li><a href=""><?= $GLOBALS['text']['tabletMethodology']?></a></li>
                         <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
                             <li><a href="#testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
@@ -247,7 +247,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <!--                        <span class="menuAbout">ABOUT</span>-->
                         <div class="dropDownAbout">
                             <ul>
-                                <li><a href="/site/about"><?=$GLOBALS['text']['whoWe']?></a></li>
+                                <li><a href="/about"><?=$GLOBALS['text']['whoWe']?></a></li>
                                 <li><a href="/alumni/index"><?=$GLOBALS['text']['headerAlumni']?></a></li>
                             </ul>
                         </div>
@@ -387,18 +387,18 @@ if ($logged && $alertShown) {
                         <div class="footerMenu">
                             <div class="leftMenuFooter">
                                 <ul>
-                                    <li><a href=""><?= $GLOBALS['text']['footerAbout']?></a></li>
+                                    <li><a href="/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
                                     <li><a href=""><?= $GLOBALS['text']['footerMethodOur']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerContact']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerTestimonials']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerFaq']?></a></li>
+                                    <li><a href="/contact-us/index"><?= $GLOBALS['text']['footerContact']?></a></li>
+                                    <li><a href="/testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
+                                    <li><a href="/faq"><?= $GLOBALS['text']['footerFaq']?></a></li>
                                 </ul>
                             </div>
                             <div class="rightMenuFooter">
                                 <ul>
-                                    <li><a href=""><?= $GLOBALS['text']['footerCourses']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerBlog']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerRecQuize']?></a></li>
+                                    <li><a href="/courses/index"><?= $GLOBALS['text']['footerCourses']?></a></li>
+                                    <li><a href="/blog/index"><?= $GLOBALS['text']['footerBlog']?></a></li>
+                                    <li><a href="/quize/index"><?= $GLOBALS['text']['footerRecQuize']?></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -428,9 +428,9 @@ if ($logged && $alertShown) {
                         <span><?= $GLOBALS['text']['footerQuize']?></span>
                     </div>
                     <div class="inputsMail" >
-                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username ? 'required' : ''?>>
-                        <input type="number" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>" <?=!Yii::$app->user->identity->phone ? 'required' : ''?>>
-                        <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>" <?=!Yii::$app->user->identity->email ? 'required' : ''?>>
+                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username || !$session['quizeName'] ? 'required' : ''?>>
+                        <input type="number" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>" <?=!Yii::$app->user->identity->phone || !$session['quizePhone'] ? 'required' : ''?>>
+                        <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>" <?=!Yii::$app->user->identity->email || !$session['quizeEmail']? 'required' : ''?>>
                     </div>
                     <div class="formContinue">
                         <button name="enterQuize" type="submit"><?= $GLOBALS['text']['footerInputBtn']?></button>

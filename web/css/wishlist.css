@@ -118,7 +118,7 @@
     height: 138px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
 }
 .usersProfileInfoPhone > span{
@@ -594,6 +594,10 @@ hr.new1 {
     width: 249px;
     flex-direction: row;
     align-items: center;
+}
+.usersProfileInfoEmail,
+.usersProfileInfoPhone{
+    margin-bottom: 20px;
 }
 .usersProfileInfoEmail > span,
 .usersProfileInfoLinkdin > span,
@@ -1239,6 +1243,9 @@ ion-icon {
     }
     .usersProfileInfoEmail, .usersProfileInfoLinkdin, .usersProfileInfoPhone {
         width: 170px;
+    }
+    .usersProfileInfoPhone, .usersProfileInfoEmail{
+        margin-bottom: 17px;
     }
     .usersProfileEn .userProfileMenuField > span,
     .userProfileMenuField > span,

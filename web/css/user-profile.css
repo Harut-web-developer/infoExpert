@@ -478,6 +478,10 @@ input::-webkit-inner-spin-button {
     align-items: center;
     word-wrap: break-word;
 }
+.sameInfo:nth-child(1),
+.sameInfo:nth-child(2){
+    margin-bottom: 21px;
+}
 .sameInfo > span{
     font-family: "Roboto_", sans-serif;
     font-size: 20px;
@@ -524,7 +528,7 @@ input::-webkit-inner-spin-button {
     height: 138px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
 }
 .userCreateFieldForms_{
     width: 83%;

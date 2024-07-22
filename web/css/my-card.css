@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: start;
     margin-top: 100px;
-    margin: 16% auto 0px;
+    margin: 16% auto 50px;
 }
 .textForEmpty > span{
     font-family: "Roboto_",sans-serif;
@@ -174,7 +174,7 @@
     height: 138px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
 }
 .usersProfileInfoEmail, .usersProfileInfoPhone, .usersProfileInfoLinkdin {
@@ -182,6 +182,9 @@
     word-wrap: break-word;
     display: flex;
     align-items: center;
+}
+.usersProfileInfoEmail, .usersProfileInfoPhone{
+    margin-bottom: 21px;
 }
 .usersProfileInfo img{
     width: 32px;
@@ -788,6 +791,9 @@ ion-icon {
         flex-direction: row;
         justify-content: start;
         align-items: center;
+    }
+    .usersProfileInfoEmail, .usersProfileInfoPhone {
+        margin-bottom: 8px;
     }
     .myCoursesFieldSectionLeft > span{
         font-weight: 600;

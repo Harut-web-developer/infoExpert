@@ -1558,11 +1558,12 @@
     width: 42%;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
 }
 .learnImg > img{
     width: 648px;
     height: 639px;
+    border-radius: 50%;
 }
 .managementBtn > a{
     position: relative;

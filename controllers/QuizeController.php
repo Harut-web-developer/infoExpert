@@ -55,6 +55,7 @@ class QuizeController extends \yii\web\Controller
             $session->set('quizeName',$_POST['name']);
             $session->set('quizePhone',$_POST['phone']);
             $session->set('quizeEmail',$_POST['email']);
+            $session->set('enterQuize',true);
         }
         $language = $_COOKIE['language'];
         $quize_name = AcQuestionList::find()
@@ -137,7 +138,7 @@ class QuizeController extends \yii\web\Controller
         $quizeLog->answers = json_encode($ansers);
         $quizeLog->create_date = date('Y-m-d H:i:s');
         $quizeLog->save(false);
-
+        $session->remove('enterQuize');
         return $true_answers;
     }
     public function actionResult()
