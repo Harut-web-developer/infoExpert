@@ -188,7 +188,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     $lang = $_COOKIE['language'];
                     $lessons = AcLessons::find()->select('url,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
                     if (!empty($lessons)){ foreach ($lessons as $lesson) {?>
-                        <li><a href="/lessons/lesson/<?=$lesson['url']?>"><?=$lesson['lesson_name']?></a></li>
+                        <li><a href="/lesson/<?=$lesson['url']?>"><?=$lesson['lesson_name']?></a></li>
                     <?php }}?>
                 </ul>
             </div>
@@ -264,7 +264,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                 <ul>
                                     <?php
                                     foreach ($lessons as $lesson) {?>
-                                        <li><a href="/lessons/lesson/<?=$lesson['url']?>"><?=$lesson['lesson_name']?></a></li>
+                                        <li><a href="/lesson/<?=$lesson['url']?>"><?=$lesson['lesson_name']?></a></li>
                                     <?php }?>
                                 </ul>
                             </div>
