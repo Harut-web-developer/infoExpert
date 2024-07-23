@@ -34,6 +34,7 @@ class AcAlumni extends \yii\db\ActiveRecord
     {
         return [
             [['user_id'], 'integer'],
+            [['text_am','text_ru','text_en'], 'string'],
             [['create_date'], 'safe'],
             [['img', 'alumni_am', 'alumni_ru', 'alumni_en', 'linkedin_link', 'status'], 'string', 'max' => 255],
         ];

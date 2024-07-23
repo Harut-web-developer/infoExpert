@@ -11,7 +11,22 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $lesson->id;?>">
                     <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
-
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span style="margin-bottom: 4px;color: #878787;">Դասընթաց</span>
+                            <input type="file" name="img">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span style="margin-bottom: 4px;color: #878787;">Սերտիֆիկատ</span>
+                            <input type="file" name="certificate_img">
+                        </div>
+                    </div>
+                    <span>Վարկանիշ</span>
+                    <input type="number" name="AcLessons[rating]" required placeholder="ԳՆահատական 1-5" class="form-control">
+                    <span>Գին</span>
+                    <input type="number" name="AcLessons[price]" required placeholder="Գին" class="form-control">
                     <div class="custom-tab">
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -25,8 +40,10 @@
                                 <div class="form-group ">
                                     <span>Անուն</span>
                                     <input type="text" name="AcLessons[lesson_name_am]" value="<?php echo $lesson->lesson_name_am;?>" required placeholder="Անուն" class="form-control">
-                                    <span>Վերնագիր</span>
-                                    <input type="text" name="AcLessons[lesson_title_am]" value="<?php echo $lesson->lesson_title_am;?>"   placeholder="Վերնագիր" class="form-control">
+                                    <span>Դասընթացի տևողություն</span>
+                                    <input type="text" name="AcLessons[lesson_title_am]" value="<?php echo $lesson->lesson_title_am;?>"   placeholder="Դասընթացի տևողություն" class="form-control">
+                                    <span>Սերտիֆիկատի մասին</span>
+                                    <input type="text" name="AcLessons[lesson_certificate_am]" value="<?php echo $lesson->lesson_certificate_am;?>"   placeholder="Սերտիֆիկատի մասին" class="form-control">
                                     <span>Բանալի Բառեր</span>
                                     <textarea name="AcLessons[lesson_keywords_am]" class="form-control" placeholder="Բանալի Բառեր" rows="3"><?php echo $lesson->lesson_keywords_am;?></textarea>
                                     <span>Պարունակություն</span>
@@ -37,8 +54,10 @@
                                 <div class="form-group">
                                     <span>Անուն</span>
                                     <input type="text" name="AcLessons[lesson_name_ru]" value="<?php echo $lesson->lesson_name_ru;?>"  placeholder="Անուն" class="form-control">
-                                    <span>Վերնագիր</span>
+                                    <span>Դասընթացի տևողություն</span>
                                     <input type="text" name="AcLessons[lesson_title_ru]" value="<?php echo $lesson->lesson_title_ru;?>"  placeholder="Վերնագիր" class="form-control">
+                                    <span>Սերտիֆիկատի մասին</span>
+                                    <input type="text" name="AcLessons[lesson_certificate_ru]" value="<?php echo $lesson->lesson_certificate_ru;?>"   placeholder="Սերտիֆիկատի մասին" class="form-control">
                                     <span>Բանալի Բառեր</span>
                                     <textarea name="AcLessons[lesson_keywords_ru]" class="form-control" placeholder="Բանալի Բառեր" rows="3"><?php echo $lesson->lesson_keywords_ru;?></textarea>
                                     <span>Պարունակություն</span>
@@ -49,8 +68,10 @@
                                 <div class="form-group">
                                     <span>Անուն</span>
                                     <input type="text" name="AcLessons[lesson_name_en]" value="<?php echo $lesson->lesson_name_en;?>"  placeholder="Անուն" class="form-control">
-                                    <span>Վերնագիր</span>
+                                    <span>Դասընթացի տևողություն</span>
                                     <input type="text" name="AcLessons[lesson_title_en]" value="<?php echo $lesson->lesson_title_en;?>"  placeholder="Վերնագիր" class="form-control">
+                                    <span>Սերտիֆիկատի մասին</span>
+                                    <input type="text" name="AcLessons[lesson_certificate_en]" value="<?php echo $lesson->lesson_certificate_en;?>"   placeholder="Սերտիֆիկատի մասին" class="form-control">
                                     <span>Բանալի Բառեր</span>
                                     <textarea name="AcLessons[lesson_keywords_en]" class="form-control" placeholder="Բանալի Բառեր" rows="3"><?php echo $lesson->lesson_keywords_en;?></textarea>
                                     <span>Պարունակություն</span>

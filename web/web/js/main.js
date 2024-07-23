@@ -82,6 +82,28 @@ function editeLesson(id) {
 		});
 	}
 }
+function editeAlumni(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/alumni-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeTutors(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/tutors-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
 function editeReview(id) {
 
 	if (id) {
@@ -180,6 +202,16 @@ function disableLesson(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/lesson-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableTutors(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/tutors-disable?id=" + id,
 			success: function(result) {
 				window.location.reload();
 			}
@@ -512,6 +544,14 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeLesson(id);
 	});
+	$('body').on('click', '#editeAlumni', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeAlumni(id);
+	});
+	$('body').on('click', '#editeTutors', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeTutors(id);
+	});
 	$('body').on('click', '#copyParams', function(event) {
 		var id = $('.sortable li.active').attr('data-id');
 		copyParams(id);
@@ -543,6 +583,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#disableLesson', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableLesson(id);
+	});
+	$('body').on('click', '#disableTutors', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableTutors(id);
 	});
 	$('body').on('click', '#disableAnswer', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');

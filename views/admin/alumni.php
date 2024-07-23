@@ -1,4 +1,4 @@
-<input type="hidden" data-page='Pages' id="page">
+<input type="hidden" data-page='Alumni' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
@@ -21,11 +21,11 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="box-title">Դասընթացներ
+                        <h4 class="box-title">Շրջանավարտներ
                             <span class="buttons">
                                           <span class="overlay show_" style="width:33px;"></span>
-                                          <button class="btn btn-sm btn-default" id="editeLesson"><i class="fa fa-pencil"></i></button>
-                                          <button class="btn btn-sm btn-danger" id="disableLesson"><i class="fa fa-trash"></i></button>
+                                          <button class="btn btn-sm btn-default" id="editeAlumni"><i class="fa fa-pencil"></i></button>
+                                          <button class="btn btn-sm btn-danger" id="disableAlumni"><i class="fa fa-trash"></i></button>
                                         </span>
                             <a href="#" data-toggle="modal" data-target="#addnew" class="btn btn-succ fl" style="margin-left:10px;"><i class="bx bx-plus me-1"></i> Ավելացնել</a>
                         </h4>
@@ -39,22 +39,30 @@
                                             <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Դասընթացի անվանում</th>
+                                                <th scope="col">Նկար</th>
+                                                <th scope="col">Անուն</th>
                                                 <th scope="col">Կարգավիճակ</th>
                                             </tr>
                                             </thead>
                                             <tbody class="sortableTable" id="sortable">
-                                            <?php if(!empty($lessons)){ ?>
-                                                <?php foreach ($lessons as $lesson){ ?>
-                                                    <tr data-id="<?php echo $lesson->id;?>">
+                                            <?php if(!empty($alumni)){ ?>
+                                                <?php foreach ($alumni as $item){ ?>
+                                                    <tr data-id="<?php echo $item->id;?>">
                                                         <td scope="col"><span class="move"><i class="fa fa-arrows-alt"></i></span>
-                                                            <?php  if($lesson->status == 0){
+                                                            <?php  if($item->status == 0){
                                                                 echo '<i class="fa fa-close" style="color:red;"></i>';
                                                             } ?>
-                                                            ID <?php echo $lesson->id;?></td>
-                                                        <td scope="col"> <?php echo $lesson->lesson_name_am;?></td>
+                                                            ID <?php echo $item->id;?></td>
                                                         <td scope="col">
-                                                            <?php if($lesson->status == 1){
+                                                            <?php if(!empty($item->img)){?>
+                                                                <img src="/<?php echo $item->img;?>" height="60" alt="">
+                                                            <?php } ?>
+                                                        </td>
+                                                        <td scope="col">
+                                                            <?php echo $item->alumni_am;?>
+                                                        </td>
+                                                        <td scope="col">
+                                                            <?php if($item->status == 1){
                                                                 echo 'Ակտիվ';
                                                             } else {
                                                                 echo 'Պասիվ';
@@ -73,13 +81,12 @@
             </div>
         </div>
     </div>
-
     <!-- Modal -->
     <div class="modal fade add-new" id="addnew" tabindex="-1" role="dialog" aria-labelledby="addnew" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addnew">Ավելացնել դասընթաց</h5>
+                    <h5 class="modal-title" id="addnew">Ավելացնել շրջանավարտներ</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -90,21 +97,14 @@
                         <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
                         <div class="row">
                             <div class="col-sm-12">
-                                <span style="margin-bottom: 4px;color: #878787;">Դասընթաց</span>
+                                <span style="margin-bottom: 4px;color: #878787;">Նկար</span>
                                 <input type="file" name="img">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <span style="margin-bottom: 4px;color: #878787;">Սերտիֆիկատ</span>
-                                <input type="file" name="certificate_img">
-                            </div>
-                        </div>
-                        <span>Վարկանիշ</span>
-                        <input type="number" name="AcLessons[rating]" required placeholder="ԳՆահատական 1-5" class="form-control">
-                        <span>Գին</span>
-                        <input type="number" name="AcLessons[price]" required placeholder="Գին" class="form-control">
-
+                        <br>
+                        <span>Linkdin-ի հղում</span>
+                        <input type="text" name="AcAlumni[linkedin_link]"  placeholder="Հղում" class="form-control">
+                        <br>
                         <div class="custom-tab">
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -116,44 +116,26 @@
                             <div class="tab-content" id="nav-tabContent"><br>
                                 <div class="tab-pane fade active show" id="custom-nav-product-am" role="tabpanel" aria-labelledby="custom-nav-product-am-tab">
                                     <div class="form-group ">
-                                        <span>Անուն</span>
-                                        <input type="text" name="AcLessons[lesson_name_am]" required placeholder="Անուն" class="form-control">
-                                        <span>Դասընթացի տևողություն</span>
-                                        <input type="text" name="AcLessons[lesson_title_am]"   placeholder="Դասընթացի տևողություն" class="form-control">
-                                        <span>Սերտիֆիկատի մասին</span>
-                                        <input type="text" name="AcLessons[lesson_certificate_am]"   placeholder="Սերտիֆիկատի մասին" class="form-control">
-                                        <span>Բանալի Բառեր</span>
-                                        <textarea name="AcLessons[lesson_keywords_am]" class="form-control" placeholder="Բանալի Բառեր" rows="3"></textarea>
+                                        <span>Անվանում</span>
+                                        <input type="text" name="AcAlumni[alumni_am]" required placeholder="Անուն" class="form-control">
                                         <span>Պարունակություն</span>
-                                        <textarea name="AcLessons[lesson_content_am]" class="form-control" id="editor_am" placeholder="Պարունակություն" rows="3"></textarea>
+                                        <textarea name="AcAlumni[text_am]" class="form-control" id="editor_am" placeholder="Պարունակություն" rows="3"></textarea>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="custom-nav-product-ru" role="tabpanel" aria-labelledby="custom-nav-product-ru-tab">
                                     <div class="form-group">
-                                        <span>Անուն</span>
-                                        <input type="text" name="AcLessons[lesson_name_ru]"   placeholder="Անուն" class="form-control">
-                                        <span>Դասընթացի տևողություն</span>
-                                        <input type="text" name="AcLessons[lesson_title_ru]"   placeholder="Դասընթացի տևողություն" class="form-control">
-                                        <span>Սերտիֆիկատի մասին</span>
-                                        <input type="text" name="AcLessons[lesson_certificate_ru]"   placeholder="Սերտիֆիկատի մասին" class="form-control">
-                                        <span>Բանալի Բառեր</span>
-                                        <textarea name="AcLessons[lesson_keywords_ru]" class="form-control" placeholder="Բանալի Բառեր" rows="3"></textarea>
+                                        <span>Անվանում</span>
+                                        <input type="text" name="AcAlumni[alumni_ru]" required placeholder="Անուն" class="form-control">
                                         <span>Պարունակություն</span>
-                                        <textarea name="AcLessons[lesson_content_ru]" class="form-control"  id="editor_ru" placeholder="Պարունակություն" rows="3"></textarea>
+                                        <textarea name="AcAlumni[text_ru]" class="form-control" id="editor_ru" placeholder="Պարունակություն" rows="3"></textarea>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="custom-nav-product-en" role="tabpanel" aria-labelledby="custom-nav-product-en-tab">
                                     <div class="form-group">
-                                        <span>Անուն</span>
-                                        <input type="text" name="AcLessons[lesson_name_en]"   placeholder="Անուն" class="form-control">
-                                        <span>Դասընթացի տևողություն</span>
-                                        <input type="text" name="AcLessons[lesson_title_en]"   placeholder="Դասընթացի տևողություն" class="form-control">
-                                        <span>Սերտիֆիկատի մասին</span>
-                                        <input type="text" name="AcLessons[lesson_certificate_en]"   placeholder="Սերտիֆիկատի մասին" class="form-control">
-                                        <span>Բանալի Բառեր</span>
-                                        <textarea name="AcLessons[lesson_keywords_en]" class="form-control" placeholder="Բանալի Բառեր" rows="3"></textarea>
+                                        <span>Անվանում</span>
+                                        <input type="text" name="AcAlumni[alumni_en]" required placeholder="Անուն" class="form-control">
                                         <span>Պարունակություն</span>
-                                        <textarea name="AcLessons[lesson_content_en]" class="form-control"  id="editor_en" placeholder="Պարունակություն" rows="3"></textarea>
+                                        <textarea name="AcAlumni[text_en]" class="form-control" id="editor_en" placeholder="Պարունակություն" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>

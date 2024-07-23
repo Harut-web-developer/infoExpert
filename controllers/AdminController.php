@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\AcAlumni;
 use app\models\AcAnswers;
 use app\models\AcLessons;
 use app\models\AcPartners;
@@ -9,6 +10,7 @@ use app\models\AcQuestionAnswers;
 use app\models\AcQuestionList;
 use app\models\AcQuestionQuests;
 use app\models\AcReviews;
+use app\models\AcTutors;
 use app\models\FsOrders;
 use app\models\AcBlog;
 use app\models\FsSettings;
@@ -271,11 +273,24 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
+
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
             $lesson = new AcLessons();
             $lesson->load($post);
             $lesson->url = $this->transLateURRL($lesson->lesson_name_am);
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $lesson->img = "web/uploads/$name";
+            }
+            if (!empty($_FILES['certificate_img']) && $_FILES["certificate_img"]["name"]) {
+                $tmp_name = $_FILES["certificate_img"]["tmp_name"];
+                $name = time() . basename($_FILES["certificate_img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $lesson->certificate_img = "web/uploads/$name";
+            }
             $lesson->save(false);
             $this->redirect(['lessons', 'success' => 'true', 'id' => 'key' . $lesson->id]);
         }
@@ -283,11 +298,96 @@ class AdminController extends Controller {
             $lesson = AcLessons::findOne(['id' => intval($post['id']) ]);
             $lesson->load($post);
             $lesson->url = $this->transLateURRL($lesson->lesson_name_am);
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $lesson->img = "web/uploads/$name";
+            }
+            if (!empty($_FILES['certificate_img']) && $_FILES["certificate_img"]["name"]) {
+                $tmp_name = $_FILES["certificate_img"]["tmp_name"];
+                $name = time() . basename($_FILES["certificate_img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $lesson->certificate_img = "web/uploads/$name";
+            }
             $lesson->save(false);
             $this->redirect(['lessons', 'success' => 'true', 'id' => 'key' . $lesson->id]);
         }
         $lessons = AcLessons::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('lessons', ['lessons' => $lessons]);
+    }
+    public function actionTutors(){
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        date_default_timezone_set("Asia/Yerevan");
+        $post = Yii::$app->request->post();
+        if ($post && $post['add']) {
+            $tutor = new AcTutors();
+            $tutor->load($post);
+            $tutor->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $tutor->img = "web/uploads/$name";
+            }
+            $tutor->save(false);
+            $this->redirect(['tutors', 'success' => 'true', 'id' => 'key' . $tutor->id]);
+        }
+        else if ($post && $post['edite']) {
+            $tutor = AcTutors::findOne(['id' => intval($post['id']) ]);
+            $tutor->load($post);
+            $tutor->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $tutor->img = "web/uploads/$name";
+            }
+            $tutor->save(false);
+            $this->redirect(['tutors', 'success' => 'true', 'id' => 'key' . $tutor->id]);
+        }
+        $tutors = AcTutors::find()->orderBy(['order_num' => SORT_ASC])->all();
+        $lessons = AcLessons::find()->where(['status' => '1'])->all();
+        return $this->render('tutors', ['tutors' => $tutors, 'lessons' => $lessons]);
+    }
+    public function actionAlumni(){
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        date_default_timezone_set("Asia/Yerevan");
+        $post = Yii::$app->request->post();
+//        var_dump($post);
+//        exit();
+        if ($post && $post['add']) {
+            $alumni = new AcAlumni();
+            $alumni->load($post);
+            $alumni->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $alumni->img = "web/uploads/$name";
+            }
+            $alumni->save(false);
+            $this->redirect(['alumni', 'success' => 'true', 'id' => 'key' . $alumni->id]);
+        }
+        else if ($post && $post['edite']) {
+            $alumni = AcAlumni::findOne(['id' => intval($post['id']) ]);
+            $alumni->load($post);
+            $alumni->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $alumni->img = "web/uploads/$name";
+            }
+            $alumni->save(false);
+            $this->redirect(['alumni', 'success' => 'true', 'id' => 'key' . $alumni->id]);
+        }
+        $alumni = AcAlumni::find()->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('alumni', ['alumni' => $alumni]);
     }
     public function actionBlog_() {
         if (Yii::$app->user->isGuest) {
@@ -476,6 +576,23 @@ class AdminController extends Controller {
         $lesson = AcLessons::findOne(['id' => $id]);
         return $this->renderAjax('lesson-edite-popup', ['lesson' => $lesson]);
     }
+    public function actionAlumniEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $alumni = AcAlumni::findOne(['id' => $id]);
+        return $this->renderAjax('alumni-edite-popup', ['alumni' => $alumni]);
+    }
+    public function actionTutorsEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $tutors = AcTutors::findOne(['id' => $id]);
+        $lessons = AcLessons::find()->all();
+        return $this->renderAjax('tutors-edite-popup', ['tutors' => $tutors, 'lessons' => $lessons]);
+    }
     public function actionAnswerhthEdite() {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
@@ -558,6 +675,19 @@ class AdminController extends Controller {
         }
 
         $lesson->save(false);
+        return true;
+    }
+    public function actionTutorsDisable() {
+        $id = intval($_GET['id']);
+        $tutors = AcTutors::findOne(['id' => $id]);
+        if ($tutors->status) {
+            $tutors->status = 0;
+        }
+        else {
+            $tutors->status = 1;
+        }
+
+        $tutors->save(false);
         return true;
     }
     public function actionQuestDisable() {
