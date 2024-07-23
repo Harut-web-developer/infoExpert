@@ -399,6 +399,119 @@
 .modalOpenBtn:hover{
     cursor: pointer;
 }
+
+/*search*/
+.btn-search{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.input-search{
+    width: 405px;
+    height: 45px;
+    border-radius: 22.5px;
+    border: 1px ;
+    background: #ABCBCD;
+    border: 1px solid #0000000D;
+    box-shadow: 0px 1px 2px 1px #1C548433;
+    padding: 0 70px 0 20px;
+    color: white;
+    outline: none;
+}
+.delete-icon{
+    display: none;
+    position: absolute;
+    top: 16px;
+    right: 50px;
+    z-index: 100;
+    cursor: pointer;
+}
+.search-div{
+    position: relative;
+}
+.img-div{
+    width: 40px;
+    height: 41px;
+    border-radius: 0px 20px 20px 0px;
+    background: #88B6B8;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchField{
+    width: 405px;
+    height: 194px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 2;
+    display: none;
+    position: absolute;
+    box-shadow: 0px 1px 2px 1px #1C548433;
+    border: 1px solid #0000000D;
+    background: #ABCBCD;
+    border-radius: 22.5px 0px 0px 22.5px;
+}
+.lesTitle, .blgTitle{
+    font-family: "Roboto_", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    color: white;
+}
+.searchText{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto_", sans-serif;
+    height: 22px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    margin: 5px 10px;
+    text-decoration: none;
+    text-align: left;
+}
+.searchResult{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 15px 10px 15px;
+}
+.searchRes{
+    font-family: "Roboto_", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+    margin: 20px;
+}
+.blogSearchContent{
+    width: 50%;
+}
+.lessonSearchContent{
+    width: 50%;
+}
+@media screen and (max-width: 1400px){
+    .input-search{
+        width: 360px;
+    }
+    .searchField {
+        width: 360px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .input-search{
+        width: 300px;
+    }
+    .searchField {
+        width: 300px;
+    }
+}
 @media only screen and (min-width: 600px) and (max-width: 1100px) {
     .securityContentModal{
         width: 85%;
@@ -533,14 +646,6 @@
 .profileFieldImg > ul > li > a:hover{
     color: #F36528;
 }
-.lesTitle, .blgTitle{
-    font-family: "Roboto_", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: left;
-    color: #408689;
-}
-
 .flagFields{
     margin-left: 22px;
 }
@@ -691,10 +796,6 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    /*top: 33px;*/
-    /*position: relative;*/
-    /*left: 25px;*/
-    /*z-index: 100;*/
 }
 .lessonsListMenu > ul > li > a{
     color: #1C5484;
@@ -713,9 +814,6 @@
     left: -6px;
     display: none;
 }
-
-
-
 .dropDownAbout{
     background-image: url("../images/small.png");
     background-repeat: no-repeat;
@@ -916,8 +1014,6 @@
 .tabletMenuNavField{
     width: 366px;
     height: 400px;
-    /*position: absolute;*/
-    /*top: 17px;*/
     padding-top: 17px;
     margin: 0px 71px 20px 47px;
     display: flex;
@@ -975,8 +1071,6 @@
     font-weight: 500;
     color: #F36528;
     position: absolute;
-    /*left: 0;*/
-    /*top: 12px;*/
     width: 100%;
     text-align: center;
 }
@@ -1039,7 +1133,15 @@
     position: fixed;
     top:61px;
     z-index: 50;
-    /*display: none;*/
+    transition: 500ms ease-in-out;
+    right: 0;
+}
+.search-mobile{
+    width: 0px;
+    height: 380px;
+    position: fixed;
+    top:23px;
+    z-index: 50;
     transition: 500ms ease-in-out;
     right: 0;
 }
@@ -1113,6 +1215,17 @@
     flex-direction: column;
     align-items: start;
     gap: 16px;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent !important; /* For Firefox */
+}
+.tabletProfileCoursesField::-webkit-scrollbar { /* For WebKit browsers */
+    width: 0; /* Set the width of the scrollbar to 0 */
+}
+.tabletProfileCoursesField::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color of the scrollbar thumb */
+}
+.tabletProfileCoursesField::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
 }
 .tabletProfileCoursesField > li > a{
     text-decoration: none;
@@ -2194,6 +2307,11 @@
     .puzzle6{
         display: none;
     }
+    .searchFlagField {
+        height: 68px;
+        flex-direction: column;
+        align-items: start;
+    }
 }
 @media only screen and (min-width: 600px){
     .puzzle1{
@@ -2568,84 +2686,6 @@
         transform: translateX(-50%);
     }
 }
-
-
-
-/*search*/
-.btn-search{
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-}
-#input-search{
-    width: 405px;
-    height: 45px;
-    border-radius: 22.5px;
-    border: 1px ;
-    background: #ABCBCD;
-    border: 1px solid #0000000D;
-    box-shadow: 0px 1px 2px 1px #1C548433;
-    padding: 0 45px 0 20px;
-    color: white;
-}
-.search-div{
-    position: relative;
-}
-.img-div{
-    width: 40px;
-    height: 41px;
-    border-radius: 0px 20px 20px 0px;
-    background: #88B6B8;
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.searchField{
-    width: 100%;
-    max-height: 194px;
-    min-height: 100px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    background: white;
-    z-index: 2;
-    display: none;
-}
-.searchText{
-    color: #2F7A7E;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "Roboto_", sans-serif;
-    height: 22px;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: pre-wrap;
-    margin: 5px 10px;
-    text-decoration: none;
-    text-align: left;
-}
-.searchResult{
-    display: flex;
-    flex-direction: row;
-}
-.searchRes{
-    font-family: "Roboto_", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: left;
-    color: #408689;
-}
-.blogSearchContent{
-    width: 50%;
-}
-.lessonSearchContent{
-    width: 50%;
-}
 /*Popoup*/
 .popup-wrap-logged {
     width:100%;
@@ -2717,89 +2757,6 @@
     -webkit-transform:translate(-50%, -50%) scale(0.5);
     transform:translate(-50%, -50%) scale(0.5);
 }
-@media screen and (max-width: 1100px) {
-    .search-container {
-        display: flex;
-    }
-    .testimonial-container .txt-content {
-        font-size: 16px;
-    }
-}
-@media screen and (max-width: 800px) {
-    .testimonial-container .txt-content {
-        font-size: 15px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .search-container {
-        height: 47px;
-    }
-    .close-btn {
-        top: 16px;
-    }
-    .testimonial-container .txt-content {
-        font-size: 14px;
-    }
-}
-@media screen and (max-width: 500px) {
-    .popup-box-logged {
-        width: 300px;
-        height: 160px;
-    }
-    .close-btn {
-        width: 25px;
-        height: 25px;
-        line-height: 140%;
-    }
-    .popup-box-logged {
-        .close-btn{
-            width: 25px;
-            height: 25px;
-            line-height: 140%;
-        }
-    }
-    .popup-wrap-testimonial .testimonial-container{
-        width: 370px;
-    }
-    .testimonial-container .txt-content {
-        font-size: 13px;
-        margin: 35px 15px 15px 15px;
-    }
-}
-@media screen and (max-width: 470px) {
-    .popup-wrap-testimonial .testimonial-container{
-        width: 340px;
-    }
-}
-@media screen and (max-width: 430px) {
-    .popup-wrap-testimonial .testimonial-container{
-        width: 310px;
-    }
-}
-@media screen and (max-width: 380px) {
-    .popup-box-logged {
-        width: 260px;
-        height: 140px;
-    }
-    .popup-wrap-testimonial .testimonial-container{
-        width: 300px;
-    }
-}
-@media screen and (max-width: 350px) {
-    .popup-wrap-testimonial .testimonial-container{
-        width: 280px;
-    }
-}
-@media screen and (max-width: 330px) {
-    .popup-wrap-testimonial .testimonial-container{
-        width: 260px;
-    }
-    .testimonial-container .txt-content {
-        font-size: 12px;
-        margin: 35px 15px 15px 15px;
-    }
-}
-
 /*testimonial popup css*/
 /*Popoup*/
 .popup-wrap-testimonial {
@@ -2864,4 +2821,173 @@
     text-align: start;
     margin: 35px;
     color: white;
+}
+@media screen and (max-width: 1100px) {
+    .searchField {
+        width: 100%;
+        height: 320px;
+        box-shadow: none;
+        border: 0;
+        background: transparent;
+        border-radius: 0;
+        margin-top: 23px;
+    }
+    .search-container {
+        display: flex;
+    }
+    .search-mobile-hide .img-div{
+        width: 29px;
+        height: 29px;
+        display: none;
+        right: 95px;
+        top: 3px;
+    }
+    .search-mobile-hide .btn-search {
+        width: 18px;
+        height: 18px;
+    }
+    .mobile-search-div{
+        justify-content: center;
+        align-items: center;
+    }
+    .input-search{
+        height: 35px;
+    }
+    .delete-icon {
+        right: 130px;
+        top: 11px;
+    }
+    .testimonial-container .txt-content {
+        font-size: 16px;
+    }
+    .web-search{
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .testimonial-container .txt-content {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .search-container {
+        height: 47px;
+    }
+    .close-btn {
+        top: 16px;
+    }
+    .testimonial-container .txt-content {
+        font-size: 14px;
+    }
+    .input-search {
+        width: 85%;
+        padding: 0 54px 0 20px;
+    }
+    .search-mobile-hide .img-div {
+        right: 8.5%;
+        top: 3px;
+    }
+    .delete-icon {
+        right: 16%;
+    }
+    .searchText {
+        font-size: 13px;
+        margin: 3px 5px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .popup-box-logged {
+        width: 300px;
+        height: 160px;
+    }
+    .close-btn {
+        width: 25px;
+        height: 25px;
+        line-height: 140%;
+    }
+    .popup-box-logged {
+        .close-btn{
+            width: 25px;
+            height: 25px;
+            line-height: 140%;
+        }
+    }
+    .popup-wrap-testimonial .testimonial-container{
+        width: 370px;
+    }
+    .testimonial-container .txt-content {
+        font-size: 13px;
+        margin: 35px 15px 15px 15px;
+    }
+    .delete-icon {
+        right: 17%;
+    }
+    .searchText {
+        height: 30px;
+        -webkit-line-clamp: 2;
+        line-height: 14px;
+    }
+}
+@media screen and (max-width: 470px) {
+    .popup-wrap-testimonial .testimonial-container{
+        width: 340px;
+    }
+    .delete-icon {
+        right: 18%;
+    }
+    .searchResult {
+        flex-direction: column;
+        gap: 23px;
+    }
+    .blogSearchContent {
+        width: 100%;
+    }
+    .lessonSearchContent {
+        width: 100%;
+    }
+    .searchText {
+        height: 19px;
+        line-height: normal;
+        -webkit-line-clamp: 1;
+    }
+}
+@media screen and (max-width: 430px) {
+    .popup-wrap-testimonial .testimonial-container{
+        width: 310px;
+    }
+    .delete-icon {
+        right: 19%;
+    }
+}
+@media screen and (max-width: 380px) {
+    .popup-box-logged {
+        width: 260px;
+        height: 140px;
+    }
+    .popup-wrap-testimonial .testimonial-container{
+        width: 300px;
+    }
+    .delete-icon {
+        right: 20%;
+    }
+}
+@media screen and (max-width: 350px) {
+    .popup-wrap-testimonial .testimonial-container{
+        width: 280px;
+    }
+    .delete-icon {
+        right: 21%;
+    }
+}
+@media screen and (max-width: 330px) {
+    .popup-wrap-testimonial .testimonial-container{
+        width: 260px;
+    }
+    .testimonial-container .txt-content {
+        font-size: 12px;
+        margin: 35px 15px 15px 15px;
+    }
+    .delete-icon {
+        right: 22%;
+    }
 }

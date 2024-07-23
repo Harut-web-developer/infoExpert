@@ -520,7 +520,10 @@ class SiteController extends Controller
             ->andWhere(['or',
                 ['like', 'page_name_am', $searchval],
                 ['like', 'page_name_ru', $searchval],
-                ['like', 'page_name_en', $searchval]
+                ['like', 'page_name_en', $searchval],
+                ['like', 'page_keywords_am', $searchval],
+                ['like', 'page_keywords_ru', $searchval],
+                ['like', 'page_keywords_en', $searchval],
             ])
             ->asArray()
             ->all();
@@ -530,7 +533,10 @@ class SiteController extends Controller
             ->andWhere(['or',
                 ['like', 'lesson_name_am', $searchval],
                 ['like', 'lesson_name_ru', $searchval],
-                ['like', 'lesson_name_en', $searchval]
+                ['like', 'lesson_name_en', $searchval],
+                ['like', 'lesson_keywords_am', $searchval],
+                ['like', 'lesson_keywords_ru', $searchval],
+                ['like', 'lesson_keywords_en', $searchval],
             ])
             ->asArray()
             ->all();

@@ -146,15 +146,24 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <?php }?>
                     </ul>
                     <div class="searchFlagField">
-                        <div>
-                            <input type="text" name="" id="input-search">
-                            <img class="btn-search" src="/images/search-white.png" alt="">
-                        </div>
+                            <img class="btn-search" id="btn-search-mobile" src="/images/search-white.png" alt="">
                         <div class="tabletFlagField">
                             <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/armflag.png" alt=""></a>
                             <a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img src="/images/usaflag.png" alt=""></a>
                             <a href="<?= Url::to(['site/switch-language?lang=ru']) ?>"><img src="/images/ruflag.png" alt=""></a>
                         </div>
+                    </div>
+                </div>
+                <div class="search-mobile search-mobile-hide">
+                    <div class="search-div">
+                        <div class="mobile-search-div">
+                            <input type="text" name="" class="input-search" id="input-search">
+                            <img src="/images/delete-icon.png" alt="" class="delete-icon">
+                            <div class="img-div">
+                                <img class="btn-search" id="btn-search-mobile-hide" src="/images/search-white.png" alt="">
+                            </div>
+                        </div>
+                        <div class="searchField"></div>
                     </div>
                 </div>
             </div>
@@ -205,10 +214,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 </div>
                 <div class="icons">
                     <div class="search-div">
-                        <input type="text" name="" id="input-search">
-                        <div class="img-div search-click">
-                            <img class="btn-search" src="/images/search-white.png" alt="">
+                        <div class="web-search">
+                            <input type="text" name="" class="input-search" id="input-search">
+                            <img src="/images/delete-icon.png" alt="" class="delete-icon">
+                            <div class="img-div">
+                                <img class="btn-search" src="/images/search-white.png" alt="">
+                            </div>
                         </div>
+                        <div class="searchField"></div>
                     </div>
                     <div class="profileField">
                         <?php if (empty(Yii::$app->user->identity)){?>
