@@ -26,7 +26,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             <?php if (!empty($lesson['certificate_img'])){?>
                 <div class="leftDipl diplomW">
                     <span><?=$GLOBALS['text']['lessonBeYour']?></span>
-                    <img src="/<?=$lesson['certificate_img']?>" alt="">
+                    <img src="<?=$lesson['certificate_img']?>" alt="">
                 </div>
             <?php } ?>
             <?php if (!empty($lesson['img'])){?>
@@ -40,7 +40,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             <?php if (!empty($lesson['certificate_img'])){?>
                 <div class="leftDipl diplomM">
                     <span><?=$GLOBALS['text']['lessonBeYour']?></span>
-                    <img src="/<?=$lesson['certificate_img']?>" alt="">
+                    <img src="  <?=$lesson['certificate_img']?>" alt="">
                 </div>
             <?php } ?>
             <div class="rightImgBottom">

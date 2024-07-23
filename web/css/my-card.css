@@ -1129,7 +1129,19 @@ ion-icon {
     }
     .myCard{
         background: #5D9A9D;
-        height: min-content;
+        height: auto;
+    }
+    .myCardMobileField{
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .textForEmpty{
+        margin: auto;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .myCardMainField{
         display: none;

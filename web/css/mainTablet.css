@@ -2480,7 +2480,7 @@
         flex-direction: row;
         justify-content: center;
     }
-    .formName > span{
+    .quize-title{
         text-align: center;
         font-family: "Roboto_",sans-serif;
         font-size: 14px;
@@ -2734,7 +2734,7 @@
         flex-direction: row;
         justify-content: center;
     }
-    .formName > span{
+    .quize-title{
         text-align: center;
         font-family: "Roboto_",sans-serif;
         font-size: 14px;

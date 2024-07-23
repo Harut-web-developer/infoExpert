@@ -154,10 +154,15 @@ class SiteController extends Controller
         }
         if ($this->request->isPost && isset($_POST['subscribe'])){
             $email = $this->request->post('leftEmail');
-            $call_back = new AcSubscribers();
-            $call_back->email = $email;
-            $call_back->create_date = date('Y-m-d H:i:s');
-            $call_back->save();
+            $email_exist = AcSubscribers::find()
+                ->where(['and',['status' => '1'],['email' => $email]])
+                ->exists();
+            if (!$email_exist){
+                $call_back = new AcSubscribers();
+                $call_back->email = $email;
+                $call_back->create_date = date('Y-m-d H:i:s');
+                $call_back->save();
+            }
             return $this->redirect('/');
         }
         $url_info = AcInfo::find()->select('partner, products, programms')->where(['status' => '1'])->asArray()->one();
