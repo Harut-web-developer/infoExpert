@@ -154,10 +154,15 @@ class SiteController extends Controller
         }
         if ($this->request->isPost && isset($_POST['subscribe'])){
             $email = $this->request->post('leftEmail');
-            $call_back = new AcSubscribers();
-            $call_back->email = $email;
-            $call_back->create_date = date('Y-m-d H:i:s');
-            $call_back->save();
+            $email_exist = AcSubscribers::find()
+                ->where(['and',['status' => '1'],['email' => $email]])
+                ->exists();
+            if (!$email_exist){
+                $call_back = new AcSubscribers();
+                $call_back->email = $email;
+                $call_back->create_date = date('Y-m-d H:i:s');
+                $call_back->save();
+            }
             return $this->redirect('/');
         }
         $url_info = AcInfo::find()->select('partner, products, programms')->where(['status' => '1'])->asArray()->one();
@@ -430,21 +435,21 @@ class SiteController extends Controller
                 $token = rand(10000, 99999);
                 $user->password_reset_token = $token;
                 $user->save(false);
-
-                ///////////////////////////////////////////////////////////////////////////////
                 $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/verification', 'token' => $token]);
                 $message = "Your password recovery code is $token <br/>" .
                     "<a href='{$resetLink}'>Click Here to Reset Password</a>";
                 $result = Yii::$app->mailer->compose('welcome', ['message' => $message])
-                    ->setFrom('hovhan.hovhan1995@gmail.com')
+                    ->setFrom('user2002mm@gmail.com')
                     ->setTo($email)
                     ->setSubject('Recovery password')
                     ->send();
-
+                Yii::$app->session->setFlash('forgot', 'Instructions to reset your password have been sent to your email.');
+                $session->set('email', $email);
+                if (Yii::$app->request->post('message')){
+                    return $this->redirect('verification');
+                }
                 if ($result) {
-                    echo "Email sent successfully!";
-                } else {
-                    echo "Failed to send email.";
+                    return $this->redirect('check-email');
                 }
             } else {
                 Yii::$app->session->setFlash('forgot', 'No user is registered with this email address.');
@@ -452,47 +457,6 @@ class SiteController extends Controller
         }
         return $this->render('forgot');
     }
-//    public function actionForgot()
-//    {
-//        $session = Yii::$app->session;
-//        if (Yii::$app->request->isPost) {
-//            $email = Yii::$app->request->post('email');
-//            $user = User::findOne(['email' => $email]);
-//            if ($user !== null) {
-//                $token = rand(10000, 99999);
-//                $user->password_reset_token = $token;
-//                $user->save(false);
-//
-//                $senderName = "Owner Jsource Indonesia";
-//                $senderEmail = "user2002mm@gmail.com";
-//                $subject = "Reset Password";
-//                $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/verification']);
-//                $message = "Your password recovery code is $token <br/>" .
-//                    "<a href='{$resetLink}'>Click Here to Reset Password</a>";
-//
-//                try {
-//                    Yii::$app->mailer->compose()
-//                        ->setFrom([$senderEmail => $senderName])
-//                        ->setTo($email)
-//                        ->setSubject($subject)
-//                        ->setHtmlBody($message)
-//                        ->send();
-//                    Yii::$app->session->setFlash('forgot', 'Instructions to reset your password have been sent to your email.');
-//                    $session->set('email', $email);
-//                    if (Yii::$app->request->post('message')){
-//                        return $this->redirect('verification');
-//                    }
-//                    return $this->redirect('check-email');
-//                } catch (\Exception $e) {
-//                    Yii::error("Failed to send email: " . $e->getMessage(), __METHOD__);
-//                    Yii::$app->session->setFlash('forgot', 'Sorry, we are unable to send the email.');
-//                }
-//            } else {
-//                Yii::$app->session->setFlash('forgot', 'No user is registered with this email address.');
-//            }
-//        }
-//        return $this->render('forgot');
-//    }
     public function actionCheckEmail() {
         return $this->render('check-email');
     }
@@ -551,17 +515,23 @@ class SiteController extends Controller
             ->andWhere(['or',
                 ['like', 'page_name_am', $searchval],
                 ['like', 'page_name_ru', $searchval],
-                ['like', 'page_name_en', $searchval]
+                ['like', 'page_name_en', $searchval],
+                ['like', 'page_keywords_am', $searchval],
+                ['like', 'page_keywords_ru', $searchval],
+                ['like', 'page_keywords_en', $searchval],
             ])
             ->asArray()
             ->all();
         $lessons = AcLessons::find()
-            ->select(['id', 'lesson_name_am', 'lesson_name_ru', 'lesson_name_en'])
+            ->select(['id', 'lesson_name_am', 'lesson_name_ru', 'lesson_name_en', 'url'])
             ->where(['status' => '1'])
             ->andWhere(['or',
                 ['like', 'lesson_name_am', $searchval],
                 ['like', 'lesson_name_ru', $searchval],
-                ['like', 'lesson_name_en', $searchval]
+                ['like', 'lesson_name_en', $searchval],
+                ['like', 'lesson_keywords_am', $searchval],
+                ['like', 'lesson_keywords_ru', $searchval],
+                ['like', 'lesson_keywords_en', $searchval],
             ])
             ->asArray()
             ->all();

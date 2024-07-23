@@ -26,7 +26,7 @@ elseif ($language == 'en'){
         <div class="lessonSearchContent">
             <span class="lesTitle"><?= $les ?></span>
             <?php if (!empty($lessons)){foreach ($lessons as $key => $lesson){?>
-                <a href="/lessons/lesson?id=<?= $lesson['id'] ?>" class="searchText"><?= $lesson[$lan_l] ?></a>
+                <a href="/lesson/<?= $lesson['url'] ?>" class="searchText"><?= $lesson[$lan_l] ?></a>
             <?php }} ?>
         </div>
         <div class="blogSearchContent">

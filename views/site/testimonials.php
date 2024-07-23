@@ -66,8 +66,7 @@
     <div class="popup-box-testimonial">
         <div class="testimonial-container">
             <span class="close-btn-testimonial popup-close-testimonial">x</span>
-            <div class="txt-content">
-            </div>
+            <div class="txt-content"></div>
         </div>
     </div>
 </div>

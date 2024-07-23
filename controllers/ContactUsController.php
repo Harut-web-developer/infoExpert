@@ -45,25 +45,16 @@ class ContactUsController extends \yii\web\Controller
     public function actionIndex()
     {
         if($this->request->isPost && isset($_POST['name'])){
-            $email = 'info@infoexpert.am';
+            $email = 'user2002mm@gmail.com';
             $post = $this->request->post();
-            $senderName = $post['name'];
             $senderEmail = $post['email'];
             $subject = "Contact us";
             $message = $post['comment'];
-
-            $headers = [
-                'From' => "$senderName <{$senderEmail}>",
-                'Reply-To' => $senderEmail,
-                'MIME-Version' => '1.0',
-                'Content-type' => 'text/html; charset=UTF-8'
-            ];
-
-            $headersString = '';
-            foreach ($headers as $key => $value) {
-                $headersString .= "$key: $value\r\n";
-            }
-            mail($email, $subject, $message, $headersString);
+            $result = Yii::$app->mailer->compose('welcome', ['message' => $message])
+                ->setFrom($senderEmail)
+                ->setTo($email)
+                ->setSubject($subject)
+                ->send();
         }
         return $this->render('index');
     }

@@ -2,12 +2,7 @@
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/quize.css?v=2');
 ?>
-<?php
-$session = Yii::$app->session;
 
-var_dump($session['enterQuize']);
-exit();
-?>
 <div class="quize">
     <div class="bodyQuize">
         <?php
@@ -27,7 +22,44 @@ exit();
         <?php }?>
     </div>
 </div>
+<!--popup-->
+<div class="popup-wrap-quize">
+    <div class="popup-box-quize">
+        <div class="quize-input-x">
+            <form class="formMail" action="/quize/index" method="post">
+                <div class="formName">
+                    <span class="quize-title"><?= $GLOBALS['text']['footerQuize']?></span>
+                </div>
+                <div class="inputsMail" >
+                    <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username || !$session['quizeName'] ? 'required' : ''?>>
+                    <input type="number" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>" <?=!Yii::$app->user->identity->phone || !$session['quizePhone'] ? 'required' : ''?>>
+                    <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>" <?=!Yii::$app->user->identity->email || !$session['quizeEmail']? 'required' : ''?>>
+                </div>
+                <div class="formContinue">
+                    <button name="enterQuize" type="submit"><?= $GLOBALS['text']['footerInputBtn']?></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<?php
+$session = Yii::$app->session;
+echo "<pre>";
+var_dump($session['enterQuize']);
+if (!$session['enterQuize']) { ?>
+    <script>
+        $(document).ready(function() {
+            $('.popup-wrap-quize').fadeIn(500);
+            $('.popup-box-quize').removeClass('transform-out').addClass('transform-in');
+            $('.popup-close-quize').click(function(e) {
+                e.preventDefault();
+                $('.popup-wrap-quize').fadeOut(500);
+                $('.popup-box-quize').removeClass('transform-in').addClass('transform-out');
+            });
+        });
+    </script>
+<?php } ?>
 <script>
     $(document).ready(function() {
         let selectedOption = '';

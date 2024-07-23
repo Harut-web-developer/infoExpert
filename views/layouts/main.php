@@ -146,12 +146,24 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <?php }?>
                     </ul>
                     <div class="searchFlagField">
-                        <img class="btn-search" src="/images/search-white.png" alt="">
+                            <img class="btn-search" id="btn-search-mobile" src="/images/search-white.png" alt="">
                         <div class="tabletFlagField">
                             <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/armflag.png" alt=""></a>
                             <a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img src="/images/usaflag.png" alt=""></a>
                             <a href="<?= Url::to(['site/switch-language?lang=ru']) ?>"><img src="/images/ruflag.png" alt=""></a>
                         </div>
+                    </div>
+                </div>
+                <div class="search-mobile search-mobile-hide">
+                    <div class="search-div">
+                        <div class="mobile-search-div">
+                            <input type="text" name="" class="input-search" id="input-search">
+                            <img src="/images/delete-icon.png" alt="" class="delete-icon">
+                            <div class="img-div">
+                                <img class="btn-search" id="btn-search-mobile-hide" src="/images/search-white.png" alt="">
+                            </div>
+                        </div>
+                        <div class="searchField"></div>
                     </div>
                 </div>
             </div>
@@ -201,7 +213,16 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <a href="/"><img src="/images/logo.png" alt=""></a>
                 </div>
                 <div class="icons">
-                    <img class="btn-search" src="/images/search-white.png" alt="">
+                    <div class="search-div">
+                        <div class="web-search">
+                            <input type="text" name="" class="input-search" id="input-search">
+                            <img src="/images/delete-icon.png" alt="" class="delete-icon">
+                            <div class="img-div">
+                                <img class="btn-search" src="/images/search-white.png" alt="">
+                            </div>
+                        </div>
+                        <div class="searchField"></div>
+                    </div>
                     <div class="profileField">
                         <?php if (empty(Yii::$app->user->identity)){?>
                             <a href="/login"><img class="profileUserIcon" src="/images/user.png" alt=""></a>
@@ -340,18 +361,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </div>
     </div>
 </header>
-<!--search popup-->
-<div class="popup-wrap">
-    <div class="popup-box">
-        <div class="search-input-x">
-            <div class="search-container">
-                <input class="input-search" type="text" placeholder="<?= $GLOBALS['text']['search']?>" name="search">
-                <span class="close-btn popup-close">x</span>
-            </div>
-        </div>
-        <div id="searchField" class="searchField"></div>
-    </div>
-</div>
 <!--successfully logged popup-->
 <?php
 $session = Yii::$app->session;
@@ -425,7 +434,7 @@ if ($logged && $alertShown) {
             <div class="rightFooterBg">
                 <form class="formMail" action="/quize/index" method="post">
                     <div class="formName">
-                        <span><?= $GLOBALS['text']['footerQuize']?></span>
+                        <span class="quize-title"><?= $GLOBALS['text']['footerQuize']?></span>
                     </div>
                     <div class="inputsMail" >
                         <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username || !$session['quizeName'] ? 'required' : ''?>>
