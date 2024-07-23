@@ -2888,7 +2888,7 @@
         top: 3px;
     }
     .delete-icon {
-        right: 16%;
+        right: 17%;
     }
     .searchText {
         font-size: 13px;
@@ -2918,9 +2918,6 @@
     .testimonial-container .txt-content {
         font-size: 13px;
         margin: 35px 15px 15px 15px;
-    }
-    .delete-icon {
-        right: 17%;
     }
     .searchText {
         height: 30px;

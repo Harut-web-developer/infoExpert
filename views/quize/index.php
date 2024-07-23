@@ -29,7 +29,6 @@ $this->registerCssFile('@web/css/quize.css?v=2');
             <form class="formMail" action="/quize/index" method="post">
                 <div class="formName">
                     <span class="quize-title"><?= $GLOBALS['text']['footerQuize']?></span>
-                    <span class="close-btn-quize popup-close-quize">x</span>
                 </div>
                 <div class="inputsMail" >
                     <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username || !$session['quizeName'] ? 'required' : ''?>>
@@ -46,7 +45,9 @@ $this->registerCssFile('@web/css/quize.css?v=2');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <?php
 $session = Yii::$app->session;
-if ($session['enterQuize']) { ?>
+echo "<pre>";
+var_dump($session['enterQuize']);
+if (!$session['enterQuize']) { ?>
     <script>
         $(document).ready(function() {
             $('.popup-wrap-quize').fadeIn(500);

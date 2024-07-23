@@ -494,11 +494,6 @@ class SiteController extends Controller
             if($password === $confirm) {
                 $hash = Yii::$app->getSecurity()->generatePasswordHash($password);
                 $user = User::findOne(['email' => $email]);
-//                echo "<pre>";
-//                var_dump($_POST);
-//                var_dump($hash);
-//                var_dump($user);
-//                die;
                 $user->password = $hash;
                 $user->auth_key = $this->generateRandomString();
                 $user->save(false);
