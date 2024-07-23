@@ -45,8 +45,6 @@ $this->registerCssFile('@web/css/quize.css?v=2');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <?php
 $session = Yii::$app->session;
-echo "<pre>";
-var_dump($session['enterQuize']);
 if (!$session['enterQuize']) { ?>
     <script>
         $(document).ready(function() {
