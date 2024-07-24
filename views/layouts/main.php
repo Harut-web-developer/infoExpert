@@ -414,9 +414,15 @@ if ($logged && $alertShown) {
                         <div class="footerConn">
                             <span><?= $GLOBALS['text']['footerTextConn']?></span>
                             <div class="footerSocialMobile">
-                                <a target="_blank" href="<?=$url_info['linkdin_link']?>"><img src="/images/in.png" alt=""></a>
-                                <a target="_blank" class="linkInstagram" href="<?=$url_info['instagram_link']?>"><img src="/images/instagram.png" alt=""></a>
-                                <a target="_blank" href="<?=$url_info['facebook_link']?>"><img src="/images/facebook.png" alt=""></a>
+                                <?php if (!empty($url_info['linkdin_link'])){?>
+                                    <a target="_blank" href="<?=$url_info['linkdin_link']?>"><img src="/images/in.png" alt=""></a>
+                                <?php } ?>
+                                <?php if (!empty($url_info['instagram_link'])){?>
+                                    <a target="_blank" class="linkInstagram" href="<?=$url_info['instagram_link']?>"><img src="/images/instagram.png" alt=""></a>
+                                <?php } ?>
+                                <?php if (!empty($url_info['facebook_link'])){?>
+                                    <a target="_blank" href="<?=$url_info['facebook_link']?>"><img src="/images/facebook.png" alt=""></a>
+                                <?php } ?>
                             </div>
                         </div>
                         <form action="" method="post" class="footerBtn">
@@ -425,9 +431,15 @@ if ($logged && $alertShown) {
                         </form>
                     </div>
                     <div class="footerSocial">
-                        <a target="_blank" href="<?=$url_info['linkdin_link']?>"><img src="/images/in.png" alt=""></a>
-                        <a target="_blank" class="linkInstagram" href="<?=$url_info['instagram_link']?>"><img src="/images/instagram.png" alt=""></a>
-                        <a target="_blank" href="<?=$url_info['facebook_link']?>"><img src="/images/facebook.png" alt=""></a>
+                        <?php if (!empty($url_info['linkdin_link'])){?>
+                            <a target="_blank" href="<?=$url_info['linkdin_link']?>"><img src="/images/in.png" alt=""></a>
+                        <?php } ?>
+                        <?php if (!empty($url_info['instagram_link'])){?>
+                            <a target="_blank" class="linkInstagram" href="<?=$url_info['instagram_link']?>"><img src="/images/instagram.png" alt=""></a>
+                        <?php } ?>
+                        <?php if (!empty($url_info['facebook_link'])){?>
+                            <a target="_blank" href="<?=$url_info['facebook_link']?>"><img src="/images/facebook.png" alt=""></a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

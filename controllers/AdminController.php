@@ -752,6 +752,7 @@ class AdminController extends Controller {
      * @return Response|string
      */
     public function actionLogin() {
+        $session = Yii::$app->session;
         $this->layout = 'login';
         if (!Yii::$app->user->isGuest) {
             return $this->redirect(array('index'));
@@ -817,6 +818,7 @@ class AdminController extends Controller {
     }
 
     public function actionLogout() {
+        session_destroy();
         Yii::$app->user->logout();
         return $this->redirect(array('login'));
     }
