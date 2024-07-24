@@ -682,6 +682,9 @@ if (window.location.pathname == '/' || window.location.pathname == '/testimonial
     }
 }
 if (window.location.pathname == '/testimonials') {
+    $('.blockTestimonialPopup a').on('click', function (e) {
+        e.stopPropagation();
+    });
     $('.blockTestimonialPopup').on('click', function (e) {
         $('.popup-wrap-testimonial').fadeIn(500);
         $('.popup-box-testimonial').removeClass('transform-out').addClass('transform-in');
