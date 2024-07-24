@@ -71,6 +71,8 @@ $config = [
                 '/testimonials' => '/site/testimonials',
                 '/about' => '/site/about',
                 '/terms-and-conditions' => '/site/terms-and-conditions',
+                '/policy' => '/site/policy',
+                '/methodology' => '/site/methodology',
             ],
         ],
     ],

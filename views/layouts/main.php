@@ -139,7 +139,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <?php }  ?>
 
                         <li><a href="/alumni/index"><?= $GLOBALS['text']['headerAlumni']?></a></li>
-                        <li><a href=""><?= $GLOBALS['text']['tabletRecQuize']?></a></li>
+                        <li><a href="/quize/index"><?= $GLOBALS['text']['tabletRecQuize']?></a></li>
                         <li><a href="/contact-us/index"><?= $GLOBALS['text']['tabletContact']?></a></li>
                         <?php if(!empty(Yii::$app->user->identity)){ ?>
                             <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
@@ -397,7 +397,7 @@ if ($logged && $alertShown) {
                             <div class="leftMenuFooter">
                                 <ul>
                                     <li><a href="/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerMethodOur']?></a></li>
+                                    <li><a href="/methodology"><?= $GLOBALS['text']['footerMethodOur']?></a></li>
                                     <li><a href="/contact-us/index"><?= $GLOBALS['text']['footerContact']?></a></li>
                                     <li><a href="/testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
                                     <li><a href="/faq"><?= $GLOBALS['text']['footerFaq']?></a></li>
@@ -453,7 +453,7 @@ if ($logged && $alertShown) {
             </span>
             <div class="policyText">
                 <ul>
-                    <li><a href=""><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
+                    <li><a href="<?= Yii::$app->urlManager->createUrl(['site/policy']) ?>"><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
                     <li><a href="/terms-and-conditions">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
                 </ul>
             </div>
@@ -464,7 +464,7 @@ if ($logged && $alertShown) {
             <div class="footerMobilePolicy">
                 <div class="policyTextMobile">
                     <ul>
-                        <li><a href=""><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
+                        <li><a href="<?= Yii::$app->urlManager->createUrl(['policy']) ?>"><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
                         <li><a href="/terms-and-conditions">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
                     </ul>
                 </div>

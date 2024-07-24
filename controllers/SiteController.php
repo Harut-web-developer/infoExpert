@@ -547,4 +547,10 @@ class SiteController extends Controller
 
         return $this->render('terms');
     }
+    public function actionPolicy(){
+        return $this->render('policy');
+    }
+    public function actionMethodology(){
+        return $this->render('methodology');
+    }
 }
