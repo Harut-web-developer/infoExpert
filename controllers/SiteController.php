@@ -543,4 +543,7 @@ class SiteController extends Controller
             ]),
         ]);
     }
+    public function actionPolicy(){
+        return $this->render('policy');
+    }
 }

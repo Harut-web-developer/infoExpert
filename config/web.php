@@ -70,6 +70,7 @@ $config = [
                 '/faq' => '/site/faq',
                 '/testimonials' => '/site/testimonials',
                 '/about' => '/site/about',
+                '/policy' => '/site/policy',
             ],
         ],
     ],
