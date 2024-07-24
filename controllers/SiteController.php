@@ -543,4 +543,8 @@ class SiteController extends Controller
             ]),
         ]);
     }
+    public function actionTermsAndConditions(){
+
+        return $this->render('terms');
+    }
 }

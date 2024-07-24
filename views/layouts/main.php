@@ -454,7 +454,7 @@ if ($logged && $alertShown) {
             <div class="policyText">
                 <ul>
                     <li><a href=""><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
-                    <li><a href="">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
+                    <li><a href="/terms-and-conditions">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
                 </ul>
             </div>
             <div class="payLogoFooter">
@@ -465,7 +465,7 @@ if ($logged && $alertShown) {
                 <div class="policyTextMobile">
                     <ul>
                         <li><a href=""><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
-                        <li><a href="">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
+                        <li><a href="/terms-and-conditions">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
                     </ul>
                 </div>
                 <div class="payLogoFooterMobile">
