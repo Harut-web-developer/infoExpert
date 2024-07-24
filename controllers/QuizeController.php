@@ -6,6 +6,8 @@ use app\models\AcQuestionAnswers;
 use app\models\AcQuestionList;
 use app\models\AcQuestionQuests;
 use app\models\AcQuizeLog;
+use app\models\User;
+use app\models\Users;
 use Yii;
 use app\models\Texts;
 
@@ -50,21 +52,61 @@ class QuizeController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-        if ($this->request->isPost && isset($_POST['enterQuize'])){
-            $session = Yii::$app->session;
-            $session->set('quizeName',$_POST['name']);
-            $session->set('quizePhone',$_POST['phone']);
-            $session->set('quizeEmail',$_POST['email']);
-            $session->set('enterQuize',true);
-        }
+//        echo "<pre>";
+//        var_dump($_POST);
+//        var_dump(isset($_POST['enterQuize']));
+//        var_dump($_POST['name'] != '');
+//        var_dump(Yii::$app->user->identity);
+//        var_dump(Yii::$app->user->identity->email);
+//        var_dump(Yii::$app->user->identity->phone);
+//        var_dump(Yii::$app->user->identity->id);
+//        var_dump(!is_null(Yii::$app->user->identity->id) && !is_null(Yii::$app->user->identity->username) && !is_null(Yii::$app->user->identity->email) && !is_null(Yii::$app->user->identity->phone));
+//        die;
+//        if ($this->request->isPost && isset($_POST['enterQuize'])){
+//            $session = Yii::$app->session;
+//            $session->set('quizeName',$_POST['name']);
+//            $session->set('quizePhone',$_POST['phone']);
+//            $session->set('quizeEmail',$_POST['email']);
+//            $session->set('enterQuize',true);
+//        }
+        $session = Yii::$app->session;
         $language = $_COOKIE['language'];
         $quize_name = AcQuestionList::find()
             ->select('id, name_'.$language.' as name')
             ->where(['status' => '1'])
             ->asArray()
             ->all();
-        return $this->render('index',[
-            'quize_name' => $quize_name
+        if (!is_null(Yii::$app->user->identity->id)){
+            $user = User::findOne(['id' => Yii::$app->user->identity->id, 'status' => '1']);
+            if (!is_null($user) && is_null($user->username) && !empty($_POST['name'])) {
+                $user->username = $_POST['name'];
+                $user->updated_at = date('Y-m-d H:i:s');
+            }
+            if (!is_null($user) && is_null($user->email) && !empty($_POST['email'])) {
+                $user->email = $_POST['email'];
+                $user->updated_at = date('Y-m-d H:i:s');
+            }
+            if (!is_null($user) && is_null($user->phone) && !empty($_POST['phone'])) {
+                $user->phone = $_POST['phone'];
+                $user->updated_at = date('Y-m-d H:i:s');
+            }
+            if (!is_null($user) && $user->save(false)) {
+                Yii::$app->user->identity->username = $user->username;
+                Yii::$app->user->identity->email = $user->email;
+                Yii::$app->user->identity->phone = $user->phone;
+            }
+        }
+        elseif (is_null(Yii::$app->user->identity->id) && !isset($_POST['enterQuize'])){
+            $session->set('open_popup', true);
+        }
+        elseif (is_null(Yii::$app->user->identity->id) && isset($_POST['enterQuize'])){
+            $session->set('popup_display', 'none');
+            $session->set('quizeName',$_POST['name']);
+            $session->set('quizePhone',$_POST['phone']);
+            $session->set('quizeEmail',$_POST['email']);
+        }
+        return $this->render('index', [
+            'quize_name' => $quize_name,
         ]);
     }
     public function actionQuizeQuestions()

@@ -449,9 +449,9 @@ if ($logged && $alertShown) {
                         <span class="quize-title"><?= $GLOBALS['text']['footerQuize']?></span>
                     </div>
                     <div class="inputsMail" >
-                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username || !$session['quizeName'] ? 'required' : ''?>>
-                        <input type="number" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>" <?=!Yii::$app->user->identity->phone || !$session['quizePhone'] ? 'required' : ''?>>
-                        <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>" <?=!Yii::$app->user->identity->email || !$session['quizeEmail']? 'required' : ''?>>
+                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username ? 'required' : ''?>>
+                        <input type="number" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>" <?=!Yii::$app->user->identity->phone ? 'required' : ''?>>
+                        <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>" <?=!Yii::$app->user->identity->email ? 'required' : ''?>>
                     </div>
                     <div class="formContinue">
                         <button name="enterQuize" type="submit"><?= $GLOBALS['text']['footerInputBtn']?></button>
