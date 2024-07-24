@@ -397,7 +397,7 @@ if ($logged && $alertShown) {
                             <div class="leftMenuFooter">
                                 <ul>
                                     <li><a href="/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerMethodOur']?></a></li>
+                                    <li><a href="/methodology"><?= $GLOBALS['text']['footerMethodOur']?></a></li>
                                     <li><a href="/contact-us/index"><?= $GLOBALS['text']['footerContact']?></a></li>
                                     <li><a href="/testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
                                     <li><a href="/faq"><?= $GLOBALS['text']['footerFaq']?></a></li>
@@ -454,7 +454,7 @@ if ($logged && $alertShown) {
             <div class="policyText">
                 <ul>
                     <li><a href="<?= Yii::$app->urlManager->createUrl(['site/policy']) ?>"><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
-                    <li><a href="">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
+                    <li><a href="/terms-and-conditions">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
                 </ul>
             </div>
             <div class="payLogoFooter">
@@ -465,7 +465,7 @@ if ($logged && $alertShown) {
                 <div class="policyTextMobile">
                     <ul>
                         <li><a href="<?= Yii::$app->urlManager->createUrl(['policy']) ?>"><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
-                        <li><a href="">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
+                        <li><a href="/terms-and-conditions">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
                     </ul>
                 </div>
                 <div class="payLogoFooterMobile">

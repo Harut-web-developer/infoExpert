@@ -1,0 +1,137 @@
+.termsSection{
+    background-image: url("../images/terms.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: min-content;
+}
+.termsField{
+    width: 67%;
+    height: min-content;
+    margin: 0px auto;
+    padding-top: 253px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 90px;
+}
+.titlesField{
+    width: 100%;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+}
+.titlesField > span{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #F16D35;
+}
+.contentField{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.imgField{
+    width: 63%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgField > img{
+    width: 100%;
+    height: auto;
+}
+.textField{
+    font-family: "Roboto_",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #FFFFFF;
+}
+.userCreateTitleField{
+    width: 100%;
+    display: none;
+    align-items: center;
+}
+.userCreateTitleField div{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    color: #F36528;
+}
+.managmentBack{
+    display: contents;
+}
+.backButton{
+    position: absolute;
+    width: 33px;
+    height: 33px;
+}
+@media screen and (max-width: 1100px) {
+    .textField{
+    font-size: 16px;
+    line-height: 30px;
+    }
+    .ellipseButton{
+        display: none;
+    }
+    .userCreateTitleField{
+        display: flex;
+    }
+    .termsField {
+        width: 86%;
+        padding-top: 150px;
+    }
+    .titlesField > span{
+        display: none;
+    }
+}
+@media screen and (max-width: 900px) {
+    .termsField {
+        padding-top: 120px;
+    }
+    .textField{
+        line-height: 24px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .termsField {
+        padding-top: 100px;
+    }
+    .userCreateTitleField div{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 599px) {
+    .termsSection{
+        background-image: unset;
+        background: #5D9A9D;
+        width: 100%;
+        height: min-content;
+    }
+    .ellipseButton{
+        display: block;
+    }
+    .termsField {
+        width: 86%;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .userCreateTitleField div{
+        font-family: "RobotoSlab_",sans-serif;
+        font-size: 16px;
+    }
+    .textField{
+        font-size: 14px;
+        line-height: 16.41px;
+    }
+}
