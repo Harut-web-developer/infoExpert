@@ -159,8 +159,13 @@ if (window.location.pathname == '/testimonials'){
 
 $(document).ready(function () {
 
-    $('body').on('click', '.mainFlag', function () {
-        $(this).closest('.flagFields').find('.otherFlags').toggle();
+    // $('body').on('click', '.mainFlag', function () {
+    //     $(this).closest('.flagFields').find('.otherFlags').toggle();
+    // });
+    $(".flagFields").hover(function(){
+        $('.flagSectionField').show();
+    },function(){
+        $('.flagSectionField').hide();
     });
 })
 if (window.location.pathname == '/') {

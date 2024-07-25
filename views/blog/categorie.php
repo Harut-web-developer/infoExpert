@@ -39,7 +39,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <h1><?= $GLOBALS['text']['recentNews'] ?></h1>
             </div>
             <?php if (!empty($last_blogs)){foreach ($last_blogs as $last_blog){ ?>
-                <a href="categorie?id=<?=$last_blog['id']?>">
+                <a href="<?= Yii::$app->urlManager->createUrl(['blog/'.$last_blog['url']]) ?>">
                     <div class="rigthtxt">
                         <img src="/<?=$last_blog['img']?>">
                         <div class="rigthtxtdiv">

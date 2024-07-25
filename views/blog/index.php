@@ -29,7 +29,7 @@ $statisticsPerPage = array_slice($blogs, $startIndex, $itemsPerPage);
                 <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
             </a>
             <span class="blogTitle"><?= $GLOBALS['text']['blogTitle'] ?></span>
-            <span class="discoverSpan">Let's discover something interesting</span>
+            <span class="discoverSpan"><?=$GLOBALS['text']['blogsSubTitle']?></span>
         </div>
         <div class="bodyBlog">
             <div class="mainBlog">
@@ -47,7 +47,7 @@ $statisticsPerPage = array_slice($blogs, $startIndex, $itemsPerPage);
                                     </span>
                                     <span class="textCard"><?= $blog['page_title'] ?></span>
                                     <div class='divImg'>
-                                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?= $GLOBALS['text']['mainReadMore'] ?></a>
+                                        <a href="<?= Yii::$app->urlManager->createUrl(['blog/'.$blog['url']]) ?>"><?= $GLOBALS['text']['mainReadMore'] ?></a>
                                         <div class='large-font'>
                                             <ion-icon name="heart" data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'],2) ? AcWishlist::getWishlist($blog['id'],2) : 0?>" data-type="2">
                                                 <div class='red-bg'></div>
@@ -110,7 +110,7 @@ $statisticsPerPage = array_slice($blogs, $startIndex, $itemsPerPage);
                         <span class="date"> <img src="/images/date.png"><span class="dateNumber"><?=$item['create_date']?></span></span>
                         <span class="textCard"><?=$item['page_title']?></span>
                         <div class='divImg'>
-                            <a href="/blog/categorie?id=<?=$item['id']?>"><?= $GLOBALS['text']['mainReadMore']?></a>
+                            <a href="/blog/<?=$item['url']?>"><?= $GLOBALS['text']['mainReadMore']?></a>
                             <div class='large-font'>
                                 <ion-icon name="heart" data-id="<?=$item['id']?>" data-active="<?=AcWishlist::getWishlist($item['id'],2)?>" data-type="2">
                                     <div class='red-bg'></div>

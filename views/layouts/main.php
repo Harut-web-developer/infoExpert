@@ -134,7 +134,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             <li><a href="#sectionAnswers"><?= $GLOBALS['text']['footerFaq']?></a></li>
                         <?php } else { ?>
                             <li><a href="/testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
-                            <li><a href="/blog/index"><?= $GLOBALS['text']['footerBlog']?></a></li>
+                            <li><a href="/blog"><?= $GLOBALS['text']['footerBlog']?></a></li>
                             <li><a href="/faq"><?= $GLOBALS['text']['footerFaq']?></a></li>
                         <?php }  ?>
 
@@ -252,12 +252,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                 $mainFlag = '/images/usaflag.png';
                         }
                         ?>
-                        <img class="mainFlag" src="<?= $mainFlag ?>" alt="">
-                        <ul class="otherFlags">
-                            <?php if($_COOKIE['language'] !== 'am'){ ?><li class="firstFlag"><a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img class="armFlag" src="/images/armflag.png" alt=""></a></li><?php } ?>
-                            <?php if($_COOKIE['language'] !== 'en'){ ?><li class="firstFlag"><a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img class="usaFlag" src="/images/usaflag.png" alt=""></a></li><?php } ?>
-                            <?php if($_COOKIE['language'] !== 'ru'){ ?><li class="secondFlag"><a href="<?= Url::to(['site/switch-language?lang=ru']) ?>"><img class="ruFlag" src="/images/ruflag.png" alt=""></a></li><?php } ?>
-                        </ul>
+                            <img class="mainFlag" src="<?= $mainFlag ?>" alt="">
+                        <div class="flagSectionField">
+                            <ul class="otherFlags">
+                                <?php if($_COOKIE['language'] !== 'am'){ ?><li class="firstFlag"><a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img class="armFlag" src="/images/armflag.png" alt=""></a></li><?php } ?>
+                                <?php if($_COOKIE['language'] !== 'en'){ ?><li class="firstFlag"><a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img class="usaFlag" src="/images/usaflag.png" alt=""></a></li><?php } ?>
+                                <?php if($_COOKIE['language'] !== 'ru'){ ?><li class="secondFlag"><a href="<?= Url::to(['site/switch-language?lang=ru']) ?>"><img class="ruFlag" src="/images/ruflag.png" alt=""></a></li><?php } ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -299,7 +301,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <?php } else { ?>
                         <li class="whiteLi orangeOrWhite"><a href="/faq"><?= $GLOBALS['text']['__faq__'] ?></a></li>
                         <li class="whiteLi orangeOrWhite"><a href="/testimonials"><?= $GLOBALS['text']['__testimonials__'] ?></a></li>
-                        <li class="whiteLi orangeOrWhite"><a href="/blog/index"><?= $GLOBALS['text']['__blog__'] ?></a></li>
+                        <li class="whiteLi orangeOrWhite"><a href="/blog"><?= $GLOBALS['text']['__blog__'] ?></a></li>
                     <?php } ?>
                     <li class="whiteLi orangeOrWhite"><a href="/contact-us/index"><?= $GLOBALS['text']['__contact__'] ?></a></li>
                     <li class="whiteLi orangeOrWhite"><a href="/apply-now/index"><?= $GLOBALS['text']['__applynow__'] ?></a></li>
@@ -406,7 +408,7 @@ if ($logged && $alertShown) {
                             <div class="rightMenuFooter">
                                 <ul>
                                     <li><a href="/courses/index"><?= $GLOBALS['text']['footerCourses']?></a></li>
-                                    <li><a href="/blog/index"><?= $GLOBALS['text']['footerBlog']?></a></li>
+                                    <li><a href="/blog"><?= $GLOBALS['text']['footerBlog']?></a></li>
                                     <li><a href="/quize/index"><?= $GLOBALS['text']['footerRecQuize']?></a></li>
                                 </ul>
                             </div>

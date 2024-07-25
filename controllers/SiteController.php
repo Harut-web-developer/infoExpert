@@ -112,6 +112,8 @@ class SiteController extends Controller
         $GLOBALS['text'] = $txt;
         $this->enableCsrfValidation = false;
         $session = Yii::$app->session;
+        var_dump($session['role'] !== null);
+        exit();
         if ($action->id == 'account-security' && !(isset($session['user_id']) && $session['logged'])) {
             return $this->redirect('/login')->send();
         }
@@ -180,6 +182,7 @@ class SiteController extends Controller
             'page_title_' . $language . ' as page_title',
             'page_content_' . $language . ' as page_content',
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
+            'url',
             'img'
         ])->where(['status' => '1'])->limit(3)->orderBy(['create_date' => SORT_DESC])->asArray()->all();
         $blogs_mobile = AcBlog::find()->select([
@@ -188,6 +191,7 @@ class SiteController extends Controller
             'page_title_' . $language . ' as page_title',
             'page_content_' . $language . ' as page_content',
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
+            'url',
             'img'
         ])->where(['status' => '1'])->asArray()->all();
         return $this->render('index',[
@@ -220,6 +224,7 @@ class SiteController extends Controller
                 $session->set('user_id',$identity->id);
                 $session->set('user_name',$identity->username);
                 $session->set('user_email',$identity->email);
+                $session->set('role',$identity->role);
                 $session->set('logged',true);
                 $session->set('alertShown',true);
                 return $this->redirect('/');

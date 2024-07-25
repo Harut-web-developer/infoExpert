@@ -32,6 +32,12 @@ class AdminController extends Controller {
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
         $this->layout = 'admin';
+        $session = Yii::$app->session;
+        var_dump($session['role'] !== null);
+        exit();
+        if ($session['role'] !== null){
+            $this->redirect(['admin/login']);
+        }
         return parent::beforeAction($action);
 
     }

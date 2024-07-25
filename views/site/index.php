@@ -285,7 +285,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <div class="cardsInfo"><?=$blog['page_title']?></div>
                             </div>
                             <div class="cardsLike">
-                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
+                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/'.$blog['url']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                                 <div class='large-font'>
                                     <ion-icon name="heart" data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'], 2) ? AcWishlist::getWishlist($blog['id'], 2) : 0?>" data-type="2">
                                         <div class='red-bg'></div>
@@ -303,7 +303,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <div></div>
             </div>
             <div class="blogBtn">
-                <a href="blog/index">
+                <a href="<?= Yii::$app->urlManager->createUrl(['blog/index'])?>">
                     <img src="/images/articlebtn.png" alt="">
                     <span><?=$GLOBALS['text']['sectionSevenBtn']?></span>
                 </a>
@@ -332,7 +332,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <div class="cardsInfo"><?=$blog['page_title']?></div>
                             </div>
                             <div class="cardsLike">
-                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
+                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/'.$blog['url']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                                 <div class='large-font'>
                                     <ion-icon name="heart"  data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'],2) ? AcWishlist::getWishlist($blog['id'],2) : 0?>" data-type="2">
                                         <div class='red-bg'></div>

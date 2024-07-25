@@ -53,6 +53,7 @@ class BlogController extends \yii\web\Controller
             'page_title_' . $language . ' as page_title',
             'page_content_' . $language . ' as page_content',
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
+            'url',
             'img'
         ])->where(['status' => '1'])->asArray()->all();
         $blogsMobile = AcBlog::find()->select([
@@ -61,6 +62,7 @@ class BlogController extends \yii\web\Controller
             'page_title_' . $language . ' as page_title',
             'page_content_' . $language . ' as page_content',
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
+            'url',
             'img'
         ])->where(['status' => '1'])->asArray()->all();
         return $this->render('index', [
@@ -78,15 +80,17 @@ class BlogController extends \yii\web\Controller
             'page_title_' . $language . ' as page_title',
             'page_content_' . $language . ' as page_content',
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
+            'url',
             'img'
         ])
             ->where(['status' => '1'])
-            ->andWhere(['id' => $_GET['id']])
+            ->andWhere(['url' => $_GET['url']])
             ->asArray()
             ->one();
         $last_blogs = AcBlog::find()->select([
             'id',
             'page_name_' . $language . ' as page_name',
+            'url',
             'img'
         ])
             ->where(['status' => '1'])
