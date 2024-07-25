@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\AcInfo;
 use Yii;
 use app\models\Texts;
 
@@ -56,6 +57,7 @@ class ContactUsController extends \yii\web\Controller
                 ->setSubject($subject)
                 ->send();
         }
-        return $this->render('index');
+        $info = AcInfo::findOne(['status' => '1']);
+        return $this->render('index',['info' => $info]);
     }
 }

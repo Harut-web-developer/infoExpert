@@ -14,6 +14,8 @@ use Yii;
  * @property string|null $instagram_link
  * @property string|null $facebook_link
  * @property string|null $linkdin_link
+ * @property string|null $infoexpert_email
+ * @property string|null $phone_number
  * @property string|null $status
  * @property string|null $create_date
  */
