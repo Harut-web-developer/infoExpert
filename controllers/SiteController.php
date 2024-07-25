@@ -155,6 +155,7 @@ class SiteController extends Controller
             return $this->redirect('/');
         }
         if ($this->request->isPost && isset($_POST['subscribe'])){
+            $session = Yii::$app->session;
             $email = $this->request->post('leftEmail');
             $email_exist = AcSubscribers::find()
                 ->where(['and',['status' => '1'],['email' => $email]])
@@ -164,8 +165,11 @@ class SiteController extends Controller
                 $call_back->email = $email;
                 $call_back->create_date = date('Y-m-d H:i:s');
                 $call_back->save();
+                $session->set('successfully_subscribed', true);
             }
-            return $this->redirect('/');
+            $session->set('already_subscribe', '');
+            $session->set('subscribe', true);
+            return $this->goBack(Yii::$app->request->referrer);
         }
         $url_info = AcInfo::find()->select('partner, products, programms')->where(['status' => '1'])->asArray()->one();
         $lessons_courses = AcLessons::find()->select('img, lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();

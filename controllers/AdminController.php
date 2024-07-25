@@ -824,7 +824,6 @@ class AdminController extends Controller {
     }
 
     public function actionLogout() {
-        session_destroy();
         Yii::$app->user->logout();
         return $this->redirect(array('login'));
     }

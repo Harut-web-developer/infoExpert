@@ -1023,7 +1023,7 @@
 }
 .tabletMenuNavField{
     width: 366px;
-    height: 400px;
+    height: 410px;
     padding-top: 17px;
     margin: 0px 71px 20px 47px;
     display: flex;
@@ -1125,6 +1125,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 12px;
 }
 .tabletFlagField{
     width: 160px;
@@ -2318,9 +2319,10 @@
         display: none;
     }
     .searchFlagField {
-        height: 68px;
+        height: 75px;
         flex-direction: column;
         align-items: start;
+        margin-top: 24px;
     }
 }
 @media only screen and (min-width: 600px){
@@ -2831,6 +2833,38 @@
     text-align: start;
     margin: 35px;
     color: white;
+}
+/*call back popup close*/
+.transform-in-call, .transform-out-call {
+    -webkit-transition:all ease 0.5s;
+    transition:all ease 0.5s;
+}
+.transform-in-call {
+    -webkit-transform:translate(-50%, -50%) scale(1);
+    transform:translate(-50%, -50%) scale(1);
+}
+.close-btn-call{
+    width:35px;
+    height:35px;
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+    display:flex;
+    justify-content: center;
+    -webkit-transition:all ease 0.5s;
+    transition:all ease 0.5s;
+    border-radius:1000px;
+    background:#5D9A9D;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff;
+    line-height:190%;
+
+    &:hover {
+        -webkit-transform:rotate(180deg);
+        transform:rotate(180deg);
+    }
 }
 @media screen and (max-width: 1100px) {
     .searchField {
