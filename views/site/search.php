@@ -1,3 +1,4 @@
+<!-- Mariam-->
 <?php
 if ($language == 'am') {
     $lan_b = 'page_name_am';

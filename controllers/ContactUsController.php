@@ -15,6 +15,7 @@ class ContactUsController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Harut ev Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -45,13 +46,14 @@ class ContactUsController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Harut
         if($this->request->isPost && isset($_POST['name'])){
             $email = 'user2002mm@gmail.com';
             $post = $this->request->post();
             $senderEmail = $post['email'];
             $subject = "Contact us";
             $message = $post['comment'];
-            $result = Yii::$app->mailer->compose('welcome', ['message' => $message])
+            Yii::$app->mailer->compose('welcome', ['message' => $message])
                 ->setFrom($senderEmail)
                 ->setTo($email)
                 ->setSubject($subject)

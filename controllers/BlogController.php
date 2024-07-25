@@ -16,6 +16,7 @@ class BlogController extends \yii\web\Controller
 
     public function beforeAction($action)
     {
+        // Harut ev Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -46,6 +47,7 @@ class BlogController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Harut
         $language = $_COOKIE['language'];
         $blogs = AcBlog::find()->select([
             'id',
@@ -72,6 +74,7 @@ class BlogController extends \yii\web\Controller
     }
     public function actionCategorie()
     {
+        // Harut
 //        echo "<pre>";
         $language = $_COOKIE['language'];
         $blogs = AcBlog::find()->select([

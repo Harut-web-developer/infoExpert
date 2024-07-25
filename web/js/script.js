@@ -1,3 +1,4 @@
+// Harut
 if($(window).width()<=600){
     $('.img-prev').each(function(){
         $(this).next().addClass('img-prev').removeClass('img-top');
@@ -23,6 +24,7 @@ $(".menuCoursesDropDown").hover(function(){
 //         });
 //     }
 // });
+// Mariam
 $(".answersField").click(function() {
     var panel = $(this).children(".answerQuestion");
     $(".answerQuestion").not(panel).css("display", "none");
@@ -40,6 +42,7 @@ $(".answersField").click(function() {
         'line-height': '19.2px'
     });
 });
+//  Mariam
 (async ()=>   // async IIFE code for slider.
 {
     const
@@ -74,7 +77,7 @@ $(".answersField").click(function() {
         }
     }
 })()
-
+// Mariam
 if (window.location.pathname == '/'){
     var swiper = new Swiper(".slide-content", {
         slidesPerView: 3,
@@ -121,6 +124,7 @@ if (window.location.pathname == '/'){
         },
     });
 }
+// Harut
 if (window.location.pathname == '/testimonials'){
     var swiper = new Swiper(".slide-content", {
         slidesPerView: 3,
@@ -156,18 +160,15 @@ if (window.location.pathname == '/testimonials'){
         },
     });
 }
-
+// Harut
 $(document).ready(function () {
-
-    // $('body').on('click', '.mainFlag', function () {
-    //     $(this).closest('.flagFields').find('.otherFlags').toggle();
-    // });
     $(".flagFields").hover(function(){
         $('.flagSectionField').show();
     },function(){
         $('.flagSectionField').hide();
     });
 })
+// Mariam
 if (window.location.pathname == '/') {
     const scrollTop = function () {
         const scrollBtn = $("<button>").attr("id", "scroll-btn").addClass("show").css("opacity", "0");
@@ -228,6 +229,7 @@ if (window.location.pathname == '/') {
         }
     }
 }
+// Mariam
 if (window.location.pathname == '/') {
     $(document).on("click", ".like-cnt", function () {
         var like_cnt = $(this);
@@ -273,7 +275,7 @@ if (window.location.pathname == '/') {
     });
 
 }
-
+// Mariam
 if (window.location.pathname == '/my-card/index' && $(window).width() <= 600){
     document.addEventListener('scroll', function() {
         const bottomImages = document.getElementById('totalPriceField');
@@ -290,6 +292,7 @@ if (window.location.pathname == '/my-card/index' && $(window).width() <= 600){
         }
     });
 }
+// Mariam
 if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600){
     document.addEventListener('scroll', function() {
         const summary = document.getElementById('summary');
@@ -306,6 +309,7 @@ if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600)
         }
     });
 }
+// Harut
 $(document).ready(function () {
     $('body').on('click','.tabletMenuIcon', function () {
         if($(window).width() < 600){
@@ -362,6 +366,7 @@ $(document).ready(function () {
     },function(){
         $('.profileFieldImg').hide();
     });
+    // Mariam
     let current = location.pathname;
     $('.userProfileMenu li a').each(function(){
         let sthis = $(this);
@@ -369,7 +374,6 @@ $(document).ready(function () {
             sthis.css('color', '#F36528');
         }
     })
-
     if (window.location.pathname != '/') {
         let pageName = location.pathname;
         $('.orangeOrWhite a').each(function(){
@@ -418,6 +422,7 @@ $(document).ready(function () {
             }
         });
     }
+    // Harut
     $('.autoplay').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -435,7 +440,7 @@ $(document).ready(function () {
             });
         };
     }
-
+// Harut
     if ($('.individualCards').length >= 4 && $(window).width() >= 1024){
         $('.individualCards').last().css('display', 'none');
     }
@@ -461,6 +466,7 @@ $(document).ready(function () {
             $('.securityModal').css('display', 'none');
         }
     });
+    // Mariam
     function search(inputElement) {
         let inputVal = inputElement.val();
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
@@ -553,6 +559,7 @@ $(document).ready(function () {
         $('.popup-box-logged').removeClass('transform-in').addClass('transform-out');
         e.preventDefault();
     });
+    // Harut
     $('body').on('click', 'ion-icon', function () {
     let indID = $(this).data('id');
     let thisItem = $(this);
@@ -622,6 +629,7 @@ $(document).ready(function () {
         })
     }
 })
+    // Harut
     $('body').on('click', '.addMyCard', function () {
         let lesson_id = $(this).data('id');
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
@@ -635,6 +643,7 @@ $(document).ready(function () {
             }
         })
     })
+    // Harut ev Mariam
     document.querySelectorAll('ion-icon').forEach(icon => {
         if (icon.getAttribute('data-active') === "1") {
             icon.classList.add('active');
@@ -646,6 +655,7 @@ $(document).ready(function () {
         });
     });
 })
+// Harut
 if (window.location.pathname == '/' || window.location.pathname == '/testimonials' && window.innerWidth < 600) {
     let seeMoreBtnTestimonial = document.querySelector('#testimonialBtnMobile');
     let testimonial = [...document.querySelectorAll('.mobileTestimonial .blockTestimonialMobile')];
@@ -686,6 +696,7 @@ if (window.location.pathname == '/' || window.location.pathname == '/testimonial
         }
     }
 }
+// // Mariam
 if (window.location.pathname == '/testimonials') {
     $('.blockTestimonialPopup a').on('click', function (e) {
         e.stopPropagation();

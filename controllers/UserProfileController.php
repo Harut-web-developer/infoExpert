@@ -19,6 +19,7 @@ class UserProfileController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Harut ev Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -59,10 +60,12 @@ class UserProfileController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Mariam
         return $this->render('index');
     }
     public function actionUserCreate()
     {
+        // Harut
         if ($this->request->isPost){
             $post = $this->request->post();
             $user = User::findOne(intval(Yii::$app->user->identity->id));
@@ -91,6 +94,7 @@ class UserProfileController extends \yii\web\Controller
     }
     public function actionAchievements()
     {
+        // Harut
         $language = $_COOKIE['language'];
         $user_id = Yii::$app->user->identity->id;
         $certificates = AcCertificate::find()
@@ -114,6 +118,7 @@ class UserProfileController extends \yii\web\Controller
     }
     public function actionAchievementsEdit()
     {
+        // Harut
         if ($this->request->isPost) {
             $post = $this->request->post();
             $user = User::findOne(intval(Yii::$app->user->identity->id));
@@ -141,6 +146,7 @@ class UserProfileController extends \yii\web\Controller
     }
     public function actionEditProfile()
     {
+        // Harut
         if ($this->request->isPost) {
             $post = $this->request->post();
             $user = User::findOne(intval(Yii::$app->user->identity->id));

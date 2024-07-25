@@ -1,3 +1,4 @@
+<!-- Mariam ev Harut-->
 <?php
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/courses.css?v=1');

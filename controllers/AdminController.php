@@ -32,12 +32,6 @@ class AdminController extends Controller {
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
         $this->layout = 'admin';
-        $session = Yii::$app->session;
-        var_dump($session['role'] !== null);
-        exit();
-        if ($session['role'] !== null){
-            $this->redirect(['admin/login']);
-        }
         return parent::beforeAction($action);
 
     }
@@ -275,7 +269,7 @@ class AdminController extends Controller {
         return $this->render('blog', ['pages' => $pages]);
     }
     public function actionLessons() {
-
+// Harut
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
@@ -323,6 +317,7 @@ class AdminController extends Controller {
         return $this->render('lessons', ['lessons' => $lessons]);
     }
     public function actionTutors(){
+        // Harut
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
@@ -359,6 +354,7 @@ class AdminController extends Controller {
         return $this->render('tutors', ['tutors' => $tutors, 'lessons' => $lessons]);
     }
     public function actionAlumni(){
+        // Harut
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
@@ -583,6 +579,7 @@ class AdminController extends Controller {
         return $this->renderAjax('lesson-edite-popup', ['lesson' => $lesson]);
     }
     public function actionAlumniEdite() {
+        // Harut
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
@@ -591,6 +588,7 @@ class AdminController extends Controller {
         return $this->renderAjax('alumni-edite-popup', ['alumni' => $alumni]);
     }
     public function actionTutorsEdite() {
+        // Harut
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
@@ -758,7 +756,6 @@ class AdminController extends Controller {
      * @return Response|string
      */
     public function actionLogin() {
-        $session = Yii::$app->session;
         $this->layout = 'login';
         if (!Yii::$app->user->isGuest) {
             return $this->redirect(array('index'));

@@ -16,6 +16,7 @@ class WishlistController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Harut ev Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -55,6 +56,7 @@ class WishlistController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Harut
 //        echo "<pre>";
         $language = $_COOKIE['language'];
         $wishlist_courses = AcLessons::find()->select('ac_lessons.id as lessons_id, ac_lessons.img as img, ac_lessons.price as price, ac_lessons.rating as rating,
@@ -89,6 +91,7 @@ class WishlistController extends \yii\web\Controller
     }
     public function actionBlogsWishlist()
     {
+        // Harut
         $language = $_COOKIE['language'];
         $wishlist_blogs = AcBlog::find()->select([
             'ac_blog.id as blog_id',

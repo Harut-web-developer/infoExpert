@@ -1,3 +1,4 @@
+// Mariam
 document.addEventListener("DOMContentLoaded", function () {
     function slider(carousel, wrapper, firstCard) {
         // const firstCardWidth = firstCard.offsetWidth;
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// Harut
 
 $(document).ready(function () {
     $('body').on('click','.removeItem',function () {
@@ -99,6 +101,7 @@ $(document).ready(function () {
             }
         })
     })
+    // Harut
     $('body').on('click','.moveItem',function () {
         let itemId = $(this).data('move');
         let lessonId = $(this).data('lesson');

@@ -1,3 +1,4 @@
+// Mariam
 document.addEventListener("DOMContentLoaded", function () {
     function slider(carousel, wrapper, firstCard) {
         // const firstCardWidth = firstCard.offsetWidth;
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 });
-
+// Harut
 let seeMoreBtnCourses = document.querySelector('#coursesBtnMobile');
 let courses = [...document.querySelectorAll('.cardCoursesMobile .cardCourses')];
 let currentItemCourses = 2;

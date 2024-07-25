@@ -19,6 +19,7 @@ class MyCardController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Harut ev Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -59,6 +60,7 @@ class MyCardController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Harut
         $language = $_COOKIE['language'];
         $user_id = Yii::$app->user->identity->id;
         $my_card = AcLessons::find()->select('ac_lessons.id as lesson_id, ac_lessons.img as img, ac_lessons.price as price, ac_lessons.rating as rating,
@@ -74,6 +76,7 @@ class MyCardController extends \yii\web\Controller
     }
     public function actionCheckout()
     {
+        // Harut
         $language = $_COOKIE['language'];
         $user_id = Yii::$app->user->identity->id;
 ;
@@ -94,9 +97,11 @@ class MyCardController extends \yii\web\Controller
     }
     public function actionCongratulation()
     {
+        // Mariam
         return $this->render('congratulation-on-achievement-messages');
     }
     public function actionAddCard(){
+        // Harut
         if ($this->request->isGet){
             $id = intval($this->request->get('lesson_id'));
             $add_card = AcMyCard::addCard($id);
@@ -104,6 +109,7 @@ class MyCardController extends \yii\web\Controller
         }
     }
     public function actionRemoveItem(){
+        // Harut
         if ($this->request->isGet){
             $id = intval($this->request->get('itemId'));
             $remove_item = AcMyCard::findOne($id);
@@ -119,6 +125,7 @@ class MyCardController extends \yii\web\Controller
         }
     }
     public function actionMoveItem(){
+        // Harut
         if ($this->request->isGet) {
             $user_id = Yii::$app->user->identity->id;
             $id = intval($this->request->get('itemId'));

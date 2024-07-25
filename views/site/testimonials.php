@@ -1,3 +1,4 @@
+<!-- Mariam ev Harut-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
 
 <div class="sectionSixPage">

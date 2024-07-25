@@ -1,3 +1,4 @@
+<!-- Harut-->
 <?php
 $this->registerCssFile('@web/css/terms.css?v=1');
 ?>

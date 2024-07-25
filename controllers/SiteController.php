@@ -85,6 +85,7 @@ class SiteController extends Controller
     }
     public function beforeAction($action)
     {
+        // Harut ev Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -112,8 +113,6 @@ class SiteController extends Controller
         $GLOBALS['text'] = $txt;
         $this->enableCsrfValidation = false;
         $session = Yii::$app->session;
-        var_dump($session['role'] !== null);
-        exit();
         if ($action->id == 'account-security' && !(isset($session['user_id']) && $session['logged'])) {
             return $this->redirect('/login')->send();
         }
@@ -126,6 +125,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        // Harut ev Mariam
         date_default_timezone_set('Asia/Yerevan');
         $language = $_COOKIE['language'];
         if ($this->request->isPost && isset($_POST['callBackBtn'])){
@@ -217,6 +217,7 @@ class SiteController extends Controller
      * @return Response|string
      */
     public function actionLogin(){
+        // Harut ev Mariam
         $session = Yii::$app->session;
         $model = new LoginForm();
         if($_POST){
@@ -248,6 +249,7 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
+        // Harut
         $this->enableCsrfValidation = false;
         session_destroy();
         Yii::$app->user->logout();
@@ -255,6 +257,7 @@ class SiteController extends Controller
     }
 
     public function actionFaq(){
+        // Harut
         $language = $_COOKIE['language'];
         $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => null])->asArray()->all();
         $total_rows_faq = count($answers);
@@ -270,6 +273,7 @@ class SiteController extends Controller
         ]);
     }
     public function actionTestimonials(){
+        // Harut
         $language = $_COOKIE['language'];
         $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])->asArray()->all();
 
@@ -305,6 +309,7 @@ class SiteController extends Controller
     }
     public function actionSignUp()
     {
+        // Harut ev Mariam
         $session = Yii::$app->session;
         $model = new User();
         if($this->request->isPost) {
@@ -355,6 +360,7 @@ class SiteController extends Controller
     }
     public function actionAccountSecurity()
     {
+        // Mariam
         if ($this->request->isPost) {
             $current_password = $this->request->post('currentPassword');
             $new_password = $this->request->post('newPassword');
@@ -400,6 +406,7 @@ class SiteController extends Controller
         return $this->render('security');
     }
      public function actionGetWishlist(){
+         // Harut
         if($this->request->isGet){
             $id = intval($this->request->get('indID'));
             $type = intval($this->request->get('type'));
@@ -408,6 +415,7 @@ class SiteController extends Controller
         }
      }
      public function actionRemoveWishlist(){
+         // Harut
          if($this->request->isGet){
              $id = intval($this->request->get('indID'));
              $type = intval($this->request->get('type'));
@@ -436,6 +444,7 @@ class SiteController extends Controller
     }
     public function actionForgot()
     {
+        // Mariam
         $session = Yii::$app->session;
         if (Yii::$app->request->isPost) {
             $email = Yii::$app->request->post('email');
@@ -467,10 +476,12 @@ class SiteController extends Controller
         return $this->render('forgot');
     }
     public function actionCheckEmail() {
+        // Mariam
         return $this->render('check-email');
     }
     public function actionVerification()
     {
+        // Mariam
         $session = Yii::$app->session;
         $email = $session->get('email');
         $number1 = $_POST['number1'];
@@ -494,6 +505,7 @@ class SiteController extends Controller
     }
     public function actionNewPassword()
     {
+        // Mariam
         if(isset($_POST) && $_POST['newpassword'])
         {
             $password = $_POST['newpassword'];
@@ -512,9 +524,11 @@ class SiteController extends Controller
         return $this->render('new-password');
     }
     public function actionPasswordUpdated(){
+        // Mariam
         return $this->render('password-updated');
     }
     public function actionSearch() {
+        // Mariam
         $searchval = Yii::$app->request->get('input_val');
         $language = $_COOKIE['language'];
         $searchval = mb_convert_encoding($searchval, 'UTF-8', mb_detect_encoding($searchval));
@@ -553,13 +567,15 @@ class SiteController extends Controller
         ]);
     }
     public function actionTermsAndConditions(){
-
+// Harut
         return $this->render('terms');
     }
     public function actionPolicy(){
+        // Mariam
         return $this->render('policy');
     }
     public function actionMethodology(){
+        // Harut
         return $this->render('methodology');
     }
 }

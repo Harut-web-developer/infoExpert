@@ -16,6 +16,7 @@ class LessonsController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Harut ev Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -46,6 +47,7 @@ class LessonsController extends \yii\web\Controller
     }
     public function actionLesson()
     {
+        // Harut
         $lesson_url = $_GET['url'];
         $language = $_COOKIE['language'];
         $lesson = AcLessons::find()->select('id,lesson_name_'.$language.' as lesson_name,lesson_content_'.$language.' as lesson_content, price, img, certificate_img')
@@ -58,9 +60,6 @@ class LessonsController extends \yii\web\Controller
             ->andwhere(['lesson_id' => $lesson['id']])
             ->asArray()
             ->all();
-//        echo '<pre>';
-//        var_dump($tutors);
-//        exit();
         return $this->render('lesson',[
             'lesson' => $lesson,
             'tutors' => $tutors

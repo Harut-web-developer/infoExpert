@@ -1,3 +1,4 @@
+<!-- Mariam ev Harut-->
 <?php
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/quize.css?v=1');

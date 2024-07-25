@@ -5,7 +5,7 @@ $this->registerCssFile('@web/css/alumni.css');
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-
+<!-- Mariam ev Harut-->
 <div class="alumni">
     <div class="sectionAlumni">
         <div class="alumniDiv">

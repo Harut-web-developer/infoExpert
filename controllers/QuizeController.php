@@ -22,6 +22,7 @@ class QuizeController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Harut ev Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -52,6 +53,7 @@ class QuizeController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Harut ev Mariam
         $session = Yii::$app->session;
         $language = $_COOKIE['language'];
         $quize_name = AcQuestionList::find()
@@ -94,6 +96,7 @@ class QuizeController extends \yii\web\Controller
     }
     public function actionQuizeQuestions()
     {
+        // Harut
         $id = intval($_GET['id']);
         $language = $_COOKIE['language'];
         $answers = AcQuestionQuests::find()
@@ -135,6 +138,7 @@ class QuizeController extends \yii\web\Controller
 
     }
     public function  actionCheck(){
+        // Harut
         $session = Yii::$app->session;
         date_default_timezone_set('Asia/Yerevan');
         $ansers = $_POST['answers'];
@@ -168,6 +172,7 @@ class QuizeController extends \yii\web\Controller
     }
     public function actionResult()
     {
+        // Harut
         $id = intval($_GET['id']);
         $true_answer_count = intval($_GET['count']);
         $language = $_COOKIE['language'];

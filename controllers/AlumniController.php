@@ -15,6 +15,7 @@ class AlumniController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Harut ev Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -45,6 +46,7 @@ class AlumniController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Harut
         $language = $_COOKIE['language'];
         $alumni = AcAlumni::find()->select('id,img,linkedin_link,alumni_'.$language.' as alumni, text_'.$language.' as text')
             ->where(['status' => '1'])
