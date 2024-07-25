@@ -111,9 +111,6 @@ class SiteController extends Controller
 
         $GLOBALS['text'] = $txt;
         $this->enableCsrfValidation = false;
-        $session = Yii::$app->session;
-        var_dump($session['role'] !== null);
-        exit();
         if ($action->id == 'account-security' && !(isset($session['user_id']) && $session['logged'])) {
             return $this->redirect('/login')->send();
         }
