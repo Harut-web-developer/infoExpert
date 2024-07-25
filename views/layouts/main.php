@@ -315,6 +315,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     </div>
     <div class="securityModal">
         <div class="securityContentModal">
+            <span class="close-btn-call popup-close-call close-logged">x</span>
             <form class="modalMainField" action="" method="post">
                 <div class="modalTitleField">
                     <span class="modalTitle"><?=$GLOBALS['text']['modalTitleCallBack']?></span>

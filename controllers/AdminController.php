@@ -32,6 +32,9 @@ class AdminController extends Controller {
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
         $this->layout = 'admin';
+//        $user_exist = User::find()
+//            ->where(['and',['status' => '1'],['id' => Yii::$app->user->identity->id],['role' => '10']])
+//            ->exists();
         return parent::beforeAction($action);
 
     }
