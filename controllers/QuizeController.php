@@ -52,23 +52,6 @@ class QuizeController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-//        echo "<pre>";
-//        var_dump($_POST);
-//        var_dump(isset($_POST['enterQuize']));
-//        var_dump($_POST['name'] != '');
-//        var_dump(Yii::$app->user->identity);
-//        var_dump(Yii::$app->user->identity->email);
-//        var_dump(Yii::$app->user->identity->phone);
-//        var_dump(Yii::$app->user->identity->id);
-//        var_dump(!is_null(Yii::$app->user->identity->id) && !is_null(Yii::$app->user->identity->username) && !is_null(Yii::$app->user->identity->email) && !is_null(Yii::$app->user->identity->phone));
-//        die;
-//        if ($this->request->isPost && isset($_POST['enterQuize'])){
-//            $session = Yii::$app->session;
-//            $session->set('quizeName',$_POST['name']);
-//            $session->set('quizePhone',$_POST['phone']);
-//            $session->set('quizeEmail',$_POST['email']);
-//            $session->set('enterQuize',true);
-//        }
         $session = Yii::$app->session;
         $language = $_COOKIE['language'];
         $quize_name = AcQuestionList::find()

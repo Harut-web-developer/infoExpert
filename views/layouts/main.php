@@ -377,7 +377,6 @@ if ($logged && $alertShown) {
         </div>
     </div>
 <?php } ?>
-
 <main id="main" class="flex-shrink-0" role="main">
     <?= $content ?>
 </main>
@@ -419,7 +418,7 @@ if ($logged && $alertShown) {
                                 <a target="_blank" href="<?=$url_info['facebook_link']?>"><img src="/images/facebook.png" alt=""></a>
                             </div>
                         </div>
-                        <form action="" method="post" class="footerBtn">
+                        <form action="/site/index" method="post" class="footerBtn">
                             <input required type="email" name="leftEmail" placeholder="<?= $GLOBALS['text']['footerEmailCon']?>">
                             <button type="submit" name="subscribe"><?= $GLOBALS['text']['footerEmailBtn']?></button>
                         </form>
@@ -476,6 +475,20 @@ if ($logged && $alertShown) {
         </div>
     </div>
 </footer>
+<!--subscribe popup-->
+<?php
+$session = Yii::$app->session;
+$subscribe = $session->get('successfully_subscribed') ? 'successfully_subscribed' : 'already_subscribe';
+if ($session->get('subscribe')) { ?>
+    <div class="popup-wrap-logged">
+        <div class="popup-box-logged">
+            <div class="logged-content">
+                <span class="logged-txt"><?=$GLOBALS['text'][$subscribe]?></span>
+                <span class="close-btn popup-close close-logged">x</span>
+            </div>
+        </div>
+    </div>
+<?php } unset($session['successfully_subscribed']); unset($session['already_subscribe']);  $session->set('subscribe', false)?>
 <?php $this->endBody() ?>
 </body>
 </html>

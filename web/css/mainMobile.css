@@ -222,7 +222,7 @@
         margin-right: 10px;
     }
     .tabletMenuNavField{
-        height: 545px;
+        height: 566px;
         width: 89%;
         top: 32px;
         margin: 0px 26px 20px 23px;
@@ -232,7 +232,7 @@
         height: 448px;
     }
     .tabletMenuNavbar{
-        max-height: 565px;
+        max-height: 594px;
         overflow-y: auto;
         overflow-x: hidden;
     }

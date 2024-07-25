@@ -1013,7 +1013,7 @@
 }
 .tabletMenuNavField{
     width: 366px;
-    height: 400px;
+    height: 410px;
     padding-top: 17px;
     margin: 0px 71px 20px 47px;
     display: flex;
@@ -1115,6 +1115,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 12px;
 }
 .tabletFlagField{
     width: 160px;
@@ -2308,9 +2309,10 @@
         display: none;
     }
     .searchFlagField {
-        height: 68px;
+        height: 75px;
         flex-direction: column;
         align-items: start;
+        margin-top: 24px;
     }
 }
 @media only screen and (min-width: 600px){
