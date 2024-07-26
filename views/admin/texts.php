@@ -1,4 +1,4 @@
-<?php $users = \app\models\FsUsers::find()->where(['!=','status',0])->asArray()->all(); ?>
+<?php $users = \app\models\User::find()->where(['!=','status',0])->asArray()->all(); ?>
 <input type="hidden" data-page='Products' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">

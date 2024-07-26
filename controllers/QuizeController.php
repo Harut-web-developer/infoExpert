@@ -22,7 +22,7 @@ class QuizeController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
-        // Harut ev Mariam
+        // Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -53,7 +53,7 @@ class QuizeController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-        // Harut ev Mariam
+        // Harut 40 ev Mariam 60
         $session = Yii::$app->session;
         $language = $_COOKIE['language'];
         $quize_name = AcQuestionList::find()

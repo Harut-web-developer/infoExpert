@@ -1,4 +1,4 @@
-<!-- Mariam ev Harut-->
+<!-- Mariam  50 ev Harut 50-->
 <?php
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/checkout.css?v=1');

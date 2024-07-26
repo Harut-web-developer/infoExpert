@@ -12,6 +12,8 @@ class m240725_070158_translate_subscribe_text extends Migration
      */
     public function safeUp()
     {
+//        Mariam
+
         $this->insert('texts', [
             'slug' => 'already_subscribe',
             'text_am' => 'Շնորհակալություն! Դուք արդեն բաժանորդագրված էիք։',

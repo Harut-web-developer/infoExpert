@@ -15,13 +15,13 @@
                     <div class="custom-tab">
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active show" id="custom-nav-product-am-tab" data-toggle="tab" href="#custom-nav-product-am" role="tab" aria-controls="custom-nav-product-am" aria-selected="true">Հայ</a>
-                                <a class="nav-item nav-link" id="custom-nav-product-ru-tab" data-toggle="tab" href="#custom-nav-product-ru" role="tab" aria-controls="custom-nav-product-ru" aria-selected="false">Ռուս</a>
-                                <a class="nav-item nav-link " id="custom-nav-product-en-tab" data-toggle="tab" href="#custom-nav-product-en" role="tab" aria-controls="custom-nav-product-en" aria-selected="false">Անգլ</a>
+                                <a class="nav-item nav-link active show" id="custom-nav-answer-am-tab" data-toggle="tab" href="#custom-nav-answer-am" role="tab" aria-controls="custom-nav-answer-am" aria-selected="true">Հայ</a>
+                                <a class="nav-item nav-link" id="custom-nav-answer-ru-tab" data-toggle="tab" href="#custom-nav-answer-ru" role="tab" aria-controls="custom-nav-answer-ru" aria-selected="false">Ռուս</a>
+                                <a class="nav-item nav-link " id="custom-nav-answer-en-tab" data-toggle="tab" href="#custom-nav-answer-en" role="tab" aria-controls="custom-nav-answer-en" aria-selected="false">Անգլ</a>
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent"><br>
-                            <div class="tab-pane fade active show" id="custom-nav-product-am" role="tabpanel" aria-labelledby="custom-nav-product-am-tab">
+                            <div class="tab-pane fade active show" id="custom-nav-answer-am" role="tabpanel" aria-labelledby="custom-nav-answer-am-tab">
                                 <div class="form-group ">
                                     <span>Հարց</span>
                                     <input type="text" name="AcAnswers[question_am]" value="<?php echo $answer->question_am;?>" required placeholder="Հարց" class="form-control">
@@ -29,14 +29,14 @@
                                     <input type="text" name="AcAnswers[answer_am]" value="<?php echo $answer->answer_am;?>" required placeholder="Պատասխան" class="form-control">
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="custom-nav-product-ru"  role="tabpanel" aria-labelledby="custom-nav-product-ru-tab">
+                            <div class="tab-pane fade" id="custom-nav-answer-ru"  role="tabpanel" aria-labelledby="custom-nav-answer-ru-tab">
                                 <div class="form-group">
                                     <span>Հարց</span>
                                     <input type="text" name="AcAnswers[question_ru]" value="<?php echo $answer->question_ru;?>" required placeholder="Հարց" class="form-control"></div>
                                 <span>Պատասխան</span>
                                 <input type="text" name="AcAnswers[answer_ru]" value="<?php echo $answer->answer_ru;?>" required placeholder="Պատասխան" class="form-control">
                             </div>
-                            <div class="tab-pane fade" id="custom-nav-product-en" role="tabpanel" aria-labelledby="custom-nav-product-en-tab">
+                            <div class="tab-pane fade" id="custom-nav-answer-en" role="tabpanel" aria-labelledby="custom-nav-answer-en-tab">
                                 <div class="form-group">
                                     <span>Հարց</span>
                                     <input type="text" name="AcAnswers[question_en]" value="<?php echo $answer->question_en;?>" required placeholder="Հարց" class="form-control">

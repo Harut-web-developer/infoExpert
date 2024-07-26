@@ -82,11 +82,33 @@ function editeLesson(id) {
 		});
 	}
 }
+function editeSubscribers(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/subscribers-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
 function editeAlumni(id) {
 
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/alumni-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeInfo(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/info-edite?id=" + id,
 			success: function(result) {
 				jQuery(".modals").html(result);
 			}
@@ -208,10 +230,30 @@ function disableLesson(id) {
 		});
 	}
 }
+function disableSubscribers(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/subscribers-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
 function disableTutors(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/tutors-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableAlumni(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/alumni-disable?id=" + id,
 			success: function(result) {
 				window.location.reload();
 			}
@@ -494,7 +536,7 @@ jQuery(document).ready(function($) {
 	});
 	$('body').on('click', '#editeBlog', function(event) {
 		var id = $('.sortableTable tr.active').attr('data-id');
-		editeBlog(id);
+        editeBlog(id);
 	});
 	$('body').on('click', '#editeManager', function(event) {
 		var id = $('.sortableTable tr.active').attr('data-id');
@@ -544,9 +586,17 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeLesson(id);
 	});
+	$('body').on('click', '#editeSubscribers', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeSubscribers(id);
+	});
 	$('body').on('click', '#editeAlumni', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeAlumni(id);
+	});
+	$('body').on('click', '#editeInfo', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeInfo(id);
 	});
 	$('body').on('click', '#editeTutors', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
@@ -584,9 +634,17 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableLesson(id);
 	});
+	$('body').on('click', '#disableSubscribers', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableSubscribers(id);
+	});
 	$('body').on('click', '#disableTutors', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableTutors(id);
+	});
+	$('body').on('click', '#disableAlumni', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableAlumni(id);
 	});
 	$('body').on('click', '#disableAnswer', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');

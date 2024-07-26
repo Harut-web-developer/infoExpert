@@ -25,13 +25,13 @@
                     <div class="custom-tab">
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active show" id="custom-nav-product-am-tab" data-toggle="tab" href="#custom-nav-product-am" role="tab" aria-controls="custom-nav-product-am" aria-selected="true">Հայ</a>
-                                <a class="nav-item nav-link" id="custom-nav-product-ru-tab" data-toggle="tab" href="#custom-nav-product-ru" role="tab" aria-controls="custom-nav-product-ru" aria-selected="false">Ռուս</a>
-                                <a class="nav-item nav-link " id="custom-nav-product-en-tab" data-toggle="tab" href="#custom-nav-product-en" role="tab" aria-controls="custom-nav-product-en" aria-selected="false">Անգլ</a>
+                                <a class="nav-item nav-link active show" id="custom-nav-alumni-am-tab" data-toggle="tab" href="#custom-nav-alumni-am" role="tab" aria-controls="custom-nav-alumni-am" aria-selected="true">Հայ</a>
+                                <a class="nav-item nav-link" id="custom-nav-alumni-ru-tab" data-toggle="tab" href="#custom-nav-alumni-ru" role="tab" aria-controls="custom-nav-alumni-ru" aria-selected="false">Ռուս</a>
+                                <a class="nav-item nav-link " id="custom-nav-alumni-en-tab" data-toggle="tab" href="#custom-nav-alumni-en" role="tab" aria-controls="custom-nav-alumni-en" aria-selected="false">Անգլ</a>
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent"><br>
-                            <div class="tab-pane fade active show" id="custom-nav-product-am" role="tabpanel" aria-labelledby="custom-nav-product-am-tab">
+                            <div class="tab-pane fade active show" id="custom-nav-alumni-am" role="tabpanel" aria-labelledby="custom-nav-alumni-am-tab">
                                 <div class="form-group ">
                                     <span>Անվանում</span>
                                     <input type="text" name="AcAlumni[alumni_am]" value="<?php echo $alumni->alumni_am;?>" required placeholder="Անուն" class="form-control">
@@ -39,7 +39,7 @@
                                     <textarea name="AcAlumni[text_am]" class="form-control" id="editor_am" placeholder="Պարունակություն" rows="3"><?php echo $alumni->text_am;?>"</textarea>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="custom-nav-product-ru" role="tabpanel" aria-labelledby="custom-nav-product-ru-tab">
+                            <div class="tab-pane fade" id="custom-nav-alumni-ru" role="tabpanel" aria-labelledby="custom-nav-alumni-ru-tab">
                                 <div class="form-group">
                                     <span>Անվանում</span>
                                     <input type="text" name="AcAlumni[alumni_ru]" value="<?php echo $alumni->alumni_ru;?>" required placeholder="Անուն" class="form-control">
@@ -47,7 +47,7 @@
                                     <textarea name="AcAlumni[text_ru]" class="form-control" id="editor_ru" placeholder="Պարունակություն" rows="3"><?php echo $alumni->text_ru;?>"</textarea>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="custom-nav-product-en" role="tabpanel" aria-labelledby="custom-nav-product-en-tab">
+                            <div class="tab-pane fade" id="custom-nav-alumni-en" role="tabpanel" aria-labelledby="custom-nav-alumni-en-tab">
                                 <div class="form-group">
                                     <span>Անվանում</span>
                                     <input type="text" name="AcAlumni[alumni_en]" value="<?php echo $alumni->alumni_en;?>" required placeholder="Անուն" class="form-control">

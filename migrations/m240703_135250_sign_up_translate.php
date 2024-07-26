@@ -12,6 +12,8 @@ class m240703_135250_sign_up_translate extends Migration
      */
     public function safeUp()
     {
+        /*Mariam*/
+
         $this->insert('texts', [
             'slug' => 'passwordInclude',
             'text_am' => 'Գաղտնաբառը պետք է ներառի.',

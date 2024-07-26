@@ -12,6 +12,8 @@ class m240712_133800_create_table_apply_now extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->createTable('ac_apply_now', [
             'id' => $this->primaryKey(),
             'name' => $this->string(255)->defaultValue(null),

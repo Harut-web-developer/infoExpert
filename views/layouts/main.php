@@ -1,4 +1,4 @@
-<!-- Mariam ev Harut-->
+<!-- Mariam 20 ev Harut 80-->
 <?php
 
 /** @var yii\web\View $this */
@@ -145,6 +145,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <?php if(!empty(Yii::$app->user->identity)){ ?>
                             <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
                         <?php }?>
+                        <li><a href="/contact-us/index">Սայթի քարտեզ</a></li>
                     </ul>
                     <div class="searchFlagField">
                             <img class="btn-search" id="btn-search-mobile" src="/images/search-white.png" alt="">

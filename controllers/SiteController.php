@@ -85,7 +85,7 @@ class SiteController extends Controller
     }
     public function beforeAction($action)
     {
-        // Harut ev Mariam
+        // Harut 50 ev Mariam 50
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -125,7 +125,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        // Harut ev Mariam
+        // Harut 70 ev Mariam 30
         date_default_timezone_set('Asia/Yerevan');
         $language = $_COOKIE['language'];
         if ($this->request->isPost && isset($_POST['callBackBtn'])){
@@ -175,7 +175,7 @@ class SiteController extends Controller
         $lessons_courses = AcLessons::find()->select('img, lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();
         $partners = AcPartners::find()->asArray()->all();
         $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])->asArray()->all();
-        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => null])->asArray()->all();
+        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => '1'])->asArray()->all();
         $total_rows_faq = count($answers);
         $middle_index_faq = floor($total_rows_faq / 2);
         $first_part_faq = array_slice($answers, 0, $middle_index_faq);
@@ -217,7 +217,7 @@ class SiteController extends Controller
      * @return Response|string
      */
     public function actionLogin(){
-        // Harut ev Mariam
+        // Harut 50 ev Mariam 50
         $session = Yii::$app->session;
         $model = new LoginForm();
         if($_POST){
@@ -259,7 +259,7 @@ class SiteController extends Controller
     public function actionFaq(){
         // Harut
         $language = $_COOKIE['language'];
-        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => null])->asArray()->all();
+        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => '1'])->asArray()->all();
         $total_rows_faq = count($answers);
         $middle_index_faq = floor($total_rows_faq / 2);
         $first_part_faq = array_slice($answers, 0, $middle_index_faq);
@@ -309,7 +309,7 @@ class SiteController extends Controller
     }
     public function actionSignUp()
     {
-        // Harut ev Mariam
+        // Harut 50 ev Mariam 50
         $session = Yii::$app->session;
         $model = new User();
         if($this->request->isPost) {
@@ -360,7 +360,7 @@ class SiteController extends Controller
     }
     public function actionAccountSecurity()
     {
-        // Mariam
+        // Mariam 80 ev Harut 20
         if ($this->request->isPost) {
             $current_password = $this->request->post('currentPassword');
             $new_password = $this->request->post('newPassword');

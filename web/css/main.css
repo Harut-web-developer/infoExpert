@@ -1,6 +1,13 @@
+/*Mariam 10 ev Harut 90*/
+
 *{
     margin: 0;
     padding: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 /*start header css*/
 ::-webkit-scrollbar{

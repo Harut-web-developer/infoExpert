@@ -1,4 +1,4 @@
-<!-- Mariam ev Harut-->
+<!-- Mariam 60 ev Harut 40-->
 <?php
 use app\models\AcWishlist;
 /** @var yii\web\View $this */

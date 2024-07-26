@@ -12,6 +12,8 @@ class m240611_085036_result extends Migration
      */
     public function safeUp()
     {
+        /*Mariam */
+
         $this->insert('texts', [
             'slug' => 'resultBlackboardResult',
             'text_am' => 'ՁԵՐ ԱՐԴՅՈՒՆՔՆԵՐԸ',

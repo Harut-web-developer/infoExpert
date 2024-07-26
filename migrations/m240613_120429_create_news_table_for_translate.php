@@ -12,6 +12,8 @@ class m240613_120429_create_news_table_for_translate extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->insert('texts', [
             'slug' => 'seeMoreBtn',
             'text_am' => 'Գնել հիմա',

@@ -12,6 +12,8 @@ class m240723_131202_add_column_order_nums extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->addColumn('ac_tutors', 'order_num', $this->integer(11)->defaultValue(0)->after('img'));
         $this->addColumn('ac_alumni', 'order_num', $this->integer(11)->defaultValue(0)->after('linkedin_link'));
         $this->addColumn('ac_apply_now', 'order_num', $this->integer(11)->defaultValue(0)->after('phone'));

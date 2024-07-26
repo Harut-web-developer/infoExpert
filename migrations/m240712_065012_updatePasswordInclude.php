@@ -12,6 +12,8 @@ class m240712_065012_updatePasswordInclude extends Migration
      */
     public function safeUp()
     {
+//        Mariam
+
         $this->update('texts',[
             'page_id' => null,
         ], ['id' => 292]);

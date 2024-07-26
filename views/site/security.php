@@ -1,4 +1,4 @@
-<!-- Mariam ev Harut-->
+<!-- Harut-->
 <?php
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/security.css?v=1');
@@ -67,6 +67,7 @@ $this->registerCssFile('@web/css/security.css?v=1');
     </div>
 </div>
 <script>
+//    Mariam
     function getCookie(name) {
         var cookieArr = document.cookie.split(";");
 

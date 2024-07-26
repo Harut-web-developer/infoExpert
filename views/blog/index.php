@@ -1,4 +1,4 @@
-<!-- Mariam ev Harut-->
+<!-- Mariam 80 ev Harut 20-->
 <?php
 use yii\web\View;
 use yii\web\YiiAsset;

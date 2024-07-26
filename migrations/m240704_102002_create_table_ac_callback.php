@@ -12,6 +12,7 @@ class m240704_102002_create_table_ac_callback extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
         $this->createTable('ac_callback', [
             'id' => $this->primaryKey(),
             'name' => $this->string(255)->defaultValue(null),

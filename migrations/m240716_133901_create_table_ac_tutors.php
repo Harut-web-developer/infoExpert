@@ -12,6 +12,8 @@ class m240716_133901_create_table_ac_tutors extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->createTable('ac_tutors', [
             'id' => $this->primaryKey(),
             'lesson_id' => $this->integer(11)->defaultValue(null),

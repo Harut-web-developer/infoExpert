@@ -12,6 +12,8 @@ class m240717_110602_logged extends Migration
      */
     public function safeUp()
     {
+//        Mariam
+
         $this->insert('texts', [
             'slug' => 'logged',
             'text_am' => 'Դուք հաջողությամբ մուտք եք գործել:',

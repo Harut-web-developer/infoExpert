@@ -132,6 +132,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <li>
                         <a href="/admin/alumni"><i class="menu-icon fa fa-user-o"></i>Շրջաբավարտներ</a>
                     </li>
+                    <li>
+                        <a href="/admin/subscribers"><i class="menu-icon fa fa-bell"></i>Բաժանորդագրվածներ</a>
+                    </li>
                      <?php } ?>
                    <?php if( Yii::$app->user->identity->role == 10){ ?>
                        <li>
@@ -150,9 +153,15 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                        <li>
                            <a href="/admin/texts"><i class="menu-icon fa fa-font"></i>Տեքստեր</a>
                        </li>
-                     <li>
-                         <a href="/admin/settings"><i class="menu-icon fa fa-cogs"></i>Կարգավորումներ</a>
-                     </li>
+                       <li>
+                           <a href="/admin/apply"><i class="menu-icon fa fa-list-ul"></i>Հայտեր</a>
+                       </li>
+                       <li>
+                           <a href="/admin/info"><i class="menu-icon fa fa-info-circle"></i>Կայքի տվյալներ</a>
+                       </li>
+                       <li>
+                          <a href="/admin/settings"><i class="menu-icon fa fa-cogs"></i>Կարգավորումներ</a>
+                       </li>
                    <?php } ?>
                  </ul>
             </div><!-- /.navbar-collapse -->

@@ -366,6 +366,7 @@ $(document).ready(function () {
     },function(){
         $('.profileFieldImg').hide();
     });
+
     // Mariam
     let current = location.pathname;
     $('.userProfileMenu li a').each(function(){
@@ -643,7 +644,7 @@ $(document).ready(function () {
             }
         })
     })
-    // Harut ev Mariam
+    // Harut 50 ev Mariam 50
     document.querySelectorAll('ion-icon').forEach(icon => {
         if (icon.getAttribute('data-active') === "1") {
             icon.classList.add('active');

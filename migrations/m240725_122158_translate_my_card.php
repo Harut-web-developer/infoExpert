@@ -12,6 +12,8 @@ class m240725_122158_translate_my_card extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->update('texts',[
             'text_ru' => 'Моя корзина',
         ], ['id' => 45]);

@@ -19,7 +19,7 @@ class UserProfileController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
-        // Harut ev Mariam
+        // Harut  50 ev Mariam 50
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();

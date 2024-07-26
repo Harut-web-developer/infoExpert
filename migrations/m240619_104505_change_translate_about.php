@@ -12,6 +12,7 @@ class m240619_104505_change_translate_about extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
         $this->update('texts',[
             'text_en'  => 'ABOUT IEA',
         ], ['id' => 1]);

@@ -17,7 +17,7 @@ class ApplyNowController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
-        // Harut ev Mariam
+        // Harut
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();

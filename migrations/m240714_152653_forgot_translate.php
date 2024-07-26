@@ -12,6 +12,8 @@ class m240714_152653_forgot_translate extends Migration
      */
     public function safeUp()
     {
+//        Mariam
+
         $this->insert('texts', [
             'slug' => 'lostPassword',
             'text_am' => 'ՄՈՌԱՑԵԼ ԵՔ ՁԵՐ ԳԱՂՏՆԱԲԱՌԸ?',

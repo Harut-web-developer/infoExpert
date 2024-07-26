@@ -1,4 +1,4 @@
-<!-- Mariam ev Harut-->
+<!-- Mariam 70 ev Harut 30-->
 <?php
 
 use app\models\AcWishlist;

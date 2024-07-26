@@ -28,13 +28,13 @@
                             <div class="custom-tab">
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active show" id="custom-nav-page-am-tab" data-toggle="tab" href="#custom-nav-page-am" role="tab" aria-controls="custom-nav-page-am" aria-selected="true">Հայ</a>
-                                <a class="nav-item nav-link" id="custom-nav-page-ru-tab" data-toggle="tab" href="#custom-nav-page-ru" role="tab" aria-controls="custom-nav-page-ru" aria-selected="false">Ռուս</a>
-                                <a class="nav-item nav-link " id="custom-nav-page-en-tab" data-toggle="tab" href="#custom-nav-page-en" role="tab" aria-controls="custom-nav-page-en" aria-selected="false">Անգլ</a>
+                                <a class="nav-item nav-link active show" id="custom-nav-blog-am-tab" data-toggle="tab" href="#custom-nav-blog-am" role="tab" aria-controls="custom-nav-blog-am" aria-selected="true">Հայ</a>
+                                <a class="nav-item nav-link" id="custom-nav-blog-ru-tab" data-toggle="tab" href="#custom-nav-blog-ru" role="tab" aria-controls="custom-nav-blog-ru" aria-selected="false">Ռուս</a>
+                                <a class="nav-item nav-link " id="custom-nav-blog-en-tab" data-toggle="tab" href="#custom-nav-blog-en" role="tab" aria-controls="custom-nav-blog-en" aria-selected="false">Անգլ</a>
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent"><br>
-                            <div class="tab-pane fade active show" id="custom-nav-page-am" role="tabpanel" aria-labelledby="custom-nav-page-am-tab">
+                            <div class="tab-pane fade active show" id="custom-nav-blog-am" role="tabpanel" aria-labelledby="custom-nav-blog-am-tab">
                                 <div class="form-group ">
                                     <span>Անուն</span>
                                     <input type="text" name="AcBlog[page_name_am]" value="<?php echo $page->page_name_am;?>" required placeholder="Անուն" class="form-control">
@@ -46,7 +46,7 @@
                                     <textarea name="AcBlog[page_content_am]" class="form-control" id="editor_am_p" placeholder="Պարունակություն" rows="3"><?php echo $page->page_content_am;?></textarea>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="custom-nav-page-ru" role="tabpanel" aria-labelledby="custom-nav-page-ru-tab">
+                            <div class="tab-pane fade" id="custom-nav-blog-ru" role="tabpanel" aria-labelledby="custom-nav-blog-ru-tab">
                                 <div class="form-group">
                                     <span>Անուն</span>
                                     <input type="text" name="AcBlog[page_name_ru]"  value="<?php echo $page->page_name_ru;?>"  placeholder="Անուն" class="form-control">
@@ -58,7 +58,7 @@
                                     <textarea name="AcBlog[page_content_ru]" class="form-control"  id="editor_ru_p" placeholder="Պարունակություն" rows="3"><?php echo $page->page_content_ru;?></textarea>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="custom-nav-page-en" role="tabpanel" aria-labelledby="custom-nav-page-en-tab">
+                            <div class="tab-pane fade" id="custom-nav-blog-en" role="tabpanel" aria-labelledby="custom-nav-blog-en-tab">
                                 <div class="form-group">
                                     <span>Անուն</span>
                                     <input type="text" name="AcBlog[page_name_en]"  value="<?php echo $page->page_name_en;?>"  placeholder="Անուն" class="form-control">

@@ -12,6 +12,8 @@ class m240724_072449_translate_policy extends Migration
      */
     public function safeUp()
     {
+//        Mariam
+
         $this->insert('texts', [
             'slug' => 'policy',
             'text_am' => 'ԳԱՂՏՆԻՈՒԹՅԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ',

@@ -12,6 +12,8 @@ class m240724_144333_add_column_info extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->addColumn('ac_info', 'phone_number', $this->string(255)->defaultValue(null)->after('linkdin_link'));
         $this->addColumn('ac_info', 'infoexpert_email', $this->string(255)->defaultValue(null)->after('linkdin_link'));
     }

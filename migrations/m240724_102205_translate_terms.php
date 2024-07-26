@@ -12,6 +12,8 @@ class m240724_102205_translate_terms extends Migration
      */
     public function safeUp()
     {
+//       Harut
+
         $this->insert('texts', [
             'slug' => 'termsTitle',
             'text_am' => 'ԴՐՈՒՅԹՆԵՐ ԵՎ ՊԱՅՄԱՆՆԵՐ',

@@ -12,6 +12,8 @@ class m240725_084206_translate_blog_text extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->insert('texts', [
             'slug' => 'blogsSubTitle',
             'text_am' => 'Բացահայտիր ավելին',

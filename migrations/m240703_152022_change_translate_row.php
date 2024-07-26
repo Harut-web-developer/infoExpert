@@ -12,6 +12,8 @@ class m240703_152022_change_translate_row extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->update('texts',[
             'page_id'  => null
         ], ['id' => 282]);

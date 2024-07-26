@@ -12,6 +12,8 @@ class m240606_063320_added_info_to_textsTable extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->insert('texts', [
             'slug' => 'seeAllCoursesBtn',
             'text_am' => 'ԲՈԼՈՐ ԴԱՍԵՐԸ',

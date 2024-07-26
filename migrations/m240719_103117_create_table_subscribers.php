@@ -12,6 +12,8 @@ class m240719_103117_create_table_subscribers extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->createTable('ac_subscribers', [
             'id' => $this->primaryKey(),
             'email' => $this->string(255)->defaultValue(null),

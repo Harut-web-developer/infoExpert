@@ -4,12 +4,15 @@ namespace app\controllers;
 
 use app\models\AcAlumni;
 use app\models\AcAnswers;
+use app\models\AcApplyNow;
+use app\models\AcInfo;
 use app\models\AcLessons;
 use app\models\AcPartners;
 use app\models\AcQuestionAnswers;
 use app\models\AcQuestionList;
 use app\models\AcQuestionQuests;
 use app\models\AcReviews;
+use app\models\AcSubscribers;
 use app\models\AcTutors;
 use app\models\FsOrders;
 use app\models\AcBlog;
@@ -316,6 +319,30 @@ class AdminController extends Controller {
         $lessons = AcLessons::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('lessons', ['lessons' => $lessons]);
     }
+    public function actionSubscribers(){
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        date_default_timezone_set("Asia/Yerevan");
+        $post = Yii::$app->request->post();
+        if ($post && $post['add']) {
+            $subscribers = new AcSubscribers();
+            $subscribers->load($post);
+            $subscribers->create_date = date('Y-m-d H:i:s');
+            $subscribers->save(false);
+            $this->redirect(['subscribers', 'success' => 'true', 'id' => 'key' . $subscribers->id]);
+        }
+        else if ($post && $post['edite']) {
+            $subscribers = AcSubscribers::findOne(['id' => intval($post['id']) ]);
+            $subscribers->load($post);
+            $subscribers->create_date = date('Y-m-d H:i:s');
+            $subscribers->save(false);
+            $this->redirect(['subscribers', 'success' => 'true', 'id' => 'key' . $subscribers->id]);
+        }
+        $subscribers = AcSubscribers::find()->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('subscribers', ['subscribers' => $subscribers]);
+    }
     public function actionTutors(){
         // Harut
         if (Yii::$app->user->isGuest) {
@@ -360,8 +387,6 @@ class AdminController extends Controller {
         }
         date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
-//        var_dump($post);
-//        exit();
         if ($post && $post['add']) {
             $alumni = new AcAlumni();
             $alumni->load($post);
@@ -390,6 +415,38 @@ class AdminController extends Controller {
         }
         $alumni = AcAlumni::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('alumni', ['alumni' => $alumni]);
+    }
+    public function actionInfo(){
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $post = Yii::$app->request->post();
+        if ($post && $post['edite']) {
+            $info = AcInfo::findOne(['id' => intval($post['id']) ]);
+            $info->load($post);
+            $info->create_date = date('Y-m-d H:i:s');
+            $info->save(false);
+            $this->redirect(['info', 'success' => 'true', 'id' => 'key' . $info->id]);
+        }
+        $info = AcInfo::find()->all();
+        return $this->render('info', ['info' => $info]);
+    }
+    public function actionApply(){
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $post = Yii::$app->request->post();
+//        if ($post && $post['edite']) {
+//            $info = AcInfo::findOne(['id' => intval($post['id']) ]);
+//            $info->load($post);
+//            $info->create_date = date('Y-m-d H:i:s');
+//            $info->save(false);
+//            $this->redirect(['info', 'success' => 'true', 'id' => 'key' . $info->id]);
+//        }
+        $apply_now = AcApplyNow::find()->where(['status' => '1'])->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('apply-now', ['apply_now' => $apply_now]);
     }
     public function actionBlog_() {
         if (Yii::$app->user->isGuest) {
@@ -578,6 +635,23 @@ class AdminController extends Controller {
         $lesson = AcLessons::findOne(['id' => $id]);
         return $this->renderAjax('lesson-edite-popup', ['lesson' => $lesson]);
     }
+    public function actionInfoEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $info = AcInfo::findOne(['id' => $id]);
+        return $this->renderAjax('info-edite-popup', ['info' => $info]);
+    }
+    public function actionSubscribersEdite() {
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $subscribers = AcSubscribers::findOne(['id' => $id]);
+        return $this->renderAjax('subscribers-edite-popup', ['subscribers' => $subscribers]);
+    }
     public function actionAlumniEdite() {
         // Harut
         if (Yii::$app->user->isGuest) {
@@ -681,9 +755,38 @@ class AdminController extends Controller {
         $lesson->save(false);
         return true;
     }
+    public function actionSubscribersDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $subscribers = AcSubscribers::findOne(['id' => $id]);
+        if ($subscribers->status) {
+            $subscribers->status = 0;
+        }
+        else {
+            $subscribers->status = 1;
+        }
+
+        $subscribers->save(false);
+        return true;
+    }
     public function actionTutorsDisable() {
+        // Harut
         $id = intval($_GET['id']);
         $tutors = AcTutors::findOne(['id' => $id]);
+        if ($tutors->status) {
+            $tutors->status = 0;
+        }
+        else {
+            $tutors->status = 1;
+        }
+
+        $tutors->save(false);
+        return true;
+    }
+    public function actionAlumniDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $tutors = AcAlumni::findOne(['id' => $id]);
         if ($tutors->status) {
             $tutors->status = 0;
         }
