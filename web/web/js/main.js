@@ -260,6 +260,16 @@ function disableAlumni(id) {
 		});
 	}
 }
+function disablApply(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/apply-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
 function disableQuest(id) {
 	if (id) {
 		jQuery.ajax({
@@ -646,6 +656,10 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableAlumni(id);
 	});
+	$('body').on('click', '#disablApply', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disablApply(id);
+	});
 	$('body').on('click', '#disableAnswer', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableAnswer(id);
@@ -739,6 +753,23 @@ jQuery(document).ready(function($) {
 		}
 
 	});
+	$('body').on('click', '.checkedAnswer', function () {
+		let call_id = $(this).closest('tr').data('id');
+		let check = $(this).val();
+		$.ajax({
+			url:'/admin/admin-answers',
+			method: 'get',
+			data: {
+				check: check,
+				id: call_id,
+			},
+			success: function (data) {
+				if(data){
+					window.location.reload();
+				}
+			}
+		})
+	})
 
 
 });

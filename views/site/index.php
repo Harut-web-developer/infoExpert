@@ -17,10 +17,10 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     <div class="apply">
         <span class="applyMarket"><?=$GLOBALS['text']['sectionOneMarket']?></span>
         <span class="boundaries"><?=$GLOBALS['text']['sectionOneBoundaries']?></span>
-        <?php if (!empty($lessons)){
+        <?php
         $lang = $_COOKIE['language'];
-        $lessons = AcLessons::find()->select('id,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
-        ?>
+        $lessons_apply = AcLessons::find()->select('id,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+        if (!empty($lessons_apply)){?>
         <a href="/apply-now/index">
             <img src="/images/apply.png" alt="">
             <span><?=$GLOBALS['text']['__applynow__']?></span>

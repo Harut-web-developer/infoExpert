@@ -160,6 +160,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                            <a href="/admin/info"><i class="menu-icon fa fa-info-circle"></i>Կայքի տվյալներ</a>
                        </li>
                        <li>
+                           <a href="/admin/callback"><i class="menu-icon fa fa-phone"></i>Հետադարձ զանգեր</a>
+                       </li>
+                       <li>
                           <a href="/admin/settings"><i class="menu-icon fa fa-cogs"></i>Կարգավորումներ</a>
                        </li>
                    <?php } ?>

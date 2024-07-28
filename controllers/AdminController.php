@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\AcAlumni;
 use app\models\AcAnswers;
 use app\models\AcApplyNow;
+use app\models\AcCallback;
 use app\models\AcInfo;
 use app\models\AcLessons;
 use app\models\AcPartners;
@@ -437,16 +438,18 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
-        $post = Yii::$app->request->post();
-//        if ($post && $post['edite']) {
-//            $info = AcInfo::findOne(['id' => intval($post['id']) ]);
-//            $info->load($post);
-//            $info->create_date = date('Y-m-d H:i:s');
-//            $info->save(false);
-//            $this->redirect(['info', 'success' => 'true', 'id' => 'key' . $info->id]);
-//        }
-        $apply_now = AcApplyNow::find()->where(['status' => '1'])->orderBy(['order_num' => SORT_ASC])->all();
+
+        $apply_now = AcApplyNow::find()->with('lesson')->orderBy(['order_num' => SORT_ASC])->all();
+
         return $this->render('apply-now', ['apply_now' => $apply_now]);
+    }
+    public function actionCallback(){
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $call_back = AcCallback::find()->with('courses')->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('callback', ['call_back' => $call_back]);
     }
     public function actionBlog_() {
         if (Yii::$app->user->isGuest) {
@@ -797,6 +800,20 @@ class AdminController extends Controller {
         $tutors->save(false);
         return true;
     }
+    public function actionApplyDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $apply_now = AcApplyNow::findOne(['id' => $id]);
+        if ($apply_now->status) {
+            $apply_now->status = 0;
+        }
+        else {
+            $apply_now->status = 1;
+        }
+
+        $apply_now->save(false);
+        return true;
+    }
     public function actionQuestDisable() {
         $id = intval($_GET['id']);
         $quest = AcQuestionQuests::findOne(['id' => $id]);
@@ -851,6 +868,19 @@ class AdminController extends Controller {
         $item->save(false);
         return true;
     }
+     public function actionAdminAnswers()
+     {
+         if (!empty($_GET) && $_GET['check'] == 'on'){
+             $admin_id = Yii::$app->user->id;
+             $id = intval($_GET['id']);
+
+             $admin_answers = AcCallback::findOne($id);
+             $admin_answers->checked_answer = '1';
+             $admin_answers->answer_admin_id = $admin_id;
+             $admin_answers->save(false);
+             return true;
+         }
+     }
 
 
     /**

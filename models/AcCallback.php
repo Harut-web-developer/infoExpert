@@ -12,6 +12,8 @@ use Yii;
  * @property string|null $email
  * @property string|null $phone
  * @property int|null $course
+ * @property int|null $checked_answer
+ * @property int|null $answer_admin_id
  * @property string|null $status
  * @property string|null $create_date
  */
@@ -31,7 +33,7 @@ class AcCallback extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['course'], 'integer'],
+            [['course','checked_answer', 'answer_admin_id'], 'integer'],
             [['create_date'], 'safe'],
             [['name', 'email', 'phone', 'status'], 'string', 'max' => 255],
         ];
@@ -51,5 +53,8 @@ class AcCallback extends \yii\db\ActiveRecord
             'status' => 'Status',
             'create_date' => 'Create Date',
         ];
+    }
+    public function getCourses(){
+        return $this->hasOne(AcLessons::className(),['id' => 'course']);
     }
 }
