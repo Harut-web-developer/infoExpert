@@ -1,5 +1,4 @@
 $.noConflict();
-
 function addChild(id) {
 	jQuery('.standardSelect').val(id).trigger("chosen:updated");
 	jQuery('#addnew').modal('show');
@@ -98,6 +97,17 @@ function editeAlumni(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/alumni-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeCallback(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/callback-edite?id=" + id,
 			success: function(result) {
 				jQuery(".modals").html(result);
 			}
@@ -254,6 +264,16 @@ function disableAlumni(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/alumni-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableCallback(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/callback-disable?id=" + id,
 			success: function(result) {
 				window.location.reload();
 			}
@@ -442,7 +462,6 @@ function copyProduct(id) {
 	}
 }
 jQuery(document).ready(function($) {
-
 	"use strict";
 	[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function(el) {
 		new SelectFx(el);
@@ -481,8 +500,7 @@ jQuery(document).ready(function($) {
        $('.tbl').scrollLeft( $('.tbl').scrollLeft()-400 );
     } else {
         $('.tbl').scrollLeft($('.tbl').scrollLeft()+400 );
-    };
-
+    }
 
 });
 
@@ -604,6 +622,10 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeAlumni(id);
 	});
+	$('body').on('click', '#editeCallback', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeCallback(id);
+	});
 	$('body').on('click', '#editeInfo', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeInfo(id);
@@ -655,6 +677,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#disableAlumni', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableAlumni(id);
+	});
+	$('body').on('click', '#disableCallback', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableCallback(id);
 	});
 	$('body').on('click', '#disablApply', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');

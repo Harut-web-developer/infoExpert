@@ -25,8 +25,8 @@
                         <h4 class="box-title">Հետադարձ զանգեր
                             <span class="buttons">
                               <span class="overlay show_" style="width:33px;"></span>
-                              <button class="btn btn-sm btn-default" id="editeAlumni"><i class="fa fa-pencil"></i></button>
-                              <button class="btn btn-sm btn-danger" id="disableAlumni"><i class="fa fa-trash"></i></button>
+                              <button class="btn btn-sm btn-default" id="editeCallback"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-sm btn-danger" id="disableCallback"><i class="fa fa-trash"></i></button>
                             </span>
                         </h4>
                     </div>
@@ -43,7 +43,7 @@
                                                 <th scope="col">Էլ. հասցե</th>
                                                 <th scope="col">Հեռախոսահամար</th>
                                                 <th scope="col">Դասընթաց</th>
-                                                <th scope="col">Պատասխանել</th>
+                                                <th scope="col">Պատասխանել է</th>
                                                 <th scope="col">Կարգավիճակ</th>
                                             </tr>
                                             </thead>
@@ -69,9 +69,11 @@
                                                             <?php echo $item->courses->lesson_name_am;?>
                                                         </td>
                                                         <td scope="col">
-                                                            <input type="checkbox" class="checkedAnswer" <?php echo $item->checked_answer == 1 ? 'checked' : ''?>>
+                                                            <?php if($item->checked_answer == 0){?>
+                                                                <input type="checkbox" class="checkedAnswer">
+                                                            <?php }?>
                                                             <?php if($item->checked_answer == 1){?>
-                                                                <span>sdjfhvsdjikgb</span>
+                                                                <span><?=$item->adminName->username?></span>
                                                             <?php }?>
                                                         </td>
                                                         <td scope="col">

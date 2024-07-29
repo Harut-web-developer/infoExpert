@@ -54,7 +54,11 @@ class AcCallback extends \yii\db\ActiveRecord
             'create_date' => 'Create Date',
         ];
     }
+//    Harut
     public function getCourses(){
         return $this->hasOne(AcLessons::className(),['id' => 'course']);
+    }
+    public function getAdminName(){
+        return $this->hasOne(User::className(),['id' => 'answer_admin_id']);
     }
 }
