@@ -725,3 +725,60 @@ $('.close-logged').click(function(e) {
     $('.securityContentModal').removeClass('transform-in-call').addClass('transform-out-call');
     e.preventDefault();
 });
+// Mariam
+let next = document.getElementById('next-courses');
+let prev = document.getElementById('prev-courses');
+let carousel = document.querySelector('.carousel-courses');
+let items = document.querySelectorAll('.carousel-courses .item-courses');
+let countItem = items.length;
+let active = 1;
+let other_1 = null;
+let other_2 = null;
+
+next.onclick = () => {
+    carousel.classList.remove('prev-courses');
+    carousel.classList.add('next-courses');
+    active = active + 1 >= countItem ? 0 : active + 1;
+    other_1 = active - 1 < 0 ? countItem - 1 : active - 1;
+    other_2 = active + 1 >= countItem ? 0 : active + 1;
+    changeSlider();
+}
+
+prev.onclick = () => {
+    carousel.classList.remove('next-courses');
+    carousel.classList.add('prev-courses');
+    active = active - 1 < 0 ? countItem - 1 : active - 1;
+    other_1 = active + 1 >= countItem ? 0 : active + 1;
+    other_2 = other_1 + 1 >= countItem ? 0 : other_1 + 1;
+    changeSlider();
+}
+
+const changeSlider = () => {
+    let itemOldActive = document.querySelector('.carousel-courses .item-courses.active-courses');
+    if(itemOldActive) itemOldActive.classList.remove('active-courses');
+
+    let itemOldOther_1 = document.querySelector('.carousel-courses .item-courses.other_1-courses');
+    if(itemOldOther_1) itemOldOther_1.classList.remove('other_1-courses');
+
+    let itemOldOther_2 = document.querySelector('.carousel-courses .item-courses.other_2-courses');
+    if(itemOldOther_2) itemOldOther_2.classList.remove('other_2-courses');
+
+    items.forEach(e => {
+        e.querySelector('.image-courses img').style.animation = 'none';
+        void e.offsetWidth;
+        e.querySelector('.image-courses img').style.animation = '';
+    })
+
+    items[active].classList.add('active-courses');
+    items[other_1].classList.add('other_1-courses');
+    items[other_2].classList.add('other_2-courses');
+
+    clearInterval(autoPlay);
+    autoPlay = setInterval(() => {
+        next.click();
+    }, 5000);
+}
+
+let autoPlay = setInterval(() => {
+    next.click();
+}, 5000);

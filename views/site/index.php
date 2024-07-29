@@ -90,66 +90,128 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         </div>
     </div>
 </div>
-<div class="sectionThree sliderWrapper">
-    <div class="sliderCourses">
-        <div class="slider">
-            <?php
-            if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
-                <div class="learn slide">
-                    <div class="learnInfo">
-                        <div class="coursesBg">
-                            <span><?=$GLOBALS['text']['sectionThreeCourses']?></span>
-                            <p><?=$GLOBALS['text']['sectionThreeLearn']?></p>
-                        </div>
-                        <div class="logoManagement">
-                            <div class="courseLogo">
-                                <img src="/images/logomanagcourse.png" alt="">
+<!--<div class="sectionThree sliderWrapper">-->
+<!--    <div class="sliderCourses">-->
+<!--        <div class="slider">-->
+<!--            --><?php
+//            if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
+<!--                <div class="learn slide">-->
+<!--                    <div class="learnInfo">-->
+<!--                        <div class="coursesBg">-->
+<!--                            <span>--><?php //=$GLOBALS['text']['sectionThreeCourses']?><!--</span>-->
+<!--                            <p>--><?php //=$GLOBALS['text']['sectionThreeLearn']?><!--</p>-->
+<!--                        </div>-->
+<!--                        <div class="logoManagement">-->
+<!--                            <div class="courseLogo">-->
+<!--                                <img src="/images/logomanagcourse.png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="courseTitle">-->
+<!--                                <span>--><?php //=$lesson['lesson_name']?><!--</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="managementBtn">-->
+<!--                            <a href="/courses/index">-->
+<!--                                <img src="/images/logomanag.png" alt="">-->
+<!--                                <span>--><?php //=$GLOBALS['text']['sectionThreeBtn']?><!--</span>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="learnImg">-->
+<!--                        <img src="/--><?php //=$lesson['img']?><!--" alt="">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            --><?php //}}?>
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="sliderCoursesMobile">-->
+<!--        <div class="slider">-->
+<!--            --><?php //if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
+<!--                <div class="learnMobile slide">-->
+<!--                    <img src="/--><?php //=$lesson['img']?><!--" alt="">-->
+<!--                    <div class="coursesBg">-->
+<!--                        <span>--><?php //=$GLOBALS['text']['sectionThreeCourses']?><!--</span>-->
+<!--                        <p>--><?php //=$GLOBALS['text']['sectionThreeLearn']?><!--</p>-->
+<!--                    </div>-->
+<!--                    <div class="logoManagement">-->
+<!--                        <div class="courseLogo">-->
+<!--                            <img src="/images/logomanagcourse.png" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="courseTitle">-->
+<!--                            <span>--><?php //=$lesson['lesson_name']?><!--</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <a href="/courses/index">-->
+<!--                        <img src="/images/logomanag.png" alt="">-->
+<!--                        <span>--><?php //=$GLOBALS['text']['sectionThreeBtn']?><!--</span>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            --><?php //}}?>
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--Mariam-->
+<div class="carousel-courses next-courses">
+    <div class="list-courses">
+        <?php
+        if ((intval($_COOKIE['screenWidth'])) <= 599){
+            $img = [
+                'url("../images/mobileImgCourse.png")',
+                'url("../images/bg-m.png")',
+                'url("../images/bg-m-1.png")',
+                'url("../images/bg-m-2.png")',
+            ];
+        }else{
+            $img = [
+                'url("../images/bg.png")',
+                'url("../images/bg1.png")',
+                'url("../images/bg2.png")',
+                'url("../images/bg3.png")',
+            ];
+        }
+
+        if (!empty($lessons_courses)) {
+            foreach ($lessons_courses as $i => $lesson) {
+                $bgImage = $img[$i % count($img)];
+                ?>
+                <article class="item-courses <?= $i === 0 ? 'other_1-courses' : '' ?>">
+                    <div class="main-content-courses" style='background-image: <?= $bgImage ?>;'>
+                        <div class="content-courses">
+                            <div class="coursesBg">
+                                <span><?= $GLOBALS['text']['sectionThreeCourses'] ?></span>
+                                <p><?= $GLOBALS['text']['sectionThreeLearn'] ?></p>
                             </div>
-                            <div class="courseTitle">
-                                <span><?=$lesson['lesson_name']?></span>
+                            <div class="logoManagement">
+                                <div class="courseLogo">
+                                    <img src="/images/logomanagcourse.png" alt="">
+                                </div>
+                                <div class="courseTitle">
+                                    <span><?= $lesson['lesson_name'] ?></span>
+                                </div>
+                            </div>
+                            <div class="managementBtn">
+                                <a href="/courses/index">
+                                    <img src="/images/logomanag.png" alt="">
+                                    <span><?= $GLOBALS['text']['sectionThreeBtn'] ?></span>
+                                </a>
                             </div>
                         </div>
-                        <div class="managementBtn">
-                            <a href="/courses/index">
-                                <img src="/images/logomanag.png" alt="">
-                                <span><?=$GLOBALS['text']['sectionThreeBtn']?></span>
-                            </a>
-                        </div>
                     </div>
-                    <div class="learnImg">
-                        <img src="/<?=$lesson['img']?>" alt="">
-                    </div>
-                </div>
-            <?php }}?>
-        </div>
+                    <figure class="image-courses">
+                        <img src="/<?= $lesson['img'] ?>" alt="">
+                    </figure>
+                </article>
+                <?php
+            }
+        }
+        ?>
     </div>
-    <div class="sliderCoursesMobile">
-        <div class="slider">
-            <?php if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
-                <div class="learnMobile slide">
-                    <img src="/<?=$lesson['img']?>" alt="">
-                    <div class="coursesBg">
-                        <span><?=$GLOBALS['text']['sectionThreeCourses']?></span>
-                        <p><?=$GLOBALS['text']['sectionThreeLearn']?></p>
-                    </div>
-                    <div class="logoManagement">
-                        <div class="courseLogo">
-                            <img src="/images/logomanagcourse.png" alt="">
-                        </div>
-                        <div class="courseTitle">
-                            <span><?=$lesson['lesson_name']?></span>
-                        </div>
-                    </div>
-                    <a href="/courses/index">
-                        <img src="/images/logomanag.png" alt="">
-                        <span><?=$GLOBALS['text']['sectionThreeBtn']?></span>
-                    </a>
-                </div>
-            <?php }}?>
-        </div>
-    </div>
+    <div class="arrows-courses">
+        <button id="prev-courses"><</button>
+        <button id="next-courses">></button>
     </div>
 </div>
+
 <div class="sectionFour" id="sectionAnswers">
     <div class="answers">
         <div class="frequency">
