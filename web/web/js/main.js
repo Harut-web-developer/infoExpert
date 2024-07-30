@@ -103,6 +103,17 @@ function editeAlumni(id) {
 		});
 	}
 }
+function editeHaveQuestions(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/have-questions-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
 function editeCertificate(id) {
 
 	if (id) {
@@ -285,6 +296,16 @@ function disableAlumni(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/alumni-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableHaveQuestions(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/have-questions-disable?id=" + id,
 			success: function(result) {
 				window.location.reload();
 			}
@@ -643,6 +664,10 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeAlumni(id);
 	});
+	$('body').on('click', '#editeHaveQuestions', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeHaveQuestions(id);
+	});
 	$('body').on('click', '#editeCertificate', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeCertificate(id);
@@ -706,6 +731,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#disableAlumni', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableAlumni(id);
+	});
+	$('body').on('click', '#disableHaveQuestions', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableHaveQuestions(id);
 	});
 	$('body').on('click', '#disableCallback', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
@@ -811,12 +840,14 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '.checkedAnswer', function () {
 		let call_id = $(this).closest('tr').data('id');
 		let check = $(this).val();
+		let csrfToken = $('meta[name="csrf-token"]').attr("content");
 		$.ajax({
 			url:'/admin/admin-answers',
 			method: 'get',
 			data: {
 				check: check,
 				id: call_id,
+				_csrf:csrfToken,
 			},
 			success: function (data) {
 				if(data){
@@ -825,6 +856,33 @@ jQuery(document).ready(function($) {
 			}
 		})
 	})
-
-
+	// Mariam
+	$('body').on('click', '.checkedAnswerHaveQuestions', function () {
+		let call_id = $(this).closest('tr').data('id');
+		let check = $(this).val();
+		let csrfToken = $('meta[name="csrf-token"]').attr("content");
+		$.ajax({
+			url:'/admin/admin-answers-questions',
+			method: 'get',
+			data: {
+				check: check,
+				id: call_id,
+				_csrf:csrfToken,
+			},
+			success: function (data) {
+				if(data){
+					window.location.reload();
+				}
+			}
+		})
+	})
+	// Mariam
+	document.getElementById('sendEmailButton').addEventListener('click', function() {
+		var email = document.getElementById('emailInput').value;
+		if (email) {
+			window.location.href = 'mailto:' + email + '?subject=Response to your question';
+		} else {
+			alert('Please enter a valid email address.');
+		}
+	});
 });

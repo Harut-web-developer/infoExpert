@@ -34,6 +34,8 @@ use yii\helpers\ArrayHelper;
 use DateInterval;
 use DatePeriod;
 use DateTime;
+use function PHPUnit\Framework\callback;
+
 class AdminController extends Controller {
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
@@ -421,41 +423,19 @@ class AdminController extends Controller {
     }
     public function actionHaveQuestions(){
         // Mariam
+        date_default_timezone_set("Asia/Yerevan");
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
-        date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
-        if ($post && $post['add']) {
-            $have_questions = new AcHaveQuestions();
-            $have_questions->load($post);
-            $have_questions->create_date = date('Y-m-d H:i:s');
-            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
-                $tmp_name = $_FILES["img"]["tmp_name"];
-                $name = time() . basename($_FILES["img"]["name"]);
-                move_uploaded_file($tmp_name, "web/uploads/$name");
-                $have_questions->img = "web/uploads/$name";
-            }
-            $have_questions->save(false);
-            $this->redirect(['have-questions', 'success' => 'true', 'id' => 'key' . $have_questions->id]);
-        }
-        else if ($post && $post['edite']) {
+        if ($post && $post['edite']) {
             $have_questions = AcHaveQuestions::findOne(['id' => intval($post['id']) ]);
             $have_questions->load($post);
             $have_questions->create_date = date('Y-m-d H:i:s');
-            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
-                $tmp_name = $_FILES["img"]["tmp_name"];
-                $name = time() . basename($_FILES["img"]["name"]);
-                move_uploaded_file($tmp_name, "web/uploads/$name");
-                $have_questions->img = "web/uploads/$name";
-            }
             $have_questions->save(false);
             $this->redirect(['have-questions', 'success' => 'true', 'id' => 'key' . $have_questions->id]);
         }
-        $have_questions = AcHaveQuestions::find()->orderBy(['order_num' => SORT_ASC])->all();
-//        echo "<pre>";
-//        var_dump($have_questions);
-//        die;
+        $have_questions = AcHaveQuestions::find()->with(['adminName'])->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('have-questions', ['have_questions' => $have_questions]);
     }
 
@@ -543,10 +523,7 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
-//        echo "<pre>";
         $post = Yii::$app->request->post();
-//        var_dump($post);
-//        exit;
         if ($post && $post['edite']) {
             $call_back = AcCallback::findOne(['id' => intval($post['id']) ]);
             $call_back->load($post);
@@ -792,7 +769,8 @@ class AdminController extends Controller {
         }
         $id = intval($_GET['id']);
         $have_questions = AcHaveQuestions::findOne(['id' => $id]);
-        return $this->renderAjax('have-questions-edite-popup', ['have_questions' => $have_questions]);
+        $admin = User::find()->where(['and',['status' => '1'],['not', ['role' => null]]])->all();
+        return $this->renderAjax('have-questions-edite-popup', ['have_questions' => $have_questions, 'admin' => $admin]);
     }
     public function actionCallbackEdite() {
         // Harut
@@ -1055,7 +1033,6 @@ class AdminController extends Controller {
          if (!empty($_GET) && $_GET['check'] == 'on'){
              $admin_id = Yii::$app->user->id;
              $id = intval($_GET['id']);
-
              $admin_answers = AcCallback::findOne($id);
              $admin_answers->checked_answer = '1';
              $admin_answers->answer_admin_id = $admin_id;
@@ -1063,7 +1040,18 @@ class AdminController extends Controller {
              return true;
          }
      }
-
+    public function actionAdminAnswersQuestions()
+    {
+        if (!empty($_GET) && $_GET['check'] == 'on'){
+            $admin_id = Yii::$app->user->id;
+            $id = intval($_GET['id']);
+            $admin_answers = AcHaveQuestions::findOne($id);
+            $admin_answers->checked_answer = '1';
+            $admin_answers->answer_admin_id = $admin_id;
+            $admin_answers->save(false);
+            return true;
+        }
+    }
 
     /**
      * Login action.
