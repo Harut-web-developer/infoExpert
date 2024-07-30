@@ -1,4 +1,4 @@
-<!-- Harut-->
+<!-- Mariam-->
 <input type="hidden" data-page='HaveQuestions' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
@@ -25,8 +25,8 @@
                         <h4 class="box-title">Հարցեր
                             <span class="buttons">
                               <span class="overlay show_" style="width:33px;"></span>
-                              <button class="btn btn-sm btn-default" id="editeAlumni"><i class="fa fa-pencil"></i></button>
-                              <button class="btn btn-sm btn-danger" id="disableAlumni"><i class="fa fa-trash"></i></button>
+                              <button class="btn btn-sm btn-default" id="editeHaveQuestions"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-sm btn-danger" id="disableHaveQuestions"><i class="fa fa-trash"></i></button>
                             </span>
 <!--                            <a href="#" data-toggle="modal" data-target="#addnew" class="btn btn-succ fl" style="margin-left:10px;"><i class="bx bx-plus me-1"></i> Ավելացնել</a>-->
                         </h4>
@@ -41,8 +41,9 @@
                                             <tr>
                                                 <th scope="col">#</th>
                                                 <th scope="col">Անուն</th>
-                                                <th scope="col">Մեյլ</th>
+                                                <th scope="col">Էլ. հասցե</th>
                                                 <th scope="col">Հարց</th>
+                                                <th scope="col">Պատասխանել է</th>
                                                 <th scope="col">Կարգավիճակ</th>
                                             </tr>
                                             </thead>
@@ -59,10 +60,21 @@
                                                             <?php echo $item->name;?>
                                                         </td>
                                                         <td scope="col">
+                                                            <input type="hidden" id="emailInput"value="<?= $item->email ?>">
                                                             <?php echo $item->email;?>
                                                         </td>
                                                         <td scope="col">
+                                                            <input type="hidden" id="questionInput"value="<?= $item->question ?>">
                                                             <?php echo $item->question;?>
+                                                        </td>
+                                                        <td scope="col">
+                                                            <?php if($item->checked_answer == 0){?>
+                                                                <button id="sendEmailButton">Send Email</button>
+                                                                <input type="checkbox" class="checkedAnswerHaveQuestions">
+                                                            <?php }?>
+                                                            <?php if($item->checked_answer == 1){?>
+                                                                <span><?=$item->adminName->username?></span>
+                                                            <?php }?>
                                                         </td>
                                                         <td scope="col">
                                                             <?php if($item->status == 1){
