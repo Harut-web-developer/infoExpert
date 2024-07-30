@@ -571,8 +571,9 @@ class SiteController extends Controller
         ]);
     }
     public function actionSiteMap(){
-
-        return $this->render('map');
+        $lang = $_COOKIE['language'];
+        $lessons = AcLessons::find()->select('url,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+        return $this->render('map',['lessons' => $lessons]);
 
     }
     public function actionTermsAndConditions(){
