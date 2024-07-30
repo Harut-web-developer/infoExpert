@@ -461,12 +461,12 @@ $(document).ready(function () {
             $('.securityModal').css('display', 'none');
         }
     })
-    $(document).click(function(event) {
-        if (!$('.securityContentModal').is(event.target) && !$('.modalOpenBtn').is(event.target)
-            && $('.securityContentModal').has(event.target).length === 0 && $('.modalOpenBtn').has(event.target).length === 0) {
-            $('.securityModal').css('display', 'none');
-        }
-    });
+    // $(document).click(function(event) {
+    //     if (!$('.securityContentModal').is(event.target) && !$('.modalOpenBtn').is(event.target)
+    //         && $('.securityContentModal').has(event.target).length === 0 && $('.modalOpenBtn').has(event.target).length === 0) {
+    //         $('.securityModal').css('display', 'none');
+    //     }
+    // });
     // Mariam
     function search(inputElement) {
         let inputVal = inputElement.val();
@@ -630,7 +630,7 @@ $(document).ready(function () {
         })
     }
 })
-    // Harut
+    // Harut ev Mariam
     $('body').on('click', '.addMyCard', function () {
         let lesson_id = $(this).data('id');
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
@@ -641,9 +641,31 @@ $(document).ready(function () {
             data: {
                 lesson_id: lesson_id,
                 _csrf: csrfToken
+            },
+            success: function (data) {
+                let data_ = JSON.parse(data);
+                $('.popup-wrap-testimonial').fadeIn(500);
+                $('.popup-box-testimonial').removeClass('transform-out').addClass('transform-in');
+                let loggedPopup = `
+                    <div class="popup-wrap-logged">
+                        <div class="popup-box-logged">
+                            <div class="logged-content">
+                                <span class="logged-txt">${data_['message']}</span>
+                                <span class="close-btn popup-close close-logged">x</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                $('body').append(loggedPopup);
+                $('body').on('click', '.close-logged', function () {
+                    $('.popup-wrap-logged').fadeOut(500, function() {
+                        $(this).remove();
+                    });
+                });
             }
-        })
-    })
+        });
+    });
+
     // Harut 50 ev Mariam 50
     document.querySelectorAll('ion-icon').forEach(icon => {
         if (icon.getAttribute('data-active') === "1") {
@@ -707,7 +729,6 @@ if (window.location.pathname == '/testimonials') {
         $('.popup-box-testimonial').removeClass('transform-out').addClass('transform-in');
         let txt_value = $(this).find('.testimonialsText').text();
         let name_value = $(this).find('.testimonialsAuthor').text();
-        console.log(name_value)
         $('.popup-box-testimonial .txt-content').html(txt_value + '<br><br>' + name_value);
         e.preventDefault();
     })
@@ -735,51 +756,52 @@ let countItem = items.length;
 let active = 1;
 let other_1 = null;
 let other_2 = null;
+if (next != null && prev != null) {
+    next.onclick = () => {
+        carousel.classList.remove('prev-courses');
+        carousel.classList.add('next-courses');
+        active = active + 1 >= countItem ? 0 : active + 1;
+        other_1 = active - 1 < 0 ? countItem - 1 : active - 1;
+        other_2 = active + 1 >= countItem ? 0 : active + 1;
+        changeSlider();
+    }
 
-next.onclick = () => {
-    carousel.classList.remove('prev-courses');
-    carousel.classList.add('next-courses');
-    active = active + 1 >= countItem ? 0 : active + 1;
-    other_1 = active - 1 < 0 ? countItem - 1 : active - 1;
-    other_2 = active + 1 >= countItem ? 0 : active + 1;
-    changeSlider();
-}
+    prev.onclick = () => {
+        carousel.classList.remove('next-courses');
+        carousel.classList.add('prev-courses');
+        active = active - 1 < 0 ? countItem - 1 : active - 1;
+        other_1 = active + 1 >= countItem ? 0 : active + 1;
+        other_2 = other_1 + 1 >= countItem ? 0 : other_1 + 1;
+        changeSlider();
+    }
 
-prev.onclick = () => {
-    carousel.classList.remove('next-courses');
-    carousel.classList.add('prev-courses');
-    active = active - 1 < 0 ? countItem - 1 : active - 1;
-    other_1 = active + 1 >= countItem ? 0 : active + 1;
-    other_2 = other_1 + 1 >= countItem ? 0 : other_1 + 1;
-    changeSlider();
-}
+    const changeSlider = () => {
+        let itemOldActive = document.querySelector('.carousel-courses .item-courses.active-courses');
+        if (itemOldActive) itemOldActive.classList.remove('active-courses');
 
-const changeSlider = () => {
-    let itemOldActive = document.querySelector('.carousel-courses .item-courses.active-courses');
-    if(itemOldActive) itemOldActive.classList.remove('active-courses');
+        let itemOldOther_1 = document.querySelector('.carousel-courses .item-courses.other_1-courses');
+        if (itemOldOther_1) itemOldOther_1.classList.remove('other_1-courses');
 
-    let itemOldOther_1 = document.querySelector('.carousel-courses .item-courses.other_1-courses');
-    if(itemOldOther_1) itemOldOther_1.classList.remove('other_1-courses');
+        let itemOldOther_2 = document.querySelector('.carousel-courses .item-courses.other_2-courses');
+        if (itemOldOther_2) itemOldOther_2.classList.remove('other_2-courses');
 
-    let itemOldOther_2 = document.querySelector('.carousel-courses .item-courses.other_2-courses');
-    if(itemOldOther_2) itemOldOther_2.classList.remove('other_2-courses');
+        items.forEach(e => {
+            e.querySelector('.image-courses img').style.animation = 'none';
+            void e.offsetWidth;
+            e.querySelector('.image-courses img').style.animation = '';
+        })
 
-    items.forEach(e => {
-        e.querySelector('.image-courses img').style.animation = 'none';
-        void e.offsetWidth;
-        e.querySelector('.image-courses img').style.animation = '';
-    })
+        items[active].classList.add('active-courses');
+        items[other_1].classList.add('other_1-courses');
+        items[other_2].classList.add('other_2-courses');
 
-    items[active].classList.add('active-courses');
-    items[other_1].classList.add('other_1-courses');
-    items[other_2].classList.add('other_2-courses');
+        clearInterval(autoPlay);
+        autoPlay = setInterval(() => {
+            next.click();
+        }, 5000);
+    }
 
-    clearInterval(autoPlay);
-    autoPlay = setInterval(() => {
+    let autoPlay = setInterval(() => {
         next.click();
     }, 5000);
 }
-
-let autoPlay = setInterval(() => {
-    next.click();
-}, 5000);

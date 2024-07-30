@@ -163,10 +163,13 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                            <a href="/admin/callback"><i class="menu-icon fa fa-phone"></i>Հետադարձ զանգեր</a>
                        </li>
                        <li>
+                           <a href="/admin/have-questions"><i class="menu-icon fa fa-cogs"></i>Հարցեր</a>
+                       </li>
+                       <li>
                            <a href="/admin/certificate"><i class="menu-icon fa fa-certificate"></i>Սերտիֆիկատ</a>
                        </li>
                        <li>
-                          <a href="/admin/settings"><i class="menu-icon fa fa-cogs"></i>Կարգավորումներ</a>
+                           <a href="/admin/settings"><i class="menu-icon fa fa-cogs"></i>Կարգավորումներ</a>
                        </li>
                    <?php } ?>
                  </ul>

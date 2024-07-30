@@ -3088,10 +3088,10 @@ input::-webkit-inner-spin-button {
     --calculate: calc(1);
     margin-bottom: 130px;
     /*clip-path: polygon(0 9%, 100% 2%, 100% 83%, 0% 91%);*/
-    /*background-image: url(../images/bg.png);*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
+    background-image: url(../images/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .carousel-courses .list-courses{
     height: 100%;

@@ -101,11 +101,28 @@ class MyCardController extends \yii\web\Controller
         return $this->render('congratulation-on-achievement-messages');
     }
     public function actionAddCard(){
-        // Harut
+        // Harut ev Mariam
         if ($this->request->isGet){
             $id = intval($this->request->get('lesson_id'));
             $add_card = AcMyCard::addCard($id);
-            return $add_card;
+            if ($add_card){
+                if($_COOKIE['language'] == 'am'){
+                    $message = 'Դասընթացն ավելացված է զամբյուղում։';
+                }elseif ($_COOKIE['language'] == 'ru'){
+                    $message = 'Курс добавлен в корзину.';
+                }elseif ($_COOKIE['language'] == 'en'){
+                    $message = 'The course has been added to the cart.';
+                }
+            }else{
+                if($_COOKIE['language'] == 'am'){
+                    $message = 'Դասընթացն արդեն ավելացված է զամբյուղում։';
+                }elseif ($_COOKIE['language'] == 'ru'){
+                    $message = 'Курс уже добавлен в корзину.';
+                }elseif ($_COOKIE['language'] == 'en'){
+                    $message = 'The course has already been added to the cart.';
+                }
+            }
+            return json_encode(['add_card' => $add_card, 'message' => $message]);
         }
     }
     public function actionRemoveItem(){
