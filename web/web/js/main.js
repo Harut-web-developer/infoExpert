@@ -103,6 +103,17 @@ function editeAlumni(id) {
 		});
 	}
 }
+function editeCertificate(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/certificate-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
 function editeCallback(id) {
 
 	if (id) {
@@ -254,6 +265,16 @@ function disableTutors(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/tutors-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableCertificate(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/certificate-disable?id=" + id,
 			success: function(result) {
 				window.location.reload();
 			}
@@ -622,6 +643,10 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeAlumni(id);
 	});
+	$('body').on('click', '#editeCertificate', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeCertificate(id);
+	});
 	$('body').on('click', '#editeCallback', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeCallback(id);
@@ -673,6 +698,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#disableTutors', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableTutors(id);
+	});
+	$('body').on('click', '#disableCertificate', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableCertificate(id);
 	});
 	$('body').on('click', '#disableAlumni', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');

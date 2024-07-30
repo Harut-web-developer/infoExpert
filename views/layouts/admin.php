@@ -130,10 +130,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <a href="/admin/tutors"><i class="menu-icon fa fa-user"></i>Դասընթացավարներ</a>
                     </li>
                     <li>
-                        <a href="/admin/alumni"><i class="menu-icon fa fa-user-o"></i>Շրջաբավարտներ</a>
+                        <a href="/admin/alumni"><i class="menu-icon fa fa-user-o"></i>Շրջանավարտներ</a>
                     </li>
                     <li>
-                        <a href="/admin/subscribers"><i class="menu-icon fa fa-bell"></i>Բաժանորդագրվածներ</a>
+                        <a href="/admin/subscribers"><i class="menu-icon fa fa-bell"></i>Բաժանորդագրվել</a>
                     </li>
                      <?php } ?>
                    <?php if( Yii::$app->user->identity->role == 10){ ?>

@@ -75,6 +75,7 @@ $config = [
                 '/terms-and-conditions' => '/site/terms-and-conditions',
                 '/policy' => '/site/policy',
                 '/methodology' => '/site/methodology',
+                '/site-map' => '/site/site-map',
             ],
         ],
     ],

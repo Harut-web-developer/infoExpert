@@ -570,6 +570,11 @@ class SiteController extends Controller
             ]),
         ]);
     }
+    public function actionSiteMap(){
+
+        return $this->render('map');
+
+    }
     public function actionTermsAndConditions(){
 // Harut
         return $this->render('terms');

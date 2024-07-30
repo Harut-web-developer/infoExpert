@@ -1470,12 +1470,21 @@ input::-webkit-inner-spin-button {
     border:none;
 }
 .paypalFooter{
-    width: 1163px;
+    width: 1290px;
     height: 33px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.siteMapField{
+    width: max-content;
+    height: 18px;
+    font-family: "Roboto_", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
 }
 .copyTextFooter{
     width: max-content;

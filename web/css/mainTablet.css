@@ -1925,6 +1925,12 @@
         color: #1C5484;
     }
 }
+
+@media only screen and  (max-width: 1100px) {
+    .siteMapField{
+        display: none;
+    }
+}
 @media only screen and (min-width: 1190px) and (max-width: 1230px) {
     .cardsimg{
         height: 162px;
@@ -2755,7 +2761,7 @@
         border:none;
     }
     .paypalFooter{
-        width: 641px;
+        width: 647px;
         height: 19px;
         display: flex;
         flex-direction: row;
@@ -2766,6 +2772,14 @@
         width: max-content;
         height: 13px;
         font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        color: white;
+    }
+    .siteMapField {
+        width: max-content;
+        height: 13px;
+        font-family: "Roboto_", sans-serif;
         font-size: 10px;
         font-weight: 500;
         color: white;
@@ -2789,7 +2803,7 @@
     }
     .payLogoFooter{
         height: 19px;
-        width: 63px;
+        width: 73px;
         display:flex;
         flex-direction: row;
         justify-content: space-between;

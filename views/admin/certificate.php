@@ -26,8 +26,8 @@
                         <h4 class="box-title">Սերտիֆիկատ
                             <span class="buttons">
                                           <span class="overlay show_" style="width:33px;"></span>
-                                          <button class="btn btn-sm btn-default" id="editeAlumni"><i class="fa fa-pencil"></i></button>
-                                          <button class="btn btn-sm btn-danger" id="disableAlumni"><i class="fa fa-trash"></i></button>
+                                          <button class="btn btn-sm btn-default" id="editeCertificate"><i class="fa fa-pencil"></i></button>
+                                          <button class="btn btn-sm btn-danger" id="disableCertificate"><i class="fa fa-trash"></i></button>
                                         </span>
                             <a href="#" data-toggle="modal" data-target="#addnew" class="btn btn-succ fl" style="margin-left:10px;"><i class="bx bx-plus me-1"></i> Ավելացնել</a>
                         </h4>
@@ -41,7 +41,9 @@
                                             <thead>
                                             <tr>
                                                 <th scope="col">#</th>
+                                                <th scope="col">Նկար</th>
                                                 <th scope="col">Անուն</th>
+                                                <th scope="col">Դասընթաց</th>
                                                 <th scope="col">Կարգավիճակ</th>
                                             </tr>
                                             </thead>
@@ -55,7 +57,15 @@
                                                             } ?>
                                                             ID <?php echo $item->id;?></td>
                                                         <td scope="col">
-                                                            <?php echo $item->user_id;?>
+                                                            <?php if(!empty($item->img)){?>
+                                                                <img src="/<?php echo $item->img;?>" height="60" alt="">
+                                                            <?php } ?>
+                                                        </td>
+                                                        <td scope="col">
+                                                            <?php echo $item->userName->username;?>
+                                                        </td>
+                                                        <td scope="col">
+                                                            <?php echo $item->lessons->lesson_name_am;?>
                                                         </td>
                                                         <td scope="col">
                                                             <?php if($item->status == 1){

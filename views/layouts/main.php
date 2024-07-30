@@ -145,7 +145,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <?php if(!empty(Yii::$app->user->identity)){ ?>
                             <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
                         <?php }?>
-                        <li><a href="/contact-us/index">Սայթի քարտեզ</a></li>
+                        <li><a href="/site-map"><?= $GLOBALS['text']['siteMap']?></a></li>
                     </ul>
                     <div class="searchFlagField">
                             <img class="btn-search" id="btn-search-mobile" src="/images/search-white.png" alt="">
@@ -467,6 +467,7 @@ if ($logged && $alertShown) {
             <span class="copyTextFooter">
                 &copy; <?= $GLOBALS['text']['footerCopy']?> <?=date('Y')?> - Infoexpert Academy
             </span>
+                <a class="siteMapField" href="/site-map"><?= $GLOBALS['text']['siteMap']?></a>
             <div class="policyText">
                 <ul>
                     <li><a href="<?= Yii::$app->urlManager->createUrl(['site/policy']) ?>"><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>

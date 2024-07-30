@@ -426,47 +426,42 @@ class AdminController extends Controller {
         date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
-            $certificate = new AcCertificate();
             if (!empty($post['AcCertificate']['user_id'])){
                 foreach ($post['AcCertificate']['user_id'] as $item){
+                    $certificate_exist = AcCertificate::find()
+                        ->where(['and',['user_id' => intval($item)],['lesson_id' => intval($post['AcCertificate']['lesson_id'])]])
+                        ->exists();
+                    if(!$certificate_exist){
+                    $certificate = new AcCertificate();
                     $certificate->user_id = intval($item);
                     $certificate->lesson_id = intval($post['AcCertificate']['lesson_id']);
                     $certificate->create_date = date('Y-m-d H:i:s');
-                    if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
-                        $tmp_name = $_FILES["img"]["tmp_name"];
-                        $name = time() . basename($_FILES["img"]["name"]);
-                        move_uploaded_file($tmp_name, "web/uploads/$name");
-                        $certificate->img = "web/uploads/$name";
-                        $certificate->save(false);
+                        if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                            $tmp_name = $_FILES["img"]["tmp_name"];
+                            $name = time() . basename($_FILES["img"]["name"]);
+                            move_uploaded_file($tmp_name, "web/uploads/$name");
+                            $certificate->img = "web/uploads/$name";
+                            $certificate->save(false);
+                        }
                     }
                 }
             }
-//            $certificate->load($post);
-//            $certificate->create_date = date('Y-m-d H:i:s');
-//            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
-//                $tmp_name = $_FILES["img"]["tmp_name"];
-//                $name = time() . basename($_FILES["img"]["name"]);
-//                move_uploaded_file($tmp_name, "web/uploads/$name");
-//                $certificate->img = "web/uploads/$name";
-//            }
-//            $alumni->save(false);
             $this->redirect(['certificate', 'success' => 'true', 'id' => 'key' . $certificate->id]);
         }
-//        else if ($post && $post['edite']) {
-//            $alumni = AcAlumni::findOne(['id' => intval($post['id']) ]);
-//            $alumni->load($post);
-//            $alumni->create_date = date('Y-m-d H:i:s');
-//            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
-//                $tmp_name = $_FILES["img"]["tmp_name"];
-//                $name = time() . basename($_FILES["img"]["name"]);
-//                move_uploaded_file($tmp_name, "web/uploads/$name");
-//                $alumni->img = "web/uploads/$name";
-//            }
-//            $alumni->save(false);
-//            $this->redirect(['alumni', 'success' => 'true', 'id' => 'key' . $alumni->id]);
-//        }
-//        echo "<pre>";
-        $certificate = AcCertificate::find()->orderBy(['order_num' => SORT_ASC])->all();
+        else if ($post && $post['edite']) {
+            $certificate = AcCertificate::findOne(['id' => intval($post['id']) ]);
+            $certificate->load($post);
+            $certificate->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $certificate->img = "web/uploads/$name";
+            }
+            $certificate->save(false);
+            $this->redirect(['certificate', 'success' => 'true', 'id' => 'key' . $certificate->id]);
+        }
+        $certificate = AcCertificate::find()->with(['userName','lessons'])->orderBy(['order_num' => SORT_ASC])->all();
         $lessons = AcLessons::find()->where(['status' => '1'])->all();
         $alumni = User::find()->select('user.id as user_id,username,')
             ->leftJoin('ac_my_lessons','ac_my_lessons.user_id = user.id')
@@ -734,6 +729,21 @@ class AdminController extends Controller {
         $alumni = AcAlumni::findOne(['id' => $id]);
         return $this->renderAjax('alumni-edite-popup', ['alumni' => $alumni]);
     }
+    public function actionCertificateEdite() {
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $certificate = AcCertificate::find()->with('userName')->where(['id' => $id])->one();
+        $lessons = AcLessons::find()->where(['status' => '1'])->all();
+        $alumni = User::find()->select('user.id as user_id,username,')
+            ->leftJoin('ac_my_lessons','ac_my_lessons.user_id = user.id')
+            ->where(['and',['user.status' => '1'],['role' => null],['complete_percent' => 100]])
+            ->asArray()
+            ->all();
+        return $this->renderAjax('certificate-edite-popup', ['certificate' => $certificate, 'lessons' => $lessons, 'alumni' => $alumni]);
+    }
     public function actionCallbackEdite() {
         // Harut
         if (Yii::$app->user->isGuest) {
@@ -879,6 +889,20 @@ class AdminController extends Controller {
         }
 
         $tutors->save(false);
+        return true;
+    }
+    public function actionCertificateDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $certificate = AcCertificate::findOne(['id' => $id]);
+        if ($certificate->status) {
+            $certificate->status = 0;
+        }
+        else {
+            $certificate->status = 1;
+        }
+
+        $certificate->save(false);
         return true;
     }
     public function actionCallbackDisable() {
