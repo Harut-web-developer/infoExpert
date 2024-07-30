@@ -1042,6 +1042,7 @@ class AdminController extends Controller {
      }
     public function actionAdminAnswersQuestions()
     {
+        //  Mariam
         if (!empty($_GET) && $_GET['check'] == 'on'){
             $admin_id = Yii::$app->user->id;
             $id = intval($_GET['id']);

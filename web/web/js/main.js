@@ -881,6 +881,7 @@ jQuery(document).ready(function($) {
 		var email = document.getElementById('emailInput').value;
 		if (email) {
 			window.location.href = 'mailto:' + email + '?subject=Response to your question';
+			alert('mailto:' + email + '?subject=Response to your question')
 		} else {
 			alert('Please enter a valid email address.');
 		}
