@@ -461,12 +461,12 @@ $(document).ready(function () {
             $('.securityModal').css('display', 'none');
         }
     })
-    $(document).click(function(event) {
-        if (!$('.securityContentModal').is(event.target) && !$('.modalOpenBtn').is(event.target)
-            && $('.securityContentModal').has(event.target).length === 0 && $('.modalOpenBtn').has(event.target).length === 0) {
-            $('.securityModal').css('display', 'none');
-        }
-    });
+    // $(document).click(function(event) {
+    //     if (!$('.securityContentModal').is(event.target) && !$('.modalOpenBtn').is(event.target)
+    //         && $('.securityContentModal').has(event.target).length === 0 && $('.modalOpenBtn').has(event.target).length === 0) {
+    //         $('.securityModal').css('display', 'none');
+    //     }
+    // });
     // Mariam
     function search(inputElement) {
         let inputVal = inputElement.val();
