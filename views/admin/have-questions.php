@@ -28,7 +28,6 @@
                               <button class="btn btn-sm btn-default" id="editeHaveQuestions"><i class="fa fa-pencil"></i></button>
                               <button class="btn btn-sm btn-danger" id="disableHaveQuestions"><i class="fa fa-trash"></i></button>
                             </span>
-<!--                            <a href="#" data-toggle="modal" data-target="#addnew" class="btn btn-succ fl" style="margin-left:10px;"><i class="bx bx-plus me-1"></i> Ավելացնել</a>-->
                         </h4>
                     </div>
                     <div class="card-body--">

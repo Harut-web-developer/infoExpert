@@ -39,7 +39,7 @@
                                     <span>Անվանում</span>
                                     <input type="text" name="AcTutors[username_am]" value="<?php echo $tutors->username_am;?>" required placeholder="Անուն" class="form-control">
                                     <span>Պարունակություն</span>
-                                    <textarea name="AcTutors[text_am]" class="form-control" id="editor_am" placeholder="Պարունակություն" rows="3"><?php echo $tutors->text_am;?>"</textarea>
+                                    <textarea name="AcTutors[text_am]" class="form-control" id="editor_am" placeholder="Պարունակություն" rows="3"><?php echo $tutors->text_am;?></textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-tutors-ru" role="tabpanel" aria-labelledby="custom-nav-tutors-ru-tab">
@@ -47,7 +47,7 @@
                                     <span>Անվանում</span>
                                     <input type="text" name="AcTutors[username_ru]" value="<?php echo $tutors->username_ru;?>" required placeholder="Անուն" class="form-control">
                                     <span>Պարունակություն</span>
-                                    <textarea name="AcTutors[text_ru]" class="form-control" id="editor_ru" placeholder="Պարունակություն" rows="3"><?php echo $tutors->text_ru;?>"</textarea>
+                                    <textarea name="AcTutors[text_ru]" class="form-control" id="editor_ru" placeholder="Պարունակություն" rows="3"><?php echo $tutors->text_ru;?></textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-tutors-en" role="tabpanel" aria-labelledby="custom-nav-tutors-en-tab">
@@ -55,7 +55,7 @@
                                     <span>Անվանում</span>
                                     <input type="text" name="AcTutors[username_en]" value="<?php echo $tutors->username_en;?>" required placeholder="Անուն" class="form-control">
                                     <span>Պարունակություն</span>
-                                    <textarea name="AcTutors[text_en]" class="form-control" id="editor_en" placeholder="Պարունակություն" rows="3"><?php echo $tutors->text_en;?>"</textarea>
+                                    <textarea name="AcTutors[text_en]" class="form-control" id="editor_en" placeholder="Պարունակություն" rows="3"><?php echo $tutors->text_en;?></textarea>
                                 </div>
                             </div>
                         </div>
