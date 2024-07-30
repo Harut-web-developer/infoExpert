@@ -719,7 +719,7 @@ if (window.location.pathname == '/' || window.location.pathname == '/testimonial
         }
     }
 }
-// // Mariam
+// Mariam
 if (window.location.pathname == '/testimonials') {
     $('.blockTestimonialPopup a').on('click', function (e) {
         e.stopPropagation();
