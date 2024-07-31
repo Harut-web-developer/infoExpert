@@ -7,7 +7,6 @@ use app\models\AcAnswers;
 use app\models\AcApplyNow;
 use app\models\AcCallback;
 use app\models\AcCertificate;
-use app\models\AcHaveQuestions;
 use app\models\AcInfo;
 use app\models\AcLessons;
 use app\models\AcPartners;
@@ -23,6 +22,7 @@ use app\models\FsSettings;
 use app\models\FsTexts;
 use app\models\User;
 use app\models\Users;
+use app\models\AcHaveQuestions;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -1133,4 +1133,20 @@ class AdminController extends Controller {
      *
      * @return Response|string
      */
+    // Mariam
+    public function actionUpdateOrder() {
+        echo "<pre>";
+        var_dump($_POST);
+        if ($this->request->isPost) {
+            if (!empty($_POST['orders']) && !empty($_POST['page'])) {
+                foreach ($_POST['orders'] as $i => $row) {
+                    $order_num = $_POST['page']::findOne($row['id']);
+                    $order_num->order_num = $row['order'];
+//                    var_dump($order_num);
+                    die;
+                }
+            }
+        }
+    }
+
 }
