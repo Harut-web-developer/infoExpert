@@ -1,5 +1,5 @@
 <!-- Mariam-->
-<input type="hidden" data-page='HaveQuestions' id="page">
+<input type="hidden" data-page='AcHaveQuestions' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
@@ -68,7 +68,7 @@
                                                         </td>
                                                         <td scope="col">
                                                             <?php if($item->checked_answer == 0){?>
-                                                                <button id="sendEmailButton">Send Email</button>
+                                                                <button id="sendEmailButton">Ուղարկել նամակ</button>
                                                                 <input type="checkbox" class="checkedAnswerHaveQuestions">
                                                             <?php }?>
                                                             <?php if($item->checked_answer == 1){?>

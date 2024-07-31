@@ -747,6 +747,14 @@ $('.close-logged').click(function(e) {
     $('.securityContentModal').removeClass('transform-in-call').addClass('transform-out-call');
     e.preventDefault();
 });
+$('.mainFieldSite').on('mouseover', function () {
+    $(this).children('img').attr('src', '/images/arrowSiteOrang.png');
+    $(this).children('a').css('color', '#F36528');
+});
+$('.mainFieldSite').on('mouseout', function () {
+    $(this).children('img').attr('src', '/images/arrowSite.png');
+    $(this).children('a').css('color', '');
+});
 // Mariam
 let next = document.getElementById('next-courses');
 let prev = document.getElementById('prev-courses');

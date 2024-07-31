@@ -3273,6 +3273,11 @@ input::-webkit-inner-spin-button {
         height: 450px;
     }
 }
+@media screen and (min-width: 1101px) {
+    .answers-faq{
+        padding-top: 212px;
+    }
+}
 
 @media screen and (max-width: 1400px){
     .logoManagement {
