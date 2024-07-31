@@ -96,7 +96,7 @@
     var editor_ru_p = CKEDITOR.replace( 'editor_ru_p' ,{
         filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
     });
-    CKFinder.setupCKEditor( editor_ru, null, { type: 'Files', currentFolder: '/archive/' } );
+    CKFinder.setupCKEditor( editor_ru_p, null, { type: 'Files', currentFolder: '/archive/' } );
     var editor_en_p = CKEDITOR.replace( 'editor_en_p' ,{
         filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
     });

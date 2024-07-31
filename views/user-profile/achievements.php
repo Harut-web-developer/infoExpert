@@ -78,7 +78,7 @@ if ($language == 'en') {
                         <div class="swiper-slide">
                             <div class="certificate">
                                 <div class="cartificateImg">
-                                    <img src="/<?= $certificate['certificate_img'] ?>" alt="">
+                                    <img src="/<?= $certificate['img'] ?>" alt="">
                                 </div>
                                 <div class="cartificateImgTxt">
                                     <span><?= $certificate['lesson_name'] ?></span>

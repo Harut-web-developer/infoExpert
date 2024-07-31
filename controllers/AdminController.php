@@ -68,7 +68,13 @@ class AdminController extends Controller {
             $question->save(false);
             $this->redirect(['questions', 'success' => 'true', 'id' => 'key' . $question->id]);
         }
-        $questions = AcQuestionList::find()->all();
+        else if ($post && $post['edite']) {
+            $question = AcQuestionList::findOne(['id' => intval($post['id']) ]);
+            $question->load($post);
+            $question->save(false);
+            $this->redirect(['questions', 'success' => 'true', 'id' => 'key' . $question->id]);
+        }
+        $questions = AcQuestionList::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('questions', ['questions' => $questions]);
 
     }
@@ -83,6 +89,12 @@ class AdminController extends Controller {
             $question->load($post);
             $question->save(false);
             $this->redirect(['question', 'success' => 'true', 'id' => $id]);
+        }
+        else if ($post && $post['edite']) {
+            $question = AcQuestionQuests::findOne(['id' => intval($post['id']) ]);
+            $question->load($post);
+            $question->save(false);
+            $this->redirect(['question', 'id' => $question->id,'success' => 'true']);
         }
         $answers = AcQuestionQuests::find()->where(['question_id'=>$id])->all();
         $question = AcQuestionList::findOne($id);
@@ -705,6 +717,14 @@ class AdminController extends Controller {
         $page = AcBlog::findOne(['id' => $id]);
         return $this->renderAjax('page-edite-popup', ['page' => $page]);
     }
+    public function actionQuestionEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $question = AcQuestionQuests::findOne(['id' => $id]);
+        return $this->renderAjax('questionquest-edite-popup', ['question' => $question]);
+    }
     public function actionPartnerEdite() {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
@@ -721,6 +741,7 @@ class AdminController extends Controller {
         $lesson = AcLessons::findOne(['id' => $id]);
         return $this->renderAjax('lesson-edite-popup', ['lesson' => $lesson]);
     }
+
     public function actionInfoEdite() {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
@@ -737,6 +758,15 @@ class AdminController extends Controller {
         $id = intval($_GET['id']);
         $subscribers = AcSubscribers::findOne(['id' => $id]);
         return $this->renderAjax('subscribers-edite-popup', ['subscribers' => $subscribers]);
+    }
+    public function actionCategoryEdite() {
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $questions = AcQuestionList::findOne(['id' => $id]);
+        return $this->renderAjax('questionslist-edite-popup', ['questions' => $questions]);
     }
     public function actionAlumniEdite() {
         // Harut

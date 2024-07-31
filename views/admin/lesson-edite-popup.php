@@ -48,7 +48,7 @@
                                     <span>Բանալի Բառեր</span>
                                     <textarea name="AcLessons[lesson_keywords_am]" class="form-control" placeholder="Բանալի Բառեր" rows="3"><?php echo $lesson->lesson_keywords_am;?></textarea>
                                     <span>Պարունակություն</span>
-                                    <textarea name="AcLessons[lesson_content_am]" class="form-control" id="editor_am" placeholder="Պարունակություն" rows="3"><?php echo $lesson->lesson_content_am;?></textarea>
+                                    <textarea name="AcLessons[lesson_content_am]" class="form-control" id="editor_am_l" placeholder="Պարունակություն" rows="3"><?php echo $lesson->lesson_content_am;?></textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-lesson-ru" role="tabpanel" aria-labelledby="custom-nav-lesson-ru-tab">
@@ -62,7 +62,7 @@
                                     <span>Բանալի Բառեր</span>
                                     <textarea name="AcLessons[lesson_keywords_ru]" class="form-control" placeholder="Բանալի Բառեր" rows="3"><?php echo $lesson->lesson_keywords_ru;?></textarea>
                                     <span>Պարունակություն</span>
-                                    <textarea name="AcLessons[lesson_content_ru]" class="form-control"  id="editor_ru" placeholder="Պարունակություն" rows="3"><?php echo $lesson->lesson_content_ru;?></textarea>
+                                    <textarea name="AcLessons[lesson_content_ru]" class="form-control"  id="editor_ru_l" placeholder="Պարունակություն" rows="3"><?php echo $lesson->lesson_content_ru;?></textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-lesson-en" role="tabpanel" aria-labelledby="custom-nav-lesson-en-tab">
@@ -76,7 +76,7 @@
                                     <span>Բանալի Բառեր</span>
                                     <textarea name="AcLessons[lesson_keywords_en]" class="form-control" placeholder="Բանալի Բառեր" rows="3"><?php echo $lesson->lesson_keywords_en;?></textarea>
                                     <span>Պարունակություն</span>
-                                    <textarea name="AcLessons[lesson_content_en]" class="form-control"  id="editor_en" placeholder="Պարունակություն" rows="3"><?php echo $lesson->lesson_content_en;?></textarea>
+                                    <textarea name="AcLessons[lesson_content_en]" class="form-control"  id="editor_en_l" placeholder="Պարունակություն" rows="3"><?php echo $lesson->lesson_content_en;?></textarea>
                                 </div>
                             </div>
                         </div>
@@ -93,4 +93,20 @@
 </div>
 <script>
     jQuery('#editenew').modal('show');
+</script>
+<script src="/web/ckfinder/ckfinder.js"></script>
+<script src="/web/ckeditor/ckeditor.js"></script>
+<script>
+    var editor_l = CKEDITOR.replace( 'editor_am_l' ,{
+        filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
+    });
+    CKFinder.setupCKEditor( editor_l, null, { type: 'Files', currentFolder: '/archive/' } );
+    var editor_ru_l = CKEDITOR.replace( 'editor_ru_l' ,{
+        filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
+    });
+    CKFinder.setupCKEditor( editor_ru_l, null, { type: 'Files', currentFolder: '/archive/' } );
+    var editor_en_l = CKEDITOR.replace( 'editor_en_l' ,{
+        filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
+    });
+    CKFinder.setupCKEditor( editor_en_l, null, { type: 'Files', currentFolder: '/archive/' } );
 </script>

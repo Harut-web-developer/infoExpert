@@ -36,7 +36,7 @@
                                     <span>Անվանում</span>
                                     <input type="text" name="AcAlumni[alumni_am]" value="<?php echo $alumni->alumni_am;?>" required placeholder="Անուն" class="form-control">
                                     <span>Պարունակություն</span>
-                                    <textarea name="AcAlumni[text_am]" class="form-control" id="editor_am" placeholder="Պարունակություն" rows="3"><?php echo $alumni->text_am;?>"</textarea>
+                                    <textarea name="AcAlumni[text_am]" class="form-control" id="editor_am_t" placeholder="Պարունակություն" rows="3"><?php echo $alumni->text_am;?>"</textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-alumni-ru" role="tabpanel" aria-labelledby="custom-nav-alumni-ru-tab">
@@ -44,7 +44,7 @@
                                     <span>Անվանում</span>
                                     <input type="text" name="AcAlumni[alumni_ru]" value="<?php echo $alumni->alumni_ru;?>" required placeholder="Անուն" class="form-control">
                                     <span>Պարունակություն</span>
-                                    <textarea name="AcAlumni[text_ru]" class="form-control" id="editor_ru" placeholder="Պարունակություն" rows="3"><?php echo $alumni->text_ru;?>"</textarea>
+                                    <textarea name="AcAlumni[text_ru]" class="form-control" id="editor_ru_t" placeholder="Պարունակություն" rows="3"><?php echo $alumni->text_ru;?>"</textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-alumni-en" role="tabpanel" aria-labelledby="custom-nav-alumni-en-tab">
@@ -52,7 +52,7 @@
                                     <span>Անվանում</span>
                                     <input type="text" name="AcAlumni[alumni_en]" value="<?php echo $alumni->alumni_en;?>" required placeholder="Անուն" class="form-control">
                                     <span>Պարունակություն</span>
-                                    <textarea name="AcAlumni[text_en]" class="form-control" id="editor_en" placeholder="Պարունակություն" rows="3"><?php echo $alumni->text_en;?>"</textarea>
+                                    <textarea name="AcAlumni[text_en]" class="form-control" id="editor_en_t" placeholder="Պարունակություն" rows="3"><?php echo $alumni->text_en;?>"</textarea>
                                 </div>
                             </div>
                         </div>
@@ -69,6 +69,24 @@
 </div>
 <script>
     jQuery('#editenew').modal('show');
+</script>
+<script src="/web/ckfinder/ckfinder.js"></script>
+<script src="/web/ckeditor/ckeditor.js"></script>
+
+<script>
+
+    var editor_t = CKEDITOR.replace( 'editor_am_t' ,{
+        filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
+    });
+    CKFinder.setupCKEditor( editor_t, null, { type: 'Files', currentFolder: '/archive/' } );
+    var editor_ru_t = CKEDITOR.replace( 'editor_ru_t' ,{
+        filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
+    });
+    CKFinder.setupCKEditor( editor_ru_t, null, { type: 'Files', currentFolder: '/archive/' } );
+    var editor_en_t = CKEDITOR.replace( 'editor_en_t' ,{
+        filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
+    });
+    CKFinder.setupCKEditor( editor_en_t, null, { type: 'Files', currentFolder: '/archive/' } );
 </script>
 
 

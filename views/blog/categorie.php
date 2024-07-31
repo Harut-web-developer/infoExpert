@@ -22,7 +22,6 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                     </ion-icon>
                 </div>
             </div>
-
         </h1>
 
         <span class="date">

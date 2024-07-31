@@ -14,6 +14,16 @@ function editeCategory(id) {
 		});
 	}
 }
+function editeQuestion(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/question-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
 function editeText(id) {
 	if (id) {
 		jQuery.ajax({
@@ -552,6 +562,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#edite', function(event) {
 		var id = $('.sortable li.active').attr('data-id');
 		editeCategory(id);
+	})
+	$('body').on('click', '#editeQuestion', function(event) {
+		var id = $('.sortable li.active').attr('data-id');
+		editeQuestion(id);
 	});
 	$('body').on('click', '#editeDiscount', function(event) {
 
@@ -881,9 +895,8 @@ jQuery(document).ready(function($) {
 		var email = document.getElementById('emailInput').value;
 		if (email) {
 			window.location.href = 'mailto:' + email + '?subject=Response to your question';
-			alert('mailto:' + email + '?subject=Response to your question')
 		} else {
-			alert('Please enter a valid email address.');
+			alert('Խնդրում ենք մուտքագրել գործող էլեկտրոնային հասցե');
 		}
 	});
 });

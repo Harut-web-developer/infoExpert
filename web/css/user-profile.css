@@ -309,7 +309,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding-top: 100px;
 }
 .myCoursesProfileField{
@@ -424,6 +424,8 @@ input::-webkit-inner-spin-button {
 
 }
 .cartificateImg img{
+    width: 100%;
+    height: 100%;
     padding: 45.08px 44.84px;
 }
 

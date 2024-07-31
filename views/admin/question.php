@@ -19,7 +19,7 @@
                     <h4 class="box-title">Հարցաշար ( <?php echo $question->name_am;?>)
                         <span class="buttons">
                                           <span class="overlay show_" style="width:33px;"></span>
-                                          <button class="btn btn-sm btn-default" id="edite"><i class="fa fa-pencil"></i></button>
+                                          <button class="btn btn-sm btn-default" id="editeQuestion"><i class="fa fa-pencil"></i></button>
                                           <button class="btn btn-sm btn-danger" id="disableQuest"><i class="fa fa-trash"></i></button>
                                         </span>
                         <a href="#" data-toggle="modal" data-target="#addnew" class="btn btn-succ fl" style="margin-left:10px;"><i class="bx bx-plus me-1"></i> Ավելացնել հարց</a>
@@ -109,16 +109,19 @@ function display_list($nested_categories, $type = 'sortable', $level = 0)
                             <br>
                             <div class="tab-pane fade active show" id="custom-nav-home" role="tabpanel" aria-labelledby="custom-nav-home-tab">
                                 <div class="form-group ">
+                                    <span>Հարց</span>
                                     <input type="text" name="AcQuestionQuests[name_am]" required placeholder="Հարց" class="form-control">
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-profile" role="tabpanel" aria-labelledby="custom-nav-profile-tab">
                                 <div class="form-group">
+                                    <span>Հարց</span>
                                     <input type="text" name="AcQuestionQuests[name_ru]" required placeholder="Հարց" class="form-control">
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-contact" role="tabpanel" aria-labelledby="custom-nav-contact-tab">
                                 <div class="form-group">
+                                    <span>Հարց</span>
                                     <input type="text" name="AcQuestionQuests[name_en]" required placeholder="Հարց" class="form-control">
                                 </div>
                             </div>
