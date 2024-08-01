@@ -1,3 +1,4 @@
+// Mariam
 document.addEventListener("DOMContentLoaded", function () {
     function slider(carousel, wrapper, firstCard) {
         // const firstCardWidth = firstCard.offsetWidth;
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// Harut
 if (window.location.pathname == '/wishlist/index' && window.innerWidth < 600){
     let seeMoreBtnCourses = document.querySelector('#coursesBtnMobile');
     let courses = [...document.querySelectorAll('.wishlistCardsField .card_2')];

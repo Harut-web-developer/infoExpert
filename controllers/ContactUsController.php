@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\AcInfo;
 use Yii;
 use app\models\Texts;
 
@@ -14,6 +15,7 @@ class ContactUsController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -44,27 +46,20 @@ class ContactUsController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Harut
         if($this->request->isPost && isset($_POST['name'])){
-            $email = 'info@infoexpert.am';
+            $email = 'user2002mm@gmail.com';
             $post = $this->request->post();
-            $senderName = $post['name'];
             $senderEmail = $post['email'];
             $subject = "Contact us";
             $message = $post['comment'];
-
-            $headers = [
-                'From' => "$senderName <{$senderEmail}>",
-                'Reply-To' => $senderEmail,
-                'MIME-Version' => '1.0',
-                'Content-type' => 'text/html; charset=UTF-8'
-            ];
-
-            $headersString = '';
-            foreach ($headers as $key => $value) {
-                $headersString .= "$key: $value\r\n";
-            }
-            mail($email, $subject, $message, $headersString);
+            Yii::$app->mailer->compose('welcome', ['message' => $message])
+                ->setFrom($senderEmail)
+                ->setTo($email)
+                ->setSubject($subject)
+                ->send();
         }
-        return $this->render('index');
+        $info = AcInfo::findOne(['status' => '1']);
+        return $this->render('index',['info' => $info]);
     }
 }

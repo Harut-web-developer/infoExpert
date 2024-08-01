@@ -12,6 +12,8 @@ class m240712_071215_translate_wishlist_some_texs extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->insert('texts', [
             'slug' => 'titleOfLink',
             'text_am' => 'Սեխմեք «Բոլոր դասերը», որպեսզի ստեղծեք ձեր հավանածները',

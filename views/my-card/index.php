@@ -1,3 +1,4 @@
+<!-- Mariam 50 ev Harut 50-->
 <?php
 use yii\web\View;
 use yii\web\YiiAsset;
@@ -198,8 +199,9 @@ if ($language == 'en') {
             <div class="totalPriceFieldSection">
                 <div class="myCardTotalPrice">
 
-                    <?php if (!empty($my_card)){
-                        $total = 0;
+                    <?php
+                    $total = 0;
+                    if (!empty($my_card)){
                         foreach ($my_card as $item){
                             $total += $item['price'];
                         }} ?>

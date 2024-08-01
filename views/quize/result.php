@@ -1,3 +1,4 @@
+<!-- Mariam 70 ev Harut 30-->
 <?php
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/quize.css?v=1');

@@ -12,6 +12,8 @@ class m240506_104430_add_page_id_column_to_texts_table extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->addColumn('texts', 'page_id', $this->integer()->null()->defaultValue(null)->after('text_en'));
     }
 

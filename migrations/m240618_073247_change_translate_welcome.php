@@ -12,6 +12,8 @@ class m240618_073247_change_translate_welcome extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->update('texts',[
             'text_am' => 'ԲԱՐԻ ԳԱԼՈՒՍՏ',
         ], ['id' => 208]);

@@ -1,3 +1,4 @@
+// Harut
 $(document).ready(function (){
     $('body').on('click','.userAddPhotoText', function () {
         $(this).siblings('input').click();

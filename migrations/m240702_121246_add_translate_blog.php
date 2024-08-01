@@ -12,6 +12,7 @@ class m240702_121246_add_translate_blog extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
         $this->insert('texts', [
             'slug' => 'recentNews',
             'text_am' => 'ՎԵՐՋԻՆ ԼՈՒՐԵՐ',

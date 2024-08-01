@@ -1,3 +1,4 @@
+<!-- Mariam 80 ev Harut 20-->
 <?php
 use app\models\AcWishlist;
 
@@ -21,7 +22,6 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                     </ion-icon>
                 </div>
             </div>
-
         </h1>
 
         <span class="date">
@@ -39,7 +39,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <h1><?= $GLOBALS['text']['recentNews'] ?></h1>
             </div>
             <?php if (!empty($last_blogs)){foreach ($last_blogs as $last_blog){ ?>
-                <a href="categorie?id=<?=$last_blog['id']?>">
+                <a href="<?= Yii::$app->urlManager->createUrl(['blog/'.$last_blog['url']]) ?>">
                     <div class="rigthtxt">
                         <img src="/<?=$last_blog['img']?>">
                         <div class="rigthtxtdiv">
@@ -52,17 +52,3 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     </div>
 </div>
 <?php $this->registerJsFile('@web/js/blog.js', ['defer' => true]);?>
-
-<!--Like js-->
-<script>
-// document.querySelectorAll('.categorie ion-icon').forEach(icon => {
-//     if (icon.getAttribute('data-active') === "1") {
-//         icon.classList.add('active');
-//     } else {
-//         icon.classList.remove('active');
-//     }
-//         icon.addEventListener('click', function() {
-//             this.classList.toggle('active');
-//         });
-//     });
-</script>

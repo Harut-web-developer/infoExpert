@@ -12,6 +12,8 @@ class m240702_133341_add_columns_for_user extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->addColumn('user', 'cv', $this->string(255)->defaultValue(null)->after('username'));
         $this->addColumn('user', 'image', $this->string(255)->defaultValue(null)->after('username'));
         $this->addColumn('user', 'linkdin_url', $this->string(255)->defaultValue(null)->after('username'));

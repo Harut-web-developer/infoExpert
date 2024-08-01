@@ -12,6 +12,7 @@ class m240718_072235_translate_my_courses_texts extends Migration
      */
     public function safeUp()
     {
+//        Harut
         $this->insert('texts', [
             'slug' => 'rating',
             'text_am' => 'Թողնել վարկանիշ',

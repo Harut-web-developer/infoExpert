@@ -56,4 +56,8 @@ class AcApplyNow extends \yii\db\ActiveRecord
             'create_date' => 'Create Date',
         ];
     }
+//    Harut
+    public function getLesson(){
+        return $this->hasOne(AcLessons::className(),['id' => 'lesson_id']);
+    }
 }

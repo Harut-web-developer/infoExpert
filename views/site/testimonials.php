@@ -1,3 +1,4 @@
+<!-- Mariam 20 ev Harut 80-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
 
 <div class="sectionSixPage">
@@ -7,7 +8,7 @@
             <span class="testimonialWhiteTitlePage"><?=$GLOBALS['text']['sectionSixText']?></span>
         </div>
         <div class="slide-container swiper webTabletTestimonial">
-            <div class="slide-content">
+            <div class="slide-content pageTestimonial">
                 <div class="card-wrapper swiper-wrapper testimonialsImg">
                     <?php
                     if (!empty($testimonials)){foreach ($testimonials as $testimonial){?>
@@ -20,7 +21,7 @@
                                     <div class="testimonialsText"><?=$testimonial['text']?></div>
                                     <div class="fieldsLinkdin">
                                         <span class="testimonialsAuthor"><?=$testimonial['name']?></span>
-                                        <a href="<?=$testimonial['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
+                                        <a target="<?=$testimonial['url'] ? '_blank' : ''?>" href="<?=$testimonial['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +48,7 @@
                         <div class="testimonialsText"><?=$item['text']?></div>
                         <div class="fieldsLinkdin">
                             <span class="testimonialsAuthor"><?=$item['name']?></span>
-                            <a href="<?=$item['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
+                            <a target="<?=$item['url'] ? '_blank' : ''?>" href="<?=$item['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -66,8 +67,7 @@
     <div class="popup-box-testimonial">
         <div class="testimonial-container">
             <span class="close-btn-testimonial popup-close-testimonial">x</span>
-            <div class="txt-content">
-            </div>
+            <div class="txt-content"></div>
         </div>
     </div>
 </div>

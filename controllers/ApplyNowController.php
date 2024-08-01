@@ -17,6 +17,7 @@ class ApplyNowController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Harut
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -47,6 +48,7 @@ class ApplyNowController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Harut
         date_default_timezone_set('Asia/Yerevan');
         $language = $_COOKIE['language'];
         if ($this->request->isPost){
@@ -70,6 +72,7 @@ class ApplyNowController extends \yii\web\Controller
     }
     public function actionApplyApplication()
     {
+        // Mariam
         return $this->render('application');
     }
 }

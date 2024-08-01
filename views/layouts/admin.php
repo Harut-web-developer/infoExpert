@@ -126,8 +126,15 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                      <li>
                          <a href="/admin/questions"><i class="menu-icon fa fa-question"></i>Հարցաշար</a>
                      </li>
-
-
+                    <li>
+                        <a href="/admin/tutors"><i class="menu-icon fa fa-user"></i>Դասընթացավարներ</a>
+                    </li>
+                    <li>
+                        <a href="/admin/alumni"><i class="menu-icon fa fa-user-o"></i>Շրջանավարտներ</a>
+                    </li>
+                    <li>
+                        <a href="/admin/subscribers"><i class="menu-icon fa fa-bell"></i>Բաժանորդագրվել</a>
+                    </li>
                      <?php } ?>
                    <?php if( Yii::$app->user->identity->role == 10){ ?>
                        <li>
@@ -146,9 +153,24 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                        <li>
                            <a href="/admin/texts"><i class="menu-icon fa fa-font"></i>Տեքստեր</a>
                        </li>
-                     <li>
-                         <a href="/admin/settings"><i class="menu-icon fa fa-cogs"></i>Կարգավորումներ</a>
-                     </li>
+                       <li>
+                           <a href="/admin/apply"><i class="menu-icon fa fa-list-ul"></i>Հայտեր</a>
+                       </li>
+                       <li>
+                           <a href="/admin/info"><i class="menu-icon fa fa-info-circle"></i>Կայքի տվյալներ</a>
+                       </li>
+                       <li>
+                           <a href="/admin/callback"><i class="menu-icon fa fa-phone"></i>Հետադարձ զանգեր</a>
+                       </li>
+                       <li>
+                           <a href="/admin/have-questions"><i class="menu-icon fa fa-cogs"></i>Հարցեր</a>
+                       </li>
+                       <li>
+                           <a href="/admin/certificate"><i class="menu-icon fa fa-certificate"></i>Սերտիֆիկատ</a>
+                       </li>
+                       <li>
+                           <a href="/admin/settings"><i class="menu-icon fa fa-cogs"></i>Կարգավորումներ</a>
+                       </li>
                    <?php } ?>
                  </ul>
             </div><!-- /.navbar-collapse -->

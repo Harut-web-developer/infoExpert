@@ -1,3 +1,4 @@
+<!-- Mariam 40 ev Harut 60-->
 <?php
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/courses.css?v=1');
@@ -154,6 +155,7 @@ if ($language == 'en') {
     </div>
 </div>
 <script>
+//    Mariam 100
     document.addEventListener("DOMContentLoaded", function () {
         function slider(carousel, wrapper, firstCard) {
             let isDragging = false,

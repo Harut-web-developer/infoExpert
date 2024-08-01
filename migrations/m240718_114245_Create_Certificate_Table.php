@@ -12,6 +12,8 @@ class m240718_114245_Create_Certificate_Table extends Migration
      */
     public function safeUp()
     {
+//        Mariam
+
         $this->createTable('{{%ac_certificate}}', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer(11)->defaultValue(null),

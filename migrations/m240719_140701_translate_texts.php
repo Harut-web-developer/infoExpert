@@ -12,6 +12,8 @@ class m240719_140701_translate_texts extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->insert('texts', [
             'slug' => 'emptyArchievement',
             'text_am' => 'Սերտիֆիկատ առկա չէ',

@@ -12,6 +12,7 @@ class m240709_083948_create_table_my_card extends Migration
      */
     public function safeUp()
     {
+//        Harut
         $this->createTable('ac_my_card', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer(11)->defaultValue(null),

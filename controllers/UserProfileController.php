@@ -19,6 +19,7 @@ class UserProfileController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Harut  50 ev Mariam 50
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -59,10 +60,12 @@ class UserProfileController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Mariam
         return $this->render('index');
     }
     public function actionUserCreate()
     {
+        // Harut
         if ($this->request->isPost){
             $post = $this->request->post();
             $user = User::findOne(intval(Yii::$app->user->identity->id));
@@ -91,20 +94,18 @@ class UserProfileController extends \yii\web\Controller
     }
     public function actionAchievements()
     {
+        // Mariam
         $language = $_COOKIE['language'];
         $user_id = Yii::$app->user->identity->id;
         $certificates = AcCertificate::find()
             ->select([
-                'ac_lessons.certificate_img',
-                'user.username',
+                'ac_certificate.img as img',
                 'lesson_name_'.$language.' as lesson_name',
             ])
             ->leftJoin('ac_lessons', 'ac_certificate.lesson_id = ac_lessons.id')
-            ->leftJoin('user', 'ac_certificate.user_id = user.id')
             ->where([
                 'ac_certificate.status' => '1',
                 'ac_certificate.user_id' => $user_id,
-                'user.id' => $user_id
             ])
             ->asArray()
             ->all();
@@ -114,6 +115,7 @@ class UserProfileController extends \yii\web\Controller
     }
     public function actionAchievementsEdit()
     {
+        // Harut
         if ($this->request->isPost) {
             $post = $this->request->post();
             $user = User::findOne(intval(Yii::$app->user->identity->id));
@@ -141,6 +143,7 @@ class UserProfileController extends \yii\web\Controller
     }
     public function actionEditProfile()
     {
+        // Harut
         if ($this->request->isPost) {
             $post = $this->request->post();
             $user = User::findOne(intval(Yii::$app->user->identity->id));

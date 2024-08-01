@@ -2,19 +2,27 @@
 
 namespace app\controllers;
 
+use app\models\AcAlumni;
 use app\models\AcAnswers;
+use app\models\AcApplyNow;
+use app\models\AcCallback;
+use app\models\AcCertificate;
+use app\models\AcInfo;
 use app\models\AcLessons;
 use app\models\AcPartners;
 use app\models\AcQuestionAnswers;
 use app\models\AcQuestionList;
 use app\models\AcQuestionQuests;
 use app\models\AcReviews;
+use app\models\AcSubscribers;
+use app\models\AcTutors;
 use app\models\FsOrders;
 use app\models\AcBlog;
 use app\models\FsSettings;
 use app\models\FsTexts;
 use app\models\User;
 use app\models\Users;
+use app\models\AcHaveQuestions;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -26,6 +34,8 @@ use yii\helpers\ArrayHelper;
 use DateInterval;
 use DatePeriod;
 use DateTime;
+use function PHPUnit\Framework\callback;
+
 class AdminController extends Controller {
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
@@ -58,7 +68,13 @@ class AdminController extends Controller {
             $question->save(false);
             $this->redirect(['questions', 'success' => 'true', 'id' => 'key' . $question->id]);
         }
-        $questions = AcQuestionList::find()->all();
+        else if ($post && $post['edite']) {
+            $question = AcQuestionList::findOne(['id' => intval($post['id']) ]);
+            $question->load($post);
+            $question->save(false);
+            $this->redirect(['questions', 'success' => 'true', 'id' => 'key' . $question->id]);
+        }
+        $questions = AcQuestionList::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('questions', ['questions' => $questions]);
 
     }
@@ -73,6 +89,12 @@ class AdminController extends Controller {
             $question->load($post);
             $question->save(false);
             $this->redirect(['question', 'success' => 'true', 'id' => $id]);
+        }
+        else if ($post && $post['edite']) {
+            $question = AcQuestionQuests::findOne(['id' => intval($post['id']) ]);
+            $question->load($post);
+            $question->save(false);
+            $this->redirect(['question', 'id' => $question->id,'success' => 'true']);
         }
         $answers = AcQuestionQuests::find()->where(['question_id'=>$id])->all();
         $question = AcQuestionList::findOne($id);
@@ -267,15 +289,28 @@ class AdminController extends Controller {
         return $this->render('blog', ['pages' => $pages]);
     }
     public function actionLessons() {
-
+// Harut
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
+
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
             $lesson = new AcLessons();
             $lesson->load($post);
             $lesson->url = $this->transLateURRL($lesson->lesson_name_am);
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $lesson->img = "web/uploads/$name";
+            }
+            if (!empty($_FILES['certificate_img']) && $_FILES["certificate_img"]["name"]) {
+                $tmp_name = $_FILES["certificate_img"]["tmp_name"];
+                $name = time() . basename($_FILES["certificate_img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $lesson->certificate_img = "web/uploads/$name";
+            }
             $lesson->save(false);
             $this->redirect(['lessons', 'success' => 'true', 'id' => 'key' . $lesson->id]);
         }
@@ -283,11 +318,233 @@ class AdminController extends Controller {
             $lesson = AcLessons::findOne(['id' => intval($post['id']) ]);
             $lesson->load($post);
             $lesson->url = $this->transLateURRL($lesson->lesson_name_am);
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $lesson->img = "web/uploads/$name";
+            }
+            if (!empty($_FILES['certificate_img']) && $_FILES["certificate_img"]["name"]) {
+                $tmp_name = $_FILES["certificate_img"]["tmp_name"];
+                $name = time() . basename($_FILES["certificate_img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $lesson->certificate_img = "web/uploads/$name";
+            }
             $lesson->save(false);
             $this->redirect(['lessons', 'success' => 'true', 'id' => 'key' . $lesson->id]);
         }
         $lessons = AcLessons::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('lessons', ['lessons' => $lessons]);
+    }
+    public function actionSubscribers(){
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        date_default_timezone_set("Asia/Yerevan");
+        $post = Yii::$app->request->post();
+        if ($post && $post['add']) {
+            $subscribers = new AcSubscribers();
+            $subscribers->load($post);
+            $subscribers->create_date = date('Y-m-d H:i:s');
+            $subscribers->save(false);
+            $this->redirect(['subscribers', 'success' => 'true', 'id' => 'key' . $subscribers->id]);
+        }
+        else if ($post && $post['edite']) {
+            $subscribers = AcSubscribers::findOne(['id' => intval($post['id']) ]);
+            $subscribers->load($post);
+            $subscribers->create_date = date('Y-m-d H:i:s');
+            $subscribers->save(false);
+            $this->redirect(['subscribers', 'success' => 'true', 'id' => 'key' . $subscribers->id]);
+        }
+        $subscribers = AcSubscribers::find()->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('subscribers', ['subscribers' => $subscribers]);
+    }
+    public function actionTutors(){
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        date_default_timezone_set("Asia/Yerevan");
+        $post = Yii::$app->request->post();
+        if ($post && $post['add']) {
+            $tutor = new AcTutors();
+            $tutor->load($post);
+            $tutor->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $tutor->img = "web/uploads/$name";
+            }
+            $tutor->save(false);
+            $this->redirect(['tutors', 'success' => 'true', 'id' => 'key' . $tutor->id]);
+        }
+        else if ($post && $post['edite']) {
+            $tutor = AcTutors::findOne(['id' => intval($post['id']) ]);
+            $tutor->load($post);
+            $tutor->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $tutor->img = "web/uploads/$name";
+            }
+            $tutor->save(false);
+            $this->redirect(['tutors', 'success' => 'true', 'id' => 'key' . $tutor->id]);
+        }
+        $tutors = AcTutors::find()->orderBy(['order_num' => SORT_ASC])->all();
+        $lessons = AcLessons::find()->where(['status' => '1'])->all();
+        return $this->render('tutors', ['tutors' => $tutors, 'lessons' => $lessons]);
+    }
+    public function actionAlumni(){
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        date_default_timezone_set("Asia/Yerevan");
+        $post = Yii::$app->request->post();
+        if ($post && $post['add']) {
+            $alumni = new AcAlumni();
+            $alumni->load($post);
+            $alumni->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $alumni->img = "web/uploads/$name";
+            }
+            $alumni->save(false);
+            $this->redirect(['alumni', 'success' => 'true', 'id' => 'key' . $alumni->id]);
+        }
+        else if ($post && $post['edite']) {
+            $alumni = AcAlumni::findOne(['id' => intval($post['id']) ]);
+            $alumni->load($post);
+            $alumni->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $alumni->img = "web/uploads/$name";
+            }
+            $alumni->save(false);
+            $this->redirect(['alumni', 'success' => 'true', 'id' => 'key' . $alumni->id]);
+        }
+        $alumni = AcAlumni::find()->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('alumni', ['alumni' => $alumni]);
+    }
+    public function actionHaveQuestions(){
+        // Mariam
+        date_default_timezone_set("Asia/Yerevan");
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $post = Yii::$app->request->post();
+        if ($post && $post['edite']) {
+            $have_questions = AcHaveQuestions::findOne(['id' => intval($post['id']) ]);
+            $have_questions->load($post);
+            $have_questions->create_date = date('Y-m-d H:i:s');
+            $have_questions->save(false);
+            $this->redirect(['have-questions', 'success' => 'true', 'id' => 'key' . $have_questions->id]);
+        }
+        $have_questions = AcHaveQuestions::find()->with(['adminName'])->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('have-questions', ['have_questions' => $have_questions]);
+    }
+
+    public function actionCertificate(){
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        date_default_timezone_set("Asia/Yerevan");
+        $post = Yii::$app->request->post();
+        if ($post && $post['add']) {
+            if (!empty($post['AcCertificate']['user_id'])){
+                foreach ($post['AcCertificate']['user_id'] as $item){
+                    $certificate_exist = AcCertificate::find()
+                        ->where(['and',['user_id' => intval($item)],['lesson_id' => intval($post['AcCertificate']['lesson_id'])]])
+                        ->exists();
+                    if(!$certificate_exist){
+                    $certificate = new AcCertificate();
+                    $certificate->user_id = intval($item);
+                    $certificate->lesson_id = intval($post['AcCertificate']['lesson_id']);
+                    $certificate->create_date = date('Y-m-d H:i:s');
+                        if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                            $tmp_name = $_FILES["img"]["tmp_name"];
+                            $name = time() . basename($_FILES["img"]["name"]);
+                            move_uploaded_file($tmp_name, "web/uploads/$name");
+                            $certificate->img = "web/uploads/$name";
+                            $certificate->save(false);
+                        }
+                    }
+                }
+            }
+            $this->redirect(['certificate', 'success' => 'true', 'id' => 'key' . $certificate->id]);
+        }
+        else if ($post && $post['edite']) {
+            $certificate = AcCertificate::findOne(['id' => intval($post['id']) ]);
+            $certificate->load($post);
+            $certificate->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $certificate->img = "web/uploads/$name";
+            }
+            $certificate->save(false);
+            $this->redirect(['certificate', 'success' => 'true', 'id' => 'key' . $certificate->id]);
+        }
+        $certificate = AcCertificate::find()->with(['userName','lessons'])->orderBy(['order_num' => SORT_ASC])->all();
+        $lessons = AcLessons::find()->where(['status' => '1'])->all();
+        $alumni = User::find()->select('user.id as user_id,username,')
+            ->leftJoin('ac_my_lessons','ac_my_lessons.user_id = user.id')
+            ->where(['and',['user.status' => '1'],['role' => null],['complete_percent' => 100]])
+            ->asArray()
+            ->all();
+        return $this->render('certificate', ['certificate' => $certificate,'lessons' => $lessons,'alumni' => $alumni]);
+    }
+    public function actionInfo(){
+        // Harut
+        date_default_timezone_set("Asia/Yerevan");
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $post = Yii::$app->request->post();
+        if ($post && $post['edite']) {
+            $info = AcInfo::findOne(['id' => intval($post['id']) ]);
+            $info->load($post);
+            $info->create_date = date('Y-m-d H:i:s');
+            $info->save(false);
+            $this->redirect(['info', 'success' => 'true', 'id' => 'key' . $info->id]);
+        }
+        $info = AcInfo::find()->all();
+        return $this->render('info', ['info' => $info]);
+    }
+    public function actionApply(){
+        // Harut
+        date_default_timezone_set("Asia/Yerevan");
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $apply_now = AcApplyNow::find()->with('lesson')->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('apply-now', ['apply_now' => $apply_now]);
+    }
+    public function actionCallback(){
+        // Harut
+        date_default_timezone_set("Asia/Yerevan");
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $post = Yii::$app->request->post();
+        if ($post && $post['edite']) {
+            $call_back = AcCallback::findOne(['id' => intval($post['id']) ]);
+            $call_back->load($post);
+            $call_back->create_date = date('Y-m-d H:i:s');
+            $call_back->save(false);
+            $this->redirect(['callback', 'success' => 'true', 'id' => 'key' . $call_back->id]);
+        }
+        $call_back = AcCallback::find()->with(['courses', 'adminName'])->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('callback', ['call_back' => $call_back]);
     }
     public function actionBlog_() {
         if (Yii::$app->user->isGuest) {
@@ -460,6 +717,14 @@ class AdminController extends Controller {
         $page = AcBlog::findOne(['id' => $id]);
         return $this->renderAjax('page-edite-popup', ['page' => $page]);
     }
+    public function actionQuestionEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $question = AcQuestionQuests::findOne(['id' => $id]);
+        return $this->renderAjax('questionquest-edite-popup', ['question' => $question]);
+    }
     public function actionPartnerEdite() {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
@@ -475,6 +740,88 @@ class AdminController extends Controller {
         $id = intval($_GET['id']);
         $lesson = AcLessons::findOne(['id' => $id]);
         return $this->renderAjax('lesson-edite-popup', ['lesson' => $lesson]);
+    }
+
+    public function actionInfoEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $info = AcInfo::findOne(['id' => $id]);
+        return $this->renderAjax('info-edite-popup', ['info' => $info]);
+    }
+    public function actionSubscribersEdite() {
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $subscribers = AcSubscribers::findOne(['id' => $id]);
+        return $this->renderAjax('subscribers-edite-popup', ['subscribers' => $subscribers]);
+    }
+    public function actionCategoryEdite() {
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $questions = AcQuestionList::findOne(['id' => $id]);
+        return $this->renderAjax('questionslist-edite-popup', ['questions' => $questions]);
+    }
+    public function actionAlumniEdite() {
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $alumni = AcAlumni::findOne(['id' => $id]);
+        return $this->renderAjax('alumni-edite-popup', ['alumni' => $alumni]);
+    }
+    public function actionCertificateEdite() {
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $certificate = AcCertificate::find()->with('userName')->where(['id' => $id])->one();
+        $lessons = AcLessons::find()->where(['status' => '1'])->all();
+        $alumni = User::find()->select('user.id as user_id,username,')
+            ->leftJoin('ac_my_lessons','ac_my_lessons.user_id = user.id')
+            ->where(['and',['user.status' => '1'],['role' => null],['complete_percent' => 100]])
+            ->asArray()
+            ->all();
+        return $this->renderAjax('certificate-edite-popup', ['certificate' => $certificate, 'lessons' => $lessons, 'alumni' => $alumni]);
+    }
+    public function actionHaveQuestionsEdite() {
+        // Mariam
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $have_questions = AcHaveQuestions::findOne(['id' => $id]);
+        $admin = User::find()->where(['and',['status' => '1'],['not', ['role' => null]]])->all();
+        return $this->renderAjax('have-questions-edite-popup', ['have_questions' => $have_questions, 'admin' => $admin]);
+    }
+    public function actionCallbackEdite() {
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $callback = AcCallback::findOne(['id' => $id]);
+        $lessons = AcLessons::find()->where(['status' => '1'])->all();
+        $admin = User::find()->where(['and',['status' => '1'],['not', ['role' => null]]])->all();
+        return $this->renderAjax('callback-edite-popup', ['callback' => $callback, 'lessons' => $lessons, 'admin' => $admin]);
+    }
+    public function actionTutorsEdite() {
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $tutors = AcTutors::findOne(['id' => $id]);
+        $lessons = AcLessons::find()->all();
+        return $this->renderAjax('tutors-edite-popup', ['tutors' => $tutors, 'lessons' => $lessons]);
     }
     public function actionAnswerhthEdite() {
         if (Yii::$app->user->isGuest) {
@@ -560,6 +907,103 @@ class AdminController extends Controller {
         $lesson->save(false);
         return true;
     }
+    public function actionSubscribersDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $subscribers = AcSubscribers::findOne(['id' => $id]);
+        if ($subscribers->status) {
+            $subscribers->status = 0;
+        }
+        else {
+            $subscribers->status = 1;
+        }
+
+        $subscribers->save(false);
+        return true;
+    }
+    public function actionTutorsDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $tutors = AcTutors::findOne(['id' => $id]);
+        if ($tutors->status) {
+            $tutors->status = 0;
+        }
+        else {
+            $tutors->status = 1;
+        }
+
+        $tutors->save(false);
+        return true;
+    }
+    public function actionAlumniDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $tutors = AcAlumni::findOne(['id' => $id]);
+        if ($tutors->status) {
+            $tutors->status = 0;
+        }
+        else {
+            $tutors->status = 1;
+        }
+
+        $tutors->save(false);
+        return true;
+    }
+    public function actionHaveQuestionsDisable() {
+        // Mariam
+        $id = intval($_GET['id']);
+        $tutors = AcHaveQuestions::findOne(['id' => $id]);
+        if ($tutors->status) {
+            $tutors->status = 0;
+        }
+        else {
+            $tutors->status = 1;
+        }
+        $tutors->save(false);
+        return true;
+    }
+    public function actionCertificateDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $certificate = AcCertificate::findOne(['id' => $id]);
+        if ($certificate->status) {
+            $certificate->status = 0;
+        }
+        else {
+            $certificate->status = 1;
+        }
+
+        $certificate->save(false);
+        return true;
+    }
+    public function actionCallbackDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $callback = AcCallback::findOne(['id' => $id]);
+        if ($callback->status) {
+            $callback->status = 0;
+        }
+        else {
+            $callback->status = 1;
+        }
+
+        $callback->save(false);
+        return true;
+    }
+    public function actionApplyDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $apply_now = AcApplyNow::findOne(['id' => $id]);
+        if ($apply_now->status) {
+            $apply_now->status = 0;
+        }
+        else {
+            $apply_now->status = 1;
+        }
+
+        $apply_now->save(false);
+        return true;
+    }
     public function actionQuestDisable() {
         $id = intval($_GET['id']);
         $quest = AcQuestionQuests::findOne(['id' => $id]);
@@ -614,7 +1058,31 @@ class AdminController extends Controller {
         $item->save(false);
         return true;
     }
-
+     public function actionAdminAnswers()
+     {
+         if (!empty($_GET) && $_GET['check'] == 'on'){
+             $admin_id = Yii::$app->user->id;
+             $id = intval($_GET['id']);
+             $admin_answers = AcCallback::findOne($id);
+             $admin_answers->checked_answer = '1';
+             $admin_answers->answer_admin_id = $admin_id;
+             $admin_answers->save(false);
+             return true;
+         }
+     }
+    public function actionAdminAnswersQuestions()
+    {
+        //  Mariam
+        if (!empty($_GET) && $_GET['check'] == 'on'){
+            $admin_id = Yii::$app->user->id;
+            $id = intval($_GET['id']);
+            $admin_answers = AcHaveQuestions::findOne($id);
+            $admin_answers->checked_answer = '1';
+            $admin_answers->answer_admin_id = $admin_id;
+            $admin_answers->save(false);
+            return true;
+        }
+    }
 
     /**
      * Login action.
@@ -695,4 +1163,20 @@ class AdminController extends Controller {
      *
      * @return Response|string
      */
+    // Mariam
+    public function actionUpdateOrder() {
+        echo "<pre>";
+        var_dump($_POST);
+        if ($this->request->isPost) {
+            if (!empty($_POST['orders']) && !empty($_POST['page'])) {
+                foreach ($_POST['orders'] as $i => $row) {
+                    $order_num = $_POST['page']::findOne($row['id']);
+                    $order_num->order_num = $row['order'];
+//                    var_dump($order_num);
+                    die;
+                }
+            }
+        }
+    }
+
 }

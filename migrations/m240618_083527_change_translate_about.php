@@ -12,6 +12,8 @@ class m240618_083527_change_translate_about extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->update('texts',[
             'text_am' => 'IEA-Ի ՄԱՍԻՆ',
             'text_ru'  => 'О IEA',

@@ -12,6 +12,8 @@ class m240611_133228_edite_quize_name extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->update('texts',[
             'text_am' => 'QUIZE',
         ], ['id' => 20]);

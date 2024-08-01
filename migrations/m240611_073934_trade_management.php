@@ -12,6 +12,8 @@ class m240611_073934_trade_management extends Migration
      */
     public function safeUp()
     {
+        /*Mariam*/
+
         $this->insert('texts', [
             'slug' => 'questionQuize',
             'text_am' => 'Ինչպե՞ս է կոչվում «1C: ԱռևՎտրի կառավարում» հիմնական կոնֆիգուրացիան, որը պարունակում է համակարգի հիմնական կարգավորումներն ու ֆունկցիոնալությունը:',

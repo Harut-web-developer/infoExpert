@@ -12,6 +12,8 @@ class m240718_141624_create_alumni_table extends Migration
      */
     public function safeUp()
     {
+//        Mariam 50 ev Harut 50
+
         $this->createTable('{{%ac_alumni}}', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer(11)->defaultValue(null),

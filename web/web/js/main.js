@@ -1,5 +1,4 @@
 $.noConflict();
-
 function addChild(id) {
 	jQuery('.standardSelect').val(id).trigger("chosen:updated");
 	jQuery('#addnew').modal('show');
@@ -9,6 +8,16 @@ function editeCategory(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/category-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeQuestion(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/question-edite?id=" + id,
 			success: function(result) {
 				jQuery(".modals").html(result);
 			}
@@ -76,6 +85,83 @@ function editeLesson(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/lesson-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeSubscribers(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/subscribers-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeAlumni(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/alumni-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeHaveQuestions(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/have-questions-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeCertificate(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/certificate-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeCallback(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/callback-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeInfo(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/info-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeTutors(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/tutors-edite?id=" + id,
 			success: function(result) {
 				jQuery(".modals").html(result);
 			}
@@ -180,6 +266,76 @@ function disableLesson(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/lesson-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableSubscribers(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/subscribers-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableTutors(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/tutors-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableCertificate(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/certificate-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableAlumni(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/alumni-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableHaveQuestions(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/have-questions-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableCallback(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/callback-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disablApply(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/apply-disable?id=" + id,
 			success: function(result) {
 				window.location.reload();
 			}
@@ -358,7 +514,6 @@ function copyProduct(id) {
 	}
 }
 jQuery(document).ready(function($) {
-
 	"use strict";
 	[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function(el) {
 		new SelectFx(el);
@@ -397,8 +552,7 @@ jQuery(document).ready(function($) {
        $('.tbl').scrollLeft( $('.tbl').scrollLeft()-400 );
     } else {
         $('.tbl').scrollLeft($('.tbl').scrollLeft()+400 );
-    };
-
+    }
 
 });
 
@@ -408,6 +562,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#edite', function(event) {
 		var id = $('.sortable li.active').attr('data-id');
 		editeCategory(id);
+	})
+	$('body').on('click', '#editeQuestion', function(event) {
+		var id = $('.sortable li.active').attr('data-id');
+		editeQuestion(id);
 	});
 	$('body').on('click', '#editeDiscount', function(event) {
 
@@ -462,7 +620,7 @@ jQuery(document).ready(function($) {
 	});
 	$('body').on('click', '#editeBlog', function(event) {
 		var id = $('.sortableTable tr.active').attr('data-id');
-		editeBlog(id);
+        editeBlog(id);
 	});
 	$('body').on('click', '#editeManager', function(event) {
 		var id = $('.sortableTable tr.active').attr('data-id');
@@ -512,6 +670,34 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeLesson(id);
 	});
+	$('body').on('click', '#editeSubscribers', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeSubscribers(id);
+	});
+	$('body').on('click', '#editeAlumni', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeAlumni(id);
+	});
+	$('body').on('click', '#editeHaveQuestions', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeHaveQuestions(id);
+	});
+	$('body').on('click', '#editeCertificate', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeCertificate(id);
+	});
+	$('body').on('click', '#editeCallback', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeCallback(id);
+	});
+	$('body').on('click', '#editeInfo', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeInfo(id);
+	});
+	$('body').on('click', '#editeTutors', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeTutors(id);
+	});
 	$('body').on('click', '#copyParams', function(event) {
 		var id = $('.sortable li.active').attr('data-id');
 		copyParams(id);
@@ -543,6 +729,34 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#disableLesson', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableLesson(id);
+	});
+	$('body').on('click', '#disableSubscribers', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableSubscribers(id);
+	});
+	$('body').on('click', '#disableTutors', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableTutors(id);
+	});
+	$('body').on('click', '#disableCertificate', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableCertificate(id);
+	});
+	$('body').on('click', '#disableAlumni', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableAlumni(id);
+	});
+	$('body').on('click', '#disableHaveQuestions', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableHaveQuestions(id);
+	});
+	$('body').on('click', '#disableCallback', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableCallback(id);
+	});
+	$('body').on('click', '#disablApply', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disablApply(id);
 	});
 	$('body').on('click', '#disableAnswer', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
@@ -637,6 +851,52 @@ jQuery(document).ready(function($) {
 		}
 
 	});
-
-
+	$('body').on('click', '.checkedAnswer', function () {
+		let call_id = $(this).closest('tr').data('id');
+		let check = $(this).val();
+		let csrfToken = $('meta[name="csrf-token"]').attr("content");
+		$.ajax({
+			url:'/admin/admin-answers',
+			method: 'get',
+			data: {
+				check: check,
+				id: call_id,
+				_csrf:csrfToken,
+			},
+			success: function (data) {
+				if(data){
+					window.location.reload();
+				}
+			}
+		})
+	})
+	// Mariam
+	$('body').on('click', '.checkedAnswerHaveQuestions', function () {
+		let call_id = $(this).closest('tr').data('id');
+		let check = $(this).val();
+		let csrfToken = $('meta[name="csrf-token"]').attr("content");
+		$.ajax({
+			url:'/admin/admin-answers-questions',
+			method: 'get',
+			data: {
+				check: check,
+				id: call_id,
+				_csrf:csrfToken,
+			},
+			success: function (data) {
+				if(data){
+					window.location.reload();
+				}
+			}
+		})
+	})
+	// Mariam
+	$('body').on('click', '#sendEmailButton', function () {
+		var email = document.getElementById('emailInput').value;
+		if (email) {
+			window.location.href = 'mailto:' + email + '?subject=Response to your question';
+		} else {
+			alert('Խնդրում ենք մուտքագրել գործող էլեկտրոնային հասցե');
+		}
+	});
 });

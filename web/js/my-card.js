@@ -1,3 +1,4 @@
+// Mariam
 document.addEventListener("DOMContentLoaded", function () {
     function slider(carousel, wrapper, firstCard) {
         // const firstCardWidth = firstCard.offsetWidth;
@@ -53,11 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// Harut
 
 $(document).ready(function () {
     $('body').on('click','.removeItem',function () {
         let itemId = $(this).data('remove');
-        let thisItem = $(this);
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
         $.ajax({
             url: '/my-card/remove-item',
@@ -69,22 +70,41 @@ $(document).ready(function () {
             },
             success: function (data) {
                 let parseData = JSON.parse(data);
-                if (parseData === 'remove'){
-                    thisItem.closest('.myCardBlocksField').remove();
+                if (parseData.result === 'remove'){
+                    $('body').find('.removeItem').each(function (){
+                        if ($(this).data('remove') == itemId){
+                            $(this).closest('.myCardBlocksField').remove();
+                        }
+                    })
                     let totalCount = 0;
-                    $('body').find('.myCardBlocksField').each(function () {
-                        console.log(parseInt($(this).find('.span2_2').text()))
+                    $('body').find('.myCardFieldAcceptCourses .myCardBlocksField').each(function () {
                         totalCount += parseInt($(this).find('.span2_2').text());
                     })
                     $('.totalPriceLesson').html(totalCount);
+                    if ($(window).width() < 600){
+                        if ($('.myCardBlogsSection').children('.myCardBlocksField').length === 0){
+                            $('.myCardBlogsSection').remove();
+                            $('body').find('.myCoursesTitleField').after('<div class="textForEmpty">' +
+                                '<span>'+ parseData.message +'</span>' +
+                                '</div>')
+                        }
+                    }else {
+                        if ($('.myCardFieldAcceptCourses').children('li').length === 0){
+                            $('.cardCourses').remove();
+                            $('body').find('.myCoursesProfileField').after('<div class="textForEmpty">' +
+                                '<span>'+ parseData.message +'</span>' +
+                                '</div>')
+                        }
+                    }
+
                 }
             }
         })
     })
+    // Harut
     $('body').on('click','.moveItem',function () {
         let itemId = $(this).data('move');
         let lessonId = $(this).data('lesson');
-        let thisItem = $(this);
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
         $.ajax({
             url: '/my-card/move-item',
@@ -97,8 +117,32 @@ $(document).ready(function () {
             },
             success: function (data) {
                 let parseData = JSON.parse(data);
-                if (parseData === 'moveAndDelete' || parseData === 'delete'){
-                    thisItem.closest('.myCardBlocksField').remove();
+                if (parseData.result === 'moveAndDelete' || parseData.result === 'delete'){
+                    $('body').find('.removeItem').each(function (){
+                        if ($(this).data('remove') == itemId){
+                            $(this).closest('.myCardBlocksField').remove();
+                        }
+                    })
+                    let totalCount = 0;
+                    $('body').find('.myCardFieldAcceptCourses .myCardBlocksField').each(function () {
+                        totalCount += parseInt($(this).find('.span2_2').text());
+                    })
+                    $('.totalPriceLesson').html(totalCount);
+                    if ($(window).width() < 600){
+                        if ($('.myCardBlogsSection').children('.myCardBlocksField').length === 0){
+                            $('.myCardBlogsSection').remove();
+                            $('body').find('.myCoursesTitleField').after('<div class="textForEmpty">' +
+                                '<span>'+ parseData.message +'</span>' +
+                                '</div>')
+                        }
+                    }else {
+                        if ($('.myCardFieldAcceptCourses').children('li').length === 0){
+                            $('.cardCourses').remove();
+                            $('body').find('.myCoursesProfileField').after('<div class="textForEmpty">' +
+                                '<span>'+ parseData.message +'</span>' +
+                                '</div>')
+                        }
+                    }
                 }
             }
         })

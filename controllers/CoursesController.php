@@ -18,6 +18,7 @@ class CoursesController extends \yii\web\Controller
     }
     public function beforeAction($action)
     {
+        // Mariam
         if (!isset($_COOKIE['language']) || empty($_COOKIE['language'])) {
             setcookie('language', 'am', time() + (365 * 24 * 60 * 60));
             $this->refresh();
@@ -52,6 +53,7 @@ class CoursesController extends \yii\web\Controller
     }
     public function actionIndex()
     {
+        // Harut
         $language = $_COOKIE['language'];
         $courses = AcLessons::find()->select('id, img,rating,price,lesson_name_'.$language.' as lesson_name,
          lesson_title_'.$language.' as lesson_title, lesson_certificate_'.$language.' as lesson_certificate')
@@ -69,6 +71,7 @@ class CoursesController extends \yii\web\Controller
     }
     public function actionMyCourses()
     {
+        // Harut
         $language = $_COOKIE['language'];
         $user_id = Yii::$app->user->identity->id;
         $my_lessons = AcLessons::find()->select('ac_my_lessons.id as my_lessons_id,lesson_name_'.$language.' as lesson_name,

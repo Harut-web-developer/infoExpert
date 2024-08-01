@@ -12,6 +12,8 @@ class m240703_124001_change_translate_security extends Migration
      */
     public function safeUp()
     {
+        /*Mariam*/
+
         $this->delete('texts', ['id' => 281]);
         $this->delete('texts', ['id' => 283]);
         $this->delete('texts', ['id' => 288]);

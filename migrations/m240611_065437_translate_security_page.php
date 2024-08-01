@@ -12,6 +12,8 @@ class m240611_065437_translate_security_page extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->insert('texts', [
             'slug' => 'securityTitle',
             'text_am' => 'Անվտանգություն',

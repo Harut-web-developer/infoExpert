@@ -1,3 +1,5 @@
+/*Mariam 10 ev Harut 90*/
+
 /*start tablet for header page */
 @media only screen and (min-width: 480px) and (max-width: 1100px) {
     .header{
@@ -171,52 +173,15 @@
     }
 }
 /*sectionThree*/
-@media only screen and (min-width: 600px) and (max-width: 800px) {
-    .learn{
-        top: 125px;
-        width: 98% !important;
-        height: 341px;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-    }
-}
-@media only screen and (min-width: 801px) and (max-width: 1024px) {
-    .learn{
-        top: 125px;
-        width: 88% !important;
-        height: 341px;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-    }
-}
-    @media only screen and (min-width: 600px) and (max-width: 1024px)  {
-    .sectionThree{
-        background-image: url("../images/bgTablet.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
+@media only screen and (max-width: 1024px) {
+    .carousel-courses{
         height: 609px;
+        margin-bottom: 20px;
+        --w-image: 400px;
     }
-    .learnInfo{
-        width: 53%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .learnImg{
-        width: 47%;
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-        align-items: center;
-    }
-    .learnImg > img{
-        width: 308px;
-        height: 303px;
+    .carousel-courses .list-courses .item-courses .image-courses img {
+        width: 272px;
+        height: 272px;
     }
     .managementBtn > a{
         position: relative;
@@ -257,7 +222,7 @@
         font-size: 25px;
         font-weight: 900;
         letter-spacing: 1.25px;
-        margin-top: 10px;
+        /*margin-top: 10px;*/
     }
     .coursesBg > p{
         color: white;
@@ -294,6 +259,13 @@
         letter-spacing: 2.2px;
         color: transparent;
     }
+}
+@media only screen and (max-width: 700px) {
+    .carousel-courses {
+        --w-image: 300px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1024px)  {
     .sectionFour{
         background-image: url("../images/sectionFourTablet.png");
         background-position: center;
@@ -395,98 +367,98 @@
         display: none;
     }
 }
-@media only screen and (min-width: 600px) and (max-width: 670px) {
-    .learnImg > img {
-        width: 250px;
-        height: 250px;
-    }
-    .courseLogo > img{
-        /*margin-top:10px;*/
-        margin-left: 16px;
-        width: 100%;
-        height: 21px;
-    }
-}
-@media only screen and (min-width: 1025px) and (max-width: 1200px) {
-    .learnImg > img {
-        width: 390px;
-        height: 390px;
-    }
-}
-@media only screen and (min-width: 1201px) and (max-width: 1300px) {
-    .learnImg > img {
-        width: 450px;
-        height: 450px;
-    }
-}
+/*@media only screen and (min-width: 600px) and (max-width: 670px) {*/
+/*    .learnImg > img {*/
+/*        width: 250px;*/
+/*        height: 250px;*/
+/*    }*/
+/*    .courseLogo > img{*/
+/*        !*margin-top:10px;*!*/
+/*        margin-left: 16px;*/
+/*        width: 100%;*/
+/*        height: 21px;*/
+/*    }*/
+/*}*/
+/*@media only screen and (min-width: 1025px) and (max-width: 1200px) {*/
+/*    .learnImg > img {*/
+/*        width: 390px;*/
+/*        height: 390px;*/
+/*    }*/
+/*}*/
+/*@media only screen and (min-width: 1201px) and (max-width: 1300px) {*/
+/*    .learnImg > img {*/
+/*        width: 450px;*/
+/*        height: 450px;*/
+/*    }*/
+/*}*/
 @media only screen and (min-width: 1025px) and (max-width: 1300px) {
-    .sectionThree{
-        background-image: url("../images/bg.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 800px;
-    }
-    .learn{
-        top: 100px;
-        width: 96% !important;
-        height: 600px;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-    }
+    /*.sectionThree{*/
+    /*    background-image: url("../images/bg.png");*/
+    /*    background-position: center;*/
+    /*    background-repeat: no-repeat;*/
+    /*    background-size: cover;*/
+    /*    width: 100%;*/
+    /*    height: 800px;*/
+    /*}*/
+    /*.learn{*/
+    /*    top: 100px;*/
+    /*    width: 96% !important;*/
+    /*    height: 600px;*/
+    /*    position: relative;*/
+    /*    display: flex;*/
+    /*    flex-direction: row;*/
+    /*}*/
 
-    .coursesBg{
-        background-image: url('../images/rec.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        width: 100%;
-        height: 110px;
-        top: 27px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .coursesBg > span{
-        margin-top: 13px;
-        color: #F16D35;
-        font-family: "RobotoSlab_", sans-serif;
-        font-size: 30px;
-        font-weight: 900;
-        letter-spacing: 1.5px;
-    }
-    .coursesBg > p{
-        color: white;
-        font-size: 22px;
-        font-family: "Roboto_", sans-serif;
-        font-width: 400;
-    }
-    .courseLogo{
-        width: 80px;
-    }
-    .courseLogo > img{
-        margin-top:15px;
-        /*margin-left:40px;*/
-        width: 80px;
-    }
-    .courseTitle{
-        width: 100%;
-        padding-left:30px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-    .courseTitle > span{
-        -webkit-text-stroke: 2px white;
-        font-size: 30px;
-        font-weight: 900;
-        letter-spacing: 4px;
-        color: transparent;
-    }
+    /*.coursesBg{*/
+    /*    background-image: url('../images/rec.png');*/
+    /*    background-position: center;*/
+    /*    background-repeat: no-repeat;*/
+    /*    background-size: cover;*/
+    /*    position: relative;*/
+    /*    width: 100%;*/
+    /*    height: 110px;*/
+    /*    top: 27px;*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*}*/
+    /*.coursesBg > span{*/
+    /*    margin-top: 13px;*/
+    /*    color: #F16D35;*/
+    /*    font-family: "RobotoSlab_", sans-serif;*/
+    /*    font-size: 30px;*/
+    /*    font-weight: 900;*/
+    /*    letter-spacing: 1.5px;*/
+    /*}*/
+    /*.coursesBg > p{*/
+    /*    color: white;*/
+    /*    font-size: 22px;*/
+    /*    font-family: "Roboto_", sans-serif;*/
+    /*    font-width: 400;*/
+    /*}*/
+    /*.courseLogo{*/
+    /*    width: 80px;*/
+    /*}*/
+    /*.courseLogo > img{*/
+    /*    margin-top:15px;*/
+    /*    !*margin-left:40px;*!*/
+    /*    width: 80px;*/
+    /*}*/
+    /*.courseTitle{*/
+    /*    width: 100%;*/
+    /*    padding-left:30px;*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    align-items: start;*/
+    /*}*/
+    /*.courseTitle > span{*/
+    /*    -webkit-text-stroke: 2px white;*/
+    /*    font-size: 30px;*/
+    /*    font-weight: 900;*/
+    /*    letter-spacing: 4px;*/
+    /*    color: transparent;*/
+    /*}*/
     .managementBtn > a > img{
         width: 175px;
     }
@@ -501,83 +473,83 @@
         text-align: center;
         color: #F36528;
     }
-    .logoManagement {
-        width: 520px;
-    }
+    /*.logoManagement {*/
+    /*    width: 520px;*/
+    /*}*/
 }
 @media only screen and (min-width: 1301px) and (max-width: 1660px) {
-    .sectionThree{
-        background-image: url("../images/bg.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 1080px;
-    }
-    .learn{
-        top: 188px;
-        width: 94% !important;
-        height: 639px;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-    }
-    .logoManagement {
-        width: 600px;
-    }
-    .learnImg > img {
-        width: 430px;
-        height: 430px;
-    }
-    .coursesBg{
-        background-image: url('../images/rec.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        width: 100%;
-        height: 120px;
-        top: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .coursesBg > span{
-        color: #F16D35;
-        font-family: "RobotoSlab_", sans-serif;
-        font-size: 35px;
-        font-weight: 900;
-        letter-spacing: 2px;
-    }
-    .coursesBg > p{
-        color: white;
-        font-size: 27px;
-        font-family: "Roboto_", sans-serif;
-        font-width: 400;
-    }
-    .courseLogo{
-        width: 112px;
-    }
-    .courseLogo > img{
-        margin-top:15px;
-        margin-left:25px;
-        width: 90px;
-    }
-    .courseTitle{
-        width:100%;
-        padding-left: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-    .courseTitle > span{
-        -webkit-text-stroke: 2px white;
-        font-size: 43px;
-        font-weight: 900;
-        letter-spacing: 5.28px;
-        color: transparent;
-    }
+    /*.sectionThree{*/
+    /*    background-image: url("../images/bg.png");*/
+    /*    background-position: center;*/
+    /*    background-repeat: no-repeat;*/
+    /*    background-size: cover;*/
+    /*    width: 100%;*/
+    /*    height: 1080px;*/
+    /*}*/
+    /*.learn{*/
+    /*    top: 188px;*/
+    /*    width: 94% !important;*/
+    /*    height: 639px;*/
+    /*    position: relative;*/
+    /*    display: flex;*/
+    /*    flex-direction: row;*/
+    /*}*/
+    /*.logoManagement {*/
+    /*    width: 600px;*/
+    /*}*/
+    /*.learnImg > img {*/
+    /*    width: 430px;*/
+    /*    height: 430px;*/
+    /*}*/
+    /*.coursesBg{*/
+    /*    background-image: url('../images/rec.png');*/
+    /*    background-position: center;*/
+    /*    background-repeat: no-repeat;*/
+    /*    background-size: cover;*/
+    /*    position: relative;*/
+    /*    width: 100%;*/
+    /*    height: 120px;*/
+    /*    top: 30px;*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*}*/
+    /*.coursesBg > span{*/
+    /*    color: #F16D35;*/
+    /*    font-family: "RobotoSlab_", sans-serif;*/
+    /*    font-size: 35px;*/
+    /*    font-weight: 900;*/
+    /*    letter-spacing: 2px;*/
+    /*}*/
+    /*.coursesBg > p{*/
+    /*    color: white;*/
+    /*    font-size: 27px;*/
+    /*    font-family: "Roboto_", sans-serif;*/
+    /*    font-width: 400;*/
+    /*}*/
+    /*.courseLogo{*/
+    /*    width: 112px;*/
+    /*}*/
+    /*.courseLogo > img{*/
+    /*    margin-top:15px;*/
+    /*    margin-left:25px;*/
+    /*    width: 90px;*/
+    /*}*/
+    /*.courseTitle{*/
+    /*    width:100%;*/
+    /*    padding-left: 25px;*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    align-items: start;*/
+    /*}*/
+    /*.courseTitle > span{*/
+    /*    -webkit-text-stroke: 2px white;*/
+    /*    font-size: 43px;*/
+    /*    font-weight: 900;*/
+    /*    letter-spacing: 5.28px;*/
+    /*    color: transparent;*/
+    /*}*/
     .managementBtn > a > img{
         width: 200px;
     }
@@ -945,6 +917,8 @@
 
 @media only screen and (max-width: 1100px) {
     .testimonialPage {
+        width: 86%;
+        margin: 0px 5.76% 0 6.83%;
         padding-top: 110px;
     }
 }
@@ -1136,6 +1110,9 @@
     }
     .slide-content {
         height: 350px;
+    }
+    .pageTestimonial {
+        height: 450px !important;
     }
 }
 @media only screen and (min-width: 1280px) and (max-width: 1340px) {
@@ -1948,6 +1925,12 @@
         color: #1C5484;
     }
 }
+
+@media only screen and  (max-width: 1100px) {
+    .siteMapField{
+        display: none;
+    }
+}
 @media only screen and (min-width: 1190px) and (max-width: 1230px) {
     .cardsimg{
         height: 162px;
@@ -2321,7 +2304,7 @@
 }
 @media only screen and (min-width: 600px) and (max-width: 740px) {
     .footerBackground{
-        margin-top: -53px;
+        margin-top: -60px;
         background-image: url("../images/footerbgMiddleSize.png");
         background-repeat: no-repeat;
         background-size: cover;
@@ -2475,7 +2458,7 @@
         flex-direction: row;
         justify-content: center;
     }
-    .formName > span{
+    .quize-title{
         text-align: center;
         font-family: "Roboto_",sans-serif;
         font-size: 14px;
@@ -2570,7 +2553,7 @@
 }
 @media only screen and (min-width: 741px) and (max-width: 1340px) {
     .footerBackground{
-        margin-top: -53px;
+        margin-top: -70px;
         background-image: url("../images/footerbg.png");
         background-repeat: no-repeat;
         background-size: cover;
@@ -2729,7 +2712,7 @@
         flex-direction: row;
         justify-content: center;
     }
-    .formName > span{
+    .quize-title{
         text-align: center;
         font-family: "Roboto_",sans-serif;
         font-size: 14px;
@@ -2778,7 +2761,7 @@
         border:none;
     }
     .paypalFooter{
-        width: 641px;
+        width: 647px;
         height: 19px;
         display: flex;
         flex-direction: row;
@@ -2789,6 +2772,14 @@
         width: max-content;
         height: 13px;
         font-family: "Roboto_",sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        color: white;
+    }
+    .siteMapField {
+        width: max-content;
+        height: 13px;
+        font-family: "Roboto_", sans-serif;
         font-size: 10px;
         font-weight: 500;
         color: white;
@@ -2812,7 +2803,7 @@
     }
     .payLogoFooter{
         height: 19px;
-        width: 63px;
+        width: 73px;
         display:flex;
         flex-direction: row;
         justify-content: space-between;

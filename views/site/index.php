@@ -1,3 +1,4 @@
+<!-- Mariam 30 ev Harut 70-->
 <?php
 
 use app\models\AcLessons;
@@ -16,10 +17,10 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     <div class="apply">
         <span class="applyMarket"><?=$GLOBALS['text']['sectionOneMarket']?></span>
         <span class="boundaries"><?=$GLOBALS['text']['sectionOneBoundaries']?></span>
-        <?php if (!empty($lessons)){
+        <?php
         $lang = $_COOKIE['language'];
-        $lessons = AcLessons::find()->select('id,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
-        ?>
+        $lessons_apply = AcLessons::find()->select('id,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
+        if (!empty($lessons_apply)){?>
         <a href="/apply-now/index">
             <img src="/images/apply.png" alt="">
             <span><?=$GLOBALS['text']['__applynow__']?></span>
@@ -32,7 +33,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <div class="numbersInfo">
             <img src="/images/partnerinfoimg.png" alt="">
             <div class="counter-container">
-                <span class="numberSectionTwo">350</span>
+                <span class="numberSectionTwo"><?=$url_info['partner']?></span>
                 <span class="addSymbol">+</span>
             </div>
             <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoPartner']?></span>
@@ -40,7 +41,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <div class="numbersInfo">
             <img src="/images/productinfoimg.png" alt="">
             <div class="counter-container">
-                <span class="numberSectionTwo">17</span>
+                <span class="numberSectionTwo"><?=$url_info['products']?></span>
                 <span class="addSymbol">+</span>
             </div>
             <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProduct']?></span>
@@ -48,7 +49,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         <div class="numbersInfo">
             <img src="/images/programminfoimg.png" alt="">
             <div class="counter-container">
-                <span class="numberSectionTwo">500</span>
+                <span class="numberSectionTwo"><?=$url_info['programms']?></span>
                 <span class="addSymbol">+</span>
             </div>
             <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProgram']?></span>
@@ -60,7 +61,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <div class="numbersInfo">
                     <img src="/images/partnerinfoimg.png" alt="">
                     <div class="counter-container">
-                        <span class="numberSectionTwo">350</span>
+                        <span class="numberSectionTwo"><?=$url_info['partner']?></span>
                         <span class="addSymbol">+</span>
                     </div>
                     <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoPartner']?></span>
@@ -70,7 +71,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <div class="numbersInfo">
                     <img src="/images/productinfoimg.png" alt="">
                     <div class="counter-container">
-                        <span class="numberSectionTwo">17</span>
+                        <span class="numberSectionTwo"><?=$url_info['products']?></span>
                         <span class="addSymbol">+</span>
                     </div>
                     <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProduct']?></span>
@@ -80,7 +81,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <div class="numbersInfo">
                     <img src="/images/programminfoimg.png" alt="">
                     <div class="counter-container">
-                        <span class="numberSectionTwo">500</span>
+                        <span class="numberSectionTwo"><?=$url_info['programms']?></span>
                         <span class="addSymbol">+</span>
                     </div>
                     <span class="textSectionTwo"><?=$GLOBALS['text']['sectionTwoProgram']?></span>
@@ -89,65 +90,128 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         </div>
     </div>
 </div>
-<div class="sectionThree sliderWrapper">
-    <div class="sliderCourses">
-        <div class="slider">
-            <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
-                <div class="learn slide">
-                    <div class="learnInfo">
-                        <div class="coursesBg">
-                            <span><?=$GLOBALS['text']['sectionThreeCourses']?></span>
-                            <p><?=$GLOBALS['text']['sectionThreeLearn']?></p>
-                        </div>
-                        <div class="logoManagement">
-                            <div class="courseLogo">
-                                <img src="/images/logomanagcourse.png" alt="">
+<!--<div class="sectionThree sliderWrapper">-->
+<!--    <div class="sliderCourses">-->
+<!--        <div class="slider">-->
+<!--            --><?php
+//            if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
+<!--                <div class="learn slide">-->
+<!--                    <div class="learnInfo">-->
+<!--                        <div class="coursesBg">-->
+<!--                            <span>--><?php //=$GLOBALS['text']['sectionThreeCourses']?><!--</span>-->
+<!--                            <p>--><?php //=$GLOBALS['text']['sectionThreeLearn']?><!--</p>-->
+<!--                        </div>-->
+<!--                        <div class="logoManagement">-->
+<!--                            <div class="courseLogo">-->
+<!--                                <img src="/images/logomanagcourse.png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="courseTitle">-->
+<!--                                <span>--><?php //=$lesson['lesson_name']?><!--</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="managementBtn">-->
+<!--                            <a href="/courses/index">-->
+<!--                                <img src="/images/logomanag.png" alt="">-->
+<!--                                <span>--><?php //=$GLOBALS['text']['sectionThreeBtn']?><!--</span>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="learnImg">-->
+<!--                        <img src="/--><?php //=$lesson['img']?><!--" alt="">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            --><?php //}}?>
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="sliderCoursesMobile">-->
+<!--        <div class="slider">-->
+<!--            --><?php //if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
+<!--                <div class="learnMobile slide">-->
+<!--                    <img src="/--><?php //=$lesson['img']?><!--" alt="">-->
+<!--                    <div class="coursesBg">-->
+<!--                        <span>--><?php //=$GLOBALS['text']['sectionThreeCourses']?><!--</span>-->
+<!--                        <p>--><?php //=$GLOBALS['text']['sectionThreeLearn']?><!--</p>-->
+<!--                    </div>-->
+<!--                    <div class="logoManagement">-->
+<!--                        <div class="courseLogo">-->
+<!--                            <img src="/images/logomanagcourse.png" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="courseTitle">-->
+<!--                            <span>--><?php //=$lesson['lesson_name']?><!--</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <a href="/courses/index">-->
+<!--                        <img src="/images/logomanag.png" alt="">-->
+<!--                        <span>--><?php //=$GLOBALS['text']['sectionThreeBtn']?><!--</span>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            --><?php //}}?>
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--Mariam-->
+<div class="carousel-courses next-courses">
+    <div class="list-courses">
+        <?php
+        if ((intval($_COOKIE['screenWidth'])) <= 599){
+            $img = [
+                'url("../images/mobileImgCourse.png")',
+                'url("../images/bg-m.png")',
+                'url("../images/bg-m-1.png")',
+                'url("../images/bg-m-2.png")',
+            ];
+        }else{
+            $img = [
+                'url("../images/bg.png")',
+                'url("../images/bg1.png")',
+                'url("../images/bg2.png")',
+                'url("../images/bg3.png")',
+            ];
+        }
+
+        if (!empty($lessons_courses)) {
+            foreach ($lessons_courses as $i => $lesson) {
+                $bgImage = $img[$i % count($img)];
+                ?>
+                <article class="item-courses <?= $i === 0 ? 'other_1-courses' : '' ?>">
+                    <div class="main-content-courses" style='background-image: <?= $bgImage ?>;'>
+                        <div class="content-courses">
+                            <div class="coursesBg">
+                                <span><?= $GLOBALS['text']['sectionThreeCourses'] ?></span>
+                                <p><?= $GLOBALS['text']['sectionThreeLearn'] ?></p>
                             </div>
-                            <div class="courseTitle">
-                                <span><?=$lesson['lesson_name']?></span>
+                            <div class="logoManagement">
+                                <div class="courseLogo">
+                                    <img src="/images/logomanagcourse.png" alt="">
+                                </div>
+                                <div class="courseTitle">
+                                    <span><?= $lesson['lesson_name'] ?></span>
+                                </div>
+                            </div>
+                            <div class="managementBtn">
+                                <a href="/courses/index">
+                                    <img src="/images/logomanag.png" alt="">
+                                    <span><?= $GLOBALS['text']['sectionThreeBtn'] ?></span>
+                                </a>
                             </div>
                         </div>
-                        <div class="managementBtn">
-                            <a href="/courses/index">
-                                <img src="/images/logomanag.png" alt="">
-                                <span><?=$GLOBALS['text']['sectionThreeBtn']?></span>
-                            </a>
-                        </div>
                     </div>
-                    <div class="learnImg">
-                        <img src="/images/Group85.png" alt="">
-                    </div>
-                </div>
-            <?php }}?>
-        </div>
+                    <figure class="image-courses">
+                        <img src="/<?= $lesson['img'] ?>" alt="">
+                    </figure>
+                </article>
+                <?php
+            }
+        }
+        ?>
     </div>
-    <div class="sliderCoursesMobile">
-        <div class="slider">
-            <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
-                <div class="learnMobile slide">
-                    <img src="/images/Group85.png" alt="">
-                    <div class="coursesBg">
-                        <span><?=$GLOBALS['text']['sectionThreeCourses']?></span>
-                        <p><?=$GLOBALS['text']['sectionThreeLearn']?></p>
-                    </div>
-                    <div class="logoManagement">
-                        <div class="courseLogo">
-                            <img src="/images/logomanagcourse.png" alt="">
-                        </div>
-                        <div class="courseTitle">
-                            <span><?=$lesson['lesson_name']?></span>
-                        </div>
-                    </div>
-                    <a href="/courses/index">
-                        <img src="/images/logomanag.png" alt="">
-                        <span><?=$GLOBALS['text']['sectionThreeBtn']?></span>
-                    </a>
-                </div>
-            <?php }}?>
-        </div>
-    </div>
+    <div class="arrows-courses">
+        <button id="prev-courses"><</button>
+        <button id="next-courses">></button>
     </div>
 </div>
+
 <div class="sectionFour" id="sectionAnswers">
     <div class="answers">
         <div class="frequency">
@@ -218,7 +282,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <div class="testimonialsText"><?=$testimonial['text']?></div>
                                 <div class="fieldsLinkdin">
                                     <span class="testimonialsAuthor"><?=$testimonial['name']?></span>
-                                    <a href="<?=$testimonial['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
+                                    <a target="<?=$testimonial['url'] ? '_blank' : ''?>" href="<?=$testimonial['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -245,7 +309,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                         <div class="testimonialsText"><?=$item['text']?></div>
                         <div class="fieldsLinkdin">
                             <span class="testimonialsAuthor"><?=$item['name']?></span>
-                            <a href="<?=$item['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
+                            <a target="<?=$item['url'] ? '_blank' : ''?>" href="<?=$item['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -284,7 +348,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <div class="cardsInfo"><?=$blog['page_title']?></div>
                             </div>
                             <div class="cardsLike">
-                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
+                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/'.$blog['url']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                                 <div class='large-font'>
                                     <ion-icon name="heart" data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'], 2) ? AcWishlist::getWishlist($blog['id'], 2) : 0?>" data-type="2">
                                         <div class='red-bg'></div>
@@ -302,7 +366,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <div></div>
             </div>
             <div class="blogBtn">
-                <a href="blog/index">
+                <a href="<?= Yii::$app->urlManager->createUrl(['blog/index'])?>">
                     <img src="/images/articlebtn.png" alt="">
                     <span><?=$GLOBALS['text']['sectionSevenBtn']?></span>
                 </a>
@@ -331,7 +395,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <div class="cardsInfo"><?=$blog['page_title']?></div>
                             </div>
                             <div class="cardsLike">
-                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$blog['id']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
+                                <a href="<?= Yii::$app->urlManager->createUrl(['blog/'.$blog['url']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
                                 <div class='large-font'>
                                     <ion-icon name="heart"  data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'],2) ? AcWishlist::getWishlist($blog['id'],2) : 0?>" data-type="2">
                                         <div class='red-bg'></div>

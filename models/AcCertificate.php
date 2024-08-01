@@ -50,4 +50,10 @@ class AcCertificate extends \yii\db\ActiveRecord
             'create_date' => 'Create Date',
         ];
     }
+    public function getLessons(){
+        return $this->hasOne(AcLessons::className(),['id' => 'lesson_id']);
+    }
+    public function getUserName(){
+        return $this->hasOne(User::className(),['id' => 'user_id']);
+    }
 }

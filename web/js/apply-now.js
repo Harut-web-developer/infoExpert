@@ -1,3 +1,4 @@
+// Harut
 $(document).ready(function () {
     $('body').on('change','#individual', function () {
         $(this).closest('.typeCoursesBlocksRadio').children('div').children('div').children('div').children('input').not(this).prop('checked',false);

@@ -12,6 +12,7 @@ class m240709_064401_create_table_my_courses extends Migration
      */
     public function safeUp()
     {
+//        Harut
         $this->createTable('ac_my_lessons', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer(11)->defaultValue(null),

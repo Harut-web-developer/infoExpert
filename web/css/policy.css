@@ -1,0 +1,144 @@
+/*Mariam */
+
+.policy {
+    width: 100%;
+    background-image: url("../images/policy-bg2.png"), url("../images/policy-bg.png");
+    background-repeat: no-repeat;
+    background-size: 837px 555px, cover;
+    background-position: center top 337px, center;
+}
+.bodyPolicy{
+    display: flex;
+    width: 67%;
+    margin: 0px auto;
+    padding-top: 212px;
+    padding-bottom: 107px;
+    flex-direction: column;
+}
+.policyTitleAll{
+    width: 100%;
+}
+.policiyTxt{
+    font-family: 'Roboto_', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #FFFFFF;
+    padding-top: 660px;
+}
+.ellipseButton{
+    display: none;
+}
+.backButton{
+    display: none;
+}
+.policyTitle{
+    color: #F16D35;
+    font-family: 'Roboto_',sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 52.75px;
+    letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 1300px) {
+    .policy{
+        background-size: 737px 488px, cover;
+        background-position: center top 290px, center;
+    }
+    .policyTitle {
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 35.75px;
+    }
+    .policiyTxt {
+        padding-top: 540px;
+        font-size: 17px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .policyBackButton {
+        display: contents;
+    }
+    .backButton {
+        width: 40px;
+        height: 40px;
+        display: block;
+        position: absolute;
+    }
+    .bodyPolicy{
+        width: auto;
+        margin: 0px 5.76% 0px 6.83%;
+        padding-top: 95px;
+    }
+    .policyTitle{
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .policy {
+        background-size: 537px 353px, cover;
+        background-position: center top 190px, center;
+    }
+    .policiyTxt{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        padding-top: 450px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .policyTitle {
+        font-size: 22px;
+        margin-left: 29px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .ellipseButton {
+        display: block;
+        position: absolute;
+    }
+    .backButton {
+        width: 30px;
+        height: 30px;
+    }
+    .policyTitle{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21.1px;
+        margin-left: 36px;
+    }
+    .policy {
+        background-color: #5D9A9D;
+        background-size: 400px 271px, cover;
+        background-position: center top 154px, center;
+    }
+    .policiyTxt {
+        font-size: 14px;
+        line-height: 17px;
+        padding-top: 317px;
+    }
+    .bodyPolicy {
+        padding-bottom: 45px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .policy {
+        background-size: 358px 234px, cover;
+        background-position: center top 154px, center;
+    }
+    .policiyTxt {
+        padding-top: 280px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .policy {
+        background-size: 280px 188px, cover;
+    }
+    .policiyTxt {
+        padding-top: 230px;
+    }
+}

@@ -113,16 +113,19 @@ function display_list($nested_categories, $type = 'sortable', $level = 0)
                             <br>
                             <div class="tab-pane fade active show" id="custom-nav-home" role="tabpanel" aria-labelledby="custom-nav-home-tab">
                                 <div class="form-group ">
+                                    <span>Անվանում</span>
                                     <input type="text" name="AcQuestionList[name_am]" required placeholder="Անվանում" class="form-control">
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-profile" role="tabpanel" aria-labelledby="custom-nav-profile-tab">
                                 <div class="form-group">
+                                    <span>Անվանում</span>
                                     <input type="text" name="AcQuestionList[name_ru]" required placeholder="Անվանում" class="form-control">
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-contact" role="tabpanel" aria-labelledby="custom-nav-contact-tab">
                                 <div class="form-group">
+                                    <span>Անվանում</span>
                                     <input type="text" name="AcQuestionList[name_en]" required placeholder="Անվանում" class="form-control">
                                 </div>
                             </div>

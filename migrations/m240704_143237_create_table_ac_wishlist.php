@@ -12,6 +12,8 @@ class m240704_143237_create_table_ac_wishlist extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->createTable('ac_wishlist', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer(11)->defaultValue(null),

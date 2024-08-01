@@ -12,6 +12,8 @@ class m240713_073733_add_columns_for_lessons_table extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->addColumn('ac_lessons', 'img', $this->string(255)->defaultValue(null)->after('lesson_content_en'));
         $this->addColumn('ac_lessons', 'price', $this->integer(11)->defaultValue(null)->after('lesson_content_en'));
         $this->addColumn('ac_lessons', 'rating', $this->integer(11)->defaultValue(null)->after('lesson_content_en'));

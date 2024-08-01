@@ -12,6 +12,8 @@ class m240712_065425_delete_passwordIncludeSecurity extends Migration
      */
     public function safeUp()
     {
+//        Mariam
+
         $ids = [309, 310, 311, 312, 313, 314];
         foreach ($ids as $id) {
             $this->delete('texts', ['id' => $id]);

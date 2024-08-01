@@ -12,6 +12,8 @@ class m240613_103440_courseTitleEdit extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->update('texts',[
             'text_am' => 'լավագույնների',
             'text_ru' => 'от',

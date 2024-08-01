@@ -1,3 +1,5 @@
+/*Mariam 50 ev Harut 50*/
+
 .personelManagement{
     width: 100%;
     background-image: url("../images/background-personnel-managment.png");
@@ -9,6 +11,9 @@
 }
 .backButton, .ellipseButton{
     display: none;
+}
+.zxc{
+    margin-right: 20px;
 }
 .sizeLikeField{
     width: min-content;

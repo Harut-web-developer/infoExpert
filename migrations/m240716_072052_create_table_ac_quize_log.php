@@ -12,6 +12,8 @@ class m240716_072052_create_table_ac_quize_log extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->createTable('ac_quize_log', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer(11)->defaultValue(null),

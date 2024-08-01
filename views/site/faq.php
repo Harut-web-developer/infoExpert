@@ -1,5 +1,6 @@
+<!-- Harut-->
 <div class="sectionFourPage">
-    <div class="answers">
+    <div class="answers answers-faq">
         <div class="frequencyPage">
             <span class="freqAsked"><?=$GLOBALS['text']['sectionFourTitle']?></span>
             <span class="freqLook"><?=$GLOBALS['text']['sectionFourLooking']?></span>

@@ -11,6 +11,9 @@ use Yii;
  * @property string|null $name
  * @property string|null $email
  * @property string|null $question
+ * @property int|null $checked_answer
+ * @property int|null $answer_admin_id
+ * @property int|null $order_num
  * @property string|null $status
  * @property string|null $create_date
  */
@@ -33,6 +36,7 @@ class AcHaveQuestions extends \yii\db\ActiveRecord
             [['question'], 'string'],
             [['create_date'], 'safe'],
             [['name', 'email', 'status'], 'string', 'max' => 255],
+            [['order_num','checked_answer', 'answer_admin_id'], 'integer'],
         ];
     }
 
@@ -49,5 +53,9 @@ class AcHaveQuestions extends \yii\db\ActiveRecord
             'status' => 'Status',
             'create_date' => 'Create Date',
         ];
+    }
+//    Mariam
+    public function getAdminName(){
+        return $this->hasOne(User::className(),['id' => 'answer_admin_id']);
     }
 }

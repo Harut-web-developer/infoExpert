@@ -12,6 +12,8 @@ class m240708_072136_security_translate extends Migration
      */
     public function safeUp()
     {
+        /*Mariam*/
+
         $this->insert('texts', [
             'slug' => 'passwordIncludeSecurity',
             'text_am' => 'Գաղտնաբառը պետք է ներառի.',

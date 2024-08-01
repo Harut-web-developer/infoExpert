@@ -12,6 +12,8 @@ class m240611_073415_quize extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->update('texts',[
             'slug' => 'lessonAdministration',
             'text_am' => '1С: ԱՌԵՎՏՐԻ ԿԱՌԱՎԱՐՈւՄ',

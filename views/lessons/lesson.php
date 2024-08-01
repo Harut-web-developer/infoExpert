@@ -1,3 +1,4 @@
+<!-- Mariam 60 ev Harut 40-->
 <?php
 use app\models\AcWishlist;
 /** @var yii\web\View $this */
@@ -23,20 +24,26 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     </div>
     <div class="topDivFlex">
         <div class="infotxt">
-            <div class="leftDipl diplomW">
-                <span><?=$GLOBALS['text']['lessonBeYour']?></span>
-                <img src="/images/personal-management-sertifikat.png" alt="">
-            </div>
-            <img class="rightImg" src="/<?=$lesson['img']?>" alt="">
-            <div class="zxc"><?=$lesson['lesson_content']?></div>
+            <?php if (!empty($lesson['certificate_img'])){?>
+                <div class="leftDipl diplomW">
+                    <span><?=$GLOBALS['text']['lessonBeYour']?></span>
+                    <img src="<?=$lesson['certificate_img']?>" alt="">
+                </div>
+            <?php } ?>
+            <?php if (!empty($lesson['img'])){?>
+                <img class="rightImg" src="/<?=$lesson['img']?>" alt="">
+            <?php } ?>
+                <div class="zxc"><?=$lesson['lesson_content']?></div>
         </div>
     </div>
     <div class="divBottom">
         <div class="bottomDiv">
-            <div class="leftDipl diplomM">
-                <span><?=$GLOBALS['text']['lessonBeYour']?></span>
-                <img src="/images/personal-management-sertifikat.png" alt="">
-            </div>
+            <?php if (!empty($lesson['certificate_img'])){?>
+                <div class="leftDipl diplomM">
+                    <span><?=$GLOBALS['text']['lessonBeYour']?></span>
+                    <img src="  <?=$lesson['certificate_img']?>" alt="">
+                </div>
+            <?php } ?>
             <div class="rightImgBottom">
                 <span><?= $GLOBALS['text']['lessonsTutors']?></span>
                 <div class="swiper-container">

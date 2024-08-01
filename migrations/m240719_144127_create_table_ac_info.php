@@ -12,6 +12,8 @@ class m240719_144127_create_table_ac_info extends Migration
      */
     public function safeUp()
     {
+//        Harut
+
         $this->createTable('ac_info', [
             'id' => $this->primaryKey(),
             'partner' => $this->integer(11)->defaultValue(null),

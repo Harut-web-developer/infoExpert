@@ -1,3 +1,5 @@
+/*Mariam 70 ev Harut 30*/
+
 .usersProfile{
     width: 100%;
     height: 1061px;
@@ -307,7 +309,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding-top: 100px;
 }
 .myCoursesProfileField{
@@ -422,6 +424,8 @@ input::-webkit-inner-spin-button {
 
 }
 .cartificateImg img{
+    width: 100%;
+    height: 100%;
     padding: 45.08px 44.84px;
 }
 
@@ -478,6 +482,10 @@ input::-webkit-inner-spin-button {
     align-items: center;
     word-wrap: break-word;
 }
+.sameInfo:nth-child(1),
+.sameInfo:nth-child(2){
+    margin-bottom: 21px;
+}
 .sameInfo > span{
     font-family: "Roboto_", sans-serif;
     font-size: 20px;
@@ -524,7 +532,7 @@ input::-webkit-inner-spin-button {
     height: 138px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
 }
 .userCreateFieldForms_{
     width: 83%;
@@ -1279,7 +1287,7 @@ input::-webkit-inner-spin-button {
         align-items: center;
     }
     .userCreateTitleField div{
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto_",sans-serif;
         font-size: 18px;
         font-weight: 500;
         line-height: 21.09px;

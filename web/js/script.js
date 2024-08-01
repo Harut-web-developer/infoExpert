@@ -1,3 +1,4 @@
+// Harut
 if($(window).width()<=600){
     $('.img-prev').each(function(){
         $(this).next().addClass('img-prev').removeClass('img-top');
@@ -23,6 +24,7 @@ $(".menuCoursesDropDown").hover(function(){
 //         });
 //     }
 // });
+// Mariam
 $(".answersField").click(function() {
     var panel = $(this).children(".answerQuestion");
     $(".answerQuestion").not(panel).css("display", "none");
@@ -40,6 +42,7 @@ $(".answersField").click(function() {
         'line-height': '19.2px'
     });
 });
+//  Mariam
 (async ()=>   // async IIFE code for slider.
 {
     const
@@ -74,8 +77,8 @@ $(".answersField").click(function() {
         }
     }
 })()
-
-if (window.location.pathname == '/' || window.location.pathname == '/testimonials'){
+// Mariam
+if (window.location.pathname == '/'){
     var swiper = new Swiper(".slide-content", {
         slidesPerView: 3,
         spaceBetween: 1,
@@ -121,12 +124,51 @@ if (window.location.pathname == '/' || window.location.pathname == '/testimonial
         },
     });
 }
-$(document).ready(function () {
+// Harut
+if (window.location.pathname == '/testimonials'){
+    var swiper = new Swiper(".slide-content", {
+        slidesPerView: 3,
+        spaceBetween: 1,
+        slidesPerGroupSkip: 1,
+        loop: true,
+        centerSlide: 'true',
+        fade: 'true',
+        grabCursor: 'true',
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
 
-    $('body').on('click', '.mainFlag', function () {
-        $(this).closest('.flagFields').find('.otherFlags').toggle();
+        breakpoints:{
+            600: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            950: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1101: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1280: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
+        },
+    });
+}
+// Harut
+$(document).ready(function () {
+    $(".flagFields").hover(function(){
+        $('.flagSectionField').show();
+    },function(){
+        $('.flagSectionField').hide();
     });
 })
+// Mariam
 if (window.location.pathname == '/') {
     const scrollTop = function () {
         const scrollBtn = $("<button>").attr("id", "scroll-btn").addClass("show").css("opacity", "0");
@@ -187,6 +229,7 @@ if (window.location.pathname == '/') {
         }
     }
 }
+// Mariam
 if (window.location.pathname == '/') {
     $(document).on("click", ".like-cnt", function () {
         var like_cnt = $(this);
@@ -232,7 +275,7 @@ if (window.location.pathname == '/') {
     });
 
 }
-
+// Mariam
 if (window.location.pathname == '/my-card/index' && $(window).width() <= 600){
     document.addEventListener('scroll', function() {
         const bottomImages = document.getElementById('totalPriceField');
@@ -240,7 +283,6 @@ if (window.location.pathname == '/my-card/index' && $(window).width() <= 600){
         const footerTop = footerBackground.getBoundingClientRect().top;
         const bottomImagesHeight = bottomImages.offsetHeight;
         const windowHeight = window.innerHeight;
-        console.log(footerTop, bottomImagesHeight, windowHeight)
         if (footerTop + bottomImagesHeight <= windowHeight) {
             bottomImages.classList.remove('fixed');
             bottomImages.classList.add('none');
@@ -250,6 +292,7 @@ if (window.location.pathname == '/my-card/index' && $(window).width() <= 600){
         }
     });
 }
+// Mariam
 if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600){
     document.addEventListener('scroll', function() {
         const summary = document.getElementById('summary');
@@ -266,6 +309,7 @@ if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600)
         }
     });
 }
+// Harut
 $(document).ready(function () {
     $('body').on('click','.tabletMenuIcon', function () {
         if($(window).width() < 600){
@@ -322,6 +366,8 @@ $(document).ready(function () {
     },function(){
         $('.profileFieldImg').hide();
     });
+
+    // Mariam
     let current = location.pathname;
     $('.userProfileMenu li a').each(function(){
         let sthis = $(this);
@@ -329,7 +375,6 @@ $(document).ready(function () {
             sthis.css('color', '#F36528');
         }
     })
-
     if (window.location.pathname != '/') {
         let pageName = location.pathname;
         $('.orangeOrWhite a').each(function(){
@@ -378,6 +423,7 @@ $(document).ready(function () {
             }
         });
     }
+    // Harut
     $('.autoplay').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -395,7 +441,7 @@ $(document).ready(function () {
             });
         };
     }
-
+// Harut
     if ($('.individualCards').length >= 4 && $(window).width() >= 1024){
         $('.individualCards').last().css('display', 'none');
     }
@@ -415,16 +461,18 @@ $(document).ready(function () {
             $('.securityModal').css('display', 'none');
         }
     })
-    $(document).click(function(event) {
-        if (!$('.securityContentModal').is(event.target) && !$('.modalOpenBtn').is(event.target)
-            && $('.securityContentModal').has(event.target).length === 0 && $('.modalOpenBtn').has(event.target).length === 0) {
-            $('.securityModal').css('display', 'none');
-        }
-    });
-    function inputValue(this_) {
-        let inputVal = this_.val();
+    // $(document).click(function(event) {
+    //     if (!$('.securityContentModal').is(event.target) && !$('.modalOpenBtn').is(event.target)
+    //         && $('.securityContentModal').has(event.target).length === 0 && $('.modalOpenBtn').has(event.target).length === 0) {
+    //         $('.securityModal').css('display', 'none');
+    //     }
+    // });
+    // Mariam
+    function search(inputElement) {
+        let inputVal = inputElement.val();
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
-        if (inputVal.length > 3) {
+        if (inputVal.length > 0) {
+            $(".delete-icon").css("display", "block");
             $.ajax({
                 url: "/site/search",
                 method: 'get',
@@ -434,107 +482,155 @@ $(document).ready(function () {
                     _csrf: csrfToken
                 },
                 success: function (data) {
-                    $('#searchField').html(data.html);
+                    $('.searchField').html(data.html);
                     $('.searchField').show();
-                },
-                error: function (xhr, status, error) {
-                    console.error('AJAX Error: ' + status + ' ' + error);
                 }
             });
         } else {
-            $('#searchField').hide();
+            $(".delete-icon").css("display", "none");
+            $('.searchField').html('');
+            $('.searchField').hide();
         }
     }
     $('.input-search').on('input', function () {
-        inputValue($(this));
+        search($(this));
     });
-    $('.btn-search').on('click', function () {
-        $('.btn-search').click(function(e) {
-            $('.popup-wrap').fadeIn(500);
-            $('.popup-box').removeClass('transform-out').addClass('transform-in');
+    $('.img-div').on('click', function () {
+        let inputElement = $('#input-search');
+        search(inputElement);
+    });
+    $(".delete-icon").on('click', function () {
+        $(".input-search").val('');
+        $('.searchField').html('');
+        $('.searchField').hide();
+    });
+    $('body').on('click','#btn-search-mobile', function () {
+        if($(window).width() < 1100) {
+            $('.search-mobile').css('width', '100%');
+            $('.tabletMenuNavField').css('display', 'none');
+            $('.mobile-search-div').css('display', 'flex');
+            $('.img-div').css('display', 'flex');
+            $('.search-div').css('display', 'block ');
 
-            e.preventDefault();
-        });
-        $('.popup-close').click(function(e) {
-            $('.popup-wrap').fadeOut(500);
-            $('.popup-box').removeClass('transform-in').addClass('transform-out');
-            e.preventDefault();
-        });
-    });
+        }
+    })
+    $('body').on('click','#btn-search-mobile-hide', function () {
+        if($(window).width() < 1100) {
+            $('.search-mobile-hide').css('width', '0%');
+            $('.tabletMenuNavField').css('display', 'block');
+            $('.mobile-search-div').css('display', 'none');
+            $('.img-div').css('display', 'none');
+
+        }
+    })
+    $('body').on('click','.tabletMenuIcon', function () {
+        if($(window).width() < 1100) {
+            $('.mobile-search-div').css('display', 'none');
+            $('.img-div').css('display', 'none');
+            var currentWidth = $('.searchField').css('display');
+            if (currentWidth == 'block') {
+                $('.mobile-search-div').css('display', 'flex');
+                $('.searchField').css('display', 'none');
+                $('.search-div').css('display', 'none ');
+
+            } else {
+                $('.search-mobile-hide').css('width', '0%');
+                $('.tabletMenuNavField').css('display', 'block');
+                $('.mobile-search-div').css('display', 'none');
+                $('.searchField').css('display', 'block ');
+                $('.search-div').css('display', 'block ');
+
+            }
+        }
+    })
+    // $('body').on('click', '.tabletMenuIcon', function () {
+    //     if ($(window).width() < 1100) {
+    //         var currentWidth = $('.mobile-search-div').css('display');
+    //         if (currentWidth === 'flex') {
+    //             $('.mobile-search-div').css('display', 'none');
+    //         } else {
+    //             $('.mobile-search-div').css('display', 'flex');
+    //         }
+    //     }
+    // });
+
+
     $('.close-logged').click(function(e) {
         $('.popup-wrap-logged').fadeOut(500);
         $('.popup-box-logged').removeClass('transform-in').addClass('transform-out');
         e.preventDefault();
     });
-        $('body').on('click', 'ion-icon', function () {
-        let indID = $(this).data('id');
-        let thisItem = $(this);
-        let type = $(this).data('type');
-        let csrfToken = $('meta[name="csrf-token"]').attr("content");
-        if ($(this).hasClass('active')){
-            $.ajax({
-                url: "/site/get-wishlist",
-                method: 'get',
-                datatype: 'json',
-                data: {
-                    indID: indID,
-                    type: type,
-                    _csrf: csrfToken
-                },
-            })
-        }else {
-            $.ajax({
-                url: "/site/remove-wishlist",
-                method: 'get',
-                datatype: 'json',
-                data: {
-                    indID: indID,
-                    type: type,
-                    _csrf: csrfToken
-                },
-                success: function (data) {
-                    let parse_data = JSON.parse(data);
-                    if (window.location.pathname == '/wishlist/index' && parse_data.wishlist == 'delete'){
-                        if (thisItem.closest('ul').hasClass('carousel_')){
-                            thisItem.closest('.card_').remove();
-                        }else if (thisItem.closest('ul').hasClass('carousel_2')) {
-                            thisItem.closest('.card_2').remove();
-                            if ($('.carousel_2').children('li').length === 0){
-                                $('changeBody2').remove();
-                                $('body').find('.topSlider').html('<div class="changeBody1">' +
-                                    '<span class="title">'+ parse_data.title +'</span>' +
-                                    '<div class="applyNowBtnField">' +
-                                    '<a class="coursesHref" href="/courses/index">' +
-                                    '<img src="/images/buttonImg.png" alt="">' +
-                                    '<span>'+ parse_data.btn_name +'</span>' +
-                                    '</a>' +
-                                    '</div>' +
-                                    '</div>')
-                            }
-                        }else if (thisItem.closest('ul').hasClass('mobileCourses')){
-                            thisItem.closest('.card_2').remove();
-                            if ($('.mobileCourses').children('.card_2').length === 0){
-                                $('wishlistCardsField').remove();
-                                $('body').find('.wishlistMobile').html('<div class="changeBody1">' +
-                                    '<span class="title">'+ parse_data.title +'</span>' +
-                                    '<div class="applyNowBtnField">' +
-                                    '<a class="coursesHref" href="/courses/index">' +
-                                    '<img src="/images/buttonImg.png" alt="">' +
-                                    '<span>'+ parse_data.btn_name +'</span>' +
-                                    '</a>' +
-                                    '</div>' +
-                                    '</div>')
-                            }
+    // Harut
+    $('body').on('click', 'ion-icon', function () {
+    let indID = $(this).data('id');
+    let thisItem = $(this);
+    let type = $(this).data('type');
+    let csrfToken = $('meta[name="csrf-token"]').attr("content");
+    if ($(this).hasClass('active')){
+        $.ajax({
+            url: "/site/get-wishlist",
+            method: 'get',
+            datatype: 'json',
+            data: {
+                indID: indID,
+                type: type,
+                _csrf: csrfToken
+            },
+        })
+    }else {
+        $.ajax({
+            url: "/site/remove-wishlist",
+            method: 'get',
+            datatype: 'json',
+            data: {
+                indID: indID,
+                type: type,
+                _csrf: csrfToken
+            },
+            success: function (data) {
+                let parse_data = JSON.parse(data);
+                if (window.location.pathname == '/wishlist/index' && parse_data.wishlist == 'delete'){
+                    if (thisItem.closest('ul').hasClass('carousel_')){
+                        thisItem.closest('.card_').remove();
+                    }else if (thisItem.closest('ul').hasClass('carousel_2')) {
+                        thisItem.closest('.card_2').remove();
+                        if ($('.carousel_2').children('li').length === 0){
+                            $('.changeBody2').remove();
+                            $('body').find('.topSlider').html('<div class="changeBody1">' +
+                                '<span class="title">'+ parse_data.title +'</span>' +
+                                '<div class="applyNowBtnField">' +
+                                '<a class="coursesHref" href="/courses/index">' +
+                                '<img src="/images/buttonImg.png" alt="">' +
+                                '<span>'+ parse_data.btn_name +'</span>' +
+                                '</a>' +
+                                '</div>' +
+                                '</div>')
                         }
-                    }else if (window.location.pathname == '/wishlist/blogs-wishlist' && parse_data.wishlist == 'inactivate'){
-                        if (thisItem.closest('ul').hasClass('blogsWishlist')){
-                            thisItem.closest('.wishlistCardsField').remove();
+                    }else if (thisItem.closest('ul').hasClass('mobileCourses')){
+                        thisItem.closest('.card_2').remove();
+                        if ($('.mobileCourses').children('.card_2').length === 0){
+                            $('.wishlistCardsField').remove();
+                            $('body').find('.wishlistMobile').html('<div class="changeBody1">' +
+                                '<span class="title">'+ parse_data.title +'</span>' +
+                                '<div class="applyNowBtnField">' +
+                                '<a class="coursesHref" href="/courses/index">' +
+                                '<img src="/images/buttonImg.png" alt="">' +
+                                '<span>'+ parse_data.btn_name +'</span>' +
+                                '</a>' +
+                                '</div>' +
+                                '</div>')
                         }
                     }
+                }else if (window.location.pathname == '/wishlist/blogs-wishlist' && parse_data.wishlist == 'inactivate'){
+                    if (thisItem.closest('ul').hasClass('blogsWishlist')){
+                        thisItem.closest('.wishlistCardsField').remove();
+                    }
                 }
-            })
-        }
-    })
+            }
+        })
+    }
+})
+    // Harut ev Mariam
     $('body').on('click', '.addMyCard', function () {
         let lesson_id = $(this).data('id');
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
@@ -545,9 +641,32 @@ $(document).ready(function () {
             data: {
                 lesson_id: lesson_id,
                 _csrf: csrfToken
+            },
+            success: function (data) {
+                let data_ = JSON.parse(data);
+                $('.popup-wrap-testimonial').fadeIn(500);
+                $('.popup-box-testimonial').removeClass('transform-out').addClass('transform-in');
+                let loggedPopup = `
+                    <div class="popup-wrap-logged">
+                        <div class="popup-box-logged">
+                            <div class="logged-content">
+                                <span class="logged-txt">${data_['message']}</span>
+                                <span class="close-btn popup-close close-logged">x</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                $('body').append(loggedPopup);
+                $('body').on('click', '.close-logged', function () {
+                    $('.popup-wrap-logged').fadeOut(500, function() {
+                        $(this).remove();
+                    });
+                });
             }
-        })
-    })
+        });
+    });
+
+    // Harut 50 ev Mariam 50
     document.querySelectorAll('ion-icon').forEach(icon => {
         if (icon.getAttribute('data-active') === "1") {
             icon.classList.add('active');
@@ -559,6 +678,7 @@ $(document).ready(function () {
         });
     });
 })
+// Harut
 if (window.location.pathname == '/' || window.location.pathname == '/testimonials' && window.innerWidth < 600) {
     let seeMoreBtnTestimonial = document.querySelector('#testimonialBtnMobile');
     let testimonial = [...document.querySelectorAll('.mobileTestimonial .blockTestimonialMobile')];
@@ -599,12 +719,17 @@ if (window.location.pathname == '/' || window.location.pathname == '/testimonial
         }
     }
 }
+// Mariam
 if (window.location.pathname == '/testimonials') {
+    $('.blockTestimonialPopup a').on('click', function (e) {
+        e.stopPropagation();
+    });
     $('.blockTestimonialPopup').on('click', function (e) {
         $('.popup-wrap-testimonial').fadeIn(500);
         $('.popup-box-testimonial').removeClass('transform-out').addClass('transform-in');
         let txt_value = $(this).find('.testimonialsText').text();
-        $('.popup-box-testimonial .txt-content').text(txt_value);
+        let name_value = $(this).find('.testimonialsAuthor').text();
+        $('.popup-box-testimonial .txt-content').html(txt_value + '<br><br>' + name_value);
         e.preventDefault();
     })
     $('.popup-close-testimonial').click(function(e) {
@@ -615,3 +740,76 @@ if (window.location.pathname == '/testimonials') {
 }
 document.cookie = "screenWidth=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 document.cookie = "screenWidth=" + screen.width;
+
+/*call back popup close*/
+$('.close-logged').click(function(e) {
+    $('.securityModal').fadeOut(500);
+    $('.securityContentModal').removeClass('transform-in-call').addClass('transform-out-call');
+    e.preventDefault();
+});
+$('.mainFieldSite').on('mouseover', function () {
+    $(this).children('img').attr('src', '/images/arrowSiteOrang.png');
+    $(this).children('a').css('color', '#F36528');
+});
+$('.mainFieldSite').on('mouseout', function () {
+    $(this).children('img').attr('src', '/images/arrowSite.png');
+    $(this).children('a').css('color', '');
+});
+// Mariam
+let next = document.getElementById('next-courses');
+let prev = document.getElementById('prev-courses');
+let carousel = document.querySelector('.carousel-courses');
+let items = document.querySelectorAll('.carousel-courses .item-courses');
+let countItem = items.length;
+let active = 1;
+let other_1 = null;
+let other_2 = null;
+if (next != null && prev != null) {
+    next.onclick = () => {
+        carousel.classList.remove('prev-courses');
+        carousel.classList.add('next-courses');
+        active = active + 1 >= countItem ? 0 : active + 1;
+        other_1 = active - 1 < 0 ? countItem - 1 : active - 1;
+        other_2 = active + 1 >= countItem ? 0 : active + 1;
+        changeSlider();
+    }
+
+    prev.onclick = () => {
+        carousel.classList.remove('next-courses');
+        carousel.classList.add('prev-courses');
+        active = active - 1 < 0 ? countItem - 1 : active - 1;
+        other_1 = active + 1 >= countItem ? 0 : active + 1;
+        other_2 = other_1 + 1 >= countItem ? 0 : other_1 + 1;
+        changeSlider();
+    }
+
+    const changeSlider = () => {
+        let itemOldActive = document.querySelector('.carousel-courses .item-courses.active-courses');
+        if (itemOldActive) itemOldActive.classList.remove('active-courses');
+
+        let itemOldOther_1 = document.querySelector('.carousel-courses .item-courses.other_1-courses');
+        if (itemOldOther_1) itemOldOther_1.classList.remove('other_1-courses');
+
+        let itemOldOther_2 = document.querySelector('.carousel-courses .item-courses.other_2-courses');
+        if (itemOldOther_2) itemOldOther_2.classList.remove('other_2-courses');
+
+        items.forEach(e => {
+            e.querySelector('.image-courses img').style.animation = 'none';
+            void e.offsetWidth;
+            e.querySelector('.image-courses img').style.animation = '';
+        })
+
+        items[active].classList.add('active-courses');
+        items[other_1].classList.add('other_1-courses');
+        items[other_2].classList.add('other_2-courses');
+
+        clearInterval(autoPlay);
+        autoPlay = setInterval(() => {
+            next.click();
+        }, 5000);
+    }
+
+    let autoPlay = setInterval(() => {
+        next.click();
+    }, 5000);
+}

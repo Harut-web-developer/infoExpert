@@ -1,3 +1,4 @@
+<!-- Mariam 20 ev Harut 80-->
 <?php
 
 /** @var yii\web\View $this */
@@ -12,6 +13,7 @@ use yii\bootstrap5\NavBar;
 use yii\helpers\Url;
 use yii\web\UrlManager;
 use \app\models\AcLessons;
+use \app\models\AcInfo;
 use Yii;
 
 AppAsset::register($this);
@@ -125,7 +127,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                     <img src="/images/menuRightArrow.png" alt="">
                                 </li>
                             <?php } ?>
-                        <li><a href="/site/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
+                        <li><a href="/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
                         <li><a href=""><?= $GLOBALS['text']['tabletMethodology']?></a></li>
                         <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
                             <li><a href="#testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
@@ -133,24 +135,37 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             <li><a href="#sectionAnswers"><?= $GLOBALS['text']['footerFaq']?></a></li>
                         <?php } else { ?>
                             <li><a href="/testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
-                            <li><a href="/blog/index"><?= $GLOBALS['text']['footerBlog']?></a></li>
+                            <li><a href="/blog"><?= $GLOBALS['text']['footerBlog']?></a></li>
                             <li><a href="/faq"><?= $GLOBALS['text']['footerFaq']?></a></li>
                         <?php }  ?>
 
                         <li><a href="/alumni/index"><?= $GLOBALS['text']['headerAlumni']?></a></li>
-                        <li><a href=""><?= $GLOBALS['text']['tabletRecQuize']?></a></li>
+                        <li><a href="/quize/index"><?= $GLOBALS['text']['tabletRecQuize']?></a></li>
                         <li><a href="/contact-us/index"><?= $GLOBALS['text']['tabletContact']?></a></li>
                         <?php if(!empty(Yii::$app->user->identity)){ ?>
                             <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
                         <?php }?>
+                        <li><a href="/site-map"><?= $GLOBALS['text']['siteMap']?></a></li>
                     </ul>
                     <div class="searchFlagField">
-                        <img class="btn-search" src="/images/search-white.png" alt="">
+                            <img class="btn-search" id="btn-search-mobile" src="/images/search-white.png" alt="">
                         <div class="tabletFlagField">
                             <a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img src="/images/armflag.png" alt=""></a>
                             <a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img src="/images/usaflag.png" alt=""></a>
                             <a href="<?= Url::to(['site/switch-language?lang=ru']) ?>"><img src="/images/ruflag.png" alt=""></a>
                         </div>
+                    </div>
+                </div>
+                <div class="search-mobile search-mobile-hide">
+                    <div class="search-div">
+                        <div class="mobile-search-div">
+                            <input type="text" name="" class="input-search" id="input-search">
+                            <img src="/images/delete-icon.png" alt="" class="delete-icon">
+                            <div class="img-div">
+                                <img class="btn-search" id="btn-search-mobile-hide" src="/images/search-white.png" alt="">
+                            </div>
+                        </div>
+                        <div class="searchField"></div>
                     </div>
                 </div>
             </div>
@@ -187,7 +202,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     $lang = $_COOKIE['language'];
                     $lessons = AcLessons::find()->select('url,lesson_name_'.$lang.' as lesson_name')->where(['status' => '1'])->asArray()->all();
                     if (!empty($lessons)){ foreach ($lessons as $lesson) {?>
-                        <li><a href="/lessons/lesson/<?=$lesson['url']?>"><?=$lesson['lesson_name']?></a></li>
+                        <li><a href="/lesson/<?=$lesson['url']?>"><?=$lesson['lesson_name']?></a></li>
                     <?php }}?>
                 </ul>
             </div>
@@ -200,7 +215,16 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <a href="/"><img src="/images/logo.png" alt=""></a>
                 </div>
                 <div class="icons">
-                    <img class="btn-search" src="/images/search-white.png" alt="">
+                    <div class="search-div">
+                        <div class="web-search">
+                            <input type="text" name="" class="input-search" id="input-search">
+                            <img src="/images/delete-icon.png" alt="" class="delete-icon">
+                            <div class="img-div">
+                                <img class="btn-search" src="/images/search-white.png" alt="">
+                            </div>
+                        </div>
+                        <div class="searchField"></div>
+                    </div>
                     <div class="profileField">
                         <?php if (empty(Yii::$app->user->identity)){?>
                             <a href="/login"><img class="profileUserIcon" src="/images/user.png" alt=""></a>
@@ -230,12 +254,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                 $mainFlag = '/images/usaflag.png';
                         }
                         ?>
-                        <img class="mainFlag" src="<?= $mainFlag ?>" alt="">
-                        <ul class="otherFlags">
-                            <?php if($_COOKIE['language'] !== 'am'){ ?><li class="firstFlag"><a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img class="armFlag" src="/images/armflag.png" alt=""></a></li><?php } ?>
-                            <?php if($_COOKIE['language'] !== 'en'){ ?><li class="firstFlag"><a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img class="usaFlag" src="/images/usaflag.png" alt=""></a></li><?php } ?>
-                            <?php if($_COOKIE['language'] !== 'ru'){ ?><li class="secondFlag"><a href="<?= Url::to(['site/switch-language?lang=ru']) ?>"><img class="ruFlag" src="/images/ruflag.png" alt=""></a></li><?php } ?>
-                        </ul>
+                            <img class="mainFlag" src="<?= $mainFlag ?>" alt="">
+                        <div class="flagSectionField">
+                            <ul class="otherFlags">
+                                <?php if($_COOKIE['language'] !== 'am'){ ?><li class="firstFlag"><a href="<?= Url::to(['site/switch-language?lang=am']) ?>"><img class="armFlag" src="/images/armflag.png" alt=""></a></li><?php } ?>
+                                <?php if($_COOKIE['language'] !== 'en'){ ?><li class="firstFlag"><a href="<?= Url::to(['site/switch-language?lang=en']) ?>"><img class="usaFlag" src="/images/usaflag.png" alt=""></a></li><?php } ?>
+                                <?php if($_COOKIE['language'] !== 'ru'){ ?><li class="secondFlag"><a href="<?= Url::to(['site/switch-language?lang=ru']) ?>"><img class="ruFlag" src="/images/ruflag.png" alt=""></a></li><?php } ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -246,7 +272,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <!--                        <span class="menuAbout">ABOUT</span>-->
                         <div class="dropDownAbout">
                             <ul>
-                                <li><a href="/site/about"><?=$GLOBALS['text']['whoWe']?></a></li>
+                                <li><a href="/about"><?=$GLOBALS['text']['whoWe']?></a></li>
                                 <li><a href="/alumni/index"><?=$GLOBALS['text']['headerAlumni']?></a></li>
                             </ul>
                         </div>
@@ -263,7 +289,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                 <ul>
                                     <?php
                                     foreach ($lessons as $lesson) {?>
-                                        <li><a href="/lessons/lesson/<?=$lesson['url']?>"><?=$lesson['lesson_name']?></a></li>
+                                        <li><a href="/lesson/<?=$lesson['url']?>"><?=$lesson['lesson_name']?></a></li>
                                     <?php }?>
                                 </ul>
                             </div>
@@ -277,7 +303,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <?php } else { ?>
                         <li class="whiteLi orangeOrWhite"><a href="/faq"><?= $GLOBALS['text']['__faq__'] ?></a></li>
                         <li class="whiteLi orangeOrWhite"><a href="/testimonials"><?= $GLOBALS['text']['__testimonials__'] ?></a></li>
-                        <li class="whiteLi orangeOrWhite"><a href="/blog/index"><?= $GLOBALS['text']['__blog__'] ?></a></li>
+                        <li class="whiteLi orangeOrWhite"><a href="/blog"><?= $GLOBALS['text']['__blog__'] ?></a></li>
                     <?php } ?>
                     <li class="whiteLi orangeOrWhite"><a href="/contact-us/index"><?= $GLOBALS['text']['__contact__'] ?></a></li>
                     <li class="whiteLi orangeOrWhite"><a href="/apply-now/index"><?= $GLOBALS['text']['__applynow__'] ?></a></li>
@@ -293,6 +319,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     </div>
     <div class="securityModal">
         <div class="securityContentModal">
+            <span class="close-btn-call popup-close-call close-logged">x</span>
             <form class="modalMainField" action="" method="post">
                 <div class="modalTitleField">
                     <span class="modalTitle"><?=$GLOBALS['text']['modalTitleCallBack']?></span>
@@ -339,18 +366,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </div>
     </div>
 </header>
-<!--search popup-->
-<div class="popup-wrap">
-    <div class="popup-box">
-        <div class="search-input-x">
-            <div class="search-container">
-                <input class="input-search" type="text" placeholder="<?= $GLOBALS['text']['search']?>"" name="search">
-                <span class="close-btn popup-close">x</span>
-            </div>
-        </div>
-        <div id="searchField" class="searchField"></div>
-    </div>
-</div>
 <!--successfully logged popup-->
 <?php
 $session = Yii::$app->session;
@@ -367,11 +382,13 @@ if ($logged && $alertShown) {
         </div>
     </div>
 <?php } ?>
-
 <main id="main" class="flex-shrink-0" role="main">
     <?= $content ?>
 </main>
 <footer class="footerBackground" id="footerBackgroundM">
+    <?php
+    $url_info = AcInfo::find()->select('instagram_link,facebook_link,linkdin_link')->where(['status' => '1'])->asArray()->one();
+    ?>
     <div class="sectionFooter">
         <div class="imagesFooterFields">
             <div class="leftFooterBg">
@@ -383,45 +400,57 @@ if ($logged && $alertShown) {
                         <div class="footerMenu">
                             <div class="leftMenuFooter">
                                 <ul>
-                                    <li><a href=""><?= $GLOBALS['text']['footerAbout']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerMethodOur']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerContact']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerTestimonials']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerFaq']?></a></li>
+                                    <li><a href="/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
+                                    <li><a href="/methodology"><?= $GLOBALS['text']['footerMethodOur']?></a></li>
+                                    <li><a href="/contact-us/index"><?= $GLOBALS['text']['footerContact']?></a></li>
+                                    <li><a href="/testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
+                                    <li><a href="/faq"><?= $GLOBALS['text']['footerFaq']?></a></li>
                                 </ul>
                             </div>
                             <div class="rightMenuFooter">
                                 <ul>
-                                    <li><a href=""><?= $GLOBALS['text']['footerCourses']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerBlog']?></a></li>
-                                    <li><a href=""><?= $GLOBALS['text']['footerRecQuize']?></a></li>
+                                    <li><a href="/courses/index"><?= $GLOBALS['text']['footerCourses']?></a></li>
+                                    <li><a href="/blog"><?= $GLOBALS['text']['footerBlog']?></a></li>
+                                    <li><a href="/quize/index"><?= $GLOBALS['text']['footerRecQuize']?></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="footerConn">
                             <span><?= $GLOBALS['text']['footerTextConn']?></span>
                             <div class="footerSocialMobile">
-                                <a href=""><img src="/images/in.png" alt=""></a>
-                                <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>
-                                <a href=""><img src="/images/facebook.png" alt=""></a>
+                                <?php if (!empty($url_info['linkdin_link'])){?>
+                                    <a target="_blank" href="<?=$url_info['linkdin_link']?>"><img src="/images/in.png" alt=""></a>
+                                <?php } ?>
+                                <?php if (!empty($url_info['instagram_link'])){?>
+                                    <a target="_blank" class="linkInstagram" href="<?=$url_info['instagram_link']?>"><img src="/images/instagram.png" alt=""></a>
+                                <?php } ?>
+                                <?php if (!empty($url_info['facebook_link'])){?>
+                                    <a target="_blank" href="<?=$url_info['facebook_link']?>"><img src="/images/facebook.png" alt=""></a>
+                                <?php } ?>
                             </div>
                         </div>
-                        <form action="" method="post" class="footerBtn">
+                        <form action="/site/index" method="post" class="footerBtn">
                             <input required type="email" name="leftEmail" placeholder="<?= $GLOBALS['text']['footerEmailCon']?>">
                             <button type="submit" name="subscribe"><?= $GLOBALS['text']['footerEmailBtn']?></button>
                         </form>
                     </div>
                     <div class="footerSocial">
-                        <a href=""><img src="/images/in.png" alt=""></a>
-                        <a class="linkInstagram" href=""><img src="/images/instagram.png" alt=""></a>
-                        <a href=""><img src="/images/facebook.png" alt=""></a>
+                        <?php if (!empty($url_info['linkdin_link'])){?>
+                            <a target="_blank" href="<?=$url_info['linkdin_link']?>"><img src="/images/in.png" alt=""></a>
+                        <?php } ?>
+                        <?php if (!empty($url_info['instagram_link'])){?>
+                            <a target="_blank" class="linkInstagram" href="<?=$url_info['instagram_link']?>"><img src="/images/instagram.png" alt=""></a>
+                        <?php } ?>
+                        <?php if (!empty($url_info['facebook_link'])){?>
+                            <a target="_blank" href="<?=$url_info['facebook_link']?>"><img src="/images/facebook.png" alt=""></a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
             <div class="rightFooterBg">
                 <form class="formMail" action="/quize/index" method="post">
                     <div class="formName">
-                        <span><?= $GLOBALS['text']['footerQuize']?></span>
+                        <span class="quize-title"><?= $GLOBALS['text']['footerQuize']?></span>
                     </div>
                     <div class="inputsMail" >
                         <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username ? 'required' : ''?>>
@@ -438,10 +467,11 @@ if ($logged && $alertShown) {
             <span class="copyTextFooter">
                 &copy; <?= $GLOBALS['text']['footerCopy']?> <?=date('Y')?> - Infoexpert Academy
             </span>
+                <a class="siteMapField" href="/site-map"><?= $GLOBALS['text']['siteMap']?></a>
             <div class="policyText">
                 <ul>
-                    <li><a href=""><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
-                    <li><a href="">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
+                    <li><a href="<?= Yii::$app->urlManager->createUrl(['site/policy']) ?>"><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
+                    <li><a href="/terms-and-conditions">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
                 </ul>
             </div>
             <div class="payLogoFooter">
@@ -451,8 +481,8 @@ if ($logged && $alertShown) {
             <div class="footerMobilePolicy">
                 <div class="policyTextMobile">
                     <ul>
-                        <li><a href=""><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
-                        <li><a href="">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
+                        <li><a href="<?= Yii::$app->urlManager->createUrl(['policy']) ?>"><?= $GLOBALS['text']['footerPolicy']?>&nbsp</a></li>
+                        <li><a href="/terms-and-conditions">&nbsp<?= $GLOBALS['text']['footerTerms']?></a></li>
                     </ul>
                 </div>
                 <div class="payLogoFooterMobile">
@@ -463,6 +493,20 @@ if ($logged && $alertShown) {
         </div>
     </div>
 </footer>
+<!--subscribe popup-->
+<?php
+$session = Yii::$app->session;
+$subscribe = $session->get('successfully_subscribed') ? 'successfully_subscribed' : 'already_subscribe';
+if ($session->get('subscribe')) { ?>
+    <div class="popup-wrap-logged">
+        <div class="popup-box-logged">
+            <div class="logged-content">
+                <span class="logged-txt"><?=$GLOBALS['text'][$subscribe]?></span>
+                <span class="close-btn popup-close close-logged">x</span>
+            </div>
+        </div>
+    </div>
+<?php } unset($session['successfully_subscribed']); unset($session['already_subscribe']);  $session->set('subscribe', false)?>
 <?php $this->endBody() ?>
 </body>
 </html>

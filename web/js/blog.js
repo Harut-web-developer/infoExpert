@@ -1,3 +1,4 @@
+// Harut
 let seeMoreBtnBlogs = document.querySelector('#blogsBtnMobile');
 let blogs = [...document.querySelectorAll('.mobileBlogsFiled .card_')];
 let currentItemBlogs = 2;

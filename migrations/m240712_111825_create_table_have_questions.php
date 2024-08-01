@@ -12,6 +12,7 @@ class m240712_111825_create_table_have_questions extends Migration
      */
     public function safeUp()
     {
+//        Harut
         $this->createTable('ac_have_questions', [
             'id' => $this->primaryKey(),
             'name' => $this->string(255)->defaultValue(null),

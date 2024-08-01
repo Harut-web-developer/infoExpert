@@ -12,6 +12,8 @@ class m240613_125134_create_news_translate_for_errors_page extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->insert('texts', [
             'slug' => 'notFound',
             'text_am' => 'էջը չի գտնվել',

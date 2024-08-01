@@ -12,6 +12,8 @@ class m240611_072414_quize_page_id extends Migration
      */
     public function safeUp()
     {
+        /*Harut*/
+
         $this->insert('texts', [
             'slug' => 'btnQuize',
             'text_am' => 'ՍԿՍԵԼ',
