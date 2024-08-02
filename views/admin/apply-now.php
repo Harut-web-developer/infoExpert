@@ -1,5 +1,5 @@
 <!-- Harut-->
-<input type="hidden" data-page='Apply-now' id="page">
+<input type="hidden" data-page='AcApplyNow' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
@@ -109,24 +109,6 @@
 
     </div>
 </div>
-<script src="/web/ckfinder/ckfinder.js"></script>
-<script src="/web/ckeditor/ckeditor.js"></script>
-
-<script>
-
-    var editor = CKEDITOR.replace( 'editor_am' ,{
-        filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
-    });
-    CKFinder.setupCKEditor( editor, null, { type: 'Files', currentFolder: '/archive/' } );
-    var editor_ru = CKEDITOR.replace( 'editor_ru' ,{
-        filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
-    });
-    CKFinder.setupCKEditor( editor_ru, null, { type: 'Files', currentFolder: '/archive/' } );
-    var editor_en = CKEDITOR.replace( 'editor_en' ,{
-        filebrowserBrowseUrl: '/web/ckfinder/ckfinder.html?is_admin=yes&token=p$b7*jdT#+pFN!$E',
-    });
-    CKFinder.setupCKEditor( editor_en, null, { type: 'Files', currentFolder: '/archive/' } );
-</script>
 <style>
     .is_types span{
         padding-right:10px;

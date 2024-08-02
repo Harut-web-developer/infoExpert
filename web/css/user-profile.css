@@ -13,6 +13,119 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+.popup-wrap-courses {
+    width:100%;
+    height:100%;
+    display:flex;
+    position:fixed;
+    top:0px;
+    left:0px;
+    content:'';
+    background:rgba(0,0,0,0.85);
+    z-index: 500;
+}
+.popup-box-courses {
+    width: 61%;
+    height: min-content;
+    transform: translate(-50%, -50%) scale(0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
+    background: #7CA9AC;
+    /*text-align: center;*/
+}
+.courses-input-x{
+    display: flex;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.ratingForm{
+    margin: 100px 0px 110px;
+    width: 90%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.titleRating{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    color: #F36528;
+    margin-bottom: 47px;
+}
+.ratingText{
+    font-family: "RobotoSlab_",sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 26px;
+    transition: all 0.2s ease;
+}
+.ratingField > label > img{}
+.ratingField > input{
+    display: none;
+}
+.ratingField > label > img{
+    width: 54px;
+    height: 54px;
+}
+.ratingField > label{
+    transition: all 0.2s ease;
+}
+.ratingField > label:hover{
+    cursor: pointer;
+}
+.textareaRating{
+    width: 64%;
+    height: 160px;
+    margin-top: 37px;
+
+}
+.raitngMessage{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 16px 10px 10px 27px;
+    color: white;
+    font-family: "Roboto_",sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    background: #5D9A9D;
+}
+.raitngMessage::placeholder{
+    color: white;
+    font-family: "Roboto_",sans-serif;
+}
+.ratingBtn{
+    margin: 41px 0px;
+}
+.ratingBtn > button{
+    position: relative;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ratingBtn > button > img{
+    width: 130px;
+    height: 60px;
+}
+.ratingBtn > button > span{
+    font-family: "Roboto_",sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #F36528;
+    position: absolute;
+}
 .textForEmpty{
     width: 50%;
     height: 100%;
@@ -838,6 +951,12 @@ input::-webkit-inner-spin-button {
     }
 }
 @media screen and (max-width: 1100px) {
+    .popup-box-courses {
+        width: 100%;
+    }
+    .ratingForm {
+        margin: 50px 0px;
+    }
     .textForEmpty > span{
         margin-top: 100px;
     }
@@ -1219,6 +1338,40 @@ input::-webkit-inner-spin-button {
     }
 }
 @media screen and (max-width: 599px) {
+    .ratingForm {
+        margin: 67px 0px 0px;
+        width: 100%;
+    }
+    .titleRating {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    .ratingText {
+        font-size: 26px;
+        font-weight: 500;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 15px;
+        transition: all 0.2s ease;
+    }
+    .ratingField > label > img {
+        width: 43px;
+        height: 43px;
+    }
+    .textareaRating {
+        width: 96%;
+        height: 160px;
+        margin-top: 64px;
+    }
+    .ratingBtn {
+        margin: 36px 0px 66px;
+    }
+    .ratingBtn > button:hover img{
+        content: url("../images/userSaveBtnhover.png");
+    }
+    .ratingBtn > button:hover span{
+        color: white;
+    }
     .middle{
         display: none;
     }

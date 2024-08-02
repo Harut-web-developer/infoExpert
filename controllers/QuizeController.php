@@ -118,11 +118,13 @@ class QuizeController extends \yii\web\Controller
             ])
             ->where(['ac_question_quests.question_id' => $id])
             ->andWhere(['ac_question_quests.status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
             ->asArray()
             ->all();
         $answers_list = AcQuestionList::find()->select('id,name_'.$language.' as name_list')
             ->where(['status' => '1'])
             ->andWhere(['id' => $id])
+            ->orderBy(['order_num' => SORT_ASC])
             ->asArray()
             ->one();
         $questions_count = AcQuestionQuests::find()

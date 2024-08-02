@@ -57,7 +57,9 @@ class BlogController extends \yii\web\Controller
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
             'url',
             'img'
-        ])->where(['status' => '1'])->asArray()->all();
+        ])->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
+            ->asArray()->all();
         $blogsMobile = AcBlog::find()->select([
             'id',
             'page_name_' . $language . ' as page_name',
@@ -66,7 +68,10 @@ class BlogController extends \yii\web\Controller
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
             'url',
             'img'
-        ])->where(['status' => '1'])->asArray()->all();
+        ])->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
+            ->asArray()
+            ->all();
         return $this->render('index', [
             'blogs' => $blogs,
             'blogsMobile' => $blogsMobile,

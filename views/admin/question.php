@@ -1,4 +1,4 @@
-<input type="hidden" data-page='Categories' id="page">
+<input type="hidden" data-page='AcQuestionQuests' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
@@ -6,7 +6,11 @@
             <span aria-hidden="true">×</span>
         </button>
     </div>
-
+    <script>
+        var url = window.location.href;
+        url = url.split('?')[0]+'?id=<?php echo $_GET['id'];?>';
+        window.history.replaceState({}, document.title, url);
+    </script>
 <?php } ?>
 <!--  /Traffic -->
 <div class="clearfix"></div>

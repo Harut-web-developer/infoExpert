@@ -1,4 +1,4 @@
-<input type="hidden" data-page='Categories' id="page">
+<input type="hidden" data-page='AcQuestionAnswers' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
@@ -6,7 +6,11 @@
             <span aria-hidden="true">×</span>
         </button>
     </div>
-
+    <script>
+        var url = window.location.href;
+        url = url.split('?')[0];
+        window.history.replaceState({}, document.title, url);
+    </script>
 <?php } ?>
 <!--  /Traffic -->
 <div class="clearfix"></div>
@@ -19,7 +23,7 @@
                     <h4 class="box-title">Պատասխաններ ( <?php echo $question->name_am;?>)
                         <span class="buttons">
                                           <span class="overlay show_" style="width:33px;"></span>
-                                          <button class="btn btn-sm btn-default" id="edite"><i class="fa fa-pencil"></i></button>
+                                          <button class="btn btn-sm btn-default" id="editeAnswer"><i class="fa fa-pencil"></i></button>
                                           <button class="btn btn-sm btn-danger" id="disableAnswer"><i class="fa fa-trash"></i></button>
                                         </span>
                         <a href="#" data-toggle="modal" data-target="#addnew" class="btn btn-succ fl" style="margin-left:10px;"><i class="bx bx-plus me-1"></i> Ավելացնել պատասխան</a>
@@ -117,17 +121,20 @@ function display_list($nested_categories, $type = 'sortable', $level = 0)
                             <br>
                             <div class="tab-pane fade active show" id="custom-nav-home" role="tabpanel" aria-labelledby="custom-nav-home-tab">
                                 <div class="form-group ">
-                                    <input type="text" name="AcQuestionAnswers[name_am]" required placeholder="Հարց" class="form-control">
+                                    <span>Պատասխան</span>
+                                    <input type="text" name="AcQuestionAnswers[name_am]" required placeholder="Պատասխան" class="form-control">
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-profile" role="tabpanel" aria-labelledby="custom-nav-profile-tab">
                                 <div class="form-group">
-                                    <input type="text" name="AcQuestionAnswers[name_ru]" required placeholder="Հարց" class="form-control">
+                                    <span>Պատասխան</span>
+                                    <input type="text" name="AcQuestionAnswers[name_ru]" required placeholder="Պատասխան" class="form-control">
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-contact" role="tabpanel" aria-labelledby="custom-nav-contact-tab">
                                 <div class="form-group">
-                                    <input type="text" name="AcQuestionAnswers[name_en]" required placeholder="Հարց" class="form-control">
+                                    <span>Պատասխան</span>
+                                    <input type="text" name="AcQuestionAnswers[name_en]" required placeholder="Պատասխան" class="form-control">
                                 </div>
                             </div>
                         </div>

@@ -172,10 +172,16 @@ class SiteController extends Controller
             return $this->goBack(Yii::$app->request->referrer);
         }
         $url_info = AcInfo::find()->select('partner, products, programms')->where(['status' => '1'])->asArray()->one();
-        $lessons_courses = AcLessons::find()->select('img, lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])->asArray()->all();
-        $partners = AcPartners::find()->asArray()->all();
-        $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])->asArray()->all();
-        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => '1'])->asArray()->all();
+        $lessons_courses = AcLessons::find()->select('img, lesson_name_'.$language.' as lesson_name')->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
+            ->asArray()->all();
+        $partners = AcPartners::find()->orderBy(['order_num' => SORT_ASC])->asArray()->all();
+        $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
+            ->asArray()->all();
+        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
+            ->asArray()->all();
         $total_rows_faq = count($answers);
         $middle_index_faq = floor($total_rows_faq / 2);
         $first_part_faq = array_slice($answers, 0, $middle_index_faq);
@@ -197,7 +203,9 @@ class SiteController extends Controller
             "DATE_FORMAT(create_date, '%b %d, %Y') as create_date",
             'url',
             'img'
-        ])->where(['status' => '1'])->asArray()->all();
+        ])->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
+            ->asArray()->all();
         return $this->render('index',[
             'partners' => $partners,
             'testimonials' => $testimonials,
@@ -259,7 +267,9 @@ class SiteController extends Controller
     public function actionFaq(){
         // Harut
         $language = $_COOKIE['language'];
-        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => '1'])->asArray()->all();
+        $answers = AcAnswers::find()->select('question_'.$language.' as question, answer_'.$language.' as answer')->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
+            ->asArray()->all();
         $total_rows_faq = count($answers);
         $middle_index_faq = floor($total_rows_faq / 2);
         $first_part_faq = array_slice($answers, 0, $middle_index_faq);
@@ -275,7 +285,9 @@ class SiteController extends Controller
     public function actionTestimonials(){
         // Harut
         $language = $_COOKIE['language'];
-        $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])->asArray()->all();
+        $testimonials = AcReviews::find()->select('text_'.$language.' as text,from_'.$language.' as name, url')->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
+            ->asArray()->all();
 
         return $this->render('testimonials', [
             'testimonials' => $testimonials

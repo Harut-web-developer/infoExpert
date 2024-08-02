@@ -3,7 +3,7 @@ use app\models\FsProducts;
 use app\models\FsCategories;
 ?>
 
-<input type="hidden" data-page='Partners' id="page">
+<input type="hidden" data-page='AcAnswers' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց

@@ -58,10 +58,12 @@ class CoursesController extends \yii\web\Controller
         $courses = AcLessons::find()->select('id, img,rating,price,lesson_name_'.$language.' as lesson_name,
          lesson_title_'.$language.' as lesson_title, lesson_certificate_'.$language.' as lesson_certificate')
             ->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
             ->asArray()
             ->all();
         $tutors = AcTutors::find()->select('img, username_'.$language.' as username, text_'.$language.' as text')
             ->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
             ->asArray()
             ->all();
         return $this->render('index',[
@@ -78,6 +80,7 @@ class CoursesController extends \yii\web\Controller
          ac_my_lessons.complete_percent as complete_percent,ac_lessons.rating as rating')
             ->leftJoin('ac_my_lessons', 'ac_my_lessons.lessons_id = ac_lessons.id')
             ->where(['and',['ac_my_lessons.status' => '1'],['ac_my_lessons.user_id' => $user_id],])
+            ->orderBy(['order_num' => SORT_ASC])
             ->asArray()
             ->all();
         return $this->render('my-courses',[

@@ -3,7 +3,7 @@ use app\models\FsProducts;
 use app\models\FsCategories;
 ?>
 
-<input type="hidden" data-page='Partners' id="page">
+<input type="hidden" data-page='AcPartners' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
@@ -53,6 +53,7 @@ use app\models\FsCategories;
                                                 <th scope="col">#</th>
                                                 <th scope="col">Նկար</th>
                                                 <th scope="col">Անվանում</th>
+                                                <th scope="col">Կարգավիճակ</th>
                                             </tr>
                                             </thead>
                                             <tbody class="sortableTable" id="sortable">
@@ -70,6 +71,12 @@ use app\models\FsCategories;
                                                             <?php } ?>
                                                         </td>
                                                         <td scope="col"> <?php echo $partner->name_am;?></td>
+                                                        <td scope="col">
+                                                            <?php if($partner->status == 1){
+                                                                echo 'Ակտիվ';
+                                                            } else {
+                                                                echo 'Պասիվ';
+                                                            };?></td>
                                                     </tr>
                                                 <?php }} ?>
                                             </tbody>

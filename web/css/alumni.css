@@ -81,6 +81,7 @@
 .card-image img{
     width: 81px;
     height: 81px;
+    border-radius: 50%;
 }
 .card-info{
     text-align: center;

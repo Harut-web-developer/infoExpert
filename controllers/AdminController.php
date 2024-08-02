@@ -39,6 +39,10 @@ use function PHPUnit\Framework\callback;
 class AdminController extends Controller {
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
+        if(Yii::$app->getUser()->identity->role != 10 && $this->action->id !='login'){
+            $this->redirect('/404');
+        }
+
         $this->layout = 'admin';
         return parent::beforeAction($action);
 
@@ -88,15 +92,16 @@ class AdminController extends Controller {
             $question = new AcQuestionQuests();
             $question->load($post);
             $question->save(false);
-            $this->redirect(['question', 'success' => 'true', 'id' => $id]);
+            $this->redirect(['question',['id' => $id, 'success' => 'true']]);
         }
         else if ($post && $post['edite']) {
+
             $question = AcQuestionQuests::findOne(['id' => intval($post['id']) ]);
             $question->load($post);
             $question->save(false);
-            $this->redirect(['question', 'id' => $question->id,'success' => 'true']);
+            $this->redirect('question?id='.$id.'&success=true');
         }
-        $answers = AcQuestionQuests::find()->where(['question_id'=>$id])->all();
+        $answers = AcQuestionQuests::find()->where(['question_id'=>$id])->orderBy(['order_num' => SORT_ASC])->all();
         $question = AcQuestionList::findOne($id);
         return $this->render('question', ['answers' => $answers,'question'=>$question]);
 
@@ -111,9 +116,15 @@ class AdminController extends Controller {
             $question = new AcQuestionAnswers();
             $question->load($post);
             $question->save(false);
-            $this->redirect(['answer', 'success' => 'true', 'id' => $id]);
+            $this->redirect(['answer', 'success' => 'true', 'id' => 'key' . $id]);
         }
-        $answers = AcQuestionAnswers::find()->where(['quest_id'=>$id])->all();
+        elseif ($post && $post['edite']){
+            $question = AcQuestionAnswers::findOne(['id' => intval($post['id']) ]);
+            $question->load($post);
+            $question->save(false);
+            $this->redirect(['answer','success' => 'true', 'id' => 'key' . $question->id]);
+        }
+        $answers = AcQuestionAnswers::find()->where(['quest_id'=>$id])->orderBy(['order_num' => SORT_ASC])->all();
         $question = AcQuestionQuests::findOne($id);
         return $this->render('answer', ['answers' => $answers,'question'=>$question]);
 
@@ -831,6 +842,14 @@ class AdminController extends Controller {
         $answer = AcAnswers::findOne(['id' => $id]);
         return $this->renderAjax('answer-edite-popup', ['answer' => $answer]);
     }
+    public function actionAnswerEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $answer = AcQuestionAnswers::findOne(['id' => $id]);
+        return $this->renderAjax('questanswer-edite-popup', ['answer' => $answer]);
+    }
     public function actionReviewEdite() {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
@@ -838,6 +857,14 @@ class AdminController extends Controller {
         $id = intval($_GET['id']);
         $review = AcReviews::findOne(['id' => $id]);
         return $this->renderAjax('review-edite-popup', ['review' => $review]);
+    }
+    public function actionUserEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $user = User::findOne(['id' => $id]);
+        return $this->renderAjax('settings-edite-popup', ['user' => $user]);
     }
 
       /* DISABLE BLOCK */
@@ -853,6 +880,19 @@ class AdminController extends Controller {
         }
 
         $partner->save(false);
+        return true;
+    }
+    public function actionCategoryDisable() {
+        $id = intval($_GET['id']);
+        $quest_list = AcQuestionList::findOne(['id' => $id]);
+        if ($quest_list->status) {
+            $quest_list->status = 0;
+        }
+        else {
+            $quest_list->status = 1;
+        }
+
+        $quest_list->save(false);
         return true;
     }
     public function actionQuestionsDisable() {
@@ -1165,15 +1205,13 @@ class AdminController extends Controller {
      */
     // Mariam
     public function actionUpdateOrder() {
-        echo "<pre>";
-        var_dump($_POST);
         if ($this->request->isPost) {
             if (!empty($_POST['orders']) && !empty($_POST['page'])) {
-                foreach ($_POST['orders'] as $i => $row) {
-                    $order_num = $_POST['page']::findOne($row['id']);
+                $className = '\\app\\models\\' . $_POST['page'];
+                foreach ($_POST['orders'] as $row) {
+                    $order_num = $className::findOne($row['id']);
                     $order_num->order_num = $row['order'];
-//                    var_dump($order_num);
-                    die;
+                    $order_num->save(false);
                 }
             }
         }

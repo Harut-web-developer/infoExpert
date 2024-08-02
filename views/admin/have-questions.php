@@ -68,7 +68,7 @@
                                                         </td>
                                                         <td scope="col">
                                                             <?php if($item->checked_answer == 0){?>
-                                                                <button id="sendEmailButton">Ուղարկել նամակ</button>
+                                                                <button class="btn btn-outline-secondary" id="sendEmailButton">Ուղարկել նամակ</button>
                                                                 <input type="checkbox" class="checkedAnswerHaveQuestions">
                                                             <?php }?>
                                                             <?php if($item->checked_answer == 1){?>

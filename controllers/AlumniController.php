@@ -50,6 +50,7 @@ class AlumniController extends \yii\web\Controller
         $language = $_COOKIE['language'];
         $alumni = AcAlumni::find()->select('id,img,linkedin_link,alumni_'.$language.' as alumni, text_'.$language.' as text')
             ->where(['status' => '1'])
+            ->orderBy(['order_num' => SORT_ASC])
             ->asArray()
             ->all();
         return $this->render('index',[

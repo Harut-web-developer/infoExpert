@@ -2807,29 +2807,28 @@ input::-webkit-inner-spin-button {
     text-align: center;
     display: flex;
     justify-content: center;
+}
+.close-btn-testimonial {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    right: 0;
+    display: inline-block;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    border-radius: 1000px;
+    background: rgb(172, 203, 230);
+    border: 5px solid;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    line-height: 160%;
 
-    .close-btn-testimonial {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        cursor: pointer;
-        top: 0px;
-        right: 0;
-        display: inline-block;
-        -webkit-transition: all ease 0.5s;
-        transition: all ease 0.5s;
-        border-radius: 1000px;
-        background: rgb(172, 203, 230);
-        border: 5px solid;
-        font-weight: bold;
-        text-decoration: none;
-        color: #fff;
-        line-height: 160%;
-
-        &:hover {
-            -webkit-transform:rotate(180deg);
-            transform:rotate(180deg);
-        }
+    &:hover {
+        -webkit-transform:rotate(180deg);
+        transform:rotate(180deg);
     }
 }
 .testimonial-container{

@@ -117,4 +117,39 @@ if ($language == 'en') {
         </div>
     </div>
 </div>
+<!--popup-->
+<div class="popup-wrap-courses" >
+    <div class="popup-box-courses">
+        <div class="courses-input-x">
+            <form class="ratingForm">
+                <span class="titleRating"><?=$GLOBALS['text']['ratingTitlePopup']?></span>
+                <span class="ratingText"><?=$GLOBALS['text']['ratingTextPopup']?></span>
+                <div class="ratingField">
+                    <input type="radio" id="rate_1" value="1">
+                    <label for="rate_1"><img src="/images/ratingWhite.png" alt=""></label>
+                    <input type="radio" id="rate_2" value="2">
+                    <label for="rate_2"><img src="/images/ratingWhite.png" alt=""></label>
+                    <input type="radio" id="rate_3" value="3">
+                    <label for="rate_3"><img src="/images/ratingWhite.png" alt=""></label>
+                    <input type="radio" id="rate_4" value="4">
+                    <label for="rate_4"><img src="/images/ratingWhite.png" alt=""></label>
+                    <input type="radio" id="rate_5" value="5">
+                    <label for="rate_5"><img src="/images/ratingWhite.png" alt=""></label>
+                </div>
+                <div class="textareaRating">
+                    <textarea placeholder="<?=$GLOBALS['text']['ratingMessagePopup']?>" name="" class="raitngMessage"></textarea>
+                </div>
+                <div class="ratingBtn">
+                    <button>
+                        <img src="/images/userSaveBtn.png" alt="">
+                        <span><?=$GLOBALS['text']['ratingBtnPopup']?></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <?php $this->registerJsFile('@web/js/user-create.js', ['defer' => true]); ?>
+<script>
+
+</script>

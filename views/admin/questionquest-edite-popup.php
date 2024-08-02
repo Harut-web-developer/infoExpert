@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addnew">Փոփոխել ( Շրջանավարտ ՝ <?php echo $question->name_am;?>) </h5>
+                <h5 class="modal-title" id="addnew">Փոփոխել ( հարցը ՝ <?php echo $question->name_am;?>) </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

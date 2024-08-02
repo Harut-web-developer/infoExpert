@@ -58,6 +58,7 @@ class LessonsController extends \yii\web\Controller
         $tutors = AcTutors::find()->select('id, username_'.$language.' as username, text_'.$language.' as text,img')
             ->where(['status' => '1'])
             ->andwhere(['lesson_id' => $lesson['id']])
+            ->orderBy(['order_num' => SORT_ASC])
             ->asArray()
             ->all();
         return $this->render('lesson',[

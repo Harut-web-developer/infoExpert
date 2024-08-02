@@ -1,4 +1,4 @@
-<input type="hidden" data-page='Categories' id="page">
+<input type="hidden" data-page='AcQuestionList' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց

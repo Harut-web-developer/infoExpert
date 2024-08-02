@@ -51,7 +51,7 @@
                                             <?php if(!empty($info)){ ?>
                                                 <?php foreach ($info as $item){ ?>
                                                     <tr data-id="<?php echo $item->id;?>">
-                                                        <td scope="col"><span class="move"><i class="fa fa-arrows-alt"></i></span>
+                                                        <td scope="col">
                                                             <?php  if($item->status == 0){
                                                                 echo '<i class="fa fa-close" style="color:red;"></i>';
                                                             } ?>

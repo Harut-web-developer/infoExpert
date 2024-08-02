@@ -80,6 +80,16 @@ function editeAnswerHth(id) {
 		});
 	}
 }
+function editeAnswer(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/answer-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
 function editeLesson(id) {
 
 	if (id) {
@@ -502,6 +512,16 @@ function disableProduct(id) {
 		});
 	}
 }
+function disableCategory(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/category-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
 
 function copyProduct(id) {
 	if (id) {
@@ -759,11 +779,11 @@ jQuery(document).ready(function($) {
 		disablApply(id);
 	});
 	$('body').on('click', '#disableAnswer', function(event) {
-		var id = $('.sortableTable  tr.active').attr('data-id');
+		var id = $('.sortable  li.active').attr('data-id');
 		disableAnswer(id);
 	});
 	$('body').on('click', '#disableQuest', function(event) {
-		var id = $('.sortableTable  tr.active').attr('data-id');
+		var id = $('.sortable  li.active').attr('data-id');
 		disableQuest(id);
 	});
 	$('body').on('click', '#disable', function(event) {
@@ -786,6 +806,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#editeAnswerHth', function(event) {
 		var id = $('.sortableTable tr.active').attr('data-id');
 		editeAnswerHth(id);
+	});
+	$('body').on('click', '#editeAnswer', function(event) {
+		var id = $('.sortable li.active').attr('data-id');
+		editeAnswer(id);
 	});
 	$('body').on('click', '#editeReview', function(event) {
 		var id = $('.sortableTable tr.active').attr('data-id');

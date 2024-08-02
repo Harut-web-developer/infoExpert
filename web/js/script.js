@@ -310,8 +310,9 @@ if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600)
     });
 }
 // Harut
-$(document).ready(function () {
+$(document).ready(function (e) {
     $('body').on('click','.tabletMenuIcon', function () {
+        console.log()
         if($(window).width() < 600){
             $('.menuTabletHeader').toggleClass('menuMobileActive');
             $('.menuTabletHeader').removeClass('menuTabletActive');
@@ -354,7 +355,7 @@ $(document).ready(function () {
     })
     $(document).on('click', function(event) {
         if (!$(event.target).closest('.menuTabletHeader').length && !$(event.target).closest('.personMainMenu').length &&
-            !$(event.target).closest('.personCoursesMenuList').length &&
+            !$(event.target).closest('.personCoursesMenuList').length && event.target.getAttribute('id') != 'next-courses' &&
             !$(event.target).hasClass('tabletMenuIcon')) {
             $('.menuTabletHeader').removeClass('menuTabletActive');
             $('.personMainMenu').css('width', '0px');
@@ -756,60 +757,18 @@ $('.mainFieldSite').on('mouseout', function () {
     $(this).children('a').css('color', '');
 });
 // Mariam
-let next = document.getElementById('next-courses');
-let prev = document.getElementById('prev-courses');
-let carousel = document.querySelector('.carousel-courses');
-let items = document.querySelectorAll('.carousel-courses .item-courses');
-let countItem = items.length;
-let active = 1;
-let other_1 = null;
-let other_2 = null;
-if (next != null && prev != null) {
-    next.onclick = () => {
-        carousel.classList.remove('prev-courses');
-        carousel.classList.add('next-courses');
-        active = active + 1 >= countItem ? 0 : active + 1;
-        other_1 = active - 1 < 0 ? countItem - 1 : active - 1;
-        other_2 = active + 1 >= countItem ? 0 : active + 1;
-        changeSlider();
+let carousel = $('.carousel-courses');
+let items = $('.carousel-courses .item-courses');
+var active__ = 1;
+
+setInterval(() => {
+    if(active__ == items.length){
+        active__ = 1;
+    } else {
+        active__++;
     }
+    $('.item-courses').removeClass('active-courses');
+    $('#item'+active__).addClass('active-courses');
 
-    prev.onclick = () => {
-        carousel.classList.remove('next-courses');
-        carousel.classList.add('prev-courses');
-        active = active - 1 < 0 ? countItem - 1 : active - 1;
-        other_1 = active + 1 >= countItem ? 0 : active + 1;
-        other_2 = other_1 + 1 >= countItem ? 0 : other_1 + 1;
-        changeSlider();
-    }
+}, 5000);
 
-    const changeSlider = () => {
-        let itemOldActive = document.querySelector('.carousel-courses .item-courses.active-courses');
-        if (itemOldActive) itemOldActive.classList.remove('active-courses');
-
-        let itemOldOther_1 = document.querySelector('.carousel-courses .item-courses.other_1-courses');
-        if (itemOldOther_1) itemOldOther_1.classList.remove('other_1-courses');
-
-        let itemOldOther_2 = document.querySelector('.carousel-courses .item-courses.other_2-courses');
-        if (itemOldOther_2) itemOldOther_2.classList.remove('other_2-courses');
-
-        items.forEach(e => {
-            e.querySelector('.image-courses img').style.animation = 'none';
-            void e.offsetWidth;
-            e.querySelector('.image-courses img').style.animation = '';
-        })
-
-        items[active].classList.add('active-courses');
-        items[other_1].classList.add('other_1-courses');
-        items[other_2].classList.add('other_2-courses');
-
-        clearInterval(autoPlay);
-        autoPlay = setInterval(() => {
-            next.click();
-        }, 5000);
-    }
-
-    let autoPlay = setInterval(() => {
-        next.click();
-    }, 5000);
-}

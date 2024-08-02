@@ -152,7 +152,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
 
 <!--Mariam-->
 <div class="carousel-courses next-courses">
-    <div class="list-courses">
+    <div class="list-courses" >
         <?php
         if ((intval($_COOKIE['screenWidth'])) <= 599){
             $img = [
@@ -174,7 +174,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             foreach ($lessons_courses as $i => $lesson) {
                 $bgImage = $img[$i % count($img)];
                 ?>
-                <article class="item-courses <?= $i === 0 ? 'other_1-courses' : '' ?>">
+                <article class="item-courses <?= $i === 0 ? 'other_1-courses' : '' ?>" id="item<?php echo $i+1;?>">
                     <div class="main-content-courses" style='background-image: <?= $bgImage ?>;'>
                         <div class="content-courses">
                             <div class="coursesBg">

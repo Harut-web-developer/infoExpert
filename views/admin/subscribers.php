@@ -1,5 +1,5 @@
 <!-- Harut-->
-<input type="hidden" data-page='subscribers' id="page">
+<input type="hidden" data-page='AcSubscribers' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
