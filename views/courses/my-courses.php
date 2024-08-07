@@ -79,17 +79,19 @@ if ($language == 'en') {
                                         <div class="myCoursesBlocksFieldMainInfo">
                                             <div class="infoTitle"><?=$my_lesson['lesson_name']?></div>
                                             <div class="myCoursesRating">
-                                                <div class="ratingStarMyourse">
-                                                    <?php
+                                                <?php if ($my_lesson['rating'] != null || $my_lesson['rating'] != 0){?>
+                                                    <div class="ratingStarMyourse">
+                                                        <?php
                                                         $count = $my_lesson['rating'];
                                                         $img = '';
                                                         for ($i = 1; $i <= $count; $i++){
                                                             $img .= '<img src="/images/ratingStar.png" alt="" draggable="false">';
                                                         }
                                                         echo $img;
-                                                    ?>
-                                                </div>
-                                                <span><?=$GLOBALS['text']['rating']?></span>
+                                                        ?>
+                                                    </div>
+                                                    <span><?=$GLOBALS['text']['rating']?></span>
+                                                <?php } ?>
                                             </div>
                                             <div class="progress" style="height: 3px;">
                                                 <div class="progress-bar" role="progressbar" style="width: <?=$my_lesson['complete_percent']?>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -121,15 +123,21 @@ if ($language == 'en') {
                     <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
                     <div class="myCoursesBlocksFieldMain">
                         <span><?=$my_lesson['lesson_name']?></span>
+
                         <div class="myCoursesRating">
-                            <div class="ratingStarMyourse">
-                                <img src="/images/ratingStar.png" alt="">
-                                <img src="/images/ratingStar.png" alt="">
-                                <img src="/images/ratingStar.png" alt="">
-                                <img src="/images/ratingStar.png" alt="">
-                                <img src="/images/ratingStar.png" alt="">
-                            </div>
-                            <span><?=$GLOBALS['text']['rating']?></span>
+                            <?php if ($my_lesson['rating'] != null || $my_lesson['rating'] != 0){?>
+                                <div class="ratingStarMyourse">
+                                    <?php
+                                    $count = $my_lesson['rating'];
+                                    $img = '';
+                                    for ($i = 1; $i <= $count; $i++){
+                                        $img .= '<img src="/images/ratingStar.png" alt="" draggable="false">';
+                                    }
+                                    echo $img;
+                                    ?>
+                                </div>
+                                <span><?=$GLOBALS['text']['rating']?></span>
+                            <?php } ?>
                         </div>
                         <div class="blogInfoPercent">
                             <div class="progress" style="height: 3px;">

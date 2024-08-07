@@ -88,11 +88,21 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         position: absolute;
         background: #cfcfcf;
         opacity: 0.6;
-            width: 132px;
-    left: 32px;
-    top: -3px;
-    height: 31px;
+        width: 132px;
+        left: 32px;
+        top: -3px;
+        height: 31px;
      }
+     /*.buttons .simpleShow_{*/
+     /*    display: inline-block;*/
+     /*    position: absolute;*/
+     /*    background: #cfcfcf;*/
+     /*    opacity: 0.6;*/
+     /*    width: 132px;*/
+     /*    left: -2px;*/
+     /*    top: -3px;*/
+     /*    height: 31px;*/
+     /*}*/
  </style>
 </head>
 
@@ -167,6 +177,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                        </li>
                        <li>
                            <a href="/admin/certificate"><i class="menu-icon fa fa-certificate"></i>Սերտիֆիկատ</a>
+                       </li>
+                       <li>
+                           <a href="/admin/rating"><i class="menu-icon fa fa-star"></i>Վարկանիշ</a>
                        </li>
                        <li>
                            <a href="/admin/settings"><i class="menu-icon fa fa-cogs"></i>Կարգավորումներ</a>

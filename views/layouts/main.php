@@ -17,13 +17,13 @@ use \app\models\AcInfo;
 use Yii;
 
 AppAsset::register($this);
-
 $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => 'infoexpert, courses, դասընթացներ, курсы']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('/images/faviconInfoexpert.ico')]);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -51,12 +51,15 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 </head>
 <body>
 <?php $this->beginBody() ?>
+<?php
+$logo = AcInfo::find()->one();
+?>
 <header>
     <div class="tabletHeader">
         <div class="mainHeader">
             <div class="mainField">
                 <div class="logoTabletField">
-                    <a href="/"><img src="/images/logo.png" alt=""></a>
+                    <a href="/"><img src="/<?=$logo->site_logo?>" alt=""></a>
                 </div>
                 <div class="tabletMenuField">
                     <button class="modalOpenBtn">
@@ -128,7 +131,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                                 </li>
                             <?php } ?>
                         <li><a href="/about"><?= $GLOBALS['text']['footerAbout']?></a></li>
-                        <li><a href=""><?= $GLOBALS['text']['tabletMethodology']?></a></li>
+                        <li><a href="/methodology"><?= $GLOBALS['text']['tabletMethodology']?></a></li>
                         <?php if ($_SERVER['REQUEST_URI'] == '/'){ ?>
                             <li><a href="#testimonials"><?= $GLOBALS['text']['footerTestimonials']?></a></li>
                             <li><a href="#section01"><?= $GLOBALS['text']['footerBlog']?></a></li>
@@ -142,7 +145,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <li><a href="/alumni/index"><?= $GLOBALS['text']['headerAlumni']?></a></li>
                         <li><a href="/quize/index"><?= $GLOBALS['text']['tabletRecQuize']?></a></li>
                         <li><a href="/contact-us/index"><?= $GLOBALS['text']['tabletContact']?></a></li>
-                        <?php if(!empty(Yii::$app->user->identity)){ ?>
+                        <?php if(!empty(Yii::$app->user->identity) ){ ?>
                             <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
                         <?php }?>
                         <li><a href="/site-map"><?= $GLOBALS['text']['siteMap']?></a></li>
@@ -212,7 +215,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         <div class="menuSection">
             <div class="logoSection">
                 <div class="logo">
-                    <a href="/"><img src="/images/logo.png" alt=""></a>
+                    <a href="/"><img src="/<?=$logo->site_logo?>" alt=""></a>
                 </div>
                 <div class="icons">
                     <div class="search-div">
@@ -226,7 +229,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         <div class="searchField"></div>
                     </div>
                     <div class="profileField">
-                        <?php if (empty(Yii::$app->user->identity)){?>
+                        <?php if (empty(Yii::$app->user->identity) || Yii::$app->user->identity->role != null){?>
                             <a href="/login"><img class="profileUserIcon" src="/images/user.png" alt=""></a>
                         <?php }else{?>
                             <img class="profileUserIcon" src="/images/user.png" alt="">

@@ -600,7 +600,7 @@ input::-webkit-inner-spin-button {
     position: relative;
     top: 20px;
 }
-.logo > img{
+.logo > a >img{
     width:255px;
     height: 48px;
 }
@@ -2277,6 +2277,7 @@ input::-webkit-inner-spin-button {
     cursor:pointer;
 }
 .cardsInfo{
+    word-break: break-all;
     display: -webkit-box;
     font-family: "Roboto_",sans-serif;
     font-weight: 400;

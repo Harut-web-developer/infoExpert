@@ -118,29 +118,32 @@ if ($language == 'en') {
     </div>
 </div>
 <!--popup-->
-<div class="popup-wrap-courses" >
+<div class="popup-wrap-courses" style="display: <?=!empty($course_exist) ? 'flex' : 'none'?>">
     <div class="popup-box-courses">
         <div class="courses-input-x">
-            <form class="ratingForm">
-                <span class="titleRating"><?=$GLOBALS['text']['ratingTitlePopup']?></span>
+            <form class="ratingForm" action="/user-profile/rating" method="post">
+                <div class="titleRating"><?=$GLOBALS['text']['ratingTitlePopup']?></div>
+                <div class="lessonName"><?=$course_exist['lesson_name']?></div>
                 <span class="ratingText"><?=$GLOBALS['text']['ratingTextPopup']?></span>
+                <input type="hidden" name="lesson_id" value="<?=$course_exist['lessons_id']?>">
+                <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
                 <div class="ratingField">
-                    <input type="radio" id="rate_1" value="1">
+                    <input type="radio" id="rate_1" name="rating" value="1">
                     <label for="rate_1"><img src="/images/ratingWhite.png" alt=""></label>
-                    <input type="radio" id="rate_2" value="2">
+                    <input type="radio" id="rate_2" name="rating" value="2">
                     <label for="rate_2"><img src="/images/ratingWhite.png" alt=""></label>
-                    <input type="radio" id="rate_3" value="3">
+                    <input type="radio" id="rate_3" name="rating" value="3">
                     <label for="rate_3"><img src="/images/ratingWhite.png" alt=""></label>
-                    <input type="radio" id="rate_4" value="4">
+                    <input type="radio" id="rate_4" name="rating" value="4">
                     <label for="rate_4"><img src="/images/ratingWhite.png" alt=""></label>
-                    <input type="radio" id="rate_5" value="5">
+                    <input type="radio" id="rate_5" name="rating" value="5">
                     <label for="rate_5"><img src="/images/ratingWhite.png" alt=""></label>
                 </div>
                 <div class="textareaRating">
-                    <textarea placeholder="<?=$GLOBALS['text']['ratingMessagePopup']?>" name="" class="raitngMessage"></textarea>
+                    <textarea name="message" placeholder="<?=$GLOBALS['text']['ratingMessagePopup']?>" class="raitngMessage"></textarea>
                 </div>
                 <div class="ratingBtn">
-                    <button>
+                    <button type="submit">
                         <img src="/images/userSaveBtn.png" alt="">
                         <span><?=$GLOBALS['text']['ratingBtnPopup']?></span>
                     </button>
@@ -150,6 +153,4 @@ if ($language == 'en') {
     </div>
 </div>
 <?php $this->registerJsFile('@web/js/user-create.js', ['defer' => true]); ?>
-<script>
 
-</script>

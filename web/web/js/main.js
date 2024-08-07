@@ -352,6 +352,16 @@ function disablApply(id) {
 		});
 	}
 }
+function disableRating(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/rating-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
 function disableQuest(id) {
 	if (id) {
 		jQuery.ajax({
@@ -777,6 +787,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#disablApply', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disablApply(id);
+	});
+	$('body').on('click', '#disableRating', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableRating(id);
 	});
 	$('body').on('click', '#disableAnswer', function(event) {
 		var id = $('.sortable  li.active').attr('data-id');

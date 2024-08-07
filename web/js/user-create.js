@@ -65,7 +65,10 @@ if (getCookieByName('language') == 'am'){
 }
 let stars = document.querySelectorAll('.ratingField label');
 let ratingText = document.querySelector('.ratingText');
+let ratingForm = document.querySelector('.ratingForm');
 let ratedIndex = -1;
+let textareaField = document.querySelector('.textareaRating');
+let ratingButton = document.querySelector('.ratingBtn');
 stars.forEach((item, index1) => {
     item.addEventListener('mouseover', () => {
         stars.forEach((star, index2) => {
@@ -109,6 +112,10 @@ stars.forEach((item, index1) => {
                     default:
                         ratingText.innerHTML = text;
                 }
+                ratingForm.style.marginBottom = '0px';
+                ratingForm.style.marginTop = '50px';
+                textareaField.style.display = 'flex';
+                ratingButton.style.display = 'flex';
                 star.querySelector('img').src = '/images/ratingOrange.png';
             } else {
                 star.querySelector('img').src = '/images/ratingWhite.png';

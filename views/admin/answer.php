@@ -8,7 +8,7 @@
     </div>
     <script>
         var url = window.location.href;
-        url = url.split('?')[0];
+        url = url.split('?')[0]+'?id=<?php echo $_GET['id'];?>';;
         window.history.replaceState({}, document.title, url);
     </script>
 <?php } ?>

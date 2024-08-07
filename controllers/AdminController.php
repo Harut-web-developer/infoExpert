@@ -13,6 +13,7 @@ use app\models\AcPartners;
 use app\models\AcQuestionAnswers;
 use app\models\AcQuestionList;
 use app\models\AcQuestionQuests;
+use app\models\AcRating;
 use app\models\AcReviews;
 use app\models\AcSubscribers;
 use app\models\AcTutors;
@@ -92,10 +93,9 @@ class AdminController extends Controller {
             $question = new AcQuestionQuests();
             $question->load($post);
             $question->save(false);
-            $this->redirect(['question',['id' => $id, 'success' => 'true']]);
+            $this->redirect('question?id='.$id.'&success=true');
         }
         else if ($post && $post['edite']) {
-
             $question = AcQuestionQuests::findOne(['id' => intval($post['id']) ]);
             $question->load($post);
             $question->save(false);
@@ -116,13 +116,13 @@ class AdminController extends Controller {
             $question = new AcQuestionAnswers();
             $question->load($post);
             $question->save(false);
-            $this->redirect(['answer', 'success' => 'true', 'id' => 'key' . $id]);
+            $this->redirect('answer?id='.$id.'&success=true');
         }
         elseif ($post && $post['edite']){
             $question = AcQuestionAnswers::findOne(['id' => intval($post['id']) ]);
             $question->load($post);
             $question->save(false);
-            $this->redirect(['answer','success' => 'true', 'id' => 'key' . $question->id]);
+            $this->redirect('answer?id='.$id.'&success=true');
         }
         $answers = AcQuestionAnswers::find()->where(['quest_id'=>$id])->orderBy(['order_num' => SORT_ASC])->all();
         $question = AcQuestionQuests::findOne($id);
@@ -371,6 +371,13 @@ class AdminController extends Controller {
         $subscribers = AcSubscribers::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('subscribers', ['subscribers' => $subscribers]);
     }
+    public function actionRating(){
+        $rating = AcRating::find()->with(['lessons','userName'])->orderBy(['create_date' => SORT_DESC])->all();
+        return $this->render('rating',
+            ['rating' => $rating]
+        );
+
+    }
     public function actionTutors(){
         // Harut
         if (Yii::$app->user->isGuest) {
@@ -525,6 +532,13 @@ class AdminController extends Controller {
             $info = AcInfo::findOne(['id' => intval($post['id']) ]);
             $info->load($post);
             $info->create_date = date('Y-m-d H:i:s');
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $info->site_logo = "web/uploads/$name";
+                $info->save(false);
+            }
             $info->save(false);
             $this->redirect(['info', 'success' => 'true', 'id' => 'key' . $info->id]);
         }
@@ -653,56 +667,43 @@ class AdminController extends Controller {
         }
         $post = Yii::$app->request->post();
         if ($post && $post['edite']) {
-            $settings = FsSettings::findOne(['id' => 1]);
-            $settings->load($post);
-            if (isset($_FILES['img'])) {
-                $uploaddir = 'web/uploads/';
-                $uploadfile = $uploaddir . time() . basename($_FILES['img']['name']);
-                if (move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile)) {
-                    $settings->site_logo = $uploadfile;
-                }
+            $exist_email = User::find()->where(['email' => $post['User']['email']])->exists();
+            if ($exist_email){
+                $this->redirect(['settings', 'success' => 'false']);
+            }else{
+                $user = User::findOne(intval($post['id']));
+                $user->load($post);
+                $user->password = Yii::$app->getSecurity()->generatePasswordHash($user->password);
+                $user->auth_key = $this->generateRandomString();
+                $user->save(false);
+                $this->redirect(['settings', 'success' => 'true', 'id' => 'key'.$user->id]);
             }
-            if (isset($_FILES['sitemap'])) {
-                $uploaddir = 'web/uploads/';
-                $uploadfile = $uploaddir . time() . basename($_FILES['sitemap']['name']);
-                if (move_uploaded_file($_FILES['sitemap']['tmp_name'], $uploadfile)) {
-                    $settings->sitemap = $uploadfile;
-                }
-            }
-            $settings->save(false);
-            $this->redirect(['settings', 'success' => 'true', 'id' => 'key1']);
         }
         else if ($post && $post['add']) {
-            $user = new Users();
-            $user->load($post);
-            $user->password = Yii::$app->getSecurity()->generatePasswordHash($user->password);
-            $user->auth_key = substr($user->password, 0, 30);
-            $user->save(false);
-            $this->redirect(['settings', 'success' => 'true', 'id' => 'key1']);
-        }  else if ($post && $post['edite_sec']) {
-            $user = Users::findOne(['id'=>intval($post['id'])]);
-            $user->load($post);
-            if($post['Users']['password']) {
+            $exist_email = User::find()->where(['email' => $post['User']['email']])->exists();
+            if ($exist_email){
+                $this->redirect(['settings', 'success' => 'false']);
+            }else{
+                $user = new User();
+                $user->load($post);
                 $user->password = Yii::$app->getSecurity()->generatePasswordHash($user->password);
+                $user->auth_key = $this->generateRandomString();
+                $user->save(false);
+                $this->redirect(['settings', 'success' => 'true', 'id' => 'key'.$user->id]);
             }
-            $user->save(false);
-            $this->redirect(['settings', 'success' => 'true', 'id' => 'key1']);
-        } else if ($post && $post['add_sec']) {
-            $user = new Users();
-            $user->load($post);
-            if($post['Users']['password']) {
-                $user->password = Yii::$app->getSecurity()->generatePasswordHash($user->password);
-            } else {
-                $user->password = $post['old_password'];
-            }
-            $user->auth_key = substr($user->password, 0, 30);
-            $user->save(false);
-            $this->redirect(['settings', 'success' => 'true', 'id' => 'key1']);
         }
-        $id = intval(1);
-        $settings = FsSettings::findOne(['id' => $id]);
-        $users = Users::find()->all();
-        return $this->render('settings', ['settings' => $settings, 'users' => $users]);
+        $users = Users::find()->where(['NOT', ['role' => null]])->all();
+        return $this->render('settings', ['users' => $users]);
+    }
+
+    public function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[random_int(0, $charactersLength - 1)];
+        }
+        return $randomString;
     }
 
 
@@ -1044,6 +1045,33 @@ class AdminController extends Controller {
         $apply_now->save(false);
         return true;
     }
+    public function actionRatingDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $apply_now = AcRating::findOne(['id' => $id]);
+        if ($apply_now->status) {
+            $apply_now->status = 0;
+        }
+        else {
+            $apply_now->status = 1;
+        }
+        $apply_now->save(false);
+        $rating_lesson = AcRating::find()->select('lesson_id,AVG(rating) as rating')
+            ->where(['status' => '1'])
+            ->groupBy('lesson_id')
+            ->asArray()
+            ->all();
+        $lessons = AcLessons::find()->select('id,rating')->all();
+        foreach ($lessons as $item){
+            foreach ($rating_lesson as $value){
+                if ($item->id == $value['lesson_id']){
+                    $item->rating = round($value['rating']);
+                    $item->save(false);
+                }
+            }
+        }
+        return true;
+    }
     public function actionQuestDisable() {
         $id = intval($_GET['id']);
         $quest = AcQuestionQuests::findOne(['id' => $id]);
@@ -1088,7 +1116,7 @@ class AdminController extends Controller {
 
     public function actionUserDisable() {
         $id = intval($_GET['id']);
-        $item = Users::findOne(['id' => $id]);
+        $item = User::findOne(['id' => $id]);
         if ($item->status) {
             $item->status = 0;
         }

@@ -16,6 +16,7 @@ use Yii;
  * @property string|null $linkdin_link
  * @property string|null $infoexpert_email
  * @property string|null $phone_number
+ * @property string|null $site_logo
  * @property string|null $status
  * @property string|null $create_date
  */
@@ -37,7 +38,7 @@ class AcInfo extends \yii\db\ActiveRecord
         return [
             [['partner', 'products', 'programms'], 'integer'],
             [['create_date'], 'safe'],
-            [['instagram_link', 'facebook_link', 'linkdin_link', 'status','infoexpert_email','phone_number'], 'string', 'max' => 255],
+            [['instagram_link', 'facebook_link', 'linkdin_link', 'status','infoexpert_email','phone_number','site_logo'], 'string', 'max' => 255],
         ];
     }
 

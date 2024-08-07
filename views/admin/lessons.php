@@ -101,8 +101,6 @@
                                 <input type="file" name="certificate_img">
                             </div>
                         </div>
-                        <span>Վարկանիշ</span>
-                        <input type="number" name="AcLessons[rating]" required placeholder="ԳՆահատական 1-5" class="form-control">
                         <span>Գին</span>
                         <input type="number" name="AcLessons[price]" required placeholder="Գին" class="form-control">
 

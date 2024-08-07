@@ -14,7 +14,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                 <img class="ellipseButton" src="/images/Ellipse2.png" alt="">
                 <img class="backButton" src="/images/backButton.png" alt="">
             </a>
-            <?=$blogs['page_title']?>
+            <?=$blogs['page_name']?>
             <div class="sizeLikeField">
                 <div class="large-font">
                     <ion-icon name="heart" role="img" class="md hydrated" data-id="<?=$blogs['id']?>" data-active="<?=AcWishlist::getWishlist($blogs['id'],2) ? AcWishlist::getWishlist($blogs['id'],2) : 0?>" data-type="2">

@@ -345,10 +345,11 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                     <img src="/images/calendarimg.png" alt="">
                                     <div class="articleDate"><?=$blog['create_date']?></div>
                                 </div>
-                                <div class="cardsInfo"><?=$blog['page_title']?></div>
+                                <div class="cardsInfo"><?=$blog['page_content']?></div>
                             </div>
                             <div class="cardsLike">
                                 <a href="<?= Yii::$app->urlManager->createUrl(['blog/'.$blog['url']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>
+                                <?=var_dump(AcWishlist::getWishlist($blog['id'], 2));?>
                                 <div class='large-font'>
                                     <ion-icon name="heart" data-id="<?=$blog['id']?>" data-active="<?=AcWishlist::getWishlist($blog['id'], 2) ? AcWishlist::getWishlist($blog['id'], 2) : 0?>" data-type="2">
                                         <div class='red-bg'></div>
@@ -392,7 +393,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                     <img src="/images/calendarimg.png" alt="">
                                     <div class="articleDate"><?=$blog['create_date']?></div>
                                 </div>
-                                <div class="cardsInfo"><?=$blog['page_title']?></div>
+                                <div class="cardsInfo"><?=$blog['page_content']?></div>
                             </div>
                             <div class="cardsLike">
                                 <a href="<?= Yii::$app->urlManager->createUrl(['blog/'.$blog['url']]) ?>"><?=$GLOBALS['text']['mainReadMore']?></a>

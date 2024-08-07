@@ -1,5 +1,5 @@
 <!-- Harut-->
-<input type="hidden" data-page='Info' id="page">
+<input type="hidden" data-page='AcRating' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
@@ -22,10 +22,11 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="box-title">Կայքի տվյալներ
+                        <h4 class="box-title">Վարկանիշ
                             <span class="buttons">
-                                <button class="btn btn-sm btn-default" id="editeInfo"><i class="fa fa-pencil"></i></button>
-                            </span>
+                                          <span class="overlay show_ " style="width:33px;"></span>
+                                          <button style="margin-left: 34px;" class="btn btn-sm btn-danger" id="disableRating"><i class="fa fa-trash"></i></button>
+                                        </span>
                         </h4>
                     </div>
                     <div class="card-body--">
@@ -37,20 +38,16 @@
                                             <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Գործընկեր</th>
-                                                <th scope="col">Ապրանքներ</th>
-                                                <th scope="col">Ծրագրեր</th>
-                                                <th scope="col">facebook-ի հղում</th>
-                                                <th scope="col">instagram-ի հղում</th>
-                                                <th scope="col">linkedin-ի հղում</th>
-                                                <th scope="col">Էլ. հասցե</th>
-                                                <th scope="col">Հեռախոսահամար</th>
-                                                <th scope="col">Կայքի լոգո</th>
+                                                <th scope="col">Ուսանող/ուհի</th>
+                                                <th scope="col">Դասընթաց</th>
+                                                <th scope="col">Վարկանիշ</th>
+                                                <th scope="col">Մեկնաբանություն</th>
+                                                <th scope="col">Կարգավիճակ</th>
                                             </tr>
                                             </thead>
                                             <tbody class="sortableTable" id="sortable">
-                                            <?php if(!empty($info)){ ?>
-                                                <?php foreach ($info as $item){ ?>
+                                            <?php if(!empty($rating)){ ?>
+                                                <?php foreach ($rating as $item){ ?>
                                                     <tr data-id="<?php echo $item->id;?>">
                                                         <td scope="col">
                                                             <?php  if($item->status == 0){
@@ -58,32 +55,24 @@
                                                             } ?>
                                                             ID <?php echo $item->id;?></td>
                                                         <td scope="col">
-                                                            <?php echo $item->partner;?>
+                                                            <?php echo $item->userName->username;?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php echo $item->products;?>
+                                                            <?php echo $item->lessons->lesson_name_am;?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php echo $item->programms;?>
+                                                            <?php echo $item->rating;?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php echo $item->facebook_link;?>
+                                                            <?php echo $item->comment;?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php echo $item->instagram_link;?>
-                                                        </td>
-                                                        <td scope="col">
-                                                            <?php echo $item->linkdin_link;?>
-                                                        </td>
-                                                        <td scope="col">
-                                                            <?php echo $item->infoexpert_email;?>
-                                                        </td>
-                                                        <td scope="col">
-                                                            <?php echo $item->phone_number;?>
-                                                        </td>
-                                                        <td scope="col">
-                                                            <?php echo $item->site_logo;?>
-                                                        </td>
+                                                            <?php if($item->status == 1){
+                                                                echo 'Ակտիվ';
+                                                            } else {
+                                                                echo 'Պասիվ';
+                                                            };?></td>
+
                                                     </tr>
                                                 <?php }} ?>
                                             </tbody>
@@ -97,14 +86,10 @@
             </div>
         </div>
     </div>
-    <!-- Modal -->
-
-    <div class="modals">
-
-    </div>
 </div>
 <style>
     .is_types span{
         padding-right:10px;
     }
 </style>
+

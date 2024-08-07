@@ -46,7 +46,7 @@ $statisticsPerPage = array_slice($blogs, $startIndex, $itemsPerPage);
                                     <span class="date">
                                         <img src="/images/date.png"><span class="dateNumber"><?= $blog['create_date'] ?></span>
                                     </span>
-                                    <span class="textCard"><?= $blog['page_title'] ?></span>
+                                    <span class="textCard"><?= $blog['page_content'] ?></span>
                                     <div class='divImg'>
                                         <a href="<?= Yii::$app->urlManager->createUrl(['blog/'.$blog['url']]) ?>"><?= $GLOBALS['text']['mainReadMore'] ?></a>
                                         <div class='large-font'>
@@ -109,7 +109,7 @@ $statisticsPerPage = array_slice($blogs, $startIndex, $itemsPerPage);
                     <div class="card-info">
                         <span class="textCard"><?=$item['page_name']?></span>
                         <span class="date"> <img src="/images/date.png"><span class="dateNumber"><?=$item['create_date']?></span></span>
-                        <span class="textCard"><?=$item['page_title']?></span>
+                        <span class="textCard"><?=$item['page_content']?></span>
                         <div class='divImg'>
                             <a href="/blog/<?=$item['url']?>"><?= $GLOBALS['text']['mainReadMore']?></a>
                             <div class='large-font'>

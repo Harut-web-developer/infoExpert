@@ -111,10 +111,8 @@
                     <div class="tab-content" id="nav-tabContent"><br>
                         <div class="tab-pane fade active show" id="custom-nav-product-am" role="tabpanel" aria-labelledby="custom-nav-product-am-tab">
                             <div class="form-group ">
-                                <span>Անուն</span>
-                                <input type="text" name="AcBlog[page_name_am]" required placeholder="Անուն" class="form-control">
                                 <span>Վերնագիր</span>
-                                <input type="text" name="AcBlog[page_title_am]"   placeholder="Վերնագիր" class="form-control">
+                                <input type="text" name="AcBlog[page_name_am]"   placeholder="Վերնագիր" class="form-control">
                                 <span>Բանալի Բառեր</span>
                                 <textarea name="AcBlog[page_keywords_am]" class="form-control" placeholder="Բանալի Բառեր" rows="3"></textarea>
                                 <span>Պարունակություն</span>
@@ -123,10 +121,8 @@
                         </div>
                         <div class="tab-pane fade" id="custom-nav-product-ru" role="tabpanel" aria-labelledby="custom-nav-product-ru-tab">
                             <div class="form-group">
-                                <span>Անուն</span>
-                                <input type="text" name="AcBlog[page_name_ru]"   placeholder="Անուն" class="form-control">
                                 <span>Վերնագիր</span>
-                                <input type="text" name="AcBlog[page_title_ru]"   placeholder="Վերնագիր" class="form-control">
+                                <input type="text" name="AcBlog[page_name_ru]"   placeholder="Վերնագիր" class="form-control">
                                 <span>Բանալի Բառեր</span>
                                 <textarea name="AcBlog[page_keywords_ru]" class="form-control" placeholder="Բանալի Բառեր" rows="3"></textarea>
                                 <span>Պարունակություն</span>
@@ -135,10 +131,8 @@
                         </div>
                         <div class="tab-pane fade" id="custom-nav-product-en" role="tabpanel" aria-labelledby="custom-nav-product-en-tab">
                             <div class="form-group">
-                                <span>Անուն</span>
-                                <input type="text" name="AcBlog[page_name_en]"   placeholder="Անուն" class="form-control">
                                 <span>Վերնագիր</span>
-                                <input type="text" name="AcBlog[page_title_en]"   placeholder="Վերնագիր" class="form-control">
+                                <input type="text" name="AcBlog[page_name_en]"   placeholder="Վերնագիր" class="form-control">
                                 <span>Բանալի Բառեր</span>
                                 <textarea name="AcBlog[page_keywords_en]" class="form-control" placeholder="Բանալի Բառեր" rows="3"></textarea>
                                 <span>Պարունակություն</span>

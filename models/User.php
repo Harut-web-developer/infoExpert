@@ -7,6 +7,19 @@ use yii\db\ActiveRecord;
 use yii\db\Expression;
 use Yii;
 
+/**
+ * This is the model class for table "user".
+ *
+ * @property int $id
+ * @property string $username
+ * @property string $auth_key
+ * @property string $password
+ * @property string|null $password_reset_token
+ * @property string $email
+ * @property int $status
+ * @property int $role
+
+ */
 class User extends ActiveRecord implements \yii\web\IdentityInterface
 {
 
@@ -26,7 +39,7 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
         return [
             [['username', 'email', 'password','image','linkdin_url','phone','cv'], 'required'],
             [['username', 'password','image','linkdin_url','cv'], 'string'],
-            [['phone'], 'integer'],
+            [['phone','role'], 'integer'],
             [['email'], 'email'],
             [['email'], 'unique'],
             ['password', 'validatePassword'],

@@ -12,6 +12,12 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $info->id;?>">
                     <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span style="margin-bottom: 4px;color: #878787;">Լոգո</span>
+                            <input type="file" name="img">
+                        </div>
+                    </div>
                     <br>
                     <span>Գործընկեր</span>
                     <input type="text" name="AcInfo[partner]" required value="<?php echo $info->partner;?>" placeholder="Գործընկեր" class="form-control">
