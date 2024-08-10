@@ -7,20 +7,22 @@ use app\models\AcAnswers;
 use app\models\AcApplyNow;
 use app\models\AcCallback;
 use app\models\AcCertificate;
+use app\models\AcGroups;
 use app\models\AcInfo;
 use app\models\AcLessons;
+use app\models\AcMyLessons;
 use app\models\AcPartners;
 use app\models\AcQuestionAnswers;
 use app\models\AcQuestionList;
 use app\models\AcQuestionQuests;
+use app\models\AcQuizeLog;
 use app\models\AcRating;
 use app\models\AcReviews;
 use app\models\AcSubscribers;
 use app\models\AcTutors;
 use app\models\FsOrders;
 use app\models\AcBlog;
-use app\models\FsSettings;
-use app\models\FsTexts;
+use app\models\Texts;
 use app\models\User;
 use app\models\Users;
 use app\models\AcHaveQuestions;
@@ -40,7 +42,8 @@ use function PHPUnit\Framework\callback;
 class AdminController extends Controller {
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
-        if(Yii::$app->getUser()->identity->role != 10 && $this->action->id !='login'){
+        $roles = User::roles;
+        if(!isset($roles[Yii::$app->user->identity->role]) && $this->action->id !='login'){
             $this->redirect('/404');
         }
 
@@ -60,7 +63,44 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
-        return $this->render('index');
+        $user = User::find()
+            ->select(['count(id) as count', 'DATE_FORMAT(created_at, "%Y-%m-%d") as created'])
+            ->where(['and', ['status' => '1'], ['is', 'role', null]])
+            ->groupBy(['DATE_FORMAT(created_at, "%Y-%m-%d")'])
+            ->asArray()
+            ->all();
+        $date = [];
+        $count_user = [];
+        if (!empty($user)){
+            for($i = 0; $i < count($user); $i++){
+                if(substr($user[$i]['created'],5,2) == date('m')){
+                    array_push($date,$user[$i]['created']);
+                    array_push($count_user,$user[$i]['count']);
+                }
+            }
+        }
+        $orders = AcMyLessons::find()
+            ->select(['count(id) as count', 'DATE_FORMAT(create_date, "%Y-%m-%d") as created'])
+            ->where(['and', ['status' => ['1','2','3']]])
+            ->groupBy(['DATE_FORMAT(create_date, "%Y-%m-%d")'])
+            ->asArray()
+            ->all();
+        $order_date = [];
+        $count_order = [];
+        if (!empty($orders)){
+            for($i = 0; $i < count($orders); $i++){
+                if(substr($orders[$i]['created'],5,2) == date('m')){
+                    array_push($order_date,$orders[$i]['created']);
+                    array_push($count_order,$orders[$i]['count']);
+                }
+            }
+        }
+        return $this->render('index',[
+            'date' => $date,
+            'count_user' => $count_user,
+            'order_date' => $order_date,
+            'count_order' => $count_order,
+        ]);
     }
     public function actionQuestions() {
         if (Yii::$app->user->isGuest) {
@@ -138,7 +178,19 @@ class AdminController extends Controller {
         if ($post && $post['add']) {
             $user = new User();
             $user->load($post);
-            $user->password = Yii::$app->getSecurity()->generatePasswordHash($user->password);
+            $user->password = Yii::$app->getSecurity()->generatePasswordHash($post['User']['password']);
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $user->image = "web/uploads/$name";
+            }
+            if (!empty($_FILES['cv']) && $_FILES["cv"]["name"]) {
+                $tmp_name = $_FILES["cv"]["tmp_name"];
+                $name = time() . basename($_FILES["cv"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $user->cv = "web/uploads/$name";
+            }
             $user->save(false);
             $this->redirect(['customers', 'success' => 'true', 'id' => 'key' . $user->id]);
         }
@@ -146,16 +198,23 @@ class AdminController extends Controller {
             $user = User::findOne(['id' => intval($post['id']) ]);
             $pass = $user->password;
             $user->load($post);
-            if($post['FsUsers']['password']) {
-                $user->password = Yii::$app->getSecurity()->generatePasswordHash($user->password);
-            } else {
+            if($post['User']['password']) {
+                $user->password = Yii::$app->getSecurity()->generatePasswordHash($post['User']['password']);
+            }
+            else {
                 $user->password = $pass;
             }
-            if (!empty($_FILES['logo']) && $_FILES["logo"]["name"]) {
-                $tmp_name = $_FILES["logo"]["tmp_name"];
-                $name = time() . basename($_FILES["logo"]["name"]);
-                move_uploaded_file($tmp_name, "web/uploads/users/$name");
-                $user->image = "web/uploads/users/$name";
+            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                $tmp_name = $_FILES["img"]["tmp_name"];
+                $name = time() . basename($_FILES["img"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $user->image = "web/uploads/$name";
+            }
+            if (!empty($_FILES['cv']) && $_FILES["cv"]["name"]) {
+                $tmp_name = $_FILES["cv"]["tmp_name"];
+                $name = time() . basename($_FILES["cv"]["name"]);
+                move_uploaded_file($tmp_name, "web/uploads/$name");
+                $user->cv = "web/uploads/$name";
             }
             $user->save(false);
             $this->redirect(['customers', 'success' => 'true', 'id' => 'key' . $user->id]);
@@ -177,23 +236,23 @@ class AdminController extends Controller {
         else {
             switch (intval($_GET['type'])) {
                 case 2:
-                    $cond = ' legal_name LIKE "%' . $_GET['search'] . '"';
+                    $cond = ' username LIKE "%' . $_GET['search'] . '"';
                     break;
                 case 1:
-                    $cond = ' legal_name LIKE "' . $_GET['search'] . '%"';
+                    $cond = ' username LIKE "' . $_GET['search'] . '%"';
                     break;
                 case 3:
-                    $cond = ' legal_name LIKE "%' . $_GET['search'] . '%" AND legal_name NOT LIKE  "%' . $_GET['search'] . '" AND legal_name NOT LIKE "' . $_GET['search'] . '%"';
+                    $cond = ' username LIKE "%' . $_GET['search'] . '%" AND username NOT LIKE  "%' . $_GET['search'] . '" AND username NOT LIKE "' . $_GET['search'] . '%"';
                     break;
                 default:
-                    $cond = ' legal_name LIKE "%' . $_GET['search'] . '%"';
+                    $cond = ' username LIKE "%' . $_GET['search'] . '%"';
                     break;
             }
             $users = User::find()->where($cond)->all();
         }
 
         $total = User::find()->count();
-        return $this->render('customers', ['partners' => $users, 'total' => $total]);
+        return $this->render('customers', ['users' => $users, 'total' => $total]);
     }
     public function actionPartners() {
         if (Yii::$app->user->isGuest) {
@@ -262,6 +321,75 @@ class AdminController extends Controller {
         }
         $answers = AcAnswers::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('answers', ['answers' => $answers]);
+    }
+    public function actionQuize() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $quize = AcQuizeLog::find()->select('ac_quize_log.id as id,result,username,email,phone,user_id, name_am,ac_quize_log.status as status,ac_quize_log.create_date as date')
+            ->leftJoin('ac_question_list','ac_question_list.id = ac_quize_log.question_id')
+            ->orderBy(['ac_quize_log.order_num' => SORT_ASC])->asArray()->all();
+        return $this->render('quize-log', ['quize' => $quize]);
+    }
+    public function actionGroups(){
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        date_default_timezone_set("Asia/Yerevan");
+        $post = Yii::$app->request->post();
+        if ($post && $post['add']) {
+            $groups = new AcGroups();
+            $groups->load($post);
+            $groups->create_date = date('Y-m-d H:i:s');
+            $groups->save(false);
+            $users = $post['AcGroups']['user_id'];
+            foreach ($users as $user){
+                $user_groups_id = User::findOne(intval($user));
+                $user_groups_id->groups_id = $groups->id;
+                $user_groups_id->save(false);
+            }
+            $this->redirect(['groups', 'success' => 'true', 'id' => 'key' . $groups->id]);
+        }
+        elseif ($post && $post['edite']){
+            $groups = AcGroups::findOne(['id' => intval($post['id']) ]);;
+            $groups->load($post);
+            $groups->create_date = date('Y-m-d H:i:s');
+            $groups->save(false);
+            $delete_users = User::find()->where(['groups_id' => $groups->id])->all();
+            if (!empty($delete_users)){
+                foreach($delete_users as $delete_user){
+                    $delete_user->groups_id = null;
+                    $delete_user->save(false);
+                }
+            }
+            $users = $post['AcGroups']['user_id'];
+            foreach ($users as $user){
+                $user_groups_id = User::findOne(intval($user));
+                $user_groups_id->groups_id = $groups->id;
+                $user_groups_id->save(false);
+            }
+            $this->redirect(['groups', 'success' => 'true', 'id' => 'key' . $groups->id]);
+        }
+        $groups = AcGroups::find()->select('ac_groups.id as id, ac_lessons.lesson_name_am as lesson_name,groups_name,ac_groups.status as status')
+            ->joinWith([
+                'username' => function($query) {
+                    $query->select([
+                        'id as user_id',
+                        'username',
+                        'groups_id',
+                    ])->asArray();
+                }
+            ])
+            ->leftJoin('ac_lessons','ac_lessons.id = ac_groups.lesson_id')
+            ->asArray()
+            ->all();
+        $users = User::find()->select('id,username')->where(['and',['status' => '1'],['role' => null],['groups_id' => null]])->asArray()->all();
+        $lessons = AcLessons::find()->select('id,lesson_name_am')->where(['status' => '1'])->asArray()->all();
+        return $this->render('groups',[
+            'users' => $users,
+            'lessons' => $lessons,
+            'groups' => $groups,
+        ]);
     }
 
     /*SITE PAGES PAGE ACTION EDITE|DELETE|CREATE|COPY*/
@@ -516,7 +644,8 @@ class AdminController extends Controller {
         $lessons = AcLessons::find()->where(['status' => '1'])->all();
         $alumni = User::find()->select('user.id as user_id,username,')
             ->leftJoin('ac_my_lessons','ac_my_lessons.user_id = user.id')
-            ->where(['and',['user.status' => '1'],['role' => null],['complete_percent' => 100]])
+            ->where(['and',['user.status' => '1'],['role' => null],['ac_my_lessons.status' => ['2','3']]])
+            ->groupBy('ac_my_lessons.user_id')
             ->asArray()
             ->all();
         return $this->render('certificate', ['certificate' => $certificate,'lessons' => $lessons,'alumni' => $alumni]);
@@ -571,26 +700,6 @@ class AdminController extends Controller {
         $call_back = AcCallback::find()->with(['courses', 'adminName'])->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('callback', ['call_back' => $call_back]);
     }
-    public function actionBlog_() {
-        if (Yii::$app->user->isGuest) {
-            $this->redirect(['admin/login']);
-        }
-        $post = Yii::$app->request->post();
-        if ($post && $post['add']) {
-            $page = new AcBlog();
-            $page->load($post);
-            $page->save(false);
-            $this->redirect(['blog', 'success' => 'true', 'id' => 'key' . $page->id]);
-        }
-        else if ($post && $post['edite']) {
-            $page = AcBlog::findOne(['id' => intval($post['id']) ]);
-            $page->load($post);
-            $page->save(false);
-            $this->redirect(['blog', 'success' => 'true', 'id' => 'key' . $page->id]);
-        }
-        $pages = AcBlog::find()->orderBy(['order_num' => SORT_ASC])->all();
-        return $this->render('blog', ['pages' => $pages]);
-    }
     public function actionReviews() {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
@@ -619,7 +728,7 @@ class AdminController extends Controller {
         }
         $post = Yii::$app->request->post();
         if ($post && $post['edite']) {
-            $text = FsTexts::findOne(['id' => intval($post['id']) ]);
+            $text = Texts::findOne(['id' => intval($post['id']) ]);
             $text->load($post);
             $text->save(false);
             $this->redirect(['texts', 'success' => 'true','page'=>$_GET['page'], 'id' => 'key' . $text->id]);
@@ -650,11 +759,11 @@ class AdminController extends Controller {
             }
         }
         if( $page != 'all') {
-            $texts = FsTexts::find()->andWhere($cond)->limit($limit)->offset($offset)->orderBy(['id' => SORT_DESC])->all();
-            $total = FsTexts::find()->andWhere($cond)->count();
+            $texts = Texts::find()->andWhere($cond)->limit($limit)->offset($offset)->orderBy(['id' => SORT_DESC])->all();
+            $total = Texts::find()->andWhere($cond)->count();
         } else {
-            $texts = FsTexts::find()->andWhere($cond)->orderBy(['id' => SORT_DESC])->all();
-            $total = FsTexts::find()->andWhere($cond)->count();
+            $texts = Texts::find()->andWhere($cond)->orderBy(['id' => SORT_DESC])->all();
+            $total = Texts::find()->andWhere($cond)->count();
         }
         return $this->render('texts', ['texts' => $texts, 'total' => $total]);
     }
@@ -717,7 +826,7 @@ class AdminController extends Controller {
             $this->redirect(['admin/login']);
         }
         $id = intval($_GET['id']);
-        $text = FsTexts::findOne(['id' => $id]);
+        $text = Texts::findOne(['id' => $id]);
         return $this->renderAjax('text-edite-popup', ['text' => $text]);
     }
 
@@ -744,6 +853,14 @@ class AdminController extends Controller {
         $id = intval($_GET['id']);
         $partner = AcPartners::findOne(['id' => $id]);
         return $this->renderAjax('partner-edite-popup', ['partner' => $partner]);
+    }
+    public function actionCustomerEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $user = User::findOne(['id' => $id]);
+        return $this->renderAjax('customers-edite-popup', ['user' => $user]);
     }
     public function actionLessonEdite() {
         if (Yii::$app->user->isGuest) {
@@ -789,6 +906,20 @@ class AdminController extends Controller {
         $alumni = AcAlumni::findOne(['id' => $id]);
         return $this->renderAjax('alumni-edite-popup', ['alumni' => $alumni]);
     }
+    public function actionGroupsEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $groups = AcGroups::findOne(['id' => $id]);
+        $users = User::find()->select('id,username,groups_id')->where(['and',['status' => '1'],['role' => null]])->asArray()->all();
+        $lessons = AcLessons::find()->select('id,lesson_name_am')->asArray()->all();
+        return $this->renderAjax('groups-edite-popup', [
+                'groups' => $groups,
+                'users' => $users,
+                'lessons' => $lessons
+            ]);
+    }
     public function actionCertificateEdite() {
         // Harut
         if (Yii::$app->user->isGuest) {
@@ -799,7 +930,8 @@ class AdminController extends Controller {
         $lessons = AcLessons::find()->where(['status' => '1'])->all();
         $alumni = User::find()->select('user.id as user_id,username,')
             ->leftJoin('ac_my_lessons','ac_my_lessons.user_id = user.id')
-            ->where(['and',['user.status' => '1'],['role' => null],['complete_percent' => 100]])
+            ->where(['and',['role' => null],['ac_my_lessons.status' => ['2','3']]])
+            ->groupBy('ac_my_lessons.user_id')
             ->asArray()
             ->all();
         return $this->renderAjax('certificate-edite-popup', ['certificate' => $certificate, 'lessons' => $lessons, 'alumni' => $alumni]);
@@ -879,8 +1011,19 @@ class AdminController extends Controller {
         else {
             $partner->status = 1;
         }
-
         $partner->save(false);
+        return true;
+    }
+    public function actionCustomerDisable() {
+        $id = intval($_GET['id']);
+        $user = User::findOne(['id' => $id]);
+        if ($user->status) {
+            $user->status = 0;
+        }
+        else {
+            $user->status = 1;
+        }
+        $user->save(false);
         return true;
     }
     public function actionCategoryDisable() {
@@ -980,6 +1123,67 @@ class AdminController extends Controller {
         // Harut
         $id = intval($_GET['id']);
         $tutors = AcAlumni::findOne(['id' => $id]);
+        if ($tutors->status) {
+            $tutors->status = 0;
+        }
+        else {
+            $tutors->status = 1;
+        }
+
+        $tutors->save(false);
+        return true;
+    }
+    public function actionGroupsDisable() {
+        $id = intval($_GET['id']);
+        $groups = AcGroups::findOne(['id' => $id]);
+        if ($groups->status) {
+            $groups->status = 0;
+        }
+        else {
+            $groups->status = 1;
+        }
+
+        $groups->save(false);
+        return true;
+    }
+    public function actionLessonAdd() {
+        $id = intval($_GET['id']);
+        $lesson = AcGroups::findOne($id);
+        $course = AcLessons::findOne($lesson->lesson_id);
+        if($lesson->lesson_count < $course->lessons_count){
+            $count = $lesson->lesson_count;
+            $count++;
+            $lesson->lesson_count = $count;
+            $lesson->save(false);
+            $percent = round((100 / $course->lessons_count) * $lesson->lesson_count);
+            $users = User::find()->select('id')->where(['and',['role' => null],['groups_id' => $id]])->asArray()->all();
+            foreach ($users as $user){
+                $my_lessons = AcMyLessons::findOne(['user_id' => $user['id'],'lessons_id' => $lesson->lesson_id, 'status' => '1']);
+                if (!empty($my_lessons)){
+                    $my_lessons->complete_percent = $percent;
+                    if ($my_lessons->complete_percent == 100){
+                        $my_lessons->status = '2';
+                    }
+                    $my_lessons->save(false);
+                }
+
+            }
+            return json_encode('add');
+        }else{
+            return json_encode('danger');
+        }
+    }
+    public function actionLessonBack() {
+        $id = intval($_GET['id']);
+        $lesson = AcGroups::findOne($id);
+        $lesson->lesson_count = intval($_GET['lesson_count']);
+        $lesson->save(false);
+        return true;
+    }
+    public function actionQuizeDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $tutors = AcQuizeLog::findOne(['id' => $id]);
         if ($tutors->status) {
             $tutors->status = 0;
         }
@@ -1162,6 +1366,7 @@ class AdminController extends Controller {
         if (!Yii::$app->user->isGuest) {
             return $this->redirect(array('index'));
         }
+
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->redirect(array('index'));

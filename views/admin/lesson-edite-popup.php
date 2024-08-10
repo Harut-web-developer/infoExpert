@@ -25,7 +25,9 @@
                         </div>
                     </div>
                     <span>Գին</span>
-                    <input type="number" name="AcLessons[price]" required placeholder="Գին" class="form-control">
+                    <input type="number" name="AcLessons[price]" value="<?php echo $lesson->price;?>" required placeholder="Գին" class="form-control">
+                    <span>Դասընթացի քանակ</span>
+                    <input type="number" name="AcLessons[lessons_count]" value="<?=$lesson->lessons_count;?>" required  placeholder="Դասընթացի քանակ" class="form-control">
                     <div class="custom-tab">
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">

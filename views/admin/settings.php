@@ -37,7 +37,7 @@
                 <div class="card-body">
                     <h4 class="box-title">Կարգավորումներ
                         <span class="buttons">
-                          <button class="btn btn-sm btn-default" id="copyUser" ><i class="fa fa-copy"></i></button>
+                          <span class="overlay show_" style="width:33px;left: 32px;"></span>
                           <button class="btn btn-sm btn-default" id="editeUser"><i class="fa fa-pencil"></i></button>
                           <button class="btn btn-sm btn-danger" id="disableUser"><i class="fa fa-trash"></i></button>
                         </span>

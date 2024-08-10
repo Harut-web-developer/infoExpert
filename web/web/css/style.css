@@ -40,6 +40,17 @@ p,a,span,h4,button,b{
   color:white  !important;
   border-color:black !important;
 }
+.lessonFieldBtn{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.lessonFieldBtn > span{
+  margin: 0px 5px 5px 0px;
+  cursor: pointer;
+  border: 1px solid;
+  padding: 5px 10px;
+}
 .page-link{
   color:black;
 }

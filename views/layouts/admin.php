@@ -11,16 +11,15 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
 AdminAssets::register($this);
-
 $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
-//$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
-$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('/images/faviconInfoexpert.ico')]);
+
 
 ?>
+
 <?php $this->beginPage() ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -50,7 +49,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <link rel="stylesheet" href="/web/css/lib/chosen/chosen.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
- 
+    <link rel="shortcut icon" href="<?php echo Yii::$app->request->baseUrl; ?>/images/faviconInfoexpert.ico" type="image/x-icon" />
  <style>
 
      .navbar .navbar-nav li > a,.navbar .navbar-nav li i{
@@ -114,30 +113,37 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                <ul class="nav navbar-nav">
-<!--                     <li >-->
-<!--                         <a href="/admin/dashboard"><i class="menu-icon fa fa-dashboard"></i>Վահանակ </a>-->
-<!--                     </li>-->
-                   <?php if( Yii::$app->user->identity->role == 10 || Yii::$app->user->identity->role == 20){ ?>
-                     <li>
-                         <a href="/admin/orders"><i class="menu-icon fa fa-graduation-cap"></i>Գրանցումներ</a>
+                     <li >
+                         <a href="/admin/index"><i class="menu-icon fa fa-dashboard"></i>Վահանակ</a>
                      </li>
+                   <?php if( Yii::$app->user->identity->role == 10 || Yii::$app->user->identity->role == 20){ ?>
+                       <li>
+                           <a href="/admin/groups"><i class="menu-icon fa fa-users"></i>Խմբեր</a>
+                       </li>
+                       <li>
+                            <a href="/admin/orders"><i class="menu-icon fa fa-graduation-cap"></i>Գրանցումներ</a>
+                       </li>
                    <?php } ?>
                    <?php if( Yii::$app->user->identity->role == 10){ ?>
                        <li>
                            <a href="/admin/lessons"><i class="menu-icon fa fa-list-ol"></i>Դասընթացներ</a>
                        </li>
                      <li>
-                         <a href="/admin/customers"><i class="menu-icon fa fa-sitemap"></i>Հաճախորդներ</a>
+                         <a href="/admin/customers"><i class="menu-icon fa fa-sitemap"></i>Օգտատեր</a>
                      </li>
-
                    <?php } ?>
                     <?php if( Yii::$app->user->identity->role == 10 || Yii::$app->user->identity->role == 30){ ?>
-
+                    <li>
+                        <a href="/admin/callback"><i class="menu-icon fa fa-phone"></i>Հետադարձ զանգեր</a>
+                    </li>
+                    <li>
+                        <a href="/admin/have-questions"><i class="menu-icon fa fa-cogs"></i>Տրվող հարցեր</a>
+                    </li>
                      <li>
                          <a href="/admin/questions"><i class="menu-icon fa fa-question"></i>Հարցաշար</a>
                      </li>
                     <li>
-                        <a href="/admin/tutors"><i class="menu-icon fa fa-user"></i>Դասընթացավարներ</a>
+                        <a href="/admin/tutors"><i class="menu-icon fa fa-user"></i>Դասընթացավար</a>
                     </li>
                     <li>
                         <a href="/admin/alumni"><i class="menu-icon fa fa-user-o"></i>Շրջանավարտներ</a>
@@ -170,16 +176,13 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                            <a href="/admin/info"><i class="menu-icon fa fa-info-circle"></i>Կայքի տվյալներ</a>
                        </li>
                        <li>
-                           <a href="/admin/callback"><i class="menu-icon fa fa-phone"></i>Հետադարձ զանգեր</a>
-                       </li>
-                       <li>
-                           <a href="/admin/have-questions"><i class="menu-icon fa fa-cogs"></i>Հարցեր</a>
-                       </li>
-                       <li>
                            <a href="/admin/certificate"><i class="menu-icon fa fa-certificate"></i>Սերտիֆիկատ</a>
                        </li>
                        <li>
                            <a href="/admin/rating"><i class="menu-icon fa fa-star"></i>Վարկանիշ</a>
+                       </li>
+                       <li>
+                           <a href="/admin/quize"><i class="menu-icon fa fa-quora"></i>Վիկտորինա</a>
                        </li>
                        <li>
                            <a href="/admin/settings"><i class="menu-icon fa fa-cogs"></i>Կարգավորումներ</a>
@@ -203,16 +206,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             </div>
             <div class="top-right">
                 <div class="header-menu">
-                    <div class="header-left">
-                        <button class="search-trigger"><i class="fa fa-search"></i></button>
-                        <div class="form-inline">
-                            <form class="search-form">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                            </form>
-                        </div>
-                    </div>
-
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <b class="user-avatar rounded-circle"><?php echo  Yii::$app->user->identity->username; ?></b>

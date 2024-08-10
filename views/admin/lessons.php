@@ -41,6 +41,7 @@
                                             <tr>
                                                 <th scope="col">#</th>
                                                 <th scope="col">Դասընթացի անվանում</th>
+                                                <th scope="col">Դասերի քանակ</th>
                                                 <th scope="col">Կարգավիճակ</th>
                                             </tr>
                                             </thead>
@@ -54,13 +55,14 @@
                                                             } ?>
                                                             ID <?php echo $lesson->id;?></td>
                                                         <td scope="col"> <?php echo $lesson->lesson_name_am;?></td>
+                                                        <td scope="col"> <?php echo $lesson->lessons_count;?></td>
                                                         <td scope="col">
                                                             <?php if($lesson->status == 1){
                                                                 echo 'Ակտիվ';
                                                             } else {
                                                                 echo 'Պասիվ';
-                                                            };?></td>
-
+                                                            };?>
+                                                        </td>
                                                     </tr>
                                                 <?php }} ?>
                                             </tbody>
@@ -103,7 +105,8 @@
                         </div>
                         <span>Գին</span>
                         <input type="number" name="AcLessons[price]" required placeholder="Գին" class="form-control">
-
+                        <span>Դասընթացի քանակ</span>
+                        <input type="number" name="AcLessons[lessons_count]" required  placeholder="Դասընթացի քանակ" class="form-control">
                         <div class="custom-tab">
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">

@@ -113,12 +113,12 @@ class QuizeController extends \yii\web\Controller
                         'order_num',
                         'is_true',
                         'quest_id'
-                    ]);
+                    ])->where(['ac_question_answers.status' => '1']);
                 }
             ])
             ->where(['ac_question_quests.question_id' => $id])
             ->andWhere(['ac_question_quests.status' => '1'])
-            ->orderBy(['order_num' => SORT_ASC])
+            ->orderBy(['ac_question_quests.order_num' => SORT_ASC])
             ->asArray()
             ->all();
         $answers_list = AcQuestionList::find()->select('id,name_'.$language.' as name_list')

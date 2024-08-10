@@ -26,6 +26,11 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 1;
 
+    const roles = [
+        '10' => 'admin',
+        '20' => 'admin',
+        '30' => 'admin'
+    ];
     /**
      * @inheritdoc
      */

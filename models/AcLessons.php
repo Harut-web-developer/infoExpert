@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "ac_lessons".
  *
  * @property int $id
+ * @property int $lessons_count
  * @property string|null $lesson_name_am
  * @property string|null $lesson_name_ru
  * @property string|null $lesson_name_en
@@ -49,7 +50,7 @@ class AcLessons extends \yii\db\ActiveRecord
     {
         return [
             [['lesson_keywords_am', 'lesson_keywords_ru', 'lesson_keywords_en', 'lesson_content_am', 'lesson_content_ru', 'lesson_content_en'], 'string'],
-            [['order_num', 'status','price','rating'], 'integer'],
+            [['order_num', 'status','price','rating','lessons_count'], 'integer'],
             [['create_date'], 'safe'],
             [['lesson_name_am', 'lesson_name_ru', 'lesson_name_en', 'lesson_title_am', 'lesson_title_ru', 'lesson_title_en','lesson_certificate_am','lesson_certificate_ru','lesson_certificate_en', 'url'], 'string', 'max' => 255],
         ];

@@ -73,7 +73,16 @@ $logo = AcInfo::find()->one();
         <div class="menuTabletHeader">
             <div class="menuPersonInfo">
                 <div class="personInfoField">
-                    <?php if(!empty(Yii::$app->user->identity)){
+                    <?php if(empty(Yii::$app->user->identity) || Yii::$app->user->identity->role != null){?>
+                    <div class="personInfoCircleMobile"></div>
+                    <div class="personSignOrInfo">
+                        <div class="personSignField">
+                            <a href="/login">sign in</a>
+                            <span>or</span>
+                            <a href="/signup">sign up</a>
+                        </div>
+                    </div>
+                    <?php }else{
                         $first_letter = explode(' ' , Yii::$app->user->identity->username);
                         if (count($first_letter) > 1){?>
                             <div class="personInfoCircle"><?=mb_substr($first_letter[0], 0, 1) . ' ' . mb_substr($first_letter[1], 0, 1)?></div>
@@ -95,22 +104,13 @@ $logo = AcInfo::find()->one();
                         </div>
                         <img class="tabletUserProfileMenu" src="/images/menuRightArrow.png" alt="">
                     </div>
-                    <?php }else{ ?>
-                    <div class="personInfoCircleMobile"></div>
-                    <div class="personSignOrInfo">
-                        <div class="personSignField">
-                            <a href="/login">sign in</a>
-                            <span>or</span>
-                            <a href="/signup">sign up</a>
-                        </div>
-                    </div>
                     <?php }?>
                 </div>
             </div>
             <div class="tabletMenuNavbar">
                 <div class="tabletMenuNavField">
                     <ul>
-                        <?php if(!empty(Yii::$app->user->identity)){ ?>
+                        <?php if(!empty(Yii::$app->user->identity) && Yii::$app->user->identity->role == null){ ?>
                             <li class="tabletCoursesList">
                                 <a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a>
                                 <div class="tabletCoursesUnderline"></div>
@@ -145,7 +145,7 @@ $logo = AcInfo::find()->one();
                         <li><a href="/alumni/index"><?= $GLOBALS['text']['headerAlumni']?></a></li>
                         <li><a href="/quize/index"><?= $GLOBALS['text']['tabletRecQuize']?></a></li>
                         <li><a href="/contact-us/index"><?= $GLOBALS['text']['tabletContact']?></a></li>
-                        <?php if(!empty(Yii::$app->user->identity) ){ ?>
+                        <?php if(!empty(Yii::$app->user->identity) && Yii::$app->user->identity->role == null){ ?>
                             <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
                         <?php }?>
                         <li><a href="/site-map"><?= $GLOBALS['text']['siteMap']?></a></li>
@@ -186,7 +186,7 @@ $logo = AcInfo::find()->one();
                     <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
                     <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                     <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
-                    <?php if(!empty(Yii::$app->user->identity)){ ?>
+                    <?php if(!empty(Yii::$app->user->identity) && Yii::$app->user->identity->role == null){ ?>
                         <li><a href="/logout"><?=$GLOBALS['text']['headerLogout']?></a></li>
                     <?php }?>
                 </ul>
@@ -456,9 +456,9 @@ if ($logged && $alertShown) {
                         <span class="quize-title"><?= $GLOBALS['text']['footerQuize']?></span>
                     </div>
                     <div class="inputsMail" >
-                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username ? 'required' : ''?>>
-                        <input type="number" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>" <?=!Yii::$app->user->identity->phone ? 'required' : ''?>>
-                        <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>" <?=!Yii::$app->user->identity->email ? 'required' : ''?>>
+                        <input type="text" name="name" placeholder="<?= $GLOBALS['text']['footerInputName']?>" <?=!Yii::$app->user->identity->username || Yii::$app->user->identity->role != null ? 'required' : ''?>>
+                        <input type="number" name="phone" placeholder="<?= $GLOBALS['text']['footerInputPhone']?>" <?=!Yii::$app->user->identity->phone || Yii::$app->user->identity->role != null ? 'required' : ''?>>
+                        <input type="text"  name="email" placeholder="<?= $GLOBALS['text']['footerInputEmail']?>" <?=!Yii::$app->user->identity->email || Yii::$app->user->identity->role != null ? 'required' : ''?>>
                     </div>
                     <div class="formContinue">
                         <button name="enterQuize" type="submit"><?= $GLOBALS['text']['footerInputBtn']?></button>

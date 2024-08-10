@@ -16,11 +16,10 @@
 
                         <div class="col-sm-12">
                             <?php if(!empty($page->img)){?>
+                                <img src="/<?php echo $page->img;?>" height="60" alt="">
                                 <br>
-                                <img src="<?php echo $page->img;?>" height="60" alt="">
-                                <br>
-                                <input type="hidden" name="old_img" value="<?php echo $page->img;?>">
                             <?php } ?>
+                            <br>
                             <span style="margin-bottom: 4px;color: #878787;">Նկար</span>
                             <input type="file" name="img">
                         </div>

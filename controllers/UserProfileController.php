@@ -179,7 +179,7 @@ class UserProfileController extends \yii\web\Controller
                     }
                 }
             }
-            return $this->redirect('/');
+            return $this->redirect('/user-profile/achievements-edit');
         }
     }
     public function actionEditProfile()

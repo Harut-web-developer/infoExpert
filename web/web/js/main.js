@@ -69,6 +69,16 @@ function editePartner(id) {
 		});
 	}
 }
+function editeCustomer(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/customer-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
 function editeAnswerHth(id) {
 
 	if (id) {
@@ -101,6 +111,32 @@ function editeLesson(id) {
 		});
 	}
 }
+function addLesson(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/lesson-add?id=" + id,
+			success: function(result) {
+                let res = JSON.parse(result);
+                if(res == 'add'){
+                    alert('Շնորհակալություն, դուք ավելացրեցիք ավարտած դասը:');
+                }else if (res == 'danger'){
+                    alert('Կներեք, դասերը ավարտվել են, դուք չեք կարող ավելացնել:');
+                }
+				window.location.reload();
+			}
+		});
+	}
+}
+function backLesson(id,lesson_count) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/lesson-back?id=" + id +"&&lesson_count=" + lesson_count,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
 function editeSubscribers(id) {
 
 	if (id) {
@@ -117,6 +153,17 @@ function editeAlumni(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/alumni-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function editeGroups(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/groups-edite?id=" + id,
 			success: function(result) {
 				jQuery(".modals").html(result);
 			}
@@ -252,6 +299,16 @@ function disablePartner(id) {
 		});
 	}
 }
+function disableCustomer(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/customer-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
 function disableAnswerHth(id) {
 	if (id) {
 		jQuery.ajax({
@@ -316,6 +373,26 @@ function disableAlumni(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/alumni-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableGroups(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/groups-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableQuize(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/quize-disable?id=" + id,
 			success: function(result) {
 				window.location.reload();
 			}
@@ -700,6 +777,15 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeLesson(id);
 	});
+    $('body').on('click', '.lessonBtn', function(event) {
+		var id = $(this).closest('tr').attr('data-id');
+		addLesson(id);
+	});
+    $('body').on('click', '.backLesson', function(event) {
+		var id = $(this).closest('.lessonFieldBtn').attr('data-groups-id');
+		var lesson_id = $(this).attr('data-lesson');
+        backLesson(id,lesson_id);
+	});
 	$('body').on('click', '#editeSubscribers', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeSubscribers(id);
@@ -707,6 +793,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#editeAlumni', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeAlumni(id);
+	});
+	$('body').on('click', '#editeGroups', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeGroups(id);
 	});
 	$('body').on('click', '#editeHaveQuestions', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
@@ -752,6 +842,10 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disablePartner(id);
 	});
+	$('body').on('click', '#disableCustomer', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableCustomer(id);
+	});
 	$('body').on('click', '#disableAnswerHth', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableAnswerHth(id);
@@ -775,6 +869,14 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#disableAlumni', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableAlumni(id);
+	});
+    $('body').on('click', '#disableGroups', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+        disableGroups(id);
+	});
+	$('body').on('click', '#disableQuize', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableQuize(id);
 	});
 	$('body').on('click', '#disableHaveQuestions', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
@@ -815,6 +917,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#editePartner', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editePartner(id);
+	});
+	$('body').on('click', '#editeCustomer', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeCustomer(id);
 	});
 
 	$('body').on('click', '#editeAnswerHth', function(event) {

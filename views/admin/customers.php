@@ -1,5 +1,3 @@
-<?php use app\models\FsCategories;
-use app\models\FsOrders;?>
 <input type="hidden" data-page='Partners' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
@@ -25,10 +23,9 @@ use app\models\FsOrders;?>
                     <div class="card-body">
                         <h4 class="box-title">Հաճախորդներ
                             <span class="buttons">
-                                          <span class="overlay show_" style="width:99px;"></span>
-                                          <button class="btn btn-sm btn-default" style="margin-left:30px;" id="copyPartner" ><i class="fa fa-copy"></i></button>
-                                          <button class="btn btn-sm btn-default" id="editePartner"><i class="fa fa-pencil"></i></button>
-                                          <button class="btn btn-sm btn-danger" id="disablePartner"><i class="fa fa-trash"></i></button>
+                                          <span class="overlay show_" style="width:33px;"></span>
+                                          <button class="btn btn-sm btn-default" id="editeCustomer"><i class="fa fa-pencil"></i></button>
+                                          <button class="btn btn-sm btn-danger" id="disableCustomer"><i class="fa fa-trash"></i></button>
                                         </span>
                                 <a href="#" data-toggle="modal" data-target="#addnew" class="btn btn-succ fl" style="margin-left:10px;"><i class="bx bx-plus me-1"></i> Ավելացնել</a>
                             <?php if(!isset($_GET['search'])){ ?>
@@ -50,45 +47,42 @@ use app\models\FsOrders;?>
                                                 <tr>
                                                     <th scope="col">#</th>
                                                     <th scope="col">Նկար</th>
+                                                    <th scope="col">Անուն/Ազգանուն</th>
+                                                    <th scope="col">Էլ. հասցե</th>
+                                                    <th scope="col">Հեռախոս</th>
                                                     <th scope="col">Հաստատված</th>
-                                                    <th scope="col">Կոնտակտային անձի ԱԱՀ </th>
-<!--                                                    <th scope="col">Հասցե </th>-->
-                                                    <th scope="col">Էլեկտրոնային հասցե</th>
-<!--                                                    <th scope="col">Հեռախոս</th>-->
                                                     <th scope="col">Ստեղծման ամսաթիվ</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody class="sortableTable" id="sortable">
-                                                <?php if(!empty($partners)){ ?>
-                                                    <?php foreach ($partners as $partner){ ?>
-                                                        <tr data-id="<?php echo $partner->id;?>" <?php if($partner->status==0){ echo 'style="background:orange;"';}?>>
+                                                <?php if(!empty($users)){ ?>
+                                                    <?php foreach ($users as $user){ ?>
+                                                        <tr data-id="<?php echo $user->id;?>" <?php if($user->status==0){ echo 'style="background:orange;"';}?>>
                                                             <td scope="col"><span class="move"><i class="fa fa-arrows-alt"></i></span>
-                                                                <?php  if($partner->status == 0){
+                                                                <?php  if($user->status == 0){
                                                                     echo '<i class="fa fa-close" style="color:red;"></i>';
                                                                 } ?>
-                                                                ID <?php echo $partner->id;?></td>
+                                                                ID <?php echo $user->id;?></td>
                                                             <td scope="col">
-                                                                <?php if(!empty($partner->image)){?>
-                                                                    <img src="/<?php echo $partner->image;?>" height="60" alt="">
+                                                                <?php if(!empty($user->image)){?>
+                                                                    <img src="/<?php echo $user->image;?>" height="60" alt="">
                                                                 <?php } ?>
                                                             </td>
-                                                            <td scope="col"> <?php if( $partner->status){ echo 'Այո';} else { echo 'Ոչ';}?></td>
-                                                            <td scope="col"><?php echo $partner->username;?></td>
-<!--                                                            <td scope="col"> --><?php //echo $partner->address;?><!--</td>-->
-                                                            <td scope="col"><?php echo $partner->email;?></td>
-<!--                                                            <td scope="col">--><?php //echo $partner->phone;?><!--</td>-->
-                                                            <td scope="col"><?php echo $partner->created_at;?></td>
-
+                                                            <td scope="col"><?php echo $user->username;?></td>
+                                                            <td scope="col"><?php echo $user->email;?></td>
+                                                            <td scope="col"><?php echo $user->phone;?></td>
+                                                            <td scope="col"> <?php if( $user->status){ echo 'Այո';} else { echo 'Ոչ';}?></td>
+                                                            <td scope="col"><?php echo $user->created_at;?></td>
                                                         </tr>
                                                     <?php }} ?>
                                                 </tbody>
                                             </table>
-                                             <button class="left"><i class="fa fa-arrow-left" aria-hidden="true"></i></button><button class="right"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+<!--                                             <button class="left"><i class="fa fa-arrow-left" aria-hidden="true"></i></button><button class="right"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>-->
                                         </div>
                                         <?php if(!isset($_GET['search'])){ ?>
                                             <nav aria-label="Page navigation example">
                                                 <ul class="pagination">
-                                                    <?php $pages = ceil(intval($total)/20); ?>
+                                                    <?php $pages = ceil(intval($total)/10); ?>
                                                     <?php if(isset($_GET['page']) && intval($_GET['page'] )>0){ ?>
                                                         <li class="page-item">
                                                             <a class="page-link" href="/admin/customers?page=<?php echo intval($_GET['page'])-1;?>" aria-label="Previous">
@@ -155,7 +149,7 @@ use app\models\FsOrders;?>
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addnew">Ավելացնել հաճախորդ</h5>
+                    <h5 class="modal-title" id="addnew">Ավելացնել օգտատեր</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -165,41 +159,23 @@ use app\models\FsOrders;?>
                         <input type="hidden" name="FsUsers[is_buyer]" value="1">
                         <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
                         <div class="row">
-                            <div class="col-sm-4">
-
-                                <span style="margin-bottom: 4px;color: #878787;margin-top:2px;display:block;">Կազմակերպության ՀՎՀՀ</span>
-                                <input type="text" name="FsUsers[company_hvhh]" placeholder="Կազմակերպության ՀՎՀՀ" class="form-control">
-                                <span style="margin-bottom: 4px;color: #878787;">Իրավաբանական անվանումը </span>
-                                <input type="text" name="FsUsers[legal_name]" placeholder="Իրավաբանական անվանումը" class="form-control">
-                                <span style="margin-bottom: 4px;color: #878787;">Հոլդինգի ՀՎՀՀ</span>
-                                <input type="text" name="FsUsers[holding_hvhh]" placeholder="Հոլդինգի ՀՎՀՀ" class="form-control">
-                                <span style="margin-bottom: 4px;color: #878787;">Հոլդինգի իրավաբանական անվանումը</span>
-                                <input type="text" name="FsUsers[holding_legal_name]" placeholder="Հոլդինգի իրավաբանական անվանումը" class="form-control">
-
-                            </div>
-                            <div class="col-sm-4">
-                                <span style="margin-bottom: 4px;color: #878787;">Կոնտակտային անձի ԱԱՀ *</span>
-                                <input type="text" name="FsUsers[name]" placeholder="Կոնտակտային անձի ԱԱՀ *" class="form-control">
-                                <span style="margin-bottom: 4px;color: #878787;">Իրավաբանական հասցե *</span>
-                                <input type="text" name="FsUsers[legal_address]" placeholder="Իրավաբանական հասցե *" class="form-control">
-                                <span style="margin-bottom: 4px;color: #878787;margin-top:2px;display:block;">Գործունեության հասցե *</span>
-                                <input type="text" name="FsUsers[address]" placeholder="Գործունեության հասցե *" class="form-control">
-                                <span style="margin-bottom: 4px;color: #878787;">Էլեկտրոնային հասցե *</span>
-                                <input type="text" name="FsUsers[email]" placeholder="Էլեկտրոնային հասցե *" class="form-control">
-                            </div>
-                            <div class="col-sm-4">
-                                <span style="margin-bottom: 4px;color: #878787;">Լոգո</span>
-                                <input type="file" name="logo">
-                                <span style="margin-bottom: 4px;color: #878787;">Հեռախոսահամար *</span>
-                                <input type="text" name="FsUsers[phone]" placeholder="Հեռախոսահամար *" class="form-control">
-                                <span style="margin-bottom: 4px;color: #878787;">Հղում</span>
-                                <input type="text" name="FsUsers[link]" placeholder="Հղում" class="form-control">
+                            <div class="col-sm-12">
+                                <span style="margin-bottom: 4px;color: #878787;">Նկար</span>
+                                <input type="file" name="img">
+                                <span style="margin-bottom: 4px;color: #878787;">Cv</span>
+                                <input type="file" name="cv">
+                                <span style="margin-bottom: 4px;color: #878787;">Անուն/ազգանուն *</span>
+                                <input type="text" name="User[username]" placeholder="Անուն/ազգանուն" required class="form-control">
+                                <span style="margin-bottom: 4px;color: #878787;">Էլ. հասցե *</span>
+                                <input type="text" name="User[email]" placeholder="Էլ. հասցե" required class="form-control">
+                                <span style="margin-bottom: 4px;color: #878787;">Հեռախոսահամար</span>
+                                <input type="number" name="User[phone]" placeholder="Հեռախոսահամար" required class="form-control">
+                                <span style="margin-bottom: 4px;color: #878787;">Linkedin_ի hղում</span>
+                                <input type="text" name="User[linkdin_url]" placeholder="Linkedin_ի hղում" class="form-control">
                                 <span style="margin-bottom: 4px;color: #878787;">Գաղտնաբառ *</span>
-                                <input type="text" name="FsUsers[password]" placeholder="Գաղտնաբառ *" class="form-control">
+                                <input type="password" name="Users[password]" required placeholder="Գաղտնաբառ" class="form-control">
                             </div>
-
                         </div>
-
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>
                         <button type="submit" class="btn btn-succ" name="add" value="true">Գրանցել</button>
                     </form>

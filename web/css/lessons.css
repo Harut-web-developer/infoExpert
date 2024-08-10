@@ -92,7 +92,7 @@
 }
 .leftDipl{
     width: auto;
-    max-width: 491.36px;
+    max-width: 420px;
 }
 .rightImgBottom{
     width: 100%;
@@ -180,9 +180,12 @@
     font-weight: 400;
 }
 .leftDipl img {
+    padding: 20px;
     width: 100%;
     height: auto;
     margin-top: 24px;
+    background: #FFFFFF24;
+    border-radius: 22px;
 }
 .rightImgBottom span{
     color: #F36528;
@@ -394,7 +397,6 @@ ion-icon {
         width: 392px;
         height: 294px;
         border-radius: 30px;
-        padding-top: 0;
     }
     .diplomW{
         display: none;
@@ -473,7 +475,6 @@ ion-icon {
         width: 392px;
         height: 294px;
         border-radius: 30px;
-        padding-top: 0;
     }
     .rightImgBottom {
         width: auto;
@@ -610,8 +611,9 @@ ion-icon {
         width: 60%;
     }
     .rightImgBottom .card_{
-        width: auto;
+        width: 100%;
         order: 3;
+        margin: 0px 20px;
     }
     .leftDipl img{
         width: 370px;

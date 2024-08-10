@@ -1,5 +1,5 @@
 <!-- Harut-->
-<input type="hidden" data-page='AcApplyNow' id="page">
+<input type="hidden" data-page='AcQuizeLog' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
@@ -22,11 +22,11 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="box-title">Հայտեր
+                        <h4 class="box-title">Շրջանավարտներ
                             <span class="buttons">
-                              <span class="overlay show_" style="width:33px;left: -2px;"></span>
-                                <button class="btn btn-sm btn-danger" id="disablApply"><i class="fa fa-trash"></i></button>
-                            </span>
+                                  <span class="overlay show_" style="width:33px;left: -2px;"></span>
+                                  <button class="btn btn-sm btn-danger" id="disableQuize"><i class="fa fa-trash"></i></button>
+                                </span>
                         </h4>
                     </div>
                     <div class="card-body--">
@@ -38,54 +38,52 @@
                                             <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Անուն</th>
+                                                <th scope="col">Անուն/ազգանուն</th>
                                                 <th scope="col">Էլ. հասցե</th>
-                                                <th scope="col">Դասընթաց</th>
-                                                <th scope="col">Տեսակ</th>
-                                                <th scope="col">Ձևաչափ</th>
+                                                <th scope="col">Հարցաշար</th>
+                                                <th scope="col">Արդյունք</th>
                                                 <th scope="col">Հեռախոսահամար</th>
+                                                <th scope="col">Գրանցված</th>
+                                                <th scope="col">Ամսաթիվ</th>
                                                 <th scope="col">Կարգավիճակ</th>
                                             </tr>
                                             </thead>
                                             <tbody class="sortableTable" id="sortable">
-                                            <?php if(!empty($apply_now)){ ?>
-                                                <?php foreach ($apply_now as $item){ ?>
-                                                    <tr data-id="<?php echo $item->id;?>">
+                                            <?php if(!empty($quize)){ ?>
+                                                <?php foreach ($quize as $item){ ?>
+                                                    <tr data-id="<?php echo $item['id'];?>">
                                                         <td scope="col"><span class="move"><i class="fa fa-arrows-alt"></i></span>
-                                                            <?php  if($item->status == 0){
+                                                            <?php  if($item['status'] == 0){
                                                                 echo '<i class="fa fa-close" style="color:red;"></i>';
                                                             } ?>
-                                                            ID <?php echo $item->id;?></td>
+                                                            ID <?php echo $item['id'];?></td>
                                                         <td scope="col">
-                                                            <?php echo $item->name;?>
+                                                            <?php echo $item['username'];?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php echo $item->email;?>
+                                                            <?php echo $item['email'];?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php echo $item->lesson->lesson_name_am;?>
+                                                            <?php echo $item['name_am'];?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php if($item->lesson_type == 1){
-                                                                echo 'Անհատական';
-                                                            }elseif ($item->lesson_type == 2){
-                                                                echo 'Խմբային';
-                                                            }elseif ($item->lesson_type == 3){
-                                                                echo 'Կորպորատիվ';
+                                                            <?php echo $item['result'];?>
+                                                        </td>
+                                                        <td scope="col">
+                                                            <?php echo $item['phone'];?>
+                                                        </td>
+                                                        <td scope="col">
+                                                            <?php if(empty($item['user_id'])){
+                                                                echo 'Ոչ';
+                                                            }else{
+                                                                echo 'Այո';
                                                             }?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php if($item->online_offline == 1){
-                                                                echo 'Օնլայն';
-                                                            }elseif ($item->online_offline == 0){
-                                                                echo 'Օֆֆլայն';
-                                                            } ?>
+                                                            <?php echo $item['date'];?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php echo $item->phone;?>
-                                                        </td>
-                                                        <td scope="col">
-                                                            <?php if($item->status == 1){
+                                                            <?php if($item['status'] == 1){
                                                                 echo 'Ակտիվ';
                                                             } else {
                                                                 echo 'Պասիվ';
@@ -104,14 +102,10 @@
             </div>
         </div>
     </div>
-    <!-- Modal -->
-
-    <div class="modals">
-
-    </div>
 </div>
 <style>
     .is_types span{
         padding-right:10px;
     }
 </style>
+

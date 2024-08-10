@@ -13,7 +13,7 @@ $config = [
     ],
     'components' => [
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+
             'cookieValidationKey' => 'dsfbhdfjkv',
             'baseUrl'=> '',
         ],
@@ -29,16 +29,12 @@ $config = [
         ],
 
         'mailer' => [
-//            'class' => 'yii\swiftmailer\Mailer',
-//            'viewPath' => '@common/mail',
             'class' => \yii\symfonymailer\Mailer::class,
             'useFileTransport' => false,
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'scheme' => 'smtp',
                 'host' => 'smtp.gmail.com',
-//                'username' => 'hovhan.hovhan1995@gmail.com',
-//                'password' => 'tbii duut yreh rsly',
                 'username' => 'user2002mm@gmail.com',
                 'password' => 'anaw xbof kidq zvmb',
                 'port' => '587', // Port 25, 465 or 587

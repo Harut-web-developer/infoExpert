@@ -23,6 +23,7 @@
                     <div class="card-body">
                         <h4 class="box-title">Կարծիքներ
                             <span class="buttons">
+                              <span class="overlay show_" style="width:33px;"></span>
                               <button class="btn btn-sm btn-default" id="editeReview"><i class="fa fa-pencil"></i></button>
                               <button class="btn btn-sm btn-danger" id="disableReview"><i class="fa fa-trash"></i></button>
                             </span>

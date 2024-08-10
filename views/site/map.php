@@ -42,6 +42,8 @@ $this->registerCssFile('@web/css/site-map.css?v=1');
                         <a href="/testimonials"><?= $GLOBALS['text']['__testimonials__'] ?></a>
                     </div>
                 </div>
+            </div>
+            <div class="rightSection">
                 <div class="siteRow">
                     <div class="mainFieldSite">
                         <img src="/images/arrowSite.png" alt="">
@@ -58,44 +60,6 @@ $this->registerCssFile('@web/css/site-map.css?v=1');
                     <div class="mainFieldSite">
                         <img src="/images/arrowSite.png" alt="">
                         <a href="/apply-now/index"><?= $GLOBALS['text']['__applynow__'] ?></a>
-                    </div>
-                </div>
-            </div>
-            <div class="rightSection">
-                <div class="siteRow">
-                    <div class="mainFieldSite">
-                        <img src="/images/arrowSite.png" alt="">
-                        <a href="/user-profile/achievements-edit"><?= $GLOBALS['text']['headerProfile'] ?></a>
-                    </div>
-                </div>
-                <div class="siteRow">
-                    <div class="mainFieldSite">
-                        <img src="/images/arrowSite.png" alt="">
-                        <a href="/my-card/index"><?= $GLOBALS['text']['tabletCard'] ?></a>
-                    </div>
-                </div>
-                <div class="siteRow">
-                    <div class="mainFieldSite">
-                        <img src="/images/arrowSite.png" alt="">
-                        <a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity'] ?></a>
-                    </div>
-                </div>
-                <div class="siteRow">
-                    <div class="mainFieldSite">
-                        <img src="/images/arrowSite.png" alt="">
-                        <a href="/user-profile/achievements"><?= $GLOBALS['text']['tabletachievement'] ?></a>
-                    </div>
-                </div>
-                <div class="siteRow">
-                    <div class="mainFieldSite">
-                        <img src="/images/arrowSite.png" alt="">
-                        <a href="/courses/my-courses"><?= $GLOBALS['text']['tabletMyCourse'] ?></a>
-                    </div>
-                </div>
-                <div class="siteRow">
-                    <div class="mainFieldSite">
-                        <img src="/images/arrowSite.png" alt="">
-                        <a href="/wishlist/index"><?= $GLOBALS['text']['tabletWishlist'] ?></a>
                     </div>
                 </div>
                 <div class="siteRow">

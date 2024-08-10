@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addnew">Խմբագրել տեքստ (<?php echo $text->text_am;?>)</h5>
+                <h5 class="modal-title" id="addnew">Խմբագրել տեքստ (<?php echo $text->slug;?>)</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -23,23 +23,22 @@
                             <div class="tab-pane fade active show" id="custom-nav-banner-am" role="tabpanel" aria-labelledby="custom-nav-banner-am-tab">
                                 <div class="form-group ">
                                     <span>Անուն</span>
-                                    <input type="text" value="<?php echo $text->text_am;?>" name="FsTexts[text_am]" required placeholder="Անուն" class="form-control">
+                                    <textarea name="Texts[text_am]" class="form-control" id="" rows="3"><?php echo $text->text_am;?></textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-banner-ru" role="tabpanel" aria-labelledby="custom-nav-banner-ru-tab">
                                 <div class="form-group">
                                     <span>Անուն</span>
-                                    <input type="text" value="<?php echo $text->text_ru;?>" name="FsTexts[text_ru]"   placeholder="Անուն" class="form-control">
+                                    <textarea name="Texts[text_ru]" class="form-control" id="" rows="3"><?php echo $text->text_ru;?></textarea>
                                   </div>
                             </div>
                             <div class="tab-pane fade" id="custom-nav-banner-en" role="tabpanel" aria-labelledby="custom-nav-banner-en-tab">
                                 <div class="form-group">
                                     <span>Անուն</span>
-                                    <input type="text" value="<?php echo $text->text_en;?>" name="FsTexts[text_en]"   placeholder="Անուն" class="form-control">
+                                    <textarea name="Texts[text_en]" class="form-control" id="" rows="3"><?php echo $text->text_en;?></textarea>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>
                     <button type="submit" class="btn btn-succ" name="edite" value="true">Գրանցել</button>
