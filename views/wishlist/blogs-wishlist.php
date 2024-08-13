@@ -48,7 +48,9 @@ if ($language == 'en') {
                 <?php if (!empty($wishlist_blogs)){foreach ($wishlist_blogs as $wishlist_blog){  ?>
                     <li class="wishlistCardsField blogsHidden">
                         <div class="individualCards_">
-                            <img src="/<?=$wishlist_blog['img']?>" alt="" draggable="false">
+                            <div class="imgBlogField">
+                                <img src="/<?=$wishlist_blog['img']?>" alt="" draggable="false">
+                            </div>
                             <div class="cardsText_">
                                 <div class="cardsTextField_">
                                     <div class="cardsTextInfo_">

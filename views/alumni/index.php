@@ -34,9 +34,13 @@ $this->registerCssFile('@web/css/alumni.css');
                         <div class="card-info">
                             <span class="nameCard"><?=$alumnus['alumni']?></span>
                             <div class="textCard"><?=$alumnus['text']?></div>
-                            <a target="<?=$alumnus['linkedin_link'] ? '_blank' : ''?>" href="<?=$alumnus['linkedin_link'] ?? '#'?>">
-                                <img src="/images/alumniin.png">
-                            </a>
+                            <?php if (!empty($alumnus['linkedin_link'])){?>
+                                <a target="_blank" href="<?=$alumnus['linkedin_link']?>">
+                                    <img src="/images/alumniin.png">
+                                </a>
+                            <?php }else{?>
+                                <div style="height: 25px"></div>
+                            <?php }?>
                         </div>
                     </div>
                 <?php }} ?>
@@ -56,9 +60,13 @@ $this->registerCssFile('@web/css/alumni.css');
                     <div class="card-info">
                         <span class="nameCard"><?=$alumnus['alumni']?></span>
                         <div class="textCard"><?=$alumnus['text']?></div>
-                        <a target="<?=$alumnus['linkedin_link'] ? '_blank' : ''?>" href="<?=$alumnus['linkedin_link'] ?? '#'?>">
-                            <img src="/images/alumniin.png">
-                        </a>
+                        <?php if (!empty($alumnus['linkedin_link'])){?>
+                            <a target="_blank" href="<?=$alumnus['linkedin_link']?>">
+                                <img src="/images/alumniin.png">
+                            </a>
+                        <?php }else{?>
+                            <div style="height: 25px"></div>
+                        <?php }?>
                     </div>
                 </div>
             <?php }} ?>
@@ -127,7 +135,7 @@ $this->registerCssFile('@web/css/alumni.css');
                     spaceBetween: 30,
                 },
                 1101: {
-                    slidesPerView: 2,
+                    slidesPerView: 3,
                     spaceBetween: 50,
                 },
                 1180: {
@@ -139,7 +147,7 @@ $this->registerCssFile('@web/css/alumni.css');
                     spaceBetween: 30,
                 },
                 1550: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 20,
                 },
                 2100: {

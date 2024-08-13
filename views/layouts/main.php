@@ -411,10 +411,20 @@ if ($logged && $alertShown) {
                                 </ul>
                             </div>
                             <div class="rightMenuFooter">
+                                <?php
+                                $isset_user = Yii::$app->user->identity->id;
+                                $isset_role = Yii::$app->user->identity->role;
+                                ?>
                                 <ul>
                                     <li><a href="/courses/index"><?= $GLOBALS['text']['footerCourses']?></a></li>
                                     <li><a href="/blog"><?= $GLOBALS['text']['footerBlog']?></a></li>
-                                    <li><a href="/quize/index"><?= $GLOBALS['text']['footerRecQuize']?></a></li>
+                                    <li><a href="<?php if (!isset($isset_user)){
+                                            echo '/quize/index';
+                                        }elseif (isset($isset_user) && $isset_role != null){
+                                            echo '/404';
+                                        }elseif (isset($isset_user) && $isset_role == null){
+                                            echo '/quize/index';
+                                        }?>"><?= $GLOBALS['text']['footerRecQuize']?></a></li>
                                 </ul>
                             </div>
                         </div>

@@ -176,48 +176,62 @@ class AdminController extends Controller {
         }
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
-            $user = new User();
-            $user->load($post);
-            $user->password = Yii::$app->getSecurity()->generatePasswordHash($post['User']['password']);
-            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
-                $tmp_name = $_FILES["img"]["tmp_name"];
-                $name = time() . basename($_FILES["img"]["name"]);
-                move_uploaded_file($tmp_name, "web/uploads/$name");
-                $user->image = "web/uploads/$name";
+            $exist_email = User::find()->where(['email' => $post['User']['email']])->exists();
+            if ($exist_email){
+                $this->redirect(['customers', 'success' => 'false']);
+            }else {
+                $user = new User();
+                $user->load($post);
+                $user->password = Yii::$app->getSecurity()->generatePasswordHash($post['User']['password']);
+                $user->auth_key = $this->generateRandomString();
+                if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                    $tmp_name = $_FILES["img"]["tmp_name"];
+                    $name = time() . basename($_FILES["img"]["name"]);
+                    move_uploaded_file($tmp_name, "web/uploads/$name");
+                    $user->image = "web/uploads/$name";
+                }
+                if (!empty($_FILES['cv']) && $_FILES["cv"]["name"]) {
+                    $tmp_name = $_FILES["cv"]["tmp_name"];
+                    $name = time() . basename($_FILES["cv"]["name"]);
+                    move_uploaded_file($tmp_name, "web/uploads/$name");
+                    $user->cv = "web/uploads/$name";
+                }
+                $user->save(false);
+                $this->redirect(['customers', 'success' => 'true', 'id' => 'key' . $user->id]);
             }
-            if (!empty($_FILES['cv']) && $_FILES["cv"]["name"]) {
-                $tmp_name = $_FILES["cv"]["tmp_name"];
-                $name = time() . basename($_FILES["cv"]["name"]);
-                move_uploaded_file($tmp_name, "web/uploads/$name");
-                $user->cv = "web/uploads/$name";
-            }
-            $user->save(false);
-            $this->redirect(['customers', 'success' => 'true', 'id' => 'key' . $user->id]);
         }
         else if ($post && $post['edite']) {
-            $user = User::findOne(['id' => intval($post['id']) ]);
-            $pass = $user->password;
-            $user->load($post);
-            if($post['User']['password']) {
-                $user->password = Yii::$app->getSecurity()->generatePasswordHash($post['User']['password']);
+            $user = User::findOne(['id' => intval($post['id'])]);
+            $exist_email = User::find()
+                ->where(['email' => $post['User']['email']])
+                ->andWhere(['!=', 'id', $user->id])
+                ->exists();
+            if ($exist_email){
+                $this->redirect(['customers', 'success' => 'false']);
+            }else {
+                $pass = $user->password;
+                $user->load($post);
+                $user->auth_key = $this->generateRandomString();
+                if ($post['User']['password']) {
+                    $user->password = Yii::$app->getSecurity()->generatePasswordHash($post['User']['password']);
+                } else {
+                    $user->password = $pass;
+                }
+                if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
+                    $tmp_name = $_FILES["img"]["tmp_name"];
+                    $name = time() . basename($_FILES["img"]["name"]);
+                    move_uploaded_file($tmp_name, "web/uploads/$name");
+                    $user->image = "web/uploads/$name";
+                }
+                if (!empty($_FILES['cv']) && $_FILES["cv"]["name"]) {
+                    $tmp_name = $_FILES["cv"]["tmp_name"];
+                    $name = time() . basename($_FILES["cv"]["name"]);
+                    move_uploaded_file($tmp_name, "web/uploads/$name");
+                    $user->cv = "web/uploads/$name";
+                }
+                $user->save(false);
+                $this->redirect(['customers', 'success' => 'true', 'id' => 'key' . $user->id]);
             }
-            else {
-                $user->password = $pass;
-            }
-            if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
-                $tmp_name = $_FILES["img"]["tmp_name"];
-                $name = time() . basename($_FILES["img"]["name"]);
-                move_uploaded_file($tmp_name, "web/uploads/$name");
-                $user->image = "web/uploads/$name";
-            }
-            if (!empty($_FILES['cv']) && $_FILES["cv"]["name"]) {
-                $tmp_name = $_FILES["cv"]["tmp_name"];
-                $name = time() . basename($_FILES["cv"]["name"]);
-                move_uploaded_file($tmp_name, "web/uploads/$name");
-                $user->cv = "web/uploads/$name";
-            }
-            $user->save(false);
-            $this->redirect(['customers', 'success' => 'true', 'id' => 'key' . $user->id]);
         }
         $page = intval($_GET['page']);
         $limit = 10;
@@ -776,14 +790,25 @@ class AdminController extends Controller {
         }
         $post = Yii::$app->request->post();
         if ($post && $post['edite']) {
-            $exist_email = User::find()->where(['email' => $post['User']['email']])->exists();
+//            echo "<pre>";
+//            var_dump($post);
+//            exit();
+            $user = User::findOne(intval($post['id']));
+            $exist_email = User::find()
+                ->where(['email' => $post['User']['email']])
+                ->andWhere(['!=', 'id', $user->id])
+                ->exists();
             if ($exist_email){
                 $this->redirect(['settings', 'success' => 'false']);
             }else{
-                $user = User::findOne(intval($post['id']));
+                $pass = $user->password;
                 $user->load($post);
-                $user->password = Yii::$app->getSecurity()->generatePasswordHash($user->password);
                 $user->auth_key = $this->generateRandomString();
+                if ($post['User']['password']) {
+                    $user->password = Yii::$app->getSecurity()->generatePasswordHash($post['User']['password']);
+                } else {
+                    $user->password = $pass;
+                }
                 $user->save(false);
                 $this->redirect(['settings', 'success' => 'true', 'id' => 'key'.$user->id]);
             }

@@ -6,7 +6,18 @@
             <span aria-hidden="true">×</span>
         </button>
     </div>
+    <script>
+        <?php if(isset($_GET['id'])){ ?>
+        setTimeout(function(){
+            jQuery('.<?php echo $_GET['id'];?>').closest('.block').click();
+        },1000);
 
+        <?php } ?>
+
+        var url = window.location.href;
+        url = url.split('?')[0];
+        window.history.replaceState({}, document.title, url);
+    </script>
 <?php } elseif (isset($_GET['success']) && $_GET['success'] == 'false'){?>
     <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
         Նման էլ. հասցե գոյություն ունի
@@ -14,19 +25,20 @@
             <span aria-hidden="true">×</span>
         </button>
     </div>
+    <script>
+        <?php if(isset($_GET['id'])){ ?>
+        setTimeout(function(){
+            jQuery('.<?php echo $_GET['id'];?>').closest('.block').click();
+        },1000);
+
+        <?php } ?>
+
+        var url = window.location.href;
+        url = url.split('?')[0];
+        window.history.replaceState({}, document.title, url);
+    </script>
 <?php }?>
-<script>
-    <?php if(isset($_GET['id'])){ ?>
-    setTimeout(function(){
-        jQuery('.<?php echo $_GET['id'];?>').closest('.block').click();
-    },1000);
 
-    <?php } ?>
-
-    var url = window.location.href;
-    url = url.split('?')[0];
-    window.history.replaceState({}, document.title, url);
-</script>
 <!--  /Traffic -->
 <div class="clearfix"></div>
 <!-- Orders -->
@@ -129,18 +141,18 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
                     <br>
-                    <span>Անուն</span>
+                    <span>Անուն *</span>
                     <input type="text" name="User[username]" required placeholder="Անուն" class="form-control">
-                    <span>Էլ․ փոստ</span>
-                    <input type="email" name="User[email]"  placeholder="Էլ․ փոստ" class="form-control">
-                    <span>Պաշտոն</span>
-                    <select name="User[role]" class="form-control">
+                    <span>Էլ․ փոստ *</span>
+                    <input type="email" name="User[email]" required placeholder="Էլ․ փոստ" class="form-control">
+                    <span>Պաշտոն *</span>
+                    <select name="User[role]" class="form-control" required>
                         <option value="10">Ադմին</option>
                         <option value="20">Օպերատոր</option>
                         <option value="30">խմբագիր</option>
                     </select>
-                    <span>Գաղտնաբառ</span>
-                    <input type="password" name="User[password]"  placeholder="Գաղտնաբառ" class="form-control">
+                    <span>Գաղտնաբառ *</span>
+                    <input type="password" name="User[password]" required  placeholder="Գաղտնաբառ" class="form-control">
                     <br><br>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>
                     <button type="submit" class="btn btn-succ" name="add" value="true">Գրանցել</button>

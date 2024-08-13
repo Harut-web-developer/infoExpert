@@ -166,10 +166,15 @@
     font-family: "Roboto_", sans-serif;
     text-align: center;
 }
-.myCoursesFieldSectionLeft > img{
+.imgFieldCard{
     border-radius: 50%;
     width: 250px;
     height: 250px;
+    overflow: hidden;
+}
+.imgFieldCard > img{
+    width: 100%;
+    height: 100%;
 }
 .usersProfileInfo{
     width: 249px;
@@ -305,9 +310,15 @@
     width: 102px;
     height: 60px;
 }
-.myCardImageBlock > img{
+.cardImgField{
     width: 100%;
     height: 233px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.cardImgField > img{
+    width: 100%;
+    height: 100%;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
 }
@@ -506,9 +517,9 @@ ion-icon {
     .myCardNameRating > span {
         -webkit-line-clamp: 3;
     }
-    .myCardImageBlock > img{
-        height: 200px;
-    }
+    /*.myCardImageBlock > img{*/
+    /*    height: 200px;*/
+    /*}*/
     .myCoursesFieldSection {
         margin: 36px 36px 37px 55px;
     }
@@ -524,7 +535,10 @@ ion-icon {
     }
     .myCoursesBlocksFieldMain{
         width: 310px;
-        height: 465px;
+        height: 440px;
+    }
+    .myCoursesBlocksField {
+        height: 450px;
     }
     .myCoursesBlocksField{
         width: 310px;
@@ -539,7 +553,10 @@ ion-icon {
         margin-left: 39px;
     }
     .myCardImageBlock{
-        height: 59%;
+        height: 63%;
+    }
+    .cardImgField{
+        height: 192px;
     }
     .myCardBlockInfo{
         height: 30%;
@@ -550,7 +567,7 @@ ion-icon {
         width: 380px;
     }
     .myCardImageBlock {
-        height: 52%;
+        height: 63%;
     }
     .myCardBlockInfo {
         align-items: end;
@@ -619,7 +636,7 @@ ion-icon {
     .myCoursesProfileField {
         height: 492px;
     }
-    .myCoursesFieldSectionLeft > img {
+    .imgFieldCard{
         width: 200px;
         height: 200px;
     }
@@ -627,7 +644,7 @@ ion-icon {
         height: 430px;
     }
     .myCardImageBlock {
-        height: 62%;
+        height: 66%;
     }
     .myCardInfoTextIcon {
         height: 126px;
@@ -652,7 +669,7 @@ ion-icon {
     .myCardBlockInfo {
         height: 33%;
     }
-    .myCoursesFieldSectionLeft > img {
+    .imgFieldCard{
         width: 160px;
         height: 160px;
     }
@@ -719,8 +736,8 @@ ion-icon {
     .myCardNameRating > span {
         -webkit-line-clamp: 2;
     }
-    .myCardImageBlock > img {
-        height: 131px;
+    .cardImgField{
+        height: 125px;
     }
     .rightContentMyCard {
         width: 80px;
@@ -756,10 +773,9 @@ ion-icon {
         width: 203px;
         height: 264px;
     }
-    .myCoursesFieldSectionLeft > img{
+    .imgFieldCard{
         width: 93px;
         height: 94px;
-        border-radius: 50%;
     }
     .myCoursesFieldSection{
         margin: 19px 15px;
@@ -843,7 +859,7 @@ ion-icon {
         font-size: 12px !important;
     }
     .spanAmd{
-        font-size: 12px !important;
+        font-size: 11px !important;
     }
     .rightContentMyCard{
         height: 40px;
@@ -898,7 +914,7 @@ ion-icon {
     }
     .myCardBlockButtons > span{
         font-size: 15px;
-        margin-left: 16px;
+        margin-left: 6px;
     }
     .myCard {
         /*height: 846px;*/
@@ -987,15 +1003,15 @@ ion-icon {
         text-align: left;
     }
     .starDiv {
-        width: 45px;
-        height: 8px;
+        width: 100%;
+        height: 10px;
     }
     .starDiv img {
-        width: 9px;
-        height: 8px;
+        width: 10px;
+        height: 9px;
     }
     .myCardImageBlock .span2_2{
-        font-size: 10px !important;
+        font-size: 11px !important;
         font-weight: 400;
         line-height: 11.72px;
     }
@@ -1012,10 +1028,10 @@ ion-icon {
     }
     .rightContentMyCard {
         height: 23px;
-        width: 45px;
+        width: 50px;
     }
     .myCardNameRating {
-        width: 162px;
+        width: 170px;
         height: 35px;
     }
     .myCardInfoTextIconFirst > img, .myCardInfoTextIconSecond > img {
@@ -1031,7 +1047,7 @@ ion-icon {
     }
     .myCardBlockInfo {
         height: 80px;
-        width: 167px;
+        width: 170px;
     }
     .myCardInfoTextIcon {
         height: 80px;
@@ -1134,7 +1150,7 @@ ion-icon {
         height: auto;
     }
     .myCardMobileField{
-        height: 90vh;
+        height: min-content;
         display: flex;
         flex-direction: column;
     }
@@ -1161,9 +1177,15 @@ ion-icon {
         width: 320px;
         height: 435px;
     }
-    .myCoursesBlocksField > img{
+    .cardImgField{
         width: 320px;
         height: 203px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .cardImgField > img{
+        width: 100%;
+        height: 100%;
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
     }
@@ -1265,13 +1287,15 @@ ion-icon {
 @media screen and (max-width: 370px) {
     .myCardBlocksField {
         width: 280px;
+        height: 500px;
     }
     .myCoursesBlocksField {
         width: 280px;
-        height: 435px;
+        height: 415px;
     }
-    .myCoursesBlocksField > img {
+    .cardImgField{
         width: 280px;
+        height: 180px;
     }
     .myCoursesBlocksFieldMain {
         width: 280px;

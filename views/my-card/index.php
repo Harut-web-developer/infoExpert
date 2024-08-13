@@ -37,11 +37,13 @@ if ($language == 'en') {
                 <div class="myCoursesProfileField">
                     <div class="myCoursesBlocksFieldMainPerson">
                         <div class="myCoursesFieldSectionLeft">
-                            <?php if(!empty(Yii::$app->user->identity->image)){?>
-                                <img src="/<?=Yii::$app->user->identity->image?>" alt="">
-                            <?php }else{?>
-                                <img src="/images/avatar.png" alt="">
-                            <?php } ?>
+                            <div class="imgFieldCard">
+                                <?php if(!empty(Yii::$app->user->identity->image)){?>
+                                    <img src="/<?=Yii::$app->user->identity->image?>" alt="">
+                                <?php }else{?>
+                                    <img src="/images/avatar.png" alt="">
+                                <?php } ?>
+                            </div>
                             <span><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
                             <div class="usersProfileInfo">
                                 <?php if (Yii::$app->user->identity->phone) { ?>
@@ -80,7 +82,9 @@ if ($language == 'en') {
                                         <div class="myCoursesBlocksField">
                                             <div class="myCoursesBlocksFieldMain">
                                                 <div class="myCardImageBlock">
-                                                    <img src="/<?=$item['img']?>" alt="" draggable="false">
+                                                    <div class="cardImgField">
+                                                        <img src="/<?=$item['img']?>" alt="" draggable="false">
+                                                    </div>
                                                     <div class="myCardNameRating">
                                                         <span><?=$item['lesson_name']?></span>
                                                         <div class="rightContentMyCard">
@@ -144,7 +148,9 @@ if ($language == 'en') {
                 <?php foreach ($my_card as $item){ ?>
                     <div class="myCardBlocksField">
                         <div class="myCoursesBlocksField">
-                            <img src="/<?=$item['img']?>" alt="" draggable="false">
+                            <div class="cardImgField">
+                                <img src="/<?=$item['img']?>" alt="" draggable="false">
+                            </div>
                             <div class="myCoursesBlocksFieldMain">
                                 <div class="blogsBottomInfoField">
                                     <div class="myCardNameRating">

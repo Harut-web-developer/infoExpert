@@ -277,38 +277,45 @@ if (window.location.pathname == '/') {
 }
 // Mariam
 if (window.location.pathname == '/my-card/index' && $(window).width() <= 600){
-    document.addEventListener('scroll', function() {
-        const bottomImages = document.getElementById('totalPriceField');
-        const footerBackground = document.getElementById('footerBackgroundM');
-        const footerTop = footerBackground.getBoundingClientRect().top;
-        const bottomImagesHeight = bottomImages.offsetHeight;
-        const windowHeight = window.innerHeight;
-        if (footerTop + bottomImagesHeight <= windowHeight) {
-            bottomImages.classList.remove('fixed');
-            bottomImages.classList.add('none');
-        } else {
-            bottomImages.classList.remove('none');
-            bottomImages.classList.add('fixed');
-        }
-    });
+        document.addEventListener('scroll', function() {
+            const bottomImages = document.getElementById('totalPriceField');
+            const footerBackground = document.getElementById('footerBackgroundM');
+            const footerTop = footerBackground.getBoundingClientRect().top;
+            const bottomImagesHeight = bottomImages.offsetHeight;
+            const windowHeight = window.innerHeight;
+            if ($('.myCardBlogsSection').find('.myCardBlocksField').length > 1) {
+                if (footerTop + bottomImagesHeight <= windowHeight) {
+                    bottomImages.classList.remove('fixed');
+                    bottomImages.classList.add('none');
+                } else {
+                    bottomImages.classList.remove('none');
+                    bottomImages.classList.add('fixed');
+                }
+            }else {
+                bottomImages.classList.remove('none');
+                bottomImages.classList.add('absolute');
+            }
+
+        });
+
 }
 // Mariam
-if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600){
-    document.addEventListener('scroll', function() {
-        const summary = document.getElementById('summary');
-        const footerBackground = document.getElementById('footerBackgroundM');
-        const footerTop = footerBackground.getBoundingClientRect().top;
-        const summaryHeight = 181;
-        const windowHeight = window.innerHeight;
-        if (footerTop + summaryHeight <= windowHeight) {
-            summary.classList.remove('fixed');
-            summary.classList.add('none');
-        } else {
-            summary.classList.remove('none');
-            summary.classList.add('fixed');
-        }
-    });
-}
+// if (window.location.pathname == '/my-card/checkout' && $(window).width() <= 600){
+//     document.addEventListener('scroll', function() {
+//         const summary = document.getElementById('summary');
+//         const footerBackground = document.getElementById('footerBackgroundM');
+//         const footerTop = footerBackground.getBoundingClientRect().top;
+//         const summaryHeight = 181;
+//         const windowHeight = window.innerHeight;
+//         if (footerTop + summaryHeight <= windowHeight) {
+//             summary.classList.remove('fixed');
+//             summary.classList.add('none');
+//         } else {
+//             summary.classList.remove('none');
+//             summary.classList.add('fixed');
+//         }
+//     });
+// }
 // Harut
 $(document).ready(function (e) {
     $('body').on('click','.tabletMenuIcon', function () {
@@ -757,18 +764,21 @@ $('.mainFieldSite').on('mouseout', function () {
     $(this).children('a').css('color', '');
 });
 // Mariam
-let carousel = $('.carousel-courses');
-let items = $('.carousel-courses .item-courses');
-var active__ = 1;
+if (window.location.pathname == '/'){
 
-setInterval(() => {
-    if(active__ == items.length){
-        active__ = 1;
-    } else {
-        active__++;
-    }
-    $('.item-courses').removeClass('active-courses');
-    $('#item'+active__).addClass('active-courses');
+    let carousel = $('.carousel-courses');
+    let items = $('.carousel-courses .item-courses');
+    var active__ = 1;
 
-}, 5000);
+    setInterval(() => {
+        if(active__ == items.length){
+            active__ = 1;
+        } else {
+            active__++;
+        }
+        $('.item-courses').removeClass('active-courses');
+        $('#item'+active__).addClass('active-courses');
+
+    }, 5000);
+}
 

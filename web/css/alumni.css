@@ -1,12 +1,13 @@
 /*Mariam 90 ev Harut 10*/
 .alumni{
     width: 100%;
-    height: 1330px;
+    height: min-content;
     background-image: url("../images/background-alumni.png");
     padding-top: 158px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding-bottom: 90px;
 }
 .sectionAlumni{
     width: 67%;
@@ -74,16 +75,22 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    width: 294px !important;
+    height: 396px !important;
 }
 .card-image {
     height: 81px;
+    width: 81px;
+    margin: 0px auto;
+    border-radius: 50px;
+    overflow: auto;
 }
 .card-image img{
-    width: 81px;
-    height: 81px;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
 }
 .card-info{
+    margin-top: 20px;
     text-align: center;
     position: relative;
     color: #222;
@@ -91,7 +98,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 204px;
+    height: 232px;
 }
 /*.card-info span{*/
 /*    margin: 0;*/
@@ -101,6 +108,7 @@
     height: 21px;
 }
 .nameCard{
+    height: 57px;
     color: #F16D35;
     font-family: "Roboto_",sans-serif;
     font-size: 24px;
@@ -109,7 +117,7 @@
     text-align: center;
 }
 .textCard{
-    height: auto;
+    height: 130px;
     font-family: 'Roboto_',sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -118,8 +126,11 @@
     color: #1C5484;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
+}
+.textCard > p{
+    margin-bottom: 0px;
 }
 .triangle-element {
     border-top: 100px solid var(--bg-color, #ACCBE6);
@@ -131,7 +142,7 @@
 }
 .swiper-wrapper {
     align-items: center;
-    height: 90%!important;
+    height: 100%!important;
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     width: 100%;
@@ -153,21 +164,21 @@
 }
 @media screen and (max-width: 1750px) {
     .swiper {
-        height: 850px !important;
+        height: 890px !important;
     }
 }
-@media screen and (max-width: 1700px) {
-    .swiper {
-        height: 800px !important;
-    }
-    .alumni {
-        height: 1280px;
-    }
-}
+/*@media screen and (max-width: 1700px) {*/
+    /*.swiper {*/
+    /*    height: 800px !important;*/
+    /*}*/
+    /*.alumni {*/
+    /*    height: 1280px;*/
+    /*}*/
+/*}*/
 @media screen and (max-width: 1550px) {
-    .alumni {
-        height: 1240px;
-    }
+    /*.alumni {*/
+    /*    height: min-content;*/
+    /*}*/
     .alumniTxt {
         width: 75%;
     }
@@ -175,11 +186,11 @@
         width: 277.179px !important;
     }
     .textCard{
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 6;
     }
     .nameCard {
         font-size: 20px;
-        line-height: 17px;
+        /*line-height: 17px;*/
     }
     .swiper {
         width: 900px;
@@ -187,45 +198,60 @@
 }
 @media screen and (max-width: 1500px) {
     .card-info {
-        padding: 10px 20px 20px;
+        /*padding: 10px 20px 20px;*/
+        height: 240px;
+    }
+    .textCard{
+        height: 134px;
+        -webkit-line-clamp: 6;
     }
 }
 @media screen and (max-width: 1339.5px) {
-    .alumni {
-        height: 1140px;
-    }
+    /*.alumni {*/
+    /*    height: 1140px;*/
+    /*}*/
     .textCard{
-        -webkit-line-clamp: 4;
+        -webkit-line-clamp: 6;
     }
     .swiper-slide {
         width: 240.179px !important;
     }
     .swiper {
         width: 820px;
-        height: 700px !important;
+        height: 890px !important;
     }
     .card_ {
         padding: 14px;
     }
     .card-info {
-        height: 170px;
-        padding: 10px 0px 20px;
+        height: 240px;
+        /*padding: 10px 0px 20px;*/
     }
 }
-@media screen and (max-width: 1279px) {
-    .alumni {
-        height: 1170px;
-    }
-}
+/*@media screen and (max-width: 1279px) {*/
+/*    .alumni {*/
+/*        height: 1170px;*/
+/*    }*/
+/*}*/
 @media screen and (max-width: 1180px) {
     .swiper{
-        width: 560px;
+        width: 780px;
+        height: 910px !important;
+
     }
 }
 @media screen and (max-width: 1100px) {
+    .card-image {
+        height: 61px;
+        width: 61px;
+        /*margin: 0px auto;*/
+        /*border-radius: 50%;*/
+        /*overflow: auto;*/
+    }
     .alumni {
-        height: 900px;
+        height: min-content;
         padding-top: 61px;
+        padding-bottom: 50px;
     }
     .alumniBackButton{
         display: contents;
@@ -233,7 +259,7 @@
     .sectionAlumni {
         width: auto;
         height: 748px;
-        margin: 25px 6.9% 0px 6.8%;
+        margin: 25px 6.9% 20px 6.8%;
     }
     .backButton {
         width: 40px;
@@ -265,25 +291,30 @@
         text-align: center;
         margin: 0;
     }
-    .card-image img{
-        width: 61px;
-        height: 60px;
-        border-radius: 40px;
-    }
+    /*.card-image img{*/
+    /*    width: 61px;*/
+    /*    height: 60px;*/
+    /*    border-radius: 40px;*/
+    /*}*/
     .nameCard{
         font-size: 16px;
         font-weight: 400;
-        line-height: 28px;
+        line-height: 16px;
         text-align: center;
         margin: 0;
+        height: 35px;
     }
     .textCard{
         font-size: 13px;
         font-weight: 400;
         line-height: 15.23px;
         text-align: center;
-        height: auto;
+        height: 91px;
         margin: 0;
+    }
+    .card-info {
+        margin-top: 15px;
+        height: 170px;
     }
     .card-info > a > img{
         width: 20px;
@@ -291,12 +322,12 @@
     }
     .swiper-slide {
         width: 203px !important;
-        height: 255px !important;
+        height: 280px !important;
         padding: 16px;
     }
     .swiper {
         width: 100%;
-        height: 600px !important;
+        height: 640px !important;
     }
 }
 @media screen and (max-width: 1000px){
@@ -314,6 +345,21 @@
         width: 240px;
         height: 300px;
         display: none;
+    }
+    .card_ {
+        padding: 27px 14px;
+        justify-content: space-between;
+    }
+    .card-info {
+        margin-top: 20px;
+        height: 240px;
+    }
+    .card-image {
+        height: 81px;
+        width: 81px;
+        /* margin: 0px auto; */
+        /* border-radius: 50%; */
+        /* overflow: auto; */
     }
     .mobileAlumni{
         display: flex;
@@ -337,14 +383,16 @@
         height: 30px;
     }
     .alumni{
-        height: auto;
+        height: min-content;
         background: #5D9A9D;
+        padding-bottom: 0px;
     }
     .swiper {
         display: none !important;
     }
     .sectionAlumni {
-        height: auto;
+        height: min-content;
+        margin-bottom: 0px;
         /*padding-bottom: 70px;*/
     }
     .hideMobile{
@@ -362,6 +410,51 @@
     }
     .alumniBtnField{
         margin-bottom: 30px;
+    }
+    .nameCard {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+        height: 57px;
+    }
+    .textCard {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        height: 135px;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 375px) {
+    .card_ {
+        width: 250px !important;
+        height: 360px !important;
+    }
+    .card-image {
+        height: 61px;
+        width: 61px;
+    }
+    .card-info {
+        margin-top: 20px;
+        height: 225px;
+    }
+    .nameCard {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+        line-height: 20px;
+        height: 45px;
+    }
+    .textCard {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        height: 135px;
+        margin: 0;
     }
 }
 @media screen and (min-width: 600px) {

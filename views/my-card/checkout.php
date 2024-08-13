@@ -119,7 +119,12 @@ if ($language == 'en') {
     <div class="summary" id="summary">
         <span class="sumTitle"><?=$GLOBALS['text']['checkoutSummary']?>:</span>
         <div class="summaryText">
-            <span class="sumPriceAll">xxxx AMD</span>
+            <?php if (!empty($lessons)){
+                $total_count = 0;
+                foreach ($lessons as $lesson){
+                    $total_count += $lesson['price'];
+                }} ?>
+            <span class="sumPriceAll"><?=$total_count?> AMD</span>
             <p><?=$GLOBALS['text']['checkoutTermsText']?> <a href=""><?=$GLOBALS['text']['checkoutTerms']?></a></p>
             <div class="checkoutTotalFieldInfoBottom">
                 <button>

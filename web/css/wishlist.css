@@ -110,10 +110,15 @@
     font-weight: 600;
     font-family: "Roboto_", sans-serif;
 }
-.myCoursesFieldSectionLeft > img{
+.imgFieldWishlist{
     border-radius: 50%;
     width: 250px;
     height: 250px;
+    overflow: hidden;
+}
+.imgFieldWishlist > img{
+    width: 100%;
+    height: 100%;
 }
 .usersProfileInfo{
     width: 249px;
@@ -302,12 +307,6 @@ hr.new1 {
     cursor: pointer;
     user-select: none;
 }
-.cardsimg_ {
-    height: 233px;
-    width: 100%;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-}
 .cardsimg_{
     height: 233px;
     width: 100%;
@@ -316,7 +315,7 @@ hr.new1 {
 }
 .cardsimg_ > img{
     width: 100%;
-    height: 233px;
+    height: 100%;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
 }
@@ -743,7 +742,7 @@ ion-icon {
          margin-left: 0;
     }
     .cardsimg_ {
-        height: auto;
+        height: 214px;
     }
     .topSlider {
          padding-left: 0;
@@ -753,12 +752,12 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1800px) {
-    .img_2 img, .cardsimg_ > img {
-        height: 210px;
+    .img_2, .cardsimg_ {
+        height: 190px;
     }
-    .img_2{
-        height: auto;
-    }
+    /*.img_2{*/
+    /*    height: auto;*/
+    /*}*/
     .wishlistBtnField > a {
         margin-left: 20px;
     }
@@ -830,7 +829,7 @@ ion-icon {
     .changeBody1 {
         height: 339px;
     }
-    .myCoursesFieldSectionLeft > img {
+    .imgFieldWishlist{
         width: 200px;
         height: 200px;
     }
@@ -840,8 +839,8 @@ ion-icon {
     .myCoursesFieldSection {
         margin: 37px 36px 37px 50px;
     }
-    .img_2 img, .cardsimg_ > img {
-        height: 170px;
+    .img_2, .cardsimg_ {
+        height: 160px;
     }
     /*.cardContent {*/
     /*    height: auto;*/
@@ -902,7 +901,7 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1500px) {
-    .myCoursesFieldSectionLeft > img {
+    .imgFieldWishlist{
         width: 160px;
         height: 160px;
     }
@@ -976,7 +975,7 @@ ion-icon {
         width: 240px;
         height: 314px;
     }
-    .myCoursesFieldSectionLeft > img{
+    .imgFieldWishlist{
         width: 130px;
         height: 130px;
     }
@@ -1059,9 +1058,9 @@ ion-icon {
     .card_2{
         padding: 0;
     }
-    .img_2{
-        height: auto;
-    }
+    /*.img_2{*/
+    /*    height: auto;*/
+    /*}*/
     .cardContent {
         padding: 10px 17px 16px 17px;
     }
@@ -1105,11 +1104,9 @@ ion-icon {
         width: 250px;
         height: 340px;
     }
-    .myCoursesFieldSectionLeft > img {
+    .imgFieldWishlist{
         width: 100px;
         height: 100px;
-        position: relative;
-        right: -16px;
     }
     .myCoursesFieldSection {
         width: initial;
@@ -1155,13 +1152,13 @@ ion-icon {
     .cardCenter_2 {
         height: 60px;
     }
-    .img_2 img, .cardsimg_ > img {
+    .img_2, .cardsimg_ {
         width: 100%;
-        height: 100%;
+        height: 150px;
     }
-    .img_2 {
-        height: 130px;
-    }
+    /*.img_2 {*/
+    /*    height: 130px;*/
+    /*}*/
     .card_2 .cardBody_2 .span1_2{
         font-size: 11px;
         font-weight: 500;
@@ -1180,6 +1177,7 @@ ion-icon {
     .cardContent {
         padding: 0 17px 9px 17px;
         height: 50%;
+        margin-top: 10px;
     }
     .topSlider {
         height: 340px;
@@ -1225,9 +1223,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1100px) {
-    .img_2 {
-        height: 120px;
-    }
+    /*.img_2 {*/
+    /*    height: 120px;*/
+    /*}*/
     .mainContent {
         padding-top: 40px;
     }
@@ -1295,9 +1293,8 @@ ion-icon {
         line-height: 16.41px;
         text-align: left;
     }
-    .myCoursesFieldSectionLeft > img{
+    .imgFieldWishlist{
         width: 93px;
-        left: 0;
         height: 94px;
     }
     .myCoursesFieldSectionRight img{
@@ -1432,7 +1429,7 @@ ion-icon {
         height: 136px;
         padding-top: 0;
     }
-    .cardsimg_ > img, .img_2 img {
+    .cardsimg_, .img_2 {
         height: 120px;
     }
     .cardsTextInfo_{
@@ -1479,6 +1476,7 @@ ion-icon {
     .cardContent {
         height: 54%;
         padding: 5px 8px 8px;
+        margin-top: 0px;
     }
     .cardtxt1_2, .cardtxt2_2 {
         width: 163.11px;
@@ -1495,6 +1493,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 800px) {
+    .cardsimg_, .img_2 {
+        height: 110px;
+    }
     .card_2 .cardBody_2 .span1_2 {
         font-size: 10px;
     }
@@ -1527,7 +1528,7 @@ ion-icon {
         width: 146.11px;
     }
     .cardContent {
-        height: 54%;
+        height: 57%;
     }
     .bottomSlider .carousel_ {
         grid-auto-columns: 180px;
@@ -1673,9 +1674,15 @@ ion-icon {
     .card_2:nth-child(2){
         display: flex;
     }
-    .card_2 > img{
+    .mobileImgField{
         width: 320px;
         height: 203px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .mobileImgField > img{
+        width: 100%;
+        height: 100%;
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
     }
@@ -1814,11 +1821,15 @@ ion-icon {
         height: 435px;
         margin: 0px auto 30px;
     }
-    .individualCards_ > img{
+    .imgBlogField{
         width: 320px;
-        height: 211px;
+        height: 190px;
         border-top-right-radius: 26px;
         border-top-left-radius: 26px;
+    }
+    .imgBlogField > img{
+        width: 100%;
+        height: 100%;
     }
     .cardsText_{
         width: 320px;
@@ -1874,9 +1885,9 @@ ion-icon {
         height: 435px;
         margin: 0px auto 10px;
     }
-    .individualCards_ > img{
+    .imgBlogField{
         width: 280px;
-        height: 190px;
+        height: 180px;
     }
     .cardsText_{
         width: 280px;
@@ -1893,10 +1904,11 @@ ion-icon {
     .card_2 {
         margin: 0px auto 30px;
         width: 280px;
-        height: 435px;
+        height: 413px;
     }
-    .card_2 > img{
+    .mobileImgField{
         width: 280px;
+        height: 190px;
     }
     .cardContent {
         width: 280px;

@@ -37,11 +37,13 @@ if ($language == 'en') {
             <div class="myCoursesProfileField">
                 <div class="myCoursesFieldSection">
                     <div class="myCoursesFieldSectionLeft">
-                        <?php if(!empty(Yii::$app->user->identity->image)){?>
-                            <img src="/<?=Yii::$app->user->identity->image?>" alt="">
-                        <?php }else{?>
-                            <img src="/images/avatar.png" alt="">
-                        <?php } ?>
+                        <div class="imgField">
+                            <?php if(!empty(Yii::$app->user->identity->image)){?>
+                                <img src="/<?=Yii::$app->user->identity->image?>" alt="">
+                            <?php }else{?>
+                                <img src="/images/avatar.png" alt="">
+                            <?php } ?>
+                        </div>
                         <span><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
                         <div class="usersProfileInfo">
                             <?php if (Yii::$app->user->identity->phone) { ?>

@@ -1,5 +1,5 @@
 <input type="hidden" data-page='Partners' id="page">
-<?php if(isset($_GET['success'])){ ?>
+<?php if(isset($_GET['success']) && $_GET['success'] == 'true'){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -11,7 +11,19 @@
         url = url.split('?')[0];
         window.history.replaceState({}, document.title, url);
     </script>
-<?php } ?>
+<?php } elseif (isset($_GET['success']) && $_GET['success'] == 'false'){?>
+    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+        Նման էլ. հասցե գոյություն ունի
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <script>
+        var url = window.location.href;
+        url = url.split('?')[0];
+        window.history.replaceState({}, document.title, url);
+    </script>
+<?php }?>
 <div class="products">
     <!--  /Traffic -->
     <div class="clearfix"></div>
@@ -156,7 +168,6 @@
                 </div>
                 <div class="modal-body">
                     <form action="" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="FsUsers[is_buyer]" value="1">
                         <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
                         <div class="row">
                             <div class="col-sm-12">
@@ -168,12 +179,12 @@
                                 <input type="text" name="User[username]" placeholder="Անուն/ազգանուն" required class="form-control">
                                 <span style="margin-bottom: 4px;color: #878787;">Էլ. հասցե *</span>
                                 <input type="text" name="User[email]" placeholder="Էլ. հասցե" required class="form-control">
-                                <span style="margin-bottom: 4px;color: #878787;">Հեռախոսահամար</span>
+                                <span style="margin-bottom: 4px;color: #878787;">Հեռախոսահամար *</span>
                                 <input type="number" name="User[phone]" placeholder="Հեռախոսահամար" required class="form-control">
                                 <span style="margin-bottom: 4px;color: #878787;">Linkedin_ի hղում</span>
                                 <input type="text" name="User[linkdin_url]" placeholder="Linkedin_ի hղում" class="form-control">
                                 <span style="margin-bottom: 4px;color: #878787;">Գաղտնաբառ *</span>
-                                <input type="password" name="Users[password]" required placeholder="Գաղտնաբառ" class="form-control">
+                                <input type="password" name="User[password]" required placeholder="Գաղտնաբառ" class="form-control">
                             </div>
                         </div>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>

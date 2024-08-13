@@ -179,7 +179,7 @@
         margin-bottom: 20px;
         --w-image: 400px;
     }
-    .carousel-courses .list-courses .item-courses .image-courses img {
+    .mainCourseField{
         width: 272px;
         height: 272px;
     }

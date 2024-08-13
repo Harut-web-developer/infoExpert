@@ -22,12 +22,12 @@
                             <input type="text" name="User[username]" value="<?=$user->username?>" placeholder="Անուն/ազգանուն" required class="form-control">
                             <span style="margin-bottom: 4px;color: #878787;">Էլ. հասցե *</span>
                             <input type="text" name="User[email]" value="<?=$user->email?>" placeholder="Էլ. հասցե" required class="form-control">
-                            <span style="margin-bottom: 4px;color: #878787;">Հեռախոսահամար</span>
+                            <span style="margin-bottom: 4px;color: #878787;">Հեռախոսահամար *</span>
                             <input type="number" name="User[phone]" value="<?=$user->phone?>" placeholder="Հեռախոսահամար" required class="form-control">
                             <span style="margin-bottom: 4px;color: #878787;">Linkedin_ի hղում</span>
                             <input type="text" name="User[linkdin_url]" value="<?=$user->linkdin_url?>" placeholder="Linkedin_ի hղում" class="form-control">
                             <span style="margin-bottom: 4px;color: #878787;">Գաղտնաբառ *</span>
-                            <input type="password" name="Users[password]" required placeholder="Գաղտնաբառ" class="form-control">
+                            <input type="password" name="User[password]" placeholder="Գաղտնաբառ" class="form-control">
                         </div>
                     </div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>

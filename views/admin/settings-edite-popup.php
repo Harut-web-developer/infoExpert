@@ -13,18 +13,18 @@
                     <input type="hidden" name="id" value="<?php echo $user->id;?>">
                     <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
                     <br>
-                    <span>Անուն</span>
+                    <span>Անուն *</span>
                     <input type="text" name="User[username]" value="<?=$user->username?>" required placeholder="Անուն" class="form-control">
-                    <span>Էլ․ փոստ</span>
-                    <input type="text" name="User[email]" value="<?=$user->email?>"  placeholder="Էլ․ փոստ" class="form-control">
-                    <span>Պաշտոն</span>
-                    <select name="User[role]" class="form-control">
+                    <span>Էլ․ փոստ *</span>
+                    <input type="text" name="User[email]" value="<?=$user->email?>" required placeholder="Էլ․ փոստ" class="form-control">
+                    <span>Պաշտոն *</span>
+                    <select name="User[role]" class="form-control" required>
                         <option <?=$user->role == 10 ? 'selected' : ''?> value="10">Ադմին</option>
                         <option <?=$user->role == 20 ? 'selected' : ''?> value="20">Օպերատոր</option>
                         <option <?=$user->role == 30 ? 'selected' : ''?> value="30">խմբագիր</option>
                     </select>
                     <span>Գաղտնաբառ</span>
-                    <input type="password" name="Users[password]"  placeholder="Գաղտնաբառ" class="form-control">
+                    <input type="password" name="User[password]"  placeholder="Գաղտնաբառ" class="form-control">
                     <br><br>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>
                     <button type="submit" class="btn btn-succ" name="edite" value="true">Գրանցել</button>

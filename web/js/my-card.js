@@ -75,6 +75,10 @@ $(document).ready(function () {
                         if ($(this).data('remove') == itemId){
                             $(this).closest('.myCardBlocksField').remove();
                         }
+                        if ($('.myCardBlogsSection').find('.myCardBlocksField').length <= 1) {
+                            $('#totalPriceField').removeClass('fixed')
+                        }
+
                     })
                     let totalCount = 0;
                     $('body').find('.myCardFieldAcceptCourses .myCardBlocksField').each(function () {
@@ -121,6 +125,9 @@ $(document).ready(function () {
                     $('body').find('.removeItem').each(function (){
                         if ($(this).data('remove') == itemId){
                             $(this).closest('.myCardBlocksField').remove();
+                        }
+                        if ($('.myCardBlogsSection').find('.myCardBlocksField').length <= 1) {
+                            $('#totalPriceField').removeClass('fixed')
                         }
                     })
                     let totalCount = 0;

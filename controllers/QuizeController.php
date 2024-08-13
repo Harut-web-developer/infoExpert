@@ -53,7 +53,9 @@ class QuizeController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-        // Harut 40 ev Mariam 60
+        if (isset(Yii::$app->user->identity->id) && Yii::$app->user->identity->role != null){
+            $this->redirect('/404');
+        }
         $session = Yii::$app->session;
         $language = $_COOKIE['language'];
         $quize_name = AcQuestionList::find()

@@ -34,11 +34,13 @@ if ($language == 'en') {
             <div class="myCoursesProfileField">
                 <div class="myCoursesFieldSection">
                     <div class="myCoursesFieldSectionLeft">
-                        <?php if(!empty(Yii::$app->user->identity->image)){?>
-                            <img src="/<?=Yii::$app->user->identity->image?>" alt="">
-                        <?php }else{?>
-                            <img src="/images/avatar.png" alt="">
-                        <?php } ?>
+                        <div class="imgFieldCourses">
+                            <?php if(!empty(Yii::$app->user->identity->image)){?>
+                                <img src="/<?=Yii::$app->user->identity->image?>" alt="">
+                            <?php }else{?>
+                                <img src="/images/avatar.png" alt="">
+                            <?php } ?>
+                        </div>
                         <div class="usersProfileInfo">
                             <span class="nameAndUsername"><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
                             <?php if (Yii::$app->user->identity->phone) { ?>
@@ -75,7 +77,9 @@ if ($language == 'en') {
                             <?php foreach ($my_lessons as $my_lesson){?>
                                 <li class="myCoursesBlocksField">
                                     <div class="myCoursesBlocksFieldMain">
-                                        <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
+                                        <div class="imgField">
+                                            <img class="myCoursesPhoto" src="/<?=$my_lesson['img']?>" alt="" draggable="false">
+                                        </div>
                                         <div class="myCoursesBlocksFieldMainInfo">
                                             <div class="infoTitle"><?=$my_lesson['lesson_name']?></div>
                                             <div class="myCoursesRating">
@@ -120,7 +124,9 @@ if ($language == 'en') {
         <div class="myCoursesMobile">
             <?php foreach ($my_lessons as $my_lesson){?>
                 <div class="myCoursesBlocksField">
-                    <img class="myCoursesPhoto" src="/images/courseimage.png" alt="" draggable="false">
+                    <div class="imgField">
+                        <img class="myCoursesPhoto" src="/<?=$my_lesson['img']?>" alt="" draggable="false">
+                    </div>
                     <div class="myCoursesBlocksFieldMain">
                         <span><?=$my_lesson['lesson_name']?></span>
 

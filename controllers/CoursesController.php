@@ -77,7 +77,7 @@ class CoursesController extends \yii\web\Controller
         $language = $_COOKIE['language'];
         $user_id = Yii::$app->user->identity->id;
         $my_lessons = AcLessons::find()->select('ac_my_lessons.id as my_lessons_id,lesson_name_'.$language.' as lesson_name,
-         ac_my_lessons.complete_percent as complete_percent,ac_lessons.rating as rating')
+         ac_my_lessons.complete_percent as complete_percent,ac_lessons.rating as rating,ac_lessons.img as img')
             ->leftJoin('ac_my_lessons', 'ac_my_lessons.lessons_id = ac_lessons.id')
             ->where(['and',['ac_my_lessons.status' => '1'],['ac_my_lessons.user_id' => $user_id],])
             ->orderBy(['ac_my_lessons.order_num' => SORT_ASC])

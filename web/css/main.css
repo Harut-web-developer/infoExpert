@@ -2234,6 +2234,8 @@ input::-webkit-inner-spin-button {
 .cardsimg > img{
     width: 100%;
     height: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
 }
 .cardsText{
     height: 247px;
@@ -3141,11 +3143,15 @@ input::-webkit-inner-spin-button {
     align-items: center;
     font-weight: 500;
 }
-.carousel-courses .list-courses .item-courses .image-courses img{
+.mainCourseField{
     width: 573px;
     height: 573px;
     border-radius: 50%;
-    /*filter: drop-shadow(0 150px 50px #9e0c0c55);*/
+    overflow: hidden;
+}
+.mainCourseField > img{
+    width: 100%;
+    height: 100%;
 }
 .managementBtn {
     /*width: 230px;*/
@@ -3268,7 +3274,7 @@ input::-webkit-inner-spin-button {
     .carousel-courses {
         --w-image: 600px;
     }
-    .carousel-courses .list-courses .item-courses .image-courses img {
+    .mainCourseField{
         width: 450px;
         height: 450px;
     }

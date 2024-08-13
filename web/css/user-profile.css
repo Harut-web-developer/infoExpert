@@ -159,9 +159,8 @@ input::-webkit-inner-spin-button {
     display: contents;
 }
 .cardImg_{
-    border-radius: 50%;
-    width: 251px;
-    height: 251px;
+    width: 100%;
+    height: 100%;
 }
 .userCreateTitleField, .userCreateMoreInfo, .editAchievementsBtn{
     display: none;
@@ -472,10 +471,15 @@ input::-webkit-inner-spin-button {
     font-family: "Roboto_", sans-serif;
     text-align: center;
 }
-.myCoursesFieldSectionLeft > img{
+.imgField{
     border-radius: 50%;
     width: 250px;
     height: 250px;
+    overflow: hidden;
+}
+.imgField > img{
+    width: 100%;
+    height: 100%;
 }
 .usersProfileInfo{
     width: 249px;
@@ -595,6 +599,10 @@ input::-webkit-inner-spin-button {
 .usersCardHead_{
     display: flex;
     position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 251px;
+    height: 251px;
 }
 .userAchievementsEditLeft > span {
     font-family: "Roboto_",sans-serif;
@@ -878,6 +886,10 @@ input::-webkit-inner-spin-button {
     }
 }
 @media screen and (max-width: 1300px) {
+    .imgField{
+        width: 220px;
+        height: 220px;
+    }
     .usersProfileRu .userProfileMenuField > span {
         font-size: 35px;
     }
@@ -966,6 +978,10 @@ input::-webkit-inner-spin-button {
     }
 }
 @media screen and (max-width: 1100px) {
+    .imgField{
+        width: 93px;
+        height: 94px;
+    }
     .popup-box-courses {
         width: 87%;
     }
@@ -1210,7 +1226,7 @@ input::-webkit-inner-spin-button {
     .cartificateImg img {
         padding: 30.08px 30.84px;
     }
-    .usersCardHead_ img{
+    .usersCardHead_{
         width: 133px;
         height: 134px;
     }
