@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\AcGroups;
 use app\models\AcLessons;
 use app\models\AcTutors;
 use Yii;
@@ -47,14 +48,23 @@ class LessonsController extends \yii\web\Controller
     }
     public function actionLesson()
     {
-        // Harut
         $lesson_url = $_GET['url'];
         $language = $_COOKIE['language'];
+        $user_id = Yii::$app->user->identity->id;
         $lesson = AcLessons::find()->select('id,lesson_name_'.$language.' as lesson_name,lesson_content_'.$language.' as lesson_content, price, img, certificate_img')
             ->where(['status' => '1'])
             ->andWhere(['url' => $lesson_url])
             ->asArray()
             ->one();
+        $lesson_count = AcGroups::find()->select('ac_groups.lesson_count as lesson_count')
+            ->leftJoin('user', 'user.groups_id = ac_groups.id')
+            ->where(['user.id' => $user_id])
+            ->andWhere(['ac_groups.lesson_id' => $lesson['id']])
+            ->andWhere(['ac_groups.action' => 1])
+            ->asArray()
+            ->one();
+//        var_dump($lesson_count);
+//        exit;
         $tutors = AcTutors::find()->select('id, username_'.$language.' as username, text_'.$language.' as text,img')
             ->where(['status' => '1'])
             ->andwhere(['lesson_id' => $lesson['id']])
@@ -63,7 +73,8 @@ class LessonsController extends \yii\web\Controller
             ->all();
         return $this->render('lesson',[
             'lesson' => $lesson,
-            'tutors' => $tutors
+            'tutors' => $tutors,
+            'lesson_count' => $lesson_count,
         ]);
     }
 }

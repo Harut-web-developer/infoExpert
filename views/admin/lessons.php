@@ -41,6 +41,7 @@
                                             <tr>
                                                 <th scope="col">#</th>
                                                 <th scope="col">Դասընթացի անվանում</th>
+                                                <th scope="col">Դասեր</th>
                                                 <th scope="col">Դասերի քանակ</th>
                                                 <th scope="col">Կարգավիճակ</th>
                                             </tr>
@@ -54,8 +55,11 @@
                                                                 echo '<i class="fa fa-close" style="color:red;"></i>';
                                                             } ?>
                                                             ID <?php echo $lesson->id;?></td>
-                                                        <td scope="col"> <?php echo $lesson->lesson_name_am;?></td>
-                                                        <td scope="col"> <?php echo $lesson->lessons_count;?></td>
+                                                        <td scope="col"><?php echo $lesson->lesson_name_am;?></td>
+                                                        <td scope="col">
+                                                            <a href="/admin/video-lessons?id=<?=$lesson->id?>">Վիդեոդասեր</a>
+                                                        </td>
+                                                        <td scope="col"><?php echo $lesson->lessons_count;?></td>
                                                         <td scope="col">
                                                             <?php if($lesson->status == 1){
                                                                 echo 'Ակտիվ';

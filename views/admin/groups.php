@@ -43,6 +43,7 @@
                                                 <th scope="col">#</th>
                                                 <th scope="col">Խմբեր</th>
                                                 <th scope="col">Դասընթաց</th>
+                                                <th scope="col">Դասընթացի տեսակ</th>
                                                 <th scope="col">Ուսանող(ուհի)</th>
                                                 <th scope="col">Դասի ավարտ</th>
                                                 <th scope="col">Կարգավիճակ</th>
@@ -59,13 +60,24 @@
                                                             ID <?php echo $item['id'];?></td>
                                                         <td scope="col"><?php echo $item['groups_name'];?></td>
                                                         <td scope="col"><?php echo $item['lesson_name'];?></td>
+                                                        <td scope="col"><?php
+                                                            if ($item['action'] == 1) {
+                                                                echo 'Օնլայն';
+                                                            } elseif ($item['action'] == 0) {
+                                                                echo 'Օֆլայն';
+                                                            }; ?>
+                                                        </td>
                                                         <td scope="col">
                                                             <?php if (!empty($item['username'])){foreach ($item['username'] as $user){?>
                                                                     <div><?=$user['username']?></div>
                                                                <?php }} ?>
                                                         </td>
                                                         <td scope="col">
-                                                            <button <?=$item['status'] != 1 ? 'disabled' : ''?> class="btn btn-outline-success lessonBtn">Ավարտել դասը</button>
+                                                            <?php if ($item['action'] == 1){?>
+                                                                <button <?=$item['status'] != 1 ? 'disabled' : ''?> data-text="start" class="btn btn-outline-success lessonBtn">Սկսել դասը</button>
+                                                            <?php }else{?>
+                                                                <button <?=$item['status'] != 1 ? 'disabled' : ''?> data-text="finish" class="btn btn-outline-success lessonBtn">Ավարտել դասը</button>
+                                                            <?php }?>
                                                         </td>
                                                         <td scope="col">
                                                             <?php if($item['status'] == 1){
@@ -112,6 +124,13 @@
                             <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
                                 <option value="<?=$lesson['id']?>"><?=$lesson['lesson_name_am']?></option>
                             <?php }} ?>
+                        </select>
+                        <br>
+                        <span>Դասընթացի տեսակը</span>
+                        <select name="AcGroups[action]" id="" class="form-control">
+                            <option value="">Ընտրել տեսակը</option>
+                            <option value="1">Օնլայն</option>
+                            <option value="0">Օֆլայն</option>
                         </select>
                         <br>
                         <div class="row">

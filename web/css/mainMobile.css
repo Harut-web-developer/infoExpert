@@ -1458,11 +1458,11 @@
     .individualCards {
         margin: 0px auto 29px !important;
         border-radius: 30px;
-        width: 45%;
+        width: 50%;
         height: 276px;
     }
     .cardsimg {
-        height: 127px;
+        height: 130px;
         width: 100%;
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;

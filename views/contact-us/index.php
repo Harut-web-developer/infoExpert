@@ -2,8 +2,10 @@
 <?php
 /** @var yii\web\View $this */
 $this->registerCssFile('@web/css/contactus.css?v=3');
-
 ?>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e243c296-f6a7-46b7-950a-bd42eb4b2684" type="text/javascript"></script>
+<script src="/js/event_reverse_geocode.js" type="text/javascript"></script>
+
 <div class="contactus d-flex justify-content-center">
     <div class="disinline">
         <div class="contactUsTitleM">

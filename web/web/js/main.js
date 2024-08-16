@@ -110,18 +110,36 @@ function editeLesson(id) {
 			}
 		});
 	}
+}function editeVideo(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/video-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
 }
-function addLesson(id) {
+function addLesson(id, text) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/lesson-add?id=" + id,
 			success: function(result) {
                 let res = JSON.parse(result);
-                if(res == 'add'){
-                    alert('Շնորհակալություն, դուք ավելացրեցիք ավարտած դասը:');
-                }else if (res == 'danger'){
-                    alert('Կներեք, դասերը ավարտվել են, դուք չեք կարող ավելացնել:');
-                }
+				if (text == 'start'){
+					if(res == 'add'){
+						alert('Շնորհակալություն, դուք սկսեցիք օնլայն դասը:');
+					}else if (res == 'danger'){
+						alert('Կներեք, դասերը ավարտվել են, դուք չեք կարող ավելացնել:');
+					}
+				}else if (text == 'finish'){
+					if(res == 'add'){
+						alert('Շնորհակալություն, դուք ավարտեցիք դասը:');
+					}else if (res == 'danger'){
+						alert('Կներեք, դասերը ավարտվել են, դուք չեք կարող ավելացնել:');
+					}
+				}
 				window.location.reload();
 			}
 		});
@@ -166,6 +184,28 @@ function editeGroups(id) {
 			url: "/admin/groups-edite?id=" + id,
 			success: function(result) {
 				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
+function changeVideoType(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/video-type?type=" + id,
+			success: function(result) {
+				jQuery(".inputTypeField").html(result);
+			}
+		});
+	}
+}
+function changeVideoTypeUpdate(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/video-update-type?type=" + id,
+			success: function(result) {
+				jQuery(".inputTypeFieldUpdate").html(result);
 			}
 		});
 	}
@@ -333,6 +373,16 @@ function disableLesson(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/lesson-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableVideo(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/video-disable?id=" + id,
 			success: function(result) {
 				window.location.reload();
 			}
@@ -777,9 +827,14 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeLesson(id);
 	});
+	$('body').on('click', '#editeVideo', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeVideo(id);
+	});
     $('body').on('click', '.lessonBtn', function(event) {
 		var id = $(this).closest('tr').attr('data-id');
-		addLesson(id);
+		var text = $(this).attr('data-text');
+		addLesson(id,text);
 	});
     $('body').on('click', '.backLesson', function(event) {
 		var id = $(this).closest('.lessonFieldBtn').attr('data-groups-id');
@@ -853,6 +908,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#disableLesson', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableLesson(id);
+	});
+	$('body').on('click', '#disableVideo', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableVideo(id);
 	});
 	$('body').on('click', '#disableSubscribers', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
@@ -1043,4 +1102,29 @@ jQuery(document).ready(function($) {
 			alert('Խնդրում ենք մուտքագրել գործող էլեկտրոնային հասցե');
 		}
 	});
+	$('body').on('change','#videoType', function () {
+		let type_num = $(this).val();
+		if (type_num == ''){
+			$('.inputTypeField').html('');
+		}else{
+			changeVideoType(type_num)
+		}
+	})
+	$('body').on('change','#videoTypeUpdate', function () {
+		let type_num = $(this).val();
+		if (type_num == ''){
+			$('.inputTypeFieldUpdate').html('');
+		}else{
+			changeVideoTypeUpdate(type_num)
+		}
+	})
+	// $('body').on('click','.coordSubmit',  function () {
+	// 	let coord = $('.coordCompany').val()
+	// 	if(coord != ''){
+	// 		function init() {
+	// 			var myGeocoder = ymaps.geocode(coord);
+	//
+	// 		}
+	// 	}
+	// })
 });

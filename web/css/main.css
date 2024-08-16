@@ -2228,14 +2228,14 @@ input::-webkit-inner-spin-button {
 .cardsimg{
     height: 233px;
     width: 100%;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
+    /*border-top-right-radius: 30px;*/
+    /*border-top-left-radius: 30px;*/
 }
 .cardsimg > img{
     width: 100%;
     height: 100%;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 .cardsText{
     height: 247px;
@@ -2279,7 +2279,7 @@ input::-webkit-inner-spin-button {
     cursor:pointer;
 }
 .cardsInfo{
-    word-break: break-all;
+    word-break: break-word;
     display: -webkit-box;
     font-family: "Roboto_",sans-serif;
     font-weight: 400;
@@ -2288,7 +2288,7 @@ input::-webkit-inner-spin-button {
     width: 100%;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    height:48px;
+    height:51px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: pre-wrap;
@@ -3199,10 +3199,6 @@ input::-webkit-inner-spin-button {
 }
 .carousel-courses .list-courses .item-courses.active-courses{
     z-index: 2;
-}
-.carousel-courses .list-courses .item-courses.other_1-courses,
-.carousel-courses .list-courses .item-courses.other_2-courses{
-    pointer-events: none;
 }
 .carousel-courses .list-courses .item-courses.active-courses .main-content-courses{
     animation: showContent 1s ease-in-out 1 forwards;

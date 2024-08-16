@@ -20,6 +20,7 @@ use app\models\AcRating;
 use app\models\AcReviews;
 use app\models\AcSubscribers;
 use app\models\AcTutors;
+use app\models\AcVideoLessons;
 use app\models\FsOrders;
 use app\models\AcBlog;
 use app\models\Texts;
@@ -384,7 +385,7 @@ class AdminController extends Controller {
             }
             $this->redirect(['groups', 'success' => 'true', 'id' => 'key' . $groups->id]);
         }
-        $groups = AcGroups::find()->select('ac_groups.id as id, ac_lessons.lesson_name_am as lesson_name,groups_name,ac_groups.status as status')
+        $groups = AcGroups::find()->select('ac_groups.id as id, ac_lessons.lesson_name_am as lesson_name,groups_name,ac_groups.status as status, action')
             ->joinWith([
                 'username' => function($query) {
                     $query->select([
@@ -397,7 +398,7 @@ class AdminController extends Controller {
             ->leftJoin('ac_lessons','ac_lessons.id = ac_groups.lesson_id')
             ->asArray()
             ->all();
-        $users = User::find()->select('id,username')->where(['and',['status' => '1'],['role' => null],['groups_id' => null]])->asArray()->all();
+        $users = User::find()->select('id,username')->where(['and',['status' => '1'],['role' => null]])->asArray()->all();
         $lessons = AcLessons::find()->select('id,lesson_name_am')->where(['status' => '1'])->asArray()->all();
         return $this->render('groups',[
             'users' => $users,
@@ -415,7 +416,7 @@ class AdminController extends Controller {
         if ($post && $post['add']) {
             $page = new AcBlog();
             $page->load($post);
-            $page->url = $this->transLateURRL($page->page_title_am);
+            $page->url = $this->transLateURRL($page->page_name_am);
             if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
                 $tmp_name = $_FILES["img"]["tmp_name"];
                 $name = time() . basename($_FILES["img"]["name"]);
@@ -426,9 +427,10 @@ class AdminController extends Controller {
             $this->redirect(['blog', 'success' => 'true', 'id' => 'key' . $page->id]);
         }
         else if ($post && $post['edite']) {
+
             $page = AcBlog::findOne(['id' => intval($post['id']) ]);
             $page->load($post);
-            $page->url = $this->transLateURRL($page->page_title_am);
+            $page->url = $this->transLateURRL($page->page_name_am);
             if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
                 $tmp_name = $_FILES["img"]["tmp_name"];
                 $name = time() . basename($_FILES["img"]["name"]);
@@ -488,6 +490,72 @@ class AdminController extends Controller {
         }
         $lessons = AcLessons::find()->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('lessons', ['lessons' => $lessons]);
+    }
+    public function actionVideoLessons(){
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        date_default_timezone_set("Asia/Yerevan");
+        $id = intval($this->request->get('id'));
+        $post = Yii::$app->request->post();
+        if ($post && $post['add']) {
+            $video_lesson = new AcVideoLessons();
+            $video_lesson->load($post);
+            if ($post['AcVideoLessons']['type'] == 0){
+                $video_lesson->video = $post['AcVideoLessons']['video'];
+            }else{
+                if (!empty($_FILES['video']) && $_FILES["video"]["name"]) {
+                    $tmp_name = $_FILES["video"]["tmp_name"];
+                    $name = time() . basename($_FILES["video"]["name"]);
+                    move_uploaded_file($tmp_name, "web/video_uploads/$name");
+                    $video_lesson->video = "web/video_uploads/$name";
+                }
+            }
+            $video_lesson->create_date = date('Y-m-d H:i:s');
+            $video_lesson->save(false);
+            $this->redirect('video-lessons?id='.$id.'&success=true');
+        }
+        else if ($post && $post['edite']) {
+            $video_lesson = AcVideoLessons::findOne(['id' => intval($post['id']) ]);
+            $video_lesson->load($post);
+            if ($post['AcVideoLessons']['type'] == 0){
+                $video_lesson->video = $post['AcVideoLessons']['video'];
+            }else{
+                if (!empty($_FILES['video']) && $_FILES["video"]["name"]) {
+                    $tmp_name = $_FILES["video"]["tmp_name"];
+                    $name = time() . basename($_FILES["video"]["name"]);
+                    move_uploaded_file($tmp_name, "web/video_uploads/$name");
+                    $video_lesson->video = "web/video_uploads/$name";
+                }
+            }
+            $video_lesson->create_date = date('Y-m-d H:i:s');
+            $video_lesson->save(false);
+            $this->redirect('video-lessons?id='.$id.'&success=true');
+        }
+        $video = AcVideoLessons::find()->where(['lesson_id' => $id])->all();
+        $lesson_number = AcLessons::findOne($id);
+        return $this->render('video-lesson',[
+            'video' => $video,
+            'lesson_number' => $lesson_number
+        ]);
+    }
+    public function actionVideoType(){
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $type = intval($_GET['type']);
+        return $this->renderAjax('input-type',[
+            'type' => $type
+        ]);
+    }
+    public function actionVideoUpdateType(){
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $type = intval($_GET['type']);
+        return $this->renderAjax('input-type',[
+            'type' => $type
+        ]);
     }
     public function actionSubscribers(){
         // Harut
@@ -895,6 +963,15 @@ class AdminController extends Controller {
         $lesson = AcLessons::findOne(['id' => $id]);
         return $this->renderAjax('lesson-edite-popup', ['lesson' => $lesson]);
     }
+    public function actionVideoEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $video = AcVideoLessons::findOne(['id' => $id]);
+        $lesson_number = AcLessons::findOne($video->lesson_id);
+        return $this->renderAjax('video-edite-popup', ['video' => $video,'lesson_number' => $lesson_number]);
+    }
 
     public function actionInfoEdite() {
         if (Yii::$app->user->isGuest) {
@@ -1106,6 +1183,19 @@ class AdminController extends Controller {
     public function actionLessonDisable() {
         $id = intval($_GET['id']);
         $lesson = AcLessons::findOne(['id' => $id]);
+        if ($lesson->status) {
+            $lesson->status = 0;
+        }
+        else {
+            $lesson->status = 1;
+        }
+
+        $lesson->save(false);
+        return true;
+    }
+    public function actionVideoDisable() {
+        $id = intval($_GET['id']);
+        $lesson = AcVideoLessons::findOne(['id' => $id]);
         if ($lesson->status) {
             $lesson->status = 0;
         }
@@ -1420,6 +1510,8 @@ class AdminController extends Controller {
         $rdata = str_replace('+', '_', $rdata);    $rdata = str_replace('"', '_', $rdata);
         $rdata = str_replace("'", '_', $rdata);    $rdata = str_replace('՞', '', $rdata);
         $rdata = str_replace(':', '', $rdata);    $rdata = str_replace('.', '', $rdata);
+        $rdata = str_replace('․', '', $rdata);
+
         $cyr = [
             'ա','բ','վ','գ','դ','ե','ժ','զ','ի','յ','կ','լ','մ','ն','օ','պ',
             'ռ','ս','տ','ու','փ','խ','ց','չ','շ','է','ը','ո','ր','և','ք','ջ','ծ','ղ','հ','ճ','թ','ֆ','ձ','ւ',

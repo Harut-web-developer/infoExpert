@@ -22,6 +22,23 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             </div>
         </div>
     </div>
+    <div class="divBottom iframeField">
+        <div class="posLeft">
+            <div class="videoField">
+                <span>asgdsfgdsfgdsgfsdfg</span>
+                <iframe src="/web/video_uploads/17237173695848370-hd_1920_1080_24fps.mp4" frameborder="0"></iframe>
+            </div>
+            <div class="lessonsNumberField">
+                <?php if (!empty($lesson_count)){
+                    for ($i = 1; $i <= $lesson_count['lesson_count']; $i++){?>
+                        <span data-number="<?=$i?>" class="lessNumField clickVideoLesson">
+                            <img src="/images/Ellipse2.png" alt="">
+                            <span class="lesNum"><?=$i?></span>
+                        </span>
+                <?php }} ?>
+            </div>
+        </div>
+    </div>
     <div class="topDivFlex">
         <div class="infotxt">
             <?php if (!empty($lesson['certificate_img'])){?>

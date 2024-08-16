@@ -638,6 +638,10 @@ $(document).ready(function (e) {
         })
     }
 })
+    $('body').on('click', '.clickVideoLesson',function () {
+        let num = $(this).data('num')
+        alert(num);
+    })
     // Harut ev Mariam
     $('body').on('click', '.addMyCard', function () {
         let lesson_id = $(this).data('id');

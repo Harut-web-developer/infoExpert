@@ -10,6 +10,7 @@ use Yii;
  * @property int $id
  * @property int|null $lesson_id
  * @property int|null $lesson_count
+ * @property int|null $action
  * @property string|null $groups_name
  * @property int|null $order_num
  * @property string|null $status
@@ -31,7 +32,7 @@ class AcGroups extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['lesson_id', 'lesson_count', 'order_num'], 'integer'],
+            [['lesson_id', 'lesson_count', 'order_num','action'], 'integer'],
             [['create_date'], 'safe'],
             [['groups_name', 'status'], 'string', 'max' => 255],
         ];

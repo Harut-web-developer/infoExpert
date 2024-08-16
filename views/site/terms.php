@@ -19,11 +19,128 @@ $this->registerCssFile('@web/css/terms.css?v=1');
                 <img src="/images/termsimg.png" alt="">
             </div>
             <div class="textField">
-                Lorem ipsum dolor sit amet consectetur. Ipsum ultrices enim integer mi egestas aliquet elit. Maecenas commodo risus faucibus felis. Adipiscing tincidunt arcu dui nisi tortor. Mauris fermentum nisl morbi a aliquam ullamcorper. Vulputate fringilla at mauris dictum luctus eget ornare donec eleifend. Vestibulum vulputate adipiscing sed nibh tempus sed dictum. Pulvinar augue justo diam velit enim. Elementum a erat morbi quis sit tincidunt.
-                Ut mattis proin vulputate est. Lobortis arcu cursus enim in aliquam quis urna turpis. Dolor leo orci elementum arcu. Elementum viverra gravida lorem netus quis morbi tellus nulla. Rhoncus nunc eu mi bibendum nunc facilisi gravida volutpat cursus. Volutpat hendrerit consectetur ipsum elementum congue amet tortor nam nulla. Quam cursus amet gravida pharetra. In tellus nisl morbi porta rhoncus convallis interdum. Sagittis quam amet et euismod vestibulum amet elit nisl quam. Ultricies ipsum scelerisque massa tellus ut lectus nunc at arcu. At cursus eget lectus quam neque.
-                Ullamcorper enim volutpat commodo vulputate donec arcu. Sit egestas porta tempus pellentesque ullamcorper tortor et nam. Id odio leo molestie in amet cras cursus mattis dictum. Neque eget magna dictum sed et malesuada malesuada non. Volutpat et est nulla posuere convallis mi. Nulla tincidunt eget pretium lectus quis. Elementum tellus at id proin. Turpis ornare quisque est dui egestas dui. Eu pretium turpis nec sed dictum mauris consequat egestas. Ut id egestas metus ut diam sollicitudin. Nulla bibendum facilisis in facilisi nulla id a eu. Nibh consectetur nulla amet maecenas neque augue lobortis ac nec. At vel duis blandit nullam fames urna metus consectetur. Ut ligula integer nisi gravida. Pellentesque amet euismod quis nullam facilisis turpis at.
-                Purus dictum semper ac cursus ultrices quam eleifend sit. Euismod dis id ac vestibulum quisque ultricies sed. Sed scelerisque imperdiet eget facilisis integer. Pellentesque viverra nibh pulvinar habitant. In elementum eu tempor ut tristique. Dolor sit suspendisse blandit auctor.
-                Bibendum facilisi vitae dictum urna suspendisse diam netus arcu rhoncus. Sed adipiscing nibh ac quam odio fringilla facilisi. At quam dictum malesuada tellus amet pharetra. Quis netus diam euismod fames commodo faucibus consectetur donec nisl. Iaculis urna in neque posuere. Nascetur urna nam eget eu risus tempus turpis. Volutpat cras duis augue fringilla purus a adipiscing vel porttitor. Sagittis blandit facilisis egestas phasellus leo ultrices. Quis sed sem a integer eget risus molestie bibendum eleifend. Sit nec in leo eu at nullam in viverra nam. Venenatis sed aenean nisi aenean. Lectus sapien eget quisque dui sit at ridiculus.
+                <p>Fwd: vPos -ի պահանջներ</p>
+                <ul>
+                    <li>
+                        Ապրանքի/ծառայության դիմաց վճարման,
+                        հետ վերադարձի և պատվերը չեղարկելու
+                        մանրամասն պայմաններ
+                    </li>
+                </ul>
+                <p>
+                    Վճարում իրականացվելու է այն դեպքում,
+                    երբ պոտենցիալ մասնակիցը ցանկություն
+                    կունենա գնելու դասընթացը օնլայն՝ կայքի
+                    միջոցով։
+                    Պատվերը չեղարկելու դեպքում
+                    ընկերությունը որևէ
+                    գումար/միջնորդավճար չի գանձելու հետ
+                    վերադարձի ժամանակ, եթե դա տեղի կունենա
+                    պատվերը հաստատելուց անմիջապես հետո։
+                    Մնացած բոլոր դեպքերում գումարի հետ
+                    վերադարձը կլինի մասնակցած
+                    դասընթացների քանակի հաշվարկով։
+                </p>
+                <ul>
+                    <li>
+                        Կազմակերպության մասին
+                        տեղեկատվություն՝ պետ․ ռեգիստրում
+                        գրանցված անվանում, հասցե, ՀՎՀՀ
+                    </li>
+                </ul>
+                <p>«ՇՈՂԵՐՍՈՖԹ» ՍՊԸ, ՀՎՀՀ 00650087, Վիկտոր
+                    Համբարձումյան փ․ / 113 / 6 բն․, Արաբկիր 0033,
+                    Երևան, Հայաստան
+                    Տնօրեն՝ Շողիկ Հարությունյան</p>
+                <ul>
+                    <li>
+                        Կայքի/Հավելվածի հիմնական
+                        գործունեությունը, վաճառքի պայմանները
+                        նկարագրող հատված
+                    </li>
+                </ul>
+                <p>Սույն կայքը՝ www.infoexpertacademy.am ունի
+                    կրթական և ինֆորմացիոն բնույթ:
+                    Կայքը եռալեզու է (հայերեն, անգլերեն,
+                    ռուսերեն), առկա է մանրամասն
+                    տեղեկատվություն iNFOEXPERT ACADEMY-ի կողմից
+                    իրականացվող դասընթացների և
+                    դասընթացավարների վերաբերյալ։
+                    Կայքում յուրաքանչյուր օգտատեր կունենա
+                    իր «Անձնական էջը», որը կստեղծի մի քանի
+                    տվյալներ լրացնելուց հետո։
+                    Կայքի միջոցով վաճառքի գործընթացը
+                    սկսվում է, երբ պոտենցիալ
+                    թեկանծուն/դասընթացի մասնակիցը
+                    ցանկություն է ունենում օնլայն կատարել
+                    դասընթացի գնում։</p>
+                <ul>
+                    <li>
+                        Քարտապանի մասին ինֆորմացիայի
+                        գաղտնիության քաղաքականություն
+                    </li>
+                </ul>
+                <p>iNFOEXPERT ACADEMY-ին կարևորում է յուրաքանչյուր
+                    օգտատիրոջ անձնական և քարտային
+                    տվյալների գաղտնիության պահպանումը։
+                    Օգտատերը (Քարտապանը) կարող է տրամադրել
+                    անձնական տվյալները միայն սեփական
+                    կամքով և ցանկությամբ՝ իր անձնական էջը
+                    լրացնելու ժամանակ, ակադեմիայի
+                    նորություններին բաժանորդագրվելիս,
+                    կայքի հետադարձ արագ կապի ծառայության
+                    (չատի) միջոցով iNFOEXPERT ACADEMY-ի հետ
+                    հաղորդակցվելիս, իսկ քարտի վերաբերյալ
+                    տվյալները տրամադրում է միայն դասընթաց
+                    գնելիս։
+                    Կայքում առկա է «Գաղտնիության
+                    քաղաքականություն» բաժին և որևէ
+                    օգտատիրոջ իրավունք չի կարող խախտվել
+                    կամ նրա մասին տեղեկատվությունը
+                    հանրայնացվել՝ առանց նրա կամքի,
+                    ցանկության և համաձայնության։</p>
+                <ul>
+                    <li>
+                        Վճարային համակարգի լոգոներ
+                    </li>
+                </ul>
+                <p>Լոգոները կից են։</p>
+                <ul>
+                    <li>
+                        Պրոդուկտների և գների հստակ
+                        ձևակերպում
+                    </li>
+                </ul>
+                <p>iNFOEXPERT ACADEMY-ն առաջարկում է դասընթացներ
+                    թե՛ սկսնակ, և թե՛ փորձառու մասնագետների
+                    համար՝ հետևյալ թեմաներով՝</p>
+                <ul>
+                    <li>
+                        1С: Հաշվապահություն 8.3
+                    </li>
+                    <li>
+                        1С: Աշխատավարձ և կադրերի կառավարում
+                    </li>
+                    <li>
+                        1С: Առևտրի կառավարում
+                    </li>
+                    <li>
+                        Մարքեթինգ, վաճառք և CRM/Bitrix24
+                    </li>
+                </ul>
+                <p>Դասընթացները կարող են անցկացվել
+                    օնլայն, օֆֆլայն և հիբրիդ
+                    տարբերակներով։
+                    Դասընթացները կարող են ընթանալ ինչպես
+                    անհատական, այնպես էլ՝ թիմային։</p>
+                <p>
+                    Բոլոր վերոնշյալ դասընթացներն ունեն
+                    ֆիքսված արժեք՝
+                </p>
+                <ul>
+                    <li>85․000 ՀՀԴ թիմային դասընթացների համար</li>
+                    <li>150․000 ՀՀԴ անհատական դասընթացների</li>
+                </ul>
             </div>
         </div>
     </div>

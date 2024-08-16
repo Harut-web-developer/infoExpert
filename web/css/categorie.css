@@ -80,15 +80,21 @@
     width: 95%;
     padding-top: 30px;
     padding-bottom: 30px;
-}
-.categorieText p{
-    font-family: "Roboto_",sans-serif;
+    color: #1C5484;
+    font-family: "Roboto_", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
     text-align: left;
-    color: #1C5484;
 }
+/*.categorieText p{*/
+/*    font-family: "Roboto_",sans-serif;*/
+/*    font-size: 18px;*/
+/*    font-weight: 400;*/
+/*    line-height: 27px;*/
+/*    text-align: left;*/
+/*    color: #1C5484;*/
+/*}*/
 .categorieTitleDivRight{
     width: max-content;
     height: 24px;
@@ -252,6 +258,9 @@ ion-icon {
     }
     .categorieText{
         width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
     }
     .categorieText p{
         font-family: 'Roboto_',sans-serif;
