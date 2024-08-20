@@ -72,6 +72,13 @@ class BlogController extends \yii\web\Controller
             ->orderBy(['order_num' => SORT_ASC])
             ->asArray()
             ->all();
+        $page_keywords = AcBlog::find()->select('page_keywords_'.$language.' as page_keywords')->where(['status' => '1'])->asArray()->all();
+        $meta_content = [];
+        foreach ($page_keywords as $page_keyword) {
+            array_push($meta_content,$page_keyword['page_keywords']);
+        }
+        $implode_meta = implode(',', $meta_content);
+        \Yii::$app->view->registerMetaTag(['name' => 'keywords', 'content' => $implode_meta]);
         return $this->render('index', [
             'blogs' => $blogs,
             'blogsMobile' => $blogsMobile,

@@ -49,6 +49,7 @@ class LessonsController extends \yii\web\Controller
     }
     public function actionLesson()
     {
+
         $lesson_url = $_GET['url'];
         $language = $_COOKIE['language'];
         $user_id = Yii::$app->user->identity->id;
@@ -86,12 +87,13 @@ class LessonsController extends \yii\web\Controller
         foreach ($lesson_keywords as $lesson_keyword) {
             array_push($meta_content,$lesson_keyword['lesson_keywords']);
         }
+        $implode_meta = implode(',', $meta_content);
+        \Yii::$app->view->registerMetaTag(['name' => 'keywords', 'content' => $implode_meta]);
         return $this->render('lesson',[
             'lesson' => $lesson,
             'tutors' => $tutors,
             'lesson_count' => $lesson_count,
             'change_video' => $change_video,
-            'meta_content' => $meta_content
         ]);
     }
     public function actionChangeVideo(){
