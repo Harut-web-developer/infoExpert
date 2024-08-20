@@ -589,8 +589,9 @@ class SiteController extends Controller
 
     }
     public function actionTermsAndConditions(){
-// Harut
-        return $this->render('terms');
+        $language = $_COOKIE['language'];
+        $lesson = AcLessons::find()->select('id,lesson_name_'.$language.' as lesson_name,')->where(['status' => '1'])->asArray()->all();
+        return $this->render('terms',['lesson' => $lesson]);
     }
     public function actionPolicy(){
         // Mariam

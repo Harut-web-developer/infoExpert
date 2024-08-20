@@ -90,67 +90,6 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
         </div>
     </div>
 </div>
-<!--<div class="sectionThree sliderWrapper">-->
-<!--    <div class="sliderCourses">-->
-<!--        <div class="slider">-->
-<!--            --><?php
-//            if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
-<!--                <div class="learn slide">-->
-<!--                    <div class="learnInfo">-->
-<!--                        <div class="coursesBg">-->
-<!--                            <span>--><?php //=$GLOBALS['text']['sectionThreeCourses']?><!--</span>-->
-<!--                            <p>--><?php //=$GLOBALS['text']['sectionThreeLearn']?><!--</p>-->
-<!--                        </div>-->
-<!--                        <div class="logoManagement">-->
-<!--                            <div class="courseLogo">-->
-<!--                                <img src="/images/logomanagcourse.png" alt="">-->
-<!--                            </div>-->
-<!--                            <div class="courseTitle">-->
-<!--                                <span>--><?php //=$lesson['lesson_name']?><!--</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="managementBtn">-->
-<!--                            <a href="/courses/index">-->
-<!--                                <img src="/images/logomanag.png" alt="">-->
-<!--                                <span>--><?php //=$GLOBALS['text']['sectionThreeBtn']?><!--</span>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="learnImg">-->
-<!--                        <img src="/--><?php //=$lesson['img']?><!--" alt="">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            --><?php //}}?>
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="sliderCoursesMobile">-->
-<!--        <div class="slider">-->
-<!--            --><?php //if (!empty($lessons_courses)){foreach ($lessons_courses as $lesson){?>
-<!--                <div class="learnMobile slide">-->
-<!--                    <img src="/--><?php //=$lesson['img']?><!--" alt="">-->
-<!--                    <div class="coursesBg">-->
-<!--                        <span>--><?php //=$GLOBALS['text']['sectionThreeCourses']?><!--</span>-->
-<!--                        <p>--><?php //=$GLOBALS['text']['sectionThreeLearn']?><!--</p>-->
-<!--                    </div>-->
-<!--                    <div class="logoManagement">-->
-<!--                        <div class="courseLogo">-->
-<!--                            <img src="/images/logomanagcourse.png" alt="">-->
-<!--                        </div>-->
-<!--                        <div class="courseTitle">-->
-<!--                            <span>--><?php //=$lesson['lesson_name']?><!--</span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <a href="/courses/index">-->
-<!--                        <img src="/images/logomanag.png" alt="">-->
-<!--                        <span>--><?php //=$GLOBALS['text']['sectionThreeBtn']?><!--</span>-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            --><?php //}}?>
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--Mariam-->
 <div class="carousel-courses next-courses">
     <div class="list-courses" >
         <?php

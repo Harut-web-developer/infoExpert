@@ -15,7 +15,6 @@ use yii\web\UrlManager;
 use \app\models\AcLessons;
 use \app\models\AcInfo;
 use Yii;
-
 AppAsset::register($this);
 $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');

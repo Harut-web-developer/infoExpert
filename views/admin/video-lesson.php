@@ -1,5 +1,5 @@
 <!-- Harut-->
-<input type="hidden" data-page='AcLessons' id="page">
+<input type="hidden" data-page='AcVideoLessons' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
         Հաջողությամբ պահպանվեց
@@ -102,9 +102,10 @@
                         <span>Հերթական դասը</span>
                         <select class="form-control" name="AcVideoLessons[lesson_number]" required>
                             <option value="">Ընտրել...</option>
-                            <?php for ($i = 1; $i <= $lesson_number->lessons_count; $i++){?>
-                                <option value="<?=$i?>">դաս № <?=$i?></option>
-                            <?php } ?>
+                            <?php for ($i = 1; $i <= $lesson_number->lessons_count; $i++){
+                                if (!in_array($i,$new_number)){?>
+                                    <option value="<?=$i?>">դաս № <?=$i?></option>
+                                <?php }} ?>
                         </select>
                         <br>
                         <span>Վիդեոյի տեսակը</span>

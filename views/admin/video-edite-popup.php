@@ -15,8 +15,12 @@
                     <span>Հերթական դասը</span>
                     <select class="form-control" name="AcVideoLessons[lesson_number]" required>
                         <option <?=$video->lesson_number == '' ? 'selected' : ''?> value="">Ընտրել...</option>
-                        <?php for ($i = 1; $i <= $lesson_number->lessons_count; $i++){?>
-                            <option <?=$video->lesson_number == $i ? 'selected' : ''?> value="<?=$i?>">դաս № <?=$i?></option>
+                        <?php for ($i = 1; $i <= $lesson_number->lessons_count; $i++){
+                            if (!in_array($i,$new_number)){?>
+                                <option <?=$video->lesson_number == $i ? 'selected' : ''?> value="<?=$i?>">դաս № <?=$i?></option>
+                            <?php }else{?>
+                                <option disabled <?=$video->lesson_number == $i ? 'selected' : ''?> value="<?=$i?>">դաս № <?=$i?></option>
+                            <?php } ?>
                         <?php } ?>
                     </select>
                     <br>

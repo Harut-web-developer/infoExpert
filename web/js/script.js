@@ -639,8 +639,33 @@ $(document).ready(function (e) {
     }
 })
     $('body').on('click', '.clickVideoLesson',function () {
-        let num = $(this).data('num')
-        alert(num);
+        let num = $(this).data('number');
+        let lesson = $(this).data('lesson');
+        let csrfToken = $('meta[name="csrf-token"]').attr("content");
+        $.ajax({
+            url: '/lessons/change-video',
+            method: 'get',
+            datatype: 'json',
+            data: {
+                num: num,
+                lesson: lesson,
+                _csrf: csrfToken
+            },
+            success: function (data) {
+                if (data == false){
+                    $('.popup-wrap-logged-video').css('display', 'flex');
+                    $('.popup-box-logged-video').css('display', 'flex');
+                    $('body').on('click', '.close-logged', function () {
+                        $('.popup-wrap-logged-video').fadeOut(500, function() {
+                            location.reload();
+                        });
+                    });
+                }else{
+                    $('.videoField').html('');
+                    $('.videoField').html(data);
+                }
+            }
+        })
     })
     // Harut ev Mariam
     $('body').on('click', '.addMyCard', function () {

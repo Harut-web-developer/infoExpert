@@ -2,7 +2,7 @@
 
 .personelManagement{
     width: 100%;
-    background-image: url("../images/background-personnel-managment.png");
+    background-image: url("../images/applyOneBg.png");
     background-repeat: no-repeat;
     padding-top: 198px;
     padding-bottom: 80px;
@@ -18,7 +18,7 @@
 .iframeField{
     display: flex;
     justify-content: start;
-    margin: 50px auto !important;
+    margin: 50px auto 0px !important;
     padding-bottom: 0px !important;
 }
 .posLeft{
@@ -50,13 +50,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 10px;
 }
 .lessNumField{
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     margin: 5px;
+    background: transparent;
 }
 .lesNum{
     color: white;
@@ -93,7 +96,7 @@
 }
 .topDivFlex{
     width: 83.8%;
-    margin: 40px 0 0 auto;
+    margin: 10px 0 0 auto;
 }
 .bottomDiv{
     width: 100%;

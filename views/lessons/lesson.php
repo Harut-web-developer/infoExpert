@@ -22,23 +22,27 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
             </div>
         </div>
     </div>
-    <div class="divBottom iframeField">
-        <div class="posLeft">
-            <div class="videoField">
-                <span>asgdsfgdsfgdsgfsdfg</span>
-                <iframe src="/web/video_uploads/17237173695848370-hd_1920_1080_24fps.mp4" frameborder="0"></iframe>
-            </div>
-            <div class="lessonsNumberField">
-                <?php if (!empty($lesson_count)){
-                    for ($i = 1; $i <= $lesson_count['lesson_count']; $i++){?>
-                        <span data-number="<?=$i?>" class="lessNumField clickVideoLesson">
-                            <img src="/images/Ellipse2.png" alt="">
-                            <span class="lesNum"><?=$i?></span>
-                        </span>
-                <?php }} ?>
+    <?php
+    if (isset(Yii::$app->user->identity->id) && Yii::$app->user->identity->role == null){
+    if ($lesson_count['lesson_count'] != 0 && !empty($change_video)){?>
+        <div class="divBottom iframeField">
+            <div class="posLeft">
+                <div class="videoField">
+                    <span><?=$change_video['name']?></span>
+                    <iframe src="<?=$change_video['type'] == 1 ? '/' : ''?><?=$change_video['video']?>" frameborder="0"></iframe>
+                </div>
+                <div class="lessonsNumberField">
+                    <?php if (!empty($lesson_count)){
+                        for ($i = 1; $i <= $lesson_count['lesson_count']; $i++){?>
+                            <button data-lesson="<?=$lesson['id']?>" data-number="<?=$i?>" class="lessNumField clickVideoLesson">
+                                <img src="/images/Ellipse2.png" alt="">
+                                <span class="lesNum"><?=$i?></span>
+                            </button>
+                        <?php }} ?>
+                </div>
             </div>
         </div>
-    </div>
+    <?php  }} ?>
     <div class="topDivFlex">
         <div class="infotxt">
             <?php if (!empty($lesson['certificate_img'])){?>
@@ -106,6 +110,14 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                     <span class="button2"><?=$GLOBALS['text']['seeAllCoursesBtn']?></span>
                 </a>
             </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrap-logged-video">
+    <div class="popup-box-logged-video">
+        <div class="logged-content-video">
+            <span class="logged-txt"><?=$GLOBALS['text']['videoLessonsText']?></span>
+            <span class="close-btn popup-close close-logged">x</span>
         </div>
     </div>
 </div>

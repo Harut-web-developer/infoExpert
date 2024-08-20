@@ -396,6 +396,7 @@ class AdminController extends Controller {
                 }
             ])
             ->leftJoin('ac_lessons','ac_lessons.id = ac_groups.lesson_id')
+            ->orderBy(['ac_groups.order_num' => SORT_ASC])
             ->asArray()
             ->all();
         $users = User::find()->select('id,username')->where(['and',['status' => '1'],['role' => null]])->asArray()->all();
@@ -502,7 +503,15 @@ class AdminController extends Controller {
             $video_lesson = new AcVideoLessons();
             $video_lesson->load($post);
             if ($post['AcVideoLessons']['type'] == 0){
-                $video_lesson->video = $post['AcVideoLessons']['video'];
+                preg_match('/(?:youtube\.com\/(?:watch\?v=|embed\/|live\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/',  $video_lesson->video, $matches);
+                $videoId = $matches[1];
+                $queryString = parse_url($video_lesson->video, PHP_URL_QUERY);
+                parse_str($queryString, $queryParams);
+                $embedUrl = "https://www.youtube.com/embed/" . $videoId;
+                if (!empty($queryParams)) {
+                    $embedUrl .= '?' . http_build_query($queryParams);
+                }
+                $video_lesson->video = $embedUrl;
             }else{
                 if (!empty($_FILES['video']) && $_FILES["video"]["name"]) {
                     $tmp_name = $_FILES["video"]["tmp_name"];
@@ -519,7 +528,15 @@ class AdminController extends Controller {
             $video_lesson = AcVideoLessons::findOne(['id' => intval($post['id']) ]);
             $video_lesson->load($post);
             if ($post['AcVideoLessons']['type'] == 0){
-                $video_lesson->video = $post['AcVideoLessons']['video'];
+                preg_match('/(?:youtube\.com\/(?:watch\?v=|embed\/|live\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/',  $video_lesson->video, $matches);
+                $videoId = $matches[1];
+                $queryString = parse_url($video_lesson->video, PHP_URL_QUERY);
+                parse_str($queryString, $queryParams);
+                $embedUrl = "https://www.youtube.com/embed/" . $videoId;
+                if (!empty($queryParams)) {
+                    $embedUrl .= '?' . http_build_query($queryParams);
+                }
+                $video_lesson->video = $embedUrl;
             }else{
                 if (!empty($_FILES['video']) && $_FILES["video"]["name"]) {
                     $tmp_name = $_FILES["video"]["tmp_name"];
@@ -532,11 +549,21 @@ class AdminController extends Controller {
             $video_lesson->save(false);
             $this->redirect('video-lessons?id='.$id.'&success=true');
         }
-        $video = AcVideoLessons::find()->where(['lesson_id' => $id])->all();
+        $video = AcVideoLessons::find()->where(['lesson_id' => $id])
+            ->orderBy(['order_num' => SORT_ASC])
+            ->all();
         $lesson_number = AcLessons::findOne($id);
+        $number_video = AcVideoLessons::find()->select('lesson_number')->where(['and',['status' => '1'],['lesson_id' => $id]])
+            ->asArray()
+            ->all();
+        $new_number = [];
+        for ($k = 0; $k < count($number_video); $k++){
+            array_push($new_number,$number_video[$k]['lesson_number']);
+        }
         return $this->render('video-lesson',[
             'video' => $video,
-            'lesson_number' => $lesson_number
+            'lesson_number' => $lesson_number,
+            'new_number' => $new_number,
         ]);
     }
     public function actionVideoType(){
@@ -970,7 +997,12 @@ class AdminController extends Controller {
         $id = intval($_GET['id']);
         $video = AcVideoLessons::findOne(['id' => $id]);
         $lesson_number = AcLessons::findOne($video->lesson_id);
-        return $this->renderAjax('video-edite-popup', ['video' => $video,'lesson_number' => $lesson_number]);
+        $number_video = AcVideoLessons::find()->select('lesson_number')->where(['and',['status' => '1'],['lesson_id' => $video->lesson_id]])->asArray()->all();
+        $new_number = [];
+        for ($k = 0; $k < count($number_video); $k++){
+            array_push($new_number,$number_video[$k]['lesson_number']);
+        }
+        return $this->renderAjax('video-edite-popup', ['video' => $video,'lesson_number' => $lesson_number, 'new_number' => $new_number]);
     }
 
     public function actionInfoEdite() {

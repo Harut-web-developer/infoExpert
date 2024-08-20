@@ -27,4 +27,25 @@ $(document).ready(function(){
             window.location.href = '/my-card/congratulation';
         })
     })
+    $('#checkoutCardNumber').on('input', function() {
+        let input = $(this).val().replace(/\s+/g, '').replace(/[^0-9]/g, '');
+        let formattedInput = input.replace(/(\d{4})(?=\d)/g, '$1 ');
+        $(this).val(formattedInput);
+    });
+    $('#checkoutCardDate').on('input', function() {
+        let value = $(this).val().replace(/[^0-9]/g, ''); // Remove non-numeric characters
+
+        // If the length is greater than or equal to 2, format it with a slash
+        if (value.length > 2) {
+            value = value.slice(0, 2) + '/' + value.slice(2, 4);
+        }
+
+        // Handle the case where the length is less than or equal to 2
+        else {
+            // No need for slash if fewer than 2 digits
+            value = value.slice(0, 2);
+        }
+
+        $(this).val(value);
+    });
 })

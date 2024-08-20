@@ -109,7 +109,7 @@
                         </div>
                         <span>Գին</span>
                         <input type="number" name="AcLessons[price]" required placeholder="Գին" class="form-control">
-                        <span>Դասընթացի քանակ</span>
+                        <span>Դասընթացի քանակ (առանց քննության)</span>
                         <input type="number" name="AcLessons[lessons_count]" required  placeholder="Դասընթացի քանակ" class="form-control">
                         <div class="custom-tab">
                             <nav>
