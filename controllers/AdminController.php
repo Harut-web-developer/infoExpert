@@ -11,6 +11,8 @@ use app\models\AcGroups;
 use app\models\AcInfo;
 use app\models\AcLessons;
 use app\models\AcMyLessons;
+use app\models\AcOrders;
+use app\models\AcOrdersItems;
 use app\models\AcPartners;
 use app\models\AcQuestionAnswers;
 use app\models\AcQuestionList;
@@ -705,6 +707,29 @@ class AdminController extends Controller {
         $have_questions = AcHaveQuestions::find()->with(['adminName'])->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('have-questions', ['have_questions' => $have_questions]);
     }
+    public function actionOrders(){
+        date_default_timezone_set("Asia/Yerevan");
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $post = Yii::$app->request->post();
+        $orders = AcOrders::find()->with('username')->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('orders',[
+            'orders' => $orders
+        ]);
+    }
+    public function actionOrderItems(){
+        date_default_timezone_set("Asia/Yerevan");
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($this->request->get('id'));
+        $post = Yii::$app->request->post();
+        $order_items = AcOrdersItems::find()->with('lesson')->where(['order_id' => $id])->orderBy(['order_num' => SORT_ASC])->all();
+        return $this->render('order-items',[
+            'order_items' => $order_items
+        ]);
+    }
 
     public function actionCertificate(){
         // Harut
@@ -1040,6 +1065,16 @@ class AdminController extends Controller {
         $alumni = AcAlumni::findOne(['id' => $id]);
         return $this->renderAjax('alumni-edite-popup', ['alumni' => $alumni]);
     }
+    public function actionOrdersEdite() {
+        // Harut
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $orders = AcOrders::findOne(['id' => $id]);
+        $users = User::find()->select('id, username')->where(['and'])
+        return $this->renderAjax('orders-edite-popup', ['orders' => $orders]);
+    }
     public function actionGroupsEdite() {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
@@ -1278,6 +1313,20 @@ class AdminController extends Controller {
         }
 
         $tutors->save(false);
+        return true;
+    }
+    public function actionOrdersDisable() {
+        // Harut
+        $id = intval($_GET['id']);
+        $orders = AcOrders::findOne(['id' => $id]);
+        if ($orders->status) {
+            $orders->status = 0;
+        }
+        else {
+            $orders->status = 1;
+        }
+
+        $orders->save(false);
         return true;
     }
     public function actionGroupsDisable() {

@@ -33,6 +33,7 @@ if ($language == 'en') {
         <div class="userProfileMenuField">
             <span><?=$GLOBALS['text']['wishlistTitle']?></span>
             <ul class="userProfileMenu">
+                <li><a href="/my-card/payments"><?=$GLOBALS['text']['paymentPage']?></a></li>
                 <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                 <li><a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a></li>
                 <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
@@ -169,7 +170,7 @@ if ($language == 'en') {
                                                     <img src="/images/calendarimg.png" alt="">
                                                     <div class="articleDate_"><?=$wishlist_blog['create_date']?></div>
                                                 </div>
-                                                <div class="cardsInfo_"><?=$wishlist_blog['page_title']?></div>
+                                                <div class="cardsInfo_"><?=$wishlist_blog['page_content']?></div>
                                             </div>
                                             <div class="cardsLike_">
                                                 <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$wishlist_blog['blog_id']]) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>

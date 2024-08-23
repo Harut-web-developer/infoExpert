@@ -1015,8 +1015,14 @@ input::-webkit-inner-spin-button {
     .userProfileMenu,
     .usersProfileRu .userProfileMenu,
     .usersProfileAm .userProfileMenu{
-        width: 375px;
+        /*width: 375px;*/
+        width: max-content;
         height: 16px;
+    }
+    .usersProfileEn .userProfileMenu > li,
+    .usersProfileRu .userProfileMenu > li,
+    .usersProfileAm .userProfileMenu > li{
+        margin: 0px 10px;
     }
     .userProfileMenuField {
         height: 29px;
@@ -1349,6 +1355,11 @@ input::-webkit-inner-spin-button {
     }
     .usersProfileEn .userProfileMenu, .userProfileMenu, .usersProfileRu .userProfileMenu {
         width: 350px;
+    }
+    .usersProfileEn .userProfileMenu > li,
+    .usersProfileRu .userProfileMenu > li,
+    .usersProfileAm .userProfileMenu > li{
+        margin: 0px 4px;
     }
 }
 @media screen and (max-width: 680px) {

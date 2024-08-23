@@ -24,19 +24,22 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
     </div>
     <?php
     if (isset(Yii::$app->user->identity->id) && Yii::$app->user->identity->role == null){
-    if ($lesson_count['lesson_count'] != 0 && !empty($change_video)){?>
+    if (!empty($change_video) && $check_lesson_exist){?>
         <div class="divBottom iframeField">
             <div class="posLeft">
                 <div class="videoField">
                     <span><?=$change_video['name']?></span>
-                    <iframe src="<?=$change_video['type'] == 1 ? '/' : ''?><?=$change_video['video']?>" frameborder="0"></iframe>
+                    <div class="backgroundField">
+                        <div data-video="<?=$change_video['id']?>" class="<?=!$check_video_watched ? 'backgroundVideo' : 'd-none' ?>" ><?=$GLOBALS['text']['clickToWatch']?></div>
+                        <iframe <?=$change_video['type'] == 1 ? 'sandbox=""' : ''?> src="<?=$change_video['type'] == 1 ? '/' : ''?><?=$change_video['video']?>" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="lessonsNumberField">
                     <?php if (!empty($lesson_count)){
-                        for ($i = 1; $i <= $lesson_count['lesson_count']; $i++){?>
-                            <button data-lesson="<?=$lesson['id']?>" data-number="<?=$i?>" class="lessNumField clickVideoLesson">
+                        for ($i = 0; $i < count($lesson_count); $i++){?>
+                            <button data-number="<?=$lesson_count[$i]['lesson_count']?>" class="lessNumField clickVideoLesson">
                                 <img src="/images/Ellipse2.png" alt="">
-                                <span class="lesNum"><?=$i?></span>
+                                <span class="lesNum"><?=$lesson_count[$i]['lesson_count']?></span>
                             </button>
                         <?php }} ?>
                 </div>

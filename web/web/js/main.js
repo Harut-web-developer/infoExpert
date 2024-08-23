@@ -177,6 +177,17 @@ function editeAlumni(id) {
 		});
 	}
 }
+function editeOrders(id) {
+
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/orders-edite?id=" + id,
+			success: function(result) {
+				jQuery(".modals").html(result);
+			}
+		});
+	}
+}
 function editeGroups(id) {
 
 	if (id) {
@@ -423,6 +434,16 @@ function disableAlumni(id) {
 	if (id) {
 		jQuery.ajax({
 			url: "/admin/alumni-disable?id=" + id,
+			success: function(result) {
+				window.location.reload();
+			}
+		});
+	}
+}
+function disableOrders(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/orders-disable?id=" + id,
 			success: function(result) {
 				window.location.reload();
 			}
@@ -849,6 +870,10 @@ jQuery(document).ready(function($) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeAlumni(id);
 	});
+	$('body').on('click', '#editeOrders', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		editeOrders(id);
+	});
 	$('body').on('click', '#editeGroups', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		editeGroups(id);
@@ -928,6 +953,10 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#disableAlumni', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');
 		disableAlumni(id);
+	});
+	$('body').on('click', '#disableOrders', function(event) {
+		var id = $('.sortableTable  tr.active').attr('data-id');
+		disableOrders(id);
 	});
     $('body').on('click', '#disableGroups', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');

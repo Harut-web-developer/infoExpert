@@ -1,52 +1,49 @@
-<!-- Mariam 50 ev Harut 50-->
+<!-- Mariam 40 ev Harut 60-->
 <?php
 /** @var yii\web\View $this */
-$this->registerCssFile('@web/css/user-profile.css?v=4');
+$this->registerCssFile('@web/css/courses.css?v=1');
 ?>
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
 <?php
 $language = $_COOKIE['language'];
 $class1 = '';
 if ($language == 'en') {
-    $class1 = 'usersProfileEn';
+    $class1 = 'myCoursesEn';
 } elseif ($language == 'am') {
-    $class1 = 'usersProfileAm';
-
+    $class1 = 'myCoursesAm';
 } elseif ($language == 'ru') {
-    $class1 = 'usersProfileRu';
+    $class1 = 'myCoursesRu';
 }
 ?>
-<div class="usersAchievementsH usersAchievements <?php echo $class1; ?>">
-    <div class="userAchievementsSection llllll">
-        <div class="userCreateTitleField">
+<div class="myCourses <?php echo $class1; ?>">
+    <div class="myCoursesSection">
+        <div class="myCoursesTitleField">
             <a href="javascript:history.go(-1)" class="managmentBack">
                 <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
             </a>
-            <div><?=$GLOBALS['text']['tabletachievement']?></div>
+            <div><?=$GLOBALS['text']['paymentPage']?></div>
         </div>
         <div class="userProfileMenuField">
-            <span><?=$GLOBALS['text']['achievementsTitle']?></span>
-            <ul class="userProfileMenu">
+            <span><?=$GLOBALS['text']['paymentsTitle']?></span>
+            <ul class="userProfileMenu paymentField">
                 <li><a href="/my-card/payments"><?=$GLOBALS['text']['paymentPage']?></a></li>
                 <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                 <li><a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a></li>
                 <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>
             </ul>
         </div>
-        <div class="profilBody">
+        <div class="mainCoursesFields">
             <div class="myCoursesProfileField">
                 <div class="myCoursesFieldSection">
                     <div class="myCoursesFieldSectionLeft">
-                        <div class="imgField">
+                        <div class="imgFieldCourses">
                             <?php if(!empty(Yii::$app->user->identity->image)){?>
                                 <img src="/<?=Yii::$app->user->identity->image?>" alt="">
                             <?php }else{?>
                                 <img src="/images/avatar.png" alt="">
                             <?php } ?>
                         </div>
-                        <span><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
                         <div class="usersProfileInfo">
+                            <span class="nameAndUsername"><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
                             <?php if (Yii::$app->user->identity->phone) { ?>
                                 <div class="usersProfileInfoPhone">
                                     <img src="/images/phonAchievements.png" alt="">
@@ -74,50 +71,62 @@ if ($language == 'en') {
                     </div>
                 </div>
             </div>
-            <?php if (!empty($certificates)){?>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <?php foreach ($certificates as $certificate){?>
-                        <div class="swiper-slide">
-                            <div class="certificate">
-                                <div class="cartificateImg">
-                                    <img src="/<?= $certificate['img'] ?>" alt="">
-                                </div>
-                                <div class="cartificateImgTxt">
-                                    <span><?= $certificate['lesson_name'] ?></span>
-                                    <img src="/images/downloade.png" alt="" class="downloadeButton">
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?>
+            <div class="cardMyCourses paymentTable">
+                <div class="tableAround">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th><?=$GLOBALS['text']['paymentLesson']?></th>
+                                <th><?=$GLOBALS['text']['paymentPrice']?></th>
+                                <th><?=$GLOBALS['text']['paymentDate']?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php if (!empty($payments)){foreach ($payments as $keys => $payment){?>
+                            <tr>
+                                <td><?=$keys + 1?></td>
+                                <td><?=$payment['lesson_name']?></td>
+                                <td><?=$payment['price']?> ֏</td>
+                                <td><?=$payment['create_date']?></td>
+                            </tr>
+                        <?php }} ?>
+                        </tbody>
+                    </table>
                 </div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
-            <?php }else{?>
-                <div class="textForEmpty">
-                    <span><?=$GLOBALS['text']['emptyArchievement']?></span>
-                </div>
-            <?php } ?>
+        </div>
+    </div>
+    <div class="myCoursesSectionMobile">
+        <div class="myCoursesTitleField">
+            <img src="/images/backButtonCheckout.png" alt="" class="backButtonCheckout">
+            <div><?=$GLOBALS['text']['tabletMyCourse']?></div>
+        </div>
+        <div class="myCoursesMobile tablePaymentMobile">
+            <div class="tableAround">
+                <table>
+                    <thead>
+                    <tr>
+                    <tr>
+                        <th>#</th>
+                        <th><?=$GLOBALS['text']['paymentLesson']?></th>
+                        <th><?=$GLOBALS['text']['paymentPrice']?></th>
+                        <th><?=$GLOBALS['text']['paymentDate']?></th>
+                    </tr>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php if (!empty($payments)){foreach ($payments as $keys => $payment){?>
+                        <tr>
+                            <td><?=$keys + 1?></td>
+                            <td><?=$payment['lesson_name']?></td>
+                            <td><?=$payment['price']?> ֏</td>
+                            <td><?=$payment['create_date']?></td>
+                        </tr>
+                    <?php }} ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-    // download sertificate
-    $('.downloadeButton').on("click", function () {
-        var imageSrc = $(this).closest('.certificate').find('.cartificateImg img').attr('src');
-        var link = document.createElement('a');
-        link.href = imageSrc;
-        link.download = imageSrc.split('/').pop();
-        link.click();
-    });
-</script>

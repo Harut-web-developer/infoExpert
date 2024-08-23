@@ -59,7 +59,7 @@ if ($language == 'en') {
                                             <img src="/images/calendarimg.png" alt="">
                                             <div class="articleDate_"><?=$wishlist_blog['create_date']?></div>
                                         </div>
-                                        <div class="cardsInfo_"><?=$wishlist_blog['page_title']?></div>
+                                        <div class="cardsInfo_"><?=$wishlist_blog['page_content']?></div>
                                     </div>
                                     <div class="cardsLike_">
                                         <a href="<?= Yii::$app->urlManager->createUrl(['blog/categorie?id='.$wishlist_blog['blog_id']]) ?>"><?= $GLOBALS['text']['mainReadMore']?></a>

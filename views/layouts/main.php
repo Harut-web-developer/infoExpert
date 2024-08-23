@@ -236,6 +236,7 @@ $logo = AcInfo::find()->one();
                                 <ul>
                                     <li><a href="/user-profile/achievements-edit"><?= $GLOBALS['text']['headerProfile']?></a></li>
                                     <li><a href="/my-card/index"><?=$GLOBALS['text']['tabletCard']?></a></li>
+                                    <li><a href="/my-card/payments"><?=$GLOBALS['text']['paymentPage']?></a></li>
                                     <li><a href="/site/account-security"><?= $GLOBALS['text']['headerSecurity']?></a></li>
                                     <li><a href="/logout"><?= $GLOBALS['text']['headerLogout']?></a></li>
                                 </ul>

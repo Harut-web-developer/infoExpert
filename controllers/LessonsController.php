@@ -4,7 +4,9 @@ namespace app\controllers;
 
 use app\models\AcGroups;
 use app\models\AcLessons;
+use app\models\AcMyLessons;
 use app\models\AcTutors;
+use app\models\AcUserVideoWatch;
 use app\models\AcVideoLessons;
 use Yii;
 use app\models\Texts;
@@ -58,30 +60,25 @@ class LessonsController extends \yii\web\Controller
             ->andWhere(['url' => $lesson_url])
             ->asArray()
             ->one();
-        $lesson_count = AcGroups::find()->select('ac_groups.lesson_count as lesson_count')
-            ->leftJoin('user', 'user.groups_id = ac_groups.id')
-            ->where(['user.id' => $user_id])
-            ->andWhere(['ac_groups.lesson_id' => $lesson['id']])
-            ->andWhere(['ac_groups.action' => 1])
+        $check_lesson_exist = AcMyLessons::find()->where(['user_id' => $user_id])->andWhere(['lessons_id' => $lesson['id']])->exists();
+        $lesson_count = AcVideoLessons::find()->select('lesson_number as lesson_count')
+            ->where(['status' => '1'])
+            ->andWhere(['lesson_id' => $lesson['id']])
             ->asArray()
-            ->one();
-        $number_video_lesson = AcGroups::find()->select('lesson_count')
-            ->leftJoin('user','user.groups_id = ac_groups.id')
-            ->where(['user.id' => $user_id])
-            ->andWhere(['ac_groups.lesson_id' => $lesson['id']])
-            ->andWhere(['ac_groups.status' => '1'])
-            ->andWhere(['user.status' => '1'])
-            ->andWhere(['action' => 1])
-            ->asArray()
-            ->one();
-        $change_video = AcVideoLessons::find()->select('name_'.$language.' as name, video, type')
-            ->where(['and',['status' => '1'],['lesson_id' => $lesson['id']],['lesson_number' => $number_video_lesson['lesson_count']]])->asArray()->one();
+            ->all();
+        $change_video = AcVideoLessons::find()->select('id,name_'.$language.' as name, video, type')
+            ->where(['and',['status' => '1'],['lesson_id' => $lesson['id']],['lesson_number' => 1]])->asArray()->one();
         $tutors = AcTutors::find()->select('id, username_'.$language.' as username, text_'.$language.' as text,img')
             ->where(['status' => '1'])
             ->andwhere(['lesson_id' => $lesson['id']])
             ->orderBy(['order_num' => SORT_ASC])
             ->asArray()
             ->all();
+        $check_video_watched = AcUserVideoWatch::find()
+            ->leftJoin('ac_video_lessons','ac_video_lessons.id = ac_user_video_watch.video_id')
+            ->where(['and',['ac_video_lessons.status' => '1'],['ac_user_video_watch.status' => '1'],['check_watch' => 1]])
+            ->andWhere(['ac_video_lessons.lesson_number' => 1])
+            ->exists();
         $lesson_keywords = AcLessons::find()->select('lesson_keywords_'.$language.' as lesson_keywords')->where(['status' => '1'])->asArray()->all();
         $meta_content = [];
         foreach ($lesson_keywords as $lesson_keyword) {
@@ -94,21 +91,60 @@ class LessonsController extends \yii\web\Controller
             'tutors' => $tutors,
             'lesson_count' => $lesson_count,
             'change_video' => $change_video,
+            'check_video_watched' => $check_video_watched,
+            'check_lesson_exist' => $check_lesson_exist,
         ]);
     }
     public function actionChangeVideo(){
         if ($this->request->isGet){
             $language = $_COOKIE['language'];
             $num = intval($this->request->get('num'));
-            $lesson = intval($this->request->get('lesson'));
-            $change_video = AcVideoLessons::find()->select('name_'.$language.' as name, video, type')
-                ->where(['and',['status' => '1'],['lesson_id' => $lesson],['lesson_number' => $num]])->asArray()->one();
+            $change_video = AcVideoLessons::find()->select('id,name_'.$language.' as name, video, type')
+                ->where(['lesson_number' => $num])->asArray()->one();
+            $check_video_watched = AcUserVideoWatch::find()
+                ->leftJoin('ac_video_lessons','ac_video_lessons.id = ac_user_video_watch.video_id')
+                ->where(['and',['ac_video_lessons.status' => '1'],['ac_user_video_watch.status' => '1'],['check_watch' => 1]])
+                ->andWhere(['ac_video_lessons.lesson_number' => $num])
+                ->exists();
             if (!empty($change_video)){
                 return $this->renderAjax('video-lessons',[
-                    'change_video' => $change_video
+                    'change_video' => $change_video,
+                    'check_video_watched' => $check_video_watched,
                 ]);
             }
             return false;
+        }
+    }
+    public function actionCheckWatched(){
+        if ($this->request->isGet){
+            date_default_timezone_set("Asia/Yerevan");
+            $video_id = intval($this->request->get('video_id'));
+            $lesson_id = AcVideoLessons::findOne($video_id);
+            $user_id = Yii::$app->user->identity->id;
+            $checked_watch = new AcUserVideoWatch();
+            $checked_watch->user_id = $user_id;
+            $checked_watch->video_id = $video_id;
+            $checked_watch->lesson_id = $lesson_id->lesson_id;
+            $checked_watch->check_watch = 1;
+            $checked_watch->create_date = date('Y-m-d H:i:s');
+            $checked_watch->save();
+            $lesson_count = AcLessons::find()->select('ac_lessons.lessons_count')
+                ->leftJoin('ac_video_lessons', ' ac_video_lessons.lesson_id = ac_lessons.id')
+                ->where(['and',['ac_video_lessons.status' => '1'],['ac_lessons.status' => '1'],['ac_video_lessons.id' => $video_id]])
+                ->asArray()
+                ->one();
+            $watched_number_video = AcUserVideoWatch::find()->select('check_watch')
+                ->where(['and',['status' => '1'],['user_id' => $user_id]])->count();
+            $percent = round((100 / $lesson_count['lessons_count']) * $watched_number_video);
+            $my_lessons = AcMyLessons::findOne(['user_id' => $user_id,'lessons_id' => $lesson_id->lesson_id, 'status' => '1']);
+            if (!empty($my_lessons)){
+                $my_lessons->complete_percent = $percent;
+                if ($my_lessons->complete_percent == 100){
+                    $my_lessons->status = '2';
+                }
+                $my_lessons->save(false);
+            }
+            return json_encode(true);
         }
     }
 }

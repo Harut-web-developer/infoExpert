@@ -14,7 +14,8 @@ if ($language == 'en') {
     $class1 = 'checkoutFieldRu';
 }
 ?>
-<div class="checkoutField <?php echo $class1; ?>">
+<form action="" method="post" class="checkoutField <?php echo $class1; ?>">
+    <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
     <div class="checkoutFieldSection">
         <div class="myCoursesTitleField">
             <a href="javascript:history.go(-1)" class="managmentBack">
@@ -54,7 +55,7 @@ if ($language == 'en') {
                                     <div class="checkoutInputsCreditFieldRow">
                                         <div class="checkoutInputLeftField">
                                             <label for="checkoutCardDate"><?=$GLOBALS['text']['checkoutInputExpire']?></label>
-                                            <input type="text" id="checkoutCardDate">
+                                            <input type="text" id="checkoutCardDate" name="expire">
                                         </div>
                                         <div class="checkoutInputRightField">
                                             <label for="checkoutCardCode">CVC/CVV</label>
@@ -85,6 +86,8 @@ if ($language == 'en') {
                                 <div class="courseManualPriceFieldInfo">
                                     <img src="/<?=$lesson['img']?>" alt="">
                                     <span><?=$lesson['lesson_name']?></span>
+                                    <input type="hidden" name="lesson_id[]" value="<?=$lesson['lesson_id']?>">
+                                    <input type="hidden" name="price[]" value="<?=$lesson['price']?>">
                                 </div>
                                 <div class="courseManualPriceFieldPay"><?=$lesson['price']?> AMD</div>
                             </div>
@@ -104,10 +107,10 @@ if ($language == 'en') {
                             }} ?>
                             <span class="sumPriceAll"><?=$total_count?> AMD</span>
                         </div>
-                        <p><?=$GLOBALS['text']['checkoutTermsText']?> <a href=""><?=$GLOBALS['text']['checkoutTerms']?></a></p>
+                        <p><?=$GLOBALS['text']['checkoutTermsText']?> <a href="/terms-and-conditions"><?=$GLOBALS['text']['checkoutTerms']?></a></p>
                     </div>
                     <div class="checkoutTotalFieldInfoBottom">
-                        <button>
+                        <button type="submit">
                             <img src="/images/sumBtnCheckout.png" alt="">
                             <span><?=$GLOBALS['text']['checkoutCompleteBtn']?></span>
                         </button>
@@ -127,12 +130,12 @@ if ($language == 'en') {
             <span class="sumPriceAll"><?=$total_count?> AMD</span>
             <p><?=$GLOBALS['text']['checkoutTermsText']?> <a href=""><?=$GLOBALS['text']['checkoutTerms']?></a></p>
             <div class="checkoutTotalFieldInfoBottom">
-                <button>
+                <button type="submit">
                     <img src="/images/sumBtnCheckout.png" alt="">
                     <span><?=$GLOBALS['text']['checkoutCompleteBtn']?></span>
                 </button>
             </div>
         </div>
     </div>
-</div>
+</form>
 <?php $this->registerJsFile('@web/js/checkout.js', ['defer' => true]); ?>

@@ -258,7 +258,7 @@ hr.new1 {
 
 .individualCards_ {
     border-radius: 30px;
-    width: 377px;
+    width: 100%;
     height: min-content;
 }
 
@@ -362,6 +362,7 @@ hr.new1 {
 .cardsInfo_{
     display: -webkit-box;
     font-size: 18px;
+    line-height: 23px;
     color: #1C5484;
     width: 100%;
     -webkit-line-clamp: 2;
@@ -1442,7 +1443,7 @@ ion-icon {
 
     }
     .individualCards_ {
-        width: auto;
+        width: 100%;
         height: auto;
     }
     .cardsInfo_{
@@ -1826,6 +1827,7 @@ ion-icon {
         height: 190px;
         border-top-right-radius: 26px;
         border-top-left-radius: 26px;
+        overflow: hidden;
     }
     .imgBlogField > img{
         width: 100%;
@@ -1857,7 +1859,7 @@ ion-icon {
     }
     .cardsInfo_{
         font-size: 18px;
-        width: 283px;
+        width: 100%;
         height: 44px;
         line-height: 21.6px;
     }

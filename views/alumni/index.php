@@ -18,7 +18,7 @@ $this->registerCssFile('@web/css/alumni.css');
                     <?=$GLOBALS['text']['alumniTitle']?>
                 </div>
             </div>
-            <p class="alumniTxt"><?=$GLOBALS['text']['alumniText']?></p>
+            <div class="alumniTxt"><?=$GLOBALS['text']['alumniText']?></div>
         </div>
         <div class="swiper mySwiper swiper-container forMobileAlumni">
             <div class="swiper-wrapper">

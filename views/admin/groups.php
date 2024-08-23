@@ -73,9 +73,7 @@
                                                                <?php }} ?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php if ($item['action'] == 1){?>
-                                                                <button <?=$item['status'] != 1 ? 'disabled' : ''?> data-text="start" class="btn btn-outline-success lessonBtn">Սկսել դասը</button>
-                                                            <?php }else{?>
+                                                            <?php if ($item['action'] == 0){?>
                                                                 <button <?=$item['status'] != 1 ? 'disabled' : ''?> data-text="finish" class="btn btn-outline-success lessonBtn">Ավարտել դասը</button>
                                                             <?php }?>
                                                         </td>

@@ -223,7 +223,9 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                 <div class="testimonialsText"><?=$testimonial['text']?></div>
                                 <div class="fieldsLinkdin">
                                     <span class="testimonialsAuthor"><?=$testimonial['name']?></span>
-                                    <a target="<?=$testimonial['url'] ? '_blank' : ''?>" href="<?=$testimonial['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
+                                    <?php if (!empty($testimonial['url'])){?>
+                                        <a target="_blank" href="<?=$testimonial['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
@@ -250,7 +252,9 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                         <div class="testimonialsText"><?=$item['text']?></div>
                         <div class="fieldsLinkdin">
                             <span class="testimonialsAuthor"><?=$item['name']?></span>
-                            <a target="<?=$item['url'] ? '_blank' : ''?>" href="<?=$item['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
+                            <?php if (!empty($item['url'])){?>
+                                <a target="_blank" href="<?=$item['url']?>"><img src="/images/linkdinNew.png" alt=""></a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

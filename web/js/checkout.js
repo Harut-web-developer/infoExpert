@@ -29,23 +29,47 @@ $(document).ready(function(){
     })
     $('#checkoutCardNumber').on('input', function() {
         let input = $(this).val().replace(/\s+/g, '').replace(/[^0-9]/g, '');
+        if (input.length > 16) {
+            input = input.substring(0, 16);
+        }
         let formattedInput = input.replace(/(\d{4})(?=\d)/g, '$1 ');
         $(this).val(formattedInput);
     });
-    $('#checkoutCardDate').on('input', function() {
-        let value = $(this).val().replace(/[^0-9]/g, ''); // Remove non-numeric characters
-
-        // If the length is greater than or equal to 2, format it with a slash
-        if (value.length > 2) {
-            value = value.slice(0, 2) + '/' + value.slice(2, 4);
+    $('#checkoutCardDate').on('input', function(e) {
+        let value = $(this).val().replace(/[^0-9]/g, '');
+        const currentYear = new Date().getFullYear().toString().slice(2, 4);
+        if (value.length >= 2) {
+            let month = parseInt(value.slice(0, 2), 10);
+            let year = value.slice(2, 4);
+            if (month > 12) {
+                $(this).val('');
+            } else {
+                let formattedValue = month.toString().padStart(2, '0') + '/';
+                if (value.length >= 4) {
+                    if (year < currentYear) {
+                        $(this).val(formattedValue);
+                    } else {
+                        $(this).val(formattedValue + year);
+                    }
+                } else {
+                    $(this).val(formattedValue + value.slice(2, 4));
+                }
+            }
+        } else {
+            $(this).val(value);
         }
-
-        // Handle the case where the length is less than or equal to 2
-        else {
-            // No need for slash if fewer than 2 digits
-            value = value.slice(0, 2);
+        if (e.originalEvent.inputType === 'deleteContentBackward') {
+            let newValue = $(this).val().replace(/[^0-9]/g, '');
+            if (newValue.length <= 2) {
+                $(this).val(newValue);
+            }
         }
-
-        $(this).val(value);
     });
+    $('#checkoutCardCode').on('input', function() {
+        let input = $(this).val().replace(/\s+/g, '').replace(/[^0-9]/g, '');
+        if (input.length > 4) {
+            input = input.substring(0, 4);
+        }
+        $(this).val(input);
+    })
 })

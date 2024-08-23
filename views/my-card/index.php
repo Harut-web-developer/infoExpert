@@ -28,6 +28,7 @@ if ($language == 'en') {
             <div class="userProfileMenuField">
                 <span><?=$GLOBALS['text']['myCardTitle']?></span>
                 <ul class="userProfileMenu">
+                    <li><a href="/my-card/payments"><?=$GLOBALS['text']['paymentPage']?></a></li>
                     <li><a href="/user-profile/achievements"><?=$GLOBALS['text']['tabletachievement']?></a></li>
                     <li><a href="/courses/my-courses"><?=$GLOBALS['text']['tabletMyCourse']?></a></li>
                     <li><a href="/wishlist/index"><?=$GLOBALS['text']['tabletWishlist']?></a></li>

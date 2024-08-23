@@ -7,15 +7,6 @@ use yii\helpers\Html;
 $this->title = 'Dashboard';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<!--<div class="site-about">-->
-<!--    <h1>--><?php //= Html::encode($this->title) ?><!--</h1>-->
-<!---->
-<!--    <p>-->
-<!---->
-<!--    </p>-->
-<!---->
-<!--    <code>--><?php //= __FILE__ ?><!--</code>-->
-<!--</div>-->
 <div class="row">
     <div class="col-md-12">
         <div id="chart"></div>
@@ -33,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
             data: <?php echo json_encode($count_user)?>
         }],
         chart: {
+            background: '#fff',
             height: 350,
             type: 'line',
             zoom: {
@@ -103,6 +95,7 @@ $this->params['breadcrumbs'][] = $this->title;
         },
         ],
         chart: {
+            background: '#fff',
             height: 350,
             type: 'area',
             zoom: {

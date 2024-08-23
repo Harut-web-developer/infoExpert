@@ -709,7 +709,55 @@
     flex-direction: row;
     justify-content: space-between;
 }
-
+.paymentTable{
+    position: unset;
+}
+.tableAround{
+    background: #87B4B7;
+    max-height: 520px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0px 0px 6px 2px #508C98;
+}
+.tableAround > table{
+    width: 100%;
+    height: min-content;
+    max-height: 533px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.tableAround > table > thead{
+    text-transform: uppercase;
+    background: #87B4B7;
+    height: 83px;
+    text-align: center;
+    color: #F36528;
+    font-weight: 700;
+    font-family: "Roboto_",sans-serif;
+}
+.tableAround > table > thead > tr > th:first-child{
+    padding-left: 10px;
+}
+.tableAround > table > tbody > tr > td:first-child{
+    padding-left: 10px;
+}
+.tableAround > table > tbody{
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Roboto_",sans-serif;
+    color: #FFFFFF;
+    background: #74A8AB;
+    height: min-content;
+    text-align: center;
+}
+.tableAround > table > tbody > tr{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+.tableAround > table > tbody > tr:last-child{
+    border-bottom: unset;
+}
 /*LIKE*/
 .large-font {
     width: 43px;
@@ -804,6 +852,9 @@ ion-icon {
 @media screen and (max-width: 1820px) {
     .myCoursesFieldAcceptCourses {
         gap: 30px;
+    }
+    .tableAround {
+        max-height: 503px;
     }
 .cardMyCourses {
     width: 700px;
@@ -953,6 +1004,15 @@ ion-icon {
     width: 300px;
     height: 421px;
 }
+    .tableAround {
+        max-height: 410px;
+    }
+    .tableAround > table > thead {
+        height: 60px;
+    }
+    .tableAround > table > tbody > tr {
+        height: 50px;
+    }
 .cardMyCourses {
     width: 640px;
 }
@@ -1205,6 +1265,15 @@ ion-icon {
 
 }
 @media screen and (max-width: 1300px) {
+    .tableAround {
+        max-height: 330px;
+    }
+    .tableAround > table > thead {
+        height: 50px;
+    }
+    .tableAround > table > tbody > tr {
+        height: 40px;
+    }
     .imgField {
         width: 100%;
         height: 146px;
@@ -1486,6 +1555,9 @@ ion-icon {
     }
     .userProfileMenu {
         width: 423px;
+    }
+    .userProfileMenu > ul > li{
+        margin: 0px 10px;
     }
     .ratingStarMyourse img{
         width: 16px;
@@ -1801,8 +1873,12 @@ ion-icon {
     .userProfileMenu,
     .myCoursesRu .userProfileMenu,
     .myCoursesAm .userProfileMenu{
-        width: 375px;
+        /*width: 375px;*/
+        width: max-content;
         height: 16px;
+    }
+    .paymentField > li, .coursesFieldPage > li{
+        margin: 0px 10px;
     }
     .myCoursesEn .userProfileMenuField > span,
     .userProfileMenuField > span,
@@ -1943,6 +2019,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 700px) {
+    .paymentField > li ,.coursesFieldPage > li{
+        margin: 0px 4px;
+    }
     .myCoursesEn .userProfileMenuField > span, .userProfileMenuField > span, .myCoursesRu .userProfileMenuField > span {
         font-size: 19px;
     }
@@ -1997,6 +2076,9 @@ ion-icon {
     }
 }
 @media screen and (max-width: 450px){
+    .tablePaymentMobile{
+        margin-bottom: 50px;
+    }
     .myCoursesFieldAcceptCourses {
         flex-direction: column;
         overflow-x: visible;

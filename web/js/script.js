@@ -640,7 +640,6 @@ $(document).ready(function (e) {
 })
     $('body').on('click', '.clickVideoLesson',function () {
         let num = $(this).data('number');
-        let lesson = $(this).data('lesson');
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
         $.ajax({
             url: '/lessons/change-video',
@@ -648,7 +647,6 @@ $(document).ready(function (e) {
             datatype: 'json',
             data: {
                 num: num,
-                lesson: lesson,
                 _csrf: csrfToken
             },
             success: function (data) {
@@ -702,6 +700,25 @@ $(document).ready(function (e) {
             }
         });
     });
+    $('body').on('click', '.backgroundVideo', function () {
+        let video_id = $(this).data('video');
+        let csrfToken = $('meta[name="csrf-token"]').attr("content");
+        $.ajax({
+            url: '/lessons/check-watched',
+            method: 'get',
+            datatype: 'json',
+            data: {
+                video_id: video_id,
+                _csrf: csrfToken
+            },
+            success: function (data) {
+                if (data){
+                    $('.backgroundVideo').removeClass();
+                }
+            }
+        })
+
+    })
 
     // Harut 50 ev Mariam 50
     document.querySelectorAll('ion-icon').forEach(icon => {
