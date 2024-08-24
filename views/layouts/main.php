@@ -58,7 +58,7 @@ $logo = AcInfo::find()->one();
         <div class="mainHeader">
             <div class="mainField">
                 <div class="logoTabletField">
-<!--                    <a href="/"><img src="/--><?php //=$logo->site_logo?><!--" alt=""></a>-->
+                    <a href="/"><img src="/<?=$logo->site_logo?>" alt=""></a>
                 </div>
                 <div class="tabletMenuField">
                     <button class="modalOpenBtn">
@@ -214,7 +214,7 @@ $logo = AcInfo::find()->one();
         <div class="menuSection">
             <div class="logoSection">
                 <div class="logo">
-<!--                    <a href="/"><img src="/--><?php //=$logo->site_logo?><!--" alt=""></a>-->
+                    <a href="/"><img src="/<?=$logo->site_logo?>" alt=""></a>
                 </div>
                 <div class="icons">
                     <div class="search-div">
