@@ -131,7 +131,7 @@ cat "$emojis0" | sed -e "s,<title>\(.*\)</title>,\1," -e t -e d >&2
 
 seli=0
 styles=(common)
-for vendor in `cat "$emojis0" |
+for vendor1 in `cat "$emojis0" |
   sed -e "/^<\/tr/ q" -e "s/.*<th.*#col-vendor.>\([^.<]*\).*/\1/" -e t -e d |
   sed -e 7q`
 do	seli=`expr $seli + 1`
