@@ -109,16 +109,19 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
+        date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
             $question = new AcQuestionList();
             $question->load($post);
+            $question->date_create = date('Y-m-d H:i:s');
             $question->save(false);
             $this->redirect(['questions', 'success' => 'true', 'id' => 'key' . $question->id]);
         }
         else if ($post && $post['edite']) {
             $question = AcQuestionList::findOne(['id' => intval($post['id']) ]);
             $question->load($post);
+            $question->date_create = date('Y-m-d H:i:s');
             $question->save(false);
             $this->redirect(['questions', 'success' => 'true', 'id' => 'key' . $question->id]);
         }
@@ -130,6 +133,7 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
+
         $id = intval($_GET['id']);
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
@@ -177,6 +181,7 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
+        date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
             $exist_email = User::find()->where(['email' => $post['User']['email']])->exists();
@@ -185,6 +190,8 @@ class AdminController extends Controller {
             }else {
                 $user = new User();
                 $user->load($post);
+                $user->created_at = date('Y-m-d H:i:s');
+                $user->updated_at = date('Y-m-d H:i:s');
                 $user->password = Yii::$app->getSecurity()->generatePasswordHash($post['User']['password']);
                 $user->auth_key = $this->generateRandomString();
                 if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
@@ -214,6 +221,8 @@ class AdminController extends Controller {
             }else {
                 $pass = $user->password;
                 $user->load($post);
+                $user->created_at = date('Y-m-d H:i:s');
+                $user->updated_at = date('Y-m-d H:i:s');
                 $user->auth_key = $this->generateRandomString();
                 if ($post['User']['password']) {
                     $user->password = Yii::$app->getSecurity()->generatePasswordHash($post['User']['password']);
@@ -275,6 +284,7 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
+        date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
             $partner = new AcPartners();
@@ -322,6 +332,7 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
+        date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
             $answer = new AcAnswers();
@@ -364,26 +375,54 @@ class AdminController extends Controller {
                 $user_groups_id = User::findOne(intval($user));
                 $user_groups_id->groups_id = $groups->id;
                 $user_groups_id->save(false);
+                $my_lesson = new AcMyLessons();
+                $my_lesson->user_id = $user;
+                $my_lesson->lessons_id = $groups->lesson_id;
+                $my_lesson->complete_percent = 0;
+                $my_lesson->create_date = date('Y-m-d H:i:s');
+                $my_lesson->save(false);
             }
+
             $this->redirect(['groups', 'success' => 'true', 'id' => 'key' . $groups->id]);
         }
         elseif ($post && $post['edite']){
-            $groups = AcGroups::findOne(['id' => intval($post['id']) ]);;
+            $groups = AcGroups::findOne(['id' => intval($post['id']) ]);
             $groups->load($post);
             $groups->create_date = date('Y-m-d H:i:s');
             $groups->save(false);
             $delete_users = User::find()->where(['groups_id' => $groups->id])->all();
+            $users_arr = [];
             if (!empty($delete_users)){
                 foreach($delete_users as $delete_user){
+                    array_push($users_arr,$delete_user->id);
                     $delete_user->groups_id = null;
                     $delete_user->save(false);
                 }
             }
             $users = $post['AcGroups']['user_id'];
+            $new_lesson_user_id = array_diff($users,$users_arr);
+            $old_lesson_user_id = array_diff($users_arr,$users);
             foreach ($users as $user){
                 $user_groups_id = User::findOne(intval($user));
                 $user_groups_id->groups_id = $groups->id;
                 $user_groups_id->save(false);
+            }
+            foreach ($old_lesson_user_id as $item){
+                $my_lesson = AcMyLessons::findOne(['user_id' => $item,'lessons_id' => $groups->lesson_id]);
+                if (!empty($my_lesson)) {
+                    $my_lesson->delete();
+                }
+            }
+            foreach ($new_lesson_user_id as $item){
+                $my_lesson = AcMyLessons::findOne(['user_id' => $item,'lessons_id' => $groups->lesson_id]);
+                if (empty($my_lesson)) {
+                    $new_lesson = new AcMyLessons();
+                    $new_lesson->user_id = $item;
+                    $new_lesson->lessons_id = $groups->lesson_id;
+                    $new_lesson->complete_percent = 0;
+                    $new_lesson->create_date = date('Y-m-d H:i:s');
+                    $new_lesson->save(false);
+                }
             }
             $this->redirect(['groups', 'success' => 'true', 'id' => 'key' . $groups->id]);
         }
@@ -415,10 +454,12 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
+        date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
             $page = new AcBlog();
             $page->load($post);
+            $page->create_date = date('Y-m-d H:i:s');
             $page->url = $this->transLateURRL($page->page_name_am);
             if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
                 $tmp_name = $_FILES["img"]["tmp_name"];
@@ -430,9 +471,9 @@ class AdminController extends Controller {
             $this->redirect(['blog', 'success' => 'true', 'id' => 'key' . $page->id]);
         }
         else if ($post && $post['edite']) {
-
             $page = AcBlog::findOne(['id' => intval($post['id']) ]);
             $page->load($post);
+            $page->create_date = date('Y-m-d H:i:s');
             $page->url = $this->transLateURRL($page->page_name_am);
             if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
                 $tmp_name = $_FILES["img"]["tmp_name"];
@@ -451,11 +492,12 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
-
+        date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
             $lesson = new AcLessons();
             $lesson->load($post);
+            $lesson->create_date = date('Y-m-d H:i:s');
             $lesson->url = $this->transLateURRL($lesson->lesson_name_am);
             if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
                 $tmp_name = $_FILES["img"]["tmp_name"];
@@ -475,6 +517,7 @@ class AdminController extends Controller {
         else if ($post && $post['edite']) {
             $lesson = AcLessons::findOne(['id' => intval($post['id']) ]);
             $lesson->load($post);
+            $lesson->create_date = date('Y-m-d H:i:s');
             $lesson->url = $this->transLateURRL($lesson->lesson_name_am);
             if (!empty($_FILES['img']) && $_FILES["img"]["name"]) {
                 $tmp_name = $_FILES["img"]["tmp_name"];
@@ -700,6 +743,9 @@ class AdminController extends Controller {
         if ($post && $post['edite']) {
             $have_questions = AcHaveQuestions::findOne(['id' => intval($post['id']) ]);
             $have_questions->load($post);
+            if ($have_questions->checked_answer == 0){
+                $have_questions->answer_admin_id = null;
+            }
             $have_questions->create_date = date('Y-m-d H:i:s');
             $have_questions->save(false);
             $this->redirect(['have-questions', 'success' => 'true', 'id' => 'key' . $have_questions->id]);
@@ -712,7 +758,14 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
-        $post = Yii::$app->request->post();
+//        $post = Yii::$app->request->post();
+//        if ($post && $post['edite']) {
+//            $orders = AcOrders::findOne(['id' => intval($post['id']) ]);
+//            $orders->load($post);
+//            $orders->create_date = date('Y-m-d H:i:s');
+//            $orders->save(false);
+//            $this->redirect(['orders', 'success' => 'true', 'id' => 'key' . $orders->id]);
+//        }
         $orders = AcOrders::find()->with('username')->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('orders',[
             'orders' => $orders
@@ -725,6 +778,25 @@ class AdminController extends Controller {
         }
         $id = intval($this->request->get('id'));
         $post = Yii::$app->request->post();
+        if ($post && $post['edite']) {
+            $order_items = AcOrdersItems::findOne(['id' => intval($post['id']) ]);
+            $order_items->load($post);
+            $order_items->create_date = date('Y-m-d H:i:s');
+            $order_items->save(false);
+            $price = AcOrdersItems::find()->select('price')->where(['status' => '1'])->asArray()->all();
+            $prices = array_column($price, 'price');
+            $prices = array_sum($prices);
+            $orders = AcOrders::findOne(['id' => $order_items->order_id]);
+            $orders->total_price = $prices;
+            $orders->create_date = date('Y-m-d H:i:s');
+            if ($orders->total_price == 0){
+                $orders->status = 0;
+            }else{
+                $orders->status = 1;
+            }
+            $orders->save(false);
+            $this->redirect(['orders', 'success' => 'true', 'id' => 'key' . $order_items->id]);
+        }
         $order_items = AcOrdersItems::find()->with('lesson')->where(['order_id' => $id])->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('order-items',[
             'order_items' => $order_items
@@ -810,7 +882,6 @@ class AdminController extends Controller {
     }
     public function actionApply(){
         // Harut
-        date_default_timezone_set("Asia/Yerevan");
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
@@ -827,6 +898,9 @@ class AdminController extends Controller {
         if ($post && $post['edite']) {
             $call_back = AcCallback::findOne(['id' => intval($post['id']) ]);
             $call_back->load($post);
+            if ($call_back->checked_answer == 0){
+                $call_back->answer_admin_id = null;
+            }
             $call_back->create_date = date('Y-m-d H:i:s');
             $call_back->save(false);
             $this->redirect(['callback', 'success' => 'true', 'id' => 'key' . $call_back->id]);
@@ -838,16 +912,19 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
+        date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
             $review = new AcReviews();
             $review->load($post);
+            $review->create_date = date('Y-m-d H:i:s');
             $review->save(false);
             $this->redirect(['reviews', 'success' => 'true', 'id' => 'key' . $review->id]);
         }
         else if ($post && $post['edite']) {
             $review = AcReviews::findOne(['id' => intval($post['id']) ]);
             $review->load($post);
+            $review->create_date = date('Y-m-d H:i:s');
             $review->save(false);
             $this->redirect(['reviews', 'success' => 'true', 'id' => 'key' . $review->id]);
         }
@@ -908,11 +985,9 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
+        date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['edite']) {
-//            echo "<pre>";
-//            var_dump($post);
-//            exit();
             $user = User::findOne(intval($post['id']));
             $exist_email = User::find()
                 ->where(['email' => $post['User']['email']])
@@ -923,6 +998,8 @@ class AdminController extends Controller {
             }else{
                 $pass = $user->password;
                 $user->load($post);
+                $user->created_at = date('Y-m-d H:i:s');
+                $user->updated_at = date('Y-m-d H:i:s');
                 $user->auth_key = $this->generateRandomString();
                 if ($post['User']['password']) {
                     $user->password = Yii::$app->getSecurity()->generatePasswordHash($post['User']['password']);
@@ -940,6 +1017,8 @@ class AdminController extends Controller {
             }else{
                 $user = new User();
                 $user->load($post);
+                $user->created_at = date('Y-m-d H:i:s');
+                $user->updated_at = date('Y-m-d H:i:s');
                 $user->password = Yii::$app->getSecurity()->generatePasswordHash($user->password);
                 $user->auth_key = $this->generateRandomString();
                 $user->save(false);
@@ -1065,6 +1144,14 @@ class AdminController extends Controller {
         $alumni = AcAlumni::findOne(['id' => $id]);
         return $this->renderAjax('alumni-edite-popup', ['alumni' => $alumni]);
     }
+    public function actionOrderItemsEdite() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $order_items = AcOrdersItems::find()->with('lesson')->where(['id' => $id])->one();
+        return $this->renderAjax('order-items-edite-popup', ['order_items' => $order_items]);
+    }
     public function actionOrdersEdite() {
         // Harut
         if (Yii::$app->user->isGuest) {
@@ -1072,8 +1159,8 @@ class AdminController extends Controller {
         }
         $id = intval($_GET['id']);
         $orders = AcOrders::findOne(['id' => $id]);
-        $users = User::find()->select('id, username')->where(['and'])
-        return $this->renderAjax('orders-edite-popup', ['orders' => $orders]);
+        $users = User::find()->select('id, username')->where(['and',['role' => null]])->asArray()->all();
+        return $this->renderAjax('orders-edite-popup', ['orders' => $orders,'users' => $users]);
     }
     public function actionGroupsEdite() {
         if (Yii::$app->user->isGuest) {
@@ -1329,6 +1416,29 @@ class AdminController extends Controller {
         $orders->save(false);
         return true;
     }
+    public function actionOrderItemsDisable() {
+        $id = intval($_GET['id']);
+        $order_items = AcOrdersItems::findOne(['id' => $id]);
+        if ($order_items->status) {
+            $order_items->status = 0;
+        }
+        else {
+            $order_items->status = 1;
+        }
+        $order_items->save(false);
+        $price = AcOrdersItems::find()->select('price')->where(['status' => '1'])->asArray()->all();
+        $prices = array_column($price, 'price');
+        $prices = array_sum($prices);
+        $orders = AcOrders::findOne(['id' => $order_items->order_id]);
+        $orders->total_price = $prices;
+        if ($orders->total_price == 0){
+            $orders->status = 0;
+        }else{
+            $orders->status = 1;
+        }
+        $orders->save(false);
+        return true;
+    }
     public function actionGroupsDisable() {
         $id = intval($_GET['id']);
         $groups = AcGroups::findOne(['id' => $id]);
@@ -1338,8 +1448,15 @@ class AdminController extends Controller {
         else {
             $groups->status = 1;
         }
-
         $groups->save(false);
+        $users = User::find()->select('id')->where(['and',['groups_id' => $groups->id]])->all();
+        foreach ($users as $user){
+            $my_lessons = AcMyLessons::findOne(['user_id' => $user, 'lessons_id' => $groups->lesson_id]);
+            if (!empty($my_lessons)){
+                $my_lessons->status = $groups->status;
+                $my_lessons->save(false);
+            }
+        }
         return true;
     }
     public function actionLessonAdd() {
@@ -1374,6 +1491,18 @@ class AdminController extends Controller {
         $lesson = AcGroups::findOne($id);
         $lesson->lesson_count = intval($_GET['lesson_count']);
         $lesson->save(false);
+        $course = AcLessons::findOne($lesson->lesson_id);
+        $percent = round((100 / $course->lessons_count) * $lesson->lesson_count);
+        $users = User::find()->select('id')->where(['and',['role' => null],['groups_id' => $id]])->asArray()->all();
+        foreach ($users as $user){
+            $my_lessons = AcMyLessons::findOne(['user_id' => $user['id'],'lessons_id' => $lesson->lesson_id, 'status' => '1']);
+            if (!empty($my_lessons)){
+                $my_lessons->complete_percent = $percent;
+                $my_lessons->status = '1';
+                $my_lessons->save(false);
+            }
+
+        }
         return true;
     }
     public function actionQuizeDisable() {

@@ -127,7 +127,7 @@
                         <span>Դասընթացի տեսակը</span>
                         <select name="AcGroups[action]" id="" class="form-control">
                             <option value="">Ընտրել տեսակը</option>
-                            <option value="1">Օնլայն</option>
+<!--                            <option value="1">Օնլայն</option>-->
                             <option value="0">Օֆլայն</option>
                         </select>
                         <br>

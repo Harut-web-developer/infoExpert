@@ -24,8 +24,8 @@
                         <h4 class="box-title">Վճարները ըստ դասընթացների
                             <span class="buttons">
                                           <span class="overlay show_" style="width:33px;"></span>
-                                          <button class="btn btn-sm btn-default" id="editeAlumni"><i class="fa fa-pencil"></i></button>
-                                          <button class="btn btn-sm btn-danger" id="disableAlumni"><i class="fa fa-trash"></i></button>
+                                          <button class="btn btn-sm btn-default" id="editeOrderItems"><i class="fa fa-pencil"></i></button>
+                                          <button class="btn btn-sm btn-danger" id="disableOrderItems"><i class="fa fa-trash"></i></button>
                                         </span>
                         </h4>
                     </div>
@@ -73,4 +73,7 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="modals">
+
     </div>

@@ -18,6 +18,9 @@ use Yii;
  * @property string $email
  * @property int $status
  * @property int $role
+ * @property string $created_at
+ * @property string $updated_at
+ *
 
  */
 class User extends ActiveRecord implements \yii\web\IdentityInterface
@@ -53,19 +56,19 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
     /**
      * @return array
      */
-    public function behaviors()
-    {
-        return [
-            [
-                'class' => TimestampBehavior::className(),
-                'attributes'=>[
-                    self::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
-                    self::EVENT_BEFORE_UPDATE => 'updated_at',
-                ],
-                'value' => new Expression('NOW()'),
-            ],
-        ];
-    }
+//    public function behaviors()
+//    {
+//        return [
+//            [
+//                'class' => TimestampBehavior::className(),
+//                'attributes'=>[
+//                    self::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
+//                    self::EVENT_BEFORE_UPDATE => 'updated_at',
+//                ],
+//                'value' => new Expression('NOW()'),
+//            ],
+//        ];
+//    }
 
 
     /**

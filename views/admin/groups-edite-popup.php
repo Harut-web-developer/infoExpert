@@ -27,7 +27,7 @@
                     <span>Դասընթացի տեսակը</span>
                     <select name="AcGroups[action]" id="" class="form-control">
                         <option <?=$groups->action == null ? 'selected' : ''?> value="">Ընտրել տեսակը</option>
-                        <option <?=$groups->action == 1 ? 'selected' : ''?> value="1">Օնլայն</option>
+<!--                        <option --><?php //=$groups->action == 1 ? 'selected' : ''?><!-- value="1">Օնլայն</option>-->
                         <option <?=$groups->action == 0 ? 'selected' : ''?> value="0">Օֆլայն</option>
                     </select>
                     <br>

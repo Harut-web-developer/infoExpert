@@ -3,25 +3,18 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addnew">Փոփոխել ( Պատվերը ՝ <?php echo $orders->id;?>) </h5>
+                <h5 class="modal-title" id="addnew">Փոփոխել ( Պատվերը ՝ <?php echo $order_items->lesson->lesson_name_am;?>) </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form action="" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="id" value="<?php echo $orders->id;?>">
+                    <input type="hidden" name="id" value="<?php echo $order_items->id;?>">
                     <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
                     <br>
-                    <div class="col-sm-12">
-                        <span>Շրջանավարտներ</span>
-                        <select class="js-example-basic-single" style="width: 100%" name="AcOrders[user_id]">
-                            <option  value="">Ընտրել</option>
-                            <?php if (!empty($users)){foreach ($users as $user){?>
-                                <option <?=$user['id'] == $orders->user_id ? 'selected' : ''?> value="<?=$user['id']?>"><?=$user['username']?></option>
-                            <?php }} ?>
-                        </select>
-                    </div>
+                    <span>Դասընթացի վճար</span>
+                    <input type="text" name="AcOrdersItems[price]" value="<?php echo $order_items->price;?>" placeholder="Դասընթացի վճար" class="form-control">
                     <br>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>
                     <button type="submit" class="btn btn-succ" name="edite" value="true">Գրանցել</button>
