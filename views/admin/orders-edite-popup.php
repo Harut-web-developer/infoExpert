@@ -13,15 +13,17 @@
                     <input type="hidden" name="id" value="<?php echo $orders->id;?>">
                     <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
                     <br>
-                    <div class="col-sm-12">
-                        <span>Շրջանավարտներ</span>
-                        <select class="js-example-basic-single" style="width: 100%" name="AcOrders[user_id]">
-                            <option  value="">Ընտրել</option>
-                            <?php if (!empty($users)){foreach ($users as $user){?>
-                                <option <?=$user['id'] == $orders->user_id ? 'selected' : ''?> value="<?=$user['id']?>"><?=$user['username']?></option>
-                            <?php }} ?>
-                        </select>
-                    </div>
+                    <span>Ուսանող(ուհի)</span>
+                    <input type="text" value="<?=$orders->username->username?>" placeholder="Ուսանող(ուհի)" class="form-control" readonly>
+                    <input type="hidden" name="AcOrders[user_id]" value="<?=$orders->user_id?>"  class="form-control" readonly>
+                    <br>
+                    <select class="js-example-basic-multiple" style="width: 100%" name="lesson_id[]" multiple="multiple">
+                        <option  value="">Ընտրել</option>
+                        <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
+                            <option <?= in_array($lesson['lesson_id'], $lessons_arr) ? 'selected' : ''?> value="<?=$lesson['lesson_id']?>"><?=$lesson['lesson_name']?></option>
+                        <?php }} ?>
+                    </select>
+                    <br>
                     <br>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>
                     <button type="submit" class="btn btn-succ" name="edite" value="true">Գրանցել</button>
@@ -39,7 +41,7 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('.js-example-basic-single').select2();
+        $('.js-example-basic-multiple').select2();
     });
 </script>
 

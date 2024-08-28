@@ -93,20 +93,22 @@ if ($language == 'en') {
                                             <div class="cardBody_2">
                                                 <span class="span1_2"><?=$wishlist_cours['lesson_name']?></span>
                                                 <div class="starAndTxt_2">
-                                                    <div class="starDivWishlistCourses">
-                                                        <?php
-                                                        $count = $wishlist_cours['rating'];
-                                                        $img = '';
-                                                        for ($i = 1; $i <= 5; $i++){
-                                                            if ($i <= $count){
-                                                                $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
-                                                            }else{
-                                                                $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                                    <?php if ($wishlist_cours['rating_exist'] == 1){?>
+                                                        <div class="starDivWishlistCourses">
+                                                            <?php
+                                                            $count = $wishlist_cours['rating'];
+                                                            $img = '';
+                                                            for ($i = 1; $i <= 5; $i++){
+                                                                if ($i <= $count){
+                                                                    $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
+                                                                }else{
+                                                                    $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                                                }
                                                             }
-                                                        }
-                                                        echo $img;
-                                                        ?>
-                                                    </div>
+                                                            echo $img;
+                                                            ?>
+                                                        </div>
+                                                    <?php } ?>
                                                     <h1 class="span2_2"><?=$wishlist_cours['price']?> <span class="spanAmd">AMD</span></h1>
                                                 </div>
                                             </div>
@@ -207,20 +209,22 @@ if ($language == 'en') {
                                         <div class="cardBody_2">
                                             <span class="span1_2"><?=$wishlist_cours['lesson_name']?></span>
                                             <div class="starAndTxt_2">
-                                                <div class="starDivWishlistCourses">
-                                                    <?php
-                                                    $count = $wishlist_cours['rating'];
-                                                    $img = '';
-                                                    for ($i = 1; $i <= 5; $i++){
-                                                        if ($i <= $count){
-                                                            $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
-                                                        }else{
-                                                            $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                                <?php if ($wishlist_cours['rating_exist'] == 1){?>
+                                                    <div class="starDivWishlistCourses">
+                                                        <?php
+                                                        $count = $wishlist_cours['rating'];
+                                                        $img = '';
+                                                        for ($i = 1; $i <= 5; $i++){
+                                                            if ($i <= $count){
+                                                                $img .= '<img src="/images/cardStar.png" alt="" draggable="false">';
+                                                            }else{
+                                                                $img .= '<img src="/images/cardStarWhite.png" alt="" draggable="false">';
+                                                            }
                                                         }
-                                                    }
-                                                    echo $img;
-                                                    ?>
-                                                </div>
+                                                        echo $img;
+                                                        ?>
+                                                    </div>
+                                                <?php } ?>
                                                 <span class="span2_2"><?=$wishlist_cours['price']?> <span class="spanAmd">AMD</span></span>
                                             </div>
                                         </div>

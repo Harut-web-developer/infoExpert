@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "ac_my_lessons".
  *
  * @property int $id
+ * @property int|null $order_id
  * @property int|null $user_id
  * @property int|null $lessons_id
  * @property int|null $complete_percent
@@ -30,7 +31,7 @@ class AcMyLessons extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'lessons_id', 'complete_percent'], 'integer'],
+            [['user_id', 'lessons_id', 'complete_percent','order_id'], 'integer'],
             [['create_date'], 'safe'],
             [['status'], 'string', 'max' => 255],
         ];

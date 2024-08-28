@@ -128,7 +128,7 @@ if ($language == 'en') {
                     $total_count += $lesson['price'];
                 }} ?>
             <span class="sumPriceAll"><?=$total_count?> AMD</span>
-            <p><?=$GLOBALS['text']['checkoutTermsText']?> <a href=""><?=$GLOBALS['text']['checkoutTerms']?></a></p>
+            <p><?=$GLOBALS['text']['checkoutTermsText']?> <a href="/terms-and-conditions"><?=$GLOBALS['text']['checkoutTerms']?></a></p>
             <div class="checkoutTotalFieldInfoBottom">
                 <button type="submit">
                     <img src="/images/sumBtnCheckout.png" alt="">

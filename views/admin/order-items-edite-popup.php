@@ -14,7 +14,7 @@
                     <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
                     <br>
                     <span>Դասընթացի վճար</span>
-                    <input type="text" name="AcOrdersItems[price]" value="<?php echo $order_items->price;?>" placeholder="Դասընթացի վճար" class="form-control">
+                    <input type="text" name="AcOrdersItems[price]" value="<?php echo $order_items->price;?>" placeholder="Դասընթացի վճար" class="form-control" required>
                     <br>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>
                     <button type="submit" class="btn btn-succ" name="edite" value="true">Գրանցել</button>

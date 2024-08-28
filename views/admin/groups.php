@@ -111,10 +111,19 @@
                     <form action="" method="post" enctype="multipart/form-data">
 
                         <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
-
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <span>Խմբի անվանում</span>
+                                <input type="text" name="AcGroups[groups_name]" required placeholder="Խմբի անվանում" class="form-control">
+                            </div>
+                        </div>
                         <br>
-                        <span>Խմբի անվանում</span>
-                        <input type="text" name="AcGroups[groups_name]" required placeholder="Անվանում" class="form-control">
+                        <span>Դասընթացի տեսակը</span>
+                        <select name="AcGroups[action]" id="typeLesson" class="form-control" required>
+                            <option value="">Ընտրել տեսակը</option>
+<!--                            <option value="1">Օնլայն</option>-->
+                            <option value="0">Օֆլայն</option>
+                        </select>
                         <br>
                         <span>Դասընթաց</span>
                         <select name="AcGroups[lesson_id]" id="" class="form-control" required>
@@ -123,13 +132,7 @@
                                 <option value="<?=$lesson['id']?>"><?=$lesson['lesson_name_am']?></option>
                             <?php }} ?>
                         </select>
-                        <br>
-                        <span>Դասընթացի տեսակը</span>
-                        <select name="AcGroups[action]" id="" class="form-control">
-                            <option value="">Ընտրել տեսակը</option>
-<!--                            <option value="1">Օնլայն</option>-->
-                            <option value="0">Օֆլայն</option>
-                        </select>
+
                         <br>
                         <div class="row">
                             <div class="col-sm-12">

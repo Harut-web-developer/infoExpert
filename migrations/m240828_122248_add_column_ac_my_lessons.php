@@ -3,17 +3,16 @@
 use yii\db\Migration;
 
 /**
- * Class m240827_071119_add_table_ac_lessons
+ * Class m240828_122248_add_column_ac_my_lessons
  */
-class m240827_071119_add_table_ac_lessons extends Migration
+class m240828_122248_add_column_ac_my_lessons extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->addColumn('ac_lessons', 'rating_exist', $this->string(11)->defaultValue(null)
-            ->comment('1_see, 0_noSee')->after('rating'));
+        $this->addColumn('ac_my_lessons', 'order_id', $this->integer(11)->defaultValue(null)->after('id'));
     }
 
     /**
@@ -21,7 +20,7 @@ class m240827_071119_add_table_ac_lessons extends Migration
      */
     public function safeDown()
     {
-        echo "m240827_071119_add_table_ac_lessons cannot be reverted.\n";
+        echo "m240828_122248_add_column_ac_my_lessons cannot be reverted.\n";
 
         return false;
     }
@@ -35,7 +34,7 @@ class m240827_071119_add_table_ac_lessons extends Migration
 
     public function down()
     {
-        echo "m240827_071119_add_table_ac_lessons cannot be reverted.\n";
+        echo "m240828_122248_add_column_ac_my_lessons cannot be reverted.\n";
 
         return false;
     }

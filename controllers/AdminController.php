@@ -366,26 +366,26 @@ class AdminController extends Controller {
         date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
-            $groups = new AcGroups();
-            $groups->load($post);
-            $groups->create_date = date('Y-m-d H:i:s');
-            $groups->save(false);
+            echo "<pre>";
+            var_dump($post);
+            exit();
             $users = $post['AcGroups']['user_id'];
-            foreach ($users as $user){
-                $user_groups_id = User::findOne(intval($user));
-                $user_groups_id->groups_id = $groups->id;
-                $user_groups_id->save(false);
-                $my_lesson = new AcMyLessons();
-                $my_lesson->user_id = $user;
-                $my_lesson->lessons_id = $groups->lesson_id;
-                $my_lesson->complete_percent = 0;
-                $my_lesson->create_date = date('Y-m-d H:i:s');
-                $my_lesson->save(false);
-            }
+                $groups = new AcGroups();
+                $groups->load($post);
+                $groups->create_date = date('Y-m-d H:i:s');
+                $groups->save(false);
+                foreach ($users as $user){
+                    $user_groups_id = User::findOne(intval($user));
+                    $user_groups_id->groups_id = $groups->id;
+                    $user_groups_id->save(false);
+                }
 
-            $this->redirect(['groups', 'success' => 'true', 'id' => 'key' . $groups->id]);
+            $this->redirect(['groups', 'success' => 'true']);
         }
         elseif ($post && $post['edite']){
+            echo "<pre>";
+            var_dump($post);
+            exit();
             $groups = AcGroups::findOne(['id' => intval($post['id']) ]);
             $groups->load($post);
             $groups->create_date = date('Y-m-d H:i:s');
@@ -440,7 +440,13 @@ class AdminController extends Controller {
             ->orderBy(['ac_groups.order_num' => SORT_ASC])
             ->asArray()
             ->all();
-        $users = User::find()->select('id,username')->where(['and',['status' => '1'],['role' => null]])->asArray()->all();
+//        $users = User::find()->select('id,username')->where(['and',['status' => '1'],['role' => null]])->asArray()->all();
+        $users = AcMyLessons::find()->select('user.id as user_id,username')
+            ->leftJoin('user', 'user.id = ac_my_lessons.user_id')
+            ->where(['ac_my_lessons.status' => '1'])
+            ->groupBy('ac_my_lessons.user_id')
+            ->asArray()
+            ->all();
         $lessons = AcLessons::find()->select('id,lesson_name_am')->where(['status' => '1'])->asArray()->all();
         return $this->render('groups',[
             'users' => $users,
@@ -488,7 +494,6 @@ class AdminController extends Controller {
         return $this->render('blog', ['pages' => $pages]);
     }
     public function actionLessons() {
-// Harut
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
@@ -758,17 +763,85 @@ class AdminController extends Controller {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
         }
-//        $post = Yii::$app->request->post();
-//        if ($post && $post['edite']) {
-//            $orders = AcOrders::findOne(['id' => intval($post['id']) ]);
-//            $orders->load($post);
-//            $orders->create_date = date('Y-m-d H:i:s');
-//            $orders->save(false);
-//            $this->redirect(['orders', 'success' => 'true', 'id' => 'key' . $orders->id]);
-//        }
+        $post = Yii::$app->request->post();
+        if ($post && $post['add']) {
+            $users = $post['AcOrders']['user_id'];
+            foreach ($users as $user){
+                $orders_exist = AcOrdersItems::find()
+                    ->leftJoin('ac_orders', 'ac_orders.id = ac_orders_items.order_id')
+                    ->where(['and',['ac_orders.status' => '1'],['ac_orders_items.status' => '1'],
+                        ['ac_orders.user_id' => $user],['ac_orders_items.lesson_id' => intval($post['lesson_id'])]])->exists();
+                if (!$orders_exist){
+                    $orders = new AcOrders();
+                    $orders->user_id = $user;
+                    $orders->total_price = intval($post['price']);
+                    $orders->create_date = date('Y-m-d H:i:s');
+                    $orders->save(false);
+                    $order_items = new AcOrdersItems();
+                    $order_items->order_id = $orders->id;
+                    $order_items->lesson_id = intval($post['lesson_id']);
+                    $order_items->price = intval($post['price']);
+                    $order_items->create_date = date('Y-m-d H:i:s');
+                    $order_items->save(false);
+                }
+                $lesson_exist = AcMyLessons::find()->where(['and',['status' => 1],['user_id' => $user],['lessons_id' => intval($post['lesson_id'])]])->exists();
+                if (!$lesson_exist){
+                    $new_lesson = new AcMyLessons();
+                    $new_lesson->order_id = $orders->id;
+                    $new_lesson->user_id = $user;
+                    $new_lesson->lessons_id = intval($post['lesson_id']);
+                    $new_lesson->create_date = date('Y-m-d H:i:s');
+                    $new_lesson->save(false);
+                }
+            }
+            $this->redirect(['orders', 'success' => 'true', 'id' => 'key' . $orders->id]);
+        }elseif ($post && $post['edite']) {
+//            echo "<pre>";
+//            var_dump($post);
+//            exit();
+            $my_lessons = AcMyLessons::find()->where(['and',['status' => 1],['order_id' => intval($post['id'])]])->all();
+            if (!empty($my_lessons)){
+                foreach ($my_lessons as $item){
+                    $item->delete();
+                }
+            }
+            $delete_order_items = AcOrdersItems::find()->where(['order_id' => intval($post['id'])])->all();
+            if (!empty($delete_order_items)) {
+                foreach ($delete_order_items as $item){
+                    $item->delete();
+                }
+            }
+            $lessons = $post['lesson_id'];
+            $price_arr = [];
+            foreach ($lessons as $lesson_id){
+                $lessons_price = AcLessons::findOne(intval($lesson_id));
+                array_push($price_arr,$lessons_price->price);
+                $order_items = new AcOrdersItems();
+                $order_items->order_id = intval($post['id']);
+                $order_items->lesson_id = intval($lesson_id);
+                $order_items->price = $lessons_price->price;
+                $order_items->create_date = date('Y-m-d H:i:s');
+                $order_items->save(false);
+                $new_lesson = new AcMyLessons();
+                $new_lesson->order_id = intval($post['id']);
+                $new_lesson->user_id = intval($post['AcOrders']['user_id']);
+                $new_lesson->lessons_id = intval($lesson_id);
+                $new_lesson->create_date = date('Y-m-d H:i:s');
+                $new_lesson->save(false);
+            }
+            $orders = AcOrders::findOne(['id' => intval($post['id']) ]);
+            $orders->total_price = array_sum($price_arr);
+            $orders->create_date = date('Y-m-d H:i:s');
+            $orders->save(false);
+            $this->redirect(['orders', 'success' => 'true', 'id' => 'key' . $orders->id]);
+        }
+        $lessons = AcLessons::find()->select('id,lesson_name_am as lesson_name')->where(['status' => '1'])->asArray()->all();
+        $users = User::find()->select('id,username')->where(['and',['status' => '1'],['role' => null]])->asArray()->all();
         $orders = AcOrders::find()->with('username')->orderBy(['order_num' => SORT_ASC])->all();
         return $this->render('orders',[
-            'orders' => $orders
+            'orders' => $orders,
+            'lessons' => $lessons,
+            'users' => $users,
         ]);
     }
     public function actionOrderItems(){
@@ -783,7 +856,7 @@ class AdminController extends Controller {
             $order_items->load($post);
             $order_items->create_date = date('Y-m-d H:i:s');
             $order_items->save(false);
-            $price = AcOrdersItems::find()->select('price')->where(['status' => '1'])->asArray()->all();
+            $price = AcOrdersItems::find()->select('price')->where(['status' => '1'])->andWhere(['order_id' => $order_items->order_id])->asArray()->all();
             $prices = array_column($price, 'price');
             $prices = array_sum($prices);
             $orders = AcOrders::findOne(['id' => $order_items->order_id]);
@@ -1094,6 +1167,16 @@ class AdminController extends Controller {
         $lesson = AcLessons::findOne(['id' => $id]);
         return $this->renderAjax('lesson-edite-popup', ['lesson' => $lesson]);
     }
+    public function actionChooseLesson() {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(['admin/login']);
+        }
+        $id = intval($_GET['id']);
+        $lesson_price = AcLessons::findOne($id);
+            return $this->renderAjax('price-lesson-popup',[
+                'lesson_price' => $lesson_price
+            ]);
+    }
     public function actionVideoEdite() {
         if (Yii::$app->user->isGuest) {
             $this->redirect(['admin/login']);
@@ -1158,9 +1241,24 @@ class AdminController extends Controller {
             $this->redirect(['admin/login']);
         }
         $id = intval($_GET['id']);
-        $orders = AcOrders::findOne(['id' => $id]);
-        $users = User::find()->select('id, username')->where(['and',['role' => null]])->asArray()->all();
-        return $this->renderAjax('orders-edite-popup', ['orders' => $orders,'users' => $users]);
+        $orders = AcOrders::find()->with('username')->where(['id' => $id])->one();
+        $lessons = AcLessons::find()->select('ac_lessons.id as lesson_id, ac_lessons.lesson_name_am as lesson_name')
+            ->where(['ac_lessons.status' => '1'])
+            ->asArray()
+            ->all();
+        $lessons_id = AcOrdersItems::find()->select('id,lesson_id')->where(['order_id' => $id])
+            ->andWhere(['status' => '1'])
+            ->asArray()
+            ->all();
+        $lessons_arr = [];
+        for ($k = 0; $k < count($lessons_id); $k++){
+            array_push($lessons_arr, $lessons_id[$k]['lesson_id']);
+        }
+        return $this->renderAjax('orders-edite-popup', [
+            'orders' => $orders,
+            'lessons' => $lessons,
+            'lessons_arr' => $lessons_arr,
+        ]);
     }
     public function actionGroupsEdite() {
         if (Yii::$app->user->isGuest) {
@@ -1408,9 +1506,19 @@ class AdminController extends Controller {
         $orders = AcOrders::findOne(['id' => $id]);
         if ($orders->status) {
             $orders->status = 0;
+            $my_lessons = AcMyLessons::find()->where(['and',['order_id' => $id],['status' => '1']])->all();
+            foreach ($my_lessons as $lesson){
+                $lesson->status = 0;
+                $lesson->save(false);
+            }
         }
         else {
             $orders->status = 1;
+            $my_lessons = AcMyLessons::find()->where(['and',['order_id' => $id],['status' => '0']])->all();
+            foreach ($my_lessons as $lesson){
+                $lesson->status = 1;
+                $lesson->save(false);
+            }
         }
 
         $orders->save(false);
@@ -1419,14 +1527,26 @@ class AdminController extends Controller {
     public function actionOrderItemsDisable() {
         $id = intval($_GET['id']);
         $order_items = AcOrdersItems::findOne(['id' => $id]);
+        $orders = AcOrders::findOne($order_items->order_id);
         if ($order_items->status) {
+            $my_lesson = AcMyLessons::findOne([
+                'order_id' => $order_items->order_id,
+                'user_id' => $orders->user_id,
+                'lessons_id' => $order_items->lesson_id,
+                'status' => '1'
+            ]);
+            $my_lesson->status = 0;
+            $my_lesson->save(false);
             $order_items->status = 0;
         }
         else {
+            $my_lesson = AcMyLessons::findOne(['order_id' => $order_items->order_id,'user_id' => $orders->user_id,'lessons_id' => $order_items->lesson_id,'status' => '0']);
+            $my_lesson->status = 1;
+            $my_lesson->save(false);
             $order_items->status = 1;
         }
         $order_items->save(false);
-        $price = AcOrdersItems::find()->select('price')->where(['status' => '1'])->asArray()->all();
+        $price = AcOrdersItems::find()->select('price')->where(['status' => '1'])->andWhere(['order_id' => $order_items->order_id])->asArray()->all();
         $prices = array_column($price, 'price');
         $prices = array_sum($prices);
         $orders = AcOrders::findOne(['id' => $order_items->order_id]);

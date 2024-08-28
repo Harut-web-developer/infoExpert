@@ -47,6 +47,16 @@ function disableManager(id) {
 		});
 	}
 }
+function chooseLesson(id) {
+	if (id) {
+		jQuery.ajax({
+			url: "/admin/choose-lesson?id=" + id,
+			success: function(result) {
+				jQuery(".lessonPriceField").html(result);
+			}
+		});
+	}
+}
 
 function copyCategory(id) {
 	if (id) {
@@ -848,6 +858,14 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '#disableManager', function(event) {
 		var id = $('.sortableTable tr.active').attr('data-id');
 		disableManager(id);
+	});
+	$('body').on('change', '.chooseLesson', function(event) {
+		var id = $(this).val();
+		if (id == ''){
+			$('.lessonPriceField').html('')
+		}else {
+			chooseLesson(id);
+		}
 	});
 	$('body').on('click', '#disableBrand', function(event) {
 		var id = $('.sortableTable tr.active').attr('data-id');

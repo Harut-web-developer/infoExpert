@@ -26,6 +26,7 @@ use Yii;
  * @property string|null $lesson_content_en
  * @property int|null $order_num
  * @property int|null $rating
+ * @property string|null $rating_exist
  * @property int|null $price
  * @property string|null $img
  * @property string|null $certificate_img
@@ -49,7 +50,7 @@ class AcLessons extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['lesson_keywords_am', 'lesson_keywords_ru', 'lesson_keywords_en', 'lesson_content_am', 'lesson_content_ru', 'lesson_content_en'], 'string'],
+            [['lesson_keywords_am', 'lesson_keywords_ru', 'lesson_keywords_en', 'lesson_content_am', 'lesson_content_ru', 'lesson_content_en','rating_exist'], 'string'],
             [['order_num', 'status','price','rating','lessons_count'], 'integer'],
             [['create_date'], 'safe'],
             [['lesson_name_am', 'lesson_name_ru', 'lesson_name_en', 'lesson_title_am', 'lesson_title_ru', 'lesson_title_en','lesson_certificate_am','lesson_certificate_ru','lesson_certificate_en', 'url'], 'string', 'max' => 255],

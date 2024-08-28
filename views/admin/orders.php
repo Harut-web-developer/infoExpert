@@ -1,3 +1,4 @@
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <input type="hidden" data-page='AcOrders' id="page">
 <?php if(isset($_GET['success'])){ ?>
     <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
@@ -27,6 +28,7 @@
                                           <button class="btn btn-sm btn-default" id="editeOrders"><i class="fa fa-pencil"></i></button>
                                           <button class="btn btn-sm btn-danger" id="disableOrders"><i class="fa fa-trash"></i></button>
                                         </span>
+                            <a href="#" data-toggle="modal" data-target="#addnew" class="btn btn-succ fl" style="margin-left:10px;"><i class="bx bx-plus me-1"></i> Ավելացնել</a>
                         </h4>
                     </div>
                     <div class="card-body--">
@@ -76,6 +78,59 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade add-new" id="addnew" tabindex="-1" role="dialog" aria-labelledby="addnew" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addnew">Ավելացնել խմբեր</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" enctype="multipart/form-data">
+
+                        <input type="hidden" name="<?= $this->renderDynamic('return Yii::$app->request->csrfParam;'); ?>" value="<?= $this->renderDynamic('return Yii::$app->request->csrfToken;'); ?>" />
+
+                        <span>Դասընթաց</span>
+                        <select name="lesson_id" id="" class="form-control chooseLesson" required>
+                            <option value="">Ընտրել դասընթաց</option>
+                            <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
+                                <option value="<?=$lesson['id']?>"><?=$lesson['lesson_name']?></option>
+                            <?php }} ?>
+                        </select>
+                        <br>
+                        <div class="row lessonPriceField">
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <span>Ուսանողներ</span>
+                                <select class="js-example-basic-multiple" style="width: 100%" required name="AcOrders[user_id][]" multiple="multiple">
+                                    <?php if (!empty($users)){foreach ($users as $user){?>
+                                        <option value="<?=$user['id']?>"><?=$user['username']?></option>
+                                    <?php }} ?>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Փակել</button>
+                        <button type="submit" class="btn btn-succ" name="add" value="true">Գրանցել</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="modals">
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>

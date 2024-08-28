@@ -84,7 +84,7 @@ if ($language == 'en') {
                                         <div class="myCoursesBlocksFieldMainInfo">
                                             <div class="infoTitle"><?=$my_lesson['lesson_name']?></div>
                                             <div class="myCoursesRating">
-                                                <?php if ($my_lesson['rating'] != null || $my_lesson['rating'] != 0){?>
+                                                <?php if (($my_lesson['rating'] != null || $my_lesson['rating'] != 0) && $my_lesson['rating_exist'] == 1){?>
                                                     <div class="ratingStarMyourse">
                                                         <?php
                                                         $count = $my_lesson['rating'];
@@ -132,7 +132,7 @@ if ($language == 'en') {
                         <span><?=$my_lesson['lesson_name']?></span>
 
                         <div class="myCoursesRating">
-                            <?php if ($my_lesson['rating'] != null || $my_lesson['rating'] != 0){?>
+                            <?php if (($my_lesson['rating'] != null || $my_lesson['rating'] != 0) && $my_lesson['rating_exist'] == 1){?>
                                 <div class="ratingStarMyourse">
                                     <?php
                                     $count = $my_lesson['rating'];

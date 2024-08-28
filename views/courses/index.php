@@ -38,8 +38,9 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                             <div class="cardBody">
                                 <span class="span1"><?=$course['lesson_name']?></span>
                                 <div class="starAndTxt">
-                                    <div class="starDivCourses">
-                                        <?php
+                                    <?php if ($course['rating_exist'] == 1){?>
+                                        <div class="starDivCourses">
+                                            <?php
                                             $count = $course['rating'];
                                             $img = '';
                                             for ($i = 1; $i <= 5; $i++){
@@ -50,8 +51,9 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                                 }
                                             }
                                             echo $img;
-                                        ?>
-                                    </div>
+                                            ?>
+                                        </div>
+                                    <?php } ?>
                                     <h1 class="span2"><?=$course['price']?> <span class="amd">AMD</span></h1>
                                 </div>
                             </div>
@@ -96,6 +98,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                         <div class="cardBody">
                             <span class="span1"><?=$course['lesson_name']?></span>
                             <div class="starAndTxt">
+                                <?php if ($course['rating_exist'] == 1){?>
                                 <div class="starDivCourses">
                                     <?php
                                         $count = $course['rating'];
@@ -110,6 +113,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.j
                                         echo $img;
                                     ?>
                                 </div>
+                                <?php } ?>
                                 <div class="span2"><?=$course['price']?> <span class="amd">AMD</span></div>
                             </div>
                         </div>

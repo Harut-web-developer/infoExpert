@@ -24,6 +24,14 @@
                             <input type="file" name="certificate_img">
                         </div>
                     </div>
+                    <br>
+                    <span style="margin-bottom: 4px;">Վարկանիշ</span>
+                    <div>
+                        <input id="see" type="radio" value="1" name="AcLessons[rating_exist]" <?=$lesson->rating_exist == 1 ? 'checked' : ''?>>
+                        <label for="see">Երևա</label>
+                        <input style="margin-left: 5px" id="noSee" type="radio" value="0" name="AcLessons[rating_exist]" <?=$lesson->rating_exist == 0 ? 'checked' : ''?>>
+                        <label for="noSee">Չերևա</label>
+                    </div>
                     <span>Գին</span>
                     <input type="number" name="AcLessons[price]" value="<?php echo $lesson->price;?>" required placeholder="Գին" class="form-control">
                     <span>Դասընթացի քանակ (առանց քննության)</span>

@@ -59,7 +59,7 @@ class WishlistController extends \yii\web\Controller
         // Harut
 //        echo "<pre>";
         $language = $_COOKIE['language'];
-        $wishlist_courses = AcLessons::find()->select('ac_lessons.id as lessons_id, ac_lessons.img as img, ac_lessons.price as price, ac_lessons.rating as rating,
+        $wishlist_courses = AcLessons::find()->select('ac_lessons.id as lessons_id, ac_lessons.img as img, ac_lessons.price as price, ac_lessons.rating as rating,ac_lessons.rating_exist as rating_exist,
          lesson_name_'.$language.' as lesson_name,lesson_title_'.$language.' as lesson_title,lesson_certificate_'.$language.' as lesson_certificate')
             ->leftJoin('ac_wishlist', 'ac_lessons.id = ac_wishlist.product_id')
             ->where(['ac_lessons.status' => '1'])
