@@ -131,10 +131,10 @@ function editeLesson(id) {
 		});
 	}
 }
-function addLesson(id, text) {
+function addLesson(id, text,action) {
 	if (id) {
 		jQuery.ajax({
-			url: "/admin/lesson-add?id=" + id,
+			url: "/admin/lesson-add?id=" + id +"&&action="+ action,
 			success: function(result) {
                 let res = JSON.parse(result);
 				if (text == 'start'){
@@ -155,10 +155,10 @@ function addLesson(id, text) {
 		});
 	}
 }
-function backLesson(id,lesson_count) {
+function backLesson(id,lesson_count,action) {
 	if (id) {
 		jQuery.ajax({
-			url: "/admin/lesson-back?id=" + id +"&&lesson_count=" + lesson_count,
+			url: "/admin/lesson-back?id=" + id +"&&lesson_count=" + lesson_count + "&&action=" + action,
 			success: function(result) {
 				window.location.reload();
 			}
@@ -894,12 +894,14 @@ jQuery(document).ready(function($) {
     $('body').on('click', '.lessonBtn', function(event) {
 		var id = $(this).closest('tr').attr('data-id');
 		var text = $(this).attr('data-text');
-		addLesson(id,text);
+		var action = $(this).attr('data-action');
+		addLesson(id,text,action);
 	});
     $('body').on('click', '.backLesson', function(event) {
 		var id = $(this).closest('.lessonFieldBtn').attr('data-groups-id');
+		var action = $(this).closest('.lessonFieldBtn').data('action');
 		var lesson_id = $(this).attr('data-lesson');
-        backLesson(id,lesson_id);
+        backLesson(id,lesson_id,action);
 	});
 	$('body').on('click', '#editeSubscribers', function(event) {
 		var id = $('.sortableTable  tr.active').attr('data-id');

@@ -62,20 +62,25 @@
                                                         <td scope="col"><?php echo $item['lesson_name'];?></td>
                                                         <td scope="col"><?php
                                                             if ($item['action'] == 1) {
-                                                                echo 'Օնլայն';
+                                                                echo 'Հիբրիդ';
                                                             } elseif ($item['action'] == 0) {
                                                                 echo 'Օֆլայն';
                                                             }; ?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php if (!empty($item['username'])){foreach ($item['username'] as $user){?>
-                                                                    <div><?=$user['username']?></div>
-                                                               <?php }} ?>
+                                                            <?php
+                                                            if (!empty($item['usernames'])) {
+                                                                $usernames = explode(',', $item['usernames']);
+                                                                foreach ($usernames as $username) {
+                                                                    echo "<div>".$username."</div>";
+                                                                }
+                                                            }
+                                                            ?>
                                                         </td>
                                                         <td scope="col">
-                                                            <?php if ($item['action'] == 0){?>
-                                                                <button <?=$item['status'] != 1 ? 'disabled' : ''?> data-text="finish" class="btn btn-outline-success lessonBtn">Ավարտել դասը</button>
-                                                            <?php }?>
+<!--                                                            --><?php //if ($item['action'] == 0){?>
+                                                                <button <?=$item['status'] != 1 ? 'disabled' : ''?> data-action="<?=$item['action']?>" data-text="finish" class="btn btn-outline-success lessonBtn">Ավարտել դասը</button>
+<!--                                                            --><?php //}?>
                                                         </td>
                                                         <td scope="col">
                                                             <?php if($item['status'] == 1){
@@ -121,7 +126,7 @@
                         <span>Դասընթացի տեսակը</span>
                         <select name="AcGroups[action]" id="typeLesson" class="form-control" required>
                             <option value="">Ընտրել տեսակը</option>
-<!--                            <option value="1">Օնլայն</option>-->
+                            <option value="1">Հիբրիդ</option>
                             <option value="0">Օֆլայն</option>
                         </select>
                         <br>
@@ -129,7 +134,7 @@
                         <select name="AcGroups[lesson_id]" id="" class="form-control" required>
                             <option value="">Ընտրել դասընթաց</option>
                             <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
-                                <option value="<?=$lesson['id']?>"><?=$lesson['lesson_name_am']?></option>
+                                <option value="<?=$lesson['lesson_id']?>"><?=$lesson['lesson_name']?></option>
                             <?php }} ?>
                         </select>
 
@@ -139,7 +144,7 @@
                                 <span>Ուսանողներ</span>
                                 <select class="js-example-basic-multiple" style="width: 100%" required name="AcGroups[user_id][]" multiple="multiple">
                                     <?php if (!empty($users)){foreach ($users as $user){?>
-                                        <option value="<?=$user['id']?>"><?=$user['username']?></option>
+                                        <option value="<?=$user['user_id']?>"><?=$user['username']?></option>
                                     <?php }} ?>
                                 </select>
                             </div>

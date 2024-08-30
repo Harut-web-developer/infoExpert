@@ -640,6 +640,7 @@ $(document).ready(function (e) {
 })
     $('body').on('click', '.clickVideoLesson',function () {
         let num = $(this).data('number');
+        let lesson = $(this).data('lesson');
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
         $.ajax({
             url: '/lessons/change-video',
@@ -647,6 +648,7 @@ $(document).ready(function (e) {
             datatype: 'json',
             data: {
                 num: num,
+                lesson: lesson,
                 _csrf: csrfToken
             },
             success: function (data) {
@@ -702,6 +704,7 @@ $(document).ready(function (e) {
     });
     $('body').on('click', '.backgroundVideo', function () {
         let video_id = $(this).data('video');
+        let action = $(this).data('action');
         let csrfToken = $('meta[name="csrf-token"]').attr("content");
         $.ajax({
             url: '/lessons/check-watched',
@@ -709,10 +712,12 @@ $(document).ready(function (e) {
             datatype: 'json',
             data: {
                 video_id: video_id,
+                action: action,
                 _csrf: csrfToken
             },
             success: function (data) {
                 if (data){
+                    $('.backgroundVideo').text('');
                     $('.backgroundVideo').removeClass();
                 }
             }

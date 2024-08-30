@@ -57,4 +57,11 @@ class AcGroups extends \yii\db\ActiveRecord
     {
         return $this->hasMany(User::class, ['groups_id' => 'id']);
     }
+
+    public function getUsers()
+    {
+        return User::find()->where(new \yii\db\Expression('FIND_IN_SET(:group_id, groups_id)'))
+            ->addParams([':group_id' => $this->id])
+            ->all();
+    }
 }

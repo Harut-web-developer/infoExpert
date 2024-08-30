@@ -22,6 +22,7 @@ use app\models\AcRating;
 use app\models\AcReviews;
 use app\models\AcSubscribers;
 use app\models\AcTutors;
+use app\models\AcUserVideoWatch;
 use app\models\AcVideoLessons;
 use app\models\FsOrders;
 use app\models\AcBlog;
@@ -366,88 +367,102 @@ class AdminController extends Controller {
         date_default_timezone_set("Asia/Yerevan");
         $post = Yii::$app->request->post();
         if ($post && $post['add']) {
-            echo "<pre>";
-            var_dump($post);
-            exit();
             $users = $post['AcGroups']['user_id'];
-                $groups = new AcGroups();
-                $groups->load($post);
-                $groups->create_date = date('Y-m-d H:i:s');
-                $groups->save(false);
-                foreach ($users as $user){
-                    $user_groups_id = User::findOne(intval($user));
-                    $user_groups_id->groups_id = $groups->id;
-                    $user_groups_id->save(false);
-                }
-
-            $this->redirect(['groups', 'success' => 'true']);
-        }
-        elseif ($post && $post['edite']){
-            echo "<pre>";
-            var_dump($post);
-            exit();
-            $groups = AcGroups::findOne(['id' => intval($post['id']) ]);
+            $groups = new AcGroups();
             $groups->load($post);
             $groups->create_date = date('Y-m-d H:i:s');
             $groups->save(false);
-            $delete_users = User::find()->where(['groups_id' => $groups->id])->all();
-            $users_arr = [];
-            if (!empty($delete_users)){
-                foreach($delete_users as $delete_user){
-                    array_push($users_arr,$delete_user->id);
-                    $delete_user->groups_id = null;
-                    $delete_user->save(false);
-                }
-            }
-            $users = $post['AcGroups']['user_id'];
-            $new_lesson_user_id = array_diff($users,$users_arr);
-            $old_lesson_user_id = array_diff($users_arr,$users);
             foreach ($users as $user){
                 $user_groups_id = User::findOne(intval($user));
-                $user_groups_id->groups_id = $groups->id;
+                if ($user_groups_id->groups_id == ''){
+                    $user_groups_id->groups_id = $groups->id;
+                }else{
+                    $explode = explode(',',$user_groups_id->groups_id);
+                    array_push($explode,$groups->id);//$groups->id
+                    $implode = implode(',',$explode);
+                    $user_groups_id->groups_id = $implode;
+                }
                 $user_groups_id->save(false);
-            }
-            foreach ($old_lesson_user_id as $item){
-                $my_lesson = AcMyLessons::findOne(['user_id' => $item,'lessons_id' => $groups->lesson_id]);
-                if (!empty($my_lesson)) {
-                    $my_lesson->delete();
-                }
-            }
-            foreach ($new_lesson_user_id as $item){
-                $my_lesson = AcMyLessons::findOne(['user_id' => $item,'lessons_id' => $groups->lesson_id]);
-                if (empty($my_lesson)) {
-                    $new_lesson = new AcMyLessons();
-                    $new_lesson->user_id = $item;
-                    $new_lesson->lessons_id = $groups->lesson_id;
-                    $new_lesson->complete_percent = 0;
-                    $new_lesson->create_date = date('Y-m-d H:i:s');
-                    $new_lesson->save(false);
-                }
             }
             $this->redirect(['groups', 'success' => 'true', 'id' => 'key' . $groups->id]);
         }
-        $groups = AcGroups::find()->select('ac_groups.id as id, ac_lessons.lesson_name_am as lesson_name,groups_name,ac_groups.status as status, action')
-            ->joinWith([
-                'username' => function($query) {
-                    $query->select([
-                        'id as user_id',
-                        'username',
-                        'groups_id',
-                    ])->asArray();
+        elseif ($post && $post['edite']){
+            $users = $post['AcGroups']['user_id'];
+            $groups = AcGroups::findOne(['id' => intval($post['id']) ]);
+            if ($groups->lesson_id != $post['AcGroups']['lesson_id']){
+                $groups->lesson_count = 0;
+            }
+            $groups->lesson_id = $post['AcGroups']['lesson_id'];
+            $groups->groups_name = $post['AcGroups']['groups_name'];
+            $groups->action = $post['AcGroups']['action'];
+            $groups->create_date = date('Y-m-d H:i:s');
+            $groups->save(false);
+            $delete_users = User::find()
+                ->where(new \yii\db\Expression('FIND_IN_SET(:groupId, groups_id)'))
+                ->addParams([':groupId' => $post['id']])
+                ->all();
+            if (!empty($delete_users)){
+                foreach($delete_users as $delete_user){
+                    if (!in_array($delete_user['id'],$users)){
+                        $get_arr = explode(',',$delete_user['groups_id']);
+                        $search = array_search($post['id'],$get_arr);
+                        array_splice($get_arr,$search,1);
+                        if (empty($get_arr)){
+                            $delete_user->groups_id = null;
+                        }else{
+                            $implode = implode(',',$get_arr);
+                            $delete_user->groups_id = $implode;
+                        }
+                        $delete_user->save(false);
+                    }
                 }
+            }
+            foreach ($users as $user){
+                $user_groups_id = User::findOne(intval($user));
+                $explode = explode(',',$user_groups_id->groups_id);
+                if ($user_groups_id->groups_id == ''){
+                    $user_groups_id->groups_id = $groups->id;
+                }else{
+                    if (!in_array($groups->id,$explode)){
+                        array_push($explode,$groups->id);
+                        $implode = implode(',',$explode);
+                        $user_groups_id->groups_id = $implode;
+                    }
+                }
+                $user_groups_id->save(false);
+            }
+            $this->redirect(['groups', 'success' => 'true', 'id' => 'key' . $groups->id]);
+        }
+        $groups = AcGroups::find()
+            ->select([
+                'ac_groups.id as id',
+                'ac_lessons.lesson_name_am as lesson_name',
+                'ac_groups.groups_name',
+                'ac_groups.status as status',
+                'ac_groups.action',
+                'GROUP_CONCAT(user.username) as usernames',
             ])
-            ->leftJoin('ac_lessons','ac_lessons.id = ac_groups.lesson_id')
+            ->leftJoin('ac_lessons', 'ac_lessons.id = ac_groups.lesson_id')
+            ->leftJoin('user', new \yii\db\Expression('FIND_IN_SET(ac_groups.id, user.groups_id) > 0'))
+            ->groupBy('ac_groups.id')
             ->orderBy(['ac_groups.order_num' => SORT_ASC])
             ->asArray()
             ->all();
-//        $users = User::find()->select('id,username')->where(['and',['status' => '1'],['role' => null]])->asArray()->all();
+//        echo "<pre>";
+//        var_dump($groups);
+//        exit();
         $users = AcMyLessons::find()->select('user.id as user_id,username')
             ->leftJoin('user', 'user.id = ac_my_lessons.user_id')
             ->where(['ac_my_lessons.status' => '1'])
             ->groupBy('ac_my_lessons.user_id')
             ->asArray()
             ->all();
-        $lessons = AcLessons::find()->select('id,lesson_name_am')->where(['status' => '1'])->asArray()->all();
+        $lessons = AcMyLessons::find()->select('ac_lessons.id as lesson_id, ac_lessons.lesson_name_am as lesson_name')
+            ->leftJoin('ac_lessons','ac_lessons.id = ac_my_lessons.lessons_id')
+            ->where(['ac_my_lessons.status' => '1'])
+            ->groupBy('ac_my_lessons.lessons_id')
+            ->asArray()
+            ->all();
         return $this->render('groups',[
             'users' => $users,
             'lessons' => $lessons,
@@ -1266,12 +1281,23 @@ class AdminController extends Controller {
         }
         $id = intval($_GET['id']);
         $groups = AcGroups::findOne(['id' => $id]);
-        $users = User::find()->select('id,username,groups_id')->where(['and',['status' => '1'],['role' => null]])->asArray()->all();
-        $lessons = AcLessons::find()->select('id,lesson_name_am')->asArray()->all();
+        $users = AcMyLessons::find()->select('user.id as user_id, username, groups_id')
+            ->leftJoin('user', 'user.id = ac_my_lessons.user_id')
+            ->where(['ac_my_lessons.status' => '1'])
+            ->groupBy('ac_my_lessons.user_id')
+            ->asArray()
+            ->all();
+        $lessons = AcMyLessons::find()->select('ac_lessons.id as lesson_id, ac_lessons.lesson_name_am as lesson_name')
+            ->leftJoin('ac_lessons','ac_lessons.id = ac_my_lessons.lessons_id')
+            ->where(['ac_my_lessons.status' => '1'])
+            ->andWhere(['ac_my_lessons.lessons_id' => $groups->lesson_id])
+            ->groupBy('ac_my_lessons.lessons_id')
+            ->asArray()
+            ->all();
         return $this->renderAjax('groups-edite-popup', [
                 'groups' => $groups,
                 'users' => $users,
-                'lessons' => $lessons
+                'lessons' => $lessons,
             ]);
     }
     public function actionCertificateEdite() {
@@ -1569,41 +1595,64 @@ class AdminController extends Controller {
             $groups->status = 1;
         }
         $groups->save(false);
-        $users = User::find()->select('id')->where(['and',['groups_id' => $groups->id]])->all();
-        foreach ($users as $user){
-            $my_lessons = AcMyLessons::findOne(['user_id' => $user, 'lessons_id' => $groups->lesson_id]);
-            if (!empty($my_lessons)){
-                $my_lessons->status = $groups->status;
-                $my_lessons->save(false);
-            }
-        }
         return true;
     }
     public function actionLessonAdd() {
         $id = intval($_GET['id']);
         $lesson = AcGroups::findOne($id);
         $course = AcLessons::findOne($lesson->lesson_id);
-        if($lesson->lesson_count < $course->lessons_count){
-            $count = $lesson->lesson_count;
-            $count++;
-            $lesson->lesson_count = $count;
-            $lesson->save(false);
-            $percent = round((100 / $course->lessons_count) * $lesson->lesson_count);
-            $users = User::find()->select('id')->where(['and',['role' => null],['groups_id' => $id]])->asArray()->all();
-            foreach ($users as $user){
-                $my_lessons = AcMyLessons::findOne(['user_id' => $user['id'],'lessons_id' => $lesson->lesson_id, 'status' => '1']);
-                if (!empty($my_lessons)){
-                    $my_lessons->complete_percent = $percent;
-                    if ($my_lessons->complete_percent == 100){
-                        $my_lessons->status = '2';
+        $hybrid_count = $lesson->lesson_count;
+        $users = User::find()->select('id')
+            ->where(new \yii\db\Expression('FIND_IN_SET(:groupId, groups_id)'))
+            ->andWhere(['role' => null])
+            ->addParams([':groupId' => $id])
+            ->asArray()
+            ->all();
+        if (isset($_GET) && $_GET['action'] == 1){
+            $video_count = AcVideoLessons::find()->where(['and',['lesson_id' => $lesson->lesson_id],['status' => '1']])->count();
+            if ($hybrid_count < $course->lessons_count - $video_count) {
+                $hybrid_count++;
+                foreach ($users as $user) {
+                    $check_count_video = AcUserVideoWatch::find()->where(['and',['user_id' => $user['id']],['lesson_id' => $lesson->lesson_id],['status' => '1']])->count();
+                    $check_count_video += $hybrid_count;
+                    $lesson->lesson_count = $hybrid_count;
+                    $lesson->save(false);
+                    $percent = round((100 / $course->lessons_count) * $check_count_video);
+                    $my_lessons = AcMyLessons::findOne(['user_id' => $user['id'],'lessons_id' => $lesson->lesson_id, 'status' => '1']);
+                    if (!empty($my_lessons)){
+                        $my_lessons->complete_percent = $percent;
+                        if ($my_lessons->complete_percent == 100){
+                            $my_lessons->status = '2';
+                        }
+                        $my_lessons->save(false);
                     }
-                    $my_lessons->save(false);
                 }
-
+                return json_encode('add');
+            }else{
+                return json_encode('danger');
             }
-            return json_encode('add');
-        }else{
-            return json_encode('danger');
+        }elseif (isset($_GET) && $_GET['action'] == 0){
+            if($lesson->lesson_count < $course->lessons_count){
+                $count = $lesson->lesson_count;
+                $count++;
+                $lesson->lesson_count = $count;
+                $lesson->save(false);
+                $percent = round((100 / $course->lessons_count) * $lesson->lesson_count);
+                foreach ($users as $user){
+                    $my_lessons = AcMyLessons::findOne(['user_id' => $user['id'],'lessons_id' => $lesson->lesson_id, 'status' => '1']);
+                    if (!empty($my_lessons)){
+                        $my_lessons->complete_percent = $percent;
+                        if ($my_lessons->complete_percent == 100){
+                            $my_lessons->status = '2';
+                        }
+                        $my_lessons->save(false);
+                    }
+
+                }
+                return json_encode('add');
+            }else{
+                return json_encode('danger');
+            }
         }
     }
     public function actionLessonBack() {
@@ -1611,17 +1660,38 @@ class AdminController extends Controller {
         $lesson = AcGroups::findOne($id);
         $lesson->lesson_count = intval($_GET['lesson_count']);
         $lesson->save(false);
+        $hybrid_count = $lesson->lesson_count;
+        $users = User::find()->select('id')
+            ->where(new \yii\db\Expression('FIND_IN_SET(:groupId, groups_id)'))
+            ->andWhere(['role' => null])
+            ->addParams([':groupId' => $id])
+            ->asArray()
+            ->all();
         $course = AcLessons::findOne($lesson->lesson_id);
-        $percent = round((100 / $course->lessons_count) * $lesson->lesson_count);
-        $users = User::find()->select('id')->where(['and',['role' => null],['groups_id' => $id]])->asArray()->all();
-        foreach ($users as $user){
-            $my_lessons = AcMyLessons::findOne(['user_id' => $user['id'],'lessons_id' => $lesson->lesson_id, 'status' => '1']);
-            if (!empty($my_lessons)){
-                $my_lessons->complete_percent = $percent;
-                $my_lessons->status = '1';
-                $my_lessons->save(false);
+        if ($_GET['action'] == 1){
+                foreach ($users as $user) {
+                    $check_count_video = AcUserVideoWatch::find()->where(['and',['user_id' => $user['id']],['lesson_id' => $lesson->lesson_id],['status' => '1']])->count();
+                    $check_count_video += $hybrid_count;
+                    $percent = round((100 / $course->lessons_count) * $check_count_video);
+                    $my_lessons = AcMyLessons::findOne(['user_id' => $user['id'],'lessons_id' => $lesson->lesson_id, 'status' => '1']);
+                    if (!empty($my_lessons)){
+                        $my_lessons->complete_percent = $percent;
+                        if ($my_lessons->complete_percent == 100){
+                            $my_lessons->status = '2';
+                        }
+                        $my_lessons->save(false);
+                    }
+                }
+        }else{
+            $percent = round((100 / $course->lessons_count) * $lesson->lesson_count);
+            foreach ($users as $user){
+                $my_lessons = AcMyLessons::findOne(['user_id' => $user['id'],'lessons_id' => $lesson->lesson_id, 'status' => '1']);
+                if (!empty($my_lessons)){
+                    $my_lessons->complete_percent = $percent;
+                    $my_lessons->status = '1';
+                    $my_lessons->save(false);
+                }
             }
-
         }
         return true;
     }

@@ -10,6 +10,7 @@ use app\models\AcUserVideoWatch;
 use app\models\AcVideoLessons;
 use Yii;
 use app\models\Texts;
+use app\models\User;
 
 class LessonsController extends \yii\web\Controller
 {
@@ -67,7 +68,7 @@ class LessonsController extends \yii\web\Controller
             ->asArray()
             ->all();
         $change_video = AcVideoLessons::find()->select('id,name_'.$language.' as name, video, type')
-            ->where(['and',['status' => '1'],['lesson_id' => $lesson['id']],['lesson_number' => 1]])->asArray()->one();
+            ->where(['and',['status' => '1'],['lesson_id' => $lesson['id']]])->asArray()->one();
         $tutors = AcTutors::find()->select('id, username_'.$language.' as username, text_'.$language.' as text,img')
             ->where(['status' => '1'])
             ->andwhere(['lesson_id' => $lesson['id']])
@@ -78,6 +79,7 @@ class LessonsController extends \yii\web\Controller
             ->leftJoin('ac_video_lessons','ac_video_lessons.id = ac_user_video_watch.video_id')
             ->where(['and',['ac_video_lessons.status' => '1'],['ac_user_video_watch.status' => '1'],['check_watch' => 1]])
             ->andWhere(['ac_video_lessons.lesson_number' => 1])
+            ->andWhere(['ac_user_video_watch.user_id' => $user_id])
             ->exists();
         $lesson_keywords = AcLessons::find()->select('lesson_keywords_'.$language.' as lesson_keywords')->where(['status' => '1'])->asArray()->all();
         $meta_content = [];
@@ -85,6 +87,10 @@ class LessonsController extends \yii\web\Controller
             array_push($meta_content,$lesson_keyword['lesson_keywords']);
         }
         $implode_meta = implode(',', $meta_content);
+        $check_group = User::findOne($user_id);
+        $check_group = $check_group->groups_id;
+        $explode = explode(',', $check_group);
+        $action_hybrid = AcGroups::find()->where(['and',['lesson_id' => $lesson['id']],['action' => 1],['in', 'id', $explode]])->asArray()->exists();
         \Yii::$app->view->registerMetaTag(['name' => 'keywords', 'content' => $implode_meta]);
         return $this->render('lesson',[
             'lesson' => $lesson,
@@ -93,23 +99,32 @@ class LessonsController extends \yii\web\Controller
             'change_video' => $change_video,
             'check_video_watched' => $check_video_watched,
             'check_lesson_exist' => $check_lesson_exist,
+            'action_hybrid' => $action_hybrid,
         ]);
     }
     public function actionChangeVideo(){
         if ($this->request->isGet){
             $language = $_COOKIE['language'];
+            $user_id = Yii::$app->user->identity->id;
             $num = intval($this->request->get('num'));
-            $change_video = AcVideoLessons::find()->select('id,name_'.$language.' as name, video, type')
-                ->where(['lesson_number' => $num])->asArray()->one();
+            $lesson_id = intval($this->request->get('lesson'));
+            $change_video = AcVideoLessons::find()->select('id,lesson_id,name_'.$language.' as name, video, type')
+                ->where(['and',['status' => '1'],['lesson_number' => $num],['lesson_id' => $lesson_id]])->asArray()->one();
             $check_video_watched = AcUserVideoWatch::find()
                 ->leftJoin('ac_video_lessons','ac_video_lessons.id = ac_user_video_watch.video_id')
                 ->where(['and',['ac_video_lessons.status' => '1'],['ac_user_video_watch.status' => '1'],['check_watch' => 1]])
                 ->andWhere(['ac_video_lessons.lesson_number' => $num])
+                ->andWhere(['ac_user_video_watch.user_id' => $user_id])
                 ->exists();
+            $check_group = User::findOne($user_id);
+            $check_group = $check_group->groups_id;
+            $explode = explode(',', $check_group);
+            $action_hybrid = AcGroups::find()->where(['and',['lesson_id' => $change_video['lesson_id']],['action' => 1],['in', 'id', $explode]])->asArray()->exists();
             if (!empty($change_video)){
                 return $this->renderAjax('video-lessons',[
                     'change_video' => $change_video,
                     'check_video_watched' => $check_video_watched,
+                    'action_hybrid' => $action_hybrid,
                 ]);
             }
             return false;
@@ -133,16 +148,41 @@ class LessonsController extends \yii\web\Controller
                 ->where(['and',['ac_video_lessons.status' => '1'],['ac_lessons.status' => '1'],['ac_video_lessons.id' => $video_id]])
                 ->asArray()
                 ->one();
-            $watched_number_video = AcUserVideoWatch::find()->select('check_watch')
-                ->where(['and',['status' => '1'],['user_id' => $user_id]])->count();
-            $percent = round((100 / $lesson_count['lessons_count']) * $watched_number_video);
-            $my_lessons = AcMyLessons::findOne(['user_id' => $user_id,'lessons_id' => $lesson_id->lesson_id, 'status' => '1']);
-            if (!empty($my_lessons)){
-                $my_lessons->complete_percent = $percent;
-                if ($my_lessons->complete_percent == 100){
-                    $my_lessons->status = '2';
+            if ($_GET['action'] == 1){
+                $count_video_watched = AcUserVideoWatch::find()->where(['and',
+                    ['status' => '1'],
+                    ['lesson_id' => $lesson_id->lesson_id],
+                    ['user_id' => $user_id]
+                ])->count();
+                $check_group = User::findOne($user_id);
+                $check_group = $check_group->groups_id;
+                $explode = explode(',', $check_group);
+                $lesson_count_groups = AcGroups::find()->select('lesson_count')
+                    ->where(['and',['lesson_id' => $lesson_id->lesson_id],['action' => 1],['in', 'id', $explode]])
+                    ->asArray()
+                    ->one();
+                $sum_video = $count_video_watched + $lesson_count_groups['lesson_count'];
+                $percent = round((100 / $lesson_count['lessons_count']) * $sum_video);
+                $my_lessons = AcMyLessons::findOne(['user_id' => $user_id,'lessons_id' => $lesson_id->lesson_id, 'status' => '1']);
+                if (!empty($my_lessons)){
+                    $my_lessons->complete_percent = $percent;
+                    if ($my_lessons->complete_percent == 100){
+                        $my_lessons->status = '2';
+                    }
+                    $my_lessons->save(false);
                 }
-                $my_lessons->save(false);
+            }else{
+                $watched_number_video = AcUserVideoWatch::find()->select('check_watch')
+                    ->where(['and',['status' => '1'],['user_id' => $user_id],['lesson_id' => $lesson_id->lesson_id],])->count();
+                $percent = round((100 / $lesson_count['lessons_count']) * $watched_number_video);
+                $my_lessons = AcMyLessons::findOne(['user_id' => $user_id,'lessons_id' => $lesson_id->lesson_id, 'status' => '1']);
+                if (!empty($my_lessons)){
+                    $my_lessons->complete_percent = $percent;
+                    if ($my_lessons->complete_percent == 100){
+                        $my_lessons->status = '2';
+                    }
+                    $my_lessons->save(false);
+                }
             }
             return json_encode(true);
         }

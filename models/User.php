@@ -11,6 +11,7 @@ use Yii;
  * This is the model class for table "user".
  *
  * @property int $id
+ * @property string $groups_id
  * @property string $username
  * @property string $auth_key
  * @property string $password
@@ -46,7 +47,7 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
     {
         return [
             [['username', 'email', 'password','image','linkdin_url','phone','cv'], 'required'],
-            [['username', 'password','image','linkdin_url','cv'], 'string'],
+            [['username', 'password','image','linkdin_url','cv','groups_id'], 'string'],
             [['phone','role'], 'integer'],
             [['email'], 'email'],
             [['email'], 'unique'],

@@ -20,15 +20,18 @@
                     <select name="AcGroups[lesson_id]" id="" class="form-control" required>
                         <option value="">Ընտրել դասընթաց</option>
                         <?php if (!empty($lessons)){foreach ($lessons as $lesson){?>
-                            <option <?=$lesson['id'] == $groups->lesson_id ? 'selected' : ''?> value="<?=$lesson['id']?>"><?=$lesson['lesson_name_am']?></option>
+                            <option <?=$lesson['lesson_id'] == $groups->lesson_id ? 'selected' : ''?> value="<?=$lesson['lesson_id']?>"><?=$lesson['lesson_name']?></option>
                         <?php }} ?>
                     </select>
                     <br>
                     <span>Դասընթացի տեսակը</span>
-                    <select name="AcGroups[action]" id="" class="form-control">
+                    <select name="AcGroups[action]" id="" class="form-control" required>
                         <option <?=$groups->action == null ? 'selected' : ''?> value="">Ընտրել տեսակը</option>
-<!--                        <option --><?php //=$groups->action == 1 ? 'selected' : ''?><!-- value="1">Օնլայն</option>-->
-                        <option <?=$groups->action == 0 ? 'selected' : ''?> value="0">Օֆլայն</option>
+                        <?php if ($groups->action == 1){?>
+                            <option selected value="1">Հիբրիդ</option>
+                        <?php }else{?>
+                            <option selected value="0">Օֆլայն</option>
+                        <?php } ?>
                     </select>
                     <br>
                     <div class="row">
@@ -36,7 +39,7 @@
                             <span>Ուսանողներ</span>
                             <select class="js-example-basic-multiple" style="width: 100%" required name="AcGroups[user_id][]" multiple="multiple">
                                 <?php if (!empty($users)){foreach ($users as $user){?>
-                                    <option <?=$user['groups_id'] == $groups->id ? 'selected' : ''?> value="<?=$user['id']?>"><?=$user['username']?></option>
+                                    <option <?= in_array($groups->id, explode(',', $user['groups_id'])) ? 'selected' : ''?> value="<?=$user['user_id']?>"><?=$user['username']?></option>
                                 <?php }} ?>
                             </select>
                         </div>
@@ -47,7 +50,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <span>Անցկացված դասերը</span>
-                                <div class="lessonFieldBtn" data-groups-id="<?=$groups->id?>">
+                                <div class="lessonFieldBtn" data-action="<?=$groups->action?>" data-groups-id="<?=$groups->id?>">
                                     <?php
                                     for ($i = 1; $i <= $groups->lesson_count; $i++){
                                         echo '<span class="backLesson" data-lesson="'.($i - 1).'">'.$i.'</span>';

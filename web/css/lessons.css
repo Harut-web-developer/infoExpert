@@ -180,6 +180,7 @@
     width: 81px;
     border-radius: 50%;
     overflow: hidden;
+    margin: 0px auto;
 }
 .card-image img{
     width: 100%;
