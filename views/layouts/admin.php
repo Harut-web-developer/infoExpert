@@ -116,12 +116,18 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_k
                      <li >
                          <a href="/admin/index"><i class="menu-icon fa fa-dashboard"></i>Վահանակ</a>
                      </li>
-                   <?php if( Yii::$app->user->identity->role == 10 || Yii::$app->user->identity->role == 20){ ?>
+                   <?php if( Yii::$app->user->identity->role == 10 || Yii::$app->user->identity->role == 20 || Yii::$app->user->identity->role == 30){ ?>
                        <li>
                            <a href="/admin/groups"><i class="menu-icon fa fa-users"></i>Խմբեր</a>
                        </li>
                        <li>
                             <a href="/admin/orders"><i class="menu-icon fa fa-graduation-cap"></i>Գրանցումներ</a>
+                       </li>
+                       <li>
+                           <a href="/admin/callback"><i class="menu-icon fa fa-phone"></i>Հետադարձ զանգեր</a>
+                       </li>
+                       <li>
+                           <a href="/admin/have-questions"><i class="menu-icon fa fa-cogs"></i>Տրվող հարցեր</a>
                        </li>
                    <?php } ?>
                    <?php if( Yii::$app->user->identity->role == 10){ ?>
@@ -133,12 +139,6 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_k
                      </li>
                    <?php } ?>
                     <?php if( Yii::$app->user->identity->role == 10 || Yii::$app->user->identity->role == 30){ ?>
-                    <li>
-                        <a href="/admin/callback"><i class="menu-icon fa fa-phone"></i>Հետադարձ զանգեր</a>
-                    </li>
-                    <li>
-                        <a href="/admin/have-questions"><i class="menu-icon fa fa-cogs"></i>Տրվող հարցեր</a>
-                    </li>
                      <li>
                          <a href="/admin/questions"><i class="menu-icon fa fa-question"></i>Հարցաշար</a>
                      </li>

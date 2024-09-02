@@ -82,10 +82,6 @@ class LessonsController extends \yii\web\Controller
             ->andWhere(['ac_user_video_watch.user_id' => $user_id])
             ->andWhere(['ac_user_video_watch.lesson_id' => $lesson['id']])
             ->one();
-//        echo "<pre>";
-////        var_dump($lesson_count);
-//        var_dump($check_video_watched);
-//        exit();
         $lesson_keywords = AcLessons::find()->select('lesson_keywords_'.$language.' as lesson_keywords')->where(['status' => '1'])->asArray()->all();
         $meta_content = [];
         foreach ($lesson_keywords as $lesson_keyword) {
