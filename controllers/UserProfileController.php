@@ -86,13 +86,14 @@ class UserProfileController extends \yii\web\Controller
     {
         // Harut
         if ($this->request->isPost) {
+            date_default_timezone_set('Asia/Yerevan');
             $post = $this->request->post();
             $user = User::findOne(intval(Yii::$app->user->identity->id));
             $user->username = $post['username'];
             $user->phone = $post['phone'];
             $user->linkdin_url = $post['linkdin_url'];
             $user->email = $post['email'];
-
+            $user->updated_at = date('Y-m-d H:i:s');
             if (!empty($_FILES['image']) && $_FILES['image']["name"]) {
                 $tmp_name = $_FILES['image']["tmp_name"];
                 $name = time() . basename($_FILES['image']["name"]);

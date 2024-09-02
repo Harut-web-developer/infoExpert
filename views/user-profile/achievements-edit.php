@@ -4,6 +4,7 @@
 $this->registerCssFile('@web/css/user-profile.css?v=3');
 ?>
 <?php
+$first_word = explode(' ' , Yii::$app->user->identity->username);
 $language = $_COOKIE['language'];
 $class1 = '';
 if ($language == 'en') {
@@ -46,7 +47,11 @@ if ($language == 'en') {
                                 <input type="file" name="image">
                             </div>
                         </div>
-                        <span><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
+                        <?php if (count($first_word) > 1){?>
+                            <span><?=$first_word[0] .' '. $first_word[1]?></span>
+                        <?php }elseif (count($first_word) == 1){?>
+                            <span><?=$first_word[0]?></span>
+                        <?php } ?>
                         <div class="usersCardMain_">
                             <?php if (Yii::$app->user->identity->phone) { ?>
                                 <div class="sameInfo">

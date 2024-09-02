@@ -222,7 +222,6 @@ class AdminController extends Controller {
             }else {
                 $pass = $user->password;
                 $user->load($post);
-                $user->created_at = date('Y-m-d H:i:s');
                 $user->updated_at = date('Y-m-d H:i:s');
                 $user->auth_key = $this->generateRandomString();
                 if ($post['User']['password']) {
@@ -1086,7 +1085,6 @@ class AdminController extends Controller {
             }else{
                 $pass = $user->password;
                 $user->load($post);
-                $user->created_at = date('Y-m-d H:i:s');
                 $user->updated_at = date('Y-m-d H:i:s');
                 $user->auth_key = $this->generateRandomString();
                 if ($post['User']['password']) {

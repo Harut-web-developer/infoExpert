@@ -325,6 +325,7 @@ class SiteController extends Controller
     }
     public function actionSignUp()
     {
+        date_default_timezone_set('Asia/Yerevan');
         // Harut 50 ev Mariam 50
         $session = Yii::$app->session;
         $model = new User();
@@ -348,6 +349,8 @@ class SiteController extends Controller
             if ($model->load($post)) {
                 $model->password = $hash;
                 $model->auth_key = $this->generateRandomString();
+                $model->created_at = date('Y-m-d H:i:s');
+                $model->updated_at = date('Y-m-d H:i:s');
                 if($model->save(false)){
                     $log_model = new LoginForm();
                     $log_model->email = $model->email;
@@ -376,7 +379,7 @@ class SiteController extends Controller
     }
     public function actionAccountSecurity()
     {
-        // Mariam 80 ev Harut 20
+        date_default_timezone_set('Asia/Yerevan');
         if ($this->request->isPost) {
             $current_password = $this->request->post('currentPassword');
             $new_password = $this->request->post('newPassword');
@@ -403,6 +406,7 @@ class SiteController extends Controller
             if (!is_null($current_password) && Yii::$app->getSecurity()->validatePassword($current_password, $password_hash)) {
                 if ($new_password === $confirmPassword){
                     $user->password = Yii::$app->getSecurity()->generatePasswordHash($new_password);
+                    $user->updated_at = date('Y-m-d H:i:s');
                     if ($user->save(false)) {
                         Yii::$app->session->setFlash('success', $success);
                         return $this->redirect(['/']);
@@ -521,7 +525,7 @@ class SiteController extends Controller
     }
     public function actionNewPassword()
     {
-        // Mariam
+        date_default_timezone_set('Asia/Yerevan');
         if(isset($_POST) && $_POST['newpassword'])
         {
             $password = $_POST['newpassword'];
@@ -533,6 +537,7 @@ class SiteController extends Controller
                 $user = User::findOne(['email' => $email]);
                 $user->password = $hash;
                 $user->auth_key = $this->generateRandomString();
+                $user->updated_at = date('Y-m-d H:i:s');
                 $user->save(false);
                 return $this->redirect('password-updated');
             }

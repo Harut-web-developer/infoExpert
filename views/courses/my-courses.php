@@ -4,6 +4,7 @@
 $this->registerCssFile('@web/css/courses.css?v=1');
 ?>
 <?php
+$first_word = explode(' ' , Yii::$app->user->identity->username);
 $language = $_COOKIE['language'];
 $class1 = '';
 if ($language == 'en') {
@@ -43,7 +44,11 @@ if ($language == 'en') {
                             <?php } ?>
                         </div>
                         <div class="usersProfileInfo">
-                            <span class="nameAndUsername"><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
+                            <?php if (count($first_word) > 1){?>
+                                <span class="nameAndUsername"><?=$first_word[0] .' '. $first_word[1]?></span>
+                            <?php }elseif (count($first_word) == 1){?>
+                                <span class="nameAndUsername"><?=$first_word[0]?></span>
+                            <?php } ?>
                             <?php if (Yii::$app->user->identity->phone) { ?>
                                 <div class="usersProfileInfoPhone">
                                     <img src="/images/phonAchievements.png" alt="">

@@ -63,7 +63,7 @@ if ($language == 'en') {
             </div>
             <div class="rememberSignupField">
                 <input id="checkboxSignIn" type="checkbox" >
-                <label for="checkboxSignIn"><?=$GLOBALS['text']['signupFormAgree']?> <a href=""><?=$GLOBALS['text']['signupFormTerms']?></a></label>
+                <label for="checkboxSignIn"><?=$GLOBALS['text']['signupFormAgree']?> <a href="/terms-and-conditions"><?=$GLOBALS['text']['signupFormTerms']?></a></label>
                 <input type="hidden" id="postValue" value="false" />
             </div>
             <?php

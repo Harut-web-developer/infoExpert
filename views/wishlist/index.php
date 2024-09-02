@@ -12,6 +12,7 @@ $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.e
 $this->registerJsFile('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', ['nomodule' => true]);
 ?>
 <?php
+$first_word = explode(' ' , Yii::$app->user->identity->username);
 $language = $_COOKIE['language'];
 $class1 = '';
 if ($language == 'en') {
@@ -50,7 +51,11 @@ if ($language == 'en') {
                                 <img src="/images/avatar.png" alt="">
                             <?php } ?>
                         </div>
-                        <span><?php if(!empty(Yii::$app->user->identity->username)){echo Yii::$app->user->identity->username;}?></span>
+                        <?php if (count($first_word) > 1){?>
+                            <span><?=$first_word[0] .' '. $first_word[1]?></span>
+                        <?php }elseif (count($first_word) == 1){?>
+                            <span><?=$first_word[0]?></span>
+                        <?php } ?>
                         <div class="usersProfileInfo">
                             <?php if (Yii::$app->user->identity->phone) { ?>
                                 <div class="usersProfileInfoPhone">

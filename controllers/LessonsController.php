@@ -78,9 +78,14 @@ class LessonsController extends \yii\web\Controller
         $check_video_watched = AcUserVideoWatch::find()
             ->leftJoin('ac_video_lessons','ac_video_lessons.id = ac_user_video_watch.video_id')
             ->where(['and',['ac_video_lessons.status' => '1'],['ac_user_video_watch.status' => '1'],['check_watch' => 1]])
-            ->andWhere(['ac_video_lessons.lesson_number' => 1])
+            ->andWhere(['ac_video_lessons.lesson_number' => $lesson_count[0]['lesson_count']])
             ->andWhere(['ac_user_video_watch.user_id' => $user_id])
-            ->exists();
+            ->andWhere(['ac_user_video_watch.lesson_id' => $lesson['id']])
+            ->one();
+//        echo "<pre>";
+////        var_dump($lesson_count);
+//        var_dump($check_video_watched);
+//        exit();
         $lesson_keywords = AcLessons::find()->select('lesson_keywords_'.$language.' as lesson_keywords')->where(['status' => '1'])->asArray()->all();
         $meta_content = [];
         foreach ($lesson_keywords as $lesson_keyword) {
@@ -115,6 +120,7 @@ class LessonsController extends \yii\web\Controller
                 ->where(['and',['ac_video_lessons.status' => '1'],['ac_user_video_watch.status' => '1'],['check_watch' => 1]])
                 ->andWhere(['ac_video_lessons.lesson_number' => $num])
                 ->andWhere(['ac_user_video_watch.user_id' => $user_id])
+                ->andWhere(['ac_user_video_watch.lesson_id' => $lesson_id])
                 ->exists();
             $check_group = User::findOne($user_id);
             $check_group = $check_group->groups_id;
