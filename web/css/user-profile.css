@@ -1,5 +1,3 @@
-/*Mariam 70 ev Harut 30*/
-
 .usersProfile{
     width: 100%;
     height: 1061px;
@@ -33,7 +31,6 @@ input::-webkit-inner-spin-button {
     left: 50%;
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
     background: #7CA9AC;
-    /*text-align: center;*/
 }
 .courses-input-x{
     display: flex;
@@ -362,8 +359,6 @@ input::-webkit-inner-spin-button {
 }
 .userFormsBtn > button > span{
     position: absolute;
-    /*left: 0;*/
-    /*top: 11px;*/
     width: 100%;
     text-align: center;
     font-size: 12px;
@@ -545,7 +540,6 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 .cartificateImg{
     background: #FFFFFF24;
@@ -553,14 +547,12 @@ input::-webkit-inner-spin-button {
     height: 468.05px;
     border-radius: 30px;
     box-shadow: 0px 0px 6px 2px #549099;
-
 }
 .cartificateImg img{
     width: 100%;
     height: 100%;
     padding: 45.08px 44.84px;
 }
-
 .certificate span{
     font-family: "RobotoSlab_",sans-serif;
     font-size: 18px;
@@ -745,8 +737,6 @@ input::-webkit-inner-spin-button {
 }
 .userFormsBtn_ > button > span{
     position: absolute;
-    /*top: 12px;*/
-    /*left: 0;*/
     width: 100%;
     text-align: center;
     font-size: 13px;
@@ -792,7 +782,6 @@ input::-webkit-inner-spin-button {
 .attachCvEdit:hover{
     cursor: pointer;
 }
-
 .middle {
     transition: .5s ease;
     opacity: 0;
@@ -985,9 +974,6 @@ input::-webkit-inner-spin-button {
     .popup-box-courses {
         width: 87%;
     }
-    /*.ratingForm {*/
-    /*    margin: 50px 0px;*/
-    /*}*/
     .textForEmpty > span{
         margin-top: 100px;
     }
@@ -1002,8 +988,6 @@ input::-webkit-inner-spin-button {
         font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
-        /*line-height: 11.72px;*/
-        /*top: 14px;*/
     }
     .usersAchievementsH{
         height: 646px;
@@ -1015,7 +999,6 @@ input::-webkit-inner-spin-button {
     .userProfileMenu,
     .usersProfileRu .userProfileMenu,
     .usersProfileAm .userProfileMenu{
-        /*width: 375px;*/
         width: max-content;
         height: 16px;
     }
@@ -1281,10 +1264,7 @@ input::-webkit-inner-spin-button {
     .userFormsBtn_ > button > span{
         font-size: 10px;
         font-weight: 500;
-        /*line-height: 11.72px;*/
         text-align: center;
-        /*left: 0;*/
-        /*top: 15px;*/
         width: 100%;
     }
     .userAchievementsEditLeft {
@@ -1306,7 +1286,6 @@ input::-webkit-inner-spin-button {
     .userCreateFieldForms_ > form {
         width: 90%;
         height: 499px;
-        /*margin: 46px 22px;*/
     }
     .attachCvEdit {
         margin: 18px 0px 18px 17px;
@@ -1382,7 +1361,6 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 599px) {
     .ratingForm {
         margin: 67px 0px 50px;
-        /*width: 100%;*/
     }
     .titleRating {
         font-size: 22px;
@@ -1454,9 +1432,6 @@ input::-webkit-inner-spin-button {
     }
     .editAchievementsBtn div{
         position: absolute;
-        /*top: 70%;*/
-        /*left: 50%;*/
-        /*transform: translate(-50%, -50%);*/
         width: 100%;
     }
     .editAchievementsBtn > a:hover div{
@@ -1476,8 +1451,6 @@ input::-webkit-inner-spin-button {
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        /*position: absolute;*/
-        /*z-index: 2;*/
     }
     .userCreateTitleField{
         width: 100%;
@@ -1667,7 +1640,6 @@ input::-webkit-inner-spin-button {
         height: 636px;
     }
     .certificate, .cartificateImg {
-        /*width: 85%;*/
         height: auto;
         gap: 32px;
         align-items: center;
@@ -1759,9 +1731,6 @@ input::-webkit-inner-spin-button {
     }
 }
 @media screen and (max-width: 500px) {
-    /*.certificate, .cartificateImg {*/
-    /*    width: 90%;*/
-    /*}*/
     .cartificateImgTxt{
         gap: 67px;
     }

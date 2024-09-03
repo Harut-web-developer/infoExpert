@@ -1,5 +1,3 @@
-/*Mariam 80 ev Harut 20*/
-
 .myCoursesTitleField{
     width: 100%;
     display: flex;
@@ -27,9 +25,7 @@
 }
 .userProfileSection{
     width: 67%;
-    /*height: -webkit-fill-available;*/
     height: min-content;
-    /*position: absolute;*/
     padding-top: 212px;
     padding-bottom: 95px;
     margin: 0px 16.5% 0px;
@@ -40,7 +36,6 @@
 }
 .userProfileMenuField{
     width: 100%;
-    /*height: 53px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -134,7 +129,6 @@
     font-weight: 400;
     margin-left: 37px;
     color: white;
-
 }
 .usersProfileInfoEmail > span{
     font-family: "Roboto_",sans-serif;
@@ -142,7 +136,6 @@
     font-size: 20px;
     font-weight: 400;
     color: white;
-
 }
 .usersProfileInfoLinkdin > span{
     font-size: 20px;
@@ -162,13 +155,9 @@
 .CoursesAndCategoriesCard{
     width: 68%;
     height: min-content;
-    /*display: grid;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
 }
 .mainContent{
     width: 100%;
-    /*height: -webkit-fill-available;*/
     height: min-content;
     padding-top: 108px;
     display: flex;
@@ -195,7 +184,6 @@
     color: #FFFFFF;
 }
 .applyNowBtnField{
-    /*width: max-content;*/
     padding-top: 53px;
 }
 .applyNowBtnField > a{
@@ -251,7 +239,6 @@ hr.new1 {
     margin: 0 0 0 60px;
 }
 .bottomSlider {
-    /*display: flex;*/
     padding-top: 70px;
     padding-left: 60px;
 }
@@ -261,21 +248,6 @@ hr.new1 {
     width: 100%;
     height: min-content;
 }
-
-/*.bottomSlider .carousel_ {*/
-/*    display: grid;*/
-/*    grid-auto-flow: column;*/
-/*    gap: 44px;*/
-/*    overflow-x: auto;*/
-/*    scroll-snap-type: x mandatory;*/
-/*    scroll-behavior: smooth;*/
-/*    scrollbar-width: none;*/
-/*    -ms-overflow-style: none;*/
-/*    margin-top: 0;*/
-/*    margin-bottom: 0rem!important;*/
-/*    padding-left: 0; !* Reset default padding *!*/
-/*    list-style-type: none; !* Remove bullet points *!*/
-/*}*/
 .bottomSlider ul {
     margin-bottom: 0;
     padding-left: 0rem!important;
@@ -382,9 +354,6 @@ hr.new1 {
 .articleDate_{
     margin-left: 10px;
 }
-/*.changeBody2{*/
-/*    display: flex;*/
-/*}*/
 .changeBody2 ul {
     margin-bottom: 0;
     padding-left: 0rem!important;
@@ -449,7 +418,6 @@ hr.new1 {
 .card_2 .cardBody_2{
     display: flex;
     flex-direction: row;
-    /*padding: 0 15px;*/
     justify-content: space-between;
     gap: 5px;
 }
@@ -491,7 +459,6 @@ hr.new1 {
     width: 223.11px;
     height: 40px;
     display: flex;
-    /*margin-bottom: 5px;*/
 }
 .cardtxt1_2 span{
     font-family: 'Roboto_',sans-serif;
@@ -510,7 +477,6 @@ hr.new1 {
     width: 28px;
     height: 28px;
     float: left;
-    /*padding-right: 11px;*/
 }
 .cardtxt2_2{
     width: 313px;
@@ -756,9 +722,6 @@ ion-icon {
     .img_2, .cardsimg_ {
         height: 190px;
     }
-    /*.img_2{*/
-    /*    height: auto;*/
-    /*}*/
     .wishlistBtnField > a {
         margin-left: 20px;
     }
@@ -846,9 +809,6 @@ ion-icon {
     .img_2, .cardsimg_ {
         height: 160px;
     }
-    /*.cardContent {*/
-    /*    height: auto;*/
-    /*}*/
     .footerCard_2_img1 {
         width: 120px;
     }
@@ -878,9 +838,6 @@ ion-icon {
         font-weight: 400;
         line-height: 9.38px;
     }
-    /*.footerCard_2 {*/
-    /*    padding-top: 20px;*/
-    /*}*/
     .carousel_2 {
         gap: 40px;
     }
@@ -968,7 +925,6 @@ ion-icon {
         height: 33px;
         display: flex;
     }
-
     .myCoursesFieldSectionRight img{
         position: relative;
         left: -51px;
@@ -1045,14 +1001,12 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1350px) {
-
     .usersProfileInfoEmail > img, .usersProfileInfoLinkdin > img, .usersProfileInfoPhone > img{
         width: 23px;
         height: 23px;
     }
     .cardtxt1_2 span, .cardtxt2_2 span {
         font-size: 12px;
-        /*line-height: 11.84px;*/
     }
     .cardtxt1_2, .cardtxt2_2 {
         width: 203.11px;
@@ -1069,9 +1023,6 @@ ion-icon {
     .card_2{
         padding: 0;
     }
-    /*.img_2{*/
-    /*    height: auto;*/
-    /*}*/
     .cardContent {
         padding: 10px 17px 16px 17px;
     }
@@ -1105,7 +1056,6 @@ ion-icon {
         padding-top: 70px;
     }
     .carousel_2 {
-        /*gap: 44px;*/
         grid-auto-columns: 45%;
     }
     .CoursesAndCategoriesCard {
@@ -1167,13 +1117,9 @@ ion-icon {
         width: 100%;
         height: 150px;
     }
-    /*.img_2 {*/
-    /*    height: 130px;*/
-    /*}*/
     .card_2 .cardBody_2 .span1_2{
         font-size: 11px;
         font-weight: 500;
-        /*line-height: 15.3px;*/
         text-align: left;
     }
     .cardtxt1_2 {
@@ -1234,9 +1180,6 @@ ion-icon {
     }
 }
 @media screen and (max-width: 1100px) {
-    /*.img_2 {*/
-    /*    height: 120px;*/
-    /*}*/
     .mainContent {
         padding-top: 40px;
     }
@@ -1373,10 +1316,6 @@ ion-icon {
         line-height: 9.38px;
         text-align: left;
     }
-    /*.starAndTxt_2 img{*/
-    /*    width: 43.92px;*/
-    /*    height: 8.69px;*/
-    /*}*/
     .cardtxt1_2 img, .cardtxt2_2 img{
         width: 14px;
         height: 14px;
@@ -1654,7 +1593,6 @@ ion-icon {
     .wishlistMobileSection{
         height: min-content;
         margin-top: 30px;
-        /*width: 80%;*/
     }
     .userProfileMenuField{
         display: none;
@@ -1662,15 +1600,6 @@ ion-icon {
     .mainContent{
         display: none;
     }
-    /*.topSlider{*/
-    /*    display: none;*/
-    /*}*/
-    /*.new1{*/
-    /*    display: none;*/
-    /*}*/
-    /*.bottomSlider{*/
-    /*    display: none;*/
-    /*}*/
     .mobileCourses{
         margin-top: 38px;
         padding-left: 0px;
@@ -1861,7 +1790,6 @@ ion-icon {
         width: 283px;
         height: 123px;
         padding: 0px;
-
     }
     .cardsLike_{
         width: 265px;

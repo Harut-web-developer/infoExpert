@@ -1,8 +1,3 @@
-/*Mariam 10 ev Harut 90*/
-
-
-/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');*/
-/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');*/
 /*start header css*/
 @media only screen and (min-width: 600px) {
     .mobileBackCall{
@@ -200,7 +195,6 @@
         justify-content: end;
     }
     .menuTabletHeader{
-        /*width: 0%;*/
         height: 673px;
         top:65px;
     }
@@ -231,7 +225,6 @@
         margin: 0px 26px 20px 23px;
     }
     .tabletMenuNavField > ul{
-        /*width: 100%;*/
         height: 448px;
     }
     .tabletMenuNavbar{
@@ -511,7 +504,6 @@
         height: 40px;
     }
     .apply > a > span{
-        /*top: 14px;*/
         font-size: 10px;
     }
 }
@@ -541,9 +533,7 @@
     .sectionInfoMobile{
         width: 30%;
         margin: 66px auto 0px;
-        /*height: 160px;*/
         height: 168px;
-        /*margin-top: 26px;*/
     }
     .slick-prev{
         display: none !important;
@@ -583,7 +573,6 @@
         width: 33%;
         margin: 26px auto 0px;
         height: 160px;
-        /*margin-top: 26px;*/
     }
     .slick-prev{
         display: none !important;
@@ -593,11 +582,9 @@
     }
     .slick-slide{
         margin: 0px auto !important;
-        /*height: max-content;*/
     }
     .numbersInfo{
         margin: 0px auto;
-        /*width: 108px;*/
         width: max-content;
         height: 162px;
         display: flex;
@@ -631,105 +618,11 @@
     }
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
-
     .sectionInfo{
         display: none;
     }
-
 }
 /*section three*/
-/*@media only screen and (min-width: 300px) and (max-width: 599px) {*/
-/*    .sectionThree{*/
-/*        background-image: url("../images/mobileImgCourse.png");*/
-/*        background-position: center;*/
-/*        background-repeat: no-repeat;*/
-/*        background-size: cover;*/
-/*        width: 100%;*/
-/*        height: 812px;*/
-/*    }*/
-/*    .sliderCourses{*/
-/*        display: none;*/
-/*    }*/
-/*    .learnMobile{*/
-/*        margin-top: 83px;*/
-/*        width: 100%;*/
-/*        height: 646px;*/
-/*        display: flex !important;*/
-/*        flex-direction: column;*/
-/*        justify-content: space-between;*/
-/*        align-items: center;*/
-/*    }*/
-/*    .learnMobile > img{*/
-/*        border-radius: 50%;*/
-/*        width: 301px;*/
-/*        height: 301px;*/
-/*    }*/
-/*    .learnMobile > a > img{*/
-/*        width: 101px;*/
-/*        height: 44px;*/
-/*    }*/
-/*    .learnMobile > a{*/
-/*        position: relative;*/
-/*        text-decoration: none;*/
-/*        display: flex;*/
-/*        justify-content: center;*/
-/*        align-items: center;*/
-/*    }*/
-/*    .learnMobile > a > span{*/
-/*        position: absolute;*/
-/*        font-family: "Roboto_",sans-serif;*/
-/*        font-size: 10px;*/
-/*        font-weight: 900;*/
-/*        !*left: 0;*!*/
-/*        width: 100%;*/
-/*        text-align: center;*/
-/*        !*top: 15px;*!*/
-/*        color: #F36528;*/
-/*    }*/
-/*    !*.coursesBg{*!*/
-/*    !*    height: 72px;*!*/
-/*    !*    width: 100%;*!*/
-/*    !*}*!*/
-/*    !*.coursesBg > span{*!*/
-/*    !*    font-size: 17px;*!*/
-/*    !*    line-height: 22.42px;*!*/
-/*    !*    letter-spacing: 0.05em;*!*/
-/*    !*    text-align: center;*!*/
-/*    !*}*!*/
-/*    !*.coursesBg > p{*!*/
-/*    !*    font-size: 15px;*!*/
-/*    !*    font-weight: 400;*!*/
-/*    !*    line-height: 17.58px;*!*/
-/*    !*    text-align: center;*!*/
-/*    !*}*!*/
-/*    .logoManagement{*/
-/*        !*height: max-content;*!*/
-/*        width: 90%;*/
-/*        flex-direction: column;*/
-/*        justify-content: space-evenly;*/
-/*        align-items: center;*/
-/*    }*/
-/*    .courseLogo {*/
-/*        width: 50px;*/
-/*    }*/
-/*    .courseLogo > img{*/
-/*        height: 21px;*/
-/*        width: 45px;*/
-/*        margin-top: 0;*/
-/*    }*/
-/*    .courseTitle{*/
-/*        !*width: max-content;*!*/
-/*        !*height: min-content;*!*/
-/*        padding-left: 0;*/
-/*        justify-content: center;*/
-/*        align-items: center;*/
-/*    }*/
-/*    .courseTitle > span{*/
-/*        font-size: 20px;*/
-/*        text-align: center;*/
-/*    }*/
-/*}*/
-
 @media screen and (max-width: 599px){
     .carousel-courses .list-courses .item-courses .main-content-courses {
         order: 2;
@@ -752,7 +645,6 @@
         margin-bottom: 0;
     }
 }
-
 
 /*section Four*/
 @media only screen and (min-width: 300px) and (max-width: 599px) {
@@ -801,7 +693,6 @@
         align-items: center;
         margin-bottom: 40px;
     }
-
     .leftQuestions {
         width: 100%;
     }
@@ -838,7 +729,6 @@
         font-weight: 300;
     }
 }
-
 @media only screen and (min-width: 501px) and (max-width: 599px) {
     .answerQuestion {
         font-size: 15px;
@@ -971,7 +861,6 @@
     .blockTestimonialMobile {
         background-image: url(../images/mobileImgTestimonial.png);
         background-repeat: no-repeat;
-        /*background-size: 100%;*/
         width: 75%;
         height: 190px;
         margin: 0px 14.5%  28px;
@@ -1214,9 +1103,6 @@
     .mobileTestimonial{
         margin-top: 45px;
     }
-    /*.webTabletTestimonial{*/
-    /*    display: none;*/
-    /*}  */
     .testimonial, .testimonialPage{
         display: none;
     }
@@ -1246,7 +1132,6 @@
         margin: 0px;
         width: 100%;
         height: min-content;
-        /*position: absolute;*/
     }
     .testimonialOrangeTitle{
         font-size: 16px;
@@ -1479,7 +1364,6 @@
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
-
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
     .individualCards{
@@ -1591,7 +1475,6 @@
 /*start sectionEight css*/
 @media only screen and (min-width: 300px) and (max-width: 599px) {
     .sectionEight {
-        /*background: #5D9A9D;*/
         background-image: url("../images/eightBgMobile.png");
         background-repeat: no-repeat;
         background-position: center;
@@ -1647,7 +1530,6 @@
     }
     .rightQuestionField > textarea{
         padding: 20px 30px;
-
     }
     .questionbutton > button > img{
         width: 101px;
@@ -1655,7 +1537,6 @@
     }
     .questionbutton > button > span{
         font-size: 10px;
-        /*top: 12px;*/
     }
     .questionbutton{
         width: 101px;
@@ -1867,7 +1748,6 @@
         font-size: 10px;
         font-weight: 500;
         color: #5D9A9D;
-        /* outline: none; */
         border: 1px solid white;
         width: 66px;
         height: 23px;
@@ -2053,7 +1933,6 @@
         font-size: 10px;
         font-weight: 500;
         color: #5D9A9D;
-        /* outline: none; */
         border: 1px solid white;
         width: 66px;
         height: 23px;
@@ -2258,7 +2137,6 @@
         font-size: 10px;
         font-weight: 500;
         color: #5D9A9D;
-        /* outline: none; */
         border: 1px solid white;
         width: 66px;
         height: 23px;
@@ -2406,7 +2284,6 @@
         font-size: 10px;
         font-weight: 500;
         color: #5D9A9D;
-        /* outline: none; */
         border: 1px solid white;
         width: 66px;
         height: 23px;

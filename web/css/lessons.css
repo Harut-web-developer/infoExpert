@@ -30,7 +30,7 @@
     color: white;
     font-size: 24px;
     font-weight: 400;
-    font-family: 'Roboto_';
+    font-family: 'Roboto_',sans-serif;
     margin-bottom: 20px;
 }
 .videoField{
@@ -84,7 +84,6 @@
 }
 .swiper-container {
     width: 296px;
-    /*height: 373px;*/
     position: relative;
     overflow: hidden;
 }
@@ -195,7 +194,6 @@
     text-align: center;
 }
 .textCard{
-    /*width: 208.26px;*/
     font-family: "Roboto_",sans-serif;
     font-size: 16px !important;
     font-weight: 400;
@@ -215,7 +213,6 @@
 .divBottom{
     width: 67%;
     margin: 0px auto;
-    /*padding: 0 16.666%;*/
 }
 .footerBackground {
     margin-top: -73px !important;
@@ -283,20 +280,12 @@
     align-items: center;
     text-decoration: none;
 }
-/*.managementBtnDiv > button > img{*/
-/*    width: 152px;*/
-/*    height: 66px;*/
-/*}*/
 .managementBtnDivCourse > a{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/*.managementBtnDivCourse > a > img{*/
-/*    width: 152px;*/
-/*    height: 66px;*/
-/*}*/
 .managementBtnDiv > a:hover img{
     content: url("../images/buycoursebtnhover.png");
 }
@@ -306,10 +295,8 @@
 .managementBtnDiv > a > span{
     font-size: 16px;
     font-weight: 400;
-    font-family: "Tahoma", sans-serif;
+    font-family: "Roboto_", sans-serif;
     position: absolute;
-    /*left: 0px;*/
-    /*top: 20px;*/
     width: 100%;
     text-align: center;
     color: #F36528;
@@ -317,10 +304,8 @@
 .managementBtnDivCourse > a > span{
     font-size: 16px;
     font-weight: 400;
-    font-family: "Tahoma", sans-serif;
+    font-family: "Roboto_", sans-serif;
     position: absolute;
-    /*left: 0px;*/
-    /*top: 0px;*/
     width: 100%;
     text-align: center;
     color: white;
@@ -347,7 +332,6 @@
     background-color: #ffffff50;
     justify-content: center;
     margin-left: 42px;
-    /*margin-right: 42px;*/
     cursor: pointer;
 }
 ion-icon.active {
@@ -416,13 +400,6 @@ ion-icon {
         align-items: center;
         justify-content: space-between;
     }
-    /*.rightImgBottom span {*/
-    /*    font-family: 'RobotoSlab_',sans-serif;*/
-    /*    font-size: 16px;*/
-    /*    font-weight: 400;*/
-    /*    line-height: 44px;*/
-    /*    text-align: center;*/
-    /*}*/
     .rightImgBottom .card_ {
         width: 223px;
         height: 295px;

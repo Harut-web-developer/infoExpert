@@ -5,13 +5,11 @@
     background-repeat: no-repeat;
     height: min-content;
     width: 100%;
-
 }
 .mapFieldSection{
     height: min-content;
     width: 67%;
     padding-top: 212px;
-    /*border: 1px solid;*/
     margin: 0px auto;
     display: flex;
     flex-direction: column;
@@ -32,7 +30,6 @@
 .mapSection{
     width: 100%;
     height: min-content;
-    /*border: 1px solid;*/
     margin-top: 57px;
     display: flex;
     flex-direction: row;
@@ -43,7 +40,6 @@
 .leftSection, .rightSection{
     width: 50%;
     height: 100%;
-    /*border: 1px solid;*/
 }
 .leftSection > .siteRow:nth-child(1){
     margin-top: 0px;
@@ -100,12 +96,6 @@
 .subSiteField a:hover{
     color: #F36528;
 }
-/*.mainFieldSite a:hover{*/
-/*    color: #F36528;*/
-/*}*/
-/*.mainFieldSite img:hover {*/
-/*    content: url('/images/arrowSiteOrang.png'); */
-/*}*/
 @media screen and (max-width: 1100px) {
     .mapFieldSection{
         width: auto;

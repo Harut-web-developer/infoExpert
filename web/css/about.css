@@ -1,4 +1,3 @@
-/*Mariam 70 ev Harut 30*/
 .about{
     width: 100%;
     background-image: url("../images/background-about.png");
@@ -82,7 +81,7 @@
     font-weight: 400;
 }
 .leftContent p{
-    font-family: 'Roboto_';
+    font-family: 'Roboto_',sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 34px;
@@ -484,7 +483,7 @@
         line-height: 34px;
     }
     .leftContent p{
-        font-family: 'Roboto_';
+        font-family: 'Roboto_',sans-serif;
         font-size: 15px;
         font-weight: 400;
         line-height: 20.51px;

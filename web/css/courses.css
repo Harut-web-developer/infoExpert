@@ -1,5 +1,3 @@
-/*Mariam 50 ev Harut 50*/
-
 .courses {
     width: 100%;
     height: min-content;
@@ -70,7 +68,6 @@
     display: none;
 }
 .headerCourses div{
-    /*text-align: center;*/
     display: flex;
     gap: 10px;
 }
@@ -154,19 +151,14 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    /* padding: 0 19px; */
-    /* height: 39%;*/
 }
 .cardCoursesBody{
     width: 312.12px;
     height: 223.5px;
     display: flex;
-    /* height: 230px; */
     gap: 10px;
-    /* padding: 0 17px 0 17px; */
     flex-direction: column;
     justify-content: space-between;
-    /* margin-bottom: 16px; */
      margin-top: 13px;
 }
 .cardBody .span1{
@@ -197,7 +189,6 @@
 .cardCourses .img {
     width: 100%;
     height: 235px;
-    /*padding: 16px 17px 0 17px;*/
 }
 .courses .title0{
     font-family: "RobotoSlab_",sans-serif;
@@ -206,7 +197,6 @@
     line-height: 58px;
     margin: 3% 0;
     text-align: center;
-    /*margin-left: 319.99px;*/
     color: #FFFFFF;
 }
 .cardCourses2{
@@ -280,16 +270,12 @@
 }
 .cardCenter {
     display: flex;
-    /* padding: 0px 19px; */
     gap: 9px;
-     /*height: 38%;*/
     flex-direction: column;
     justify-content: space-between;
 }
 .cardCenter > .cardtxt1{
     display: flex;
-    /*width: 60%;*/
-    /*height: 60px;*/
     text-align: center;
 
 }
@@ -343,7 +329,6 @@
 .starAndTxt{
     width: 105px;
     display: flex;
-    /*margin-left: 8px;*/
     flex-direction: column;
     justify-content: space-between;
 }
@@ -369,7 +354,6 @@
 }
 .userProfileMenuField{
     width: 100%;
-    /*height: 53px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -405,7 +389,6 @@
 }
 .mainCoursesFields{
     width: -webkit-fill-available;
-    /*height: 500px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -426,14 +409,12 @@
 .myCoursesFieldSection{
     width: 291px;
     height: 459px;
-    /*margin: 37px 36px 37px 78px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
 }
 .myCoursesFieldAcceptCourses{
-    /*width: 71%;*/
     height: 533px;
     display: grid;
     grid-auto-flow: column;
@@ -614,7 +595,6 @@
     list-style: none;
     display: flex;
     cursor: pointer;
-    /*padding: 16px 17px 16px 17px;*/
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -1441,7 +1421,6 @@ ion-icon {
     }
 .myCoursesBlocksFieldMain {
     width: 234px;
-    /*margin: 0;*/
     height: 318px;
 }
 .myCoursesFieldAcceptCourses .myCoursesBlocksField {
@@ -1536,7 +1515,6 @@ ion-icon {
     .starAndTxt {
         width: 65px;
         height: 26px;
-        /*margin-left: 9px;*/
     }
     .cardCourses .img {
         height: 124px;
@@ -1561,8 +1539,8 @@ ion-icon {
         margin: 0 0 1% 6.8%;
     }
     .myCoursesSection {
-    width: auto;
-    padding: 95px 6.9% 100px 6.8%;
+        width: auto;
+        padding: 95px 6.9% 100px 6.8%;
     }
     .userProfileMenu {
         width: 423px;
@@ -1661,7 +1639,6 @@ ion-icon {
     .myCoursesBlocksFieldMain {
         width: 200px;
         height: 264px;
-        /*gap: 10px;*/
     }
 .infoTitle{
     font-size: 11px;
@@ -1706,11 +1683,6 @@ ion-icon {
     margin: 0px 15px 10px;
     justify-content: space-evenly;
 }
-    /*.ratingStarMyourse {*/
-    /*    display: flex;*/
-    /*    position: relative;*/
-    /*    top: -10px;*/
-    /*}*/
     .backButton {
         width: 40px;
         height: 40px;
@@ -1731,9 +1703,6 @@ ion-icon {
     .headerCourses div {
         width: 90%;
     }
-    /*.courses .title0{*/
-    /*    margin: 20px 6.9% 0px 6.8%;*/
-    /*}*/
     .txt1, .txt2, .courses .title0 {
         font-family: "RobotoSlab_",sans-serif;
         font-size: 25px;
@@ -2154,20 +2123,6 @@ ion-icon {
         width: 100%;
         height: 20px;
     }
-    /*.containerSeeMoreMyCourses{*/
-    /*    margin: 10px 0 41px;*/
-    /*    display: block;*/
-    /*    text-align: center;*/
-    /*    color: white;*/
-    /*}*/
-    /*.containerSeeMoreMyCourses > button{*/
-    /*    position: relative;*/
-    /*    background: transparent;*/
-    /*    border: none;*/
-    /*    display: flex;*/
-    /*    justify-content: center;*/
-    /*    align-items: center;*/
-    /*}*/
     .myCoursesRating{
         height: 35px;
         width: 93px;
@@ -2183,9 +2138,6 @@ ion-icon {
     }
     .seeMoreText {
         position: absolute;
-        /*top: 48%;*/
-        /*left: 50%;*/
-        /*transform: translate(-50%, -50%);*/
         color: #F36528;
         font-family: 'Roboto_',sans-serif;
         font-size: 12px;
@@ -2193,13 +2145,6 @@ ion-icon {
         line-height: 14.06px;
         width: max-content;
     }
-    /*.seeMoreText span{*/
-    /*    color: #F36528;*/
-    /*    font-family: 'Roboto_',sans-serif;*/
-    /*    font-size: 12px;*/
-    /*    font-weight: 500;*/
-    /*    line-height: 14.06px;*/
-    /*}*/
 }
 @media screen and (max-width: 380px) {
     .myCoursesBlocksField {

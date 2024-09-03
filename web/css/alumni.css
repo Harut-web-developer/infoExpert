@@ -1,4 +1,3 @@
-/*Mariam 90 ev Harut 10*/
 .alumni{
     width: 100%;
     height: min-content;
@@ -54,15 +53,11 @@
 }
 .card-content{
     width: 100%;
-    /*height: auto;*/
-    /*margin: 0 auto;*/
     overflow: hidden;
 }
 .grid-container{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    /*column-gap: 20px;*/
-    /*row-gap: 20px;*/
 }
 .card_ {
     position: relative;
@@ -100,9 +95,6 @@
     justify-content: space-between;
     height: 232px;
 }
-/*.card-info span{*/
-/*    margin: 0;*/
-/*}*/
 .card-info > a > img{
     width: 21px;
     height: 21px;
@@ -167,18 +159,7 @@
         height: 890px !important;
     }
 }
-/*@media screen and (max-width: 1700px) {*/
-    /*.swiper {*/
-    /*    height: 800px !important;*/
-    /*}*/
-    /*.alumni {*/
-    /*    height: 1280px;*/
-    /*}*/
-/*}*/
 @media screen and (max-width: 1550px) {
-    /*.alumni {*/
-    /*    height: min-content;*/
-    /*}*/
     .alumniTxt {
         width: 75%;
     }
@@ -190,7 +171,6 @@
     }
     .nameCard {
         font-size: 20px;
-        /*line-height: 17px;*/
     }
     .swiper {
         width: 900px;
@@ -198,7 +178,6 @@
 }
 @media screen and (max-width: 1500px) {
     .card-info {
-        /*padding: 10px 20px 20px;*/
         height: 240px;
     }
     .textCard{
@@ -207,9 +186,6 @@
     }
 }
 @media screen and (max-width: 1339.5px) {
-    /*.alumni {*/
-    /*    height: 1140px;*/
-    /*}*/
     .textCard{
         -webkit-line-clamp: 6;
     }
@@ -225,14 +201,8 @@
     }
     .card-info {
         height: 240px;
-        /*padding: 10px 0px 20px;*/
     }
 }
-/*@media screen and (max-width: 1279px) {*/
-/*    .alumni {*/
-/*        height: 1170px;*/
-/*    }*/
-/*}*/
 @media screen and (max-width: 1180px) {
     .swiper{
         width: 780px;
@@ -244,9 +214,6 @@
     .card-image {
         height: 61px;
         width: 61px;
-        /*margin: 0px auto;*/
-        /*border-radius: 50%;*/
-        /*overflow: auto;*/
     }
     .alumni {
         height: min-content;
@@ -291,11 +258,6 @@
         text-align: center;
         margin: 0;
     }
-    /*.card-image img{*/
-    /*    width: 61px;*/
-    /*    height: 60px;*/
-    /*    border-radius: 40px;*/
-    /*}*/
     .nameCard{
         font-size: 16px;
         font-weight: 400;
@@ -357,9 +319,6 @@
     .card-image {
         height: 81px;
         width: 81px;
-        /* margin: 0px auto; */
-        /* border-radius: 50%; */
-        /* overflow: auto; */
     }
     .mobileAlumni{
         display: flex;
@@ -393,7 +352,6 @@
     .sectionAlumni {
         height: min-content;
         margin-bottom: 0px;
-        /*padding-bottom: 70px;*/
     }
     .hideMobile{
         display: none !important;

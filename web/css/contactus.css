@@ -1,5 +1,3 @@
-/*Mariam*/
-
 .contactus {
     width: 100%;
     height: 1088px;
@@ -11,6 +9,10 @@
 }
 .disinline{
     width: 67%;
+}
+.mobileTitle{
+    text-align: center;
+    margin-left: 35px;
 }
 .ellipseButton{
     display: none;
@@ -72,7 +74,6 @@
     text-decoration: underline;
 }
 .rigthtxtdiv{
-    /*width: 126px;*/
     height: 58px;
     margin-left: 24px;
 }
@@ -105,9 +106,6 @@
     border-radius: 20px;
     overflow: hidden;
 }
-/*.sectionContactusBottom{*/
-/*    margin-top: 28px;*/
-/*}*/
 .contactusBottomTitle{
     font-family: "Roboto_",sans-serif;
     font-size: 32px;
@@ -127,28 +125,25 @@
     margin-bottom: 19px;
 }
 .inputdiv{
-    columns: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .inputname{
     height: 67px;
+    width: 49%;
     padding: 20px 30px 20px 30px;
     border-radius: 30px;
     border: 1px;
+    outline: none;
     background: #FFFFFF24;
-    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Roboto_',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     box-shadow: 0px 1px 20px 1px #1C54841A;
 }
-#validationDefault00_{
-    font-weight: 400;
-    width: 100%;
-    background-color: transparent;
-    font-family: 'Roboto',sans-serif;
-    outline: none;
-    border: none;
-    color: #FFFFFF;
-    font-size: 18px;
-}
-#validationDefault00_::placeholder{
+.inputname::placeholder{
     color: #FFFFFF;
     font-family: 'Roboto_',sans-serif;
     font-size: 18px;
@@ -156,24 +151,19 @@
 }
 .inputemail{
     height: 67px;
+    width: 49%;
     padding: 20px 30px 20px 30px;
     border-radius: 30px;
     border: 1px;
+    outline: none;
     background: #FFFFFF24;
-    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Roboto_',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
     box-shadow: 0px 1px 20px 1px #1C54841A;
 }
-#validationDefault02_{
-    width: 100%;
-    background-color: transparent;
-    font-family: 'Roboto',sans-serif;
-    outline: none;
-    border: none;
-    font-size: 18px;
-    font-weight: 400;
-    color: #FFFFFF;
-}
-#validationDefault02_::placeholder{
+.inputemail::placeholder{
     font-family: 'Roboto_',sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -238,11 +228,8 @@
 .bottoming > button > span{
     color: #F36528;
     position: absolute;
-    /*top: 22px;*/
-    /*left: 0px;*/
     width: 100%;
     text-align: center;
-    /*padding: 0 28px;*/
     font-family: 'Roboto_',sans-serif;
     font-size: 13px;
     font-weight: 500;
@@ -251,13 +238,6 @@
 .bottoming > button:hover span{
     color: white;
 }
-input[type="text"] {
-    font-family: 'Roboto_', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: left;
-}
-
 @media screen and (max-width: 1500px) {
     .sectionContactusTopLeft{
         width: 50%;
@@ -267,11 +247,14 @@ input[type="text"] {
     }
 }
 @media screen and (max-width: 1100px) {
-    input[type="text"] {
+    .inputname, .inputemail {
         font-family: 'Roboto_', sans-serif;
         font-size: 16px;
         font-weight: 400;
-        line-height: 24px;
+        padding: 15px 30px;
+    }
+    .inputname::placeholder, .inputemail::placeholder{
+        font-size: 16px;
     }
     .contactBackButton{
         display: contents;
@@ -298,7 +281,6 @@ input[type="text"] {
         font-family: 'RobotoSlab_',sans-serif;
         font-size: 22px;
         font-weight: 400;
-        /*line-height: 34px;*/
         width: 100%;
         text-align: center;
     }
@@ -403,9 +385,6 @@ input[type="text"] {
     .bottoming > button > img{
         position: relative;
     }
-    .bottoming > button > span{
-        /*top: 20px;*/
-    }
 }
 @media screen and (max-width: 900px) {
     .inputdiv , .inputcomment{
@@ -441,6 +420,8 @@ input[type="text"] {
     }
     .inputname, .inputemail {
         width: 100%;
+        height: 54px;
+        font-size: 12px;
         margin-top: 8px;
     }
     .inputcomment {
@@ -464,7 +445,6 @@ input[type="text"] {
         padding: 0;
         font-size: 10px;
         font-weight: 400;
-        /*line-height: 11.72px;*/
     }
     .disinline, .sectionContactusTop {
         margin-top: 25px;
@@ -472,9 +452,6 @@ input[type="text"] {
     .div1 {
         margin: 24px 0;
     }
-    /*.bottoming > button > span {*/
-    /*    !*top: 16px;*!*/
-    /*}*/
     .contactUsTitleM{
         font-family: 'RobotoSlab_',sans-serif;
         font-size: 22px;

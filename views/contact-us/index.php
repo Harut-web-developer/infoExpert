@@ -43,12 +43,8 @@ $this->registerCssFile('@web/css/contactus.css?v=3');
             <h1 class="contactusBottomTitle"><?=$GLOBALS['text']['contactUs']?></h1>
             <p class="contactusBottomTxt"><?=$GLOBALS['text']['contactInputText']?></p>
             <div class="form-row inputdiv">
-                <div class="inputname">
-                    <input name="name" type="text" id="validationDefault00_" placeholder="<?=$GLOBALS['text']['contactInputName']?>" required>
-                </div>
-                <div class="inputemail">
-                    <input name="email" type="email" id="validationDefault02_" placeholder="<?=$GLOBALS['text']['contactInputEmail']?>" required>
-                </div>
+                <input class="inputname" name="name" type="text" id="validationDefault00_" placeholder="<?=$GLOBALS['text']['contactInputName']?>" required>
+                <input  class="inputemail" name="email" type="email" id="validationDefault02_" placeholder="<?=$GLOBALS['text']['contactInputEmail']?>" required>
             </div>
             <div class="form-row inputcomment">
                 <input name="comment" type="text" id="validationDefault01_" placeholder="<?=$GLOBALS['text']['contactComment']?>">
@@ -77,7 +73,7 @@ $this->registerCssFile('@web/css/contactus.css?v=3');
         });
     }
     function blogTitle() {
-        return  `<?=$GLOBALS['text']['contactTitle']?>`;
+        return  `<span class="mobileTitle"><?=$GLOBALS['text']['contactTitle']?></span>`;
     }
     $(document).ready(function() {
         if ($(window).width() > 1100) {

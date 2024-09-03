@@ -1,5 +1,3 @@
-/*Mariam 50 ev Harut 50*/
-
 .errorText{
     color: red;
     text-align: center;
@@ -54,7 +52,6 @@
 .circleTextTop{
     text-align: center;
     width: 100%;
-    /*height: 141px;*/
     height: 120px;
     color: #1C5484;
     font-family: "RobotoSlab_",sans-serif;
@@ -180,7 +177,6 @@
     position: relative;
     background: transparent;
     border: none;
-    /*margin-top: 20px;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,8 +186,6 @@
 }
 .container_signin > span{
     position: absolute;
-    /*top: 22px;*/
-    /*left: 0;*/
     width: 100%;
     text-align: center;
     color: #F36528;
@@ -330,8 +324,6 @@
 }
 .container_signup > span{
     position: absolute;
-    /*top: 22px;*/
-    /*left: 0;*/
     width: 100%;
     text-align: center;
     color: #D9E3E4;
@@ -558,8 +550,6 @@
 
     .container_signin > span {
         position: absolute;
-        /*top: 13px;*/
-        /*left: 0;*/
         width: 100%;
         text-align: center;
         color: #F36528;
@@ -646,9 +636,6 @@
         width: 108px;
         height: 40px;
     }
-    /*.container_signup > span{*/
-    /*    !*top: 13px;*!*/
-    /*}*/
     .rememberSignupField{
         margin-top: 17px;
     }
@@ -847,8 +834,6 @@
     }
     .container_signin > span{
         position: absolute;
-        /*top: 13px;*/
-        /*left: 0;*/
         width: 100%;
         text-align: center;
         color: #F36528;
@@ -864,8 +849,6 @@
     }
     .container_signup > span{
         position: absolute;
-        /*top: 13px;*/
-        /*left: 0;*/
         width: 100%;
         text-align: center;
         color: #D9E3E4;
@@ -1328,8 +1311,6 @@
         font-family: "Roboto_",sans-serif;
         font-size: 10px;
         font-weight: 500;
-        /*line-height: 11.72px;*/
-        /*top: 16px;*/
     }
     .signUp > span,
     .signUp > a,

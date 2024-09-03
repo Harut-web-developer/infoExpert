@@ -1,5 +1,3 @@
-/*Mariam */
-
 .verification{
     width: 100%;
     height: 1088px;
@@ -60,7 +58,6 @@
     column-gap: 10px;
     justify-content: center;
 }
-
 .otp-field input {
     height: 45px;
     width: 42px;
@@ -130,13 +127,10 @@
     text-align: center;
     color: #F36528;
     position: absolute;
-    /*left: 0;*/
-    /*top: 23px;*/
 }
 .buttonField > button:hover span{
     color: white;
 }
-
 /* new-password css */
 .newPassword{
     width: 100%;

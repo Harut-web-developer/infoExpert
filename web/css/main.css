@@ -1,5 +1,3 @@
-/*Mariam 10 ev Harut 90*/
-
 *{
     margin: 0;
     padding: 0;
@@ -20,9 +18,6 @@ input::-webkit-inner-spin-button {
     background: #408689;
     border-radius: 10px;
 }
-/*.swiper-slide {*/
-/*    margin-right: 60px !important;*/
-/*}*/
 .animateOne{
     width: 69px;
     height: 69px;
@@ -272,8 +267,6 @@ input::-webkit-inner-spin-button {
     z-index: 50;
 }
 .securityContentModal{
-    /*margin-top: 335px;*/
-    /*margin-top: 17.7%;*/
     width: 55%;
     height: 90vh;
     background: #74A8AB;
@@ -298,7 +291,6 @@ input::-webkit-inner-spin-button {
 .modalMainField{
     width: 60%;
     height: 524px;
-    /*margin: 79px auto;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -396,8 +388,6 @@ input::-webkit-inner-spin-button {
     text-align: center;
     width: 100%;
     color: #F36528;
-    /*left: 0;*/
-    /*top: 24px;*/
     position: absolute;
 }
 .modalBtnField > button:hover span{
@@ -668,8 +658,6 @@ input::-webkit-inner-spin-button {
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
-    /*display: none;*/
-    /*z-index: 10;*/
 }
 .otherFlags > li{
     margin: 8px 0px;
@@ -681,7 +669,6 @@ input::-webkit-inner-spin-button {
     top: 35px;
     width: 50px;
     height: 88px;
-    /*border: 1px solid;*/
     z-index: 10;
 }
 .firstFlag > a{
@@ -697,7 +684,6 @@ input::-webkit-inner-spin-button {
     margin-top:13px;
 }
 .menu > ul{
-    /*font-size: 16px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1220,7 +1206,6 @@ input::-webkit-inner-spin-button {
     transition: 500ms ease-in-out;
 }
 .tabletProfileCoursesField{
-    /*width: 283px;*/
     width: 318px;
     height: 360px;
     overflow: scroll;
@@ -1323,7 +1308,6 @@ input::-webkit-inner-spin-button {
 }
 .leftFooterBlock{
     width: 100%;
-    /*height: 236px;*/
     height: 256px;
     display: flex;
     flex-direction: column;
@@ -1563,8 +1547,6 @@ input::-webkit-inner-spin-button {
     z-index: 10;
 }
 .apply > a{
-    /*width: 265px;*/
-    /*height: 114px;*/
     background: transparent;
     border: none;
     z-index: 10;
@@ -1579,9 +1561,7 @@ input::-webkit-inner-spin-button {
     font-size: 18px;
     color: #F36528;
     font-weight: 700;
-    /*left: 0;*/
     width: 100%;
-    /*top: 26px;*/
     text-align: center;
 }
 .apply > a:hover span{
@@ -1666,35 +1646,9 @@ input::-webkit-inner-spin-button {
     width: 100%;
     height: 1080px;
 }
-/*.learn{*/
-/*    top: 188px;*/
-/*    width: 94%;*/
-/*    height: 639px;*/
-/*    position: relative;*/
-/*    display: flex !important;*/
-/*    flex-direction: row;*/
-/*}*/
 .slick-list{
     overflow: unset !important;
 }
-/*.learnInfo{*/
-/*    width: 58%;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*}*/
-/*.learnImg{*/
-/*    width: 42%;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: center;*/
-/*}*/
-/*.learnImg > img{*/
-/*    width: 648px;*/
-/*    height: 639px;*/
-/*    border-radius: 50%;*/
-/*}*/
 .managementBtn > a{
     position: relative;
     display: flex;
@@ -1709,10 +1663,8 @@ input::-webkit-inner-spin-button {
     font-family: "Roboto_",sans-serif;
     font-size: 20px;
     font-weight: 900;
-    /*left: 0;*/
     width: 100%;
     text-align: center;
-    /*top: 0px;*/
     color: #F36528;
 }
 .managementBtn > a:hover span{
@@ -1743,7 +1695,7 @@ input::-webkit-inner-spin-button {
     color: white;
     font-size: 32px;
     font-family: "Roboto_", sans-serif;
-    font-width: 400;
+    font-weight: 400;
     margin-bottom: 0;
 }
 .logoManagement{
@@ -1753,12 +1705,8 @@ input::-webkit-inner-spin-button {
     flex-direction: row;
     justify-content: center;
 }
-/*.courseLogo{*/
-/*    width: 112px;*/
-/*}*/
 .courseTitle{
     width: 61%;
-    /*height: 145px;*/
     padding-left: 22px;
     display: flex;
     flex-direction: column;
@@ -1794,7 +1742,6 @@ input::-webkit-inner-spin-button {
     margin: 0px 16.5% 0px;
     width: 67%;
     height: min-content;
-    /*position: absolute;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1825,7 +1772,6 @@ input::-webkit-inner-spin-button {
 }
 .questions{
     width: 100%;
-    /*height: 474px;*/
     height: min-content;
     margin-bottom: 165px;
     display: flex;
@@ -1972,7 +1918,6 @@ input::-webkit-inner-spin-button {
     overflow: hidden;
 }
 .testimonialsTitles{
-    /*width: 447px;*/
     height: 112px;
     display: flex;
     flex-direction: column;
@@ -1980,7 +1925,6 @@ input::-webkit-inner-spin-button {
     align-items: center;
 }
 .testimonialsTitlesPage{
-    /*width: 447px;*/
     height: 112px;
     display: flex;
     flex-direction: column;
@@ -2005,26 +1949,18 @@ input::-webkit-inner-spin-button {
     background-image: url("../images/inactivetestimonial.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    /*width: 85%;*/
     height: 70%;
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     top: auto;
 }
-/*.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {*/
-/*    transform: none!important;*/
-/*}*/
 .blockTestimonial:hover{
     background-image: url("../images/activetestimonial.png");
     background-repeat: no-repeat;
     background-size: 100%;
     cursor: pointer;
-    /*width: 29%;*/
     height: 100%;
 }
-/*.swiper-pagination-bullets.swiper-pagination-horizontal{*/
-/*    left: 46.5% !important;*/
-/*}*/
 .sectionSix .swiper{
     margin-top: 70px;
 }
@@ -2089,12 +2025,9 @@ input::-webkit-inner-spin-button {
 }
 .testimonialMobileBtn > button > span{
     position: absolute;
-    /*left: 0;*/
-    /*top: 11px;*/
     font-family: "Roboto_", sans-serif;
     font-size: 12px;
     font-weight: 500;
-    /*line-height: 14.06px;*/
     width: 100%;
     text-align: center;
     color: #F36528;
@@ -2115,12 +2048,9 @@ input::-webkit-inner-spin-button {
 }
 .blogsMobileBtn > button > span{
     position: absolute;
-    /*left: 0;*/
-    /*top: 11px;*/
     font-family: "Roboto_", sans-serif;
     font-size: 12px;
     font-weight: 500;
-    /*line-height: 14.06px;*/
     width: 100%;
     text-align: center;
     color: #F36528;
@@ -2209,8 +2139,6 @@ input::-webkit-inner-spin-button {
 }
 .blogBtn > a > span{
     position: absolute;
-    /*top: 0px;*/
-    /*left: 0;*/
     width: 100%;
     text-align: center;
     font-family: "Roboto_",sans-serif;
@@ -2229,8 +2157,6 @@ input::-webkit-inner-spin-button {
 .cardsimg{
     height: 233px;
     width: 100%;
-    /*border-top-right-radius: 30px;*/
-    /*border-top-left-radius: 30px;*/
 }
 .cardsimg > img{
     width: 100%;
@@ -2309,7 +2235,6 @@ input::-webkit-inner-spin-button {
 }
 .sectionEight{
     background-image: url("../images/eight.png");
-    /*background-image: url("../images/eightBg.png");*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2544,7 +2469,6 @@ input::-webkit-inner-spin-button {
         }
     }
 }
-
 .haveQuestions{
     width: 44%;
     height: 337px;
@@ -2602,9 +2526,7 @@ input::-webkit-inner-spin-button {
 }
 .questionbutton > button > span{
     position: absolute;
-    /*left: 0;*/
     width: 100%;
-    /*top: 17px;*/
     text-align: center;
     font-family: "Roboto_",sans-serif;
     font-size: 16px;
@@ -2700,12 +2622,6 @@ input::-webkit-inner-spin-button {
         transform: scale(1.1);
     }
 }
-
-/*.sliderWrapper {*/
-/*    overflow: hidden;*/
-/*    width: 100%;*/
-/*    position: relative;*/
-/*}*/
 @keyframes slide {
     0%, 10% { /* Start and pause */
         transform: translateX(0);
@@ -2728,7 +2644,6 @@ input::-webkit-inner-spin-button {
     background:rgba(0,0,0,0.85);
     z-index: 500;
 }
-
 .popup-wrap-logged-video {
     width:100%;
     height:100%;
@@ -3119,30 +3034,6 @@ input::-webkit-inner-spin-button {
         right: 22%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .carousel-courses,.next-courses,.list-courses,.item-courses,.other_1-courses,.other_2-courses,.active-courses,.main-content-courses,.content-courses,.price-courses,.description-courses,.image-courses,.arrows-courses
 {
     box-sizing: border-box;
@@ -3159,11 +3050,6 @@ input::-webkit-inner-spin-button {
     --w-image: 800px;
     --calculate: calc(1);
     margin-bottom: 130px;
-    /*clip-path: polygon(0 9%, 100% 2%, 100% 83%, 0% 91%);*/
-    /*background-image: url(../images/bg.png);*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
 }
 .carousel-courses .list-courses{
     height: 100%;
@@ -3184,7 +3070,6 @@ input::-webkit-inner-spin-button {
     top: 50px;
     left: 50px;
     content: '';
-    /*background-color: red;*/
     width: 400px;
     height: 300px;
     z-index: 10;
@@ -3206,7 +3091,6 @@ input::-webkit-inner-spin-button {
     position: absolute;
     top: 0;
     left: calc(100% - calc(var(--w-image) * var(--calculate)));
-    /*padding: 20px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3224,7 +3108,6 @@ input::-webkit-inner-spin-button {
     height: 100%;
 }
 .managementBtn {
-    /*width: 230px;*/
     height: 99px;
 }
 .carousel-courses .list-courses .item-courses .main-content-courses{
@@ -3234,7 +3117,6 @@ input::-webkit-inner-spin-button {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    /*clip-path: polygon(0 9%, 100% 2%, 100% 83%, 0% 91%);*/
 }
 .carousel-courses .list-courses .item-courses .main-content-courses .content-courses{
     display: flex;
@@ -3246,10 +3128,10 @@ input::-webkit-inner-spin-button {
 }
 .carousel-courses .list-courses .item-courses .main-content-courses .content-courses h2{
     font-size: 5em;
-    font-family: 'Aboreto';
+    font-family: 'Roboto_',sans-serif;
 }
 .carousel-courses .list-courses .item-courses .main-content-courses .content-courses .price-courses{
-    font-family: 'Aboreto';
+    font-family: 'Roboto_',sans-serif;
     font-size: 3em;
     margin: 20px 0;
 }
@@ -3350,7 +3232,6 @@ input::-webkit-inner-spin-button {
         padding-top: 212px;
     }
 }
-
 @media screen and (max-width: 1400px){
     .logoManagement {
         width: 100%;
@@ -3363,7 +3244,6 @@ input::-webkit-inner-spin-button {
         text-align: center;
     }
 }
-
 @media screen and (max-width: 1300px){
     .carousel-courses .list-courses .item-courses .main-content-courses .content-courses {
         gap: 70px;
